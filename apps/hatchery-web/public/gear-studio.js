@@ -1,9 +1,10 @@
-import { STUDIO_SLOTS, selectionFromURL, selectionToURL, drawStudioLook } from '/gear-style-studio/model.mjs';
+import { STUDIO_SLOTS, buildRenderPlan, selectionFromURL, selectionToURL, drawStudioLook } from '/gear-style-studio/model.mjs';
 
 const $ = id => document.getElementById(id);
 const canvas = $('pet-canvas'), grid = $('gear-grid'), status = $('render-status'), dialog = $('art-dialog');
 const images = new Map();
 let catalog, state, filterSlot = 'all', filterTheme = 'all', revision = 0, modalItem, previousFocus;
+let inspectionRevision = 0;
 for (const id of ['shuffle', 'clear', 'save-look', 'expand-look', 'lineage', 'theme']) $(id).disabled = true;
 function loadImage(src) {
   if (!images.has(src)) images.set(src, new Promise((resolve, reject) => {
@@ -31,10 +32,46 @@ async function updateLook() {
     say(`${count} / ${STUDIO_SLOTS.length} pieces · ${catalog.lineages.find(item => item.id === lineage).name} AXO`);
     canvas.setAttribute('aria-label', `${catalog.lineages.find(item => item.id === lineage).name} level-10 AXO wearing ${Object.values(selection).map(id => catalog.items.find(item => item.id === id)?.name).filter(Boolean).join(', ') || 'no gear'}`);
     $('save-look').disabled = false; $('expand-look').disabled = false;
+    if ($('fit-inspector').open) updateFitInspection();
   } catch (error) {
     if (current === revision) { canvas.getContext('2d').clearRect(0, 0, 1024, 1024); say(error.message, true); }
   }
 }
+async function updateFitInspection() {
+  if (!catalog || !$('fit-inspector').open) return;
+  const current = ++inspectionRevision, lineage = state.lineage;
+  const item = catalog.items.find(item => item.id === $('inspect-item').value);
+  const showAnchor = $('inspect-anchor').checked;
+  $('inspection-status').textContent = 'Opening the fitting layers…';
+  try {
+    const plan = buildRenderPlan(catalog, lineage, { [item.slot]: item.id });
+    const loaded = await Promise.all(plan.map(async layer => ({ ...layer, image: await loadImage(layer.src) })));
+    if (current !== inspectionRevision) return;
+    const pet = loaded.find(layer => layer.kind === 'pet');
+    for (const view of ['rear', 'front', 'worn']) {
+      const ctx = $('inspect-' + view).getContext('2d'); ctx.clearRect(0, 0, 1024, 1024);
+      if (view === 'worn') loaded.forEach(layer => ctx.drawImage(layer.image, 0, 0));
+      else {
+        ctx.globalAlpha = .20; ctx.drawImage(pet.image, 0, 0); ctx.globalAlpha = 1;
+        loaded.filter(layer => view === 'front' ? layer.kind === 'gear' && layer.depth === 'front' : item.slot === 'tool' ? layer.kind === 'occluder' : layer.depth === 'rear').forEach(layer => ctx.drawImage(layer.image, 0, 0));
+      }
+      if (view === 'worn' && showAnchor && item.wearable.anchor) {
+        const [x,y] = item.wearable.anchor.target;
+        ctx.strokeStyle = '#e5ff7c'; ctx.lineWidth = 3; ctx.beginPath(); ctx.arc(x,y,15,0,Math.PI*2); ctx.moveTo(x-23,y); ctx.lineTo(x+23,y); ctx.moveTo(x,y-23); ctx.lineTo(x,y+23); ctx.stroke();
+      }
+    }
+    $('rear-caption').textContent = item.slot === 'tool' ? 'Fingers above the grip' : 'Behind the Pet';
+    $('inspection-status').textContent = item.name + ' · ' + catalog.lineages.find(base => base.id === lineage).name + ' AXO';
+  } catch (error) {
+    if (current === inspectionRevision) {
+      for (const view of ['rear','front','worn']) $('inspect-' + view).getContext('2d').clearRect(0,0,1024,1024);
+      $('inspection-status').textContent = error.message;
+    }
+  }
+}
+$('fit-inspector').addEventListener('toggle', updateFitInspection);
+$('inspect-item').addEventListener('change', updateFitInspection);
+$('inspect-anchor').addEventListener('change', updateFitInspection);
 function update() {
   history.replaceState(null, '', selectionToURL(state.lineage, state.selection));
   $('lineage').value = state.lineage;
@@ -104,6 +141,8 @@ try {
   const response = await fetch('/gear-style-studio/v1/catalog.json', { credentials: 'omit' });
   if (!response.ok) throw new Error('The collection is unavailable. Please refresh shortly.');
   catalog = await response.json();
+  $('inspect-item').replaceChildren(...catalog.items.filter(item => ['body','pants','tool'].includes(item.slot)).map(item => { const option = document.createElement('option'); option.value = item.id; option.textContent = item.name; return option; }));
+  $('inspect-item').disabled = false;
   try { state = selectionFromURL(catalog, location.search); } catch { state = { lineage: catalog.lineages[0].id, selection: {} }; say('This saved look is unavailable. Starting with a fresh AXO.'); }
   if (!location.search) state.selection = { ...catalog.presets[0].selection };
   $('lineage').replaceChildren(...catalog.lineages.map(item => { const option = document.createElement('option'); option.value = item.id; option.textContent = item.name; return option; }));

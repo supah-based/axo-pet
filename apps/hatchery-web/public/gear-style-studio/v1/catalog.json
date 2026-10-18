@@ -1,8 +1,27 @@
 {
   "schema": "AXO_GEAR_STYLE_STUDIO_V1",
-  "revision": "1.1.0-candidate",
+  "revision": "1.2.0-candidate",
   "status": "CANDIDATE",
   "level": 10,
+  "fitSystem": {
+    "version": 2,
+    "poseId": "website-v5-adult-l10",
+    "anchors": {
+      "neck": [
+        522,
+        496
+      ],
+      "waist": [
+        516,
+        668
+      ],
+      "grip": [
+        860,
+        508
+      ]
+    },
+    "depth": "REAR_PET_FRONT_FOREGROUND"
+  },
   "slotCompatibility": {
     "canonicalSlots": 8,
     "candidateOnlySlots": [
@@ -12,7 +31,7 @@
     "onchainIntegration": "REQUIRES_VERSIONED_CONTRACT_AND_SCHEMA_REVIEW"
   },
   "fitStatus": "REVIEW_REQUIRED",
-  "fitRigSha256": "576f066181de4201d453de57affdd541e2fc75abd2000b5c52f7ae4f6de1b291",
+  "fitRigSha256": "75a245ae0f3a6dd240f05da21bc0aaac6e0d16d300d1e078ffab765cba8ac539",
   "ownership": "NONE",
   "slots": [
     "head",
@@ -29,6 +48,7 @@
   "lineages": [
     {
       "id": "emerald_sprout",
+      "poseId": "website-v5-adult-l10",
       "name": "Emerald",
       "asset": "/gear-style-studio/v1/pet_emerald_sprout_l10.webp",
       "sha256": "c083791ce00443556e6364d0beba03f20823e1ea392036982ae2674c98990e48",
@@ -39,10 +59,25 @@
         "sha256": "906aa0233b37d6fc9a4e79e8684c73fc51da9c105bd8b895c0ffc361e10ee0c0",
         "width": 1024,
         "height": 1024
+      },
+      "occluders": {
+        "arms": {
+          "asset": "/gear-style-studio/v1/pet_emerald_sprout_l10.arms.webp",
+          "sha256": "fc49f82050d2f5a96ecd4993815b720cf71906438e92c9573b91d2a106946e73",
+          "width": 1024,
+          "height": 1024
+        },
+        "grip": {
+          "asset": "/gear-style-studio/v1/pet_emerald_sprout_l10.grip.webp",
+          "sha256": "0b05104058792b33f77bccc312b8e4a92d466922304522813941290339344bff",
+          "width": 1024,
+          "height": 1024
+        }
       }
     },
     {
       "id": "sapphire_tide",
+      "poseId": "website-v5-adult-l10",
       "name": "Sapphire",
       "asset": "/gear-style-studio/v1/pet_sapphire_tide_l10.webp",
       "sha256": "346cc10cd4a85de49e73621a9f4a1e0a97b0b37921089685e57d339be2f7e43e",
@@ -53,10 +88,25 @@
         "sha256": "8b690d78ce79c891bb6cbdb0fb5d85ffcee7f344e7ba50e1f91451f0bc248856",
         "width": 1024,
         "height": 1024
+      },
+      "occluders": {
+        "arms": {
+          "asset": "/gear-style-studio/v1/pet_sapphire_tide_l10.arms.webp",
+          "sha256": "1d93a210a388ec46dcd5f0a5dc1657e2b5fe285379691c97e3e7b6c4a81be64d",
+          "width": 1024,
+          "height": 1024
+        },
+        "grip": {
+          "asset": "/gear-style-studio/v1/pet_sapphire_tide_l10.grip.webp",
+          "sha256": "8df05cab66473ad1c617b82e747ae1c5e48789a10518f92163da5a8a3b959bc1",
+          "width": 1024,
+          "height": 1024
+        }
       }
     },
     {
       "id": "amethyst_dream",
+      "poseId": "website-v5-adult-l10",
       "name": "Amethyst",
       "asset": "/gear-style-studio/v1/pet_amethyst_dream_l10.webp",
       "sha256": "d1a0dc337ba44628066c51c1425886ed036b695dc010ae0a5c97ca0058cc6da2",
@@ -67,10 +117,25 @@
         "sha256": "935e96e06632a93aa3eaa77f54d86a2674f3ca21d491e8606bd77dfaae4f2da8",
         "width": 1024,
         "height": 1024
+      },
+      "occluders": {
+        "arms": {
+          "asset": "/gear-style-studio/v1/pet_amethyst_dream_l10.arms.webp",
+          "sha256": "acabdc582272e20344eda3aa18cf48f6aa0bf07b5ea02ac3f842e77c724360ec",
+          "width": 1024,
+          "height": 1024
+        },
+        "grip": {
+          "asset": "/gear-style-studio/v1/pet_amethyst_dream_l10.grip.webp",
+          "sha256": "d4028df6595ed6448872c54fc3c27303954d9d498c1337d078831a6cbcb5b8e6",
+          "width": 1024,
+          "height": 1024
+        }
       }
     },
     {
       "id": "solar_peach",
+      "poseId": "website-v5-adult-l10",
       "name": "Solar",
       "asset": "/gear-style-studio/v1/pet_solar_peach_l10.webp",
       "sha256": "4cf0ff76669518b5e853232ca18a5e9f3da6e9193c471e35161639fdb4e9e062",
@@ -81,10 +146,25 @@
         "sha256": "23525d90eca89c9c2bb81d269dbf8be3129fb3a7c1b4947e7a1b40ca603dfb32",
         "width": 1024,
         "height": 1024
+      },
+      "occluders": {
+        "arms": {
+          "asset": "/gear-style-studio/v1/pet_solar_peach_l10.arms.webp",
+          "sha256": "29450b1503f76188e4111a1a4a7a95807d07f10488e403d90ff5cfe7610ac457",
+          "width": 1024,
+          "height": 1024
+        },
+        "grip": {
+          "asset": "/gear-style-studio/v1/pet_solar_peach_l10.grip.webp",
+          "sha256": "07ee8a1c7b2f7dc7976e0024d6e8820b37e0f168c89c808e838f9dc4b42ee98f",
+          "width": 1024,
+          "height": 1024
+        }
       }
     },
     {
       "id": "rose_bloom",
+      "poseId": "website-v5-adult-l10",
       "name": "Rose",
       "asset": "/gear-style-studio/v1/pet_rose_bloom_l10.webp",
       "sha256": "6dfcef5ea13885f75254126adfa2845acf9bc8e1800f31092493aa10b86a020a",
@@ -95,10 +175,25 @@
         "sha256": "600642a738262814b8bfaf1bb7e9ecbc89e62995535f95be7acd09489cdb087e",
         "width": 1024,
         "height": 1024
+      },
+      "occluders": {
+        "arms": {
+          "asset": "/gear-style-studio/v1/pet_rose_bloom_l10.arms.webp",
+          "sha256": "af6ed6e4390f10091a0bab7862876e0dc2235d34328e5a8e382d210e385c11a9",
+          "width": 1024,
+          "height": 1024
+        },
+        "grip": {
+          "asset": "/gear-style-studio/v1/pet_rose_bloom_l10.grip.webp",
+          "sha256": "8e4e8df9c680cd5810a91f2b7afcef0c804c3a4402098c4081669fe9d619ae40",
+          "width": 1024,
+          "height": 1024
+        }
       }
     },
     {
       "id": "midnight_mint",
+      "poseId": "website-v5-adult-l10",
       "name": "Midnight",
       "asset": "/gear-style-studio/v1/pet_midnight_mint_l10.webp",
       "sha256": "6e2e4b6fae39dbf2497bd49f5e32d935a4bc3330c9ed9b5dfb0eb93386a6c803",
@@ -109,6 +204,20 @@
         "sha256": "6f35858caa159b4779b47fadcc77cd70d2779c2959c3c110f14bcf970edd9bce",
         "width": 1024,
         "height": 1024
+      },
+      "occluders": {
+        "arms": {
+          "asset": "/gear-style-studio/v1/pet_midnight_mint_l10.arms.webp",
+          "sha256": "4b0c5828087ab7ba41b32f83e8462821b008d40e569aff8060d6fa5534fb30dc",
+          "width": 1024,
+          "height": 1024
+        },
+        "grip": {
+          "asset": "/gear-style-studio/v1/pet_midnight_mint_l10.grip.webp",
+          "sha256": "eecc47c11141c91e0d77b596474f5b85791714108fa171f13eeb567b7821a3a1",
+          "width": 1024,
+          "height": 1024
+        }
       }
     }
   ],
@@ -190,6 +299,9 @@
         "sha256": "dbbcae9349f4caa504615fd93a86e18f99d97ccc6b578a64677f33f074321d47",
         "width": 1024,
         "height": 1024,
+        "poseId": "website-v5-adult-l10",
+        "rear": null,
+        "anchor": null,
         "rect": [
           410,
           27,
@@ -236,6 +348,9 @@
         "sha256": "688186b31cc16ba3df039b0b9a6273f3cc11c9eeef71f1f2c2e1848e348dfde1",
         "width": 1024,
         "height": 1024,
+        "poseId": "website-v5-adult-l10",
+        "rear": null,
+        "anchor": null,
         "rect": [
           376,
           17,
@@ -282,6 +397,9 @@
         "sha256": "404f4e03bfb6882d4158673aa615be8dc806d2d43caf56fc8f32bfd9d405e07b",
         "width": 1024,
         "height": 1024,
+        "poseId": "website-v5-adult-l10",
+        "rear": null,
+        "anchor": null,
         "rect": [
           392,
           131,
@@ -328,6 +446,9 @@
         "sha256": "7d2ccb9e89e9adb5bd34f37ce690edc08d442c291fda6e3e700ed666d0975ebc",
         "width": 1024,
         "height": 1024,
+        "poseId": "website-v5-adult-l10",
+        "rear": null,
+        "anchor": null,
         "rect": [
           209,
           194,
@@ -374,6 +495,9 @@
         "sha256": "6c9a5cec26bbc1efc1be536767530a2f0dcf4f4c63da49921b837d814495e16c",
         "width": 1024,
         "height": 1024,
+        "poseId": "website-v5-adult-l10",
+        "rear": null,
+        "anchor": null,
         "rect": [
           298,
           217,
@@ -420,6 +544,9 @@
         "sha256": "47e578c44652218f683fc649a8d758fde482e90f206656b960132491aa40299b",
         "width": 1024,
         "height": 1024,
+        "poseId": "website-v5-adult-l10",
+        "rear": null,
+        "anchor": null,
         "rect": [
           475,
           361,
@@ -463,9 +590,28 @@
       },
       "wearable": {
         "asset": "/gear-style-studio/v1/diamond-hands-harness.wearable.webp",
-        "sha256": "f7d2549f7eb836207376c64c1ec88d36195d77ba0d0220c719ff55bd27cd3b11",
+        "sha256": "8cd4cb3b94d14193c699d079ba2fb1ca9be3c5970996d457726a6b517ffc24c5",
         "width": 1024,
         "height": 1024,
+        "poseId": "website-v5-adult-l10",
+        "rear": {
+          "asset": "/gear-style-studio/v1/diamond-hands-harness.rear.webp",
+          "sha256": "f054b805d75144abed19da808ea8ea1da202ed5a3df2cb8e6ae57422203a0526",
+          "width": 1024,
+          "height": 1024
+        },
+        "anchor": {
+          "name": "neck",
+          "target": [
+            522,
+            496
+          ],
+          "origin": [
+            0.5,
+            0.10196078431372549
+          ],
+          "preserveAspect": false
+        },
         "rect": [
           377,
           470,
@@ -482,7 +628,7 @@
         "rotation": 0,
         "pieces": null,
         "rowScale": null,
-        "occlusion": "body"
+        "occlusion": "SPLIT_REAR_FRONT"
       }
     },
     {
@@ -509,9 +655,28 @@
       },
       "wearable": {
         "asset": "/gear-style-studio/v1/sleep-404-vest.wearable.webp",
-        "sha256": "24392606a9105bd6225fe20003a32fdd54ec35fc4f471eccb6abad49b5e9c8b2",
+        "sha256": "024c606b0de5e355c12eebb15363e6a19805051e50aac41db4bf5c62eadaa51f",
         "width": 1024,
         "height": 1024,
+        "poseId": "website-v5-adult-l10",
+        "rear": {
+          "asset": "/gear-style-studio/v1/sleep-404-vest.rear.webp",
+          "sha256": "bdd4c90698d47d12675d5674cb075739151d4cdeaf607c92805e9980297f85bd",
+          "width": 1024,
+          "height": 1024
+        },
+        "anchor": {
+          "name": "neck",
+          "target": [
+            522,
+            496
+          ],
+          "origin": [
+            0.5,
+            0.10196078431372549
+          ],
+          "preserveAspect": false
+        },
         "rect": [
           377,
           470,
@@ -528,7 +693,7 @@
         "rotation": 0,
         "pieces": null,
         "rowScale": null,
-        "occlusion": "body"
+        "occlusion": "SPLIT_REAR_FRONT"
       }
     },
     {
@@ -555,9 +720,28 @@
       },
       "wearable": {
         "asset": "/gear-style-studio/v1/hexforge-vest.wearable.webp",
-        "sha256": "22986289b6fd700c3ecad3ba296efefc7df2f2e15c6e1f30754ec0f6cde4389e",
+        "sha256": "6bb106ed7005aa5077b88242aeaca6620c3a6290ed3f3fe54b2d376e2de50f24",
         "width": 1024,
         "height": 1024,
+        "poseId": "website-v5-adult-l10",
+        "rear": {
+          "asset": "/gear-style-studio/v1/hexforge-vest.rear.webp",
+          "sha256": "b4a6d363ef2a864f8cd4869b8c80de849b98deeaab3b5715b03726be6e359682",
+          "width": 1024,
+          "height": 1024
+        },
+        "anchor": {
+          "name": "neck",
+          "target": [
+            522,
+            496
+          ],
+          "origin": [
+            0.5,
+            0.10196078431372549
+          ],
+          "preserveAspect": false
+        },
         "rect": [
           377,
           470,
@@ -574,7 +758,7 @@
         "rotation": 0,
         "pieces": null,
         "rowScale": null,
-        "occlusion": "body"
+        "occlusion": "SPLIT_REAR_FRONT"
       }
     },
     {
@@ -604,6 +788,9 @@
         "sha256": "cc50b842a4250af9e846c1084ee9de106c4ee9961510be0224c6fe987779d25a",
         "width": 1024,
         "height": 1024,
+        "poseId": "website-v5-adult-l10",
+        "rear": null,
+        "anchor": null,
         "rect": [
           247,
           420,
@@ -650,6 +837,9 @@
         "sha256": "1bfb3ecfeaac71f66599e6ffea0141961da1a1797491aef6a78fe4320b0dbb82",
         "width": 1024,
         "height": 1024,
+        "poseId": "website-v5-adult-l10",
+        "rear": null,
+        "anchor": null,
         "rect": [
           228,
           505,
@@ -696,6 +886,9 @@
         "sha256": "5ff26bf096847917f192393b64aee31b54687567cf15d9a7497d50169202094f",
         "width": 1024,
         "height": 1024,
+        "poseId": "website-v5-adult-l10",
+        "rear": null,
+        "anchor": null,
         "rect": [
           261,
           399,
@@ -739,26 +932,40 @@
       },
       "wearable": {
         "asset": "/gear-style-studio/v1/banana-market-maker.wearable.webp",
-        "sha256": "d1f333b120e8438ad760a56a3d4a06c2b4b0d1390cf2e1372cd96db062d5a1de",
+        "sha256": "6a3ae3fa3d6e733270795c36e790a354a5e5bdabba6bb597291bbd5713bcb9f0",
         "width": 1024,
         "height": 1024,
+        "poseId": "website-v5-adult-l10",
+        "rear": null,
+        "anchor": {
+          "name": "grip",
+          "target": [
+            860,
+            508
+          ],
+          "origin": [
+            0.7,
+            0.805
+          ],
+          "preserveAspect": true
+        },
         "rect": [
-          768,
-          300,
-          139,
-          294
+          808,
+          299,
+          174,
+          260
         ],
         "targetRect": [
-          768,
-          300,
-          139,
-          294
+          808,
+          299,
+          174,
+          260
         ],
-        "mirrorX": false,
+        "mirrorX": true,
         "rotation": 0,
         "pieces": null,
         "rowScale": null,
-        "occlusion": "tool"
+        "occlusion": "PET_GRIP_FOREGROUND"
       }
     },
     {
@@ -785,26 +992,40 @@
       },
       "wearable": {
         "asset": "/gear-style-studio/v1/gas-fee-guzzler.wearable.webp",
-        "sha256": "7bf9d73004a99978177cd5c228661c787a7e972ebe35d826cfc79e225c6f651c",
+        "sha256": "3639b1bed0d67ec0448391eaa8c3afb9f5f2fe8789cf0333e9146bed860a1a6e",
         "width": 1024,
         "height": 1024,
+        "poseId": "website-v5-adult-l10",
+        "rear": null,
+        "anchor": {
+          "name": "grip",
+          "target": [
+            860,
+            508
+          ],
+          "origin": [
+            0.665,
+            0.792
+          ],
+          "preserveAspect": true
+        },
         "rect": [
-          754,
-          290,
-          165,
-          292
+          785,
+          339,
+          225,
+          214
         ],
         "targetRect": [
-          754,
-          290,
-          165,
-          292
+          785,
+          339,
+          225,
+          214
         ],
-        "mirrorX": false,
+        "mirrorX": true,
         "rotation": 0,
         "pieces": null,
         "rowScale": null,
-        "occlusion": "tool"
+        "occlusion": "PET_GRIP_FOREGROUND"
       }
     },
     {
@@ -831,26 +1052,40 @@
       },
       "wearable": {
         "asset": "/gear-style-studio/v1/exit-liquidity-trident.wearable.webp",
-        "sha256": "24adf1776a81ecf61d64c9caabd14e755be06994e5312f08c9f6f7c0a20c5eb9",
+        "sha256": "8fbbeca5f32b67a43d36398b4a47de4c45c96212267cb17cde90b7ef6cf303e9",
         "width": 1024,
         "height": 1024,
+        "poseId": "website-v5-adult-l10",
+        "rear": null,
+        "anchor": {
+          "name": "grip",
+          "target": [
+            860,
+            508
+          ],
+          "origin": [
+            0.79,
+            0.82
+          ],
+          "preserveAspect": true
+        },
         "rect": [
-          722,
-          239,
-          175,
-          348
+          818,
+          324,
+          202,
+          224
         ],
         "targetRect": [
-          722,
-          239,
-          175,
-          348
+          818,
+          324,
+          202,
+          224
         ],
-        "mirrorX": false,
+        "mirrorX": true,
         "rotation": 0,
         "pieces": null,
         "rowScale": null,
-        "occlusion": "tool"
+        "occlusion": "PET_GRIP_FOREGROUND"
       }
     },
     {
@@ -880,6 +1115,9 @@
         "sha256": "9a0e00c2336aad8730045e254a62fcc1e32f86dc7ee6a703de273b8f43a7a613",
         "width": 1024,
         "height": 1024,
+        "poseId": "website-v5-adult-l10",
+        "rear": null,
+        "anchor": null,
         "rect": [
           583,
           676,
@@ -926,6 +1164,9 @@
         "sha256": "aece0e24d11bfca87c843611b4a14a040e71a29b5d57a75e808cc354a5f34511",
         "width": 1024,
         "height": 1024,
+        "poseId": "website-v5-adult-l10",
+        "rear": null,
+        "anchor": null,
         "rect": [
           587,
           676,
@@ -972,6 +1213,9 @@
         "sha256": "68fc6d1d7cec6c965fa0ef8ae9474b3433566a60362364b4dfd677757b038400",
         "width": 1024,
         "height": 1024,
+        "poseId": "website-v5-adult-l10",
+        "rear": null,
+        "anchor": null,
         "rect": [
           589,
           682,
@@ -1018,6 +1262,9 @@
         "sha256": "9271b7e71795515ebc8eed0ce2246121f6df76f646e72b58326d2e9842540734",
         "width": 1024,
         "height": 1024,
+        "poseId": "website-v5-adult-l10",
+        "rear": null,
+        "anchor": null,
         "rect": [
           765,
           736,
@@ -1064,6 +1311,9 @@
         "sha256": "af90e06ed69d2108fbcd3326de4925a43d6fe71a9f8d7b8c6388aa90e3525296",
         "width": 1024,
         "height": 1024,
+        "poseId": "website-v5-adult-l10",
+        "rear": null,
+        "anchor": null,
         "rect": [
           752,
           668,
@@ -1110,6 +1360,9 @@
         "sha256": "24dc59cb45e7c9bdb8e3c0604e617818460e76002801fc65756df6d35a093185",
         "width": 1024,
         "height": 1024,
+        "poseId": "website-v5-adult-l10",
+        "rear": null,
+        "anchor": null,
         "rect": [
           745,
           788,
@@ -1156,6 +1409,9 @@
         "sha256": "90b002928b83a0c44f6800d028f878b745e002c1084e02c30fcd2c7003247a03",
         "width": 1024,
         "height": 1024,
+        "poseId": "website-v5-adult-l10",
+        "rear": null,
+        "anchor": null,
         "rect": [
           159,
           839,
@@ -1202,6 +1458,9 @@
         "sha256": "74a976e24a02f3b53e0a7f69aa6dfb7e71a95ebd8fcef10b46a23dc9b0603968",
         "width": 1024,
         "height": 1024,
+        "poseId": "website-v5-adult-l10",
+        "rear": null,
+        "anchor": null,
         "rect": [
           159,
           829,
@@ -1248,6 +1507,9 @@
         "sha256": "ddf06e3a519e406d3595363c29251b496a1bf97eea299912a0e995d606f2b5e3",
         "width": 1024,
         "height": 1024,
+        "poseId": "website-v5-adult-l10",
+        "rear": null,
+        "anchor": null,
         "rect": [
           159,
           827,
@@ -1291,18 +1553,37 @@
       },
       "wearable": {
         "asset": "/gear-style-studio/v1/diamond-cargo-shorts.wearable.webp",
-        "sha256": "b145798100455c29cc8474d9ea666456133f58d0c563e6ad1fc39dc3dcd4a5eb",
+        "sha256": "6bf24f044cfbc16b8f8eb6e583dc1afcb68120b9b40eb9c93fc3bf1157ec548b",
         "width": 1024,
         "height": 1024,
+        "poseId": "website-v5-adult-l10",
+        "rear": {
+          "asset": "/gear-style-studio/v1/diamond-cargo-shorts.rear.webp",
+          "sha256": "7c6f244c4bce1f5624c6f1b61f4665e3a56cffdbdd20e43ec79db07a8e7d01df",
+          "width": 1024,
+          "height": 1024
+        },
+        "anchor": {
+          "name": "waist",
+          "target": [
+            516,
+            668
+          ],
+          "origin": [
+            0.5,
+            0.14673913043478262
+          ],
+          "preserveAspect": false
+        },
         "rect": [
-          263,
-          657,
+          258,
+          641,
           518,
           184
         ],
         "targetRect": [
-          337,
-          657,
+          332,
+          641,
           369,
           184
         ],
@@ -1323,7 +1604,7 @@
             "scale": 1.4
           }
         ],
-        "occlusion": "pants"
+        "occlusion": "SPLIT_REAR_FRONT"
       }
     },
     {
@@ -1350,18 +1631,37 @@
       },
       "wearable": {
         "asset": "/gear-style-studio/v1/night-node-joggers.wearable.webp",
-        "sha256": "dfeb26c9200b76589ce2d969e64eb41a315c186013878e31747b9fe1f39fd2aa",
+        "sha256": "52ac6e56051e72dd676549ebf67f373a00ac3419df1289b3542b0e01e5362f4b",
         "width": 1024,
         "height": 1024,
+        "poseId": "website-v5-adult-l10",
+        "rear": {
+          "asset": "/gear-style-studio/v1/night-node-joggers.rear.webp",
+          "sha256": "d3f116bd02c9a2d298cf5540b45c630b2a928484a1d7b9c2f9b8c5d836ebd1e0",
+          "width": 1024,
+          "height": 1024
+        },
+        "anchor": {
+          "name": "waist",
+          "target": [
+            516,
+            668
+          ],
+          "origin": [
+            0.5,
+            0.10040160642570281
+          ],
+          "preserveAspect": false
+        },
         "rect": [
           184,
-          659,
+          643,
           665,
           249
         ],
         "targetRect": [
           315,
-          659,
+          643,
           402,
           249
         ],
@@ -1382,7 +1682,7 @@
             "scale": 1.65
           }
         ],
-        "occlusion": "pants"
+        "occlusion": "SPLIT_REAR_FRONT"
       }
     },
     {
@@ -1409,18 +1709,37 @@
       },
       "wearable": {
         "asset": "/gear-style-studio/v1/runesmith-trousers.wearable.webp",
-        "sha256": "451fdb54d699c120d05b707e25ddb477197c55d823be708ca3e18a25c0be0cba",
+        "sha256": "f838cdccbbaae507be3cd3eea688d663a8b67e868b47198c3e52d9156a5a487e",
         "width": 1024,
         "height": 1024,
+        "poseId": "website-v5-adult-l10",
+        "rear": {
+          "asset": "/gear-style-studio/v1/runesmith-trousers.rear.webp",
+          "sha256": "394232c16100164163883efdad9e214f226f4bd40864c31953a7494da0c725c2",
+          "width": 1024,
+          "height": 1024
+        },
+        "anchor": {
+          "name": "waist",
+          "target": [
+            516,
+            668
+          ],
+          "origin": [
+            0.5,
+            0.10121457489878542
+          ],
+          "preserveAspect": false
+        },
         "rect": [
           187,
-          659,
+          643,
           658,
           247
         ],
         "targetRect": [
           317,
-          659,
+          643,
           398,
           247
         ],
@@ -1441,7 +1760,7 @@
             "scale": 1.65
           }
         ],
-        "occlusion": "pants"
+        "occlusion": "SPLIT_REAR_FRONT"
       }
     },
     {
@@ -1471,6 +1790,9 @@
         "sha256": "82c283fd502238c9304757e9146853ab22880504bc384bcba21493a9b8ac57f5",
         "width": 1024,
         "height": 1024,
+        "poseId": "website-v5-adult-l10",
+        "rear": null,
+        "anchor": null,
         "rect": [
           225,
           799,
@@ -1546,6 +1868,9 @@
         "sha256": "c06f1900e5d896d1e28f903388d5b16771485df95404ba3445e2b5ef1580f418",
         "width": 1024,
         "height": 1024,
+        "poseId": "website-v5-adult-l10",
+        "rear": null,
+        "anchor": null,
         "rect": [
           225,
           821,
@@ -1621,6 +1946,9 @@
         "sha256": "6172821697ffdedd500ad70c8ba9b4daf80c4e72e4cb11806614daf914539665",
         "width": 1024,
         "height": 1024,
+        "poseId": "website-v5-adult-l10",
+        "rear": null,
+        "anchor": null,
         "rect": [
           225,
           799,
@@ -1678,7 +2006,7 @@
       "status": "CANDIDATE",
       "lookUrl": "/gear-studio?look=look-1&lineage=emerald_sprout",
       "asset": "/gear-style-studio/v1/showcase-emerald_sprout.webp",
-      "sha256": "87a7cab1cebcf30af669d8d63d53901ebaa48f4b976cec980f686231739866ab",
+      "sha256": "fa4d2e2bb9c007e0ae9734bd8433c8f9348ca19eb15bef3d4ac5e8f458f1615c",
       "width": 1024,
       "height": 1024
     },
@@ -1689,7 +2017,7 @@
       "status": "CANDIDATE",
       "lookUrl": "/gear-studio?look=look-2&lineage=sapphire_tide",
       "asset": "/gear-style-studio/v1/showcase-sapphire_tide.webp",
-      "sha256": "8693bf3e4e8f63a01cd29cbedc05f2a70338720797d9e4339537433d4d514619",
+      "sha256": "023305c10281099ab21a78b33bedce1b14237391f8c761ee6fa3062cf84aba4e",
       "width": 1024,
       "height": 1024
     },
@@ -1700,7 +2028,7 @@
       "status": "CANDIDATE",
       "lookUrl": "/gear-studio?look=look-3&lineage=amethyst_dream",
       "asset": "/gear-style-studio/v1/showcase-amethyst_dream.webp",
-      "sha256": "f302221f46a44110695d79cf56b0081df33e1ae98f56d7d83b41b5728c7f1749",
+      "sha256": "a1d230fca992c6bdd4c4e08cc012998d7615c2fabe095ed2b53539384706610d",
       "width": 1024,
       "height": 1024
     },
@@ -1711,7 +2039,7 @@
       "status": "CANDIDATE",
       "lookUrl": "/gear-studio?look=look-1&lineage=solar_peach",
       "asset": "/gear-style-studio/v1/showcase-solar_peach.webp",
-      "sha256": "6c1382e5adbce46d7a46a9cedfe6bf86438f5718f2241526ba618dd4d4e3ebb1",
+      "sha256": "86fa470d20cdfececa624396ff7e54eaaf1e76719021a14315e487beec299b56",
       "width": 1024,
       "height": 1024
     },
@@ -1722,7 +2050,7 @@
       "status": "CANDIDATE",
       "lookUrl": "/gear-studio?look=look-2&lineage=rose_bloom",
       "asset": "/gear-style-studio/v1/showcase-rose_bloom.webp",
-      "sha256": "c059660b541a4bde96c0f62f4690eeb8c17467332b78292bd3c610363014da65",
+      "sha256": "dcf604c36df42d8f32eb3d9dc403b465a9870c01f31bdaabed84721ac253eb33",
       "width": 1024,
       "height": 1024
     },
@@ -1733,7 +2061,7 @@
       "status": "CANDIDATE",
       "lookUrl": "/gear-studio?look=look-3&lineage=midnight_mint",
       "asset": "/gear-style-studio/v1/showcase-midnight_mint.webp",
-      "sha256": "d17178eafe344e20a982820f2d5b3edd025ce1b6c8c4698735bb3c8da9f303e1",
+      "sha256": "c7c4dc6c0a7119e3b48b355e75967c62d561e2dbbed50d385e55a95315fbad96",
       "width": 1024,
       "height": 1024
     }

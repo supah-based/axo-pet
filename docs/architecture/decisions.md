@@ -49,3 +49,9 @@
 **Decision:** Add Pants and Footwear as independent candidate Studio slots, with separate left/right shoe placements, fixed-pose base-foot suppression and a stance-aware trouser projection. Keep the canonical eight-slot contract and schemas unchanged pending the versioned integration in `gear-slots-v2.md`.
 
 **Reason:** The existing Gear contract uses one-based slots 1–8 and a fixed eight-entry loadout ABI. Expanding a cosmetic preview must not silently change ownership validation, existing slot numbers or Arena stat caps.
+
+## ADR-010 — Anchored front/rear fits with original Pet foreground
+
+**Decision:** Replace candidate flat overlays with a pose-versioned rig, item attachment origins, rear/front surfaces and lossless original-Pet arm/finger foreground projections. Require compatible pose/depth assets and preserve handheld source proportions. Expose isolated layer inspection in Style Studio.
+
+**Reason:** Scaling and isolated holes cannot place rear lining behind the wearer or make fingers wrap a tool consistently. Authored depth segmentation and anatomical anchors address these failures while retaining the source app, canonical art and ownership boundaries. New poses and art still require fitting and visual review.

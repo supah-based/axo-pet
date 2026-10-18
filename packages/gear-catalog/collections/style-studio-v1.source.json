@@ -119,17 +119,25 @@
       "direction": "A sleeveless black tactical chest harness with neon lime webbing and a cyan diamond clasp, shaped EXACTLY for the reference axolotl's short round torso and three-quarter pose. Open low V-neck, no upright rear collar, large open armholes, no sleeves, hem above upper thighs. Chest front turns toward viewer RIGHT, central clasp slightly right of image center. Item only; empty transparent neck and arm holes.",
       "fit": {
         "mirrorX": true,
-        "artMask": {
-          "viewBox": [
-            365,
-            469,
-            317,
-            280
-          ],
-          "erase": [
-            "M458 493C495 510 570 501 605 482C599 524 605 558 619 586L604 610C583 614 563 625 544 632C530 607 513 582 498 556C482 534 469 510 458 493Z"
-          ]
-        }
+        "anchor": "neck",
+        "origin": [
+          0.5,
+          0.10196078431372549
+        ],
+        "size": [
+          291,
+          255
+        ],
+        "rear": [
+          "M430 477C480 501 550 500 599 475C574 510 568 540 551 568L530 603C504 611 469 610 448 595C429 570 415 546 418 520L430 477Z",
+          "M625 515C646 523 646 553 648 577L654 619Q617 635 579 610L576 582Q606 596 621 555Z"
+        ],
+        "rearReference": [
+          377,
+          470,
+          291,
+          255
+        ]
       }
     },
     {
@@ -147,7 +155,26 @@
       "description": "Uptime: immaculate. Sleep schedule: missing.",
       "direction": "A compact sleeveless cyber streetwear puffer vest, midnight purple nylon, cyan circuit seams, small pixel battery badge, silver zipper. Shaped exactly for short round axolotl torso, three-quarter pose facing viewer RIGHT, asymmetrical armholes, low open neckline, NO hood or upright collar, no sleeves, waist-length hem above upper thighs. No body, hands or skin; arm and neck holes truly transparent.",
       "fit": {
-        "mirrorX": true
+        "mirrorX": true,
+        "anchor": "neck",
+        "origin": [
+          0.5,
+          0.10196078431372549
+        ],
+        "size": [
+          291,
+          255
+        ],
+        "rear": [
+          "M465 496Q518 522 571 498L485 563L474 561Q480 528 465 512Z",
+          "M617 518C639 528 637 548 640 567L643 597Q621 614 601 603L587 582Q610 576 617 550Z"
+        ],
+        "rearReference": [
+          377,
+          470,
+          291,
+          255
+        ]
       }
     },
     {
@@ -165,7 +192,26 @@
       "description": "A tiny workshop's worth of questionable power.",
       "direction": "Original painterly arcane-industrial sleeveless waistcoat, distressed oxblood leather, ornate brass fittings, asymmetrical blue crystal power cell and teal seams. Shape follows short round axolotl torso, three-quarter facing viewer RIGHT, low open neck, big empty armholes, no tall collar, no sleeves, ends at waist above thighs. No existing franchise logos, no body or skin.",
       "fit": {
-        "mirrorX": true
+        "mirrorX": true,
+        "anchor": "neck",
+        "origin": [
+          0.5,
+          0.10196078431372549
+        ],
+        "size": [
+          291,
+          255
+        ],
+        "rear": [
+          "M462 497Q520 518 575 497L487 551L465 560Q482 531 462 497Z",
+          "M619 512C642 518 648 541 651 568L653 599Q628 618 590 594L587 579Q607 555 608 532Z"
+        ],
+        "rearReference": [
+          377,
+          470,
+          291,
+          255
+        ]
       }
     },
     {
@@ -226,7 +272,20 @@
         294
       ],
       "description": "One banana. Infinite financial advice.",
-      "direction": "A single curved golden banana used as a ridiculous royal trading scepter, dark chrome short grip at lower center, tiny diamond charm dangling from tip, black/yellow futuristic detailing. Vertical item, grip at 70 percent of item height, three-quarter angled slightly toward viewer LEFT. No hands or character."
+      "direction": "A single curved golden banana used as a ridiculous royal trading scepter, dark chrome short grip at lower center, tiny diamond charm dangling from tip, black/yellow futuristic detailing. Vertical item, grip at 70 percent of item height, three-quarter angled slightly toward viewer LEFT. No hands or character.",
+      "fit": {
+        "mirrorX": true,
+        "anchor": "grip",
+        "size": [
+          174,
+          260
+        ],
+        "origin": [
+          0.7,
+          0.805
+        ],
+        "preserveAspect": true
+      }
     },
     {
       "id": "gas-fee-guzzler",
@@ -241,7 +300,20 @@
         292
       ],
       "description": "Runs on the fees you meant to save.",
-      "direction": "A whimsical futuristic gas-pump nozzle raygun with a tiny transparent orange fuel canister, iridescent steel, hot coral lights, little exhaust pipe. Vertical handheld silhouette, clear narrow grip 70 percent down, barrel points upward-left. No hand, no character, no text."
+      "direction": "A whimsical futuristic gas-pump nozzle raygun with a tiny transparent orange fuel canister, iridescent steel, hot coral lights, little exhaust pipe. Vertical handheld silhouette, clear narrow grip 70 percent down, barrel points upward-left. No hand, no character, no text.",
+      "fit": {
+        "mirrorX": true,
+        "anchor": "grip",
+        "size": [
+          225,
+          214
+        ],
+        "origin": [
+          0.665,
+          0.792
+        ],
+        "preserveAspect": true
+      }
     },
     {
       "id": "exit-liquidity-trident",
@@ -256,7 +328,20 @@
         348
       ],
       "description": "Summons liquidity. Exit route sold separately.",
-      "direction": "An elegant original fantasy trident wand of dark brass, three jagged violet-blue crystal prongs, contained turquoise liquid core, engraved arcane metalwork. Short polearm for a tiny axolotl, narrow dark grip 75 percent down, points upward, three-quarter facing viewer LEFT. No hands or wearer."
+      "direction": "An elegant original fantasy trident wand of dark brass, three jagged violet-blue crystal prongs, contained turquoise liquid core, engraved arcane metalwork. Short polearm for a tiny axolotl, narrow dark grip 75 percent down, points upward, three-quarter facing viewer LEFT. No hands or wearer.",
+      "fit": {
+        "mirrorX": true,
+        "anchor": "grip",
+        "size": [
+          202,
+          224
+        ],
+        "origin": [
+          0.79,
+          0.82
+        ],
+        "preserveAspect": true
+      }
     },
     {
       "id": "bagholder-bag",
@@ -421,6 +506,24 @@
             "at": 1,
             "scale": 1.4
           }
+        ],
+        "anchor": "waist",
+        "origin": [
+          0.5,
+          0.14673913043478262
+        ],
+        "size": [
+          369,
+          184
+        ],
+        "rear": [
+          "M0 0H1024V676H696Q525 732 337 690H0Z"
+        ],
+        "rearReference": [
+          337,
+          657,
+          369,
+          184
         ]
       }
     },
@@ -452,6 +555,24 @@
             "at": 1,
             "scale": 1.65
           }
+        ],
+        "anchor": "waist",
+        "origin": [
+          0.5,
+          0.10040160642570281
+        ],
+        "size": [
+          402,
+          249
+        ],
+        "rear": [
+          "M0 0H1024V681H706Q520 725 320 697H0Z"
+        ],
+        "rearReference": [
+          315,
+          659,
+          402,
+          249
         ]
       }
     },
@@ -483,6 +604,26 @@
             "at": 1,
             "scale": 1.65
           }
+        ],
+        "anchor": "waist",
+        "origin": [
+          0.5,
+          0.10121457489878542
+        ],
+        "size": [
+          398,
+          247
+        ],
+        "rear": [
+          "M0 0H1024V679H706Q520 726 320 692H0Z",
+          "M244 864C280 855 349 869 405 893C357 895 285 882 244 871Z",
+          "M560 884C629 867 734 874 794 886C731 900 644 900 574 891Z"
+        ],
+        "rearReference": [
+          317,
+          659,
+          398,
+          247
         ]
       }
     },

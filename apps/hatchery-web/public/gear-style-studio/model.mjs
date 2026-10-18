@@ -1,17 +1,20 @@
 // Candidate art preview only. Never use this module to authorize equipment or stats.
 export const STUDIO_SLOTS = Object.freeze(['head', 'face', 'body', 'pants', 'footwear', 'back', 'tool', 'charm', 'companion', 'habitat']);
-export const STUDIO_PLANES = Object.freeze(['habitat', 'back', 'pet', 'footwear', 'pants', 'body', 'face', 'head', 'tool', 'charm', 'companion']);
+export const STUDIO_PLANES = Object.freeze(['habitat', 'back', 'body-rear', 'pants-rear', 'pet', 'footwear', 'pants', 'body', 'pet-arms', 'face', 'head', 'tool', 'pet-grip', 'charm', 'companion']);
 
 export function validateSelection(catalog, lineage, selection) {
   if (catalog.schema !== 'AXO_GEAR_STYLE_STUDIO_V1' || catalog.status !== 'CANDIDATE' || catalog.level !== 10) throw new Error('Unsupported candidate collection.');
   const base = catalog.lineages.find(item => item.id === lineage);
   if (!base) throw new Error('Unknown level-10 reference.');
+  if (catalog.fitSystem?.version !== 2 || base.poseId !== catalog.fitSystem.poseId) throw new Error('Missing compatible pose fitting profile.');
   const picked = {};
   for (const [slot, id] of Object.entries(selection)) {
     if (!STUDIO_SLOTS.includes(slot)) throw new Error('Unknown equipment slot.');
     if (!id) continue;
     const item = catalog.items.find(item => item.id === id);
     if (!item || item.slot !== slot) throw new Error('Item does not match its slot.');
+    if (item.wearable.poseId !== base.poseId) throw new Error('Wearable pose mismatch.');
+    if (['body', 'pants'].includes(slot) && !item.wearable.rear) throw new Error('Garment depth layer unavailable.');
     picked[slot] = item;
   }
   return { base, picked };
@@ -20,9 +23,21 @@ export function validateSelection(catalog, lineage, selection) {
 export function buildRenderPlan(catalog, lineage, selection) {
   const { base, picked } = validateSelection(catalog, lineage, selection);
   if (picked.footwear && !base.footwearBase) throw new Error('Footwear base mask unavailable.');
-  return STUDIO_PLANES.flatMap(plane => plane === 'pet'
-    ? [{ kind: 'pet', id: base.id, src: picked.footwear ? base.footwearBase.asset : base.asset }]
-    : picked[plane] ? [{ kind: 'gear', id: picked[plane].id, slot: plane, src: picked[plane].wearable.asset }] : []);
+  const foreground = key => {
+    if (!base.occluders?.[key]) throw new Error('Pet foreground occlusion unavailable.');
+    return [{ kind: 'occluder', id: `${base.id}-${key}`, plane: `pet-${key}`, src: base.occluders[key].asset }];
+  };
+  return STUDIO_PLANES.flatMap(plane => {
+    if (plane === 'pet') return [{ kind: 'pet', id: base.id, plane, src: picked.footwear ? base.footwearBase.asset : base.asset }];
+    if (plane === 'pet-arms') return picked.body || picked.pants ? foreground('arms') : [];
+    if (plane === 'pet-grip') return picked.tool ? foreground('grip') : [];
+    if (plane.endsWith('-rear')) {
+      const item = picked[plane.slice(0, -5)];
+      return item ? [{ kind: 'gear', id: item.id, slot: item.slot, plane, depth: 'rear', src: item.wearable.rear.asset }] : [];
+    }
+    const item = picked[plane];
+    return item ? [{ kind: 'gear', id: item.id, slot: plane, plane, depth: 'front', src: item.wearable.asset }] : [];
+  });
 }
 
 export function selectionFromURL(catalog, search) {

@@ -3,12 +3,14 @@ import path from 'node:path';
 import { createHash } from 'node:crypto';
 import sharp from 'sharp';
 import { STUDIO_SLOTS, buildRenderPlan } from '../packages/visual-engine/src/style-studio.mjs';
+import { assertPoseRig, resolveAnchoredRect } from '../packages/visual-engine/src/fit-rig.mjs';
 
 const root = path.resolve(import.meta.dirname, '..');
 const flags = Object.fromEntries(process.argv.slice(2).reduce((pairs, arg, index, args) => arg.startsWith('--') ? [...pairs, [arg.slice(2), args[index + 1]]] : pairs, []));
 if (!flags.art || !flags.bases) throw new Error('Usage: node scripts/build-style-studio.mjs --art <generated PNG directory> --bases <canonical public root> [--review <review output directory>]');
 const source = JSON.parse(await fs.readFile(path.join(root, 'packages/gear-catalog/collections/style-studio-v1.source.json')));
-const rig = JSON.parse(await fs.readFile(path.join(root, 'packages/gear-catalog/collections/level10-fit-rig-v1.json')));
+const rig = JSON.parse(await fs.readFile(path.join(root, 'packages/gear-catalog/collections/level10-fit-rig-v2.json')));
+assertPoseRig(rig);
 const canonical = JSON.parse(await fs.readFile(path.join(root, 'packages/gear-catalog/catalogs/website-visual-catalog-v5.json')));
 const out = path.join(root, 'apps/hatchery-web/public/gear-style-studio/v1');
 await fs.mkdir(out, { recursive: true });
@@ -20,11 +22,13 @@ const fileRecord = async (name, bytes) => {
   return { asset: '/gear-style-studio/v1/' + name, sha256: sha(bytes), width: meta.width, height: meta.height };
 };
 const allMasks = {};
+const pathMask = paths => Buffer.from(`<svg width="1024" height="1024"><g fill="white">${paths.map(d => `<path d="${d}"/>`).join('')}</g></svg>`);
 for (const [slot, paths] of Object.entries(rig.masks)) {
   allMasks[slot] = Buffer.from(`<svg width="1024" height="1024"><g fill="white">${paths.map(d => `<path d="${d}"/>`).join('')}</g></svg>`);
 }
 
-const catalog = { schema: 'AXO_GEAR_STYLE_STUDIO_V1', revision: '1.1.0-candidate', status: 'CANDIDATE', level: 10,
+const catalog = { schema: 'AXO_GEAR_STYLE_STUDIO_V1', revision: '1.2.0-candidate', status: 'CANDIDATE', level: 10,
+  fitSystem: { version: 2, poseId: rig.poseId, anchors: rig.anchors, depth: 'REAR_PET_FRONT_FOREGROUND' },
   slotCompatibility: { canonicalSlots: 8, candidateOnlySlots: ['pants', 'footwear'], onchainIntegration: 'REQUIRES_VERSIONED_CONTRACT_AND_SCHEMA_REVIEW' },
   fitStatus: 'REVIEW_REQUIRED', fitRigSha256: sha(Buffer.from(JSON.stringify(rig))), ownership: 'NONE',
   slots: STUDIO_SLOTS, lineages: [], presets: [], items: [] };
@@ -37,7 +41,12 @@ for (let i = 0; i < lineageIds.length; i++) {
   if (!expected || sha(bytes) !== expected.runtimeSha256) throw new Error(`Canonical reference hash mismatch: ${id}`);
   const footMask = Buffer.from(`<svg width="1024" height="1024"><g fill="white">${rig.masks.baseFeet.map(d => `<path d="${d}"/>`).join('')}</g></svg>`);
   const footwearBase = await sharp(bytes).composite([{ input: footMask, blend: 'dest-out' }]).webp({ quality: 95, alphaQuality: 100 }).toBuffer();
-  catalog.lineages.push({ id, name: names[i], ...await fileRecord(name, bytes), footwearBase: await fileRecord(`pet_${id}_l10.footwear.webp`, footwearBase) });
+  const occluders = {};
+  for (const [key, paths] of Object.entries(rig.foreground)) {
+    const pixels = await sharp(bytes).composite([{ input: pathMask(paths), blend: 'dest-in' }]).webp({ lossless: true }).toBuffer();
+    occluders[key] = await fileRecord(`pet_${id}_l10.${key}.webp`, pixels);
+  }
+  catalog.lineages.push({ id, poseId: rig.poseId, name: names[i], ...await fileRecord(name, bytes), footwearBase: await fileRecord(`pet_${id}_l10.footwear.webp`, footwearBase), occluders });
 }
 for (const item of source.items) {
   if (!STUDIO_SLOTS.includes(item.slot) || !/^[a-z0-9-]+$/.test(item.id)) throw new Error('Unsafe design identifier.');
@@ -49,8 +58,13 @@ for (const item of source.items) {
   const itemArt = await sharp(trimmed).resize(924, 924, { fit: 'inside' }).toBuffer();
   const itemMeta = await sharp(itemArt).metadata();
   const fullArt = await blank().composite([{ input: itemArt, left: Math.floor((1024 - itemMeta.width) / 2), top: Math.floor((1024 - itemMeta.height) / 2) }]).webp({ quality: 95, alphaQuality: 100 }).toBuffer();
-  const [left, top, width, height] = item.rect;
+  const targetRect = item.fit?.anchor ? resolveAnchoredRect(item.fit, rig) : item.rect;
+  const [left, top, width, height] = targetRect;
   if (left < 0 || top < 0 || left + width > 1024 || top + height > 1024) throw new Error(`Fit outside canvas: ${item.id}`);
+  if (item.fit?.preserveAspect) {
+    const dimensions = await sharp(trimmed).metadata();
+    if (Math.abs((width / height) / (dimensions.width / dimensions.height) - 1) > .02) throw new Error(`Distorted handheld proportions: ${item.id}`);
+  }
   let resized = await sharp(trimmed).resize(width, height, { fit: 'fill' }).png().toBuffer();
   if (item.fit?.artMask) {
     const mask = Buffer.from(`<svg width="${width}" height="${height}" viewBox="${item.fit.artMask.viewBox.join(' ')}"><g fill="white">${item.fit.artMask.erase.map(d => `<path d="${d}"/>`).join('')}</g></svg>`);
@@ -104,6 +118,15 @@ for (const item of source.items) {
     const mask = Buffer.from(`<svg width="1024" height="1024">${item.fit.keep}</svg>`);
     wearable = await sharp(wearable).composite([{ input: mask, blend: 'dest-in' }]).png().toBuffer();
   }
+  let rear;
+  if (item.fit?.rear?.length) {
+    // These contours were authored on an already oriented, fitted reference.
+    // Carry them with its anchor/scale instead of leaving a world-space hole behind.
+    const [rx, ry, rw, rh] = item.fit.rearReference;
+    const depthMask = Buffer.from(`<svg width="1024" height="1024"><g transform="translate(${left} ${top}) scale(${width / rw} ${height / rh}) translate(${-rx} ${-ry})" fill="white">${item.fit.rear.map(d => `<path d="${d}"/>`).join('')}</g></svg>`);
+    rear = await fileRecord(`${item.id}.rear.webp`, await sharp(wearable).composite([{ input: depthMask, blend: 'dest-in' }]).webp({ quality: 95, alphaQuality: 100 }).toBuffer());
+    wearable = await sharp(wearable).composite([{ input: depthMask, blend: 'dest-out' }]).png().toBuffer();
+  }
   wearable = await sharp(wearable).webp({ quality: 95, alphaQuality: 100 }).toBuffer();
   const widest = Math.max(1, ...(item.fit?.rowScale || []).map(stop => stop.scale));
   const bounds = widest > 1 ? [Math.floor(left + width * (1 - widest) / 2), top, Math.ceil(width * widest) + 1, height] : [placedLeft, placedTop, projectedInfo.width, projectedInfo.height];
@@ -111,7 +134,10 @@ for (const item of source.items) {
     status: 'CANDIDATE', fitStatus: 'REVIEW_REQUIRED', sourceSha256: sha(png),
     itemArt: await fileRecord(`${item.id}.item.webp`, fullArt),
     thumbnail: await fileRecord(`${item.id}.thumb.webp`, await sharp(fullArt).resize(320).webp({ quality: 85 }).toBuffer()),
-    wearable: { ...await fileRecord(`${item.id}.wearable.webp`, wearable), rect: bounds, targetRect: item.rect, mirrorX: Boolean(item.fit?.mirrorX), rotation: item.fit?.rotation || 0, pieces: item.fit?.pieces || null, rowScale: item.fit?.rowScale || null, occlusion: allMasks[item.slot] ? item.slot : 'BEHIND_PET_OR_OPEN_ACCESSORY' } };
+    wearable: { ...await fileRecord(`${item.id}.wearable.webp`, wearable), poseId: rig.poseId, rear: rear || null,
+      anchor: item.fit?.anchor ? { name: item.fit.anchor, target: rig.anchors[item.fit.anchor], origin: item.fit.origin, preserveAspect: Boolean(item.fit.preserveAspect) } : null,
+      rect: bounds, targetRect, mirrorX: Boolean(item.fit?.mirrorX), rotation: item.fit?.rotation || 0, pieces: item.fit?.pieces || null, rowScale: item.fit?.rowScale || null,
+      occlusion: rear ? 'SPLIT_REAR_FRONT' : item.slot === 'tool' ? 'PET_GRIP_FOREGROUND' : allMasks[item.slot] ? item.slot : 'BEHIND_PET_OR_OPEN_ACCESSORY' } };
   catalog.items.push(record);
 }
 const presetNames = ['Maximum cope', 'Node after dark', 'Aether shift'];

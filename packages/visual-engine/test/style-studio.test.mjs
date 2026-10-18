@@ -5,12 +5,14 @@ import path from 'node:path';
 import { createHash } from 'node:crypto';
 import sharp from 'sharp';
 import { STUDIO_SLOTS, buildRenderPlan, selectionFromURL, selectionToURL, drawStudioLook } from '../src/style-studio.mjs';
+import { assertPoseRig, resolveAnchoredRect } from '../src/fit-rig.mjs';
 
 const root = path.resolve(import.meta.dirname, '../../..');
 const publicRoot = path.join(root, 'apps/hatchery-web/public');
 const catalog = JSON.parse(await fs.readFile(path.join(publicRoot, 'gear-style-studio/v1/catalog.json')));
 const source = JSON.parse(await fs.readFile(path.join(root, 'packages/gear-catalog/collections/style-studio-v1.source.json')));
 const canonical = JSON.parse(await fs.readFile(path.join(root, 'packages/gear-catalog/catalogs/website-visual-catalog-v5.json')));
+const rig = JSON.parse(await fs.readFile(path.join(root, 'packages/gear-catalog/collections/level10-fit-rig-v2.json')));
 const sha = bytes => createHash('sha256').update(bytes).digest('hex');
 const assetBytes = record => fs.readFile(path.join(publicRoot, '.' + record.asset));
 
@@ -29,7 +31,7 @@ test('candidate collection has 30 original designs, three per preview slot, with
 });
 
 test('every public artifact matches its recorded hash, dimensions, alpha and safe URL', async () => {
-  for (const record of [...catalog.lineages.flatMap(base => [base, base.footwearBase]), ...catalog.showcases, ...catalog.items.flatMap(item => [item.itemArt, item.thumbnail, item.wearable])]) {
+  for (const record of [...catalog.lineages.flatMap(base => [base, base.footwearBase, ...Object.values(base.occluders)]), ...catalog.showcases, ...catalog.items.flatMap(item => [item.itemArt, item.thumbnail, item.wearable, ...(item.wearable.rear ? [item.wearable.rear] : [])])]) {
     assert.match(record.asset, /^\/gear-style-studio\/v1\/[a-z0-9_.-]+\.webp$/);
     const bytes = await assetBytes(record), meta = await sharp(bytes).metadata();
     assert.equal(sha(bytes), record.sha256, record.asset);
@@ -76,25 +78,62 @@ test('wearables stay on their registered pose while standalone item art fills it
   }
 });
 
-test('body and handheld masks keep the fixed neck, bent arm and finger regions clear', async () => {
-  for (const item of catalog.items.filter(item => ['body', 'tool'].includes(item.slot))) {
-    const points = item.slot === 'body' ? [[520, 480], [375, 650], [700, 515]] : [[821, 470], [903, 469], [905, 512], [871, 541]];
+test('garment fronts protect the neck and bent arm, with internal rear surfaces behind the skin', async () => {
+  for (const item of catalog.items.filter(item => ['body', 'pants'].includes(item.slot))) {
+    const points = item.slot === 'body' ? [[520, 480], [375, 650], [700, 515], [640, 577]] : [[520, 664], [375, 650]];
     const { data, info } = await sharp(await assetBytes(item.wearable)).ensureAlpha().raw().toBuffer({ resolveWithObject: true });
     for (const [x, y] of points) assert.equal(data[(y * 1024 + x) * info.channels + 3], 0, `${item.id}: protected ${x},${y}`);
   }
 });
 
-test('render plan places back/ground behind the Pet and masked tools in front, with one piece per slot', () => {
+test('render plan puts garment interiors behind the Pet and original skin above clothing and tools', () => {
   for (const preset of catalog.presets) {
     assert.deepEqual(Object.keys(preset.selection), STUDIO_SLOTS);
     const plan = buildRenderPlan(catalog, catalog.lineages[0].id, preset.selection);
-    assert.deepEqual(plan.map(layer => layer.slot || layer.kind), ['habitat', 'back', 'pet', 'footwear', 'pants', 'body', 'face', 'head', 'tool', 'charm', 'companion']);
-    assert.equal(new Set(plan.map(layer => layer.id)).size, 11);
+    assert.deepEqual(plan.map(layer => layer.plane), ['habitat', 'back', 'body-rear', 'pants-rear', 'pet', 'footwear', 'pants', 'body', 'pet-arms', 'face', 'head', 'tool', 'pet-grip', 'charm', 'companion']);
+    assert.equal(new Set(plan.filter(layer => layer.kind === 'gear').map(layer => layer.slot)).size, 10);
   }
   const invalid = { ...catalog.presets[0].selection, head: catalog.items.find(item => item.slot === 'body').id };
   assert.throws(() => buildRenderPlan(catalog, catalog.lineages[0].id, invalid), /slot/);
   assert.throws(() => buildRenderPlan(catalog, 'unknown', {}), /reference/);
   assert.throws(() => buildRenderPlan(catalog, catalog.lineages[0].id, { weapon: 'unknown' }), /slot/);
+});
+
+test('mirrored tool anchors land on the grip without stretching their original proportions', async () => {
+  assertPoseRig(rig);
+  for (const item of catalog.items.filter(item => item.slot === 'tool')) {
+    const [left, top, width, height] = item.wearable.targetRect, anchor = item.wearable.anchor;
+    assert.equal(item.wearable.mirrorX, true); assert.equal(anchor.name, 'grip'); assert.equal(anchor.preserveAspect, true);
+    assert.ok(Math.abs(left + (1 - anchor.origin[0]) * width - rig.anchors.grip[0]) <= .5);
+    assert.ok(Math.abs(top + anchor.origin[1] * height - rig.anchors.grip[1]) <= .5);
+    const { info } = await sharp(await assetBytes(item.itemArt)).trim({ background: '#00000000', threshold: 8 }).png().toBuffer({ resolveWithObject: true });
+    assert.ok(Math.abs((width / height) / (info.width / info.height) - 1) < .025, item.id);
+  }
+  assert.throws(() => resolveAnchoredRect({ anchor: 'unknown', origin: [.5,.5], size: [100,100] }, rig), /anchor/);
+  assert.throws(() => resolveAnchoredRect({ anchor: 'grip', origin: [2,.5], size: [100,100] }, rig), /geometry/);
+  assert.throws(() => resolveAnchoredRect({ anchor: 'grip', origin: [0,0], size: [300,300] }, rig), /outside/);
+  assert.throws(() => resolveAnchoredRect({ anchor: 'grip', origin: [.5,.5], size: [100,100], rotation: 10 }, rig), /rotation/);
+});
+
+test('foreground fingers preserve original lineage pixels and missing depth/pose assets fail closed', async () => {
+  for (const base of catalog.lineages) {
+    const original = await sharp(await assetBytes(base)).ensureAlpha().raw().toBuffer();
+    const fingers = await sharp(await assetBytes(base.occluders.grip)).ensureAlpha().raw().toBuffer();
+    for (const [x,y] of [[821,470], [903,469], [905,512], [871,541]]) {
+      const offset = (y * 1024 + x) * 4;
+      assert.deepEqual([...fingers.subarray(offset,offset+4)], [...original.subarray(offset,offset+4)]);
+    }
+    assert.equal(fingers[(500 * 1024 + 520) * 4 + 3], 0);
+  }
+  for (const mutation of [
+    c => { delete c.lineages[0].occluders.grip; },
+    c => { c.items.find(i => i.id === 'diamond-hands-harness').wearable.rear = null; },
+    c => { c.items.find(i => i.id === 'gas-fee-guzzler').wearable.poseId = 'other-pose'; },
+    c => { delete c.fitSystem; }
+  ]) {
+    const broken = structuredClone(catalog); mutation(broken);
+    assert.throws(() => buildRenderPlan(broken, broken.lineages[0].id, { ...catalog.presets[0].selection, tool: 'gas-fee-guzzler' }), /occlusion|depth|pose|profile/);
+  }
 });
 
 test('body fits are mirrored, shoes use independent feet and preview slots do not modify the canonical eight', async () => {

@@ -1,26 +1,26 @@
 # Candidate Gear collection fit review
 
-Status: **REVIEW_REQUIRED**. Suitable for design review; not a canonical art release or equip approval.
+Status: **REVIEW_REQUIRED**. Pose/depth rig V2 supersedes the flat fit in `0626cdb`, which the user rejected for visible rear lining, waistband interiors and tool orientation. The original 56-item V5.1.1 fit review also remains FAILED. No previous technical check is artistic approval.
 
-The original 56-item V5.1.1 fit review remains FAILED. This collection is a separate set of 30 concepts, with no canonical ID, metadata or state replacement. The first 24-item candidate also failed the user's body-orientation review; the corrected mirrored body projections below supersede those earlier candidate exports.
+## V2 changes
 
-## Changes verified in the preview
-
-- Standalone collectibles fill their own image frame. Their wearable exports use separate registered canvases.
-- All six original references retain their exact canonical bytes and hashes. Closed footwear selects an additional derived projection with base toes suppressed; barefoot looks select the original.
-- Backpacks and ground plates sit behind the Pet. The body mask protects the chin/neck, raised arm and bent arm. Tool masks preserve the visible fingers over the grip.
-- The moon goggles use a wider mirrored projection and a front-frame mask. The visor excludes rear temples from the forehead. The crown and halo were moved above the forehead.
-- Grips were shifted toward the raised hand after the first rendered review. The harness neckline contour was revised to preserve its front webbing.
-- All three body wearables are now mirrored and reduced from approximately 320×280 to 291×255 at (377,470). Neckline cutouts follow the garment transform; a central anatomical neck mask removes lining from the throat.
-- Pants and Footwear are independent candidate slots, with three designs each. Trouser cuffs spread toward the feet rather than using a rigid rectangular stretch. Shoes use independent left/right placements, ankle apertures and base-toe suppression. Body garments cover the waistband; trouser cuffs render over boots.
-- The Bazaar hero, three outfit examples and six lineage cards now consume the same candidate render plan and complete 1024-square canvases. No full-body example is placed in the former cropped widescreen image container.
+- All three vests and all three pants now have separately hashed rear and front surfaces. Rear neckline/armhole panels and waistbands render behind the Pet. Front straps, fabric and belts remain above it. Contours follow the fitted reference when its anchor or scale changes.
+- Waist placement is raised to cover the original base clothing edge. Runesmith cuff interiors are also partitioned for depth.
+- All three tools are mirrored, sized in their original proportions and registered by the handle to one grip landmark. The gas gun's earlier distorted vertical projection is removed.
+- Original lineage-specific fingers render above tools; the bent arm renders above garments. Foreground projections are lossless extractions from the unmodified canonical Pet pixels.
+- The fitting-room inspector shows rear, front and worn views for the nine affected designs. Optional attachment guides affect inspection canvases only, not outfit exports or selections.
+- Bazaar examples regenerate through the same V2 plan. Complete standalone item art remains separate from the worn surfaces.
 
 ## Evidence
 
-The tooling generated 180 item/lineage composites and 18 full outfits. The complete preset matrix and the critical body, goggles, visor, grip, trouser and footwear fits were visually inspected. The body comparison includes the previous orientation, mirroring alone, and the smaller mirrored projection on Solar. Contact sheets and full-resolution composites are retained in the user's `gear-style-studio` deliverables. The browser showed the Studio, full-screen item/outfit views, preset selection, lineage switching and combined filters. The Bazaar-to-item route opened the full-screen artwork viewer.
+The review tools regenerate 180 item/lineage composites and 18 complete preset outfits. The three tools, three vests and three trousers were inspected individually, with six-lineage slot sheets and the preset matrix. A before/after comparison on Rose isolates the harness, trousers and gas gun. The browser preserves the user's ten-piece Rose bookmark and displays the layered outfit full screen. The inspector displays original fingers, the mirrored tool and its marked handle anchor.
 
-## Remaining approval work
+See [before/after](style-studio-depth-before-after.png), [fitting room](style-studio-depth-inspector.png), [outfits](style-studio-outfits.png) and [all-item audit](style-studio-fit-audit.png). The earlier body-orientation comparison is historical and superseded.
 
-AXO/operator should inspect every design at native resolution before an art release, especially neckline/arm seams, eyewear curvature and grip intersections. The contour masks are authored for this fixed level-10 pose, not derived from semantic meshes. Mixed tool, head and back silhouettes can overlap in combinations beyond the three presets; every possible outfit has not been visually approved. Transparent lenses retain stylized reflections and can obscure part of an eye by design.
+## Limits and release work
 
-No live wallet wardrobe, token metadata, NFT issuance, marketplace activation or production deployment was tested or changed by this candidate UI work. The current canonical eight slots remain unchanged; Pants/Footwear need the reviewed versioned integration in [gear-slots-v2.md](../architecture/gear-slots-v2.md).
+This is an authored 2D rig for the fixed adult website pose. It cannot automatically fit arbitrary art or support animation/new poses. Each garment needs an attachment origin, approved size and authored rear contours; each new pose needs anatomical masks and anchors. This scope does not add a 3D mesh, automatic cloth draping or an animation skeleton.
+
+Native-resolution visual approval remains pending, especially seams, eyewear curvature, finger boundaries and mixed silhouettes beyond the presets. Every possible outfit has not been visually certified. Transparent lenses retain stylized reflections.
+
+No live wardrobe, token metadata, NFT issuance, marketplace activation or production deployment was changed. Canonical slots remain eight; Pants/Footwear need the separately reviewed integration in [gear-slots-v2.md](../architecture/gear-slots-v2.md).
