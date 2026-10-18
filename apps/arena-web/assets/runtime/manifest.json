@@ -1,0 +1,394 @@
+{
+  "model": "openai/gpt-image-2",
+  "revision": 1,
+  "frames": [
+    "idle",
+    "breathe",
+    "windup",
+    "attack",
+    "defense",
+    "hit",
+    "epic",
+    "victory"
+  ],
+  "atlases": {
+    "emerald_sprout": {
+      "url": "assets/emerald_sprout.webp",
+      "width": 2048,
+      "height": 1024,
+      "columns": 4,
+      "rows": 2,
+      "frameWidth": 512,
+      "frameHeight": 512,
+      "sourceRects": [
+        {
+          "left": 57,
+          "top": 98,
+          "width": 261,
+          "height": 366
+        },
+        {
+          "left": 411,
+          "top": 104,
+          "width": 255,
+          "height": 360
+        },
+        {
+          "left": 742,
+          "top": 114,
+          "width": 313,
+          "height": 347
+        },
+        {
+          "left": 1100,
+          "top": 136,
+          "width": 421,
+          "height": 326
+        },
+        {
+          "left": 38,
+          "top": 547,
+          "width": 320,
+          "height": 339
+        },
+        {
+          "left": 403,
+          "top": 564,
+          "width": 288,
+          "height": 316
+        },
+        {
+          "left": 729,
+          "top": 591,
+          "width": 397,
+          "height": 293
+        },
+        {
+          "left": 1171,
+          "top": 540,
+          "width": 248,
+          "height": 347
+        }
+      ],
+      "sha256": "4e0229e1971809237098fabe270f2e05b4cecb4c5601604178b792308dc37d60",
+      "bytes": 293450,
+      "sourceSha256": "beb6272ed0b38d785f21f6f4588169a60f462965f668494809b972b31dabb99f",
+      "transparentPixels": 1069264
+    },
+    "sapphire_tide": {
+      "url": "assets/sapphire_tide.webp",
+      "width": 2048,
+      "height": 1024,
+      "columns": 4,
+      "rows": 2,
+      "frameWidth": 512,
+      "frameHeight": 512,
+      "sourceRects": [
+        {
+          "left": 51,
+          "top": 78,
+          "width": 324,
+          "height": 363
+        },
+        {
+          "left": 433,
+          "top": 75,
+          "width": 300,
+          "height": 366
+        },
+        {
+          "left": 773,
+          "top": 107,
+          "width": 305,
+          "height": 333
+        },
+        {
+          "left": 1123,
+          "top": 124,
+          "width": 400,
+          "height": 388
+        },
+        {
+          "left": 41,
+          "top": 549,
+          "width": 307,
+          "height": 350
+        },
+        {
+          "left": 389,
+          "top": 572,
+          "width": 305,
+          "height": 323
+        },
+        {
+          "left": 745,
+          "top": 555,
+          "width": 407,
+          "height": 359
+        },
+        {
+          "left": 1177,
+          "top": 512,
+          "width": 311,
+          "height": 390
+        }
+      ],
+      "sha256": "dc70f8db0a3a22ccaf62813508710636f61c1aa5b2a7e4c44eda6eaa908ab098",
+      "bytes": 326614,
+      "sourceSha256": "97b631f5b0ee41d817763de4634cc8a7cda5896f062dac2c61a227bd116aedb7",
+      "transparentPixels": 1007748
+    },
+    "amethyst_dream": {
+      "url": "assets/amethyst_dream.webp",
+      "width": 2048,
+      "height": 1024,
+      "columns": 4,
+      "rows": 2,
+      "frameWidth": 512,
+      "frameHeight": 512,
+      "sourceRects": [
+        {
+          "left": 31,
+          "top": 94,
+          "width": 327,
+          "height": 355
+        },
+        {
+          "left": 404,
+          "top": 98,
+          "width": 328,
+          "height": 352
+        },
+        {
+          "left": 783,
+          "top": 119,
+          "width": 322,
+          "height": 329
+        },
+        {
+          "left": 1127,
+          "top": 124,
+          "width": 401,
+          "height": 325
+        },
+        {
+          "left": 26,
+          "top": 570,
+          "width": 340,
+          "height": 328
+        },
+        {
+          "left": 395,
+          "top": 565,
+          "width": 298,
+          "height": 336
+        },
+        {
+          "left": 732,
+          "top": 584,
+          "width": 427,
+          "height": 316
+        },
+        {
+          "left": 1167,
+          "top": 532,
+          "width": 294,
+          "height": 365
+        }
+      ],
+      "sha256": "9db69964f05ff1d64f3cb042d931a0735bfe40a89ce22462985b4f80309b251f",
+      "bytes": 295332,
+      "sourceSha256": "4252a78722b034d1055c39e5c285f7c11d04f5c03fe96d9af4443bbb188b7134",
+      "transparentPixels": 1045489
+    },
+    "solar_peach": {
+      "url": "assets/solar_peach.webp",
+      "width": 2048,
+      "height": 1024,
+      "columns": 4,
+      "rows": 2,
+      "frameWidth": 512,
+      "frameHeight": 512,
+      "sourceRects": [
+        {
+          "left": 33,
+          "top": 60,
+          "width": 298,
+          "height": 401
+        },
+        {
+          "left": 390,
+          "top": 74,
+          "width": 318,
+          "height": 381
+        },
+        {
+          "left": 762,
+          "top": 95,
+          "width": 336,
+          "height": 358
+        },
+        {
+          "left": 1135,
+          "top": 84,
+          "width": 398,
+          "height": 367
+        },
+        {
+          "left": 32,
+          "top": 542,
+          "width": 336,
+          "height": 358
+        },
+        {
+          "left": 405,
+          "top": 547,
+          "width": 299,
+          "height": 351
+        },
+        {
+          "left": 710,
+          "top": 523,
+          "width": 466,
+          "height": 383
+        },
+        {
+          "left": 1186,
+          "top": 520,
+          "width": 244,
+          "height": 385
+        }
+      ],
+      "sha256": "540ed5932ab910f0783e51c8b29a841858de15ce19330ef9db2dda7a7b8dc747",
+      "bytes": 304910,
+      "sourceSha256": "4ea5aaf3f81870bdc4700bb3e22cc4ffbdb5e327bb90b6d72cdc05a351b8201c",
+      "transparentPixels": 1017860
+    },
+    "rose_bloom": {
+      "url": "assets/rose_bloom.webp",
+      "width": 2048,
+      "height": 1024,
+      "columns": 4,
+      "rows": 2,
+      "frameWidth": 512,
+      "frameHeight": 512,
+      "sourceRects": [
+        {
+          "left": 58,
+          "top": 107,
+          "width": 303,
+          "height": 358
+        },
+        {
+          "left": 429,
+          "top": 101,
+          "width": 283,
+          "height": 365
+        },
+        {
+          "left": 763,
+          "top": 72,
+          "width": 305,
+          "height": 397
+        },
+        {
+          "left": 1123,
+          "top": 126,
+          "width": 398,
+          "height": 334
+        },
+        {
+          "left": 21,
+          "top": 561,
+          "width": 331,
+          "height": 342
+        },
+        {
+          "left": 380,
+          "top": 563,
+          "width": 311,
+          "height": 333
+        },
+        {
+          "left": 718,
+          "top": 585,
+          "width": 419,
+          "height": 327
+        },
+        {
+          "left": 1159,
+          "top": 534,
+          "width": 259,
+          "height": 381
+        }
+      ],
+      "sha256": "b6787d54876a362d9fdb2d17757155d45230e165e0d409b1b60ff12ba10e77c8",
+      "bytes": 296044,
+      "sourceSha256": "6a73d19d4f860f42ab72b330c2bbfaa370aa6fcb838b3dc24b4b92611db3fdef",
+      "transparentPixels": 1051826
+    },
+    "midnight_mint": {
+      "url": "assets/midnight_mint.webp",
+      "width": 2048,
+      "height": 1024,
+      "columns": 4,
+      "rows": 2,
+      "frameWidth": 512,
+      "frameHeight": 512,
+      "sourceRects": [
+        {
+          "left": 30,
+          "top": 106,
+          "width": 307,
+          "height": 355
+        },
+        {
+          "left": 390,
+          "top": 98,
+          "width": 364,
+          "height": 364
+        },
+        {
+          "left": 790,
+          "top": 138,
+          "width": 308,
+          "height": 325
+        },
+        {
+          "left": 1123,
+          "top": 136,
+          "width": 397,
+          "height": 327
+        },
+        {
+          "left": 15,
+          "top": 569,
+          "width": 348,
+          "height": 324
+        },
+        {
+          "left": 379,
+          "top": 558,
+          "width": 339,
+          "height": 333
+        },
+        {
+          "left": 730,
+          "top": 558,
+          "width": 445,
+          "height": 332
+        },
+        {
+          "left": 1175,
+          "top": 526,
+          "width": 276,
+          "height": 365
+        }
+      ],
+      "sha256": "9acd8c1634870787f939a07c60801fc21802df128e4f660c2d172d634f5d8899",
+      "bytes": 266646,
+      "sourceSha256": "dc324d437962eb10fc19ee7a9fbbd7e0fb201d8b3e3ec0f7345f6ed59b95103a",
+      "transparentPixels": 1002458
+    }
+  }
+}

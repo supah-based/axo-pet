@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="virtual-protocol-site-verification" content="35d0b29796181d7d63493f55caa2af5a">
+  <meta name="description" content="Enter the full AXO Hatchery experience: care for your wallet-bound companion, monitor its wellbeing, and complete the current Crew missions.">
+  <link rel="canonical" href="https://axo.pet/hatchery/game">
+  <meta name="robots" content="index,follow">
+  <title>AXO Hatchery — Full Experience</title>
+  <link rel="icon" href="/brand/axo-square-logo-v2.webp" type="image/webp">
+  <link rel="stylesheet" href="/styles.css?v=20260819-vibrant-cards1">
+  <link rel="stylesheet" href="/portal.css?v=20260901-mobile-drawer1">
+  <link rel="stylesheet" href="/hatchery-game.css?v=20260830-pet-v42-1">
+  <link rel="stylesheet" href="/pet-shell.css?v=20260831-axo-pet-epochs1">
+  <script src="/nav.js?v=20260910-actionability1" defer></script>
+  <script src="/pet-shell.js?v=20260831-axo-pet-epochs1" defer></script>
+  <script type="module" src="/assets/wallet.js?v=20260728-x-handle1"></script>
+  <script src="/hatchery-game.js?v=20260902-v5-runtime1" defer></script>
+  <script src="/analytics.js?v=20260728-access-first-check1" defer></script>
+  <link rel="stylesheet" href="/axo-dark.css?v=20260831-bespoke-dark1">
+</head>
+<body class="game-page">
+  <axo-nav></axo-nav>
+
+  <main class="game-shell" id="game-shell">
+    <div class="game-ambient" aria-hidden="true"></div>
+    <header class="game-toolbar game-panel">
+      <a class="game-brand" href="/hatchery"><img src="/brand/axo-square-logo-v2.webp" width="38" height="38" alt=""><span><b>AXO HATCHERY</b><small>FULL EXPERIENCE</small></span></a>
+      <div class="game-toolbar-status"><span class="game-live-dot" aria-hidden="true"></span><strong id="game-wallet">CONNECT WALLET</strong></div>
+      <div class="game-toolbar-actions"><a href="/hatchery">DASHBOARD</a><a href="https://www.axo.vision/epoch">LEADERBOARD</a><button id="toggle-fullscreen" type="button">ENTER FULLSCREEN</button></div>
+    </header>
+
+    <section class="game-gate game-panel" id="game-gate">
+      <img src="/hatchery-assets/hacker-v3/states/axo-pet-egg-v3.webp" width="280" height="280" alt="AXO crypto-hacker egg">
+      <div><span>ONE LEDGER · ONE COMPANION</span><h1>Your AXO is waiting.</h1><p id="game-gate-copy">Connect your wallet in the menu to load the same pet, XP, missions, and receipts used by the Hatchery dashboard.</p><a href="/hatchery" id="game-gate-action">OPEN HATCHERY DASHBOARD →</a></div>
+    </section>
+
+    <div class="game-world" id="game-world" hidden>
+      <aside class="game-vitals game-panel" aria-labelledby="game-vitals-title">
+        <header><span>LIVE COMPANION STATE</span><h2 id="game-vitals-title">Wellbeing</h2><strong id="game-mood">CALIBRATING</strong></header>
+        <div class="game-vital happiness"><div><span>♥</span><b>HAPPINESS</b><strong id="game-happiness-value">—</strong></div><div role="progressbar" aria-label="Happiness" aria-valuemin="0" aria-valuemax="100" id="game-happiness"><i></i></div><small>Play and cuddles keep the glow alive.</small></div>
+        <div class="game-vital energy"><div><span>◒</span><b>ENERGY</b><strong id="game-energy-value">—</strong></div><div role="progressbar" aria-label="Energy" aria-valuemin="0" aria-valuemax="100" id="game-energy"><i></i></div><small>Rest restores comfort and readiness.</small></div>
+        <div class="game-vital curiosity"><div><span>⌁</span><b>CURIOSITY</b><strong id="game-curiosity-value">—</strong></div><div role="progressbar" aria-label="Curiosity" aria-valuemin="0" aria-valuemax="100" id="game-curiosity"><i></i></div><small>Training sharpens the scout instinct.</small></div>
+        <div class="game-vital bond"><div><span>✦</span><b>BOND</b><strong id="game-bond-value">—</strong></div><div role="progressbar" aria-label="Bond" aria-valuemin="0" aria-valuemax="100" id="game-bond"><i></i></div><small>Return visits strengthen your connection.</small></div>
+        <div class="happy-pass" id="happy-pass"><small>HAPPY AXO PASS</small><strong>CARE REQUIRED</strong><p>70 happiness · 40 energy · 12 bond</p></div>
+      </aside>
+
+      <section class="companion-stage" aria-labelledby="game-pet-name">
+        <div class="stage-rings" aria-hidden="true"><i></i><i></i><i></i></div>
+        <div class="pet-identity game-panel"><span id="game-lineage">AXO LINEAGE</span><h1 id="game-pet-name">Little AXO</h1><p id="game-pet-reply">Your companion is syncing with the ledger.</p></div>
+        <div id="game-pet" class="game-pet-stack" role="img" aria-label="Your AXO companion"><img src="/hatchery-nft-v5.1.1/pet_emerald_sprout_l01.webp" width="1024" height="1024" alt=""></div>
+        <div class="game-xp game-panel"><article><small>PET XP</small><strong id="game-pet-xp">0</strong><span id="game-level">LEVEL 1</span></article><article><small>EPOCH XP</small><strong id="game-epoch-xp">0</strong><span id="game-epoch">CURRENT EPOCH</span></article><div class="game-xp-track"><i id="game-xp-progress"></i></div><small id="game-next-level">40 XP TO LEVEL 2</small></div>
+      </section>
+
+      <aside class="game-missions game-panel" aria-labelledby="game-missions-title">
+        <header><div><span>DAILY FEED + OPEN EVIDENCE</span><h2 id="game-missions-title">Scout Work</h2></div><div class="game-mission-status"><strong id="game-mission-count">0 / 1 DAILY</strong><small id="game-mission-reset">RESET IN —</small></div></header>
+        <div class="game-mission-progress"><i id="game-mission-progress"></i></div>
+        <div class="game-mission-list">
+          <a href="/hatchery?view=quests#quest-feed-contract" data-game-mission="contract"><b>01</b><span><strong>Feed a contract</strong><small>Verified Crew intelligence</small></span><span class="game-mission-state"><em data-game-mission-status>READY</em><time data-game-mission-timer>SYNCING</time></span></a>
+          <a href="/hatchery?view=quests#quest-source" data-game-mission="source"><b>02</b><span><strong>Add a primary source</strong><small>Official docs · exact receipts</small></span><span class="game-mission-state"><em data-game-mission-status>OPEN</em><time>REVIEWED</time></span></a>
+          <a href="/hatchery?view=quests#quest-risk" data-game-mission="risk"><b>03</b><span><strong>Challenge a risk flag</strong><small>Reproduce · refute · report</small></span><span class="game-mission-state"><em data-game-mission-status>OPEN</em><time>EVIDENCE</time></span></a>
+          <a href="/hatchery?view=quests#quest-explain" data-game-mission="explain"><b>04</b><span><strong>Explain what changed</strong><small>Plain language · sourced</small></span><span class="game-mission-state"><em data-game-mission-status>OPEN</em><time>UTILITY</time></span></a>
+        </div>
+        <a class="mission-console" href="/hatchery?view=quests#daily-title">OPEN MISSION CONSOLE →</a>
+        <div class="game-rank"><span>CURRENT EPOCH POSITION</span><strong id="game-rank">—</strong><a href="https://www.axo.vision/epoch">VIEW FULL BOARD →</a></div>
+      </aside>
+    </div>
+
+    <section class="care-console game-panel" id="care-console" hidden aria-label="Care console">
+      <div class="care-console-copy"><span>DAILY CARE RITUAL</span><strong id="care-progress">0 / 3 COMPLETE</strong><p id="game-care-message" aria-live="polite">Choose an available action. Timers are server-backed receipts.</p></div>
+      <div class="game-care-actions">
+        <button type="button" data-care="play"><span>✦</span><b>PLAY</b><small data-care-timer>READY</small></button>
+        <button type="button" data-cuddle><span>♥</span><b>CUDDLE</b><small data-care-timer>READY</small></button>
+        <button type="button" data-care="rest"><span>◒</span><b>REST</b><small data-care-timer>READY</small></button>
+        <button type="button" data-care="train"><span>⌁</span><b>TRAIN</b><small data-care-timer>READY</small></button>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

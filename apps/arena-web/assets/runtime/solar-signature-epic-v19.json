@@ -1,0 +1,347 @@
+{
+  "schema": "AXO_MOVE_CLIP_ATLAS_1",
+  "lineageId": "solar_peach",
+  "asset": "solar-signature-epic-v19.webp",
+  "url": "/arena/assets/solar-signature-epic-v19.webp",
+  "sha256": "f57cd9426068173cbf604bc0e80bb05d09ba8c853c6624932d2c9eca69b224e7",
+  "width": 2048,
+  "height": 1024,
+  "cellWidth": 512,
+  "cellHeight": 512,
+  "anchor": [
+    220,
+    470
+  ],
+  "displayScale": 1.263764,
+  "clips": {
+    "lineage_a": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "epic": [
+      4,
+      5,
+      6,
+      7
+    ]
+  },
+  "frames": [
+    {
+      "index": 0,
+      "move": "lineage_a",
+      "phase": "anticipation",
+      "rect": [
+        0,
+        0,
+        512,
+        512
+      ],
+      "anchor": [
+        220,
+        470
+      ],
+      "sourceCrop": [
+        0,
+        387,
+        194,
+        574
+      ],
+      "sourcePivot": [
+        105,
+        185
+      ],
+      "sourceStrongEdgePixels": 0,
+      "tinyNoisePixelsRemoved": 0,
+      "effectTipFeatherPixels": 0,
+      "steppedSeparator": false,
+      "alphaBounds": [
+        77,
+        149,
+        382,
+        474
+      ],
+      "outsideBodyNeighborTipRemoval": null
+    },
+    {
+      "index": 1,
+      "move": "lineage_a",
+      "phase": "release",
+      "rect": [
+        512,
+        0,
+        512,
+        512
+      ],
+      "anchor": [
+        220,
+        470
+      ],
+      "sourceCrop": [
+        194,
+        387,
+        407,
+        574
+      ],
+      "sourcePivot": [
+        111,
+        183
+      ],
+      "sourceStrongEdgePixels": 0,
+      "tinyNoisePixelsRemoved": 0,
+      "effectTipFeatherPixels": 0,
+      "steppedSeparator": false,
+      "alphaBounds": [
+        49,
+        144,
+        403,
+        474
+      ],
+      "outsideBodyNeighborTipRemoval": null
+    },
+    {
+      "index": 2,
+      "move": "lineage_a",
+      "phase": "impact",
+      "rect": [
+        1024,
+        0,
+        512,
+        512
+      ],
+      "anchor": [
+        220,
+        470
+      ],
+      "sourceCrop": [
+        407,
+        387,
+        665,
+        574
+      ],
+      "sourcePivot": [
+        105,
+        184
+      ],
+      "sourceStrongEdgePixels": 0,
+      "tinyNoisePixelsRemoved": 2,
+      "effectTipFeatherPixels": 0,
+      "steppedSeparator": true,
+      "alphaBounds": [
+        45,
+        147,
+        500,
+        475
+      ],
+      "outsideBodyNeighborTipRemoval": null
+    },
+    {
+      "index": 3,
+      "move": "lineage_a",
+      "phase": "recovery",
+      "rect": [
+        1536,
+        0,
+        512,
+        512
+      ],
+      "anchor": [
+        220,
+        470
+      ],
+      "sourceCrop": [
+        649,
+        387,
+        822,
+        574
+      ],
+      "sourcePivot": [
+        83,
+        185
+      ],
+      "sourceStrongEdgePixels": 0,
+      "tinyNoisePixelsRemoved": 0,
+      "effectTipFeatherPixels": 0,
+      "steppedSeparator": true,
+      "alphaBounds": [
+        65,
+        153,
+        373,
+        474
+      ],
+      "outsideBodyNeighborTipRemoval": null
+    },
+    {
+      "index": 4,
+      "move": "epic",
+      "phase": "anticipation",
+      "rect": [
+        0,
+        512,
+        512,
+        512
+      ],
+      "anchor": [
+        220,
+        470
+      ],
+      "sourceCrop": [
+        822,
+        387,
+        1030,
+        574
+      ],
+      "sourcePivot": [
+        102,
+        184
+      ],
+      "sourceStrongEdgePixels": 0,
+      "tinyNoisePixelsRemoved": 0,
+      "effectTipFeatherPixels": 0,
+      "steppedSeparator": false,
+      "alphaBounds": [
+        72,
+        205,
+        373,
+        475
+      ],
+      "outsideBodyNeighborTipRemoval": null
+    },
+    {
+      "index": 5,
+      "move": "epic",
+      "phase": "release",
+      "rect": [
+        512,
+        512,
+        512,
+        512
+      ],
+      "anchor": [
+        220,
+        470
+      ],
+      "sourceCrop": [
+        1030,
+        387,
+        1235,
+        574
+      ],
+      "sourcePivot": [
+        100,
+        185
+      ],
+      "sourceStrongEdgePixels": 0,
+      "tinyNoisePixelsRemoved": 0,
+      "effectTipFeatherPixels": 0,
+      "steppedSeparator": false,
+      "alphaBounds": [
+        61,
+        126,
+        363,
+        474
+      ],
+      "outsideBodyNeighborTipRemoval": null
+    },
+    {
+      "index": 6,
+      "move": "epic",
+      "phase": "impact",
+      "rect": [
+        1024,
+        512,
+        512,
+        512
+      ],
+      "anchor": [
+        220,
+        470
+      ],
+      "sourceCrop": [
+        1235,
+        383,
+        1477,
+        569
+      ],
+      "sourcePivot": [
+        98,
+        170
+      ],
+      "sourceStrongEdgePixels": 0,
+      "tinyNoisePixelsRemoved": 1,
+      "effectTipFeatherPixels": 0,
+      "steppedSeparator": false,
+      "alphaBounds": [
+        50,
+        151,
+        489,
+        474
+      ],
+      "outsideBodyNeighborTipRemoval": null
+    },
+    {
+      "index": 7,
+      "move": "epic",
+      "phase": "recovery",
+      "rect": [
+        1536,
+        512,
+        512,
+        512
+      ],
+      "anchor": [
+        220,
+        470
+      ],
+      "sourceCrop": [
+        1477,
+        387,
+        1672,
+        574
+      ],
+      "sourcePivot": [
+        86,
+        185
+      ],
+      "sourceStrongEdgePixels": 0,
+      "tinyNoisePixelsRemoved": 0,
+      "effectTipFeatherPixels": 0,
+      "steppedSeparator": false,
+      "alphaBounds": [
+        59,
+        169,
+        358,
+        474
+      ],
+      "outsideBodyNeighborTipRemoval": null
+    }
+  ],
+  "source": {
+    "sha256": "0b00ae1e94a06cab0c4488fe247b41feb2361f7d2954b5108cc72d9e866d389d",
+    "actualSize": [
+      1672,
+      941
+    ],
+    "bytes": 2381643,
+    "privateMaster": "assets/source/five-lineage-master.png"
+  },
+  "preparation": {
+    "uniformScale": 1.8775510204081634,
+    "threshold": {
+      "minimumChannel": 235,
+      "maximumSpread": 22
+    },
+    "baseIdleBounds": [
+      107,
+      69,
+      405,
+      470
+    ],
+    "baseIdleHeight": 401,
+    "newAnticipationHeightBeforePacking": 169,
+    "displayHeightRatio": 1.0000001359865642,
+    "opaqueSeamPixels": 0,
+    "method": "Border-connected white matte only; immediate boundary decontamination; detached <4px noise only; per-row measured gutters; stepped solar/rose effect-tail separator; distant amethyst ray tip feather only"
+  }
+}

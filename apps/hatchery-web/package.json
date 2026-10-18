@@ -1,0 +1,7 @@
+{
+  "name": "@axo/hatchery-web",
+  "version": "0.1.0",
+  "private": true,
+  "description": "AXO Pet Hatchery and Passport web extraction",
+  "type": "module"
+}

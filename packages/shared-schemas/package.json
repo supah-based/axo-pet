@@ -1,0 +1,7 @@
+{
+  "name": "@axo/pet-schemas",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Versioned AXO Pet API and receipt schemas",
+  "type": "module"
+}

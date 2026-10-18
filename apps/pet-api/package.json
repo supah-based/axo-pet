@@ -1,0 +1,10 @@
+{
+  "name": "@axo/pet-api",
+  "version": "0.1.0",
+  "private": true,
+  "description": "AXO Pet read and transaction-preparation API extraction",
+  "type": "commonjs",
+  "dependencies": {
+    "ethers": "6.17.0"
+  }
+}

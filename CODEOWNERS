@@ -1,0 +1,8 @@
+* @supah-based
+
+/packages/pet-contracts/ @supah-based
+/packages/pet-domain/ @supah-based
+/packages/gear-catalog/ @supah-based
+/packages/shared-schemas/ @supah-based
+/.github/workflows/ @supah-based
+/docs/architecture/ @supah-based

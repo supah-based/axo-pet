@@ -1,0 +1,10 @@
+{
+  "name": "@axo/pet-visual-engine",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Deterministic AXO Pet V5 visual and gear compositing",
+  "type": "commonjs",
+  "dependencies": {
+    "sharp": "0.35.5"
+  }
+}

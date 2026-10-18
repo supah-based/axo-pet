@@ -1,0 +1,46 @@
+{
+  "schema": "AXO_PET_NFT_DEPLOYMENT_REVIEW_V1",
+  "mode": "REVIEW_ONLY",
+  "broadcastEnabled": false,
+  "network": {
+    "chainId": 4663,
+    "rpcUrlEnv": "ROBINHOOD_RPC_URL",
+    "evidenceBlock": 0,
+    "evidenceBlockHash": "0x0000000000000000000000000000000000000000000000000000000000000000"
+  },
+  "deployer": {
+    "address": "0x0000000000000000000000000000000000000001",
+    "nonce": 0
+  },
+  "controller": {
+    "address": "0xD3B2eCfe77780bFfDFA356B70DC190C914511761"
+  },
+  "stateSigner": {
+    "address": "0x0000000000000000000000000000000000000002",
+    "custody": "DEDICATED_ROTATABLE_SIGNER"
+  },
+  "metadata": {
+    "catalogId": "AXO_PET_NFT_TRAITS_V4_3",
+    "visualRevision": "4.3.0",
+    "catalogSha256": "0x0000000000000000000000000000000000000000000000000000000000000000",
+    "artReleaseManifestSha256": "0x0000000000000000000000000000000000000000000000000000000000000000",
+    "gearContractUri": "ipfs://REPLACE_WITH_PINNED_GEAR_CONTRACT_METADATA/contract.json",
+    "pinningReceipt": null,
+    "independentGatewayChecks": []
+  },
+  "reviewGates": {
+    "authorizationRecorded": true,
+    "coreArtComplete": false,
+    "artQaPassed": false,
+    "ipfsPinnedRedundantly": false,
+    "metadataSchemaReviewed": false,
+    "stateSignerCustodyReviewed": false,
+    "mintConsentReviewed": false,
+    "accountDeletionBehaviorReviewed": false,
+    "gearSupplyPolicyReviewed": false,
+    "contractTestsPassed": false,
+    "contractSecurityReviewPassed": false,
+    "applicationTestsPassed": false,
+    "deploymentSimulationPassed": false
+  }
+}

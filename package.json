@@ -1,0 +1,27 @@
+{
+  "name": "@axo/pet-platform",
+  "version": "0.1.0",
+  "private": true,
+  "description": "AXO Pet Hatchery, soulbound NFT, Level-10 gear, and Arena monorepo",
+  "type": "module",
+  "engines": {
+    "node": ">=22.13 <23"
+  },
+  "packageManager": "npm@10.9.8",
+  "overrides": {
+    "diff": "9.0.0",
+    "serialize-javascript": "7.1.0",
+    "adm-zip": "0.6.1"
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "verify": "node scripts/verify-repository.mjs",
+    "test": "node --test tests/repository.test.mjs",
+    "test:contracts": "npm --prefix packages/pet-contracts run test:contracts",
+    "test:arena": "npm --prefix apps/arena-web run test:standalone",
+    "check": "npm run verify && npm test && npm run test:contracts && npm run test:arena"
+  }
+}

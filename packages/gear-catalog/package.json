@@ -1,0 +1,7 @@
+{
+  "name": "@axo/gear-catalog",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Canonical AXO Pet trait, gear and visual manifests",
+  "type": "module"
+}

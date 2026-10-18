@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="virtual-protocol-site-verification" content="35d0b29796181d7d63493f55caa2af5a">
+  <title>My AXO — Pet, Quests, Epoch and Gear Overview</title>
+  <meta name="description" content="Your concise AXO Pet command centre: companion health, daily quests, weekly Epoch progress, wardrobe, Bazaar and Pet Passport.">
+  <link rel="canonical" href="https://axo.pet/my-axo">
+  <meta name="theme-color" content="#07110d">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="My AXO — One screen for the whole Hatchery">
+  <meta property="og:description" content="Care, scout, climb and style your wallet-bound AXO Pet from one clear command centre.">
+  <meta property="og:url" content="https://axo.pet/my-axo">
+  <meta property="og:image" content="https://axo.pet/hatchery-assets/axo-hatchery-info-hero-v1.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="/brand/axo-square-logo-v2.webp">
+  <link rel="stylesheet" href="/pet-home.css?v=20260831-bespoke-dark1">
+  <link rel="stylesheet" href="/pet-dashboard.css?v=20260828-my-axo1">
+  <script type="module" src="/assets/wallet.js?v=20260828-my-axo1"></script>
+  <script src="/pet-dashboard.js?v=20260828-my-axo1" defer></script>
+  <link rel="stylesheet" href="/axo-dark.css?v=20260831-bespoke-dark1">
+</head>
+<body class="command-body">
+  <a class="skip-link" href="#main">Skip to My AXO</a>
+  <header class="pet-nav" data-pet-nav>
+    <a class="pet-brand" href="/" aria-label="AXO.pet home"><img src="/brand/axo-square-logo-v2.webp" width="48" height="48" alt=""><span><b>AXO</b><em>.pet</em><small>MY AXO</small></span></a>
+    <button class="pet-menu" type="button" aria-expanded="false" aria-controls="pet-navigation" data-pet-menu><span></span><span></span><span></span><b>MENU</b></button>
+    <nav id="pet-navigation" aria-label="AXO Pet navigation" data-pet-navigation>
+      <a class="active" href="/my-axo">MY AXO</a><a href="/hatchery?view=pet">MY PET</a><a href="/hatchery?view=quests">QUESTS</a><a href="https://www.axo.vision/epoch">EPOCH</a><a href="/marketplace#my-gear">WARDROBE</a><a href="/marketplace">BAZAAR</a><button class="command-wallet" type="button" data-wallet-connect>CONNECT WALLET</button>
+    </nav>
+  </header>
+
+  <main id="main" class="command-main">
+    <section class="command-hero" aria-labelledby="command-title">
+      <div class="command-copy">
+        <span class="command-kicker"><i></i> ONE COMPANION · ONE CLEAR HOME</span>
+        <h1 id="command-title">Your whole<br><em>Hatchery.</em><br>One screen.</h1>
+        <p>See what your AXO needs, what you can do today, where you rank, and what is happening with your gear—without hunting through the ecosystem.</p>
+        <div class="command-actions"><button class="command-button primary" type="button" data-wallet-connect>CONNECT MY WALLET <b>→</b></button><a class="command-button" href="/hatchery/game">FULL EXPERIENCE <b>↗</b></a></div>
+        <div class="command-session"><span data-session-light></span><b data-wallet-status>Preparing wallet access…</b></div>
+      </div>
+      <div class="command-pet-stage">
+        <div class="command-halo"></div>
+        <img data-command-pet src="/hatchery-assets/hacker-v3/states/axo-pet-egg-v3.webp" width="620" height="620" alt="Your AXO Pet">
+        <article class="pet-id-chip"><small data-command-lineage>WALLET-BOUND COMPANION</small><strong data-command-name>YOUR AXO IS WAITING</strong><span><b data-command-level>LEVEL —</b><i></i><b data-command-xp>— XP</b></span></article>
+        <article class="pet-reply-chip" data-command-reply>Connect the wallet that hatched your companion.</article>
+      </div>
+    </section>
+
+    <section class="command-live" aria-label="Live ecosystem overview">
+      <article><small>RANKED PETS</small><strong data-public-stat="rankedPets">—</strong><span>preserved ledger</span></article>
+      <article><small>WEEKLY CREW</small><strong data-public-stat="currentEpochParticipants">—</strong><span data-public-epoch>CURRENT EPOCH</span></article>
+      <article><small>CONTRACT CRYSTALS</small><strong data-public-stat="publicContractCrystals">—</strong><span>community feed</span></article>
+      <article><small>BAZAAR</small><strong class="state" data-public-market>READING</strong><span data-public-market-note>release gates</span></article>
+    </section>
+
+    <nav class="command-routes" aria-label="AXO Pet command centre">
+      <a href="/hatchery?view=pet" data-route="pet"><span>01</span><i>♥</i><strong>MY PET</strong><small>Care · vitals · passport</small><b>OPEN →</b></a>
+      <a href="/hatchery?view=quests" data-route="quests"><span>02</span><i>⌁</i><strong>QUESTS</strong><small>Scout · corroborate · earn XP</small><b>OPEN →</b></a>
+      <a href="https://www.axo.vision/epoch" data-route="epochs"><span>03</span><i>↗</i><strong>EPOCH</strong><small>Live rank · past winners</small><b>OPEN →</b></a>
+      <a href="/marketplace#my-gear" data-route="wardrobe"><span>04</span><i>◇</i><strong>WARDROBE</strong><small>Inventory · equipped look</small><b>OPEN →</b></a>
+      <a href="/marketplace" data-route="bazaar"><span>05</span><i>＋</i><strong>BAZAAR</strong><small>Filter · buy · sell gear</small><b>OPEN →</b></a>
+    </nav>
+
+    <section class="command-connect" data-command-connect>
+      <img src="/hatchery-assets/hacker-v3/states/axo-pet-egg-v3.webp" width="280" height="280" alt="AXO Pet egg">
+      <div><span>PRIVATE WALLET VIEW</span><h2>Connect once. Know what matters.</h2><p>A gasless ownership signature opens your pet, today’s progress, personal epoch standing, Passport and wardrobe summary. It never approves tokens or moves funds.</p><button class="command-button primary" type="button" data-wallet-connect>CONNECT WALLET <b>→</b></button></div>
+    </section>
+
+    <section class="command-private" data-command-private hidden>
+      <header class="private-heading"><div><span>LIVE WALLET OVERVIEW</span><h2 data-private-heading>Your AXO at a glance.</h2></div><b data-private-generated>READING RECEIPTS</b></header>
+      <article class="overview-card today-card" data-unhatched-overview hidden>
+        <h3>Create your permanent companion</h3>
+        <p>Name your AXO and receive its deterministic lineage. One verified wallet gets one preserved Hatchery identity.</p>
+        <a class="command-button primary" href="/hatchery?view=pet">HATCH MY AXO →</a>
+      </article>
+      <div class="private-grid">
+        <article class="overview-card vitals-card">
+          <header><span>MY PET</span><a href="/hatchery?view=pet">OPEN CARE →</a></header>
+          <div class="vital-row"><span>HAPPINESS</span><div><i data-vital-bar="happiness"></i></div><strong data-vital="happiness">—</strong></div>
+          <div class="vital-row"><span>ENERGY</span><div><i data-vital-bar="energy"></i></div><strong data-vital="energy">—</strong></div>
+          <div class="vital-row"><span>CURIOSITY</span><div><i data-vital-bar="curiosity"></i></div><strong data-vital="curiosity">—</strong></div>
+          <div class="vital-row"><span>BOND</span><div><i data-vital-bar="bond"></i></div><strong data-vital="bond">—</strong></div>
+        </article>
+        <article class="overview-card today-card">
+          <header><span>TODAY</span><a href="/hatchery?view=quests">OPEN QUESTS →</a></header>
+          <strong class="big-progress"><b data-today-done>—</b><small data-today-total>/ — ACTIONS</small></strong>
+          <div class="task-list" data-task-list><span>Reading today’s receipts…</span></div>
+        </article>
+        <article class="overview-card epoch-overview-card">
+          <header><span>CURRENT EPOCH</span><a href="https://www.axo.vision/epoch">LIVE + HISTORY ↗</a></header>
+          <div class="epoch-rank"><small>YOUR RANK</small><strong data-epoch-rank>—</strong><span data-epoch-id>CURRENT EPOCH</span></div>
+          <div class="epoch-detail"><span><small>VERIFIED XP</small><b data-epoch-xp>—</b></span><span><small>PROJECTED SHARE</small><b data-epoch-share>—</b></span><span><small>TIME LEFT</small><b data-epoch-time>—</b></span></div>
+          <p data-epoch-policy>Rank is XP-based. Rewards and claims use separate verified gates.</p>
+        </article>
+        <article class="overview-card collection-card">
+          <header><span>COLLECTION</span><a href="/marketplace#my-gear">OPEN WARDROBE →</a></header>
+          <div class="collection-stats"><span><small>LEDGER ITEMS</small><strong data-inventory-count>—</strong></span><span><small>EQUIPPED</small><strong data-equipped-count>—</strong></span><span><small>MARKET LISTINGS</small><strong data-listings-count>—</strong></span></div>
+          <p data-gear-status>Gear contract status is being verified.</p>
+        </article>
+        <article class="overview-card passport-card">
+          <header><span>PET PASSPORT</span><a href="/hatchery?view=pet#pet-passport">OPEN PASSPORT →</a></header>
+          <strong data-passport-state>CHECKING</strong><p data-passport-copy>Your wallet-hidden sharing and referral status will appear here.</p><a class="inline-command-link" data-referral-link hidden>MY REFERRAL LINK ↗</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="command-truth">
+      <span>TRUST BOUNDARY</span><p>Your Hatchery ledger remains authoritative. Pets stay non-tradable; gear bonuses stay capped and game-only; marketplace trading, NFT minting and claims remain separately activation-gated.</p><a href="/hatchery/claims">REWARD STATUS →</a>
+    </section>
+  </main>
+</body>
+</html>

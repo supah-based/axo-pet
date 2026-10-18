@@ -1,0 +1,9 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {newBattle,resolve,legalMoves} from '../combat.mjs';
+const spec={lineageId:'solar_peach',xp:1200,allocation:{},ranks:{},loadout:['market_order','diamond_hands','rug_pull','reversal']};
+function battle(){return newBattle([spec,spec]);}
+test('Energy starts at six, caps at ten and recovers two after an exchange',()=>{let b=battle();assert.equal(b.fighters[0].energy,6);b=resolve(b,['diamond_hands','diamond_hands']);assert.equal(b.fighters[0].energy,8);b=resolve(b,['diamond_hands','diamond_hands']);assert.equal(b.fighters[0].energy,10);b=resolve(b,['diamond_hands','diamond_hands']);assert.equal(b.fighters[0].energy,10);});
+test('Paid attack and defense both spend energy before base recovery',()=>{let b=battle();const before=JSON.stringify(b);const next=resolve(b,['rug_pull','reversal']);assert.equal(next.fighters[0].energy,5);assert.equal(next.fighters[1].energy,5);assert.equal(JSON.stringify(b),before);assert(!legalMoves(next,0).includes('rug_pull'));assert(!legalMoves(next,1).includes('reversal'));});
+test('Insufficient energy rejects attacks and defenses; free moves avoid deadlock',()=>{const b=battle();for(const f of b.fighters)f.energy=2;assert(!legalMoves(b,0).includes('rug_pull'));assert(!legalMoves(b,1).includes('reversal'));assert.throws(()=>resolve(b,['rug_pull','reversal']),/Illegal move/);for(const k of ['market_order','diamond_hands','recharge'])assert(legalMoves(b,0).includes(k));});
+test('Recharge gains four total, does not attack or shield, and obeys cap',()=>{let b=battle();b.fighters[0].energy=1;let n=resolve(b,['recharge','market_order']);assert.equal(n.fighters[0].energy,5);assert.equal(n.log[0].effects[0].blocked,0);assert.equal(n.log[0].effects[1].damage,0);assert(n.log[0].effects[0].damage>0);b=battle();b.fighters[0].energy=9;n=resolve(b,['recharge','diamond_hands']);assert.equal(n.fighters[0].energy,10);});

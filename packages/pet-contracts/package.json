@@ -1,0 +1,37 @@
+{
+  "name": "@axo/pet-nft-contracts",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "AXO soulbound growing pet and tradable cosmetic gear contracts",
+  "engines": {
+    "node": ">=22.13 <23"
+  },
+  "packageManager": "npm@10.9.8",
+  "overrides": {
+    "diff": "9.0.0",
+    "serialize-javascript": "7.1.0",
+    "adm-zip": "0.6.1"
+  },
+  "scripts": {
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "test:contracts": "hardhat test test/deployment-config.test.js test/pet-gear-marketplace.test.js test/pet-gear.test.js test/soul-pet.test.js",
+    "lint:solidity": "solhint contracts/AxoSoulPet.sol contracts/AxoPetGear.sol contracts/AxoPetGearMarketplace.sol",
+    "check": "npm run compile && npm run lint:solidity && npm test && npm audit --audit-level=high",
+    "config:check": "node scripts/check-deployment-config.js",
+    "deploy:plan": "npm run compile && node scripts/deployment-plan.js"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-ethers": "4.0.15",
+    "@nomicfoundation/hardhat-ethers-chai-matchers": "3.0.11",
+    "@nomicfoundation/hardhat-mocha": "3.1.0",
+    "@nomicfoundation/hardhat-network-helpers": "3.0.11",
+    "@openzeppelin/contracts": "5.6.1",
+    "chai": "6.2.2",
+    "ethers": "6.17.0",
+    "hardhat": "3.12.0",
+    "mocha": "11.8.0",
+    "solhint": "6.2.4"
+  }
+}

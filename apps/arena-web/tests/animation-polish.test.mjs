@@ -1,0 +1,28 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+const root=new URL('../',import.meta.url);
+test('Animation phases interpolate source poses with finite continuous motion and a static reduced-motion alternative',async()=>{
+ const original=Object.getOwnPropertyDescriptor(globalThis,'matchMedia');globalThis.matchMedia=()=>({matches:false});
+ try{const {motionSample,ANIMATION_PROFILE:p}=await import(new URL('render.mjs?motion-tests',root));assert.equal(p.sourcePoses,8);assert.equal(p.targetFps,60);assert.equal(p.maxParticlesPerFighter,14);
+ for(const side of [0,1])for(const attack of [false,true])for(const epic of [false,true])for(let elapsed=0;elapsed<2200;elapsed+=8){const m=motionSample(elapsed,elapsed,{attack,epic,side,damage:10});assert(Number.isInteger(m.pose)&&m.pose>=0&&m.pose<8);for(const k of ['x','y','sx','sy','rotation'])assert(Number.isFinite(m[k]));assert(m.sx>.8&&m.sy>.8);assert(Math.abs(m.x)<=48);}
+ assert.equal(motionSample(50,50,{attack:true}).phase,'windup');assert.equal(motionSample(700,700,{attack:true}).phase,'release');assert.equal(motionSample(1100,1100,{damage:5}).pose,5);assert.equal(motionSample(2000,2000,{victory:true}).pose,7);
+ const left=motionSample(650,650,{attack:true}),right=motionSample(650,650,{attack:true,side:1});assert.equal(left.x,-right.x);
+ const frozen=motionSample(0,400,{reduced:true});for(const time of [400,750,1200,2500])assert.deepEqual(motionSample(time,time,{attack:true,reduced:true}),frozen);
+ // Continuous samples materially differ inside the same painted attack pose.
+ const samples=new Set(Array.from({length:30},(_,i)=>JSON.stringify(motionSample(350+i*16,350+i*16,{attack:true}))));assert.equal(samples.size,30);
+ }finally{if(original)Object.defineProperty(globalThis,'matchMedia',original);else delete globalThis.matchMedia;}
+});
+test('Renderer budget, hidden-tab suspension and reduced motion avoid unnecessary work',async()=>{
+ const keys=['matchMedia','Image','requestAnimationFrame','devicePixelRatio','document'],old=new Map(keys.map(k=>[k,Object.getOwnPropertyDescriptor(globalThis,k)]));let clears=0,draws=0,alpha=1;const alphas=[],transforms=[];
+ const context=new Proxy({clearRect(){clears++;},drawImage(...args){draws++;alphas.push(alpha);assert(args.slice(1).every(Number.isFinite));},setTransform(...args){transforms.push(args);},createLinearGradient(){return {addColorStop(){}};},get globalAlpha(){return alpha;},set globalAlpha(v){alpha=v;}},{get:(t,k)=>k in t?t[k]:(()=>{})});
+ const preference={matches:false},doc={hidden:false},canvas={clientWidth:200,clientHeight:1800,width:0,height:0,isConnected:true,getContext:()=>context};
+ const vals={matchMedia:()=>preference,Image:class{complete=true;naturalWidth=1600;naturalHeight=900;},requestAnimationFrame:()=>1,devicePixelRatio:3,document:doc};
+ try{for(const[k,v]of Object.entries(vals))Object.defineProperty(globalThis,k,{value:v,writable:true,configurable:true});const {ArenaRenderer,ANIMATION_PROFILE:p}=await import(new URL('render.mjs?budget-tests',root));const r=new ArenaRenderer(canvas);r.hero='emerald_sprout';r.draw(0);assert(canvas.width*canvas.height<=p.maxPixelArea);assert.equal(clears,1);r.draw(8);assert.equal(clears,1);r.draw(20);assert.equal(clears,2);doc.hidden=true;r.draw(100);assert.equal(clears,2);doc.hidden=false;r.draw(920);r.draw(960);assert(alphas.some(v=>v>0&&v<1));preference.matches=true;r.draw(1820);assert.equal(alphas.at(-1),1);r.stop();const prior=draws;r.draw(2000);assert.equal(draws,prior);
+ }finally{for(const[k,d]of old){if(d)Object.defineProperty(globalThis,k,d);else delete globalThis[k];}}
+});
+test('Resolved combat VFX use bounded particles and never mutate authoritative state',async()=>{
+ const keys=['matchMedia','Image','requestAnimationFrame','devicePixelRatio','document'],old=new Map(keys.map(k=>[k,Object.getOwnPropertyDescriptor(globalThis,k)]));let rects=0,arcs=0,draws=0;const c=new Proxy({drawImage(...args){draws++;assert(args.slice(1).every(Number.isFinite));},fillRect(...args){rects++;assert(args.every(Number.isFinite));},arc(...args){arcs++;assert(args.every(Number.isFinite));},createLinearGradient(){return {addColorStop(){}};}},{get:(t,k)=>t[k]??(()=>{})});
+ const vals={matchMedia:()=>({matches:false}),Image:class{complete=true;naturalWidth=1600;naturalHeight=900;},requestAnimationFrame:()=>1,devicePixelRatio:1,document:{hidden:false}},canvas={clientWidth:1000,clientHeight:500,isConnected:true,getContext:()=>c};
+ try{for(const[k,v]of Object.entries(vals))Object.defineProperty(globalThis,k,{value:v,writable:true,configurable:true});const {ArenaRenderer}=await import(new URL('render.mjs?combat-effects-tests',root));const {ArenaService}=await import('../service.mjs');const service=new ArenaService(),a={key:'vfx-a',pet:{genesisId:'AXO-0000000001',lineageId:'emerald_sprout',level:10,xp:1200,name:'VFX test',art:'/fixture.webp'}},b={key:'vfx-b',pet:{...a.pet,genesisId:'AXO-0000000002',lineageId:'solar_peach'}};const entry=service.challenge(a,{});service.join(b,entry.id);service.choose(a,entry.id,{round:1,move:'market_order'});const state=service.choose(b,entry.id,{round:1,move:'market_order'});const before=JSON.stringify(state),renderer=new ArenaRenderer(canvas);renderer.set({...state,battle:{...state.battle,log:[]}});renderer.set(state);const start=renderer.revealAt;for(const tick of [0,150,350,750,1050,1250,1750,1900])renderer.draw(start+tick);assert(draws>=24);assert(arcs>0);assert(rects<=8+14*2*2);assert.equal(JSON.stringify(state),before);renderer.stop();
+ }finally{for(const[k,d]of old){if(d)Object.defineProperty(globalThis,k,d);else delete globalThis[k];}}
+});

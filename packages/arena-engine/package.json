@@ -1,0 +1,7 @@
+{
+  "name": "@axo/arena-engine",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Verified AXO Pet identity and gear adapter for Arena",
+  "type": "commonjs"
+}

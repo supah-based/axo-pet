@@ -1,0 +1,374 @@
+{
+  "schema": "AXO_MOVE_CLIP_ATLAS_1",
+  "lineageId": "amethyst_dream",
+  "asset": "amethyst-signature-epic-v19.webp",
+  "url": "/arena/assets/amethyst-signature-epic-v19.webp",
+  "sha256": "3a705c8116b69cd26489eb113afd6f690b3cbad6daedb8f3da6762d8b37d27e8",
+  "width": 2048,
+  "height": 1024,
+  "cellWidth": 512,
+  "cellHeight": 512,
+  "anchor": [
+    220,
+    470
+  ],
+  "displayScale": 1.034899,
+  "clips": {
+    "lineage_a": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "epic": [
+      4,
+      5,
+      6,
+      7
+    ]
+  },
+  "frames": [
+    {
+      "index": 0,
+      "move": "lineage_a",
+      "phase": "anticipation",
+      "rect": [
+        0,
+        0,
+        512,
+        512
+      ],
+      "anchor": [
+        220,
+        470
+      ],
+      "sourceCrop": [
+        0,
+        201,
+        196,
+        387
+      ],
+      "sourcePivot": [
+        99,
+        185
+      ],
+      "sourceStrongEdgePixels": 0,
+      "tinyNoisePixelsRemoved": 1,
+      "effectTipFeatherPixels": 0,
+      "steppedSeparator": false,
+      "alphaBounds": [
+        80,
+        122,
+        380,
+        472
+      ],
+      "outsideBodyNeighborTipRemoval": null
+    },
+    {
+      "index": 1,
+      "move": "lineage_a",
+      "phase": "release",
+      "rect": [
+        512,
+        0,
+        512,
+        512
+      ],
+      "anchor": [
+        220,
+        470
+      ],
+      "sourceCrop": [
+        196,
+        201,
+        418,
+        387
+      ],
+      "sourcePivot": [
+        118,
+        184
+      ],
+      "sourceStrongEdgePixels": 0,
+      "tinyNoisePixelsRemoved": 2,
+      "effectTipFeatherPixels": 0,
+      "steppedSeparator": false,
+      "alphaBounds": [
+        36,
+        126,
+        422,
+        474
+      ],
+      "outsideBodyNeighborTipRemoval": null
+    },
+    {
+      "index": 2,
+      "move": "lineage_a",
+      "phase": "impact",
+      "rect": [
+        1024,
+        0,
+        512,
+        512
+      ],
+      "anchor": [
+        220,
+        470
+      ],
+      "sourceCrop": [
+        418,
+        201,
+        641,
+        387
+      ],
+      "sourcePivot": [
+        99,
+        184
+      ],
+      "sourceStrongEdgePixels": 0,
+      "tinyNoisePixelsRemoved": 0,
+      "effectTipFeatherPixels": 0,
+      "steppedSeparator": false,
+      "alphaBounds": [
+        52,
+        128,
+        464,
+        474
+      ],
+      "outsideBodyNeighborTipRemoval": null
+    },
+    {
+      "index": 3,
+      "move": "lineage_a",
+      "phase": "recovery",
+      "rect": [
+        1536,
+        0,
+        512,
+        512
+      ],
+      "anchor": [
+        220,
+        470
+      ],
+      "sourceCrop": [
+        641,
+        201,
+        822,
+        387
+      ],
+      "sourcePivot": [
+        91,
+        185
+      ],
+      "sourceStrongEdgePixels": 0,
+      "tinyNoisePixelsRemoved": 1,
+      "effectTipFeatherPixels": 0,
+      "steppedSeparator": false,
+      "alphaBounds": [
+        64,
+        122,
+        361,
+        472
+      ],
+      "outsideBodyNeighborTipRemoval": null
+    },
+    {
+      "index": 4,
+      "move": "epic",
+      "phase": "anticipation",
+      "rect": [
+        0,
+        512,
+        512,
+        512
+      ],
+      "anchor": [
+        220,
+        470
+      ],
+      "sourceCrop": [
+        822,
+        201,
+        1030,
+        387
+      ],
+      "sourcePivot": [
+        106,
+        184
+      ],
+      "sourceStrongEdgePixels": 0,
+      "tinyNoisePixelsRemoved": 0,
+      "effectTipFeatherPixels": 0,
+      "steppedSeparator": false,
+      "alphaBounds": [
+        67,
+        124,
+        349,
+        474
+      ],
+      "outsideBodyNeighborTipRemoval": null
+    },
+    {
+      "index": 5,
+      "move": "epic",
+      "phase": "release",
+      "rect": [
+        512,
+        512,
+        512,
+        512
+      ],
+      "anchor": [
+        220,
+        470
+      ],
+      "sourceCrop": [
+        1030,
+        201,
+        1240,
+        387
+      ],
+      "sourcePivot": [
+        103,
+        184
+      ],
+      "sourceStrongEdgePixels": 0,
+      "tinyNoisePixelsRemoved": 1,
+      "effectTipFeatherPixels": 0,
+      "steppedSeparator": false,
+      "alphaBounds": [
+        36,
+        124,
+        430,
+        474
+      ],
+      "outsideBodyNeighborTipRemoval": null
+    },
+    {
+      "index": 6,
+      "move": "epic",
+      "phase": "impact",
+      "rect": [
+        1024,
+        512,
+        512,
+        512
+      ],
+      "anchor": [
+        220,
+        470
+      ],
+      "sourceCrop": [
+        1240,
+        201,
+        1487,
+        384
+      ],
+      "sourcePivot": [
+        106,
+        182
+      ],
+      "sourceStrongEdgePixels": 0,
+      "tinyNoisePixelsRemoved": 9,
+      "effectTipFeatherPixels": 30,
+      "steppedSeparator": false,
+      "alphaBounds": [
+        38,
+        136,
+        497,
+        472
+      ],
+      "outsideBodyNeighborTipRemoval": null
+    },
+    {
+      "index": 7,
+      "move": "epic",
+      "phase": "recovery",
+      "rect": [
+        1536,
+        512,
+        512,
+        512
+      ],
+      "anchor": [
+        220,
+        470
+      ],
+      "sourceCrop": [
+        1487,
+        201,
+        1672,
+        387
+      ],
+      "sourcePivot": [
+        87,
+        184
+      ],
+      "sourceStrongEdgePixels": 0,
+      "tinyNoisePixelsRemoved": 0,
+      "effectTipFeatherPixels": 0,
+      "steppedSeparator": false,
+      "alphaBounds": [
+        51,
+        130,
+        357,
+        474
+      ],
+      "outsideBodyNeighborTipRemoval": [
+        1487,
+        289,
+        1494,
+        306
+      ],
+      "postPackingExteriorCleanup": {
+        "finding": "F1",
+        "method": "Post-packing removal limited to independently identified detached outside-body neighbor-ray residue and its antialias ringing",
+        "frame": 7,
+        "frameLocalRectangle": [
+          55,
+          286,
+          76,
+          307
+        ],
+        "atlasRectangle": [
+          1591,
+          798,
+          1612,
+          819
+        ],
+        "nonzeroAlphaPixelsRemoved": 129,
+        "alpha128PixelsRemoved": 33,
+        "decodedPixelsOutsideRectangleUnchanged": true,
+        "sourceMasterUnchanged": true,
+        "previousAtlasSha256": "15826b995eb260c81b04c2171df66fb40a0ef11659efa78ac8dbc467e0f97d86"
+      }
+    }
+  ],
+  "source": {
+    "sha256": "0b00ae1e94a06cab0c4488fe247b41feb2361f7d2954b5108cc72d9e866d389d",
+    "actualSize": [
+      1672,
+      941
+    ],
+    "bytes": 2381643,
+    "privateMaster": "assets/source/five-lineage-master.png"
+  },
+  "preparation": {
+    "uniformScale": 1.9714285714285715,
+    "threshold": {
+      "minimumChannel": 235,
+      "maximumSpread": 22
+    },
+    "baseIdleBounds": [
+      93,
+      115,
+      420,
+      470
+    ],
+    "baseIdleHeight": 355,
+    "newAnticipationHeightBeforePacking": 174,
+    "displayHeightRatio": 0.9999997902615695,
+    "opaqueSeamPixels": 0,
+    "method": "Border-connected white matte only; immediate boundary decontamination; detached <4px noise only; per-row measured gutters; stepped solar/rose effect-tail separator; distant amethyst ray tip feather only"
+  }
+}

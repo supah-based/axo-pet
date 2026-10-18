@@ -1,0 +1,530 @@
+{
+  "schema": "AXO_MOVE_CLIP_ATLAS_1",
+  "lineageId": "emerald_sprout",
+  "asset": "emerald-moves-v18.webp",
+  "url": "/arena/assets/emerald-moves-v18.webp",
+  "sha256": "1bb08bcc79c08a68dae2b7de78d23a8ab4e7eca47b8983419dbe12af65ba477c",
+  "width": 2048,
+  "height": 2048,
+  "cellWidth": 512,
+  "cellHeight": 512,
+  "anchor": [
+    200,
+    470
+  ],
+  "displayScale": 1.18,
+  "baseAtlasAnchor": [
+    256,
+    470
+  ],
+  "clips": {
+    "market_order": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "rug_pull": [
+      4,
+      5,
+      6,
+      7
+    ],
+    "pepe_breakout": [
+      8,
+      9,
+      10,
+      11
+    ],
+    "reversal": [
+      12,
+      13,
+      14,
+      15
+    ]
+  },
+  "frames": [
+    {
+      "index": 0,
+      "move": "market_order",
+      "pose": "anticipation",
+      "rect": [
+        0,
+        0,
+        512,
+        512
+      ],
+      "anchor": [
+        200,
+        470
+      ],
+      "sourceCrop": [
+        0,
+        0,
+        310,
+        348
+      ],
+      "sourceStrongEdgePixels": 0,
+      "tinyNoisePixelsRemoved": 1,
+      "alphaBounds": [
+        67,
+        170,
+        350,
+        473
+      ]
+    },
+    {
+      "index": 1,
+      "move": "market_order",
+      "pose": "release",
+      "rect": [
+        512,
+        0,
+        512,
+        512
+      ],
+      "anchor": [
+        200,
+        470
+      ],
+      "sourceCrop": [
+        310,
+        0,
+        620,
+        348
+      ],
+      "sourceStrongEdgePixels": 0,
+      "tinyNoisePixelsRemoved": 0,
+      "alphaBounds": [
+        46,
+        171,
+        351,
+        472
+      ]
+    },
+    {
+      "index": 2,
+      "move": "market_order",
+      "pose": "impact",
+      "rect": [
+        1024,
+        0,
+        512,
+        512
+      ],
+      "anchor": [
+        200,
+        470
+      ],
+      "sourceCrop": [
+        620,
+        0,
+        1000,
+        348
+      ],
+      "sourceStrongEdgePixels": 0,
+      "tinyNoisePixelsRemoved": 28,
+      "alphaBounds": [
+        9,
+        166,
+        415,
+        473
+      ]
+    },
+    {
+      "index": 3,
+      "move": "market_order",
+      "pose": "recovery",
+      "rect": [
+        1536,
+        0,
+        512,
+        512
+      ],
+      "anchor": [
+        200,
+        470
+      ],
+      "sourceCrop": [
+        1000,
+        0,
+        1254,
+        348
+      ],
+      "sourceStrongEdgePixels": 0,
+      "tinyNoisePixelsRemoved": 0,
+      "alphaBounds": [
+        97,
+        164,
+        312,
+        473
+      ]
+    },
+    {
+      "index": 4,
+      "move": "rug_pull",
+      "pose": "anticipation",
+      "rect": [
+        0,
+        512,
+        512,
+        512
+      ],
+      "anchor": [
+        200,
+        470
+      ],
+      "sourceCrop": [
+        0,
+        348,
+        305,
+        622
+      ],
+      "sourceStrongEdgePixels": 0,
+      "tinyNoisePixelsRemoved": 1,
+      "alphaBounds": [
+        61,
+        211,
+        370,
+        473
+      ]
+    },
+    {
+      "index": 5,
+      "move": "rug_pull",
+      "pose": "release",
+      "rect": [
+        512,
+        512,
+        512,
+        512
+      ],
+      "anchor": [
+        200,
+        470
+      ],
+      "sourceCrop": [
+        305,
+        348,
+        634,
+        622
+      ],
+      "sourceStrongEdgePixels": 0,
+      "tinyNoisePixelsRemoved": 3,
+      "alphaBounds": [
+        59,
+        203,
+        417,
+        473
+      ]
+    },
+    {
+      "index": 6,
+      "move": "rug_pull",
+      "pose": "impact",
+      "rect": [
+        1024,
+        512,
+        512,
+        512
+      ],
+      "anchor": [
+        200,
+        470
+      ],
+      "sourceCrop": [
+        634,
+        348,
+        954,
+        622
+      ],
+      "sourceStrongEdgePixels": 0,
+      "tinyNoisePixelsRemoved": 4,
+      "alphaBounds": [
+        29,
+        222,
+        413,
+        472
+      ]
+    },
+    {
+      "index": 7,
+      "move": "rug_pull",
+      "pose": "recovery",
+      "rect": [
+        1536,
+        512,
+        512,
+        512
+      ],
+      "anchor": [
+        200,
+        470
+      ],
+      "sourceCrop": [
+        954,
+        348,
+        1254,
+        622
+      ],
+      "sourceStrongEdgePixels": 0,
+      "tinyNoisePixelsRemoved": 25,
+      "alphaBounds": [
+        64,
+        220,
+        380,
+        472
+      ]
+    },
+    {
+      "index": 8,
+      "move": "pepe_breakout",
+      "pose": "anticipation",
+      "rect": [
+        0,
+        1024,
+        512,
+        512
+      ],
+      "anchor": [
+        200,
+        470
+      ],
+      "sourceCrop": [
+        0,
+        622,
+        300,
+        919
+      ],
+      "sourceStrongEdgePixels": 0,
+      "tinyNoisePixelsRemoved": 0,
+      "alphaBounds": [
+        78,
+        237,
+        329,
+        473
+      ]
+    },
+    {
+      "index": 9,
+      "move": "pepe_breakout",
+      "pose": "release",
+      "rect": [
+        512,
+        1024,
+        512,
+        512
+      ],
+      "anchor": [
+        200,
+        470
+      ],
+      "sourceCrop": [
+        300,
+        622,
+        594,
+        919
+      ],
+      "sourceStrongEdgePixels": 0,
+      "tinyNoisePixelsRemoved": 0,
+      "alphaBounds": [
+        88,
+        195,
+        315,
+        473
+      ]
+    },
+    {
+      "index": 10,
+      "move": "pepe_breakout",
+      "pose": "impact",
+      "rect": [
+        1024,
+        1024,
+        512,
+        512
+      ],
+      "anchor": [
+        200,
+        470
+      ],
+      "sourceCrop": [
+        594,
+        622,
+        945,
+        919
+      ],
+      "sourceStrongEdgePixels": 0,
+      "tinyNoisePixelsRemoved": 0,
+      "alphaBounds": [
+        24,
+        204,
+        380,
+        473
+      ]
+    },
+    {
+      "index": 11,
+      "move": "pepe_breakout",
+      "pose": "recovery",
+      "rect": [
+        1536,
+        1024,
+        512,
+        512
+      ],
+      "anchor": [
+        200,
+        470
+      ],
+      "sourceCrop": [
+        945,
+        622,
+        1254,
+        919
+      ],
+      "sourceStrongEdgePixels": 0,
+      "tinyNoisePixelsRemoved": 0,
+      "alphaBounds": [
+        77,
+        237,
+        326,
+        473
+      ]
+    },
+    {
+      "index": 12,
+      "move": "reversal",
+      "pose": "anticipation",
+      "rect": [
+        0,
+        1536,
+        512,
+        512
+      ],
+      "anchor": [
+        200,
+        470
+      ],
+      "sourceCrop": [
+        0,
+        919,
+        295,
+        1254
+      ],
+      "sourceStrongEdgePixels": 0,
+      "tinyNoisePixelsRemoved": 0,
+      "alphaBounds": [
+        88,
+        184,
+        314,
+        473
+      ]
+    },
+    {
+      "index": 13,
+      "move": "reversal",
+      "pose": "release",
+      "rect": [
+        512,
+        1536,
+        512,
+        512
+      ],
+      "anchor": [
+        200,
+        470
+      ],
+      "sourceCrop": [
+        295,
+        919,
+        599,
+        1254
+      ],
+      "sourceStrongEdgePixels": 0,
+      "tinyNoisePixelsRemoved": 0,
+      "alphaBounds": [
+        57,
+        197,
+        363,
+        473
+      ]
+    },
+    {
+      "index": 14,
+      "move": "reversal",
+      "pose": "impact",
+      "rect": [
+        1024,
+        1536,
+        512,
+        512
+      ],
+      "anchor": [
+        200,
+        470
+      ],
+      "sourceCrop": [
+        599,
+        919,
+        962,
+        1254
+      ],
+      "sourceStrongEdgePixels": 0,
+      "tinyNoisePixelsRemoved": 15,
+      "alphaBounds": [
+        31,
+        198,
+        439,
+        473
+      ]
+    },
+    {
+      "index": 15,
+      "move": "reversal",
+      "pose": "recovery",
+      "rect": [
+        1536,
+        1536,
+        512,
+        512
+      ],
+      "anchor": [
+        200,
+        470
+      ],
+      "sourceCrop": [
+        962,
+        919,
+        1254,
+        1254
+      ],
+      "sourceStrongEdgePixels": 0,
+      "tinyNoisePixelsRemoved": 24,
+      "alphaBounds": [
+        107,
+        201,
+        348,
+        473
+      ]
+    }
+  ],
+  "source": {
+    "file": "assets/source/emerald-moves-v18-master.png",
+    "sha256": "a843959f4ed32275f4442efb497ae36bd77f74c90085d11d3392c9895b74c7ca",
+    "actualSize": [
+      1254,
+      1254
+    ],
+    "provider": "openai/gpt-image-2",
+    "reference": "Existing canonical Emerald battle-rig reference",
+    "generationEvent": "Existing September 7, 2026 Emerald sheet; not regenerated in this preparation"
+  },
+  "preparation": {
+    "uniformScale": 1.2012779552715656,
+    "method": "Cell-border connected near-white flood fill; boundary-only white-matte decontamination; tiny islands under 8 pixels removed; one ribbon-tip feather outside body; uniform scale with clothing-center and feet anchors",
+    "opaqueSeamPixels": 0,
+    "newlyAuthoredPoseCount": 16,
+    "claim": "Four authored Emerald clips only; not all lineages or 60fps hand-drawn frames"
+  }
+}
