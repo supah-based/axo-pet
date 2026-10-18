@@ -41,12 +41,31 @@ docs/               Architecture decisions and migration runbooks
 
 ## Development
 
+Use Node **22.23.1** (`.node-version`) and npm **10.9.8**, matching CI.
+
 ```bash
-npm install
+npm ci --ignore-scripts
+npm run dev
+```
+
+Open **http://127.0.0.1:4320** for the editable source preview. Refresh after edits.
+Home, My AXO, NFT, Bazaar and the Hatchery game entrypoint use repository source.
+Arena is playable with clearly labeled synthetic Pets and memory-only state, reset on restart.
+The full `/hatchery` dashboard and authenticated Pet API still require extraction from the existing host.
+Wallet connections are disabled locally. Missing public images and shared styles are read from
+`https://axo.pet` through a fixed-origin asset allowlist; no API or production write is proxied.
+Set `AXO_PREVIEW_LIVE_ASSETS=0` for offline use, with missing host images/styles left unavailable.
+`PORT` may select a different loopback port; 4320 avoids the historical 4318 lab listener.
+
+```bash
 npm run verify
 npm test
 npm run test:contracts
 npm run test:arena
+npm run test:dev
 ```
 
-Build agents must read `HANDOFF.md` first. See `docs/MIGRATION_PLAN.md` before moving any additional code or runtime responsibility.
+Build agents must read [HANDOFF.md](HANDOFF.md) first for AXO's system context.
+See `docs/MIGRATION_PLAN.md` before moving any additional code or runtime responsibility.
+The shared Codex/AXO exchange is [AXO-001](docs/handoffs/AXO-001.md). See [the agent handoff runbook](docs/runbooks/agent-handoff.md) for the workflow,
+and [the development map](docs/DEVELOPMENT.md) for the current extraction boundaries.
