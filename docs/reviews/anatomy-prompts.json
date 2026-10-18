@@ -81,5 +81,11 @@
     "source": "packages/gear-catalog/collections/lineage-bases-v3.source.json",
     "implementation": "packages/visual-engine/src/base-material.mjs",
     "note": "Generated full-base paintings are registered to a shared canonical silhouette and baked into complete base images. No skin/eye marking overlay is drawn at runtime. Canonical contours keep edge shading."
+  },
+  "headwear": {
+    "id": "degen-node-cap",
+    "method": "Built-in image generation",
+    "prompt": "Use case: stylized-concept. Asset type: one complete standalone headgear item for a cute AXO Pet game, 1024x1536 portrait 2:3, genuinely transparent background. Attached character is a STYLE AND CAMERA reference only; do not output any character, face, body, skin or mannequin. Create one premium black technical-fabric degen baseball cap that fits its very broad round head. Broad shallow dome, six stitched panels, restrained lime seam piping and a tiny cyan diamond-shaped badge (no letters). Short dark curved band and a compact curved brim projecting toward viewer and slightly screen RIGHT, matching the character's slight right-facing three-quarter perspective. Front-left panel appears wider than the receding right side. Crown width roughly 760px, height around330px; brim extends to the right, total object width around860px. Entire cap centered on portrait, occupying x80..950, y500..1000, generous transparent margins. Natural cloth shading, fine soft-shell fabric, elegant glossy accents, soft light from upper left, polished painterly 3D collectible style matching the reference. The visible opening/lining is separate dark fabric only under the band; no fake head inside. No long straps hanging down, no ears, no goggles, no extra props, no scenery, no floor, no shadow card, no text, no logo, no watermark. Full complete cap, one object.",
+    "source": "head-art/degen-node-cap.png"
   }
 }

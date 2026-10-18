@@ -270,12 +270,13 @@
     ],
     "method": "Four-corner projective grip registration; 8x12 UV grid. Source camera must match the raised open palm. Fingers are original Pet pixels above the tool.",
     "fingerForeground": [
-      "M807 442C793 450 792 472 796 492C798 509 808 521 821 524C835 525 847 512 846 498C845 484 841 470 837 455C831 439 816 434 807 442Z",
+      "M807 442C795 448 793 463 797 477C800 486 812 492 825 489C837 487 842 478 839 466L837 455C831 439 816 434 807 442Z",
       "M898 435C906 433 918 441 924 452C930 464 924 483 911 493C901 500 892 494 888 484C881 469 886 446 898 435Z",
       "M899 483C913 478 930 490 929 506C928 521 914 537 898 537C887 537 880 526 880 516C880 503 886 490 899 483Z",
       "M853 519C868 513 887 524 889 537C890 550 880 564 867 567C853 571 839 559 837 548C835 537 842 525 853 519Z"
     ],
     "angleFromPreviousDegrees": 18,
-    "note": "Grip leans toward the raised fingers. Original thumb/finger foreground stays fixed to the Pet; tune rotation per item around palmCenter."
+    "note": "Grip leans toward the raised fingers. Original thumb/finger foreground stays fixed to the Pet; tune rotation per item around palmCenter.",
+    "thumbForeground": "Only the distal thumb and upper joint are in front of held tools. The rounded thenar/palm base remains on the Pet plane behind the handle."
   }
 }

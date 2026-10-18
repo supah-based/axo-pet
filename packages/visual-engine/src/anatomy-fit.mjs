@@ -52,6 +52,10 @@ export function validateProfile(catalog, profile={}) {
   }
   return true;
 }
+export function resolveProfile(catalog,profile={}) {
+  validateProfile(catalog,profile);validateProfile(catalog,catalog.defaultProfile||{});
+  return {...profile,anchors:{...structuredClone(catalog.defaultProfile?.anchors||{}),...profile.anchors},items:{...structuredClone(catalog.defaultProfile?.items||{}),...profile.items}};
+}
 export function resolveVertices(part, rig, profile={}, itemId) {
   const t=profile.items?.[itemId]||{dx:0,dy:0,scale:1}, pivot=part.pivot||[512,512];
   const angle=(t.rotation||0)*Math.PI/180,cos=Math.cos(angle),sin=Math.sin(angle);
@@ -70,7 +74,7 @@ export function assertMesh(part, targets) {
   }
 }
 export function fitPlan(catalog,lineage,selection,profile={},sceneId=null,appearance=true) {
-  validateProfile(catalog,profile);
+  profile=resolveProfile(catalog,profile);
   const base=catalog.lineages.find(b=>b.id===lineage);if(!base) throw new Error('Unknown canonical Pet reference.');
   const shown=appearance?(base.styled||base):base;
   const selected=Object.entries(selection).filter(([,id])=>id).map(([slot,id])=>{const item=catalog.items.find(i=>i.id===id);if(!item||item.slot!==slot) throw new Error('Unknown or mismatched fitted item.');return item;});
@@ -88,7 +92,7 @@ export function fitPlan(catalog,lineage,selection,profile={},sceneId=null,appear
   return layers;
 }
 export function exportProfile(catalog,profile) {
-  validateProfile(catalog,profile);
+  profile=resolveProfile(catalog,profile);
   return {schema:'AXO_FIT_PROFILE_V3',poseId:catalog.rig.poseId,rigSha256:catalog.rigSha256,anchors:structuredClone(profile.anchors||{}),items:structuredClone(profile.items||{})};
 }
 export function headPattern(rig,profile,type) {
@@ -108,8 +112,9 @@ export function headPattern(rig,profile,type) {
   return{rear,front,keepouts:['gillRootLT','gillRootLM','gillRootLB','gillRootRT','gillRootRM','gillRootRB'].map(id=>{const[x,y]=p(id);return{anchor:id,cx:x,cy:y,rx:18,ry:23};})};
 }
 export async function drawFitted(canvas,catalog,lineage,selection,load,profile={},sceneId=null,appearance=true) {
+  profile=resolveProfile(catalog,profile);
   const plan=fitPlan(catalog,lineage,selection,profile,sceneId,appearance);
-  const edited=l=>l.kind==='garment'&&(Boolean(profile.items?.[l.id]&&(profile.items[l.id].dx||profile.items[l.id].dy||profile.items[l.id].scale!==1||profile.items[l.id].rotation))||l.parts.some(p=>p.vertices.some(v=>v.weights.some(([id])=>profile.anchors?.[id]&&profile.anchors[id].some((n,k)=>n!==catalog.rig.anchors[id][k])))));
+  const edited=l=>{if(l.kind!=='garment')return false;const t=profile.items[l.id]||{dx:0,dy:0,scale:1,rotation:0},base=catalog.defaultProfile?.items?.[l.id]||{dx:0,dy:0,scale:1,rotation:0};return ['dx','dy','scale','rotation'].some(k=>(t[k]??0)!==(base[k]??0))||l.parts.some(p=>p.vertices.some(v=>v.weights.some(([id])=>profile.anchors[id]&&profile.anchors[id].some((n,k)=>n!==catalog.rig.anchors[id][k]))));};
   const sources=[...new Set(plan.flatMap(l=>edited(l)?l.parts.map(p=>p.texture):[l.src]))];
   const images=new Map(await Promise.all(sources.map(async s=>[s,await load(s)])));
   const ctx=canvas.getContext('2d');ctx.clearRect(0,0,...PORTRAIT);
@@ -131,10 +136,10 @@ export async function drawItemPortrait(canvas,catalog,itemId,load,sceneId=null){
   const sources=[...(scene?[scene.asset]:[]),item.itemArt.asset],images=await Promise.all(sources.map(load)),ctx=canvas.getContext('2d');ctx.clearRect(0,0,...PORTRAIT);images.forEach(i=>ctx.drawImage(i,0,0));
 }
 // Deterministic build-time UV rasterizer: one source sample per target pixel.
-export function rasterize(parts,textures,rig) {
+export function rasterize(parts,textures,rig,profile={},itemId) {
   const out=new Uint8Array(1024*1536*4);
   for(const part of parts) {
-    const target=resolveVertices(part,rig),tex=textures.get(part.texture);assertMesh(part,target);
+    const target=resolveVertices(part,rig,profile,itemId),tex=textures.get(part.texture);assertMesh(part,target);
     for(const ids of part.triangles) {
       const [a,b,c]=ids.map(i=>target[i]),source=ids.map(i=>part.vertices[i].source),den=area(a,b,c);
       for(let y=Math.max(0,Math.floor(Math.min(a[1],b[1],c[1])));y<Math.min(1536,Math.ceil(Math.max(a[1],b[1],c[1])));y++) for(let x=Math.max(0,Math.floor(Math.min(a[0],b[0],c[0])));x<Math.min(1024,Math.ceil(Math.max(a[0],b[0],c[0])));x++) {

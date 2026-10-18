@@ -23,7 +23,13 @@
           1220
         ]
       ],
-      "description": "A compact banana baton. Thick grip, angled palm socket and original fingers in front."
+      "description": "A compact banana baton. Thick grip, angled palm socket and original fingers in front.",
+      "defaultFit": {
+        "dx": -14,
+        "dy": 2,
+        "scale": 1.2,
+        "rotation": 11
+      }
     },
     {
       "id": "gas-fee-guzzler",
@@ -47,7 +53,13 @@
           1240
         ]
       ],
-      "description": "A tiny gas-meter siphon for monumental fees. Registered to the palm in perspective."
+      "description": "A tiny gas-meter siphon for monumental fees. Registered to the palm in perspective.",
+      "defaultFit": {
+        "dx": -14,
+        "dy": 2,
+        "scale": 1.2,
+        "rotation": 11
+      }
     },
     {
       "id": "validator-spark",
@@ -71,7 +83,13 @@
           1240
         ]
       ],
-      "description": "An arcane validator instrument with a broad brass-ringed handle and a compact crystal crown."
+      "description": "An arcane validator instrument with a broad brass-ringed handle and a compact crystal crown.",
+      "defaultFit": {
+        "dx": -14,
+        "dy": 2,
+        "scale": 1.2,
+        "rotation": 11
+      }
     }
   ]
 }

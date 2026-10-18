@@ -45,7 +45,7 @@ Use the existing [live Hatchery and quests](https://axo.pet/hatchery?view=quests
 `npm run inspect:live` checks the existing public overview and marketplace APIs without a wallet or database connection.
 Wallet-private quest progress and host/database diagnostics require the existing AXO interfaces requested in [AXO-002](docs/handoffs/AXO-002.md).
 
-The `/gear-studio` source preview uses the new anatomy atelier: 2:3 portraits, a reference outfit, three newly authored hand tools, head fitting guides, six optional lineage eye/skin looks and three scenes. Bazaar examples use the same renderer. The prior 30 designs remain at `/gear-concepts`; their fits were rejected. See [the current guide](docs/ANATOMY_ATELIER.md) and [AXO-004](docs/handoffs/AXO-004.md) for existing-host integration and pending art acceptance. Pants and Footwear remain preview slots.
+The `/gear-studio` source preview uses the new anatomy atelier: 2:3 portraits, a reference outfit, three newly authored hand tools, a fitted test cap and head guides, six painted lineage bases and three scenes. Bazaar examples use the same renderer. The prior 30 designs remain at `/gear-concepts`; their fits were rejected. See [the current guide](docs/ANATOMY_ATELIER.md) and [AXO-004](docs/handoffs/AXO-004.md) for existing-host integration and pending art acceptance. Pants and Footwear remain preview slots.
 
 Use Node **22.23.1** (`.node-version`) and npm **10.9.8**, matching CI.
 

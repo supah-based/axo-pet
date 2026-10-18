@@ -280,16 +280,17 @@
       ],
       "method": "Four-corner projective grip registration; 8x12 UV grid. Source camera must match the raised open palm. Fingers are original Pet pixels above the tool.",
       "fingerForeground": [
-        "M807 442C793 450 792 472 796 492C798 509 808 521 821 524C835 525 847 512 846 498C845 484 841 470 837 455C831 439 816 434 807 442Z",
+        "M807 442C795 448 793 463 797 477C800 486 812 492 825 489C837 487 842 478 839 466L837 455C831 439 816 434 807 442Z",
         "M898 435C906 433 918 441 924 452C930 464 924 483 911 493C901 500 892 494 888 484C881 469 886 446 898 435Z",
         "M899 483C913 478 930 490 929 506C928 521 914 537 898 537C887 537 880 526 880 516C880 503 886 490 899 483Z",
         "M853 519C868 513 887 524 889 537C890 550 880 564 867 567C853 571 839 559 837 548C835 537 842 525 853 519Z"
       ],
       "angleFromPreviousDegrees": 18,
-      "note": "Grip leans toward the raised fingers. Original thumb/finger foreground stays fixed to the Pet; tune rotation per item around palmCenter."
+      "note": "Grip leans toward the raised fingers. Original thumb/finger foreground stays fixed to the Pet; tune rotation per item around palmCenter.",
+      "thumbForeground": "Only the distal thumb and upper joint are in front of held tools. The rounded thenar/palm base remains on the Pet plane behind the handle."
     }
   },
-  "rigSha256": "2ce87ff1fddf2a9e46eebb6f31ed9328cc5121ac3000f8d71a52d464ee8a7f72",
+  "rigSha256": "d5ee536ed233271c552fbe6900fb90ff1e3716cd104f0b48408dcb94c9b63fb4",
   "slots": [
     "head",
     "body",
@@ -297,6 +298,29 @@
     "footwear",
     "tool"
   ],
+  "defaultProfile": {
+    "anchors": {},
+    "items": {
+      "banana-market-maker": {
+        "dx": -14,
+        "dy": 2,
+        "scale": 1.2,
+        "rotation": 11
+      },
+      "gas-fee-guzzler": {
+        "dx": -14,
+        "dy": 2,
+        "scale": 1.2,
+        "rotation": 11
+      },
+      "validator-spark": {
+        "dx": -14,
+        "dy": 2,
+        "scale": 1.2,
+        "rotation": 11
+      }
+    }
+  },
   "lineages": [
     {
       "styled": {
@@ -328,7 +352,7 @@
         },
         "fingers": {
           "asset": "/gear-anatomy/v3/emerald_sprout-lineage-fingers.webp",
-          "sha256": "168e85ff2a55983b4098b64961959c74a68658cb70e148442ecbd760d77dd57a",
+          "sha256": "75daa53421a24c9d31a4b69fd38e45e972e1c90ccd688d5fc82b25e67e1bdeb6",
           "width": 1024,
           "height": 1536
         },
@@ -360,7 +384,7 @@
       },
       "fingers": {
         "asset": "/gear-anatomy/v3/emerald_sprout-grip.webp",
-        "sha256": "ebede3ecc54bd4ceda9c3e1260299af437e2efda9bbe1a0d4a9973d2a67f723b",
+        "sha256": "d447e3175c3839b27318dfea96e04cc09ec4fae72fdc864c53a1cfaf7639ffdf",
         "width": 1024,
         "height": 1536
       },
@@ -401,7 +425,7 @@
         },
         "fingers": {
           "asset": "/gear-anatomy/v3/sapphire_tide-lineage-fingers.webp",
-          "sha256": "be9bb6b3c4f4d17a13f3bb4f248de80c7f585fe9db52e6d1ae6ee87e17f3644f",
+          "sha256": "4bc8a47d355ef62da2024ceafdd900c17b0b782a571bf8827c74876664086d59",
           "width": 1024,
           "height": 1536
         },
@@ -433,7 +457,7 @@
       },
       "fingers": {
         "asset": "/gear-anatomy/v3/sapphire_tide-grip.webp",
-        "sha256": "7fabe25228003442b2c94d8f31ab90004ad64194b57e888ccb4a13170f282094",
+        "sha256": "3cad31112881435aec6d26f9b9e818d463771a09aa98e8a78e7afdb5ec1ec8fb",
         "width": 1024,
         "height": 1536
       },
@@ -474,7 +498,7 @@
         },
         "fingers": {
           "asset": "/gear-anatomy/v3/amethyst_dream-lineage-fingers.webp",
-          "sha256": "f139a5bc869a51fd0a7387ca38be8a289e3b19e1babd4a49fd0cb9a28c5570c8",
+          "sha256": "7318c55d02764b40db28d734f3b106d931d88ed700df0e916af5daefc5585648",
           "width": 1024,
           "height": 1536
         },
@@ -506,7 +530,7 @@
       },
       "fingers": {
         "asset": "/gear-anatomy/v3/amethyst_dream-grip.webp",
-        "sha256": "1054259123527b20b21c01d9fe27786dca32d1063fa853e3d3003c3b680ee682",
+        "sha256": "8a7fa2815a2e2a3811a4a33b9d930e780c058acb3c7ffcc93b0c87aea7ac5c14",
         "width": 1024,
         "height": 1536
       },
@@ -547,7 +571,7 @@
         },
         "fingers": {
           "asset": "/gear-anatomy/v3/solar_peach-lineage-fingers.webp",
-          "sha256": "e8b2afa5b3f91e1ee0cb94b0fd99bb96949badbbf560a8f8d474db8c61898eb7",
+          "sha256": "7ab03f1ddb8af0f52c1dea8fc2bb425d505af4bdf9cef9621695ee8eb5403ed3",
           "width": 1024,
           "height": 1536
         },
@@ -579,7 +603,7 @@
       },
       "fingers": {
         "asset": "/gear-anatomy/v3/solar_peach-grip.webp",
-        "sha256": "cbe3158bbebdce4c7a9247e0487b261f7df49869ab57afba4f898efd12e7d30c",
+        "sha256": "c2bd5085d1d27e1057429c7086a6e363f0234746c53934ca057e1ad242e0f2f6",
         "width": 1024,
         "height": 1536
       },
@@ -620,7 +644,7 @@
         },
         "fingers": {
           "asset": "/gear-anatomy/v3/rose_bloom-lineage-fingers.webp",
-          "sha256": "087ce6499c3f69f1618f4521f3366fa229f0995747738a891801df5daf0da9fd",
+          "sha256": "b7421996ece35e4031dcc55657cfb1a6753ee17cd9079fffbc1ada7400275635",
           "width": 1024,
           "height": 1536
         },
@@ -652,7 +676,7 @@
       },
       "fingers": {
         "asset": "/gear-anatomy/v3/rose_bloom-grip.webp",
-        "sha256": "0688df75edbcd8d4cfb0fe44425f2a30cfb1d84f1a24668c9d9407aef4b4e345",
+        "sha256": "243609d4548116f61754e13e2a1f06804eb22f35840025ce55b0b2bf6848f36d",
         "width": 1024,
         "height": 1536
       },
@@ -693,7 +717,7 @@
         },
         "fingers": {
           "asset": "/gear-anatomy/v3/midnight_mint-lineage-fingers.webp",
-          "sha256": "fbc43a04bf6c6fc535fbd967b5cd678cb04d0c33abfe086e9e4d4b37bb9375e2",
+          "sha256": "e708f4f933a340b4e090b120fc38df20a8e02828ae471746d5777f287b323d5c",
           "width": 1024,
           "height": 1536
         },
@@ -725,7 +749,7 @@
       },
       "fingers": {
         "asset": "/gear-anatomy/v3/midnight_mint-grip.webp",
-        "sha256": "359c00a3607ad57751a6b52c4863dea55668a1a7a58c172bc9d1710c2d0f720b",
+        "sha256": "5be8075fada3a31de4e74f4f4867788e8100350d3a69f38fa1070f1bb50329d4",
         "width": 1024,
         "height": 1536
       },
@@ -3247,9 +3271,1418 @@
       }
     },
     {
+      "id": "degen-node-cap",
+      "name": "Degen Node Cap",
+      "slot": "head",
+      "texture": "head-cap",
+      "color": "#d5f39c",
+      "description": "A fitted black technical cap with lime seams and a cyan node diamond. Crown and brim follow the skull; the gills stay in front.",
+      "parts": [
+        {
+          "id": "cap-crown",
+          "texture": "/gear-anatomy/v3/degen-node-cap.texture.webp",
+          "pivot": [
+            526,
+            240
+          ],
+          "vertices": [
+            {
+              "source": [
+                65,
+                1005
+              ],
+              "position": [
+                334,
+                244
+              ],
+              "weights": [
+                [
+                  "templeL",
+                  0.696323943706952
+                ],
+                [
+                  "browL",
+                  0.18120979776785934
+                ],
+                [
+                  "skullUpperL",
+                  0.12246625852518857
+                ]
+              ]
+            },
+            {
+              "source": [
+                48,
+                914
+              ],
+              "position": [
+                328,
+                225
+              ],
+              "weights": [
+                [
+                  "templeL",
+                  0.5282614046159564
+                ],
+                [
+                  "skullUpperL",
+                  0.2527623785992784
+                ],
+                [
+                  "browL",
+                  0.2189762167847652
+                ]
+              ]
+            },
+            {
+              "source": [
+                65,
+                810
+              ],
+              "position": [
+                332,
+                199
+              ],
+              "weights": [
+                [
+                  "skullUpperL",
+                  0.49021954866958745
+                ],
+                [
+                  "templeL",
+                  0.30792036438687553
+                ],
+                [
+                  "browL",
+                  0.20186008694353694
+                ]
+              ]
+            },
+            {
+              "source": [
+                100,
+                705
+              ],
+              "position": [
+                346,
+                173
+              ],
+              "weights": [
+                [
+                  "skullUpperL",
+                  0.7682859692752424
+                ],
+                [
+                  "templeL",
+                  0.12065378101147387
+                ],
+                [
+                  "browL",
+                  0.11106024971328365
+                ]
+              ]
+            },
+            {
+              "source": [
+                158,
+                620
+              ],
+              "position": [
+                370,
+                147
+              ],
+              "weights": [
+                [
+                  "skullUpperL",
+                  0.946172722770657
+                ],
+                [
+                  "browL",
+                  0.02925738290947772
+                ],
+                [
+                  "templeL",
+                  0.024569894319865178
+                ]
+              ]
+            },
+            {
+              "source": [
+                238,
+                550
+              ],
+              "position": [
+                403,
+                123
+              ],
+              "weights": [
+                [
+                  "skullUpperL",
+                  0.8514566143232949
+                ],
+                [
+                  "skullTop",
+                  0.08793253275808077
+                ],
+                [
+                  "browL",
+                  0.060610852918624364
+                ]
+              ]
+            },
+            {
+              "source": [
+                327,
+                510
+              ],
+              "position": [
+                447,
+                107
+              ],
+              "weights": [
+                [
+                  "skullUpperL",
+                  0.4566610353176648
+                ],
+                [
+                  "skullTop",
+                  0.4430947140861278
+                ],
+                [
+                  "browL",
+                  0.10024425059620727
+                ]
+              ]
+            },
+            {
+              "source": [
+                414,
+                483
+              ],
+              "position": [
+                502,
+                101
+              ],
+              "weights": [
+                [
+                  "skullTop",
+                  0.9191444019573417
+                ],
+                [
+                  "skullUpperL",
+                  0.048926763550344636
+                ],
+                [
+                  "skullUpperR",
+                  0.03192883449231358
+                ]
+              ]
+            },
+            {
+              "source": [
+                415,
+                458
+              ],
+              "position": [
+                503,
+                94
+              ],
+              "weights": [
+                [
+                  "skullTop",
+                  0.9031029027137191
+                ],
+                [
+                  "skullUpperL",
+                  0.057510875259258847
+                ],
+                [
+                  "skullUpperR",
+                  0.039386222027022126
+                ]
+              ]
+            },
+            {
+              "source": [
+                439,
+                444
+              ],
+              "position": [
+                514,
+                89
+              ],
+              "weights": [
+                [
+                  "skullTop",
+                  0.9166482550766474
+                ],
+                [
+                  "skullUpperL",
+                  0.04369004796528103
+                ],
+                [
+                  "skullUpperR",
+                  0.0396616969580715
+                ]
+              ]
+            },
+            {
+              "source": [
+                481,
+                445
+              ],
+              "position": [
+                536,
+                89
+              ],
+              "weights": [
+                [
+                  "skullTop",
+                  0.9173536581379654
+                ],
+                [
+                  "skullUpperR",
+                  0.050254980049358175
+                ],
+                [
+                  "skullUpperL",
+                  0.03239136181267638
+                ]
+              ]
+            },
+            {
+              "source": [
+                508,
+                456
+              ],
+              "position": [
+                546,
+                95
+              ],
+              "weights": [
+                [
+                  "skullTop",
+                  0.9081053951575846
+                ],
+                [
+                  "skullUpperR",
+                  0.059156434478745974
+                ],
+                [
+                  "browC",
+                  0.03273817036366936
+                ]
+              ]
+            },
+            {
+              "source": [
+                512,
+                472
+              ],
+              "position": [
+                546,
+                102
+              ],
+              "weights": [
+                [
+                  "skullTop",
+                  0.9291335130531734
+                ],
+                [
+                  "skullUpperR",
+                  0.0450156266294595
+                ],
+                [
+                  "browC",
+                  0.025850860317367115
+                ]
+              ]
+            },
+            {
+              "source": [
+                604,
+                486
+              ],
+              "position": [
+                593,
+                105
+              ],
+              "weights": [
+                [
+                  "skullTop",
+                  0.4895021744279789
+                ],
+                [
+                  "skullUpperR",
+                  0.4141120829069244
+                ],
+                [
+                  "browC",
+                  0.09638574266509665
+                ]
+              ]
+            },
+            {
+              "source": [
+                694,
+                524
+              ],
+              "position": [
+                641,
+                117
+              ],
+              "weights": [
+                [
+                  "skullUpperR",
+                  0.8752699046842946
+                ],
+                [
+                  "skullTop",
+                  0.0800753504209887
+                ],
+                [
+                  "browR",
+                  0.04465474489471672
+                ]
+              ]
+            },
+            {
+              "source": [
+                772,
+                589
+              ],
+              "position": [
+                683,
+                137
+              ],
+              "weights": [
+                [
+                  "skullUpperR",
+                  0.889268522244112
+                ],
+                [
+                  "browR",
+                  0.06310037237901707
+                ],
+                [
+                  "templeR",
+                  0.047631105376870986
+                ]
+              ]
+            },
+            {
+              "source": [
+                830,
+                673
+              ],
+              "position": [
+                714,
+                163
+              ],
+              "weights": [
+                [
+                  "skullUpperR",
+                  0.5880678593655554
+                ],
+                [
+                  "browR",
+                  0.22313883506372673
+                ],
+                [
+                  "templeR",
+                  0.18879330557071794
+                ]
+              ]
+            },
+            {
+              "source": [
+                862,
+                767
+              ],
+              "position": [
+                734,
+                196
+              ],
+              "weights": [
+                [
+                  "templeR",
+                  0.3855788997366214
+                ],
+                [
+                  "browR",
+                  0.35581280879975535
+                ],
+                [
+                  "skullUpperR",
+                  0.2586082914636232
+                ]
+              ]
+            },
+            {
+              "source": [
+                882,
+                876
+              ],
+              "position": [
+                742,
+                231
+              ],
+              "weights": [
+                [
+                  "templeR",
+                  0.6191843555039974
+                ],
+                [
+                  "browR",
+                  0.303612929683827
+                ],
+                [
+                  "skullUpperR",
+                  0.07720271481217567
+                ]
+              ]
+            },
+            {
+              "source": [
+                825,
+                851
+              ],
+              "position": [
+                710,
+                230
+              ],
+              "weights": [
+                [
+                  "browR",
+                  0.566084861542347
+                ],
+                [
+                  "templeR",
+                  0.34758777683981645
+                ],
+                [
+                  "skullUpperR",
+                  0.08632736161783644
+                ]
+              ]
+            },
+            {
+              "source": [
+                751,
+                837
+              ],
+              "position": [
+                675,
+                231
+              ],
+              "weights": [
+                [
+                  "browR",
+                  0.7070659824371717
+                ],
+                [
+                  "templeR",
+                  0.16837472107989085
+                ],
+                [
+                  "skullUpperR",
+                  0.12455929648293756
+                ]
+              ]
+            },
+            {
+              "source": [
+                660,
+                834
+              ],
+              "position": [
+                626,
+                237
+              ],
+              "weights": [
+                [
+                  "browR",
+                  0.38906623959354636
+                ],
+                [
+                  "browC",
+                  0.3857519416871811
+                ],
+                [
+                  "skullUpperR",
+                  0.2251818187192726
+                ]
+              ]
+            },
+            {
+              "source": [
+                556,
+                847
+              ],
+              "position": [
+                570,
+                244
+              ],
+              "weights": [
+                [
+                  "browC",
+                  0.9690417776996817
+                ],
+                [
+                  "browR",
+                  0.01588700699162137
+                ],
+                [
+                  "skullUpperR",
+                  0.015071215308696848
+                ]
+              ]
+            },
+            {
+              "source": [
+                446,
+                871
+              ],
+              "position": [
+                511,
+                250
+              ],
+              "weights": [
+                [
+                  "browC",
+                  0.7356407647710164
+                ],
+                [
+                  "browL",
+                  0.16728249767151887
+                ],
+                [
+                  "skullTop",
+                  0.0970767375574648
+                ]
+              ]
+            },
+            {
+              "source": [
+                330,
+                906
+              ],
+              "position": [
+                449,
+                253
+              ],
+              "weights": [
+                [
+                  "browL",
+                  0.7824196675814393
+                ],
+                [
+                  "browC",
+                  0.10943791285652484
+                ],
+                [
+                  "skullUpperL",
+                  0.10814241956203582
+                ]
+              ]
+            },
+            {
+              "source": [
+                219,
+                946
+              ],
+              "position": [
+                391,
+                252
+              ],
+              "weights": [
+                [
+                  "browL",
+                  0.7741949621606126
+                ],
+                [
+                  "templeL",
+                  0.15248142427623063
+                ],
+                [
+                  "skullUpperL",
+                  0.0733236135631567
+                ]
+              ]
+            },
+            {
+              "source": [
+                126,
+                987
+              ],
+              "position": [
+                356,
+                248
+              ],
+              "weights": [
+                [
+                  "templeL",
+                  0.5893293934200451
+                ],
+                [
+                  "browL",
+                  0.29024271626826237
+                ],
+                [
+                  "skullUpperL",
+                  0.12042789031169272
+                ]
+              ]
+            }
+          ],
+          "triangles": [
+            [
+              26,
+              0,
+              1
+            ],
+            [
+              26,
+              1,
+              2
+            ],
+            [
+              26,
+              2,
+              3
+            ],
+            [
+              26,
+              3,
+              4
+            ],
+            [
+              26,
+              4,
+              5
+            ],
+            [
+              26,
+              5,
+              6
+            ],
+            [
+              26,
+              6,
+              7
+            ],
+            [
+              7,
+              8,
+              9
+            ],
+            [
+              26,
+              7,
+              9
+            ],
+            [
+              26,
+              9,
+              10
+            ],
+            [
+              26,
+              10,
+              11
+            ],
+            [
+              26,
+              11,
+              12
+            ],
+            [
+              26,
+              12,
+              13
+            ],
+            [
+              26,
+              13,
+              14
+            ],
+            [
+              26,
+              14,
+              15
+            ],
+            [
+              26,
+              15,
+              16
+            ],
+            [
+              16,
+              17,
+              18
+            ],
+            [
+              16,
+              18,
+              19
+            ],
+            [
+              16,
+              19,
+              20
+            ],
+            [
+              16,
+              20,
+              21
+            ],
+            [
+              16,
+              21,
+              22
+            ],
+            [
+              16,
+              22,
+              23
+            ],
+            [
+              16,
+              23,
+              24
+            ],
+            [
+              16,
+              24,
+              25
+            ],
+            [
+              16,
+              25,
+              26
+            ]
+          ]
+        },
+        {
+          "id": "cap-brim",
+          "texture": "/gear-anatomy/v3/degen-node-cap.texture.webp",
+          "pivot": [
+            526,
+            240
+          ],
+          "vertices": [
+            {
+              "source": [
+                330,
+                906
+              ],
+              "position": [
+                449,
+                253
+              ],
+              "weights": [
+                [
+                  "browL",
+                  0.7824196675814393
+                ],
+                [
+                  "browC",
+                  0.10943791285652484
+                ],
+                [
+                  "skullUpperL",
+                  0.10814241956203582
+                ]
+              ]
+            },
+            {
+              "source": [
+                446,
+                871
+              ],
+              "position": [
+                511,
+                250
+              ],
+              "weights": [
+                [
+                  "browC",
+                  0.7356407647710164
+                ],
+                [
+                  "browL",
+                  0.16728249767151887
+                ],
+                [
+                  "skullTop",
+                  0.0970767375574648
+                ]
+              ]
+            },
+            {
+              "source": [
+                556,
+                847
+              ],
+              "position": [
+                570,
+                244
+              ],
+              "weights": [
+                [
+                  "browC",
+                  0.9690417776996817
+                ],
+                [
+                  "browR",
+                  0.01588700699162137
+                ],
+                [
+                  "skullUpperR",
+                  0.015071215308696848
+                ]
+              ]
+            },
+            {
+              "source": [
+                660,
+                834
+              ],
+              "position": [
+                626,
+                237
+              ],
+              "weights": [
+                [
+                  "browR",
+                  0.38906623959354636
+                ],
+                [
+                  "browC",
+                  0.3857519416871811
+                ],
+                [
+                  "skullUpperR",
+                  0.2251818187192726
+                ]
+              ]
+            },
+            {
+              "source": [
+                751,
+                837
+              ],
+              "position": [
+                675,
+                231
+              ],
+              "weights": [
+                [
+                  "browR",
+                  0.7070659824371717
+                ],
+                [
+                  "templeR",
+                  0.16837472107989085
+                ],
+                [
+                  "skullUpperR",
+                  0.12455929648293756
+                ]
+              ]
+            },
+            {
+              "source": [
+                825,
+                851
+              ],
+              "position": [
+                710,
+                230
+              ],
+              "weights": [
+                [
+                  "browR",
+                  0.566084861542347
+                ],
+                [
+                  "templeR",
+                  0.34758777683981645
+                ],
+                [
+                  "skullUpperR",
+                  0.08632736161783644
+                ]
+              ]
+            },
+            {
+              "source": [
+                882,
+                876
+              ],
+              "position": [
+                742,
+                231
+              ],
+              "weights": [
+                [
+                  "templeR",
+                  0.6191843555039974
+                ],
+                [
+                  "browR",
+                  0.303612929683827
+                ],
+                [
+                  "skullUpperR",
+                  0.07720271481217567
+                ]
+              ]
+            },
+            {
+              "source": [
+                944,
+                923
+              ],
+              "position": [
+                772,
+                239
+              ],
+              "weights": [
+                [
+                  "templeR",
+                  0.6790495332722948
+                ],
+                [
+                  "browR",
+                  0.24185325842574884
+                ],
+                [
+                  "skullUpperR",
+                  0.07909720830195631
+                ]
+              ]
+            },
+            {
+              "source": [
+                986,
+                973
+              ],
+              "position": [
+                791,
+                249
+              ],
+              "weights": [
+                [
+                  "templeR",
+                  0.6670052447208029
+                ],
+                [
+                  "browR",
+                  0.24538761768366546
+                ],
+                [
+                  "skullUpperR",
+                  0.08760713759553157
+                ]
+              ]
+            },
+            {
+              "source": [
+                989,
+                1012
+              ],
+              "position": [
+                793,
+                257
+              ],
+              "weights": [
+                [
+                  "templeR",
+                  0.6801168937416799
+                ],
+                [
+                  "browR",
+                  0.23875968359912247
+                ],
+                [
+                  "skullUpperR",
+                  0.08112342265919753
+                ]
+              ]
+            },
+            {
+              "source": [
+                970,
+                1031
+              ],
+              "position": [
+                781,
+                264
+              ],
+              "weights": [
+                [
+                  "templeR",
+                  0.7386770741961832
+                ],
+                [
+                  "browR",
+                  0.20424661916315615
+                ],
+                [
+                  "skullUpperR",
+                  0.05707630664066066
+                ]
+              ]
+            },
+            {
+              "source": [
+                909,
+                1013
+              ],
+              "position": [
+                751,
+                265
+              ],
+              "weights": [
+                [
+                  "templeR",
+                  0.9008233192112167
+                ],
+                [
+                  "browR",
+                  0.08536661253196227
+                ],
+                [
+                  "skullUpperR",
+                  0.013810068256820957
+                ]
+              ]
+            },
+            {
+              "source": [
+                821,
+                1016
+              ],
+              "position": [
+                713,
+                271
+              ],
+              "weights": [
+                [
+                  "templeR",
+                  0.5634893548270743
+                ],
+                [
+                  "browR",
+                  0.42285457487023265
+                ],
+                [
+                  "skullUpperR",
+                  0.013656070302692952
+                ]
+              ]
+            },
+            {
+              "source": [
+                721,
+                1038
+              ],
+              "position": [
+                662,
+                277
+              ],
+              "weights": [
+                [
+                  "browR",
+                  0.7832046222481946
+                ],
+                [
+                  "templeR",
+                  0.14760394803908286
+                ],
+                [
+                  "browC",
+                  0.06919142971272252
+                ]
+              ]
+            },
+            {
+              "source": [
+                610,
+                1064
+              ],
+              "position": [
+                604,
+                278
+              ],
+              "weights": [
+                [
+                  "browC",
+                  0.672934985272458
+                ],
+                [
+                  "browR",
+                  0.22551842965304522
+                ],
+                [
+                  "templeR",
+                  0.10154658507449678
+                ]
+              ]
+            },
+            {
+              "source": [
+                490,
+                1074
+              ],
+              "position": [
+                548,
+                273
+              ],
+              "weights": [
+                [
+                  "browC",
+                  0.9560099841385844
+                ],
+                [
+                  "browL",
+                  0.022995915834684872
+                ],
+                [
+                  "browR",
+                  0.020994100026730668
+                ]
+              ]
+            },
+            {
+              "source": [
+                391,
+                1056
+              ],
+              "position": [
+                486,
+                268
+              ],
+              "weights": [
+                [
+                  "browL",
+                  0.44288525657838024
+                ],
+                [
+                  "browC",
+                  0.4418380560808322
+                ],
+                [
+                  "skullUpperL",
+                  0.11527668734078751
+                ]
+              ]
+            },
+            {
+              "source": [
+                306,
+                1016
+              ],
+              "position": [
+                429,
+                266
+              ],
+              "weights": [
+                [
+                  "browL",
+                  0.9434971297954965
+                ],
+                [
+                  "templeL",
+                  0.03342261944447044
+                ],
+                [
+                  "skullUpperL",
+                  0.023080250760033186
+                ]
+              ]
+            },
+            {
+              "source": [
+                252,
+                975
+              ],
+              "position": [
+                405,
+                263
+              ],
+              "weights": [
+                [
+                  "browL",
+                  0.968683112775754
+                ],
+                [
+                  "templeL",
+                  0.021242226226210012
+                ],
+                [
+                  "skullUpperL",
+                  0.010074660998035917
+                ]
+              ]
+            },
+            {
+              "source": [
+                249,
+                948
+              ],
+              "position": [
+                407,
+                253
+              ],
+              "weights": [
+                [
+                  "browL",
+                  0.9114374773102271
+                ],
+                [
+                  "templeL",
+                  0.05311265312761217
+                ],
+                [
+                  "skullUpperL",
+                  0.03544986956216084
+                ]
+              ]
+            }
+          ],
+          "triangles": [
+            [
+              2,
+              3,
+              4
+            ],
+            [
+              2,
+              4,
+              5
+            ],
+            [
+              1,
+              2,
+              5
+            ],
+            [
+              1,
+              5,
+              6
+            ],
+            [
+              1,
+              6,
+              7
+            ],
+            [
+              0,
+              1,
+              7
+            ],
+            [
+              0,
+              7,
+              8
+            ],
+            [
+              0,
+              8,
+              9
+            ],
+            [
+              19,
+              0,
+              9
+            ],
+            [
+              9,
+              10,
+              11
+            ],
+            [
+              19,
+              9,
+              11
+            ],
+            [
+              19,
+              11,
+              12
+            ],
+            [
+              19,
+              12,
+              13
+            ],
+            [
+              19,
+              13,
+              14
+            ],
+            [
+              19,
+              14,
+              15
+            ],
+            [
+              19,
+              15,
+              16
+            ],
+            [
+              19,
+              16,
+              17
+            ],
+            [
+              17,
+              18,
+              19
+            ]
+          ]
+        }
+      ],
+      "source": {
+        "asset": "/gear-anatomy/v3/degen-node-cap.texture.webp",
+        "sha256": "d19c30650d6363f11d15ee7deb93a00523197f54769513e1383084d25587d58a",
+        "width": 1024,
+        "height": 1536
+      },
+      "status": "CANDIDATE",
+      "fitStatus": "REVIEW_REQUIRED",
+      "wearable": {
+        "asset": "/gear-anatomy/v3/degen-node-cap.wearable.webp",
+        "sha256": "2400d4c19dfa3bfa07dd98e8df91751f300dd9c1cb41ed722e6da0f690bebb18",
+        "width": 1024,
+        "height": 1536
+      },
+      "itemArt": {
+        "asset": "/gear-anatomy/v3/degen-node-cap.item.webp",
+        "sha256": "d19c30650d6363f11d15ee7deb93a00523197f54769513e1383084d25587d58a",
+        "width": 1024,
+        "height": 1536
+      },
+      "thumbnail": {
+        "asset": "/gear-anatomy/v3/degen-node-cap.thumb.webp",
+        "sha256": "9f4bd5bb147e5e49f5ebc14deab1ee088bd75e826d78c7b6d9355893e79101ec",
+        "width": 240,
+        "height": 360
+      }
+    },
+    {
       "id": "banana-market-maker",
       "name": "Banana Market Maker",
       "slot": "tool",
+      "defaultFit": {
+        "dx": -14,
+        "dy": 2,
+        "scale": 1.2,
+        "rotation": 11
+      },
       "color": "#ffe17a",
       "description": "A compact banana baton. Thick grip, angled palm socket and original fingers in front.",
       "status": "CANDIDATE",
@@ -6496,7 +7929,7 @@
       },
       "wearable": {
         "asset": "/gear-anatomy/v3/banana-market-maker.wearable.webp",
-        "sha256": "db41962e26f208d0a5179329249ddddc3203d0debff71a07daebfd9a3a469ea9",
+        "sha256": "df53ddda631303652786e4cb4163d2a84f16b46d91faa47c26512f6ea7513ce4",
         "width": 1024,
         "height": 1536
       },
@@ -6517,6 +7950,12 @@
       "id": "gas-fee-guzzler",
       "name": "Gas Fee Guzzler",
       "slot": "tool",
+      "defaultFit": {
+        "dx": -14,
+        "dy": 2,
+        "scale": 1.2,
+        "rotation": 11
+      },
       "color": "#ffab63",
       "description": "A tiny gas-meter siphon for monumental fees. Registered to the palm in perspective.",
       "status": "CANDIDATE",
@@ -9903,7 +11342,7 @@
       },
       "wearable": {
         "asset": "/gear-anatomy/v3/gas-fee-guzzler.wearable.webp",
-        "sha256": "e3dcb93cf5887925eb4a705574c4276dffed72788d72e9b59528228a12c234ba",
+        "sha256": "001eb46f8a384c1b5e379b23fca1c702d7e898873ac83b5d1ed066fd70228a0a",
         "width": 1024,
         "height": 1536
       },
@@ -9924,6 +11363,12 @@
       "id": "validator-spark",
       "name": "Validator Spark",
       "slot": "tool",
+      "defaultFit": {
+        "dx": -14,
+        "dy": 2,
+        "scale": 1.2,
+        "rotation": 11
+      },
       "color": "#bba0ff",
       "description": "An arcane validator instrument with a broad brass-ringed handle and a compact crystal crown.",
       "status": "CANDIDATE",
@@ -13210,7 +14655,7 @@
       },
       "wearable": {
         "asset": "/gear-anatomy/v3/validator-spark.wearable.webp",
-        "sha256": "bb94e1156c2467a4c3ab34f661f8fbed428de79f2a136244dac21fcf23b93fc2",
+        "sha256": "785fe27892db5fd0506b47518194d6b5abe043f188e674131116474bac10cbf4",
         "width": 1024,
         "height": 1536
       },
@@ -13295,6 +14740,7 @@
     "body": "degen-shell-vest",
     "pants": "node-tailored-joggers",
     "footwear": "cyan-grip-boots",
+    "head": "degen-node-cap",
     "tool": "banana-market-maker"
   },
   "showcases": [
@@ -13302,7 +14748,7 @@
       "lineage": "emerald_sprout",
       "sceneId": "degen-den",
       "asset": "/gear-anatomy/v3/emerald_sprout-outfit.webp",
-      "sha256": "827d4ee60fce197170afbf8f27007571aa3a2aa1235ad74a72ff63a12402f92d",
+      "sha256": "c9b7b68d8cff8d3139875c51454f28e7d55cfb57cb5960209d746ef1a1061b00",
       "width": 1024,
       "height": 1536
     },
@@ -13310,7 +14756,7 @@
       "lineage": "sapphire_tide",
       "sceneId": "tech-hatchery",
       "asset": "/gear-anatomy/v3/sapphire_tide-outfit.webp",
-      "sha256": "9072623646b8456c77dd12fdfc9f31a5afb405fdb8494d954119ff383267fbc9",
+      "sha256": "786aefa363b487a1dd96c3e39686635a548f05e4a5de471612c7916da36e803d",
       "width": 1024,
       "height": 1536
     },
@@ -13318,7 +14764,7 @@
       "lineage": "amethyst_dream",
       "sceneId": "arcane-workshop",
       "asset": "/gear-anatomy/v3/amethyst_dream-outfit.webp",
-      "sha256": "8ab81b60927f3a2bf1c6d16aba18f79142178c19bdad6ddb00f007ce682eddb5",
+      "sha256": "f9e7f5a2f8f6f4f14c973bed867cea58d60dc042465e92ca1f24bc3fb15ebf7c",
       "width": 1024,
       "height": 1536
     },
@@ -13326,7 +14772,7 @@
       "lineage": "solar_peach",
       "sceneId": "degen-den",
       "asset": "/gear-anatomy/v3/solar_peach-outfit.webp",
-      "sha256": "874680327bc0df136d8e45489cc0be01fd095bb3a3a25be1b679fd0d67c9987f",
+      "sha256": "7079b9bdcdf19e6f79e652a6b16bfce5469660c5a4dd10d290cc389636bc7b8d",
       "width": 1024,
       "height": 1536
     },
@@ -13334,7 +14780,7 @@
       "lineage": "rose_bloom",
       "sceneId": "tech-hatchery",
       "asset": "/gear-anatomy/v3/rose_bloom-outfit.webp",
-      "sha256": "038c7c714433b2b3bfe839424c1f7183cb3ed3701cbb2436e547079f9adcc880",
+      "sha256": "a813d557eef47d9ada9599d396d85b1065d3b080604571f985d1c390f5e9b39a",
       "width": 1024,
       "height": 1536
     },
@@ -13342,7 +14788,7 @@
       "lineage": "midnight_mint",
       "sceneId": "arcane-workshop",
       "asset": "/gear-anatomy/v3/midnight_mint-outfit.webp",
-      "sha256": "7fb5eeec881f9c0ca057ef7dd16577b37831bb8482f5eb2c549b50a050ee2fa8",
+      "sha256": "93f545dab673c3971845c8b00231d545012359b03e3097023eeb1c6780ecb1be",
       "width": 1024,
       "height": 1536
     }
