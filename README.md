@@ -41,6 +41,10 @@ docs/               Architecture decisions and migration runbooks
 
 ## Development
 
+Use the existing [live Hatchery and quests](https://axo.pet/hatchery?view=quests) to inspect the actual product.
+`npm run inspect:live` checks the existing public overview and marketplace APIs without a wallet or database connection.
+Wallet-private quest progress and host/database diagnostics require the existing AXO interfaces requested in [AXO-002](docs/handoffs/AXO-002.md).
+
 Use Node **22.23.1** (`.node-version`) and npm **10.9.8**, matching CI.
 
 ```bash
@@ -60,6 +64,7 @@ Set `AXO_PREVIEW_LIVE_ASSETS=0` for offline use, with missing host images/styles
 ```bash
 npm run verify
 npm test
+npm run test:schemas
 npm run test:contracts
 npm run test:arena
 npm run test:dev

@@ -3,5 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "description": "Versioned AXO Pet API and receipt schemas",
-  "type": "module"
+  "type": "module",
+  "main": "./src/index.cjs",
+  "exports": {
+    ".": { "import": "./src/index.mjs", "require": "./src/index.cjs" },
+    "./schemas": "./src/schemas.cjs"
+  },
+  "scripts": { "test": "node --test test/*.test.mjs" },
+  "dependencies": { "ajv": "8.20.0" }
 }
