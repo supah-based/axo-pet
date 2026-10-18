@@ -1,6 +1,6 @@
 // Candidate art preview only. Never use this module to authorize equipment or stats.
-export const STUDIO_SLOTS = Object.freeze(['head', 'face', 'body', 'back', 'tool', 'charm', 'companion', 'habitat']);
-export const STUDIO_PLANES = Object.freeze(['habitat', 'back', 'pet', 'body', 'face', 'head', 'tool', 'charm', 'companion']);
+export const STUDIO_SLOTS = Object.freeze(['head', 'face', 'body', 'pants', 'footwear', 'back', 'tool', 'charm', 'companion', 'habitat']);
+export const STUDIO_PLANES = Object.freeze(['habitat', 'back', 'pet', 'footwear', 'pants', 'body', 'face', 'head', 'tool', 'charm', 'companion']);
 
 export function validateSelection(catalog, lineage, selection) {
   if (catalog.schema !== 'AXO_GEAR_STYLE_STUDIO_V1' || catalog.status !== 'CANDIDATE' || catalog.level !== 10) throw new Error('Unsupported candidate collection.');
@@ -19,8 +19,9 @@ export function validateSelection(catalog, lineage, selection) {
 
 export function buildRenderPlan(catalog, lineage, selection) {
   const { base, picked } = validateSelection(catalog, lineage, selection);
+  if (picked.footwear && !base.footwearBase) throw new Error('Footwear base mask unavailable.');
   return STUDIO_PLANES.flatMap(plane => plane === 'pet'
-    ? [{ kind: 'pet', id: base.id, src: base.asset }]
+    ? [{ kind: 'pet', id: base.id, src: picked.footwear ? base.footwearBase.asset : base.asset }]
     : picked[plane] ? [{ kind: 'gear', id: picked[plane].id, slot: plane, src: picked[plane].wearable.asset }] : []);
 }
 

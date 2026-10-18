@@ -1,15 +1,25 @@
 {
   "schema": "AXO_GEAR_STYLE_STUDIO_V1",
-  "revision": "1.0.0-candidate",
+  "revision": "1.1.0-candidate",
   "status": "CANDIDATE",
   "level": 10,
+  "slotCompatibility": {
+    "canonicalSlots": 8,
+    "candidateOnlySlots": [
+      "pants",
+      "footwear"
+    ],
+    "onchainIntegration": "REQUIRES_VERSIONED_CONTRACT_AND_SCHEMA_REVIEW"
+  },
   "fitStatus": "REVIEW_REQUIRED",
-  "fitRigSha256": "f70c8908f06bf814980733dea9de44627d85b377566eb781870b4767162a4f60",
+  "fitRigSha256": "576f066181de4201d453de57affdd541e2fc75abd2000b5c52f7ae4f6de1b291",
   "ownership": "NONE",
   "slots": [
     "head",
     "face",
     "body",
+    "pants",
+    "footwear",
     "back",
     "tool",
     "charm",
@@ -23,7 +33,13 @@
       "asset": "/gear-style-studio/v1/pet_emerald_sprout_l10.webp",
       "sha256": "c083791ce00443556e6364d0beba03f20823e1ea392036982ae2674c98990e48",
       "width": 1024,
-      "height": 1024
+      "height": 1024,
+      "footwearBase": {
+        "asset": "/gear-style-studio/v1/pet_emerald_sprout_l10.footwear.webp",
+        "sha256": "906aa0233b37d6fc9a4e79e8684c73fc51da9c105bd8b895c0ffc361e10ee0c0",
+        "width": 1024,
+        "height": 1024
+      }
     },
     {
       "id": "sapphire_tide",
@@ -31,7 +47,13 @@
       "asset": "/gear-style-studio/v1/pet_sapphire_tide_l10.webp",
       "sha256": "346cc10cd4a85de49e73621a9f4a1e0a97b0b37921089685e57d339be2f7e43e",
       "width": 1024,
-      "height": 1024
+      "height": 1024,
+      "footwearBase": {
+        "asset": "/gear-style-studio/v1/pet_sapphire_tide_l10.footwear.webp",
+        "sha256": "8b690d78ce79c891bb6cbdb0fb5d85ffcee7f344e7ba50e1f91451f0bc248856",
+        "width": 1024,
+        "height": 1024
+      }
     },
     {
       "id": "amethyst_dream",
@@ -39,7 +61,13 @@
       "asset": "/gear-style-studio/v1/pet_amethyst_dream_l10.webp",
       "sha256": "d1a0dc337ba44628066c51c1425886ed036b695dc010ae0a5c97ca0058cc6da2",
       "width": 1024,
-      "height": 1024
+      "height": 1024,
+      "footwearBase": {
+        "asset": "/gear-style-studio/v1/pet_amethyst_dream_l10.footwear.webp",
+        "sha256": "935e96e06632a93aa3eaa77f54d86a2674f3ca21d491e8606bd77dfaae4f2da8",
+        "width": 1024,
+        "height": 1024
+      }
     },
     {
       "id": "solar_peach",
@@ -47,7 +75,13 @@
       "asset": "/gear-style-studio/v1/pet_solar_peach_l10.webp",
       "sha256": "4cf0ff76669518b5e853232ca18a5e9f3da6e9193c471e35161639fdb4e9e062",
       "width": 1024,
-      "height": 1024
+      "height": 1024,
+      "footwearBase": {
+        "asset": "/gear-style-studio/v1/pet_solar_peach_l10.footwear.webp",
+        "sha256": "23525d90eca89c9c2bb81d269dbf8be3129fb3a7c1b4947e7a1b40ca603dfb32",
+        "width": 1024,
+        "height": 1024
+      }
     },
     {
       "id": "rose_bloom",
@@ -55,7 +89,13 @@
       "asset": "/gear-style-studio/v1/pet_rose_bloom_l10.webp",
       "sha256": "6dfcef5ea13885f75254126adfa2845acf9bc8e1800f31092493aa10b86a020a",
       "width": 1024,
-      "height": 1024
+      "height": 1024,
+      "footwearBase": {
+        "asset": "/gear-style-studio/v1/pet_rose_bloom_l10.footwear.webp",
+        "sha256": "600642a738262814b8bfaf1bb7e9ecbc89e62995535f95be7acd09489cdb087e",
+        "width": 1024,
+        "height": 1024
+      }
     },
     {
       "id": "midnight_mint",
@@ -63,7 +103,13 @@
       "asset": "/gear-style-studio/v1/pet_midnight_mint_l10.webp",
       "sha256": "6e2e4b6fae39dbf2497bd49f5e32d935a4bc3330c9ed9b5dfb0eb93386a6c803",
       "width": 1024,
-      "height": 1024
+      "height": 1024,
+      "footwearBase": {
+        "asset": "/gear-style-studio/v1/pet_midnight_mint_l10.footwear.webp",
+        "sha256": "6f35858caa159b4779b47fadcc77cd70d2779c2959c3c110f14bcf970edd9bce",
+        "width": 1024,
+        "height": 1024
+      }
     }
   ],
   "presets": [
@@ -74,6 +120,8 @@
         "head": "liquidation-crown",
         "face": "wen-moon-goggles",
         "body": "diamond-hands-harness",
+        "pants": "diamond-cargo-shorts",
+        "footwear": "gas-boost-high-tops",
         "back": "cold-wallet-jetpack",
         "tool": "banana-market-maker",
         "charm": "bagholder-bag",
@@ -88,6 +136,8 @@
         "head": "validator-halo",
         "face": "packet-sniffer",
         "body": "sleep-404-vest",
+        "pants": "night-node-joggers",
+        "footwear": "wen-moon-slippers",
         "back": "rug-pull-roll",
         "tool": "gas-fee-guzzler",
         "charm": "touch-grass-vial",
@@ -102,6 +152,8 @@
         "head": "aetherpunk-circlet",
         "face": "copium-respirator",
         "body": "hexforge-vest",
+        "pants": "runesmith-trousers",
+        "footwear": "hexstep-boots",
         "back": "aether-reactor",
         "tool": "exit-liquidity-trident",
         "charm": "diamond-paws",
@@ -152,6 +204,8 @@
         ],
         "mirrorX": false,
         "rotation": 0,
+        "pieces": null,
+        "rowScale": null,
         "occlusion": "BEHIND_PET_OR_OPEN_ACCESSORY"
       }
     },
@@ -196,6 +250,8 @@
         ],
         "mirrorX": false,
         "rotation": 0,
+        "pieces": null,
+        "rowScale": null,
         "occlusion": "BEHIND_PET_OR_OPEN_ACCESSORY"
       }
     },
@@ -240,6 +296,8 @@
         ],
         "mirrorX": false,
         "rotation": 0,
+        "pieces": null,
+        "rowScale": null,
         "occlusion": "BEHIND_PET_OR_OPEN_ACCESSORY"
       }
     },
@@ -284,6 +342,8 @@
         ],
         "mirrorX": true,
         "rotation": 5,
+        "pieces": null,
+        "rowScale": null,
         "occlusion": "BEHIND_PET_OR_OPEN_ACCESSORY"
       }
     },
@@ -328,6 +388,8 @@
         ],
         "mirrorX": false,
         "rotation": 0,
+        "pieces": null,
+        "rowScale": null,
         "occlusion": "BEHIND_PET_OR_OPEN_ACCESSORY"
       }
     },
@@ -372,6 +434,8 @@
         ],
         "mirrorX": false,
         "rotation": 0,
+        "pieces": null,
+        "rowScale": null,
         "occlusion": "BEHIND_PET_OR_OPEN_ACCESSORY"
       }
     },
@@ -399,23 +463,25 @@
       },
       "wearable": {
         "asset": "/gear-style-studio/v1/diamond-hands-harness.wearable.webp",
-        "sha256": "7cea4c1d7c668b1c1d9f112b776c6844d148b4ec7ff2155a2ae3e319a74f8d10",
+        "sha256": "f7d2549f7eb836207376c64c1ec88d36195d77ba0d0220c719ff55bd27cd3b11",
         "width": 1024,
         "height": 1024,
         "rect": [
-          365,
-          469,
-          317,
-          280
+          377,
+          470,
+          291,
+          255
         ],
         "targetRect": [
-          365,
-          469,
-          317,
-          280
+          377,
+          470,
+          291,
+          255
         ],
-        "mirrorX": false,
+        "mirrorX": true,
         "rotation": 0,
+        "pieces": null,
+        "rowScale": null,
         "occlusion": "body"
       }
     },
@@ -443,23 +509,25 @@
       },
       "wearable": {
         "asset": "/gear-style-studio/v1/sleep-404-vest.wearable.webp",
-        "sha256": "d50177e58a65de07042a5a206804796a0488d4ef54469a6f5655ffa804886a0f",
+        "sha256": "24392606a9105bd6225fe20003a32fdd54ec35fc4f471eccb6abad49b5e9c8b2",
         "width": 1024,
         "height": 1024,
         "rect": [
-          365,
-          469,
-          320,
-          280
+          377,
+          470,
+          291,
+          255
         ],
         "targetRect": [
-          365,
-          469,
-          320,
-          280
+          377,
+          470,
+          291,
+          255
         ],
-        "mirrorX": false,
+        "mirrorX": true,
         "rotation": 0,
+        "pieces": null,
+        "rowScale": null,
         "occlusion": "body"
       }
     },
@@ -487,23 +555,25 @@
       },
       "wearable": {
         "asset": "/gear-style-studio/v1/hexforge-vest.wearable.webp",
-        "sha256": "cff81c8a1fc5a23639d9e658ece04a045b50e55dd7f46191e26e91a9e7e9563b",
+        "sha256": "22986289b6fd700c3ecad3ba296efefc7df2f2e15c6e1f30754ec0f6cde4389e",
         "width": 1024,
         "height": 1024,
         "rect": [
-          362,
-          469,
-          324,
-          280
+          377,
+          470,
+          291,
+          255
         ],
         "targetRect": [
-          362,
-          469,
-          324,
-          280
+          377,
+          470,
+          291,
+          255
         ],
-        "mirrorX": false,
+        "mirrorX": true,
         "rotation": 0,
+        "pieces": null,
+        "rowScale": null,
         "occlusion": "body"
       }
     },
@@ -548,6 +618,8 @@
         ],
         "mirrorX": false,
         "rotation": 0,
+        "pieces": null,
+        "rowScale": null,
         "occlusion": "BEHIND_PET_OR_OPEN_ACCESSORY"
       }
     },
@@ -592,6 +664,8 @@
         ],
         "mirrorX": false,
         "rotation": 0,
+        "pieces": null,
+        "rowScale": null,
         "occlusion": "BEHIND_PET_OR_OPEN_ACCESSORY"
       }
     },
@@ -636,6 +710,8 @@
         ],
         "mirrorX": false,
         "rotation": 0,
+        "pieces": null,
+        "rowScale": null,
         "occlusion": "BEHIND_PET_OR_OPEN_ACCESSORY"
       }
     },
@@ -680,6 +756,8 @@
         ],
         "mirrorX": false,
         "rotation": 0,
+        "pieces": null,
+        "rowScale": null,
         "occlusion": "tool"
       }
     },
@@ -724,6 +802,8 @@
         ],
         "mirrorX": false,
         "rotation": 0,
+        "pieces": null,
+        "rowScale": null,
         "occlusion": "tool"
       }
     },
@@ -768,6 +848,8 @@
         ],
         "mirrorX": false,
         "rotation": 0,
+        "pieces": null,
+        "rowScale": null,
         "occlusion": "tool"
       }
     },
@@ -812,6 +894,8 @@
         ],
         "mirrorX": false,
         "rotation": 0,
+        "pieces": null,
+        "rowScale": null,
         "occlusion": "BEHIND_PET_OR_OPEN_ACCESSORY"
       }
     },
@@ -856,6 +940,8 @@
         ],
         "mirrorX": false,
         "rotation": 0,
+        "pieces": null,
+        "rowScale": null,
         "occlusion": "BEHIND_PET_OR_OPEN_ACCESSORY"
       }
     },
@@ -900,6 +986,8 @@
         ],
         "mirrorX": false,
         "rotation": 0,
+        "pieces": null,
+        "rowScale": null,
         "occlusion": "BEHIND_PET_OR_OPEN_ACCESSORY"
       }
     },
@@ -944,6 +1032,8 @@
         ],
         "mirrorX": false,
         "rotation": 0,
+        "pieces": null,
+        "rowScale": null,
         "occlusion": "BEHIND_PET_OR_OPEN_ACCESSORY"
       }
     },
@@ -988,6 +1078,8 @@
         ],
         "mirrorX": false,
         "rotation": 0,
+        "pieces": null,
+        "rowScale": null,
         "occlusion": "BEHIND_PET_OR_OPEN_ACCESSORY"
       }
     },
@@ -1032,6 +1124,8 @@
         ],
         "mirrorX": false,
         "rotation": 0,
+        "pieces": null,
+        "rowScale": null,
         "occlusion": "BEHIND_PET_OR_OPEN_ACCESSORY"
       }
     },
@@ -1076,6 +1170,8 @@
         ],
         "mirrorX": false,
         "rotation": 0,
+        "pieces": null,
+        "rowScale": null,
         "occlusion": "BEHIND_PET_OR_OPEN_ACCESSORY"
       }
     },
@@ -1120,6 +1216,8 @@
         ],
         "mirrorX": false,
         "rotation": 0,
+        "pieces": null,
+        "rowScale": null,
         "occlusion": "BEHIND_PET_OR_OPEN_ACCESSORY"
       }
     },
@@ -1164,6 +1262,410 @@
         ],
         "mirrorX": false,
         "rotation": 0,
+        "pieces": null,
+        "rowScale": null,
+        "occlusion": "BEHIND_PET_OR_OPEN_ACCESSORY"
+      }
+    },
+    {
+      "id": "diamond-cargo-shorts",
+      "name": "Diamond Cargo Shorts",
+      "slot": "pants",
+      "theme": "degen",
+      "color": "#adf56e",
+      "description": "Pockets for the bags you refuse to sell.",
+      "status": "CANDIDATE",
+      "fitStatus": "REVIEW_REQUIRED",
+      "sourceSha256": "c4ddfe0e7c4c30a95d23429a6147c07e98af77931bb37a8439d92f8f8b67ad52",
+      "itemArt": {
+        "asset": "/gear-style-studio/v1/diamond-cargo-shorts.item.webp",
+        "sha256": "6a14c8e90a061a4e6fa5652ba720e42af47e58731e4c0ed30f3639ccad247847",
+        "width": 1024,
+        "height": 1024
+      },
+      "thumbnail": {
+        "asset": "/gear-style-studio/v1/diamond-cargo-shorts.thumb.webp",
+        "sha256": "b9341e69efa92db28acfb5dc0aa546643523943c61cfa44b88eb4fb6ef04b82d",
+        "width": 320,
+        "height": 320
+      },
+      "wearable": {
+        "asset": "/gear-style-studio/v1/diamond-cargo-shorts.wearable.webp",
+        "sha256": "b145798100455c29cc8474d9ea666456133f58d0c563e6ad1fc39dc3dcd4a5eb",
+        "width": 1024,
+        "height": 1024,
+        "rect": [
+          263,
+          657,
+          518,
+          184
+        ],
+        "targetRect": [
+          337,
+          657,
+          369,
+          184
+        ],
+        "mirrorX": false,
+        "rotation": 0,
+        "pieces": null,
+        "rowScale": [
+          {
+            "at": 0,
+            "scale": 1
+          },
+          {
+            "at": 0.42,
+            "scale": 1
+          },
+          {
+            "at": 1,
+            "scale": 1.4
+          }
+        ],
+        "occlusion": "pants"
+      }
+    },
+    {
+      "id": "night-node-joggers",
+      "name": "Night Node Joggers",
+      "slot": "pants",
+      "theme": "tech",
+      "color": "#64e6da",
+      "description": "Comfort for a 24/7 network.",
+      "status": "CANDIDATE",
+      "fitStatus": "REVIEW_REQUIRED",
+      "sourceSha256": "d8a1d4dda23fd8dd0e531ae564ba60425f853e52120dc147416c5d9448874ebd",
+      "itemArt": {
+        "asset": "/gear-style-studio/v1/night-node-joggers.item.webp",
+        "sha256": "d452bb29183c82d66f9a90ada2cb493a2a1af4975ad5b22b112aa6b297dc7d85",
+        "width": 1024,
+        "height": 1024
+      },
+      "thumbnail": {
+        "asset": "/gear-style-studio/v1/night-node-joggers.thumb.webp",
+        "sha256": "d587ace5688dee4567de95e11f87fcda6341433c9324449d3211826defcf6442",
+        "width": 320,
+        "height": 320
+      },
+      "wearable": {
+        "asset": "/gear-style-studio/v1/night-node-joggers.wearable.webp",
+        "sha256": "dfeb26c9200b76589ce2d969e64eb41a315c186013878e31747b9fe1f39fd2aa",
+        "width": 1024,
+        "height": 1024,
+        "rect": [
+          184,
+          659,
+          665,
+          249
+        ],
+        "targetRect": [
+          315,
+          659,
+          402,
+          249
+        ],
+        "mirrorX": false,
+        "rotation": 0,
+        "pieces": null,
+        "rowScale": [
+          {
+            "at": 0,
+            "scale": 1
+          },
+          {
+            "at": 0.42,
+            "scale": 1
+          },
+          {
+            "at": 1,
+            "scale": 1.65
+          }
+        ],
+        "occlusion": "pants"
+      }
+    },
+    {
+      "id": "runesmith-trousers",
+      "name": "Runesmith Trousers",
+      "slot": "pants",
+      "theme": "aetherpunk",
+      "color": "#a5a0ff",
+      "description": "Reinforced for unexpected magical incidents.",
+      "status": "CANDIDATE",
+      "fitStatus": "REVIEW_REQUIRED",
+      "sourceSha256": "d485245c08215d05419bd38e53cb1dfd737417d456263670e74460d9d3e1d496",
+      "itemArt": {
+        "asset": "/gear-style-studio/v1/runesmith-trousers.item.webp",
+        "sha256": "24a4722ac915b5399f2681e515fe1fa72d922cfca5b9cff95ce94873888d5eaa",
+        "width": 1024,
+        "height": 1024
+      },
+      "thumbnail": {
+        "asset": "/gear-style-studio/v1/runesmith-trousers.thumb.webp",
+        "sha256": "aadbc31552019a11ca863ac1cab3415a325d6401c373e19900707b4628a33450",
+        "width": 320,
+        "height": 320
+      },
+      "wearable": {
+        "asset": "/gear-style-studio/v1/runesmith-trousers.wearable.webp",
+        "sha256": "451fdb54d699c120d05b707e25ddb477197c55d823be708ca3e18a25c0be0cba",
+        "width": 1024,
+        "height": 1024,
+        "rect": [
+          187,
+          659,
+          658,
+          247
+        ],
+        "targetRect": [
+          317,
+          659,
+          398,
+          247
+        ],
+        "mirrorX": false,
+        "rotation": 0,
+        "pieces": null,
+        "rowScale": [
+          {
+            "at": 0,
+            "scale": 1
+          },
+          {
+            "at": 0.42,
+            "scale": 1
+          },
+          {
+            "at": 1,
+            "scale": 1.65
+          }
+        ],
+        "occlusion": "pants"
+      }
+    },
+    {
+      "id": "gas-boost-high-tops",
+      "name": "Gas Boost High Tops",
+      "slot": "footwear",
+      "theme": "crypto",
+      "color": "#ff9f91",
+      "description": "Fast feet. Unreasonable gas consumption.",
+      "status": "CANDIDATE",
+      "fitStatus": "REVIEW_REQUIRED",
+      "sourceSha256": "027d9871e271abce1a199beda0373543d3538e4ddd68eeedd8c466ec8994609d",
+      "itemArt": {
+        "asset": "/gear-style-studio/v1/gas-boost-high-tops.item.webp",
+        "sha256": "58274e95a368d1804743fa20325cb0361b9b4e719a12e920f036efd74a42892f",
+        "width": 1024,
+        "height": 1024
+      },
+      "thumbnail": {
+        "asset": "/gear-style-studio/v1/gas-boost-high-tops.thumb.webp",
+        "sha256": "017da18a413800bd48b32e3eda11981777b72129b0701bba07aced24582f063b",
+        "width": 320,
+        "height": 320
+      },
+      "wearable": {
+        "asset": "/gear-style-studio/v1/gas-boost-high-tops.wearable.webp",
+        "sha256": "82c283fd502238c9304757e9146853ab22880504bc384bcba21493a9b8ac57f5",
+        "width": 1024,
+        "height": 1024,
+        "rect": [
+          225,
+          799,
+          597,
+          165
+        ],
+        "targetRect": [
+          225,
+          799,
+          597,
+          165
+        ],
+        "mirrorX": false,
+        "rotation": 0,
+        "pieces": [
+          {
+            "crop": [
+              0,
+              0,
+              0.5,
+              1
+            ],
+            "rect": [
+              225,
+              799,
+              208,
+              165
+            ]
+          },
+          {
+            "crop": [
+              0.5,
+              0,
+              0.5,
+              1
+            ],
+            "rect": [
+              596,
+              799,
+              226,
+              165
+            ]
+          }
+        ],
+        "rowScale": null,
+        "occlusion": "BEHIND_PET_OR_OPEN_ACCESSORY"
+      }
+    },
+    {
+      "id": "wen-moon-slippers",
+      "name": "Wen Moon Slippers",
+      "slot": "footwear",
+      "theme": "meme",
+      "color": "#e2b5ff",
+      "description": "Still waiting for launch. At least you're comfortable.",
+      "status": "CANDIDATE",
+      "fitStatus": "REVIEW_REQUIRED",
+      "sourceSha256": "af55951e47af699b688e45c2db9d83e848d8a3be4651abd1f622be4395af5e3e",
+      "itemArt": {
+        "asset": "/gear-style-studio/v1/wen-moon-slippers.item.webp",
+        "sha256": "d8d9028cccfd6622f43c26680cfd44b60d38f4b54ee6dc9858f91e8c6f60fc71",
+        "width": 1024,
+        "height": 1024
+      },
+      "thumbnail": {
+        "asset": "/gear-style-studio/v1/wen-moon-slippers.thumb.webp",
+        "sha256": "46ce2d75f67bc6351b43643c99f9246e12a465f621b6f4ea7bb9cadfb8c31aad",
+        "width": 320,
+        "height": 320
+      },
+      "wearable": {
+        "asset": "/gear-style-studio/v1/wen-moon-slippers.wearable.webp",
+        "sha256": "c06f1900e5d896d1e28f903388d5b16771485df95404ba3445e2b5ef1580f418",
+        "width": 1024,
+        "height": 1024,
+        "rect": [
+          225,
+          821,
+          597,
+          143
+        ],
+        "targetRect": [
+          225,
+          821,
+          597,
+          143
+        ],
+        "mirrorX": false,
+        "rotation": 0,
+        "pieces": [
+          {
+            "crop": [
+              0,
+              0,
+              0.5,
+              1
+            ],
+            "rect": [
+              225,
+              821,
+              208,
+              143
+            ]
+          },
+          {
+            "crop": [
+              0.5,
+              0,
+              0.5,
+              1
+            ],
+            "rect": [
+              596,
+              821,
+              226,
+              143
+            ]
+          }
+        ],
+        "rowScale": null,
+        "occlusion": "BEHIND_PET_OR_OPEN_ACCESSORY"
+      }
+    },
+    {
+      "id": "hexstep-boots",
+      "name": "Hexstep Boots",
+      "slot": "footwear",
+      "theme": "aetherpunk",
+      "color": "#a5a0ff",
+      "description": "Leave a little magic in every footprint.",
+      "status": "CANDIDATE",
+      "fitStatus": "REVIEW_REQUIRED",
+      "sourceSha256": "1655718eef2798e49658754b9f1799fada5ebd82d4ab9de997fadd01b04db5f9",
+      "itemArt": {
+        "asset": "/gear-style-studio/v1/hexstep-boots.item.webp",
+        "sha256": "e1914ff7a30af03899d1005f8d6b8eea3b3d9de8adbb499bdc9d636fdafe0bde",
+        "width": 1024,
+        "height": 1024
+      },
+      "thumbnail": {
+        "asset": "/gear-style-studio/v1/hexstep-boots.thumb.webp",
+        "sha256": "80d22bd82481a6d0727311261e4ee0d66dc89fd952f50d840f90f31453f7527a",
+        "width": 320,
+        "height": 320
+      },
+      "wearable": {
+        "asset": "/gear-style-studio/v1/hexstep-boots.wearable.webp",
+        "sha256": "6172821697ffdedd500ad70c8ba9b4daf80c4e72e4cb11806614daf914539665",
+        "width": 1024,
+        "height": 1024,
+        "rect": [
+          225,
+          799,
+          597,
+          165
+        ],
+        "targetRect": [
+          225,
+          799,
+          597,
+          165
+        ],
+        "mirrorX": false,
+        "rotation": 0,
+        "pieces": [
+          {
+            "crop": [
+              0,
+              0,
+              0.5,
+              1
+            ],
+            "rect": [
+              225,
+              799,
+              208,
+              165
+            ]
+          },
+          {
+            "crop": [
+              0.5,
+              0,
+              0.5,
+              1
+            ],
+            "rect": [
+              596,
+              799,
+              226,
+              165
+            ]
+          }
+        ],
+        "rowScale": null,
         "occlusion": "BEHIND_PET_OR_OPEN_ACCESSORY"
       }
     }
@@ -1176,7 +1678,7 @@
       "status": "CANDIDATE",
       "lookUrl": "/gear-studio?look=look-1&lineage=emerald_sprout",
       "asset": "/gear-style-studio/v1/showcase-emerald_sprout.webp",
-      "sha256": "dd5669537b7633bf71610b48df77c76ed5d7beb7ef4726f378d423b981a80407",
+      "sha256": "87a7cab1cebcf30af669d8d63d53901ebaa48f4b976cec980f686231739866ab",
       "width": 1024,
       "height": 1024
     },
@@ -1187,7 +1689,7 @@
       "status": "CANDIDATE",
       "lookUrl": "/gear-studio?look=look-2&lineage=sapphire_tide",
       "asset": "/gear-style-studio/v1/showcase-sapphire_tide.webp",
-      "sha256": "13982b8d97ee823e9a1c66fd240f8e94c84db334683552253e175cd22e597e3e",
+      "sha256": "8693bf3e4e8f63a01cd29cbedc05f2a70338720797d9e4339537433d4d514619",
       "width": 1024,
       "height": 1024
     },
@@ -1198,7 +1700,7 @@
       "status": "CANDIDATE",
       "lookUrl": "/gear-studio?look=look-3&lineage=amethyst_dream",
       "asset": "/gear-style-studio/v1/showcase-amethyst_dream.webp",
-      "sha256": "00f2e061f08acab2ca8c2e399178a06d3148e75db49a8696f7d75e771b9c6766",
+      "sha256": "f302221f46a44110695d79cf56b0081df33e1ae98f56d7d83b41b5728c7f1749",
       "width": 1024,
       "height": 1024
     },
@@ -1209,7 +1711,7 @@
       "status": "CANDIDATE",
       "lookUrl": "/gear-studio?look=look-1&lineage=solar_peach",
       "asset": "/gear-style-studio/v1/showcase-solar_peach.webp",
-      "sha256": "8395dc2bfb6af25f3364e4f1c976e63996c6b11456e495c81c7ed8318a78b3de",
+      "sha256": "6c1382e5adbce46d7a46a9cedfe6bf86438f5718f2241526ba618dd4d4e3ebb1",
       "width": 1024,
       "height": 1024
     },
@@ -1220,7 +1722,7 @@
       "status": "CANDIDATE",
       "lookUrl": "/gear-studio?look=look-2&lineage=rose_bloom",
       "asset": "/gear-style-studio/v1/showcase-rose_bloom.webp",
-      "sha256": "68d76315783841b772cb709d4f7fa9c2d64f9d2852818f1cd7ee91cd455aecea",
+      "sha256": "c059660b541a4bde96c0f62f4690eeb8c17467332b78292bd3c610363014da65",
       "width": 1024,
       "height": 1024
     },
@@ -1231,7 +1733,7 @@
       "status": "CANDIDATE",
       "lookUrl": "/gear-studio?look=look-3&lineage=midnight_mint",
       "asset": "/gear-style-studio/v1/showcase-midnight_mint.webp",
-      "sha256": "71ae7407dbafc96042605979cb4bd3084947c34eb90585e2c151c64d39aad393",
+      "sha256": "d17178eafe344e20a982820f2d5b3edd025ce1b6c8c4698735bb3c8da9f303e1",
       "width": 1024,
       "height": 1024
     }

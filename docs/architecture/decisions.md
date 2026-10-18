@@ -43,3 +43,9 @@
 **Decision:** Keep the Style Studio collection outside canonical Gear definitions and verified inventory. Store full-frame collectible artwork separately from pose-registered wearable exports, with an explicit fixed-pose mask rig. Derive Bazaar outfit examples from the same render plan as the Studio.
 
 **Reason:** A centered standalone NFT image and a fitted Pet overlay have different geometry and occlusion needs. Baked wearable cutouts preserve the base artwork and avoid rear collars/temples crossing foreground anatomy. Candidate art review must not become ownership, stat, chain or release authority.
+
+## ADR-009 — Preview Pants/Footwear separately from the eight-slot protocol
+
+**Decision:** Add Pants and Footwear as independent candidate Studio slots, with separate left/right shoe placements, fixed-pose base-foot suppression and a stance-aware trouser projection. Keep the canonical eight-slot contract and schemas unchanged pending the versioned integration in `gear-slots-v2.md`.
+
+**Reason:** The existing Gear contract uses one-based slots 1–8 and a fixed eight-entry loadout ABI. Expanding a cosmetic preview must not silently change ownership validation, existing slot numbers or Arena stat caps.

@@ -28,5 +28,5 @@ for (const slot of catalog.slots) {
   }
   await sharp({ create: { width: 1080, height: 2328, channels: 4, background: '#121b17' } }).composite(cells).png().toFile(path.join(out, `${slot}-fit.png`));
 }
-await fs.writeFile(path.join(out, 'review.json'), JSON.stringify({ status: 'VISUAL_REVIEW_REQUIRED', revision: catalog.revision, items: catalog.items.length, singleItemLineageComposites: 144, fullOutfits: 18, artistApproval: 'PENDING' }, null, 2));
-console.log(JSON.stringify({ output: out, singleItemLineageComposites: 144, fullOutfits: 18, status: 'VISUAL_REVIEW_REQUIRED' }));
+await fs.writeFile(path.join(out, 'review.json'), JSON.stringify({ status: 'VISUAL_REVIEW_REQUIRED', revision: catalog.revision, items: catalog.items.length, singleItemLineageComposites: catalog.items.length * catalog.lineages.length, fullOutfits: 18, artistApproval: 'PENDING' }, null, 2));
+console.log(JSON.stringify({ output: out, singleItemLineageComposites: catalog.items.length * catalog.lineages.length, fullOutfits: 18, status: 'VISUAL_REVIEW_REQUIRED' }));

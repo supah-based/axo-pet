@@ -28,7 +28,7 @@ async function updateLook() {
     if (current !== revision) return;
     canvas.getContext('2d').clearRect(0, 0, 1024, 1024); canvas.getContext('2d').drawImage(next, 0, 0);
     const count = Object.values(selection).filter(Boolean).length;
-    say(`${count} / 8 pieces · ${catalog.lineages.find(item => item.id === lineage).name} AXO`);
+    say(`${count} / ${STUDIO_SLOTS.length} pieces · ${catalog.lineages.find(item => item.id === lineage).name} AXO`);
     canvas.setAttribute('aria-label', `${catalog.lineages.find(item => item.id === lineage).name} level-10 AXO wearing ${Object.values(selection).map(id => catalog.items.find(item => item.id === id)?.name).filter(Boolean).join(', ') || 'no gear'}`);
     $('save-look').disabled = false; $('expand-look').disabled = false;
   } catch (error) {

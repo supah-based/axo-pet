@@ -14,8 +14,8 @@ const canonical = JSON.parse(await fs.readFile(path.join(root, 'packages/gear-ca
 const sha = bytes => createHash('sha256').update(bytes).digest('hex');
 const assetBytes = record => fs.readFile(path.join(publicRoot, '.' + record.asset));
 
-test('candidate collection has 24 original designs, three per exact slot, without inventory or chain claims', () => {
-  assert.equal(catalog.items.length, 24); assert.equal(new Set(catalog.items.map(item => item.id)).size, 24);
+test('candidate collection has 30 original designs, three per preview slot, without inventory or chain claims', () => {
+  assert.equal(catalog.items.length, 30); assert.equal(new Set(catalog.items.map(item => item.id)).size, 30);
   assert.equal(catalog.status, 'CANDIDATE'); assert.equal(catalog.ownership, 'NONE'); assert.equal(catalog.level, 10);
   assert.equal(catalog.fitStatus, 'REVIEW_REQUIRED'); assert.deepEqual(catalog.slots, STUDIO_SLOTS);
   for (const slot of STUDIO_SLOTS) assert.equal(catalog.items.filter(item => item.slot === slot).length, 3);
@@ -29,12 +29,25 @@ test('candidate collection has 24 original designs, three per exact slot, withou
 });
 
 test('every public artifact matches its recorded hash, dimensions, alpha and safe URL', async () => {
-  for (const record of [...catalog.lineages, ...catalog.showcases, ...catalog.items.flatMap(item => [item.itemArt, item.thumbnail, item.wearable])]) {
+  for (const record of [...catalog.lineages.flatMap(base => [base, base.footwearBase]), ...catalog.showcases, ...catalog.items.flatMap(item => [item.itemArt, item.thumbnail, item.wearable])]) {
     assert.match(record.asset, /^\/gear-style-studio\/v1\/[a-z0-9_.-]+\.webp$/);
     const bytes = await assetBytes(record), meta = await sharp(bytes).metadata();
     assert.equal(sha(bytes), record.sha256, record.asset);
     assert.equal(meta.width, record.width); assert.equal(meta.height, record.height); assert.equal(meta.hasAlpha, true);
     const stats = await sharp(bytes).stats(); assert.equal(stats.channels[3].min, 0); assert.ok(stats.channels[3].max > 220);
+  }
+});
+
+test('closed footwear selects a masked base, suppressing toes while preserving the original reference', async () => {
+  for (const base of catalog.lineages) {
+    const original = await sharp(await assetBytes(base)).ensureAlpha().raw().toBuffer();
+    const masked = await sharp(await assetBytes(base.footwearBase)).ensureAlpha().raw().toBuffer();
+    for (const [x, y] of [[350, 925], [700, 925]]) {
+      assert.ok(original[(y * 1024 + x) * 4 + 3] > 200); assert.equal(masked[(y * 1024 + x) * 4 + 3], 0);
+    }
+    assert.equal(masked[(500 * 1024 + 520) * 4 + 3], original[(500 * 1024 + 520) * 4 + 3]);
+    assert.equal(buildRenderPlan(catalog, base.id, { footwear: 'hexstep-boots' }).find(layer => layer.kind === 'pet').src, base.footwearBase.asset);
+    assert.equal(buildRenderPlan(catalog, base.id, {}).find(layer => layer.kind === 'pet').src, base.asset);
   }
 });
 
@@ -75,13 +88,30 @@ test('render plan places back/ground behind the Pet and masked tools in front, w
   for (const preset of catalog.presets) {
     assert.deepEqual(Object.keys(preset.selection), STUDIO_SLOTS);
     const plan = buildRenderPlan(catalog, catalog.lineages[0].id, preset.selection);
-    assert.deepEqual(plan.map(layer => layer.slot || layer.kind), ['habitat', 'back', 'pet', 'body', 'face', 'head', 'tool', 'charm', 'companion']);
-    assert.equal(new Set(plan.map(layer => layer.id)).size, 9);
+    assert.deepEqual(plan.map(layer => layer.slot || layer.kind), ['habitat', 'back', 'pet', 'footwear', 'pants', 'body', 'face', 'head', 'tool', 'charm', 'companion']);
+    assert.equal(new Set(plan.map(layer => layer.id)).size, 11);
   }
   const invalid = { ...catalog.presets[0].selection, head: catalog.items.find(item => item.slot === 'body').id };
   assert.throws(() => buildRenderPlan(catalog, catalog.lineages[0].id, invalid), /slot/);
   assert.throws(() => buildRenderPlan(catalog, 'unknown', {}), /reference/);
   assert.throws(() => buildRenderPlan(catalog, catalog.lineages[0].id, { weapon: 'unknown' }), /slot/);
+});
+
+test('body fits are mirrored, shoes use independent feet and preview slots do not modify the canonical eight', async () => {
+  const traits = JSON.parse(await fs.readFile(path.join(root, 'packages/gear-catalog/catalogs/trait-catalog-v4.3.json')));
+  assert.deepEqual(traits.gearSlots.map(slot => slot.key), ['head', 'face', 'body', 'back', 'tool', 'charm', 'companion', 'habitat']);
+  assert.deepEqual(catalog.slotCompatibility.candidateOnlySlots, ['pants', 'footwear']);
+  for (const item of catalog.items.filter(item => item.slot === 'body')) {
+    assert.equal(item.wearable.mirrorX, true); assert.deepEqual(item.wearable.targetRect, [377, 470, 291, 255]);
+  }
+  for (const item of catalog.items.filter(item => item.slot === 'footwear')) {
+    assert.equal(item.wearable.pieces.length, 2);
+    assert.ok(item.wearable.pieces[0].rect[0] + item.wearable.pieces[0].rect[2] < item.wearable.pieces[1].rect[0]);
+    const { data, info } = await sharp(await assetBytes(item.wearable)).ensureAlpha().raw().toBuffer({ resolveWithObject: true });
+    assert.equal(data[(900 * 1024 + 512) * info.channels + 3], 0, item.id);
+    for (const [x, y] of source.items.find(input => input.id === item.id).fit.ankleOpenings) assert.equal(data[(y * 1024 + x) * info.channels + 3], 0, `${item.id}: ankle opening`);
+  }
+  for (const item of catalog.items.filter(item => item.slot === 'pants')) assert.ok(item.wearable.rowScale.at(-1).scale > 1);
 });
 
 test('bookmark URLs round-trip complete and empty looks; unknown items are rejected', () => {
@@ -114,4 +144,3 @@ test('missing images fail before any plane is drawn; deployed browser model matc
   assert.deepEqual(calls, []);
   assert.equal(sha(await fs.readFile(path.join(publicRoot, 'gear-style-studio/model.mjs'))), sha(await fs.readFile(path.join(root, 'packages/visual-engine/src/style-studio.mjs'))));
 });
-

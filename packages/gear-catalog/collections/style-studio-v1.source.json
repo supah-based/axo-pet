@@ -110,17 +110,26 @@
       "theme": "degen",
       "color": "#adf56e",
       "rect": [
-        365,
-        469,
-        317,
-        280
+        377,
+        470,
+        291,
+        255
       ],
       "description": "Conviction stitched into every strap.",
       "direction": "A sleeveless black tactical chest harness with neon lime webbing and a cyan diamond clasp, shaped EXACTLY for the reference axolotl's short round torso and three-quarter pose. Open low V-neck, no upright rear collar, large open armholes, no sleeves, hem above upper thighs. Chest front turns toward viewer RIGHT, central clasp slightly right of image center. Item only; empty transparent neck and arm holes.",
       "fit": {
-        "erase": [
-          "M458 493C495 510 570 501 605 482C599 524 605 558 619 586L604 610C583 614 563 625 544 632C530 607 513 582 498 556C482 534 469 510 458 493Z"
-        ]
+        "mirrorX": true,
+        "artMask": {
+          "viewBox": [
+            365,
+            469,
+            317,
+            280
+          ],
+          "erase": [
+            "M458 493C495 510 570 501 605 482C599 524 605 558 619 586L604 610C583 614 563 625 544 632C530 607 513 582 498 556C482 534 469 510 458 493Z"
+          ]
+        }
       }
     },
     {
@@ -130,13 +139,16 @@
       "theme": "tech",
       "color": "#64e6da",
       "rect": [
-        365,
-        469,
-        320,
-        280
+        377,
+        470,
+        291,
+        255
       ],
       "description": "Uptime: immaculate. Sleep schedule: missing.",
-      "direction": "A compact sleeveless cyber streetwear puffer vest, midnight purple nylon, cyan circuit seams, small pixel battery badge, silver zipper. Shaped exactly for short round axolotl torso, three-quarter pose facing viewer RIGHT, asymmetrical armholes, low open neckline, NO hood or upright collar, no sleeves, waist-length hem above upper thighs. No body, hands or skin; arm and neck holes truly transparent."
+      "direction": "A compact sleeveless cyber streetwear puffer vest, midnight purple nylon, cyan circuit seams, small pixel battery badge, silver zipper. Shaped exactly for short round axolotl torso, three-quarter pose facing viewer RIGHT, asymmetrical armholes, low open neckline, NO hood or upright collar, no sleeves, waist-length hem above upper thighs. No body, hands or skin; arm and neck holes truly transparent.",
+      "fit": {
+        "mirrorX": true
+      }
     },
     {
       "id": "hexforge-vest",
@@ -145,13 +157,16 @@
       "theme": "aetherpunk",
       "color": "#a5a0ff",
       "rect": [
-        362,
-        469,
-        324,
-        280
+        377,
+        470,
+        291,
+        255
       ],
       "description": "A tiny workshop's worth of questionable power.",
-      "direction": "Original painterly arcane-industrial sleeveless waistcoat, distressed oxblood leather, ornate brass fittings, asymmetrical blue crystal power cell and teal seams. Shape follows short round axolotl torso, three-quarter facing viewer RIGHT, low open neck, big empty armholes, no tall collar, no sleeves, ends at waist above thighs. No existing franchise logos, no body or skin."
+      "direction": "Original painterly arcane-industrial sleeveless waistcoat, distressed oxblood leather, ornate brass fittings, asymmetrical blue crystal power cell and teal seams. Shape follows short round axolotl torso, three-quarter facing viewer RIGHT, low open neck, big empty armholes, no tall collar, no sleeves, ends at waist above thighs. No existing franchise logos, no body or skin.",
+      "fit": {
+        "mirrorX": true
+      }
     },
     {
       "id": "cold-wallet-jetpack",
@@ -377,6 +392,294 @@
       ],
       "description": "A calm place to recharge unstable magic.",
       "direction": "Original arcane-industrial fantasy low wide oval garden pedestal, ancient brass rim, teal moss and tiny violet luminous crystals at extreme left and right, weathered dark stone central standing area, delicate blue rune inlays. Low three-quarter top-down view ellipse width four times height. No characters, no tall objects in center, no franchise logos."
+    },
+    {
+      "id": "diamond-cargo-shorts",
+      "name": "Diamond Cargo Shorts",
+      "slot": "pants",
+      "theme": "degen",
+      "color": "#adf56e",
+      "rect": [
+        337,
+        657,
+        369,
+        184
+      ],
+      "description": "Pockets for the bags you refuse to sell.",
+      "direction": "A complete pair of short black tactical cargo shorts with neon lime stitching, chunky belt and small cyan diamond buckle, puffy side pockets. Tailored for the reference's short round hips and wide stance. Three-quarter perspective toward viewer LEFT; two short leg openings diverge left and right. Empty waist and leg openings, no legs or skin.",
+      "fit": {
+        "rowScale": [
+          {
+            "at": 0,
+            "scale": 1
+          },
+          {
+            "at": 0.42,
+            "scale": 1
+          },
+          {
+            "at": 1,
+            "scale": 1.4
+          }
+        ]
+      }
+    },
+    {
+      "id": "night-node-joggers",
+      "name": "Night Node Joggers",
+      "slot": "pants",
+      "theme": "tech",
+      "color": "#64e6da",
+      "rect": [
+        315,
+        659,
+        402,
+        249
+      ],
+      "description": "Comfort for a 24/7 network.",
+      "direction": "A complete pair of short chibi streetwear jogger trousers, dark midnight-purple technical nylon, cyan circuit piping, elastic cuffs and asymmetric utility pockets, compact round hips, very short legs in a wide stance. Three-quarter perspective toward viewer LEFT, left leg angles down-left and right leg angles down-right as in reference. Empty waistband and cuffs. No body, skin, shoes or mannequin.",
+      "fit": {
+        "rowScale": [
+          {
+            "at": 0,
+            "scale": 1
+          },
+          {
+            "at": 0.42,
+            "scale": 1
+          },
+          {
+            "at": 1,
+            "scale": 1.65
+          }
+        ]
+      }
+    },
+    {
+      "id": "runesmith-trousers",
+      "name": "Runesmith Trousers",
+      "slot": "pants",
+      "theme": "aetherpunk",
+      "color": "#a5a0ff",
+      "rect": [
+        317,
+        659,
+        398,
+        247
+      ],
+      "description": "Reinforced for unexpected magical incidents.",
+      "direction": "Original arcane-industrial fantasy short chibi trousers, distressed oxblood leather, aged brass belt and knee guards, teal seams and small blue crystal fasteners. Round compact hips with very short legs in a wide stance, three-quarter facing viewer LEFT matching reference pelvis. Empty waistband and cuffs. No body parts, no shoes, no franchise logos.",
+      "fit": {
+        "rowScale": [
+          {
+            "at": 0,
+            "scale": 1
+          },
+          {
+            "at": 0.42,
+            "scale": 1
+          },
+          {
+            "at": 1,
+            "scale": 1.65
+          }
+        ]
+      }
+    },
+    {
+      "id": "gas-boost-high-tops",
+      "name": "Gas Boost High Tops",
+      "slot": "footwear",
+      "theme": "crypto",
+      "color": "#ff9f91",
+      "rect": [
+        225,
+        799,
+        597,
+        165
+      ],
+      "fit": {
+        "pieces": [
+          {
+            "crop": [
+              0,
+              0,
+              0.5,
+              1
+            ],
+            "rect": [
+              225,
+              799,
+              208,
+              165
+            ]
+          },
+          {
+            "crop": [
+              0.5,
+              0,
+              0.5,
+              1
+            ],
+            "rect": [
+              596,
+              799,
+              226,
+              165
+            ]
+          }
+        ],
+        "ankleOpenings": [
+          [
+            374,
+            818,
+            24,
+            11
+          ],
+          [
+            658,
+            818,
+            25,
+            11
+          ]
+        ],
+        "erase": [
+          "M350 818a24 11 0 1 0 48 0a24 11 0 1 0 -48 0Z",
+          "M633 818a25 11 0 1 0 50 0a25 11 0 1 0 -50 0Z"
+        ]
+      },
+      "description": "Fast feet. Unreasonable gas consumption.",
+      "direction": "ONE PAIR of chunky high-top cyber sneakers, charcoal black and hot coral, tiny transparent orange fuel cells in heels and bright cyan soles, premium playful collectible. Show both complete shoes SIDE BY SIDE with a clear transparent vertical gap at the exact center of canvas: LEFT shoe wholly in left half, pointing outward LEFT, RIGHT shoe wholly in right half pointing outward RIGHT. Three-quarter top-front view matching reference feet. Short wide shoes for broad axolotl feet, empty ankle holes. No legs, no skin, no laces joining shoes."
+    },
+    {
+      "id": "wen-moon-slippers",
+      "name": "Wen Moon Slippers",
+      "slot": "footwear",
+      "theme": "meme",
+      "color": "#e2b5ff",
+      "rect": [
+        225,
+        821,
+        597,
+        143
+      ],
+      "fit": {
+        "pieces": [
+          {
+            "crop": [
+              0,
+              0,
+              0.5,
+              1
+            ],
+            "rect": [
+              225,
+              821,
+              208,
+              143
+            ]
+          },
+          {
+            "crop": [
+              0.5,
+              0,
+              0.5,
+              1
+            ],
+            "rect": [
+              596,
+              821,
+              226,
+              143
+            ]
+          }
+        ],
+        "ankleOpenings": [
+          [
+            359,
+            846,
+            33,
+            19
+          ],
+          [
+            681,
+            846,
+            33,
+            19
+          ]
+        ],
+        "erase": [
+          "M326 846a33 19 0 1 0 66 0a33 19 0 1 0 -66 0Z",
+          "M648 846a33 19 0 1 0 66 0a33 19 0 1 0 -66 0Z"
+        ]
+      },
+      "description": "Still waiting for launch. At least you're comfortable.",
+      "direction": "ONE PAIR of funny plush silver-purple moon slippers for broad axolotl feet, sleepy crescent moon faces at toes, tiny soft gold rocket fins on heels, fluffy purple lining and squishy soles. Both complete shoes SIDE BY SIDE with a clear transparent gap at exact canvas center: LEFT slipper wholly in left half pointing outward LEFT, RIGHT slipper wholly in right half pointing outward RIGHT. Three-quarter top-front view. Empty foot openings. No feet, legs or background."
+    },
+    {
+      "id": "hexstep-boots",
+      "name": "Hexstep Boots",
+      "slot": "footwear",
+      "theme": "aetherpunk",
+      "color": "#a5a0ff",
+      "rect": [
+        225,
+        799,
+        597,
+        165
+      ],
+      "fit": {
+        "pieces": [
+          {
+            "crop": [
+              0,
+              0,
+              0.5,
+              1
+            ],
+            "rect": [
+              225,
+              799,
+              208,
+              165
+            ]
+          },
+          {
+            "crop": [
+              0.5,
+              0,
+              0.5,
+              1
+            ],
+            "rect": [
+              596,
+              799,
+              226,
+              165
+            ]
+          }
+        ],
+        "ankleOpenings": [
+          [
+            366,
+            815,
+            25,
+            11
+          ],
+          [
+            683,
+            815,
+            27,
+            11
+          ]
+        ],
+        "erase": [
+          "M341 815a25 11 0 1 0 50 0a25 11 0 1 0 -50 0Z",
+          "M656 815a27 11 0 1 0 54 0a27 11 0 1 0 -54 0Z"
+        ]
+      },
+      "description": "Leave a little magic in every footprint.",
+      "direction": "ONE PAIR of original arcane-industrial short ankle boots, aged brass segmented toe armor, oxblood leather, violet-blue crystal heel cells, teal glowing sole seams, ornate understated rune filigree. Broad tiny feet with short ankles. Show both complete boots SIDE BY SIDE with a transparent vertical gap at exact center: LEFT boot wholly in left half pointing outward LEFT, RIGHT boot wholly in right half pointing outward RIGHT. Three-quarter top-front view matching reference foot pose. Empty ankle holes, no body parts, no franchise symbols."
     }
   ]
 }

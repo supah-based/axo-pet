@@ -1,6 +1,6 @@
 # Gear Style Studio
 
-The candidate collection contains 24 original designs: three per existing Gear slot, across degen, crypto, tech, meme and original aetherpunk themes. The source preview is `/gear-studio`. The Bazaar hero, three outfit cards and six lineage examples use the same fitted renderer. Bazaar item-art links open the full-screen collectible viewer.
+The candidate collection contains 30 original designs: three per preview slot, across degen, crypto, tech, meme and original aetherpunk themes. It includes independent Pants and Footwear slots. The source preview is `/gear-studio`. The Bazaar hero, three outfit cards and six lineage examples use the same fitted renderer. Bazaar item-art links open the full-screen collectible viewer.
 
 ## Art and rendering
 
@@ -11,9 +11,11 @@ The candidate collection contains 24 original designs: three per existing Gear s
 
 Each item has a 1024-square standalone `.item.webp`, a small `.thumb.webp`, and a separate 1024-square `.wearable.webp`. Standalone art keeps the complete object and fills its own frame. Wearables use pose coordinates, selective mirroring/rotation and baked alpha cutouts. Habitat and back layers render behind the Pet. Body and tool layers protect the fixed base contours. Eyewear excludes rear parts that would otherwise cross the forehead. Full artwork does not inherit wearable cutouts.
 
-The six level-10 references are copied byte-for-byte from the existing public V5.1.1 assets and checked against the canonical catalog's runtime SHA-256. No base repainting or canonical catalog edits are involved. This fit rig supports only the fixed level-10 website pose; animation and different poses need separate rigs.
+All three body wearables are mirrored and reduced to a 291×255 target at (377,470), following user correction of the first candidate orientation. Neckline cutouts transform with the garment before the fixed anatomical masks are applied. Trousers widen gradually toward the cuffs to follow the splayed legs. Each shoe uses an independently cropped and placed projection.
 
-The new candidate plane order deliberately puts masked tools in front of the Pet so a grip can remain visible between the protected fingers. It does not change the canonical V5 renderer. The candidate collection has no token IDs, balances, stats, prices, contracts or equip authority. A bookmarked outfit is an art selection, not a verified loadout.
+The six original level-10 references are copied byte-for-byte from the existing public V5.1.1 assets and checked against the canonical catalog's runtime SHA-256. A separately hashed base projection suppresses toes when closed footwear is selected, so bare feet cannot protrude through the shoes. Barefoot looks use the unchanged original. No base repainting or canonical catalog edits are involved. This fit rig supports only the fixed level-10 website pose; animation and different poses need separate rigs.
+
+The candidate plane order is habitat, back, Pet, footwear, pants, body, face, head, tool, charm, companion. Pants cover shoe cuffs and body garments cover waistbands. Masked tools remain visible between protected fingers. This does not change the canonical V5 renderer. The candidate collection has no token IDs, balances, stats, prices, contracts or equip authority. A bookmarked outfit is an art selection, not a verified loadout. The canonical protocol still has eight slots; [the V2 proposal](architecture/gear-slots-v2.md) records the real-equipment integration needed for Pants and Footwear.
 
 ## Rebuilding and review
 
@@ -26,9 +28,9 @@ npm run test:style
 npm run check
 ```
 
-The original generated PNGs are retained in the user's workspace deliverables, outside Git. They are named by design ID. The prompt set is [style-studio-prompts.json](reviews/style-studio-prompts.json); all 24 designs used the built-in image generation tool with the canonical adult as a style/proportion reference. The committed WebP artifacts are sufficient to review and integrate the candidate UI; regeneration also requires the retained original PNGs. Do not silently regenerate released artwork.
+The original generated PNGs are retained in the user's workspace deliverables, outside Git. They are named by design ID. The prompt set is [style-studio-prompts.json](reviews/style-studio-prompts.json); all 30 designs used the built-in image generation tool with the canonical adult as a style/proportion reference. The committed WebP artifacts are sufficient to review and integrate the candidate UI; regeneration also requires the retained original PNGs. Do not silently regenerate released artwork.
 
-The review script produces 144 individual item/lineage composites and 18 complete preset outfits, with eight slot contact sheets. The visual review record is [style-studio-fit.md](reviews/style-studio-fit.md). Tests verify catalog boundaries, hashes, dimensions, alpha, protected regions, URL selection, draw order, failure behavior and Bazaar/Studio render parity. These checks do not establish artistic approval, ownership or chain validity.
+The review script produces 180 individual item/lineage composites and 18 complete preset outfits, with ten slot contact sheets. The visual review record is [style-studio-fit.md](reviews/style-studio-fit.md). Tests verify catalog boundaries, hashes, dimensions, alpha, protected regions, mirrored body fits, independent shoes, base-foot suppression, URL selection, draw order, failure behavior and Bazaar/Studio render parity. These checks do not establish artistic approval, ownership or chain validity.
 
 ## Existing live integration
 

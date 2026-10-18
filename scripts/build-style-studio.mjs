@@ -24,7 +24,8 @@ for (const [slot, paths] of Object.entries(rig.masks)) {
   allMasks[slot] = Buffer.from(`<svg width="1024" height="1024"><g fill="white">${paths.map(d => `<path d="${d}"/>`).join('')}</g></svg>`);
 }
 
-const catalog = { schema: 'AXO_GEAR_STYLE_STUDIO_V1', revision: '1.0.0-candidate', status: 'CANDIDATE', level: 10,
+const catalog = { schema: 'AXO_GEAR_STYLE_STUDIO_V1', revision: '1.1.0-candidate', status: 'CANDIDATE', level: 10,
+  slotCompatibility: { canonicalSlots: 8, candidateOnlySlots: ['pants', 'footwear'], onchainIntegration: 'REQUIRES_VERSIONED_CONTRACT_AND_SCHEMA_REVIEW' },
   fitStatus: 'REVIEW_REQUIRED', fitRigSha256: sha(Buffer.from(JSON.stringify(rig))), ownership: 'NONE',
   slots: STUDIO_SLOTS, lineages: [], presets: [], items: [] };
 const lineageIds = ['emerald_sprout', 'sapphire_tide', 'amethyst_dream', 'solar_peach', 'rose_bloom', 'midnight_mint'];
@@ -34,7 +35,9 @@ for (let i = 0; i < lineageIds.length; i++) {
   const bytes = await fs.readFile(path.join(flags.bases, name));
   const expected = canonical.bases.find(base => base.lineageKey === id && base.level === 10);
   if (!expected || sha(bytes) !== expected.runtimeSha256) throw new Error(`Canonical reference hash mismatch: ${id}`);
-  catalog.lineages.push({ id, name: names[i], ...await fileRecord(name, bytes) });
+  const footMask = Buffer.from(`<svg width="1024" height="1024"><g fill="white">${rig.masks.baseFeet.map(d => `<path d="${d}"/>`).join('')}</g></svg>`);
+  const footwearBase = await sharp(bytes).composite([{ input: footMask, blend: 'dest-out' }]).webp({ quality: 95, alphaQuality: 100 }).toBuffer();
+  catalog.lineages.push({ id, name: names[i], ...await fileRecord(name, bytes), footwearBase: await fileRecord(`pet_${id}_l10.footwear.webp`, footwearBase) });
 }
 for (const item of source.items) {
   if (!STUDIO_SLOTS.includes(item.slot) || !/^[a-z0-9-]+$/.test(item.id)) throw new Error('Unsafe design identifier.');
@@ -48,12 +51,50 @@ for (const item of source.items) {
   const fullArt = await blank().composite([{ input: itemArt, left: Math.floor((1024 - itemMeta.width) / 2), top: Math.floor((1024 - itemMeta.height) / 2) }]).webp({ quality: 95, alphaQuality: 100 }).toBuffer();
   const [left, top, width, height] = item.rect;
   if (left < 0 || top < 0 || left + width > 1024 || top + height > 1024) throw new Error(`Fit outside canvas: ${item.id}`);
-  let projection = sharp(trimmed).resize(width, height, { fit: 'fill' });
+  let resized = await sharp(trimmed).resize(width, height, { fit: 'fill' }).png().toBuffer();
+  if (item.fit?.artMask) {
+    const mask = Buffer.from(`<svg width="${width}" height="${height}" viewBox="${item.fit.artMask.viewBox.join(' ')}"><g fill="white">${item.fit.artMask.erase.map(d => `<path d="${d}"/>`).join('')}</g></svg>`);
+    resized = await sharp(resized).composite([{ input: mask, blend: 'dest-out' }]).png().toBuffer();
+  }
+  let projection = item.fit?.artMask ? sharp(resized) : sharp(trimmed).resize(width, height, { fit: 'fill' });
   if (item.fit?.mirrorX) projection = projection.flop();
   if (item.fit?.rotation) projection = projection.rotate(item.fit.rotation, { background: '#00000000' });
   const { data: projected, info: projectedInfo } = await projection.png().toBuffer({ resolveWithObject: true });
   const placedLeft = Math.round(left + (width - projectedInfo.width) / 2), placedTop = Math.round(top + (height - projectedInfo.height) / 2);
-  let wearable = await blank().composite([{ input: projected, left: placedLeft, top: placedTop }]).png().toBuffer();
+  let parts = [{ input: projected, left: placedLeft, top: placedTop }];
+  if (item.fit?.pieces) {
+    parts = [];
+    const dimensions = await sharp(trimmed).metadata();
+    for (const piece of item.fit.pieces) {
+      const [x, y, w, h] = piece.crop, [px, py, pw, ph] = piece.rect;
+      const cropLeft = Math.floor(x * dimensions.width), cropTop = Math.floor(y * dimensions.height);
+      const cropWidth = Math.min(dimensions.width - cropLeft, Math.ceil(w * dimensions.width)), cropHeight = Math.min(dimensions.height - cropTop, Math.ceil(h * dimensions.height));
+      const cropped = await sharp(trimmed).extract({ left: cropLeft, top: cropTop, width: cropWidth, height: cropHeight }).png().toBuffer();
+      const pieceBytes = await sharp(cropped).trim({ background: '#00000000', threshold: 8 }).resize(pw, ph, { fit: 'fill' }).png().toBuffer();
+      parts.push({ input: pieceBytes, left: px, top: py });
+    }
+  }
+  let wearable = await blank().composite(parts).png().toBuffer();
+  if (item.fit?.rowScale) {
+    const { data: pixels, info } = await sharp(wearable).ensureAlpha().raw().toBuffer({ resolveWithObject: true });
+    const warped = Buffer.alloc(pixels.length), center = left + width / 2;
+    const stops = item.fit.rowScale;
+    for (let y = top; y < top + height; y++) {
+      const progress = (y - top) / (height - 1);
+      const end = stops.findIndex(stop => stop.at >= progress);
+      const a = stops[Math.max(0, end - 1)], b = stops[end < 0 ? stops.length - 1 : end];
+      const mix = b.at === a.at ? 0 : (progress - a.at) / (b.at - a.at), scale = a.scale + (b.scale - a.scale) * mix;
+      for (let x = Math.max(0, Math.floor(center - width * scale / 2)); x < Math.min(1024, Math.ceil(center + width * scale / 2)); x++) {
+        const sourceX = center + (x - center) / scale, low = Math.floor(sourceX), fraction = sourceX - low;
+        if (low < left || low + 1 >= left + width) continue;
+        const first = (y * 1024 + low) * info.channels, second = first + info.channels, target = (y * 1024 + x) * info.channels;
+        const alpha = pixels[first + 3] * (1 - fraction) + pixels[second + 3] * fraction;
+        warped[target + 3] = Math.round(alpha);
+        for (let channel = 0; channel < 3; channel++) warped[target + channel] = alpha ? Math.round((pixels[first + channel] * pixels[first + 3] * (1 - fraction) + pixels[second + channel] * pixels[second + 3] * fraction) / alpha) : 0;
+      }
+    }
+    wearable = await sharp(warped, { raw: { width: 1024, height: 1024, channels: 4 } }).png().toBuffer();
+  }
   if (allMasks[item.slot]) wearable = await sharp(wearable).composite([{ input: allMasks[item.slot], blend: 'dest-out' }]).png().toBuffer();
   if (item.fit?.erase?.length) {
     const mask = Buffer.from(`<svg width="1024" height="1024"><g fill="white">${item.fit.erase.map(d => `<path d="${d}"/>`).join('')}</g></svg>`);
@@ -64,11 +105,13 @@ for (const item of source.items) {
     wearable = await sharp(wearable).composite([{ input: mask, blend: 'dest-in' }]).png().toBuffer();
   }
   wearable = await sharp(wearable).webp({ quality: 95, alphaQuality: 100 }).toBuffer();
+  const widest = Math.max(1, ...(item.fit?.rowScale || []).map(stop => stop.scale));
+  const bounds = widest > 1 ? [Math.floor(left + width * (1 - widest) / 2), top, Math.ceil(width * widest) + 1, height] : [placedLeft, placedTop, projectedInfo.width, projectedInfo.height];
   const record = { id: item.id, name: item.name, slot: item.slot, theme: item.theme, color: item.color, description: item.description,
     status: 'CANDIDATE', fitStatus: 'REVIEW_REQUIRED', sourceSha256: sha(png),
     itemArt: await fileRecord(`${item.id}.item.webp`, fullArt),
     thumbnail: await fileRecord(`${item.id}.thumb.webp`, await sharp(fullArt).resize(320).webp({ quality: 85 }).toBuffer()),
-    wearable: { ...await fileRecord(`${item.id}.wearable.webp`, wearable), rect: [placedLeft, placedTop, projectedInfo.width, projectedInfo.height], targetRect: item.rect, mirrorX: Boolean(item.fit?.mirrorX), rotation: item.fit?.rotation || 0, occlusion: allMasks[item.slot] ? item.slot : 'BEHIND_PET_OR_OPEN_ACCESSORY' } };
+    wearable: { ...await fileRecord(`${item.id}.wearable.webp`, wearable), rect: bounds, targetRect: item.rect, mirrorX: Boolean(item.fit?.mirrorX), rotation: item.fit?.rotation || 0, pieces: item.fit?.pieces || null, rowScale: item.fit?.rowScale || null, occlusion: allMasks[item.slot] ? item.slot : 'BEHIND_PET_OR_OPEN_ACCESSORY' } };
   catalog.items.push(record);
 }
 const presetNames = ['Maximum cope', 'Node after dark', 'Aether shift'];
@@ -90,7 +133,6 @@ if (flags.review) {
     layers.push({ input: await sharp(path.join(out, path.basename(item.itemArt.asset))).resize(268).toBuffer(), left: left + 6, top });
     layers.push({ input: Buffer.from(`<svg width="280" height="48"><text x="12" y="18" font-family="Arial" font-size="14" fill="#eef4e9">${item.name}</text><text x="12" y="37" font-family="Arial" font-size="11" fill="#a3b7ad">${item.slot.toUpperCase()} / ${item.theme.toUpperCase()}</text></svg>`), left, top: top + 268 });
   }
-  await sharp({ create: { width: 1680, height: 1264, channels: 4, background: '#121b1b' } }).composite(layers).png().toFile(path.join(flags.review, 'collection.png'));
+  await sharp({ create: { width: 1680, height: Math.ceil(catalog.items.length / 6) * 316, channels: 4, background: '#121b1b' } }).composite(layers).png().toFile(path.join(flags.review, 'collection.png'));
 }
 console.log(JSON.stringify({ status: 'CANDIDATE', items: catalog.items.length, lineages: catalog.lineages.length, artAndWearables: catalog.items.length * 2, out }));
-
