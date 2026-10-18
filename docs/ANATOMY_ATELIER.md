@@ -2,7 +2,7 @@
 
 The previous V1/V2 Gear fits were rejected by the operator. `/gear-studio` now opens a new, fixed-pose fitting foundation. The earlier 30 designs remain at `/gear-concepts` for design reference; their fits are not accepted. Bazaar examples use the new renderer and assets.
 
-This milestone contains one five-piece reference outfit: Degen Node Cap, Degen Shell Vest, Node Tailored Joggers, Cyan Grip Boots and a handheld tool. Three newly authored tool choices are available: Banana Market Maker, Gas Fee Guzzler and Validator Spark. It is a small reference wardrobe to review before adapting the larger design archive.
+This milestone contains nine designs and one five-piece reference outfit: Liquidity Crown (or Signal Runner Headband / Degen Node Cap), Degen Shell Vest, Node Tailored Joggers, Cyan Grip Boots and a handheld tool. Three newly authored tool choices are available: Banana Market Maker, Gas Fee Guzzler and Validator Spark. It is a small reference wardrobe to review before adapting the larger design archive.
 
 ## Pose and geometry
 
@@ -12,7 +12,7 @@ Portraits, complete item art, transparent wearables and scenes are 1024×1536 (2
 
 Tools have new, broad grips and compact heads. Their grip plane leans 18° toward the raised fingers. Its measured four-corner source grip maps to the raised palm through a projective transform, sampled by an 8×12 UV grid. This controls handle width, height and perspective together. Four matching-base finger/thumbnail regions draw above the handle. Only the upper thumb belongs to that foreground; its rounded ball stays behind the handle. All three upright tools start at the operator’s saved X −14, Y 2, scale 120% and rotation 11°, replacing the earlier banana-only values. These absolute defaults are shared by the workbench, Reset, profile export and baked Bazaar portraits; edits replace them rather than stacking another transform. The standalone tool portrait retains the complete object; it never inherits finger masks. A new pose or differently rendered hand requires a new socket and occlusion contours.
 
-Cap, crown and hood fitting guides use skull, brow, temples, chin, neck and six gill-root anchors. Hood rear and face rim are separate patterns. The renderer supports rear-headwear / Pet / front-headwear / original-gill planes. The new Degen Node Cap is the first test item: separate crown and brim cutouts fitted with one uniform scale and rotation, with the original gill projection in front. The first flattened cap projection was rejected; its replacement preserves every source proportion and attaches rigidly at the crown anchor. Its complete NFT artwork retains the full lining and brim. Crown and hood artwork remain to be authored.
+Cap, crown and hood fitting guides use skull, brow, temples, chin, neck and six gill-root anchors. Hood rear and face rim are separate patterns. The renderer supports rear-headwear / Pet / front-headwear / matching-base gill planes. Liquidity Crown, Signal Runner Headband and the replacement Degen Node Cap are pose-first fitted examples. The operator rejected the original cap and the isolated crown/headband’s high-angle ring perspective. New wearable masters were generated on the canonical head reference so fabric curvature, badge placement above the snout and brim direction follow its three-quarter camera. Only tightly traced accessory pixels are sampled; generated Pet anatomy is excluded. One rigid similarity transform preserves that painted perspective. Hidden rear material is entirely occluded and omitted from these worn meshes. The source renderer still supports explicit rear planes for future designs that need them. Complete NFT art uses separate full-object source images, retaining every part of the object. The earlier cap source remains in anatomy-headwear-rejected-v3.source.json and Git history. Hood artwork remains future work.
 
 ## Lineage appearance and scenes
 
@@ -35,13 +35,13 @@ Three separately generated opaque contexts are available: Degen Den, Tech Hatche
 Use Node 22.23.1 / npm 10.9.8 and the locked Sharp dependency. Original generated PNGs are in the operator's `gear-fit-foundation` review bundle, alongside the exact prompts. They are art authoring inputs, not production state. Runtime WebP material/cloth atlases and every baked base/fitted output are committed. Grid cells containing only negligible generated alpha noise are excluded from handheld meshes. Review composition can run from the checkout alone; full texture rebuilding requires those PNG inputs.
 
 ```sh
-node scripts/build-anatomy-studio.mjs --master <degen-master.png> --scenes <scene-art-directory> --tools <tool-art-directory> --bases <lineage-base-PNG-directory> --head <degen-node-cap.png>
+node scripts/build-anatomy-studio.mjs --master <degen-master.png> --scenes <scene-art-directory> --tools <tool-art-directory> --bases <lineage-base-PNG-directory> --headwear <headwear-PNG-directory>
 node scripts/review-anatomy-studio.mjs --out <review-directory>
 npm run test:style
 npm run check
 ```
 
-Required reviews include 42 isolated item/lineage fits, six outfits, three Pet/scene portraits, 21 Gear/scene portraits and three head pattern maps. Tests cover all 64 valid slot combinations on six lineages, immutable canonical pixels, projective grip corners, depth ordering, shared base silhouettes, baked-base selection, X/Y/rotation, source/browser parity and atomic image loading.
+Required reviews include 54 isolated item/lineage fits, six outfits, three Pet/scene portraits, 27 Gear/scene portraits and three head pattern maps. Tests cover all 128 valid slot combinations on six lineages, immutable canonical pixels, projective grip corners, depth ordering, shared base silhouettes, baked-base selection, X/Y/rotation, source/browser parity and atomic image loading.
 
 ## AXO integration boundary
 
