@@ -49,4 +49,4 @@ npm run test:contracts
 npm run test:arena
 ```
 
-See `docs/MIGRATION_PLAN.md` before moving any additional code or runtime responsibility.
+Build agents must read `HANDOFF.md` first. See `docs/MIGRATION_PLAN.md` before moving any additional code or runtime responsibility.

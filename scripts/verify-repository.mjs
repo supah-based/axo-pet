@@ -5,7 +5,7 @@ import process from 'node:process';
 const root = path.resolve(import.meta.dirname, '..');
 const failures = [];
 const required = [
-  'README.md', 'SECURITY.md', 'CONTRIBUTING.md', 'CODEOWNERS',
+  'README.md', 'HANDOFF.md', 'SECURITY.md', 'CONTRIBUTING.md', 'CODEOWNERS',
   'apps/hatchery-web', 'apps/arena-web', 'apps/pet-api',
   'packages/pet-domain', 'packages/pet-contracts', 'packages/gear-catalog',
   'packages/visual-engine', 'packages/arena-engine', 'packages/shared-schemas',

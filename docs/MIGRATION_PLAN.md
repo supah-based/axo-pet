@@ -6,7 +6,7 @@ Extract `axo.pet` into an independently reviewable repository without changing l
 
 ## Phase 0 — repository foundation
 
-- Private repository and protected `main` branch.
+- Private repository, documented CODEOWNERS/PR policy and green CI. Enforced private-branch protection remains unavailable on the current GitHub plan.
 - Package boundaries, CODEOWNERS, CI and secret/state exclusions.
 - Tested contracts and Arena source imported without deployment.
 - Canonical catalog manifests imported without the full generated image universe.
