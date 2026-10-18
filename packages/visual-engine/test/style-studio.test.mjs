@@ -163,12 +163,12 @@ test('bookmark URLs round-trip complete and empty looks; unknown items are rejec
   assert.throws(() => selectionFromURL(catalog, '?look=unknown'), /look/);
 });
 
-test('Bazaar examples use the same candidate render plan and retain complete 1024 canvases', async () => {
+test('archived outfit artifacts remain reproducible while Bazaar retires those rejected fits', async () => {
   assert.equal(catalog.showcases.length, 6);
   const html = await fs.readFile(path.join(publicRoot, 'pet-marketplace.html'), 'utf8');
   assert.doesNotMatch(html, /\/hatchery-nft-v5\/showcase_/);
   for (const showcase of catalog.showcases) {
-    assert.ok(html.includes(showcase.asset)); assert.equal(showcase.status, 'CANDIDATE');
+    assert.ok(!html.includes(showcase.asset)); assert.equal(showcase.status, 'CANDIDATE');
     const selection = selectionFromURL(catalog, new URL(showcase.lookUrl, 'https://axo.pet').search);
     assert.equal(selection.lineage, showcase.lineageId);
     const layers = await Promise.all(buildRenderPlan(catalog, selection.lineage, selection.selection).map(async layer => ({ input: await fs.readFile(path.join(publicRoot, '.' + layer.src)) })));

@@ -55,3 +55,9 @@
 **Decision:** Replace candidate flat overlays with a pose-versioned rig, item attachment origins, rear/front surfaces and lossless original-Pet arm/finger foreground projections. Require compatible pose/depth assets and preserve handheld source proportions. Expose isolated layer inspection in Style Studio.
 
 **Reason:** Scaling and isolated holes cannot place rear lining behind the wearer or make fingers wrap a tool consistently. Authored depth segmentation and anatomical anchors address these failures while retaining the source app, canonical art and ownership boundaries. New poses and art still require fitting and visual review.
+
+## ADR-011 — Fixed-pose anatomical surfaces and portrait contexts
+
+**Decision:** After operator rejection of V2 fits, make the V3 anatomy atelier the main fitting preview. Preserve the canonical adult pose at 1:1 inside a 2:3 portrait, register cloth UV surfaces to anatomical landmarks, and fit newly authored tools through four-corner palm planes with original-finger occlusion. Expose head pattern guides and exact-rig fit profiles. Bake lineage material paintings into pose-registered full base images, with matching foreground anatomy; keep scenes independent of wearables and canonical originals.
+
+**Reason:** Repeated rectangle scaling did not resolve perspective, lining and grip failures. A small reference wardrobe with explicit geometry and depth can be reviewed before extending styles. Complete lineage bases and independent scenes add visual context without changing ownership, traits, contracts or live state. See ANATOMY_ATELIER.md; visual acceptance remains pending.

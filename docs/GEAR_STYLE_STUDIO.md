@@ -1,6 +1,8 @@
-# Gear Style Studio
+# Gear Style Studio — archived designs
 
-The candidate collection contains 30 original designs: three per preview slot, across degen, crypto, tech, meme and original aetherpunk themes. It includes independent Pants and Footwear slots. The source preview is `/gear-studio`. The Bazaar hero, three outfit cards and six lineage examples use the same fitted renderer. Bazaar item-art links open the full-screen collectible viewer.
+**Superseded:** The operator rejected these fits. This collection is now at `/gear-concepts`; the current `/gear-studio` uses the [V3 anatomy atelier](ANATOMY_ATELIER.md). The following documents the historical renderer, not accepted fitting or current Bazaar examples.
+
+The candidate collection contains 30 original designs: three per preview slot, across degen, crypto, tech, meme and original aetherpunk themes. It includes independent Pants and Footwear slots. The archived preview is `/gear-concepts`. The Bazaar hero, three outfit cards and six lineage examples use the same fitted renderer. Bazaar item-art links open the full-screen collectible viewer.
 
 ## Art and rendering
 

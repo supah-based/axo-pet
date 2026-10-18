@@ -55,3 +55,6 @@
 @media(max-width:1120px){.style-piece-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.style-look{padding:12px}.style-look h3{font-size:1.06rem}}
 @media(max-width:700px){.style-look-grid{grid-template-columns:1fr}.style-look{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:8px 16px;align-items:center}.style-look img{grid-row:1/5}.style-look h3,.style-look p{margin:0}.style-look>span,.style-look h3,.style-look p,.style-look>strong{grid-column:2}.style-look>strong{font-size:.45rem}.style-piece-heading{display:block}.style-piece-heading p{margin-top:10px}.market-style-link{width:96vw}}
 @media(max-width:440px){.style-piece-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.style-look{display:block}.style-look h3{margin:12px 0 8px}.style-look p{margin-bottom:15px}}
+
+/* Anatomy-first portraits replace the rejected flat outfit examples. */
+.market-style-link{width:min(35vw,440px);margin:auto}.market-style-link img.market-key-art,.style-look img,.style-piece-grid img,.collection-carousel article>img{aspect-ratio:2/3;height:auto;object-fit:contain}.style-piece-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.style-piece-grid img{background:url('/gear-anatomy/v3/degen-den.scene.webp') center/cover}@media(max-width:700px){.market-style-link{width:min(80vw,390px)}.style-piece-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}

@@ -1,0 +1,77 @@
+{
+  "schema": "AXO_HAND_TOOL_SOURCES_V3",
+  "tools": [
+    {
+      "id": "banana-market-maker",
+      "name": "Banana Market Maker",
+      "color": "#ffe17a",
+      "grip": [
+        [
+          518,
+          930
+        ],
+        [
+          701,
+          930
+        ],
+        [
+          708,
+          1220
+        ],
+        [
+          522,
+          1220
+        ]
+      ],
+      "description": "A compact banana baton. Thick grip, angled palm socket and original fingers in front."
+    },
+    {
+      "id": "gas-fee-guzzler",
+      "name": "Gas Fee Guzzler",
+      "color": "#ffab63",
+      "grip": [
+        [
+          391,
+          850
+        ],
+        [
+          641,
+          827
+        ],
+        [
+          674,
+          1240
+        ],
+        [
+          392,
+          1240
+        ]
+      ],
+      "description": "A tiny gas-meter siphon for monumental fees. Registered to the palm in perspective."
+    },
+    {
+      "id": "validator-spark",
+      "name": "Validator Spark",
+      "color": "#bba0ff",
+      "grip": [
+        [
+          430,
+          860
+        ],
+        [
+          630,
+          860
+        ],
+        [
+          640,
+          1240
+        ],
+        [
+          424,
+          1240
+        ]
+      ],
+      "description": "An arcane validator instrument with a broad brass-ringed handle and a compact crystal crown."
+    }
+  ]
+}

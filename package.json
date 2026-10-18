@@ -21,7 +21,7 @@
     "dev": "node scripts/dev-server.mjs",
     "test:dev": "node --test tests/dev-server.test.mjs",
     "test:schemas": "npm --workspace @axo/pet-schemas test",
-    "test:style": "node --test packages/visual-engine/test/style-studio.test.mjs",
+    "test:style": "node --test packages/visual-engine/test/*.test.mjs",
     "inspect:live": "node scripts/inspect-live.mjs",
     "verify": "node scripts/verify-repository.mjs",
     "test": "node --test tests/repository.test.mjs",

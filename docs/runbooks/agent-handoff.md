@@ -6,7 +6,7 @@ Codex owns source implementation, local previews, tests and reviewable changes i
 AXO on OpenClaw owns knowledge of the current AXO host, its existing integrations and authorized live operations.
 The operator chooses what to build and authorizes production releases and onchain actions under the existing release gates.
 
-Use root `HANDOFF.md` as AXO's system guide and `docs/handoffs/AXO-001.md` as the current shared inbox/outbox.
+Use root `HANDOFF.md` as AXO's system guide and follow its current exchange link under `docs/handoffs/`. AXO-001 is the historical setup exchange.
 The operator selected GitHub Markdown file handoffs on 2026-10-18. The earlier lowercase root exchange was moved
 under docs/handoffs when AXO published HANDOFF.md, preserving both documents on Windows.
 Use GitHub PRs for source review and response updates. Keep detailed and archived handoffs in

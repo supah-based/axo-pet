@@ -10,10 +10,10 @@ const publicRoot = resolve(root, 'apps/hatchery-web/public');
 const pages = new Map([
   ['/', 'pet-home.html'], ['/my-axo', 'pet-dashboard.html'],
   ['/hatchery/game', 'hatchery-game.html'], ['/marketplace', 'pet-marketplace.html'],
-  ['/nft', 'nft.html'], ['/gear-studio', 'gear-studio.html'], ['/arena/', '../arena-web/index.html'],
+  ['/nft', 'nft.html'], ['/gear-studio', 'anatomy-studio.html'], ['/gear-concepts', 'gear-studio.html'], ['/arena/', '../arena-web/index.html'],
 ]);
 const publicFiles = new Set([
-  'pet-home', 'pet-dashboard', 'pet-marketplace', 'hatchery-game', 'nft', 'gear-studio',
+    'pet-home', 'pet-dashboard', 'pet-marketplace', 'hatchery-game', 'nft', 'gear-studio', 'anatomy-studio',
 ].flatMap(name => [`${name}.css`, `${name}.js`]));
 const inheritedStyles = new Set([
   '/axo-dark.css', '/styles.css', '/portal.css', '/pet-shell.css', '/nft-v5-runtime.css',
@@ -91,6 +91,9 @@ export function createDevServer({ liveAssets = true, fetchAsset = fetch } = {}) 
       if (/^\/gear-style-studio\/(?:model\.mjs|v1\/(?:catalog\.json|[a-z0-9_.-]+\.webp))$/.test(path)) {
         return send(req, res, 200, await readFile(resolve(publicRoot, '.' + path)), types[extname(path)]);
       }
+        if (/^\/gear-anatomy\/(?:model\.mjs|v3\/(?:catalog\.json|[a-z0-9_.-]+\.webp))$/.test(path)) {
+          return send(req, res, 200, await readFile(resolve(publicRoot, '.' + path)), types[extname(path)]);
+        }
       if (liveAssets && isPublicAsset(path)) {
         if (!cache.has(path)) {
           // Fixed-origin, GET-only asset reads. Never forward cookies, headers or query strings.
