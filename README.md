@@ -45,6 +45,8 @@ Use the existing [live Hatchery and quests](https://axo.pet/hatchery?view=quests
 `npm run inspect:live` checks the existing public overview and marketplace APIs without a wallet or database connection.
 Wallet-private quest progress and host/database diagnostics require the existing AXO interfaces requested in [AXO-002](docs/handoffs/AXO-002.md).
 
+The new `/gear-studio` source preview contains 24 candidate designs, full-screen collectible art and fitted level-10 wearables. The Bazaar examples use the same renderer. See [the collection guide](docs/GEAR_STYLE_STUDIO.md) and [AXO-003](docs/handoffs/AXO-003.md) for existing-host integration and pending art approval.
+
 Use Node **22.23.1** (`.node-version`) and npm **10.9.8**, matching CI.
 
 ```bash

@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#101715"><meta name="robots" content="noindex">
+  <title>AXO — Style Studio</title>
+  <link rel="stylesheet" href="/gear-studio.css">
+  <script type="module" src="/gear-studio.js"></script>
+</head>
+<body>
+  <a class="skip" href="#collection">Skip to collection</a>
+  <header class="site-header">
+    <a class="wordmark" href="/">AXO<span>.pet</span><i></i><small>STYLE STUDIO</small></a>
+    <nav aria-label="Main navigation"><a href="/marketplace">Bazaar ↗</a><a href="https://axo.pet/hatchery?view=pet">My Pet ↗</a></nav>
+    <span class="preview-badge"><i></i> COLLECTION PREVIEW</span>
+  </header>
+  <main>
+    <section class="intro"><div><p class="eyebrow">SMALL PET. BIG MAIN-CHARACTER ENERGY.</p><h1>Dress for the<br><em>next timeline.</em></h1></div><p class="intro-copy">Degen conviction. Midnight tech. A little unstable magic.<br>Find your signal. Make the look yours.</p></section>
+    <div class="studio-layout">
+      <section class="look-panel" aria-label="Your AXO outfit">
+        <div class="look-top"><span class="eyebrow">YOUR AXO / LVL 10</span><button class="text-button" id="expand-look" type="button" aria-label="Open outfit full screen">⤢</button></div>
+        <div class="pet-stage"><div class="orbit"></div><canvas id="pet-canvas" width="1024" height="1024" role="img" aria-label="Level-10 AXO outfit preview"></canvas><span class="stage-label">BUILT DIFFERENT.<br>DRESSED ACCORDINGLY.</span></div>
+        <p id="render-status" class="status" role="status">Opening the wardrobe…</p>
+        <div class="lineage-row"><label for="lineage">Lineage</label><select id="lineage" aria-label="Reference Pet lineage"></select><span class="level-chip">LEVEL 10</span></div>
+        <div class="equipped" id="equipped" aria-label="Current outfit"></div>
+        <div class="look-actions"><button id="shuffle" class="button primary" type="button">Surprise me <span>↗</span></button><button id="save-look" class="button secondary" type="button">Save look ↓</button><button id="clear" class="text-button" type="button">Reset</button></div>
+        <p class="preview-note">Try every design. These collection concepts aren't available to own or equip yet.</p>
+      </section>
+      <section class="collection" id="collection" aria-labelledby="collection-title">
+        <div class="collection-heading"><div><p class="eyebrow">THE FIRST DROP / 24 ORIGINAL DESIGNS</p><h2 id="collection-title">Pick your signal<span>✳</span></h2></div><span id="item-count">24 pieces</span></div>
+        <div class="preset-row"><span>START WITH A LOOK</span><div id="presets"></div></div>
+        <div class="filter-bar"><div id="slots" class="slot-tabs" role="group" aria-label="Filter by equipment slot"></div><label class="theme-label">Vibe <select id="theme"><option value="all">Every vibe</option><option value="degen">Degen</option><option value="crypto">Crypto</option><option value="tech">Tech</option><option value="aetherpunk">Aetherpunk</option><option value="meme">Meme culture</option></select></label></div>
+        <div class="gear-grid" id="gear-grid" aria-live="polite"></div>
+        <p id="empty-state" class="empty-state" hidden>No pieces in this mix yet. Try another vibe or slot.</p>
+        <div class="collection-foot"><span>FULL-FRAME COLLECTIBLES.<br>MADE-TO-FIT WEARABLES.</span><p>One item, two views. Inspect the complete artwork, then see it in scale on your AXO.</p></div>
+      </section>
+    </div>
+  </main>
+  <footer><a class="wordmark" href="/">AXO<span>.pet</span></a><p>For the chronically onchain and exceptionally well dressed.</p><a href="https://axo.pet/hatchery?view=quests">Back to the Hatchery ↗</a></footer>
+  <dialog id="art-dialog" aria-labelledby="art-title"><div class="dialog-top"><div><p id="art-kicker" class="eyebrow"></p><h2 id="art-title"></h2></div><button id="close-art" class="close-button" type="button" aria-label="Close full-screen view">✕</button></div><div class="dialog-art" id="dialog-art"></div><div class="dialog-bottom"><p id="art-description"></p><button id="art-try" class="button primary" type="button">Try this piece ↗</button></div></dialog>
+</body>
+</html>

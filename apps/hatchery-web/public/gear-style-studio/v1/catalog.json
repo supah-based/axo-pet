@@ -1,0 +1,1239 @@
+{
+  "schema": "AXO_GEAR_STYLE_STUDIO_V1",
+  "revision": "1.0.0-candidate",
+  "status": "CANDIDATE",
+  "level": 10,
+  "fitStatus": "REVIEW_REQUIRED",
+  "fitRigSha256": "f70c8908f06bf814980733dea9de44627d85b377566eb781870b4767162a4f60",
+  "ownership": "NONE",
+  "slots": [
+    "head",
+    "face",
+    "body",
+    "back",
+    "tool",
+    "charm",
+    "companion",
+    "habitat"
+  ],
+  "lineages": [
+    {
+      "id": "emerald_sprout",
+      "name": "Emerald",
+      "asset": "/gear-style-studio/v1/pet_emerald_sprout_l10.webp",
+      "sha256": "c083791ce00443556e6364d0beba03f20823e1ea392036982ae2674c98990e48",
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "id": "sapphire_tide",
+      "name": "Sapphire",
+      "asset": "/gear-style-studio/v1/pet_sapphire_tide_l10.webp",
+      "sha256": "346cc10cd4a85de49e73621a9f4a1e0a97b0b37921089685e57d339be2f7e43e",
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "id": "amethyst_dream",
+      "name": "Amethyst",
+      "asset": "/gear-style-studio/v1/pet_amethyst_dream_l10.webp",
+      "sha256": "d1a0dc337ba44628066c51c1425886ed036b695dc010ae0a5c97ca0058cc6da2",
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "id": "solar_peach",
+      "name": "Solar",
+      "asset": "/gear-style-studio/v1/pet_solar_peach_l10.webp",
+      "sha256": "4cf0ff76669518b5e853232ca18a5e9f3da6e9193c471e35161639fdb4e9e062",
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "id": "rose_bloom",
+      "name": "Rose",
+      "asset": "/gear-style-studio/v1/pet_rose_bloom_l10.webp",
+      "sha256": "6dfcef5ea13885f75254126adfa2845acf9bc8e1800f31092493aa10b86a020a",
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "id": "midnight_mint",
+      "name": "Midnight",
+      "asset": "/gear-style-studio/v1/pet_midnight_mint_l10.webp",
+      "sha256": "6e2e4b6fae39dbf2497bd49f5e32d935a4bc3330c9ed9b5dfb0eb93386a6c803",
+      "width": 1024,
+      "height": 1024
+    }
+  ],
+  "presets": [
+    {
+      "id": "look-1",
+      "name": "Maximum cope",
+      "selection": {
+        "head": "liquidation-crown",
+        "face": "wen-moon-goggles",
+        "body": "diamond-hands-harness",
+        "back": "cold-wallet-jetpack",
+        "tool": "banana-market-maker",
+        "charm": "bagholder-bag",
+        "companion": "panic-duck",
+        "habitat": "moon-landing-pad"
+      }
+    },
+    {
+      "id": "look-2",
+      "name": "Node after dark",
+      "selection": {
+        "head": "validator-halo",
+        "face": "packet-sniffer",
+        "body": "sleep-404-vest",
+        "back": "rug-pull-roll",
+        "tool": "gas-fee-guzzler",
+        "charm": "touch-grass-vial",
+        "companion": "mev-moth",
+        "habitat": "basement-lan"
+      }
+    },
+    {
+      "id": "look-3",
+      "name": "Aether shift",
+      "selection": {
+        "head": "aetherpunk-circlet",
+        "face": "copium-respirator",
+        "body": "hexforge-vest",
+        "back": "aether-reactor",
+        "tool": "exit-liquidity-trident",
+        "charm": "diamond-paws",
+        "companion": "little-rugger",
+        "habitat": "runebloom-garden"
+      }
+    }
+  ],
+  "items": [
+    {
+      "id": "liquidation-crown",
+      "name": "Liquidation Crown",
+      "slot": "head",
+      "theme": "degen",
+      "color": "#ff766a",
+      "description": "King of the wick. Absolutely no risk management.",
+      "status": "CANDIDATE",
+      "fitStatus": "REVIEW_REQUIRED",
+      "sourceSha256": "3d6cf22b687494f83ec63261d1680106fff100aa898f9fc4e0c44f2ef31a6dc8",
+      "itemArt": {
+        "asset": "/gear-style-studio/v1/liquidation-crown.item.webp",
+        "sha256": "9a969900a2153e1db7ead776b00961d6ea9ebd3f4a29cc355079d99cbb7fe71b",
+        "width": 1024,
+        "height": 1024
+      },
+      "thumbnail": {
+        "asset": "/gear-style-studio/v1/liquidation-crown.thumb.webp",
+        "sha256": "c4ecafbe7965de1a45f6cba529a5e448f5e67e68b832f3056c2484efd3841245",
+        "width": 320,
+        "height": 320
+      },
+      "wearable": {
+        "asset": "/gear-style-studio/v1/liquidation-crown.wearable.webp",
+        "sha256": "dbbcae9349f4caa504615fd93a86e18f99d97ccc6b578a64677f33f074321d47",
+        "width": 1024,
+        "height": 1024,
+        "rect": [
+          410,
+          27,
+          268,
+          160
+        ],
+        "targetRect": [
+          410,
+          27,
+          268,
+          160
+        ],
+        "mirrorX": false,
+        "rotation": 0,
+        "occlusion": "BEHIND_PET_OR_OPEN_ACCESSORY"
+      }
+    },
+    {
+      "id": "validator-halo",
+      "name": "Validator Halo",
+      "slot": "head",
+      "theme": "tech",
+      "color": "#64e6da",
+      "description": "All nodes agree: impeccable taste.",
+      "status": "CANDIDATE",
+      "fitStatus": "REVIEW_REQUIRED",
+      "sourceSha256": "b27a965473085263afa3258fe818a39af8c30cf0512623f9d99746504f17f4c0",
+      "itemArt": {
+        "asset": "/gear-style-studio/v1/validator-halo.item.webp",
+        "sha256": "f28371d245465d4d59189c038dd9cb355cbfdbae5f15d24ac9c9c9b07ef0d730",
+        "width": 1024,
+        "height": 1024
+      },
+      "thumbnail": {
+        "asset": "/gear-style-studio/v1/validator-halo.thumb.webp",
+        "sha256": "93eb9996560e4f4910659c6636e2fad8a63b8bb3463552c0218987d6fe0d549a",
+        "width": 320,
+        "height": 320
+      },
+      "wearable": {
+        "asset": "/gear-style-studio/v1/validator-halo.wearable.webp",
+        "sha256": "688186b31cc16ba3df039b0b9a6273f3cc11c9eeef71f1f2c2e1848e348dfde1",
+        "width": 1024,
+        "height": 1024,
+        "rect": [
+          376,
+          17,
+          285,
+          109
+        ],
+        "targetRect": [
+          376,
+          17,
+          285,
+          109
+        ],
+        "mirrorX": false,
+        "rotation": 0,
+        "occlusion": "BEHIND_PET_OR_OPEN_ACCESSORY"
+      }
+    },
+    {
+      "id": "aetherpunk-circlet",
+      "name": "Aetherpunk Circlet",
+      "slot": "head",
+      "theme": "aetherpunk",
+      "color": "#a5a0ff",
+      "description": "Brass, blue fire, and a little forbidden research.",
+      "status": "CANDIDATE",
+      "fitStatus": "REVIEW_REQUIRED",
+      "sourceSha256": "1ca443c4171f674e791c683edb1eee369ddc3c0095831c87d5061b5ad6d5a1e3",
+      "itemArt": {
+        "asset": "/gear-style-studio/v1/aetherpunk-circlet.item.webp",
+        "sha256": "f42a47d7c6386f4b002d6200422769373aadf9c3a87f93855666853c74f6f1bf",
+        "width": 1024,
+        "height": 1024
+      },
+      "thumbnail": {
+        "asset": "/gear-style-studio/v1/aetherpunk-circlet.thumb.webp",
+        "sha256": "7838a76e993668916701740f7c213b9c1516c3c18126017ad35e67dd889610ab",
+        "width": 320,
+        "height": 320
+      },
+      "wearable": {
+        "asset": "/gear-style-studio/v1/aetherpunk-circlet.wearable.webp",
+        "sha256": "404f4e03bfb6882d4158673aa615be8dc806d2d43caf56fc8f32bfd9d405e07b",
+        "width": 1024,
+        "height": 1024,
+        "rect": [
+          392,
+          131,
+          275,
+          150
+        ],
+        "targetRect": [
+          392,
+          131,
+          275,
+          150
+        ],
+        "mirrorX": false,
+        "rotation": 0,
+        "occlusion": "BEHIND_PET_OR_OPEN_ACCESSORY"
+      }
+    },
+    {
+      "id": "wen-moon-goggles",
+      "name": "Wen Moon Goggles",
+      "slot": "face",
+      "theme": "meme",
+      "color": "#e2b5ff",
+      "description": "Moon in both lenses. Chart still sideways.",
+      "status": "CANDIDATE",
+      "fitStatus": "REVIEW_REQUIRED",
+      "sourceSha256": "ac55756b6f4b1476df9143840daa54e9ed4d6ea222f6e946f73240955f01d250",
+      "itemArt": {
+        "asset": "/gear-style-studio/v1/wen-moon-goggles.item.webp",
+        "sha256": "55d59da7c0b1a58d975c1f370b24a9e37c7cc6594aadaf5f8f0fc90e65d88f91",
+        "width": 1024,
+        "height": 1024
+      },
+      "thumbnail": {
+        "asset": "/gear-style-studio/v1/wen-moon-goggles.thumb.webp",
+        "sha256": "9238a0b1cd3f2e00bd71151c28afeb5d8c0a83610f9c968f0c575fd2c21f20b8",
+        "width": 320,
+        "height": 320
+      },
+      "wearable": {
+        "asset": "/gear-style-studio/v1/wen-moon-goggles.wearable.webp",
+        "sha256": "7d2ccb9e89e9adb5bd34f37ce690edc08d442c291fda6e3e700ed666d0975ebc",
+        "width": 1024,
+        "height": 1024,
+        "rect": [
+          209,
+          194,
+          612,
+          251
+        ],
+        "targetRect": [
+          216,
+          219,
+          597,
+          200
+        ],
+        "mirrorX": true,
+        "rotation": 5,
+        "occlusion": "BEHIND_PET_OR_OPEN_ACCESSORY"
+      }
+    },
+    {
+      "id": "packet-sniffer",
+      "name": "Packet Sniffer",
+      "slot": "face",
+      "theme": "tech",
+      "color": "#64e6da",
+      "description": "Sees the alpha before the group chat.",
+      "status": "CANDIDATE",
+      "fitStatus": "REVIEW_REQUIRED",
+      "sourceSha256": "e6c7619bc262d191acc662a44dc135448450f0408bd972395c1a859c0aa83689",
+      "itemArt": {
+        "asset": "/gear-style-studio/v1/packet-sniffer.item.webp",
+        "sha256": "98f3b5972179ced0b12f1f511d5f66605f5bc2ce6e8712af91b6673aaa998038",
+        "width": 1024,
+        "height": 1024
+      },
+      "thumbnail": {
+        "asset": "/gear-style-studio/v1/packet-sniffer.thumb.webp",
+        "sha256": "8117c74ff164d282af6908704c80f32977b2b94b95a6680e35c4398da9d3ed93",
+        "width": 320,
+        "height": 320
+      },
+      "wearable": {
+        "asset": "/gear-style-studio/v1/packet-sniffer.wearable.webp",
+        "sha256": "6c9a5cec26bbc1efc1be536767530a2f0dcf4f4c63da49921b837d814495e16c",
+        "width": 1024,
+        "height": 1024,
+        "rect": [
+          298,
+          217,
+          449,
+          184
+        ],
+        "targetRect": [
+          298,
+          217,
+          449,
+          184
+        ],
+        "mirrorX": false,
+        "rotation": 0,
+        "occlusion": "BEHIND_PET_OR_OPEN_ACCESSORY"
+      }
+    },
+    {
+      "id": "copium-respirator",
+      "name": "Copium Respirator",
+      "slot": "face",
+      "theme": "degen",
+      "color": "#adf56e",
+      "description": "Premium-grade hopium. Refill after every candle.",
+      "status": "CANDIDATE",
+      "fitStatus": "REVIEW_REQUIRED",
+      "sourceSha256": "fe505e1fdf4b52c0d182958df62e374ff0c697ec8231fcd01913c7c623ef1a15",
+      "itemArt": {
+        "asset": "/gear-style-studio/v1/copium-respirator.item.webp",
+        "sha256": "a3f8ced7921b43f6679da7040ceac7eb256ce203ee61cc59d0f5b936db3eeae3",
+        "width": 1024,
+        "height": 1024
+      },
+      "thumbnail": {
+        "asset": "/gear-style-studio/v1/copium-respirator.thumb.webp",
+        "sha256": "ca81a4799213b7e5500871ae4127c97100f76db0872f4cca4249b09fe847868d",
+        "width": 320,
+        "height": 320
+      },
+      "wearable": {
+        "asset": "/gear-style-studio/v1/copium-respirator.wearable.webp",
+        "sha256": "47e578c44652218f683fc649a8d758fde482e90f206656b960132491aa40299b",
+        "width": 1024,
+        "height": 1024,
+        "rect": [
+          475,
+          361,
+          182,
+          100
+        ],
+        "targetRect": [
+          475,
+          361,
+          182,
+          100
+        ],
+        "mirrorX": false,
+        "rotation": 0,
+        "occlusion": "BEHIND_PET_OR_OPEN_ACCESSORY"
+      }
+    },
+    {
+      "id": "diamond-hands-harness",
+      "name": "Diamond Hands Harness",
+      "slot": "body",
+      "theme": "degen",
+      "color": "#adf56e",
+      "description": "Conviction stitched into every strap.",
+      "status": "CANDIDATE",
+      "fitStatus": "REVIEW_REQUIRED",
+      "sourceSha256": "d8254dc9c7df69dae08918dc03b307ccf78a354524c746aba24e6fb12cd81344",
+      "itemArt": {
+        "asset": "/gear-style-studio/v1/diamond-hands-harness.item.webp",
+        "sha256": "996b95bcad5ada55589a03ed543075e510a748c4dd91027d15816ca292fe5fe8",
+        "width": 1024,
+        "height": 1024
+      },
+      "thumbnail": {
+        "asset": "/gear-style-studio/v1/diamond-hands-harness.thumb.webp",
+        "sha256": "36cc0b97ccce6ce9b6ed516bbe8da184b6485eb9056addeffb9b349679644b06",
+        "width": 320,
+        "height": 320
+      },
+      "wearable": {
+        "asset": "/gear-style-studio/v1/diamond-hands-harness.wearable.webp",
+        "sha256": "7cea4c1d7c668b1c1d9f112b776c6844d148b4ec7ff2155a2ae3e319a74f8d10",
+        "width": 1024,
+        "height": 1024,
+        "rect": [
+          365,
+          469,
+          317,
+          280
+        ],
+        "targetRect": [
+          365,
+          469,
+          317,
+          280
+        ],
+        "mirrorX": false,
+        "rotation": 0,
+        "occlusion": "body"
+      }
+    },
+    {
+      "id": "sleep-404-vest",
+      "name": "404 Sleep Vest",
+      "slot": "body",
+      "theme": "tech",
+      "color": "#64e6da",
+      "description": "Uptime: immaculate. Sleep schedule: missing.",
+      "status": "CANDIDATE",
+      "fitStatus": "REVIEW_REQUIRED",
+      "sourceSha256": "f7c04576644873bb62d6ad97ab4ff8299adab9304b266b617499b5aac153abd2",
+      "itemArt": {
+        "asset": "/gear-style-studio/v1/sleep-404-vest.item.webp",
+        "sha256": "5299c2084bc1a818cc84f2062e9a3771dccda3fa74dda699bbb7f0cf764c083c",
+        "width": 1024,
+        "height": 1024
+      },
+      "thumbnail": {
+        "asset": "/gear-style-studio/v1/sleep-404-vest.thumb.webp",
+        "sha256": "273963e179d83fb5d0b0eeef3784a9206b6f0168814f10494a6dd2df42a9d3e8",
+        "width": 320,
+        "height": 320
+      },
+      "wearable": {
+        "asset": "/gear-style-studio/v1/sleep-404-vest.wearable.webp",
+        "sha256": "d50177e58a65de07042a5a206804796a0488d4ef54469a6f5655ffa804886a0f",
+        "width": 1024,
+        "height": 1024,
+        "rect": [
+          365,
+          469,
+          320,
+          280
+        ],
+        "targetRect": [
+          365,
+          469,
+          320,
+          280
+        ],
+        "mirrorX": false,
+        "rotation": 0,
+        "occlusion": "body"
+      }
+    },
+    {
+      "id": "hexforge-vest",
+      "name": "Hexforge Vest",
+      "slot": "body",
+      "theme": "aetherpunk",
+      "color": "#a5a0ff",
+      "description": "A tiny workshop's worth of questionable power.",
+      "status": "CANDIDATE",
+      "fitStatus": "REVIEW_REQUIRED",
+      "sourceSha256": "0d6eae156ae73366ad7bffa365fad69fd555a0e7d47f79c3406d9439ea11120c",
+      "itemArt": {
+        "asset": "/gear-style-studio/v1/hexforge-vest.item.webp",
+        "sha256": "d46cd209b6dbcc0a4667de2f63fec7a6307f646dc1078183ee369b186a8d9734",
+        "width": 1024,
+        "height": 1024
+      },
+      "thumbnail": {
+        "asset": "/gear-style-studio/v1/hexforge-vest.thumb.webp",
+        "sha256": "cb0e12ea90dc80e0a98d3781fe2caa2856e87c274a97c7dbda6fa78350d11479",
+        "width": 320,
+        "height": 320
+      },
+      "wearable": {
+        "asset": "/gear-style-studio/v1/hexforge-vest.wearable.webp",
+        "sha256": "cff81c8a1fc5a23639d9e658ece04a045b50e55dd7f46191e26e91a9e7e9563b",
+        "width": 1024,
+        "height": 1024,
+        "rect": [
+          362,
+          469,
+          324,
+          280
+        ],
+        "targetRect": [
+          362,
+          469,
+          324,
+          280
+        ],
+        "mirrorX": false,
+        "rotation": 0,
+        "occlusion": "body"
+      }
+    },
+    {
+      "id": "cold-wallet-jetpack",
+      "name": "Cold Wallet Jetpack",
+      "slot": "back",
+      "theme": "crypto",
+      "color": "#a7d5ff",
+      "description": "Offline keys. Extremely online propulsion.",
+      "status": "CANDIDATE",
+      "fitStatus": "REVIEW_REQUIRED",
+      "sourceSha256": "ec66c740b811567ab6841d908301891b7c7b483e8d845939b7dca1e025e5f1e3",
+      "itemArt": {
+        "asset": "/gear-style-studio/v1/cold-wallet-jetpack.item.webp",
+        "sha256": "4267ca35f77191c9866346ec0b7fce0b29aebc435caa9e499f85b180349b877a",
+        "width": 1024,
+        "height": 1024
+      },
+      "thumbnail": {
+        "asset": "/gear-style-studio/v1/cold-wallet-jetpack.thumb.webp",
+        "sha256": "5cbb685c5d0a31b9405e46cd83a540698614d6b7ed95896ea261cb888409ae5a",
+        "width": 320,
+        "height": 320
+      },
+      "wearable": {
+        "asset": "/gear-style-studio/v1/cold-wallet-jetpack.wearable.webp",
+        "sha256": "cc50b842a4250af9e846c1084ee9de106c4ee9961510be0224c6fe987779d25a",
+        "width": 1024,
+        "height": 1024,
+        "rect": [
+          247,
+          420,
+          482,
+          376
+        ],
+        "targetRect": [
+          247,
+          420,
+          482,
+          376
+        ],
+        "mirrorX": false,
+        "rotation": 0,
+        "occlusion": "BEHIND_PET_OR_OPEN_ACCESSORY"
+      }
+    },
+    {
+      "id": "rug-pull-roll",
+      "name": "Rug Pull Roll",
+      "slot": "back",
+      "theme": "meme",
+      "color": "#f2a878",
+      "description": "The only rug you should take with you.",
+      "status": "CANDIDATE",
+      "fitStatus": "REVIEW_REQUIRED",
+      "sourceSha256": "90817190a09dd3a2884bfdbcb4ed43d3e5ac46f33bf50a28ee0ec5c4f3a138e8",
+      "itemArt": {
+        "asset": "/gear-style-studio/v1/rug-pull-roll.item.webp",
+        "sha256": "4787e7b8e847c9191e7830337ed4e08859dd899e46045c817cddf8adae2f6152",
+        "width": 1024,
+        "height": 1024
+      },
+      "thumbnail": {
+        "asset": "/gear-style-studio/v1/rug-pull-roll.thumb.webp",
+        "sha256": "7adb86102c0c6539596792bc113083c73b0a70c817065b8ddc7c8ccaaeffe1d6",
+        "width": 320,
+        "height": 320
+      },
+      "wearable": {
+        "asset": "/gear-style-studio/v1/rug-pull-roll.wearable.webp",
+        "sha256": "1bfb3ecfeaac71f66599e6ffea0141961da1a1797491aef6a78fe4320b0dbb82",
+        "width": 1024,
+        "height": 1024,
+        "rect": [
+          228,
+          505,
+          498,
+          240
+        ],
+        "targetRect": [
+          228,
+          505,
+          498,
+          240
+        ],
+        "mirrorX": false,
+        "rotation": 0,
+        "occlusion": "BEHIND_PET_OR_OPEN_ACCESSORY"
+      }
+    },
+    {
+      "id": "aether-reactor",
+      "name": "Aether Reactor",
+      "slot": "back",
+      "theme": "aetherpunk",
+      "color": "#a5a0ff",
+      "description": "Probably stable. Definitely glowing.",
+      "status": "CANDIDATE",
+      "fitStatus": "REVIEW_REQUIRED",
+      "sourceSha256": "202525523512d55f935fe58f649dcd9c4344d98d5c5f5332281266b531d73f64",
+      "itemArt": {
+        "asset": "/gear-style-studio/v1/aether-reactor.item.webp",
+        "sha256": "dc66a03fabe9ea00240c2b41dbbc0d62c745e0220de4ac1b3d012f2e99732c51",
+        "width": 1024,
+        "height": 1024
+      },
+      "thumbnail": {
+        "asset": "/gear-style-studio/v1/aether-reactor.thumb.webp",
+        "sha256": "4aa70bb193a1253dff0d722668095d19e620f716c28c915c38073591bd1d3496",
+        "width": 320,
+        "height": 320
+      },
+      "wearable": {
+        "asset": "/gear-style-studio/v1/aether-reactor.wearable.webp",
+        "sha256": "5ff26bf096847917f192393b64aee31b54687567cf15d9a7497d50169202094f",
+        "width": 1024,
+        "height": 1024,
+        "rect": [
+          261,
+          399,
+          474,
+          400
+        ],
+        "targetRect": [
+          261,
+          399,
+          474,
+          400
+        ],
+        "mirrorX": false,
+        "rotation": 0,
+        "occlusion": "BEHIND_PET_OR_OPEN_ACCESSORY"
+      }
+    },
+    {
+      "id": "banana-market-maker",
+      "name": "Banana Market Maker",
+      "slot": "tool",
+      "theme": "meme",
+      "color": "#ffe48b",
+      "description": "One banana. Infinite financial advice.",
+      "status": "CANDIDATE",
+      "fitStatus": "REVIEW_REQUIRED",
+      "sourceSha256": "a44fd2bd759ff47dda906fe7859080e1f504772c9ba7db193210c48de04f0126",
+      "itemArt": {
+        "asset": "/gear-style-studio/v1/banana-market-maker.item.webp",
+        "sha256": "7f423b701fa75e1cfbeacfe341e9aecd8dac44e9b8bbd569f1c4c61197cdc537",
+        "width": 1024,
+        "height": 1024
+      },
+      "thumbnail": {
+        "asset": "/gear-style-studio/v1/banana-market-maker.thumb.webp",
+        "sha256": "a60c411717844f8f1668144322259e57f538b1be535908e18970c7b322be8e9a",
+        "width": 320,
+        "height": 320
+      },
+      "wearable": {
+        "asset": "/gear-style-studio/v1/banana-market-maker.wearable.webp",
+        "sha256": "d1f333b120e8438ad760a56a3d4a06c2b4b0d1390cf2e1372cd96db062d5a1de",
+        "width": 1024,
+        "height": 1024,
+        "rect": [
+          768,
+          300,
+          139,
+          294
+        ],
+        "targetRect": [
+          768,
+          300,
+          139,
+          294
+        ],
+        "mirrorX": false,
+        "rotation": 0,
+        "occlusion": "tool"
+      }
+    },
+    {
+      "id": "gas-fee-guzzler",
+      "name": "Gas Fee Guzzler",
+      "slot": "tool",
+      "theme": "crypto",
+      "color": "#ff9f91",
+      "description": "Runs on the fees you meant to save.",
+      "status": "CANDIDATE",
+      "fitStatus": "REVIEW_REQUIRED",
+      "sourceSha256": "4cf97e4b2c510569acf716fb409ab31e88fd02cc050d42881334183d19162d33",
+      "itemArt": {
+        "asset": "/gear-style-studio/v1/gas-fee-guzzler.item.webp",
+        "sha256": "9da74ac51bfa6d57ae3845bb703a564e376941b8d40e6b3d4040a8849d31540a",
+        "width": 1024,
+        "height": 1024
+      },
+      "thumbnail": {
+        "asset": "/gear-style-studio/v1/gas-fee-guzzler.thumb.webp",
+        "sha256": "377b7b23b20ceff976686df7dd3d8ecc4d43caeac82b52f91ac3120af224328f",
+        "width": 320,
+        "height": 320
+      },
+      "wearable": {
+        "asset": "/gear-style-studio/v1/gas-fee-guzzler.wearable.webp",
+        "sha256": "7bf9d73004a99978177cd5c228661c787a7e972ebe35d826cfc79e225c6f651c",
+        "width": 1024,
+        "height": 1024,
+        "rect": [
+          754,
+          290,
+          165,
+          292
+        ],
+        "targetRect": [
+          754,
+          290,
+          165,
+          292
+        ],
+        "mirrorX": false,
+        "rotation": 0,
+        "occlusion": "tool"
+      }
+    },
+    {
+      "id": "exit-liquidity-trident",
+      "name": "Exit Liquidity Trident",
+      "slot": "tool",
+      "theme": "aetherpunk",
+      "color": "#a5a0ff",
+      "description": "Summons liquidity. Exit route sold separately.",
+      "status": "CANDIDATE",
+      "fitStatus": "REVIEW_REQUIRED",
+      "sourceSha256": "3c48c50d48f424f037178ac1877c45c0285e2241f6835cc0dce346fd4d05ca8c",
+      "itemArt": {
+        "asset": "/gear-style-studio/v1/exit-liquidity-trident.item.webp",
+        "sha256": "0d628c0067ea46e82df7b9277b82ddc9633492fada46f74076b6e1ab006565c2",
+        "width": 1024,
+        "height": 1024
+      },
+      "thumbnail": {
+        "asset": "/gear-style-studio/v1/exit-liquidity-trident.thumb.webp",
+        "sha256": "1e7e0b930ab47accf977e2b143be660ba344f924b779f72d57eed3e835572141",
+        "width": 320,
+        "height": 320
+      },
+      "wearable": {
+        "asset": "/gear-style-studio/v1/exit-liquidity-trident.wearable.webp",
+        "sha256": "24adf1776a81ecf61d64c9caabd14e755be06994e5312f08c9f6f7c0a20c5eb9",
+        "width": 1024,
+        "height": 1024,
+        "rect": [
+          722,
+          239,
+          175,
+          348
+        ],
+        "targetRect": [
+          722,
+          239,
+          175,
+          348
+        ],
+        "mirrorX": false,
+        "rotation": 0,
+        "occlusion": "tool"
+      }
+    },
+    {
+      "id": "bagholder-bag",
+      "name": "Bagholder Bag",
+      "slot": "charm",
+      "theme": "degen",
+      "color": "#adf56e",
+      "description": "Small bag. Generational conviction.",
+      "status": "CANDIDATE",
+      "fitStatus": "REVIEW_REQUIRED",
+      "sourceSha256": "871b8770f1fb72fdde2457aecb02cfa6a9ec8604a2d3e6a1b4dae37b73ab78cd",
+      "itemArt": {
+        "asset": "/gear-style-studio/v1/bagholder-bag.item.webp",
+        "sha256": "0b9827e5cb43c8951ede320104393804a79e070c13905991bfb1544666f60dfb",
+        "width": 1024,
+        "height": 1024
+      },
+      "thumbnail": {
+        "asset": "/gear-style-studio/v1/bagholder-bag.thumb.webp",
+        "sha256": "9d9244f603a8c852dcb19a5ced632e04d29a84f53e575d15377f83637c00cdd5",
+        "width": 320,
+        "height": 320
+      },
+      "wearable": {
+        "asset": "/gear-style-studio/v1/bagholder-bag.wearable.webp",
+        "sha256": "9a0e00c2336aad8730045e254a62fcc1e32f86dc7ee6a703de273b8f43a7a613",
+        "width": 1024,
+        "height": 1024,
+        "rect": [
+          583,
+          676,
+          101,
+          119
+        ],
+        "targetRect": [
+          583,
+          676,
+          101,
+          119
+        ],
+        "mirrorX": false,
+        "rotation": 0,
+        "occlusion": "BEHIND_PET_OR_OPEN_ACCESSORY"
+      }
+    },
+    {
+      "id": "touch-grass-vial",
+      "name": "Touch Grass Vial",
+      "slot": "charm",
+      "theme": "meme",
+      "color": "#adf56e",
+      "description": "Portable proof of having been outside.",
+      "status": "CANDIDATE",
+      "fitStatus": "REVIEW_REQUIRED",
+      "sourceSha256": "03a7f6622c273bb3c83c3179b41c5b5094590aeefc2ef781dbc9eeb18e695a77",
+      "itemArt": {
+        "asset": "/gear-style-studio/v1/touch-grass-vial.item.webp",
+        "sha256": "10d5a1dc5ee1b77f6c33814c64cc1594724dbc5f6b68974d9c035d4ce3fb1b17",
+        "width": 1024,
+        "height": 1024
+      },
+      "thumbnail": {
+        "asset": "/gear-style-studio/v1/touch-grass-vial.thumb.webp",
+        "sha256": "1b4de170c71d903c521fcc2b38f66b30f3f3534ac1d4a7a0d5225be32f930b74",
+        "width": 320,
+        "height": 320
+      },
+      "wearable": {
+        "asset": "/gear-style-studio/v1/touch-grass-vial.wearable.webp",
+        "sha256": "aece0e24d11bfca87c843611b4a14a040e71a29b5d57a75e808cc354a5f34511",
+        "width": 1024,
+        "height": 1024,
+        "rect": [
+          587,
+          676,
+          91,
+          119
+        ],
+        "targetRect": [
+          587,
+          676,
+          91,
+          119
+        ],
+        "mirrorX": false,
+        "rotation": 0,
+        "occlusion": "BEHIND_PET_OR_OPEN_ACCESSORY"
+      }
+    },
+    {
+      "id": "diamond-paws",
+      "name": "Diamond Paws",
+      "slot": "charm",
+      "theme": "crypto",
+      "color": "#a7d5ff",
+      "description": "A little sparkle for unwavering paws.",
+      "status": "CANDIDATE",
+      "fitStatus": "REVIEW_REQUIRED",
+      "sourceSha256": "0c81ebf5580912a8191d14e1d4a53ffa66ad50d75bf6ded85c9261314b47dc9b",
+      "itemArt": {
+        "asset": "/gear-style-studio/v1/diamond-paws.item.webp",
+        "sha256": "6ffb4f0dc2e71e53a49566ff64f45d84fec0fedc6f7af23c7afad051981b8495",
+        "width": 1024,
+        "height": 1024
+      },
+      "thumbnail": {
+        "asset": "/gear-style-studio/v1/diamond-paws.thumb.webp",
+        "sha256": "704bec7622727ef4625f21863d0645a1258bcee0fb33b73c66554a3071a044c2",
+        "width": 320,
+        "height": 320
+      },
+      "wearable": {
+        "asset": "/gear-style-studio/v1/diamond-paws.wearable.webp",
+        "sha256": "68fc6d1d7cec6c965fa0ef8ae9474b3433566a60362364b4dfd677757b038400",
+        "width": 1024,
+        "height": 1024,
+        "rect": [
+          589,
+          682,
+          86,
+          101
+        ],
+        "targetRect": [
+          589,
+          682,
+          86,
+          101
+        ],
+        "mirrorX": false,
+        "rotation": 0,
+        "occlusion": "BEHIND_PET_OR_OPEN_ACCESSORY"
+      }
+    },
+    {
+      "id": "panic-duck",
+      "name": "Panic Duck",
+      "slot": "companion",
+      "theme": "meme",
+      "color": "#ffe48b",
+      "description": "Your emotional support circuit breaker.",
+      "status": "CANDIDATE",
+      "fitStatus": "REVIEW_REQUIRED",
+      "sourceSha256": "ebda64c8dd720e387abbe86c0b24052668a135c0d678fdf731c1c4d507563e00",
+      "itemArt": {
+        "asset": "/gear-style-studio/v1/panic-duck.item.webp",
+        "sha256": "29f8863809306aabd1c2e8781b8b2a15e9a1f0f231c6174bb4b1ae90a4d35df5",
+        "width": 1024,
+        "height": 1024
+      },
+      "thumbnail": {
+        "asset": "/gear-style-studio/v1/panic-duck.thumb.webp",
+        "sha256": "218d7e6449ff733fcc1a1f2ee1e72b698333b49c744cc683b62ca70dcd99eec0",
+        "width": 320,
+        "height": 320
+      },
+      "wearable": {
+        "asset": "/gear-style-studio/v1/panic-duck.wearable.webp",
+        "sha256": "9271b7e71795515ebc8eed0ce2246121f6df76f646e72b58326d2e9842540734",
+        "width": 1024,
+        "height": 1024,
+        "rect": [
+          765,
+          736,
+          181,
+          181
+        ],
+        "targetRect": [
+          765,
+          736,
+          181,
+          181
+        ],
+        "mirrorX": false,
+        "rotation": 0,
+        "occlusion": "BEHIND_PET_OR_OPEN_ACCESSORY"
+      }
+    },
+    {
+      "id": "mev-moth",
+      "name": "MEV Moth",
+      "slot": "companion",
+      "theme": "tech",
+      "color": "#64e6da",
+      "description": "Attracted to light. And pending transactions.",
+      "status": "CANDIDATE",
+      "fitStatus": "REVIEW_REQUIRED",
+      "sourceSha256": "9d573f4c1d2b7d95decb85a0e951433a8acdd6861816af8b96b42e539c8e547d",
+      "itemArt": {
+        "asset": "/gear-style-studio/v1/mev-moth.item.webp",
+        "sha256": "367d93d3d9eeb126b7257f0c6cf5f305b4af56e8d569b7ab4737000bb29991fc",
+        "width": 1024,
+        "height": 1024
+      },
+      "thumbnail": {
+        "asset": "/gear-style-studio/v1/mev-moth.thumb.webp",
+        "sha256": "f591a3529f4431cc0a2572f4788c193bfd9417babac857ec50a84d8ad23ff207",
+        "width": 320,
+        "height": 320
+      },
+      "wearable": {
+        "asset": "/gear-style-studio/v1/mev-moth.wearable.webp",
+        "sha256": "af90e06ed69d2108fbcd3326de4925a43d6fe71a9f8d7b8c6388aa90e3525296",
+        "width": 1024,
+        "height": 1024,
+        "rect": [
+          752,
+          668,
+          198,
+          202
+        ],
+        "targetRect": [
+          752,
+          668,
+          198,
+          202
+        ],
+        "mirrorX": false,
+        "rotation": 0,
+        "occlusion": "BEHIND_PET_OR_OPEN_ACCESSORY"
+      }
+    },
+    {
+      "id": "little-rugger",
+      "name": "Little Rugger",
+      "slot": "companion",
+      "theme": "meme",
+      "color": "#f2a878",
+      "description": "Suspiciously soft. Surprisingly loyal.",
+      "status": "CANDIDATE",
+      "fitStatus": "REVIEW_REQUIRED",
+      "sourceSha256": "1cf805e574b6500ea247a9bb189578f43b98e807ecd4f297933f3f76f34d6c24",
+      "itemArt": {
+        "asset": "/gear-style-studio/v1/little-rugger.item.webp",
+        "sha256": "4885a2f620bd5e98494a5a03753394f6794150c5eeed42859748b1061f2b8834",
+        "width": 1024,
+        "height": 1024
+      },
+      "thumbnail": {
+        "asset": "/gear-style-studio/v1/little-rugger.thumb.webp",
+        "sha256": "61e85dfe013aed7a103048b856f49bc1c96d643a567e9e560dc84b9011645cc1",
+        "width": 320,
+        "height": 320
+      },
+      "wearable": {
+        "asset": "/gear-style-studio/v1/little-rugger.wearable.webp",
+        "sha256": "24dc59cb45e7c9bdb8e3c0604e617818460e76002801fc65756df6d35a093185",
+        "width": 1024,
+        "height": 1024,
+        "rect": [
+          745,
+          788,
+          211,
+          119
+        ],
+        "targetRect": [
+          745,
+          788,
+          211,
+          119
+        ],
+        "mirrorX": false,
+        "rotation": 0,
+        "occlusion": "BEHIND_PET_OR_OPEN_ACCESSORY"
+      }
+    },
+    {
+      "id": "moon-landing-pad",
+      "name": "Moon Landing Pad",
+      "slot": "habitat",
+      "theme": "crypto",
+      "color": "#a7d5ff",
+      "description": "Reserved parking for the next cycle.",
+      "status": "CANDIDATE",
+      "fitStatus": "REVIEW_REQUIRED",
+      "sourceSha256": "423c0f41e9b8ff996055323aa55bbc7bf22a1492be61fdc1e25e64f332a2ce0f",
+      "itemArt": {
+        "asset": "/gear-style-studio/v1/moon-landing-pad.item.webp",
+        "sha256": "5880f88afd09e3bd24f1c8c1f01d67380f5bdd10b4e3bd0ebb9897c02506a7f8",
+        "width": 1024,
+        "height": 1024
+      },
+      "thumbnail": {
+        "asset": "/gear-style-studio/v1/moon-landing-pad.thumb.webp",
+        "sha256": "4d060ec692a4d59cc6a56f76e2a87557cb894696b7218a1a79b46ba62be7235e",
+        "width": 320,
+        "height": 320
+      },
+      "wearable": {
+        "asset": "/gear-style-studio/v1/moon-landing-pad.wearable.webp",
+        "sha256": "90b002928b83a0c44f6800d028f878b745e002c1084e02c30fcd2c7003247a03",
+        "width": 1024,
+        "height": 1024,
+        "rect": [
+          159,
+          839,
+          731,
+          158
+        ],
+        "targetRect": [
+          159,
+          839,
+          731,
+          158
+        ],
+        "mirrorX": false,
+        "rotation": 0,
+        "occlusion": "BEHIND_PET_OR_OPEN_ACCESSORY"
+      }
+    },
+    {
+      "id": "basement-lan",
+      "name": "Basement LAN",
+      "slot": "habitat",
+      "theme": "tech",
+      "color": "#64e6da",
+      "description": "RGB is a stat. We checked.",
+      "status": "CANDIDATE",
+      "fitStatus": "REVIEW_REQUIRED",
+      "sourceSha256": "10ea682cb90262d14ce51cf1c710aaa4f9aea6509030f4bf82ec763ef28be1c3",
+      "itemArt": {
+        "asset": "/gear-style-studio/v1/basement-lan.item.webp",
+        "sha256": "91453aa13c0b59b97269477b8fb74df2761f1e7dd1ab7cb79234aca69ab615e8",
+        "width": 1024,
+        "height": 1024
+      },
+      "thumbnail": {
+        "asset": "/gear-style-studio/v1/basement-lan.thumb.webp",
+        "sha256": "f5406542fe38d00cbb7f5c9a6fa4025317ff5096410b9222f97f5ad4aa511b1b",
+        "width": 320,
+        "height": 320
+      },
+      "wearable": {
+        "asset": "/gear-style-studio/v1/basement-lan.wearable.webp",
+        "sha256": "74a976e24a02f3b53e0a7f69aa6dfb7e71a95ebd8fcef10b46a23dc9b0603968",
+        "width": 1024,
+        "height": 1024,
+        "rect": [
+          159,
+          829,
+          731,
+          168
+        ],
+        "targetRect": [
+          159,
+          829,
+          731,
+          168
+        ],
+        "mirrorX": false,
+        "rotation": 0,
+        "occlusion": "BEHIND_PET_OR_OPEN_ACCESSORY"
+      }
+    },
+    {
+      "id": "runebloom-garden",
+      "name": "Runebloom Garden",
+      "slot": "habitat",
+      "theme": "aetherpunk",
+      "color": "#a5a0ff",
+      "description": "A calm place to recharge unstable magic.",
+      "status": "CANDIDATE",
+      "fitStatus": "REVIEW_REQUIRED",
+      "sourceSha256": "6ef9f982fbfe1e4856bcf0b5446537b4b57c79cd05c3849310391b3cf5eb52f5",
+      "itemArt": {
+        "asset": "/gear-style-studio/v1/runebloom-garden.item.webp",
+        "sha256": "4744872959d3be5c90649b716d2553f1dc8a87a6ff3bb77d0badcfcf334f1ebc",
+        "width": 1024,
+        "height": 1024
+      },
+      "thumbnail": {
+        "asset": "/gear-style-studio/v1/runebloom-garden.thumb.webp",
+        "sha256": "a75cdca6ea1fdf2b78da8df7dd76e3f7b73c4de10e3035ae81ce93db32eb68c4",
+        "width": 320,
+        "height": 320
+      },
+      "wearable": {
+        "asset": "/gear-style-studio/v1/runebloom-garden.wearable.webp",
+        "sha256": "ddf06e3a519e406d3595363c29251b496a1bf97eea299912a0e995d606f2b5e3",
+        "width": 1024,
+        "height": 1024,
+        "rect": [
+          159,
+          827,
+          731,
+          170
+        ],
+        "targetRect": [
+          159,
+          827,
+          731,
+          170
+        ],
+        "mirrorX": false,
+        "rotation": 0,
+        "occlusion": "BEHIND_PET_OR_OPEN_ACCESSORY"
+      }
+    }
+  ],
+  "showcases": [
+    {
+      "lineageId": "emerald_sprout",
+      "presetId": "look-1",
+      "name": "Maximum cope",
+      "status": "CANDIDATE",
+      "lookUrl": "/gear-studio?look=look-1&lineage=emerald_sprout",
+      "asset": "/gear-style-studio/v1/showcase-emerald_sprout.webp",
+      "sha256": "dd5669537b7633bf71610b48df77c76ed5d7beb7ef4726f378d423b981a80407",
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "lineageId": "sapphire_tide",
+      "presetId": "look-2",
+      "name": "Node after dark",
+      "status": "CANDIDATE",
+      "lookUrl": "/gear-studio?look=look-2&lineage=sapphire_tide",
+      "asset": "/gear-style-studio/v1/showcase-sapphire_tide.webp",
+      "sha256": "13982b8d97ee823e9a1c66fd240f8e94c84db334683552253e175cd22e597e3e",
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "lineageId": "amethyst_dream",
+      "presetId": "look-3",
+      "name": "Aether shift",
+      "status": "CANDIDATE",
+      "lookUrl": "/gear-studio?look=look-3&lineage=amethyst_dream",
+      "asset": "/gear-style-studio/v1/showcase-amethyst_dream.webp",
+      "sha256": "00f2e061f08acab2ca8c2e399178a06d3148e75db49a8696f7d75e771b9c6766",
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "lineageId": "solar_peach",
+      "presetId": "look-1",
+      "name": "Maximum cope",
+      "status": "CANDIDATE",
+      "lookUrl": "/gear-studio?look=look-1&lineage=solar_peach",
+      "asset": "/gear-style-studio/v1/showcase-solar_peach.webp",
+      "sha256": "8395dc2bfb6af25f3364e4f1c976e63996c6b11456e495c81c7ed8318a78b3de",
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "lineageId": "rose_bloom",
+      "presetId": "look-2",
+      "name": "Node after dark",
+      "status": "CANDIDATE",
+      "lookUrl": "/gear-studio?look=look-2&lineage=rose_bloom",
+      "asset": "/gear-style-studio/v1/showcase-rose_bloom.webp",
+      "sha256": "68d76315783841b772cb709d4f7fa9c2d64f9d2852818f1cd7ee91cd455aecea",
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "lineageId": "midnight_mint",
+      "presetId": "look-3",
+      "name": "Aether shift",
+      "status": "CANDIDATE",
+      "lookUrl": "/gear-studio?look=look-3&lineage=midnight_mint",
+      "asset": "/gear-style-studio/v1/showcase-midnight_mint.webp",
+      "sha256": "71ae7407dbafc96042605979cb4bd3084947c34eb90585e2c151c64d39aad393",
+      "width": 1024,
+      "height": 1024
+    }
+  ]
+}

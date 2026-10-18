@@ -9,9 +9,9 @@
       "theme": "degen",
       "color": "#ff766a",
       "rect": [
-        397,
-        113,
-        255,
+        410,
+        27,
+        268,
         160
       ],
       "description": "King of the wick. Absolutely no risk management.",
@@ -24,10 +24,10 @@
       "theme": "tech",
       "color": "#64e6da",
       "rect": [
-        379,
-        121,
+        376,
+        17,
         285,
-        155
+        109
       ],
       "description": "All nodes agree: impeccable taste.",
       "direction": "A futuristic floating elliptical validator halo with small luminous cyan node cubes connected around brushed titanium ring. Three-quarter ellipse tilted to follow the reference head, no head or character."
@@ -54,13 +54,18 @@
       "theme": "meme",
       "color": "#e2b5ff",
       "rect": [
-        374,
-        263,
-        332,
-        132
+        216,
+        219,
+        597,
+        200
       ],
       "description": "Moon in both lenses. Chart still sideways.",
-      "direction": "Chunky iridescent purple wraparound goggles with crescent moon reflections in both clear lenses, black chrome frame and pink rockets on the temples. Fit large widely spaced axolotl eyes. No nose, face, skin or head. Open transparent lenses."
+      "direction": "Chunky iridescent purple wraparound goggles with crescent moon reflections in both clear lenses, black chrome frame and pink rockets on the temples. Fit large widely spaced axolotl eyes. No nose, face, skin or head. Open transparent lenses.",
+      "fit": {
+        "mirrorX": true,
+        "rotation": 5,
+        "keep": "<g fill=\"white\"><ellipse cx=\"440\" cy=\"333\" rx=\"124\" ry=\"83\"/><ellipse cx=\"675\" cy=\"317\" rx=\"91\" ry=\"74\"/><path d=\"M520 285H616V350H520Z\"/></g>"
+      }
     },
     {
       "id": "packet-sniffer",
@@ -69,13 +74,19 @@
       "theme": "tech",
       "color": "#64e6da",
       "rect": [
-        378,
-        266,
-        330,
-        126
+        298,
+        217,
+        449,
+        184
       ],
       "description": "Sees the alpha before the group chat.",
-      "direction": "A sleek transparent cyan cyber visor with thin black titanium frame, tiny holographic packet marks, asymmetric side sensor. Broad visor for widely spaced axolotl eyes, lenses truly clear alpha, no face or skin."
+      "direction": "A sleek transparent cyan cyber visor with thin black titanium frame, tiny holographic packet marks, asymmetric side sensor. Broad visor for widely spaced axolotl eyes, lenses truly clear alpha, no face or skin.",
+      "fit": {
+        "erase": [
+          "M430 180H735V282H430Z",
+          "M364 246H438V282H364Z"
+        ]
+      }
     },
     {
       "id": "copium-respirator",
@@ -105,7 +116,12 @@
         280
       ],
       "description": "Conviction stitched into every strap.",
-      "direction": "A sleeveless black tactical chest harness with neon lime webbing and a cyan diamond clasp, shaped EXACTLY for the reference axolotl's short round torso and three-quarter pose. Open low V-neck, no upright rear collar, large open armholes, no sleeves, hem above upper thighs. Chest front turns toward viewer RIGHT, central clasp slightly right of image center. Item only; empty transparent neck and arm holes."
+      "direction": "A sleeveless black tactical chest harness with neon lime webbing and a cyan diamond clasp, shaped EXACTLY for the reference axolotl's short round torso and three-quarter pose. Open low V-neck, no upright rear collar, large open armholes, no sleeves, hem above upper thighs. Chest front turns toward viewer RIGHT, central clasp slightly right of image center. Item only; empty transparent neck and arm holes.",
+      "fit": {
+        "erase": [
+          "M458 493C495 510 570 501 605 482C599 524 605 558 619 586L604 610C583 614 563 625 544 632C530 607 513 582 498 556C482 534 469 510 458 493Z"
+        ]
+      }
     },
     {
       "id": "sleep-404-vest",
@@ -189,8 +205,8 @@
       "theme": "meme",
       "color": "#ffe48b",
       "rect": [
-        809,
-        335,
+        768,
+        300,
         139,
         294
       ],
@@ -204,8 +220,8 @@
       "theme": "crypto",
       "color": "#ff9f91",
       "rect": [
-        795,
-        339,
+        754,
+        290,
         165,
         292
       ],
@@ -219,8 +235,8 @@
       "theme": "aetherpunk",
       "color": "#a5a0ff",
       "rect": [
-        795,
-        285,
+        722,
+        239,
         175,
         348
       ],

@@ -12,7 +12,7 @@ async function fixture(t, options = {}) {
 
 test('source pages load while private source, state and host APIs stay unavailable', async t => {
   const origin = await fixture(t);
-  for (const path of ['/', '/my-axo', '/hatchery/game', '/nft', '/marketplace', '/arena/']) {
+  for (const path of ['/', '/my-axo', '/hatchery/game', '/nft', '/marketplace', '/gear-studio', '/arena/']) {
     const response = await fetch(origin + path);
     assert.equal(response.status, 200, path);
     assert.match(await response.text(), /AXO LOCAL SOURCE/, path);
@@ -24,6 +24,11 @@ test('source pages load while private source, state and host APIs stay unavailab
   assert.equal((await fetch(origin + '/api/axo-pet/mint', { method: 'POST' })).status, 405);
   assert.match(await (await fetch(origin + '/hatchery')).text(), /awaits extraction/);
   assert.match(await (await fetch(origin + '/assets/wallet.js')).text(), /wallet connections are unavailable/i);
+  const catalog = await fetch(origin + '/gear-style-studio/v1/catalog.json');
+  assert.equal(catalog.status, 200);
+  assert.equal((await catalog.json()).status, 'CANDIDATE');
+  assert.equal((await fetch(origin + '/gear-style-studio/model.mjs')).status, 200);
+  assert.equal((await fetch(origin + '/gear-style-studio/style-studio-v1.source.json')).status, 404);
 });
 
 test('Arena accepts only same-origin synthetic identities and retains no disk store', async t => {

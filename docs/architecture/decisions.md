@@ -37,3 +37,9 @@
 **Decision:** Publish strict, non-mutating V1 identity, Gear definition, verified projection and unavailable-result schemas from shared-schemas, with ESM/CommonJS exports and synthetic compatibility fixtures. Trusted host adapters establish authority; validation checks consistency and cannot manufacture verification.
 
 **Reason:** Metadata, website visuals and Arena must agree on one verified loadout. Keeping this first milestone additive preserves live behavior while the existing host interfaces are documented. Quests and database upgrades target existing AXO services; no parallel quest ledger is introduced.
+
+## ADR-008 — Separate collectible artwork and fitted candidate wearables
+
+**Decision:** Keep the Style Studio collection outside canonical Gear definitions and verified inventory. Store full-frame collectible artwork separately from pose-registered wearable exports, with an explicit fixed-pose mask rig. Derive Bazaar outfit examples from the same render plan as the Studio.
+
+**Reason:** A centered standalone NFT image and a fitted Pet overlay have different geometry and occlusion needs. Baked wearable cutouts preserve the base artwork and avoid rear collars/temples crossing foreground anatomy. Candidate art review must not become ownership, stat, chain or release authority.

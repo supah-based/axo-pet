@@ -21,12 +21,13 @@
     "dev": "node scripts/dev-server.mjs",
     "test:dev": "node --test tests/dev-server.test.mjs",
     "test:schemas": "npm --workspace @axo/pet-schemas test",
+    "test:style": "node --test packages/visual-engine/test/style-studio.test.mjs",
     "inspect:live": "node scripts/inspect-live.mjs",
     "verify": "node scripts/verify-repository.mjs",
     "test": "node --test tests/repository.test.mjs",
     "test:contracts": "npm --prefix packages/pet-contracts run test:contracts",
     "test:arena": "npm --prefix apps/arena-web run test:standalone",
-    "check": "npm run verify && npm test && npm run test:schemas && npm run test:contracts && npm run test:arena && npm run test:dev"
+    "check": "npm run verify && npm test && npm run test:schemas && npm run test:style && npm run test:contracts && npm run test:arena && npm run test:dev"
   },
   "devDependencies": {
     "sharp": "0.35.5"

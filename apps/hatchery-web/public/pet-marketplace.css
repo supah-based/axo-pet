@@ -35,3 +35,23 @@
 .gear-emblem[data-image=true]:before,.gear-emblem[data-image=true]:after,.listing-art[data-image=true]:before{display:none}
 .gear-emblem img,.listing-art img{display:block;width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 13px 15px rgba(0,0,0,.48))}
 .listing-art[data-image=true]{overflow:hidden}
+
+/* Candidate collection examples use the same masked wearable exports as Style Studio. */
+.market-hero:before{background:radial-gradient(ellipse at 85% 40%,rgba(100,230,218,.13),transparent 55%);opacity:1}
+.market-style-link{position:relative;z-index:3;display:block;width:min(58vw,800px);max-width:100%;border:1px solid rgba(100,230,218,.18);border-radius:23px;background:radial-gradient(ellipse at center,rgba(100,230,218,.08),transparent 70%);box-shadow:0 35px 80px #0006}
+.market-style-link img.market-key-art{display:block;width:100%;height:auto;aspect-ratio:1;object-fit:contain;padding:10px}
+.market-style-link:hover{border-color:var(--acid)}
+.style-look-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px;margin-top:32px}
+.style-look{display:block;padding:16px;border:1px solid rgba(100,230,218,.19);border-radius:14px;background:radial-gradient(ellipse at 50% 30%,rgba(100,230,218,.075),transparent 65%),#06100a;text-decoration:none;color:var(--ink);transition:border-color .15s}
+.style-look:hover{border-color:var(--acid)}
+.style-look img{display:block;width:100%;height:auto;aspect-ratio:1;object-fit:contain}
+.style-look>span{font:850 .5rem var(--mono);letter-spacing:.1em;color:var(--cyan)}
+.style-look h3{font-size:1.25rem;margin:12px 0 8px}
+.style-look p{font-size:.72rem;line-height:1.6;color:#91a697;margin:0 0 18px}
+.style-look>strong{display:block;border-top:1px solid var(--line);padding-top:13px;font:850 .5rem var(--mono);letter-spacing:.05em;color:var(--acid)}
+.style-piece-heading{display:flex;justify-content:space-between;align-items:center;gap:20px;margin:32px 0 16px}.style-piece-heading h3{font-size:1.4rem;margin:0}.style-piece-heading p{color:#91a697;font-size:.72rem;line-height:1.6;margin:0;max-width:340px}
+.style-piece-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px}.style-piece-grid>a{padding:10px;border:1px solid var(--line);border-radius:10px;text-decoration:none;background:#07130d;color:var(--ink)}.style-piece-grid>a:hover{border-color:var(--acid)}.style-piece-grid img{width:100%;height:auto;aspect-ratio:1;object-fit:contain;display:block}.style-piece-grid span{display:flex;justify-content:space-between;gap:5px;font-size:.6rem;line-height:1.5;padding-top:10px}.style-piece-grid span b{color:var(--cyan)}
+.collection-carousel article>img{object-fit:contain}.collection-try{display:inline-block;margin-top:13px;color:var(--acid);font:850 .52rem var(--mono);letter-spacing:.06em;text-decoration:none}.collection-try:hover{text-decoration:underline}
+@media(max-width:1120px){.style-piece-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.style-look{padding:12px}.style-look h3{font-size:1.06rem}}
+@media(max-width:700px){.style-look-grid{grid-template-columns:1fr}.style-look{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:8px 16px;align-items:center}.style-look img{grid-row:1/5}.style-look h3,.style-look p{margin:0}.style-look>span,.style-look h3,.style-look p,.style-look>strong{grid-column:2}.style-look>strong{font-size:.45rem}.style-piece-heading{display:block}.style-piece-heading p{margin-top:10px}.market-style-link{width:96vw}}
+@media(max-width:440px){.style-piece-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.style-look{display:block}.style-look h3{margin:12px 0 8px}.style-look p{margin-bottom:15px}}

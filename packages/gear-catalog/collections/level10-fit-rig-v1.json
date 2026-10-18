@@ -1,0 +1,19 @@
+{
+  "schema": "AXO_LEVEL10_CANDIDATE_FIT_RIG_V1",
+  "status": "REVIEW_REQUIRED",
+  "canvas": [1024, 1024],
+  "pose": "Website V5.1.1 adult, three-quarter toward viewer right, raised right-side hand",
+  "notes": "Authored contour masks for this fixed pose. Geometry is a review candidate, not an automatic fit certification. Wearable exports erase these protected base regions; original item art retains the entire object.",
+  "masks": {
+    "body": [
+      "M0 0H1024V467L947 467L940 561C907 612 858 624 800 603C742 582 694 573 675 536C662 510 646 485 616 475C560 501 480 503 415 485L354 472L0 472Z",
+      "M351 516C316 550 288 620 300 684C302 717 319 744 350 745C369 745 385 728 390 709C390 685 381 675 379 656L399 594Z"
+    ],
+    "tool": [
+      "M807 442C797 456 793 477 802 489C809 498 827 499 835 488L842 469C843 457 832 440 822 438Z",
+      "M889 439C902 435 917 451 920 464C924 477 917 491 904 492C891 492 882 479 880 467C879 455 880 447 889 439Z",
+      "M908 487C925 483 933 500 924 517C918 532 906 540 894 534C883 529 880 518 886 506Z",
+      "M865 518C877 511 893 521 893 533C894 546 884 561 871 563C858 564 850 552 850 542Z"
+    ]
+  }
+}
