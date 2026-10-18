@@ -1,0 +1,366 @@
+{
+  "schema": "AXO_GEAR_DESIGN_SOURCE_V1",
+  "status": "CANDIDATE",
+  "items": [
+    {
+      "id": "liquidation-crown",
+      "name": "Liquidation Crown",
+      "slot": "head",
+      "theme": "degen",
+      "color": "#ff766a",
+      "rect": [
+        397,
+        113,
+        255,
+        160
+      ],
+      "description": "King of the wick. Absolutely no risk management.",
+      "direction": "A playful jagged crown made of red and green candlestick-chart pillars, black titanium band, one tiny golden liquidation bell. Broad low crown, no helmet, no face."
+    },
+    {
+      "id": "validator-halo",
+      "name": "Validator Halo",
+      "slot": "head",
+      "theme": "tech",
+      "color": "#64e6da",
+      "rect": [
+        379,
+        121,
+        285,
+        155
+      ],
+      "description": "All nodes agree: impeccable taste.",
+      "direction": "A futuristic floating elliptical validator halo with small luminous cyan node cubes connected around brushed titanium ring. Three-quarter ellipse tilted to follow the reference head, no head or character."
+    },
+    {
+      "id": "aetherpunk-circlet",
+      "name": "Aetherpunk Circlet",
+      "slot": "head",
+      "theme": "aetherpunk",
+      "color": "#a5a0ff",
+      "rect": [
+        392,
+        131,
+        275,
+        150
+      ],
+      "description": "Brass, blue fire, and a little forbidden research.",
+      "direction": "Original arcane-industrial fantasy circlet: aged brass, asymmetrical violet-blue hexagonal crystal, elegant engraved filigree and tiny teal energy arcs. Broad open circlet, no helmet. Inspired by painterly prestige animation and steampunk fantasy, no existing character, logo or franchise symbol."
+    },
+    {
+      "id": "wen-moon-goggles",
+      "name": "Wen Moon Goggles",
+      "slot": "face",
+      "theme": "meme",
+      "color": "#e2b5ff",
+      "rect": [
+        374,
+        263,
+        332,
+        132
+      ],
+      "description": "Moon in both lenses. Chart still sideways.",
+      "direction": "Chunky iridescent purple wraparound goggles with crescent moon reflections in both clear lenses, black chrome frame and pink rockets on the temples. Fit large widely spaced axolotl eyes. No nose, face, skin or head. Open transparent lenses."
+    },
+    {
+      "id": "packet-sniffer",
+      "name": "Packet Sniffer",
+      "slot": "face",
+      "theme": "tech",
+      "color": "#64e6da",
+      "rect": [
+        378,
+        266,
+        330,
+        126
+      ],
+      "description": "Sees the alpha before the group chat.",
+      "direction": "A sleek transparent cyan cyber visor with thin black titanium frame, tiny holographic packet marks, asymmetric side sensor. Broad visor for widely spaced axolotl eyes, lenses truly clear alpha, no face or skin."
+    },
+    {
+      "id": "copium-respirator",
+      "name": "Copium Respirator",
+      "slot": "face",
+      "theme": "degen",
+      "color": "#adf56e",
+      "rect": [
+        475,
+        361,
+        182,
+        100
+      ],
+      "description": "Premium-grade hopium. Refill after every candle.",
+      "direction": "Funny compact lime-green and black double-canister respirator, transparent central chamber with soft pale green vapor, tiny heart-shaped pressure gauge. Designed to cover only the little axolotl mouth below the eyes. No face, skin, neck or straps stretching beyond item."
+    },
+    {
+      "id": "diamond-hands-harness",
+      "name": "Diamond Hands Harness",
+      "slot": "body",
+      "theme": "degen",
+      "color": "#adf56e",
+      "rect": [
+        365,
+        469,
+        317,
+        280
+      ],
+      "description": "Conviction stitched into every strap.",
+      "direction": "A sleeveless black tactical chest harness with neon lime webbing and a cyan diamond clasp, shaped EXACTLY for the reference axolotl's short round torso and three-quarter pose. Open low V-neck, no upright rear collar, large open armholes, no sleeves, hem above upper thighs. Chest front turns toward viewer RIGHT, central clasp slightly right of image center. Item only; empty transparent neck and arm holes."
+    },
+    {
+      "id": "sleep-404-vest",
+      "name": "404 Sleep Vest",
+      "slot": "body",
+      "theme": "tech",
+      "color": "#64e6da",
+      "rect": [
+        365,
+        469,
+        320,
+        280
+      ],
+      "description": "Uptime: immaculate. Sleep schedule: missing.",
+      "direction": "A compact sleeveless cyber streetwear puffer vest, midnight purple nylon, cyan circuit seams, small pixel battery badge, silver zipper. Shaped exactly for short round axolotl torso, three-quarter pose facing viewer RIGHT, asymmetrical armholes, low open neckline, NO hood or upright collar, no sleeves, waist-length hem above upper thighs. No body, hands or skin; arm and neck holes truly transparent."
+    },
+    {
+      "id": "hexforge-vest",
+      "name": "Hexforge Vest",
+      "slot": "body",
+      "theme": "aetherpunk",
+      "color": "#a5a0ff",
+      "rect": [
+        362,
+        469,
+        324,
+        280
+      ],
+      "description": "A tiny workshop's worth of questionable power.",
+      "direction": "Original painterly arcane-industrial sleeveless waistcoat, distressed oxblood leather, ornate brass fittings, asymmetrical blue crystal power cell and teal seams. Shape follows short round axolotl torso, three-quarter facing viewer RIGHT, low open neck, big empty armholes, no tall collar, no sleeves, ends at waist above thighs. No existing franchise logos, no body or skin."
+    },
+    {
+      "id": "cold-wallet-jetpack",
+      "name": "Cold Wallet Jetpack",
+      "slot": "back",
+      "theme": "crypto",
+      "color": "#a7d5ff",
+      "rect": [
+        247,
+        420,
+        482,
+        376
+      ],
+      "description": "Offline keys. Extremely online propulsion.",
+      "direction": "Whimsical cold-storage jetpack with two chunky icy cyan rocket pods extending out to the sides, frosted black metal vault in center, tiny hardware-wallet clasp, crystalline blue exhaust. Designed for a small round axolotl back, wide silhouette visible around body. Three-quarter facing viewer RIGHT. No wearer."
+    },
+    {
+      "id": "rug-pull-roll",
+      "name": "Rug Pull Roll",
+      "slot": "back",
+      "theme": "meme",
+      "color": "#f2a878",
+      "rect": [
+        228,
+        505,
+        498,
+        240
+      ],
+      "description": "The only rug you should take with you.",
+      "direction": "A hilariously luxurious rolled Persian rug backpack, deep magenta and emerald geometric weave, oversized gold tassels at both ends, dark leather straps. Wide horizontal cylinder three-quarter view with a visible rolled spiral at the LEFT end, compact center mount. No character, body or written words."
+    },
+    {
+      "id": "aether-reactor",
+      "name": "Aether Reactor",
+      "slot": "back",
+      "theme": "aetherpunk",
+      "color": "#a5a0ff",
+      "rect": [
+        261,
+        399,
+        474,
+        400
+      ],
+      "description": "Probably stable. Definitely glowing.",
+      "direction": "Original arcane-industrial mechanical backpack with two curved brass fins sweeping out to sides, central glowing blue crystal reactor, violet vapor contained in glass tubes, hammered bronze and engraved filigree. Wide short silhouette for round axolotl back, three-quarter facing viewer RIGHT. No wearer, no franchise logos."
+    },
+    {
+      "id": "banana-market-maker",
+      "name": "Banana Market Maker",
+      "slot": "tool",
+      "theme": "meme",
+      "color": "#ffe48b",
+      "rect": [
+        809,
+        335,
+        139,
+        294
+      ],
+      "description": "One banana. Infinite financial advice.",
+      "direction": "A single curved golden banana used as a ridiculous royal trading scepter, dark chrome short grip at lower center, tiny diamond charm dangling from tip, black/yellow futuristic detailing. Vertical item, grip at 70 percent of item height, three-quarter angled slightly toward viewer LEFT. No hands or character."
+    },
+    {
+      "id": "gas-fee-guzzler",
+      "name": "Gas Fee Guzzler",
+      "slot": "tool",
+      "theme": "crypto",
+      "color": "#ff9f91",
+      "rect": [
+        795,
+        339,
+        165,
+        292
+      ],
+      "description": "Runs on the fees you meant to save.",
+      "direction": "A whimsical futuristic gas-pump nozzle raygun with a tiny transparent orange fuel canister, iridescent steel, hot coral lights, little exhaust pipe. Vertical handheld silhouette, clear narrow grip 70 percent down, barrel points upward-left. No hand, no character, no text."
+    },
+    {
+      "id": "exit-liquidity-trident",
+      "name": "Exit Liquidity Trident",
+      "slot": "tool",
+      "theme": "aetherpunk",
+      "color": "#a5a0ff",
+      "rect": [
+        795,
+        285,
+        175,
+        348
+      ],
+      "description": "Summons liquidity. Exit route sold separately.",
+      "direction": "An elegant original fantasy trident wand of dark brass, three jagged violet-blue crystal prongs, contained turquoise liquid core, engraved arcane metalwork. Short polearm for a tiny axolotl, narrow dark grip 75 percent down, points upward, three-quarter facing viewer LEFT. No hands or wearer."
+    },
+    {
+      "id": "bagholder-bag",
+      "name": "Bagholder Bag",
+      "slot": "charm",
+      "theme": "degen",
+      "color": "#adf56e",
+      "rect": [
+        583,
+        676,
+        101,
+        119
+      ],
+      "description": "Small bag. Generational conviction.",
+      "direction": "A tiny adorable emerald leather drawstring money bag charm, oversized gold clip, stitched declining red chart icon, one little diamond poking out, funny premium game loot collectible. Three-quarter view, no words, no character."
+    },
+    {
+      "id": "touch-grass-vial",
+      "name": "Touch Grass Vial",
+      "slot": "charm",
+      "theme": "meme",
+      "color": "#adf56e",
+      "rect": [
+        587,
+        676,
+        91,
+        119
+      ],
+      "description": "Portable proof of having been outside.",
+      "direction": "A miniature clear glass capsule keychain containing a lush tuft of real bright grass and tiny earth clod, brass screw-cap and carabiner, a single tiny daisy, whimsical premium collectible. Three-quarter view, no text, no hands."
+    },
+    {
+      "id": "diamond-paws",
+      "name": "Diamond Paws",
+      "slot": "charm",
+      "theme": "crypto",
+      "color": "#a7d5ff",
+      "rect": [
+        589,
+        682,
+        86,
+        101
+      ],
+      "description": "A little sparkle for unwavering paws.",
+      "direction": "A luxurious faceted icy blue diamond paw-shaped pendant, tiny platinum chain and dark metal belt clip, subtle cyan glow, physically rendered collectible jewelry. Three-quarter view, no hands, no body, no text."
+    },
+    {
+      "id": "panic-duck",
+      "name": "Panic Duck",
+      "slot": "companion",
+      "theme": "meme",
+      "color": "#ffe48b",
+      "rect": [
+        765,
+        736,
+        181,
+        181
+      ],
+      "description": "Your emotional support circuit breaker.",
+      "direction": "An adorable little yellow rubber duck robot companion with oversized red emergency beacon on head, black tiny mechanical flippers, worried wide eyes, tiny orange beak. Entire standalone creature three-quarter facing LEFT toward the pet, no floor, no shadow background, no text."
+    },
+    {
+      "id": "mev-moth",
+      "name": "MEV Moth",
+      "slot": "companion",
+      "theme": "tech",
+      "color": "#64e6da",
+      "rect": [
+        752,
+        668,
+        198,
+        202
+      ],
+      "description": "Attracted to light. And pending transactions.",
+      "direction": "A cute tiny robotic moth with luminous cyan circuit-pattern wings, dark chrome round body, two curious violet eyes, little gold coin clutched in miniature feet. Full creature hovering three-quarter facing LEFT toward a pet, no background, no text."
+    },
+    {
+      "id": "little-rugger",
+      "name": "Little Rugger",
+      "slot": "companion",
+      "theme": "meme",
+      "color": "#f2a878",
+      "rect": [
+        745,
+        788,
+        211,
+        119
+      ],
+      "description": "Suspiciously soft. Surprisingly loyal.",
+      "direction": "An adorable tiny living rolled Persian carpet caterpillar companion, burgundy and turquoise rug body, big innocent shiny eyes on little brass eye stalks, golden tassel feet, mischievous smile. Full creature three-quarter facing LEFT, no floor or background, no text."
+    },
+    {
+      "id": "moon-landing-pad",
+      "name": "Moon Landing Pad",
+      "slot": "habitat",
+      "theme": "crypto",
+      "color": "#a7d5ff",
+      "rect": [
+        159,
+        839,
+        731,
+        158
+      ],
+      "description": "Reserved parking for the next cycle.",
+      "direction": "A low wide oval lunar landing platform, pale moon rock rim, sleek dark central landing plate, tiny cyan runway lights and two small gold rocket fins on far left and right, whimsical premium game diorama base. Low three-quarter top-down perspective, ellipse width about four times height. No Pet or characters, no vertical scenery blocking a wearer, no text."
+    },
+    {
+      "id": "basement-lan",
+      "name": "Basement LAN",
+      "slot": "habitat",
+      "theme": "tech",
+      "color": "#64e6da",
+      "rect": [
+        159,
+        829,
+        731,
+        168
+      ],
+      "description": "RGB is a stat. We checked.",
+      "direction": "A low wide oval cyberpunk LAN gaming pedestal, black hexagonal tiles, glowing cyan and violet network cables around rim, miniature server stacks only at far left and far right edges, tiny energy drinks. Low three-quarter top-down perspective, ellipse width four times height, center empty to stand a pet. No characters, no words."
+    },
+    {
+      "id": "runebloom-garden",
+      "name": "Runebloom Garden",
+      "slot": "habitat",
+      "theme": "aetherpunk",
+      "color": "#a5a0ff",
+      "rect": [
+        159,
+        827,
+        731,
+        170
+      ],
+      "description": "A calm place to recharge unstable magic.",
+      "direction": "Original arcane-industrial fantasy low wide oval garden pedestal, ancient brass rim, teal moss and tiny violet luminous crystals at extreme left and right, weathered dark stone central standing area, delicate blue rune inlays. Low three-quarter top-down view ellipse width four times height. No characters, no tall objects in center, no franchise logos."
+    }
+  ]
+}

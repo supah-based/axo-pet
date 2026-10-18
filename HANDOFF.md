@@ -1,6 +1,6 @@
 # AXO Pet build-agent handoff
 
-Current Codex work: [AXO-002 — shared Pet/Gear schemas and Level-10 visual fit review](docs/handoffs/AXO-002.md), on `codex/pet-gear-schemas`. The earlier setup/host-discovery exchange remains in [AXO-001](docs/handoffs/AXO-001.md).
+Current Codex work: [AXO-003 — Gear Style Studio](docs/handoffs/AXO-003.md), on `codex/gear-style-studio`. Shared schemas and live host discovery remain in [AXO-002](docs/handoffs/AXO-002.md). The earlier setup exchange remains in [AXO-001](docs/handoffs/AXO-001.md).
 
 This document is the operating handoff for agents and engineers working in the private `axo-pet` repository. Read it before changing code, moving package boundaries, running deployment tooling, or importing data from the existing AXO application.
 
