@@ -6,13 +6,15 @@ Codex owns source implementation, local previews, tests and reviewable changes i
 AXO on OpenClaw owns knowledge of the current AXO host, its existing integrations and authorized live operations.
 The operator chooses what to build and authorizes production releases and onchain actions under the existing release gates.
 
-Use root `handoff.md` as the shared inbox/outbox, as selected by the operator on 2026-10-18.
+Use root `HANDOFF.md` as AXO's system guide and `docs/handoffs/AXO-001.md` as the current shared inbox/outbox.
+The operator selected GitHub Markdown file handoffs on 2026-10-18. The earlier lowercase root exchange was moved
+under docs/handoffs when AXO published HANDOFF.md, preserving both documents on Windows.
 Use GitHub PRs for source review and response updates. Keep detailed and archived handoffs in
 `docs/handoffs/` using TEMPLATE.md. For live-host or security details, use the operator's existing private channel;
 record only the sanitized outcome in the repository. Do not create a new gateway, credential or privileged agent identity as part of a source handoff.
 
 No OpenClaw gateway connection is required for this file-based workflow. Both agents fetch the coordination branch,
-read `handoff.md`, and commit sanitized replies through agent-specific branches/PRs. File edits do not wake an agent;
+read the current exchange under docs/handoffs, and commit sanitized replies through agent-specific branches/PRs. File edits do not wake an agent;
 the operator triggers a read until a separately requested polling mechanism is configured.
 Do not claim an AXO acknowledgment from an assumption, a draft message or a published file alone.
 
@@ -32,7 +34,7 @@ Documentation-only work may close after review without entering release states. 
 3. Describe host integration steps, exact files/services, configuration names and data compatibility. Leave unknown paths unknown until AXO confirms them.
 4. Document backup, rollback and post-change readback. Include chain ID, contract/address evidence and ABI/bytecode/asset hashes when relevant, verified rather than inferred.
 5. Identify the requested action: review, host investigation, release preparation or a specifically authorized release. Keep authorization evidence in the operator's private system.
-6. Publish the source PR and update `handoff.md` with its link and handoff ID. Record publication separately from AXO acknowledgment.
+6. Publish the source PR and update the current exchange with its link and handoff ID. Record publication separately from AXO acknowledgment.
 
 ## AXO → Codex acknowledgment
 

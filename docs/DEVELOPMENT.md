@@ -6,7 +6,8 @@ Source of truth: https://github.com/supah-based/axo-pet. Use feature branches an
 Live product: https://axo.pet. Local source preview: http://127.0.0.1:4320.
 
 The initial checkout was based on `617f5599e6411dc2fa0cf5f36646cc7d022e47a8` on 2026-10-18.
-That identifies the repository baseline; it does not identify the code running on the live host.
+AXO's system handoff from commit `b7b860f` and the subsequent contract lock refresh at `f23a776` have been synchronized.
+These identify repository revisions; they do not identify the code running on the live host.
 AXO must report the host revision and any host-only patches before a deployment can be prepared.
 
 | Boundary | Repository path | Local behavior | Next integration work |
@@ -46,8 +47,10 @@ The contract CI installs from packages/pet-contracts separately; its lockfile is
 
 ## First implementation milestones
 
-1. AXO reads root handoff.md and confirms live host revision, relevant services and repository response access.
-2. Extract a read-only Pet/Passport API behind an explicit adapter with sanitized response parity tests.
-3. Package missing shell/navigation, wallet/session bootstrap and public asset manifests; extract the full Hatchery dashboard.
-4. Make the authenticated Arena adapter independently runnable and verify isolation from Pet XP and Epoch state.
-5. Address NFT/gear/onchain gaps against exact read-only chain evidence, then prepare a separately authorized release.
+1. Version shared Pet identity and Gear schemas, defining exact XP/level consistency, eight slots, six stats, verified projections and unavailable/error states. Add synthetic valid/invalid fixtures without changing live behavior.
+2. Extract pure Pet identity, XP/level, Gear and metadata functions behind explicit interfaces and parity tests; repair workspace imports package by package.
+3. Build the standalone read-only Pet/Passport API from those schemas and ports, including block-consistent Gear reads and sanitized old/new response comparisons.
+4. Package missing shell/navigation, wallet/session bootstrap and immutable public assets; wire the UI and authenticated Arena adapter to the read-only contracts.
+5. Prepare self-custody transactions and address NFT/gear/onchain gaps against exact chain evidence, followed by a separately authorized release.
+
+AXO can independently confirm live host revision, service ownership and deployment evidence through docs/handoffs/AXO-001.md while the first two source milestones proceed. Root HANDOFF.md contains the full recommended sequence and release criteria.

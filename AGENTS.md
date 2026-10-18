@@ -1,6 +1,6 @@
 # AXO Pet working agreement
 
-Read README.md, CONTRIBUTING.md, SECURITY.md and docs/MIGRATION_PLAN.md before changing a system boundary.
+Read HANDOFF.md, README.md, CONTRIBUTING.md, SECURITY.md and docs/MIGRATION_PLAN.md before changing a system boundary.
 
 ## Development and verification
 
@@ -13,7 +13,8 @@ Read README.md, CONTRIBUTING.md, SECURITY.md and docs/MIGRATION_PLAN.md before c
 
 ## Collaboration with AXO on OpenClaw
 
-- Read root handoff.md as the shared Codex/AXO inbox/outbox. Use docs/runbooks/agent-handoff.md and docs/handoffs/TEMPLATE.md for detailed exchanges.
+- Root HANDOFF.md is AXO's system guide. Read docs/handoffs/AXO-001.md as the current Codex/AXO inbox/outbox; use docs/runbooks/agent-handoff.md and docs/handoffs/TEMPLATE.md for detailed exchanges.
+- Do not create a second root handoff file differing only by case: Windows cannot preserve both files independently.
 - Codex prepares source, tests and an exact commit. AXO verifies the existing host, integrates host adapters and performs authorized live operations.
 - A handoff is not complete until AXO acknowledges its exact source commit and returns verification or a concrete blocker. Do not mark a handoff delivered without a confirmed transport response.
 - Store only sanitized development notes in Git. Live state, credentials, wallet mappings, private receipts, authorization evidence and server backups stay with the operator.

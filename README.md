@@ -65,6 +65,7 @@ npm run test:arena
 npm run test:dev
 ```
 
+Build agents must read [HANDOFF.md](HANDOFF.md) first for AXO's system context.
 See `docs/MIGRATION_PLAN.md` before moving any additional code or runtime responsibility.
-Read [handoff.md](handoff.md), the shared inbox/outbox with AXO on OpenClaw. See [the agent handoff runbook](docs/runbooks/agent-handoff.md) for the workflow,
+The shared Codex/AXO exchange is [AXO-001](docs/handoffs/AXO-001.md). See [the agent handoff runbook](docs/runbooks/agent-handoff.md) for the workflow,
 and [the development map](docs/DEVELOPMENT.md) for the current extraction boundaries.

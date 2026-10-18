@@ -28,11 +28,16 @@ test('canonical catalogs preserve eight slots, 56 launch items and the 5.1.1 vis
   assert.equal(visual.counts.runtimeImages, 204);
 });
 
-test('repository safety documentation keeps production actions outside ordinary CI', () => {
+test('repository safety and build-agent handoff keep production actions outside ordinary CI', () => {
   const security = fs.readFileSync(path.join(root, 'SECURITY.md'), 'utf8');
   const migration = fs.readFileSync(path.join(root, 'docs/MIGRATION_PLAN.md'), 'utf8');
+  const handoff = fs.readFileSync(path.join(root, 'HANDOFF.md'), 'utf8');
   assert.match(security, /must never contain/i);
   assert.match(security, /deployment, minting, gear issuance/i);
   assert.match(migration, /existing AXO state repository authoritative/i);
   assert.match(migration, /separate explicit authorization/i);
+  assert.match(handoff, /Source-of-truth order/);
+  assert.match(handoff, /Current extraction gaps/);
+  assert.match(handoff, /Production handover gates/);
+  assert.match(handoff, /Branch-protection limitation/);
 });
