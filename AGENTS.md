@@ -13,7 +13,7 @@ Read HANDOFF.md, README.md, CONTRIBUTING.md, SECURITY.md and docs/MIGRATION_PLAN
 
 ## Collaboration with AXO on OpenClaw
 
-- Root HANDOFF.md is AXO's system guide. Read docs/handoffs/AXO-001.md as the current Codex/AXO inbox/outbox; use docs/runbooks/agent-handoff.md and docs/handoffs/TEMPLATE.md for detailed exchanges.
+- Root HANDOFF.md is AXO's system guide. Current implementation exchange: docs/handoffs/AXO-002.md; setup/host-discovery exchange: docs/handoffs/AXO-001.md. Use docs/runbooks/agent-handoff.md and docs/handoffs/TEMPLATE.md for detailed exchanges.
 - Do not create a second root handoff file differing only by case: Windows cannot preserve both files independently.
 - Codex prepares source, tests and an exact commit. AXO verifies the existing host, integrates host adapters and performs authorized live operations.
 - A handoff is not complete until AXO acknowledges its exact source commit and returns verification or a concrete blocker. Do not mark a handoff delivered without a confirmed transport response.
