@@ -1,0 +1,726 @@
+{
+  "syntheticOnly": true,
+  "description": "Invented identities, contracts, balances and block evidence. Never use these records as live state.",
+  "otherOwner": "0x4444444444444444444444444444444444444444",
+  "identities": {
+    "level1": {
+      "schemaVersion": "AXO_PET_IDENTITY_V1",
+      "genesisId": "AXO-ABCDEF1234",
+      "appearanceSeed": "0123456789abcdef",
+      "ownerAddress": "0x1111111111111111111111111111111111111111",
+      "name": "Synthetic fixture Pet",
+      "lineageId": "emerald_sprout",
+      "xp": 0,
+      "level": 1,
+      "gearRevision": 3,
+      "nft": {
+        "status": "UNMINTED"
+      }
+    },
+    "level9": {
+      "schemaVersion": "AXO_PET_IDENTITY_V1",
+      "genesisId": "AXO-ABCDEF1234",
+      "appearanceSeed": "0123456789abcdef",
+      "ownerAddress": "0x1111111111111111111111111111111111111111",
+      "name": "Synthetic fixture Pet",
+      "lineageId": "emerald_sprout",
+      "xp": 940,
+      "level": 9,
+      "gearRevision": 3,
+      "nft": {
+        "status": "UNMINTED"
+      }
+    },
+    "level10Minted": {
+      "schemaVersion": "AXO_PET_IDENTITY_V1",
+      "genesisId": "AXO-ABCDEF1234",
+      "appearanceSeed": "0123456789abcdef",
+      "ownerAddress": "0x1111111111111111111111111111111111111111",
+      "name": "Synthetic fixture Pet",
+      "lineageId": "emerald_sprout",
+      "xp": 1200,
+      "level": 10,
+      "gearRevision": 3,
+      "nft": {
+        "status": "MINTED",
+        "chainId": 4663,
+        "contractAddress": "0x2222222222222222222222222222222222222222",
+        "tokenId": "1"
+      }
+    },
+    "level10Unminted": {
+      "schemaVersion": "AXO_PET_IDENTITY_V1",
+      "genesisId": "AXO-ABCDEF1234",
+      "appearanceSeed": "0123456789abcdef",
+      "ownerAddress": "0x1111111111111111111111111111111111111111",
+      "name": "Synthetic fixture Pet",
+      "lineageId": "emerald_sprout",
+      "xp": 1200,
+      "level": 10,
+      "gearRevision": 3,
+      "nft": {
+        "status": "UNMINTED"
+      }
+    }
+  },
+  "projections": {
+    "empty": {
+      "schemaVersion": "AXO_VERIFIED_GEAR_PROJECTION_V1",
+      "status": "VERIFIED_ONCHAIN",
+      "ownerAddress": "0x1111111111111111111111111111111111111111",
+      "petGenesisId": "AXO-ABCDEF1234",
+      "petTokenId": "1",
+      "revision": 3,
+      "chain": {
+        "chainId": 4663,
+        "blockNumber": 12345,
+        "blockHash": "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "petContract": "0x2222222222222222222222222222222222222222",
+        "gearContract": "0x3333333333333333333333333333333333333333"
+      },
+      "items": [],
+      "stats": {
+        "STR": 0,
+        "DEX": 0,
+        "CON": 0,
+        "INT": 0,
+        "WIS": 0,
+        "CHA": 0
+      },
+      "visual": {
+        "visualRevision": "5.1.1",
+        "layers": [
+          {
+            "slot": "background",
+            "z": 0,
+            "optionId": 8,
+            "url": "/hatchery-nft-v5/layer_background_08_goblin_mode_terminal.webp",
+            "sha256": "f5c28b162c17793b8f543086aa148a7fd4388e99b9c72682c4e72d0e2e501cc1"
+          },
+          {
+            "slot": "pet",
+            "z": 5,
+            "optionId": null,
+            "url": "/hatchery-nft-v5/pet_emerald_sprout_l10.webp",
+            "sha256": "c083791ce00443556e6364d0beba03f20823e1ea392036982ae2674c98990e48"
+          },
+          {
+            "slot": "hud_front",
+            "z": 12,
+            "optionId": null,
+            "url": "/hatchery-nft-v5/layer_hud_front_emerald_sprout.webp",
+            "sha256": "5e6ce472e2b61b5812eb3aeb00cfa22deab633a0b96a3f413adc94256efad86f"
+          }
+        ]
+      }
+    },
+    "full": {
+      "schemaVersion": "AXO_VERIFIED_GEAR_PROJECTION_V1",
+      "status": "VERIFIED_ONCHAIN",
+      "ownerAddress": "0x1111111111111111111111111111111111111111",
+      "petGenesisId": "AXO-ABCDEF1234",
+      "petTokenId": "1",
+      "revision": 3,
+      "chain": {
+        "chainId": 4663,
+        "blockNumber": 12345,
+        "blockHash": "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "petContract": "0x2222222222222222222222222222222222222222",
+        "gearContract": "0x3333333333333333333333333333333333333333"
+      },
+      "items": [
+        {
+          "id": 1001,
+          "slot": "head",
+          "balance": "1",
+          "definition": {
+            "schemaVersion": "AXO_GEAR_DEFINITION_V1",
+            "id": 1001,
+            "slot": "head",
+            "rarity": "COMMON",
+            "active": true,
+            "maxSupply": "100",
+            "metadataUri": "ipfs://bafybeisyntheticfixtureonly/gear.json",
+            "metadataHash": "0xbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "arenaStats": {
+              "STR": 0,
+              "DEX": 0,
+              "CON": 0,
+              "INT": 1,
+              "WIS": 0,
+              "CHA": 0
+            }
+          }
+        },
+        {
+          "id": 2001,
+          "slot": "face",
+          "balance": "1",
+          "definition": {
+            "schemaVersion": "AXO_GEAR_DEFINITION_V1",
+            "id": 2001,
+            "slot": "face",
+            "rarity": "COMMON",
+            "active": true,
+            "maxSupply": "100",
+            "metadataUri": "ipfs://bafybeisyntheticfixtureonly/gear.json",
+            "metadataHash": "0xbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "arenaStats": {
+              "STR": 0,
+              "DEX": 1,
+              "CON": 0,
+              "INT": 0,
+              "WIS": 0,
+              "CHA": 0
+            }
+          }
+        },
+        {
+          "id": 3001,
+          "slot": "body",
+          "balance": "1",
+          "definition": {
+            "schemaVersion": "AXO_GEAR_DEFINITION_V1",
+            "id": 3001,
+            "slot": "body",
+            "rarity": "COMMON",
+            "active": true,
+            "maxSupply": "100",
+            "metadataUri": "ipfs://bafybeisyntheticfixtureonly/gear.json",
+            "metadataHash": "0xbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "arenaStats": {
+              "STR": 0,
+              "DEX": 0,
+              "CON": 1,
+              "INT": 0,
+              "WIS": 0,
+              "CHA": 0
+            }
+          }
+        },
+        {
+          "id": 4001,
+          "slot": "back",
+          "balance": "1",
+          "definition": {
+            "schemaVersion": "AXO_GEAR_DEFINITION_V1",
+            "id": 4001,
+            "slot": "back",
+            "rarity": "EPIC",
+            "active": true,
+            "maxSupply": "100",
+            "metadataUri": "ipfs://bafybeisyntheticfixtureonly/gear.json",
+            "metadataHash": "0xbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "arenaStats": {
+              "STR": 0,
+              "DEX": 2,
+              "CON": 1,
+              "INT": 0,
+              "WIS": 0,
+              "CHA": 0
+            }
+          }
+        },
+        {
+          "id": 5001,
+          "slot": "tool",
+          "balance": "1",
+          "definition": {
+            "schemaVersion": "AXO_GEAR_DEFINITION_V1",
+            "id": 5001,
+            "slot": "tool",
+            "rarity": "COMMON",
+            "active": true,
+            "maxSupply": "100",
+            "metadataUri": "ipfs://bafybeisyntheticfixtureonly/gear.json",
+            "metadataHash": "0xbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "arenaStats": {
+              "STR": 0,
+              "DEX": 0,
+              "CON": 0,
+              "INT": 1,
+              "WIS": 0,
+              "CHA": 0
+            }
+          }
+        },
+        {
+          "id": 6001,
+          "slot": "charm",
+          "balance": "1",
+          "definition": {
+            "schemaVersion": "AXO_GEAR_DEFINITION_V1",
+            "id": 6001,
+            "slot": "charm",
+            "rarity": "COMMON",
+            "active": true,
+            "maxSupply": "100",
+            "metadataUri": "ipfs://bafybeisyntheticfixtureonly/gear.json",
+            "metadataHash": "0xbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "arenaStats": {
+              "STR": 0,
+              "DEX": 0,
+              "CON": 0,
+              "INT": 0,
+              "WIS": 0,
+              "CHA": 1
+            }
+          }
+        },
+        {
+          "id": 7001,
+          "slot": "companion",
+          "balance": "1",
+          "definition": {
+            "schemaVersion": "AXO_GEAR_DEFINITION_V1",
+            "id": 7001,
+            "slot": "companion",
+            "rarity": "COMMON",
+            "active": true,
+            "maxSupply": "100",
+            "metadataUri": "ipfs://bafybeisyntheticfixtureonly/gear.json",
+            "metadataHash": "0xbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "arenaStats": {
+              "STR": 0,
+              "DEX": 0,
+              "CON": 0,
+              "INT": 0,
+              "WIS": 0,
+              "CHA": 1
+            }
+          }
+        },
+        {
+          "id": 8001,
+          "slot": "habitat",
+          "balance": "1",
+          "definition": {
+            "schemaVersion": "AXO_GEAR_DEFINITION_V1",
+            "id": 8001,
+            "slot": "habitat",
+            "rarity": "COMMON",
+            "active": true,
+            "maxSupply": "100",
+            "metadataUri": "ipfs://bafybeisyntheticfixtureonly/gear.json",
+            "metadataHash": "0xbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "arenaStats": {
+              "STR": 0,
+              "DEX": 0,
+              "CON": 1,
+              "INT": 0,
+              "WIS": 0,
+              "CHA": 0
+            }
+          }
+        }
+      ],
+      "stats": {
+        "STR": 0,
+        "DEX": 3,
+        "CON": 3,
+        "INT": 2,
+        "WIS": 0,
+        "CHA": 2
+      },
+      "visual": {
+        "visualRevision": "5.1.1",
+        "layers": [
+          {
+            "slot": "background",
+            "z": 0,
+            "optionId": 8,
+            "url": "/hatchery-nft-v5/layer_background_08_goblin_mode_terminal.webp",
+            "sha256": "f5c28b162c17793b8f543086aa148a7fd4388e99b9c72682c4e72d0e2e501cc1"
+          },
+          {
+            "slot": "back",
+            "z": 2,
+            "optionId": 1,
+            "url": "/hatchery-nft-v5/layer_back_01_ledger_wings.webp",
+            "sha256": "bee4cef259840af1d19cbba627065d1b13397fd7c1c1eba326ed3e91cf42b288"
+          },
+          {
+            "slot": "habitat",
+            "z": 3,
+            "optionId": 1,
+            "url": "/hatchery-nft-v5/layer_habitat_01_genesis_crate.webp",
+            "sha256": "ceaed1995230b2debbf0490829932946a93a0f2cbd7888df2ff27f2da54fde08"
+          },
+          {
+            "slot": "tool",
+            "z": 4,
+            "optionId": 1,
+            "url": "/hatchery-nft-v5/layer_tool_01_contract_crystal_scanner.webp",
+            "sha256": "977e040978ec279b76eed66fdfe37dad48fe12f380c5be80ae86b8a1a09cec03"
+          },
+          {
+            "slot": "pet",
+            "z": 5,
+            "optionId": null,
+            "url": "/hatchery-nft-v5/pet_emerald_sprout_l10.webp",
+            "sha256": "c083791ce00443556e6364d0beba03f20823e1ea392036982ae2674c98990e48"
+          },
+          {
+            "slot": "body",
+            "z": 6,
+            "optionId": 1,
+            "url": "/hatchery-nft-v5/layer_body_01_hodl_harness.webp",
+            "sha256": "1e60c1091ac797d06141cd34d73deb0f166fb94bf17fa6d2975d0813fcd407af"
+          },
+          {
+            "slot": "face",
+            "z": 7,
+            "optionId": 1,
+            "url": "/hatchery-nft-v5/layer_face_01_dyor_visor.webp",
+            "sha256": "5e6bda5a15ba82bc2e31dd5fc2e1075aede4d91dfcc9b02dcdc4797be0422abb"
+          },
+          {
+            "slot": "head",
+            "z": 8,
+            "optionId": 1,
+            "url": "/hatchery-nft-v5/layer_head_01_gm_antenna_pin.webp",
+            "sha256": "ed6f55d77229d628f38aef1d6bd95079777f67e7c451d26fdadf6f0eb26eb1a1"
+          },
+          {
+            "slot": "charm",
+            "z": 9,
+            "optionId": 1,
+            "url": "/hatchery-nft-v5/layer_charm_01_genesis_crystal.webp",
+            "sha256": "6a02569c45ab5e74c9e96e915ce9fb0392886263ca3f03d2d92e4fa4faf96302"
+          },
+          {
+            "slot": "companion",
+            "z": 10,
+            "optionId": 1,
+            "url": "/hatchery-nft-v5/layer_companion_01_ledger_firefly.webp",
+            "sha256": "ea5297cf0b49cb7e920c286e77b10925198225ec729c120edc11fbb265cad513"
+          },
+          {
+            "slot": "hud_front",
+            "z": 12,
+            "optionId": null,
+            "url": "/hatchery-nft-v5/layer_hud_front_emerald_sprout.webp",
+            "sha256": "5e6ce472e2b61b5812eb3aeb00cfa22deab633a0b96a3f413adc94256efad86f"
+          }
+        ]
+      }
+    }
+  },
+  "invalidProjections": [
+    {
+      "name": "wrong owner",
+      "code": "OWNER_MISMATCH",
+      "mutations": [
+        {
+          "path": "/ownerAddress",
+          "value": "0x4444444444444444444444444444444444444444"
+        }
+      ]
+    },
+    {
+      "name": "stale gear revision",
+      "code": "STALE_GEAR_REVISION",
+      "mutations": [
+        {
+          "path": "/revision",
+          "value": 99
+        }
+      ]
+    },
+    {
+      "name": "wrong chain",
+      "code": "SCHEMA_INVALID",
+      "mutations": [
+        {
+          "path": "/chain/chainId",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "name": "unknown slot",
+      "code": "SCHEMA_INVALID",
+      "mutations": [
+        {
+          "path": "/items/0/slot",
+          "value": "boots"
+        }
+      ]
+    },
+    {
+      "name": "wrong definition slot",
+      "code": "SLOT_MISMATCH",
+      "mutations": [
+        {
+          "path": "/items/0/definition/slot",
+          "value": "face"
+        }
+      ]
+    },
+    {
+      "name": "wrong definition ID",
+      "code": "GEAR_ID_MISMATCH",
+      "mutations": [
+        {
+          "path": "/items/0/definition/id",
+          "value": 1002
+        }
+      ]
+    },
+    {
+      "name": "inactive gear",
+      "code": "INACTIVE_GEAR",
+      "mutations": [
+        {
+          "path": "/items/0/definition/active",
+          "value": false
+        }
+      ]
+    },
+    {
+      "name": "empty ownership balance",
+      "code": "SCHEMA_INVALID",
+      "mutations": [
+        {
+          "path": "/items/0/balance",
+          "value": "0"
+        }
+      ]
+    },
+    {
+      "name": "coerced balance",
+      "code": "SCHEMA_INVALID",
+      "mutations": [
+        {
+          "path": "/items/0/balance",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "name": "inflated aggregate stats",
+      "code": "AGGREGATE_STATS_MISMATCH",
+      "mutations": [
+        {
+          "path": "/stats/STR",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "name": "per-stat aggregate cap",
+      "code": "SCHEMA_INVALID",
+      "mutations": [
+        {
+          "path": "/stats/STR",
+          "value": 7
+        }
+      ]
+    },
+    {
+      "name": "per-item cap",
+      "code": "SCHEMA_INVALID",
+      "mutations": [
+        {
+          "path": "/items/0/definition/arenaStats/INT",
+          "value": 3
+        }
+      ]
+    },
+    {
+      "name": "asset hash mismatch",
+      "code": "VISUAL_ASSET_MISMATCH",
+      "mutations": [
+        {
+          "path": "/visual/layers/7/sha256",
+          "value": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"
+        }
+      ]
+    },
+    {
+      "name": "different equipped visual",
+      "code": "VISUAL_EQUIPMENT_MISMATCH",
+      "mutations": [
+        {
+          "path": "/visual/layers/7/optionId",
+          "value": 2
+        }
+      ]
+    },
+    {
+      "name": "missing visual layer",
+      "code": "VISUAL_LAYER_MISSING",
+      "mutations": [
+        {
+          "path": "/visual/layers",
+          "value": [
+            {
+              "slot": "background",
+              "z": 0,
+              "optionId": 8,
+              "url": "/hatchery-nft-v5/layer_background_08_goblin_mode_terminal.webp",
+              "sha256": "f5c28b162c17793b8f543086aa148a7fd4388e99b9c72682c4e72d0e2e501cc1"
+            },
+            {
+              "slot": "back",
+              "z": 2,
+              "optionId": 1,
+              "url": "/hatchery-nft-v5/layer_back_01_ledger_wings.webp",
+              "sha256": "bee4cef259840af1d19cbba627065d1b13397fd7c1c1eba326ed3e91cf42b288"
+            },
+            {
+              "slot": "habitat",
+              "z": 3,
+              "optionId": 1,
+              "url": "/hatchery-nft-v5/layer_habitat_01_genesis_crate.webp",
+              "sha256": "ceaed1995230b2debbf0490829932946a93a0f2cbd7888df2ff27f2da54fde08"
+            },
+            {
+              "slot": "tool",
+              "z": 4,
+              "optionId": 1,
+              "url": "/hatchery-nft-v5/layer_tool_01_contract_crystal_scanner.webp",
+              "sha256": "977e040978ec279b76eed66fdfe37dad48fe12f380c5be80ae86b8a1a09cec03"
+            },
+            {
+              "slot": "pet",
+              "z": 5,
+              "optionId": null,
+              "url": "/hatchery-nft-v5/pet_emerald_sprout_l10.webp",
+              "sha256": "c083791ce00443556e6364d0beba03f20823e1ea392036982ae2674c98990e48"
+            },
+            {
+              "slot": "body",
+              "z": 6,
+              "optionId": 1,
+              "url": "/hatchery-nft-v5/layer_body_01_hodl_harness.webp",
+              "sha256": "1e60c1091ac797d06141cd34d73deb0f166fb94bf17fa6d2975d0813fcd407af"
+            },
+            {
+              "slot": "face",
+              "z": 7,
+              "optionId": 1,
+              "url": "/hatchery-nft-v5/layer_face_01_dyor_visor.webp",
+              "sha256": "5e6bda5a15ba82bc2e31dd5fc2e1075aede4d91dfcc9b02dcdc4797be0422abb"
+            },
+            {
+              "slot": "charm",
+              "z": 9,
+              "optionId": 1,
+              "url": "/hatchery-nft-v5/layer_charm_01_genesis_crystal.webp",
+              "sha256": "6a02569c45ab5e74c9e96e915ce9fb0392886263ca3f03d2d92e4fa4faf96302"
+            },
+            {
+              "slot": "companion",
+              "z": 10,
+              "optionId": 1,
+              "url": "/hatchery-nft-v5/layer_companion_01_ledger_firefly.webp",
+              "sha256": "ea5297cf0b49cb7e920c286e77b10925198225ec729c120edc11fbb265cad513"
+            },
+            {
+              "slot": "hud_front",
+              "z": 12,
+              "optionId": null,
+              "url": "/hatchery-nft-v5/layer_hud_front_emerald_sprout.webp",
+              "sha256": "5e6ce472e2b61b5812eb3aeb00cfa22deab633a0b96a3f413adc94256efad86f"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "wrong z-order",
+      "code": "VISUAL_LAYER_ORDER",
+      "mutations": [
+        {
+          "path": "/visual/layers/7/z",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "name": "extra authority field",
+      "code": "SCHEMA_INVALID",
+      "mutations": [
+        {
+          "path": "/rewards",
+          "value": 100
+        }
+      ]
+    },
+    {
+      "name": "duplicate slot",
+      "code": "DUPLICATE_SLOT",
+      "mutations": [
+        {
+          "path": "/items/1/slot",
+          "value": "head"
+        }
+      ]
+    },
+    {
+      "name": "duplicate gear ID",
+      "code": "DUPLICATE_GEAR_ID",
+      "mutations": [
+        {
+          "path": "/items/1/id",
+          "value": 1001
+        }
+      ]
+    },
+    {
+      "name": "missing evidence block",
+      "code": "SCHEMA_INVALID",
+      "mutations": [
+        {
+          "path": "/chain/blockHash",
+          "remove": true
+        }
+      ]
+    }
+  ],
+  "unavailable": [
+    {
+      "schemaVersion": "AXO_GEAR_READ_FAILURE_V1",
+      "status": "UNAVAILABLE",
+      "reason": "RPC_UNAVAILABLE",
+      "data": null
+    },
+    {
+      "schemaVersion": "AXO_GEAR_READ_FAILURE_V1",
+      "status": "UNAVAILABLE",
+      "reason": "INDEXER_UNAVAILABLE",
+      "data": null
+    },
+    {
+      "schemaVersion": "AXO_GEAR_READ_FAILURE_V1",
+      "status": "UNAVAILABLE",
+      "reason": "ASSET_MISSING",
+      "data": null
+    },
+    {
+      "schemaVersion": "AXO_GEAR_READ_FAILURE_V1",
+      "status": "INCONSISTENT",
+      "reason": "ASSET_HASH_MISMATCH",
+      "data": null
+    },
+    {
+      "schemaVersion": "AXO_GEAR_READ_FAILURE_V1",
+      "status": "INCONSISTENT",
+      "reason": "STALE_REVISION",
+      "data": null
+    },
+    {
+      "schemaVersion": "AXO_GEAR_READ_FAILURE_V1",
+      "status": "UNAVAILABLE",
+      "reason": "UNKNOWN_OWNERSHIP",
+      "data": null
+    },
+    {
+      "schemaVersion": "AXO_GEAR_READ_FAILURE_V1",
+      "status": "UNAVAILABLE",
+      "reason": "NOT_MINTED",
+      "data": null
+    }
+  ]
+}

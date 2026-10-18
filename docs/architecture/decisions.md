@@ -31,3 +31,9 @@
 **Decision:** Provide a loopback source preview with an in-memory synthetic Arena and explicitly unavailable host APIs. Coordinate Codex and AXO through source PRs, sanitized handoff records and exact source acknowledgments.
 
 **Reason:** The extraction workspace needs a usable editing loop without implying production parity. AXO retains host integration knowledge, and live releases need traceable source, rollback and post-change evidence under the existing release gates.
+
+## ADR-007 — Versioned Pet and Gear adapter contracts
+
+**Decision:** Publish strict, non-mutating V1 identity, Gear definition, verified projection and unavailable-result schemas from shared-schemas, with ESM/CommonJS exports and synthetic compatibility fixtures. Trusted host adapters establish authority; validation checks consistency and cannot manufacture verification.
+
+**Reason:** Metadata, website visuals and Arena must agree on one verified loadout. Keeping this first milestone additive preserves live behavior while the existing host interfaces are documented. Quests and database upgrades target existing AXO services; no parallel quest ledger is introduced.
