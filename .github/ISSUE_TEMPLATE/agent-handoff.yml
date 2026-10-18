@@ -1,0 +1,41 @@
+name: AXO agent handoff
+description: Coordinate an exact source revision with AXO on OpenClaw.
+title: "[AXO handoff] "
+body:
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Outcome and acceptance criteria
+      description: Include the handoff ID and intended system boundary. Keep live state and secrets out of this issue.
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Exact source commit and PR
+      description: Link the pushed source revision. A branch name alone is not an immutable handoff.
+    validations:
+      required: true
+  - type: dropdown
+    id: request
+    attributes:
+      label: Requested AXO action
+      options:
+        - Source review
+        - Host investigation
+        - Release preparation
+        - Separately authorized release
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Checks, integration and rollback
+      description: List actual command results, missing evidence, host assumptions and recovery steps. Link the sanitized handoff document.
+    validations:
+      required: true
+  - type: textarea
+    id: acknowledgment
+    attributes:
+      label: AXO acknowledgment and readback
+      value: "NOT_ACKNOWLEDGED — exact source SHA, host revision, blockers, next action and owner pending."

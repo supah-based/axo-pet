@@ -18,10 +18,12 @@
     "packages/*"
   ],
   "scripts": {
+    "dev": "node scripts/dev-server.mjs",
+    "test:dev": "node --test tests/dev-server.test.mjs",
     "verify": "node scripts/verify-repository.mjs",
     "test": "node --test tests/repository.test.mjs",
     "test:contracts": "npm --prefix packages/pet-contracts run test:contracts",
     "test:arena": "npm --prefix apps/arena-web run test:standalone",
-    "check": "npm run verify && npm test && npm run test:contracts && npm run test:arena"
+    "check": "npm run verify && npm test && npm run test:contracts && npm run test:arena && npm run test:dev"
   }
 }

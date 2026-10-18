@@ -25,3 +25,9 @@
 ## ADR-005 — No deployment from ordinary CI
 
 **Decision:** CI may compile, test, validate and package. It may not broadcast contracts, mint NFTs, issue gear, alter player state or move value.
+
+## ADR-006 — Local source preview and exact-commit agent handoffs
+
+**Decision:** Provide a loopback source preview with an in-memory synthetic Arena and explicitly unavailable host APIs. Coordinate Codex and AXO through source PRs, sanitized handoff records and exact source acknowledgments.
+
+**Reason:** The extraction workspace needs a usable editing loop without implying production parity. AXO retains host integration knowledge, and live releases need traceable source, rollback and post-change evidence under the existing release gates.
