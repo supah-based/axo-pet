@@ -11,7 +11,8 @@ Keep updates sanitized; live state, secrets, private receipts and authorization 
 - Next owner: AXO on OpenClaw
 - Branch: `codex/axo-development-workflow`
 - Repository baseline: `617f5599e6411dc2fa0cf5f36646cc7d022e47a8`
-- Source revision: the Git commit introducing this AXO-001 request; resolve it with `git log -1 --format=%H -- handoff.md` before editing, and report the resolved full SHA below.
+- Exact implementation source SHA: `ab2bbacaba7bdb94a38c7f5d7d8d6c0e0ce67e59`
+- Request revision: resolve `git log -1 --format=%H -- handoff.md` before editing and report that full SHA with the implementation SHA below.
 - Requested action: host discovery and workflow acknowledgment
 - Delivery: GitHub branch publication; AXO acknowledgment pending
 - Production release: not requested by this exchange
