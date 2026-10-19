@@ -46,7 +46,13 @@ export function validateGearStats(gearStats={},level=1){
 }
 export function buildPet({lineageId,xp,allocation={},ranks={},loadout=['market_order','diamond_hands','rug_pull','reversal'],gearStats={}}={}){
  if(!Object.hasOwn(LINEAGES,lineageId))throw Error('Unknown lineage');
- const level=levelForXp(xp),lineage=LINEAGES[lineageId],baseStats={},gear=validateGearStats(gearStats,level);let spent=0,skillSpent=0;
+ const level=levelForXp(xp);
+ return buildPetAtLevel({lineageId,xp,allocation,ranks,loadout},level,validateGearStats(gearStats,level));
+}
+// Pure calculation shared by explicitly versioned rulesets; not an identity/authentication boundary.
+export function buildPetAtLevel({lineageId,xp,allocation={},ranks={},loadout=['market_order','diamond_hands','rug_pull','reversal']},level,gear){
+ if(!Object.hasOwn(LINEAGES,lineageId))throw Error('Unknown lineage');
+ const lineage=LINEAGES[lineageId],baseStats={};let spent=0,skillSpent=0;
  if(!allocation||Array.isArray(allocation)||Object.keys(allocation).some(k=>!STATS.includes(k)))throw Error('Invalid stat allocation');
  for(const [i,k]of STATS.entries()){const n=allocation[k]??0;if(!Number.isInteger(n)||n<0||lineage.base[i]+n>statCap(level))throw Error('Stat cap exceeded');baseStats[k]=lineage.base[i]+n;for(let v=1;v<=n;v++)spent+=lineage.base[i]+v>16?2:1;}
  if(spent>statBudget(level))throw Error('Stat budget exceeded');

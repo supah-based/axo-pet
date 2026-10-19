@@ -7,7 +7,10 @@
   "main": "./src/index.cjs",
   "exports": {
     ".": { "import": "./src/index.mjs", "require": "./src/index.cjs" },
-    "./schemas": "./src/schemas.cjs"
+    "./schemas": "./src/schemas.cjs",
+    "./v2": { "import": "./src/index-v2.mjs", "require": "./src/index-v2.cjs" },
+    "./progression-v2": "./src/progression-v2.mjs",
+    "./gear-sets-v2": "./src/gear-sets-v2.mjs"
   },
   "scripts": { "test": "node --test test/*.test.mjs" },
   "dependencies": { "ajv": "8.20.0" }

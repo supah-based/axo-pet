@@ -45,4 +45,6 @@ Required reviews include 54 isolated item/lineage fits, six outfits, three Pet/s
 
 ## AXO integration boundary
 
+The collection expansion and progression milestone now lives in [GEAR_PROGRESSION_V2.md](GEAR_PROGRESSION_V2.md) and [AXO-005](handoffs/AXO-005.md): 37 families, eleven item tiers and six five-piece sets. The original nine-design foundation stays a regression reference; the active Atelier and Bazaar use the expanded candidate catalog. Additive V2 contracts/schemas implement ten-slot and level-20 rules for review; canonical V1 and production remain unchanged.
+
 This is source-preview work. Existing Hatchery APIs and database remain authoritative; no quest ledger or parallel production service is created. Canonical Gear still has eight slots. Pants and Footwear need the versioned protocol work in `architecture/gear-slots-v2.md` before real equipment support. The current exchange is `handoffs/AXO-004.md`. AXO must acknowledge the exact pushed source SHA, review host differences and return visual/integration findings before any separately authorized live release. No deploy, metadata change, mint, Gear issuance or transaction is performed here.

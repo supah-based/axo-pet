@@ -1,0 +1,16 @@
+{
+  "syntheticOnly": true,
+  "description": "Proposed V2 balance fixtures; no live player state or item ownership.",
+  "xpCases": [
+    {"xp":1199,"level":9,"visualLevel":9},
+    {"xp":1200,"level":10,"visualLevel":10},
+    {"xp":1599,"level":10,"visualLevel":10},
+    {"xp":1600,"level":11,"visualLevel":10},
+    {"xp":5200,"level":15,"visualLevel":10},
+    {"xp":17950,"level":20,"visualLevel":10}
+  ],
+  "gear": [
+    {"key":"fixture-vest-l10","slot":"body","itemLevel":10,"minimumPetLevel":10,"arenaStats":{"STR":1,"DEX":0,"CON":1,"INT":0,"WIS":0,"CHA":0}},
+    {"key":"fixture-vest-l20","slot":"body","itemLevel":20,"minimumPetLevel":20,"arenaStats":{"STR":6,"DEX":0,"CON":6,"INT":0,"WIS":0,"CHA":0}}
+  ]
+}

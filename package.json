@@ -26,7 +26,7 @@
     "verify": "node scripts/verify-repository.mjs",
     "test": "node --test tests/repository.test.mjs",
     "test:contracts": "npm --prefix packages/pet-contracts run test:contracts",
-    "test:arena": "npm --prefix apps/arena-web run test:standalone",
+    "test:arena": "npm --prefix apps/arena-web run test:standalone && node --test packages/arena-engine/test/*.test.mjs",
     "check": "npm run verify && npm test && npm run test:schemas && npm run test:style && npm run test:contracts && npm run test:arena && npm run test:dev"
   },
   "devDependencies": {

@@ -2,6 +2,8 @@
 
 Versioned Pet identity and Gear data contracts, with JSON Schema draft-07 definitions and strict runtime validation.
 
+Candidate V2 adds Pet levels through 20, fixed Gear levels 10–20, pants/footwear, and six five-piece sets. Import validators from `@axo/pet-schemas/v2`, pure item/XP policy from `@axo/pet-schemas/progression-v2`, and set policy from `@axo/pet-schemas/gear-sets-v2`. V1 defaults remain unchanged. See `docs/GEAR_PROGRESSION_V2.md`; no V2 verified host projection endpoint is available yet.
+
 ```js
 import { validatePetIdentity, assertVerifiedGearProjection } from '@axo/pet-schemas';
 

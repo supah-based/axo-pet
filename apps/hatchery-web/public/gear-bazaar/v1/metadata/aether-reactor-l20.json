@@ -1,0 +1,54 @@
+{
+  "name": "Aether Reactor · LVL 20",
+  "description": "Probably stable. Definitely glowing. Requires Pet level 20.",
+  "image": "/gear-bazaar/v1/aether-reactor.item.webp",
+  "attributes": [
+    {
+      "trait_type": "Slot",
+      "value": "back"
+    },
+    {
+      "trait_type": "Item Level",
+      "value": 20
+    },
+    {
+      "trait_type": "Minimum Pet Level",
+      "value": 20
+    },
+    {
+      "trait_type": "STR",
+      "value": 0
+    },
+    {
+      "trait_type": "DEX",
+      "value": 0
+    },
+    {
+      "trait_type": "CON",
+      "value": 6
+    },
+    {
+      "trait_type": "INT",
+      "value": 6
+    },
+    {
+      "trait_type": "WIS",
+      "value": 0
+    },
+    {
+      "trait_type": "CHA",
+      "value": 0
+    }
+  ],
+  "properties": {
+    "schema": "AXO_GEAR_METADATA_DRAFT_V2",
+    "status": "DRAFT",
+    "ruleset": "AXO_PROGRESSION_V2",
+    "family": "aether-reactor",
+    "setId": null,
+    "supplyStatus": "UNDECIDED",
+    "ownership": "NONE",
+    "artSha256": "a289249bb517402977bb65d125c507fa6a3629a4995ef9ce37341e8a70e7a050",
+    "wearableSha256": "76a0e1f4cdc61db3fc61437c7d6c033db613b8b77e2f9e21aa380e8b87f98ca4"
+  }
+}

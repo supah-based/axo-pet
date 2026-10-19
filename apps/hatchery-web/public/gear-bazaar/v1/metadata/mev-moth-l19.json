@@ -1,0 +1,54 @@
+{
+  "name": "MEV Moth · LVL 19",
+  "description": "Attracted to light. And pending transactions. Requires Pet level 19.",
+  "image": "/gear-bazaar/v1/mev-moth.item.webp",
+  "attributes": [
+    {
+      "trait_type": "Slot",
+      "value": "companion"
+    },
+    {
+      "trait_type": "Item Level",
+      "value": 19
+    },
+    {
+      "trait_type": "Minimum Pet Level",
+      "value": 19
+    },
+    {
+      "trait_type": "STR",
+      "value": 0
+    },
+    {
+      "trait_type": "DEX",
+      "value": 5
+    },
+    {
+      "trait_type": "CON",
+      "value": 0
+    },
+    {
+      "trait_type": "INT",
+      "value": 0
+    },
+    {
+      "trait_type": "WIS",
+      "value": 0
+    },
+    {
+      "trait_type": "CHA",
+      "value": 6
+    }
+  ],
+  "properties": {
+    "schema": "AXO_GEAR_METADATA_DRAFT_V2",
+    "status": "DRAFT",
+    "ruleset": "AXO_PROGRESSION_V2",
+    "family": "mev-moth",
+    "setId": null,
+    "supplyStatus": "UNDECIDED",
+    "ownership": "NONE",
+    "artSha256": "606698142cb7e2aa2317b8cf6546ec2e949727d01071179b252cac4dafe5ff6b",
+    "wearableSha256": "74c58590c94ceb9507326a5d764de8013ea38dfa7c4c209487f72e2de6bc042d"
+  }
+}

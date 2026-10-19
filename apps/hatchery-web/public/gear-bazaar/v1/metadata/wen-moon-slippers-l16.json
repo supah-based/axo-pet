@@ -1,0 +1,62 @@
+{
+  "name": "Wen Moon Slippers · LVL 16",
+  "description": "Still waiting for launch. At least you're comfortable. Requires Pet level 16.",
+  "image": "/gear-bazaar/v1/wen-moon-slippers.item.webp",
+  "attributes": [
+    {
+      "trait_type": "Slot",
+      "value": "footwear"
+    },
+    {
+      "trait_type": "Set",
+      "value": "Degen Brawler"
+    },
+    {
+      "trait_type": "Play style",
+      "value": "Brawler"
+    },
+    {
+      "trait_type": "Item Level",
+      "value": 16
+    },
+    {
+      "trait_type": "Minimum Pet Level",
+      "value": 16
+    },
+    {
+      "trait_type": "STR",
+      "value": 4
+    },
+    {
+      "trait_type": "DEX",
+      "value": 0
+    },
+    {
+      "trait_type": "CON",
+      "value": 0
+    },
+    {
+      "trait_type": "INT",
+      "value": 0
+    },
+    {
+      "trait_type": "WIS",
+      "value": 4
+    },
+    {
+      "trait_type": "CHA",
+      "value": 0
+    }
+  ],
+  "properties": {
+    "schema": "AXO_GEAR_METADATA_DRAFT_V2",
+    "status": "DRAFT",
+    "ruleset": "AXO_PROGRESSION_V2",
+    "family": "wen-moon-slippers",
+    "setId": "degen-brawler",
+    "supplyStatus": "UNDECIDED",
+    "ownership": "NONE",
+    "artSha256": "e7d625d89d3fe890a98c1164604d57bada29d70b4b64eb839c8be442c609704a",
+    "wearableSha256": "30f99a241f09beb7cc38f6dab9b465ae88dec137dd8b84650b303c57b5abf8c4"
+  }
+}

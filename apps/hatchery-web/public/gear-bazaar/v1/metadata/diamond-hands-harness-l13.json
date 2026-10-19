@@ -1,0 +1,62 @@
+{
+  "name": "Diamond Hands Harness · LVL 13",
+  "description": "Conviction stitched into every strap. Requires Pet level 13.",
+  "image": "/gear-bazaar/v1/diamond-hands-harness.item.webp",
+  "attributes": [
+    {
+      "trait_type": "Slot",
+      "value": "body"
+    },
+    {
+      "trait_type": "Set",
+      "value": "Degen Brawler"
+    },
+    {
+      "trait_type": "Play style",
+      "value": "Brawler"
+    },
+    {
+      "trait_type": "Item Level",
+      "value": 13
+    },
+    {
+      "trait_type": "Minimum Pet Level",
+      "value": 13
+    },
+    {
+      "trait_type": "STR",
+      "value": 3
+    },
+    {
+      "trait_type": "DEX",
+      "value": 0
+    },
+    {
+      "trait_type": "CON",
+      "value": 2
+    },
+    {
+      "trait_type": "INT",
+      "value": 0
+    },
+    {
+      "trait_type": "WIS",
+      "value": 0
+    },
+    {
+      "trait_type": "CHA",
+      "value": 0
+    }
+  ],
+  "properties": {
+    "schema": "AXO_GEAR_METADATA_DRAFT_V2",
+    "status": "DRAFT",
+    "ruleset": "AXO_PROGRESSION_V2",
+    "family": "diamond-hands-harness",
+    "setId": "degen-brawler",
+    "supplyStatus": "UNDECIDED",
+    "ownership": "NONE",
+    "artSha256": "57fbbb084d48a06554ccdb5a8db1666010adac9a79a29111bea3a68378c12c2e",
+    "wearableSha256": "0acaeebebaf7dc14a3931aed44639f21b5fdf17581ec701a104015fd20a12ee4"
+  }
+}

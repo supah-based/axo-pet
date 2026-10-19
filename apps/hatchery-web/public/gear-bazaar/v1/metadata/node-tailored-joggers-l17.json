@@ -1,0 +1,62 @@
+{
+  "name": "Node Tailored Joggers · LVL 17",
+  "description": "Tapered legs and a flush waistband, following the AXO stance. Requires Pet level 17.",
+  "image": "/gear-anatomy/v3/node-tailored-joggers.item.webp",
+  "attributes": [
+    {
+      "trait_type": "Slot",
+      "value": "pants"
+    },
+    {
+      "trait_type": "Set",
+      "value": "Signal Skirmisher"
+    },
+    {
+      "trait_type": "Play style",
+      "value": "Skirmisher"
+    },
+    {
+      "trait_type": "Item Level",
+      "value": 17
+    },
+    {
+      "trait_type": "Minimum Pet Level",
+      "value": 17
+    },
+    {
+      "trait_type": "STR",
+      "value": 0
+    },
+    {
+      "trait_type": "DEX",
+      "value": 5
+    },
+    {
+      "trait_type": "CON",
+      "value": 4
+    },
+    {
+      "trait_type": "INT",
+      "value": 0
+    },
+    {
+      "trait_type": "WIS",
+      "value": 0
+    },
+    {
+      "trait_type": "CHA",
+      "value": 0
+    }
+  ],
+  "properties": {
+    "schema": "AXO_GEAR_METADATA_DRAFT_V2",
+    "status": "DRAFT",
+    "ruleset": "AXO_PROGRESSION_V2",
+    "family": "node-tailored-joggers",
+    "setId": "signal-skirmisher",
+    "supplyStatus": "UNDECIDED",
+    "ownership": "NONE",
+    "artSha256": "19ea53c8ed5014453e66433e8cfc4ba21910bbc06effda0e685450274ccdf0ca",
+    "wearableSha256": "1c678136ba84f1cb40a88c7e5f89ff9a54ecb95bf6cdba448a2205952dc0fb1c"
+  }
+}

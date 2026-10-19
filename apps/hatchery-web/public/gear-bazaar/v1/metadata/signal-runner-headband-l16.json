@@ -1,0 +1,62 @@
+{
+  "name": "Signal Runner Headband · LVL 16",
+  "description": "A pose-first signal runner headband aligned to the AXO forehead, with the front badge above its nose. Requires Pet level 16.",
+  "image": "/gear-anatomy/v3/signal-runner-headband.item.webp",
+  "attributes": [
+    {
+      "trait_type": "Slot",
+      "value": "head"
+    },
+    {
+      "trait_type": "Set",
+      "value": "Signal Skirmisher"
+    },
+    {
+      "trait_type": "Play style",
+      "value": "Skirmisher"
+    },
+    {
+      "trait_type": "Item Level",
+      "value": 16
+    },
+    {
+      "trait_type": "Minimum Pet Level",
+      "value": 16
+    },
+    {
+      "trait_type": "STR",
+      "value": 0
+    },
+    {
+      "trait_type": "DEX",
+      "value": 4
+    },
+    {
+      "trait_type": "CON",
+      "value": 0
+    },
+    {
+      "trait_type": "INT",
+      "value": 0
+    },
+    {
+      "trait_type": "WIS",
+      "value": 4
+    },
+    {
+      "trait_type": "CHA",
+      "value": 0
+    }
+  ],
+  "properties": {
+    "schema": "AXO_GEAR_METADATA_DRAFT_V2",
+    "status": "DRAFT",
+    "ruleset": "AXO_PROGRESSION_V2",
+    "family": "signal-runner-headband",
+    "setId": "signal-skirmisher",
+    "supplyStatus": "UNDECIDED",
+    "ownership": "NONE",
+    "artSha256": "2c3fb802cacf9c37099d64808d9674908863a7a39e195fc1b3ef109441900c20",
+    "wearableSha256": "3537ab851086abbe1981cef8440fa34abb0119603b03a0efcadf205fc96c5e2e"
+  }
+}

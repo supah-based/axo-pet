@@ -1,0 +1,62 @@
+{
+  "name": "404 Sleep Vest · LVL 17",
+  "description": "Uptime: immaculate. Sleep schedule: missing. Requires Pet level 17.",
+  "image": "/gear-bazaar/v1/sleep-404-vest.item.webp",
+  "attributes": [
+    {
+      "trait_type": "Slot",
+      "value": "body"
+    },
+    {
+      "trait_type": "Set",
+      "value": "Night Node Guardian"
+    },
+    {
+      "trait_type": "Play style",
+      "value": "Guardian"
+    },
+    {
+      "trait_type": "Item Level",
+      "value": 17
+    },
+    {
+      "trait_type": "Minimum Pet Level",
+      "value": 17
+    },
+    {
+      "trait_type": "STR",
+      "value": 4
+    },
+    {
+      "trait_type": "DEX",
+      "value": 0
+    },
+    {
+      "trait_type": "CON",
+      "value": 5
+    },
+    {
+      "trait_type": "INT",
+      "value": 0
+    },
+    {
+      "trait_type": "WIS",
+      "value": 0
+    },
+    {
+      "trait_type": "CHA",
+      "value": 0
+    }
+  ],
+  "properties": {
+    "schema": "AXO_GEAR_METADATA_DRAFT_V2",
+    "status": "DRAFT",
+    "ruleset": "AXO_PROGRESSION_V2",
+    "family": "sleep-404-vest",
+    "setId": "night-node-guardian",
+    "supplyStatus": "UNDECIDED",
+    "ownership": "NONE",
+    "artSha256": "9d766a6d715324f5e95f14a32324b1084dea90090431a3bb5c0c37c7a6d61c26",
+    "wearableSha256": "b28f0b66f3a9c5fb9fafe2c335e47855f2f7ab710c55bd67e2161a18eec83585"
+  }
+}

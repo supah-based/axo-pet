@@ -81,11 +81,11 @@ export function fitPlan(catalog,lineage,selection,profile={},sceneId=null,appear
   const garment=(item,parts,src,depth='front')=>{if(!src)throw new Error('Required garment depth surface unavailable.');return{kind:'garment',slot:item.slot,id:item.id,src,depth,parts:parts.map(part=>{const targets=resolveVertices(part,catalog.rig,profile,item.id);assertMesh(part,targets);return{...part,targets};})};};
   const layers=[];
   if(sceneId){const scene=catalog.scenes?.find(s=>s.id===sceneId);if(!scene)throw new Error('Unknown portrait scene.');layers.push({kind:'scene',id:scene.id,src:scene.asset});}
-  for(const item of selected.filter(i=>i.slot==='head'&&i.parts.some(p=>p.depth==='rear')))layers.push(garment(item,item.parts.filter(p=>p.depth==='rear'),item.wearable.rear?.asset,'rear'));
+  for(const slot of ['habitat','back','head'])for(const item of selected.filter(i=>i.slot===slot&&i.parts.some(p=>p.depth==='rear')))layers.push(garment(item,item.parts.filter(p=>p.depth==='rear'),item.wearable.rear?.asset,'rear'));
   layers.push({kind:'pet',src:selected.some(i=>i.slot==='footwear')?shown.closedFeet.asset:shown.asset,id:base.id});
-  for(const slot of ['footwear','pants','body','head','tool']) for(const item of selected.filter(i=>i.slot===slot)) {
-    layers.push(garment(item,item.parts.filter(p=>p.depth!=='rear'),item.wearable.asset));
-    if(slot==='head'){if(!shown.gills)throw new Error('Headwear gill foreground unavailable.');layers.push({kind:'foreground',id:'gills',src:shown.gills.asset});}
+  for(const slot of ['footwear','pants','body','face','head','tool','charm','companion','habitat','back']) {
+    for(const item of selected.filter(i=>i.slot===slot))layers.push(garment(item,item.parts.filter(p=>p.depth!=='rear'),item.wearable.asset));
+    if(slot==='head'&&selected.some(i=>['head','face'].includes(i.slot))){if(!shown.gills)throw new Error('Headwear gill foreground unavailable.');layers.push({kind:'foreground',id:'gills',src:shown.gills.asset});}
   }
   if(selected.some(i=>['body','pants'].includes(i.slot))) layers.push({kind:'foreground',id:'arm',src:shown.arm.asset});
   if(selected.some(i=>i.slot==='tool')) layers.push({kind:'foreground',id:'fingers',src:shown.fingers.asset});

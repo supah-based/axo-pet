@@ -1,0 +1,62 @@
+{
+  "name": "Night Node Joggers · LVL 20",
+  "description": "Comfort for a 24/7 network. Requires Pet level 20.",
+  "image": "/gear-bazaar/v1/night-node-joggers.item.webp",
+  "attributes": [
+    {
+      "trait_type": "Slot",
+      "value": "pants"
+    },
+    {
+      "trait_type": "Set",
+      "value": "Night Node Guardian"
+    },
+    {
+      "trait_type": "Play style",
+      "value": "Guardian"
+    },
+    {
+      "trait_type": "Item Level",
+      "value": 20
+    },
+    {
+      "trait_type": "Minimum Pet Level",
+      "value": 20
+    },
+    {
+      "trait_type": "STR",
+      "value": 0
+    },
+    {
+      "trait_type": "DEX",
+      "value": 6
+    },
+    {
+      "trait_type": "CON",
+      "value": 6
+    },
+    {
+      "trait_type": "INT",
+      "value": 0
+    },
+    {
+      "trait_type": "WIS",
+      "value": 0
+    },
+    {
+      "trait_type": "CHA",
+      "value": 0
+    }
+  ],
+  "properties": {
+    "schema": "AXO_GEAR_METADATA_DRAFT_V2",
+    "status": "DRAFT",
+    "ruleset": "AXO_PROGRESSION_V2",
+    "family": "night-node-joggers",
+    "setId": "night-node-guardian",
+    "supplyStatus": "UNDECIDED",
+    "ownership": "NONE",
+    "artSha256": "829a0fafd60975bf5610ec4c7cd6bbcb7b2a766c6f21453faff166bfa7555485",
+    "wearableSha256": "99cb7adf0ef05857676a92af3d13208a3c0acf47609fa2d5586e1a92a8c385a2"
+  }
+}

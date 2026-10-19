@@ -1,0 +1,54 @@
+{
+  "name": "Moon Landing Pad · LVL 16",
+  "description": "Reserved parking for the next cycle. Requires Pet level 16.",
+  "image": "/gear-bazaar/v1/moon-landing-pad.item.webp",
+  "attributes": [
+    {
+      "trait_type": "Slot",
+      "value": "habitat"
+    },
+    {
+      "trait_type": "Item Level",
+      "value": 16
+    },
+    {
+      "trait_type": "Minimum Pet Level",
+      "value": 16
+    },
+    {
+      "trait_type": "STR",
+      "value": 0
+    },
+    {
+      "trait_type": "DEX",
+      "value": 0
+    },
+    {
+      "trait_type": "CON",
+      "value": 4
+    },
+    {
+      "trait_type": "INT",
+      "value": 0
+    },
+    {
+      "trait_type": "WIS",
+      "value": 4
+    },
+    {
+      "trait_type": "CHA",
+      "value": 0
+    }
+  ],
+  "properties": {
+    "schema": "AXO_GEAR_METADATA_DRAFT_V2",
+    "status": "DRAFT",
+    "ruleset": "AXO_PROGRESSION_V2",
+    "family": "moon-landing-pad",
+    "setId": null,
+    "supplyStatus": "UNDECIDED",
+    "ownership": "NONE",
+    "artSha256": "299bf276d4f61720a8a5e5feb77e83d3add0cb07db0ae5756f9162c9ae51f843",
+    "wearableSha256": "76a0e1f4cdc61db3fc61437c7d6c033db613b8b77e2f9e21aa380e8b87f98ca4"
+  }
+}

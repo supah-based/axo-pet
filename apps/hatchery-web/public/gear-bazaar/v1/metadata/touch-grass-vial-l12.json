@@ -1,0 +1,62 @@
+{
+  "name": "Touch Grass Vial · LVL 12",
+  "description": "Portable proof of having been outside. Requires Pet level 12.",
+  "image": "/gear-bazaar/v1/touch-grass-vial.item.webp",
+  "attributes": [
+    {
+      "trait_type": "Slot",
+      "value": "charm"
+    },
+    {
+      "trait_type": "Set",
+      "value": "Whitehat Controller"
+    },
+    {
+      "trait_type": "Play style",
+      "value": "Controller"
+    },
+    {
+      "trait_type": "Item Level",
+      "value": 12
+    },
+    {
+      "trait_type": "Minimum Pet Level",
+      "value": 12
+    },
+    {
+      "trait_type": "STR",
+      "value": 0
+    },
+    {
+      "trait_type": "DEX",
+      "value": 0
+    },
+    {
+      "trait_type": "CON",
+      "value": 0
+    },
+    {
+      "trait_type": "INT",
+      "value": 0
+    },
+    {
+      "trait_type": "WIS",
+      "value": 2
+    },
+    {
+      "trait_type": "CHA",
+      "value": 2
+    }
+  ],
+  "properties": {
+    "schema": "AXO_GEAR_METADATA_DRAFT_V2",
+    "status": "DRAFT",
+    "ruleset": "AXO_PROGRESSION_V2",
+    "family": "touch-grass-vial",
+    "setId": "whitehat-controller",
+    "supplyStatus": "UNDECIDED",
+    "ownership": "NONE",
+    "artSha256": "c9d6d8bfb641a96d89f0a6b3c39ac65a687f884549ba9468ebccf7143eaff616",
+    "wearableSha256": "24e27df44245fbecacb9c1e0f43554021b9ad2937859a1ef577a64c627244f9c"
+  }
+}

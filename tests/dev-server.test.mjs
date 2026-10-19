@@ -32,6 +32,8 @@ test('source pages load while private source, state and host APIs stay unavailab
   assert.equal((await fetch(origin + '/gear-anatomy/v3/catalog.json')).status, 200);
   assert.equal((await fetch(origin + '/gear-anatomy/model.mjs')).status, 200);
   assert.equal((await fetch(origin + '/gear-anatomy/anatomy-rig-v3.json')).status, 404);
+  for (const path of ['/gear-progression.js','/gear-progression.css','/gear-bazaar/progression-v2.mjs','/gear-bazaar/gear-sets-v2.mjs','/gear-bazaar/v1/catalog.json','/gear-bazaar/v1/metadata/hexforge-vest-l20.json']) assert.equal((await fetch(origin + path)).status,200,path);
+  for (const path of ['/gear-bazaar/v1/source.json','/gear-bazaar/v1/metadata/private.txt','/gear-bazaar/v1/metadata/../package.json']) assert.equal((await fetch(origin + path)).status,404,path);
 });
 
 test('Arena accepts only same-origin synthetic identities and retains no disk store', async t => {

@@ -1,0 +1,62 @@
+{
+  "name": "Runesmith Trousers · LVL 10",
+  "description": "Reinforced for unexpected magical incidents. Requires Pet level 10.",
+  "image": "/gear-bazaar/v1/runesmith-trousers.item.webp",
+  "attributes": [
+    {
+      "trait_type": "Slot",
+      "value": "pants"
+    },
+    {
+      "trait_type": "Set",
+      "value": "Hexforge Arcanist"
+    },
+    {
+      "trait_type": "Play style",
+      "value": "Arcanist"
+    },
+    {
+      "trait_type": "Item Level",
+      "value": 10
+    },
+    {
+      "trait_type": "Minimum Pet Level",
+      "value": 10
+    },
+    {
+      "trait_type": "STR",
+      "value": 0
+    },
+    {
+      "trait_type": "DEX",
+      "value": 1
+    },
+    {
+      "trait_type": "CON",
+      "value": 0
+    },
+    {
+      "trait_type": "INT",
+      "value": 1
+    },
+    {
+      "trait_type": "WIS",
+      "value": 0
+    },
+    {
+      "trait_type": "CHA",
+      "value": 0
+    }
+  ],
+  "properties": {
+    "schema": "AXO_GEAR_METADATA_DRAFT_V2",
+    "status": "DRAFT",
+    "ruleset": "AXO_PROGRESSION_V2",
+    "family": "runesmith-trousers",
+    "setId": "hexforge-arcanist",
+    "supplyStatus": "UNDECIDED",
+    "ownership": "NONE",
+    "artSha256": "893d05f8c3383970b6b37aeaa56ed068850d9a9bd7b049602846c39ce5b204e4",
+    "wearableSha256": "2d1b549186bb9f5e1f8a5fe528dc8b21a51badd625068e42ac491c908f403544"
+  }
+}
