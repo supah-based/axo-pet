@@ -1,0 +1,59 @@
+{
+  "schema": "AXO_GEAR_PROGRESSION_SOURCE_REVIEW_V1",
+  "date": "2026-10-19",
+  "implementationSha": "35845dc6b579b61d00019112cf3465d77cdb8066",
+  "branch": "codex/gear-style-studio",
+  "pullRequest": "https://github.com/supah-based/axo-pet/pull/6",
+  "ci": {
+    "status": "PASS",
+    "jobs": [
+      "repository",
+      "contracts",
+      "arena"
+    ],
+    "url": "https://github.com/supah-based/axo-pet/actions/runs/39317645363"
+  },
+  "checks": {
+    "command": "npm run check",
+    "status": "PASS",
+    "tests": 216,
+    "repository": 3,
+    "schemasAndHost": 54,
+    "visual": 39,
+    "contracts": 41,
+    "arena": 76,
+    "preview": 3,
+    "solidityCompile": "PASS",
+    "solidityLint": {
+      "status": "PASS",
+      "errors": 0,
+      "warnings": 546
+    }
+  },
+  "collection": {
+    "families": 37,
+    "itemVariants": 407,
+    "sets": 6,
+    "setTiers": 66,
+    "minimumItemLevel": 10,
+    "maximumPetAndItemLevel": 20,
+    "totalXpAtLevel20": 17950,
+    "gearXp": false,
+    "catalogSha256": "5f3082f41eb2ed5ec37e105000059f2610fcd0b362637c6bfe5a8503536d04f0",
+    "policySha256": "01a433fb69e6f54eea6cd833c5f4ca7ea45ad3c75dc83d04e2d3e69719b41bb6",
+    "setPolicySha256": "b258e6ef09dff63c5f5c7b6c649942831a931111feac22d5b8406b1db66d0bd5"
+  },
+  "browser": [
+    "5/5 activation and 4/5 removal",
+    "level-20 lock for level-10 Pet",
+    "mixed 10/20 set resolves at level 10",
+    "individual and whole-outfit tier selection",
+    "Bazaar five-piece filtering and item stats",
+    "full-screen complete Gear portrait"
+  ],
+  "artAcceptance": "REVIEW_REQUIRED",
+  "balanceAcceptance": "REVIEW_REQUIRED",
+  "production": "NOT_DEPLOYED",
+  "nftIssuance": "NONE",
+  "axoAcknowledgment": "NOT_ACKNOWLEDGED"
+}
