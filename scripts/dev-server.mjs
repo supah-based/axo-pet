@@ -94,7 +94,7 @@ export function createDevServer({ liveAssets = true, fetchAsset = fetch } = {}) 
         if (/^\/gear-anatomy\/(?:model\.mjs|v3\/(?:catalog\.json|[a-z0-9_.-]+\.webp))$/.test(path)) {
           return send(req, res, 200, await readFile(resolve(publicRoot, '.' + path)), types[extname(path)]);
         }
-      if (/^\/gear-bazaar\/(?:(?:progression|gear-sets)-v2\.mjs|v1\/(?:catalog\.json|[a-z0-9_.-]+\.webp|metadata\/[a-z0-9-]+\.json))$/.test(path)) {
+      if (/^\/gear-bazaar\/(?:(?:progression|gear-sets)-v2\.mjs|wardrobe-filters\.mjs|v1\/(?:catalog\.json|[a-z0-9_.-]+\.webp|metadata\/[a-z0-9-]+\.json))$/.test(path)) {
         return send(req, res, 200, await readFile(resolve(publicRoot, '.' + path)), types[extname(path)]);
       }
       if (liveAssets && isPublicAsset(path)) {

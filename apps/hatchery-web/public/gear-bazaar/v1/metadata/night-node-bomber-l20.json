@@ -1,0 +1,54 @@
+{
+  "name": "Night Node Bomber · LVL 20",
+  "description": "Zip up. The node stays online. Requires Pet level 20.",
+  "image": "/gear-bazaar/v1/night-node-bomber.item.webp",
+  "attributes": [
+    {
+      "trait_type": "Slot",
+      "value": "body"
+    },
+    {
+      "trait_type": "Item Level",
+      "value": 20
+    },
+    {
+      "trait_type": "Minimum Pet Level",
+      "value": 20
+    },
+    {
+      "trait_type": "STR",
+      "value": 6
+    },
+    {
+      "trait_type": "DEX",
+      "value": 0
+    },
+    {
+      "trait_type": "CON",
+      "value": 6
+    },
+    {
+      "trait_type": "INT",
+      "value": 0
+    },
+    {
+      "trait_type": "WIS",
+      "value": 0
+    },
+    {
+      "trait_type": "CHA",
+      "value": 0
+    }
+  ],
+  "properties": {
+    "schema": "AXO_GEAR_METADATA_DRAFT_V2",
+    "status": "DRAFT",
+    "ruleset": "AXO_PROGRESSION_V2",
+    "family": "night-node-bomber",
+    "setId": null,
+    "supplyStatus": "UNDECIDED",
+    "ownership": "NONE",
+    "artSha256": "c5bb31f3fae7512e7142934fb02a4c0934cf38450d7389f9a6e67dc00f03af86",
+    "wearableSha256": "48e7f103370adeaaf20b145b6e0da3bae0c616487a9e9275eff6c7be18befce3"
+  }
+}

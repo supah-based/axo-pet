@@ -1,5 +1,7 @@
 # AXO anatomy atelier V3
 
+Current expansion: 43 families / 473 fixed level variants, six five-piece sets and six sleeve-aware covered tops. This guide records the nine-design foundation; see GEAR_PROGRESSION_V2.md, COVERED_TOPS_V1.md and the current AXO-006 handoff for the expanded catalog.
+
 The previous V1/V2 Gear fits were rejected by the operator. `/gear-studio` now opens a new, fixed-pose fitting foundation. The earlier 30 designs remain at `/gear-concepts` for design reference; their fits are not accepted. Bazaar examples use the new renderer and assets.
 
 This milestone contains nine designs and one five-piece reference outfit: Liquidity Crown (or Signal Runner Headband / Degen Node Cap), Degen Shell Vest, Node Tailored Joggers, Cyan Grip Boots and a handheld tool. Three newly authored tool choices are available: Banana Market Maker, Gas Fee Guzzler and Validator Spark. It is a small reference wardrobe to review before adapting the larger design archive.

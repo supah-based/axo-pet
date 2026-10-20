@@ -1,0 +1,54 @@
+{
+  "name": "Copium Club Hoodie · LVL 20",
+  "description": "A soft shell for another night of immaculate cope. Requires Pet level 20.",
+  "image": "/gear-bazaar/v1/copium-club-hoodie.item.webp",
+  "attributes": [
+    {
+      "trait_type": "Slot",
+      "value": "body"
+    },
+    {
+      "trait_type": "Item Level",
+      "value": 20
+    },
+    {
+      "trait_type": "Minimum Pet Level",
+      "value": 20
+    },
+    {
+      "trait_type": "STR",
+      "value": 6
+    },
+    {
+      "trait_type": "DEX",
+      "value": 0
+    },
+    {
+      "trait_type": "CON",
+      "value": 6
+    },
+    {
+      "trait_type": "INT",
+      "value": 0
+    },
+    {
+      "trait_type": "WIS",
+      "value": 0
+    },
+    {
+      "trait_type": "CHA",
+      "value": 0
+    }
+  ],
+  "properties": {
+    "schema": "AXO_GEAR_METADATA_DRAFT_V2",
+    "status": "DRAFT",
+    "ruleset": "AXO_PROGRESSION_V2",
+    "family": "copium-club-hoodie",
+    "setId": null,
+    "supplyStatus": "UNDECIDED",
+    "ownership": "NONE",
+    "artSha256": "f65475290744550b9e24170b45ad0cc77a27111d51e40cde20d07eb0fac1fa40",
+    "wearableSha256": "e7d99ab0e29fd3cc7b9aa50940dc58b9837defe62fbc048fd783bf857fcf7f6f"
+  }
+}

@@ -53,7 +53,7 @@ For example a complete LVL 10 Hexforge set adds INT +2, damage +2% and shield br
 - `AxoSoulPetV2`: candidate maximum 20, EIP-712 domain version 2, monotonic signed growth. It still trusts the authorized host signer for the XP-derived level.
 - `AxoPetGearV2`: immutable minimum equip level and stats per definition, ten slots, level-gated equip, capped loadouts and existing ERC-1155 balance locks. Level and stats are fixed; metadata edits cannot change them.
 - `arena-engine/src/progression-v2.mjs`: opt-in build/battle/resolve functions applying the actual stat and combat bonuses. Ordinary Arena service routes remain V1 until explicit host adoption. Client-supplied aggregate Gear stats are rejected by the V2 builder.
-- `/gear-studio`: 37 families, XP/tier controls, individual mixed-tier try-on, apply-tier action, six set presets, completion counts and missing pieces. Fit profiles remain geometry only.
+- `/gear-studio`: 43 families, XP/tier controls, individual mixed-tier try-on, apply-tier action, six set presets, completion counts and missing pieces. Fit profiles remain geometry only. The six covered tops and clothing filters are documented in COVERED_TOPS_V1.md and AXO-006; they preserve this progression and exact set membership.
 - `/marketplace`: six set cards, tier/slot/style/set/search filters, locked try-on gates and full portrait artwork. The existing verified market/API flow is separate and retains unavailable states. No listings or prices are fabricated.
 
 ## Art authoring and reproducibility
@@ -61,13 +61,13 @@ For example a complete LVL 10 Hexforge set adds INT +2, damage +2% and shield br
 The nine-design V3 foundation remains immutable as a regression reference. `bazaar-expansion-v1.source.json` adds 28 families. Fifteen new masters use the reference-Pet camera for garments, headwear and facewear, or the upright tool template. Only traced accessory surfaces survive extraction. Optical windows use real alpha holes, preserving painted lineage eyes. Back equipment and habitats draw behind the Pet; matching-base gills, arm and upper fingers restore foreground occlusion. All full Gear art is separate from worn art.
 
 ```sh
-node scripts/build-bazaar-collection.mjs --art <gear-progression/art>
+node scripts/build-bazaar-collection.mjs --art <gear-progression/art> --tops-art <gear-tops/art>
 npm run check
 npm --prefix packages/pet-contracts run compile
 npm --prefix packages/pet-contracts run lint:solidity
 ```
 
-Exact built-in image generation prompts are in `reviews/gear-progression-prompts.json`. Runtime WebPs, UV patterns, hashes and 407 draft metadata files are committed. Original authoring PNGs remain in the operator's `gear-progression/art` bundle; rebuilding from master images requires those inputs. Rendering the committed collection does not. `sync-bazaar-examples.mjs` keeps static examples and their try-on URLs aligned with the same catalog.
+Exact built-in image generation prompts are in `reviews/gear-progression-prompts.json` and `reviews/covered-tops-prompts.json`. Runtime WebPs, UV patterns, hashes and 473 draft metadata files are committed. Original authoring PNGs remain in the operator's `gear-progression/art` and `gear-tops/art` bundles; rebuilding from master images requires those inputs. Rendering the committed collection does not. `sync-bazaar-examples.mjs` keeps static examples and their try-on URLs aligned with the same catalog. AXO-005 records the original 37-family / 407-variant milestone; AXO-006 supplements it with six covered top families and 66 variants.
 
 ## Host, chain and release requirements
 

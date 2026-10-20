@@ -1,0 +1,54 @@
+{
+  "name": "Runebloom Overshirt · LVL 17",
+  "description": "Buttoned up for a little forbidden research. Requires Pet level 17.",
+  "image": "/gear-bazaar/v1/runebloom-overshirt.item.webp",
+  "attributes": [
+    {
+      "trait_type": "Slot",
+      "value": "body"
+    },
+    {
+      "trait_type": "Item Level",
+      "value": 17
+    },
+    {
+      "trait_type": "Minimum Pet Level",
+      "value": 17
+    },
+    {
+      "trait_type": "STR",
+      "value": 4
+    },
+    {
+      "trait_type": "DEX",
+      "value": 0
+    },
+    {
+      "trait_type": "CON",
+      "value": 5
+    },
+    {
+      "trait_type": "INT",
+      "value": 0
+    },
+    {
+      "trait_type": "WIS",
+      "value": 0
+    },
+    {
+      "trait_type": "CHA",
+      "value": 0
+    }
+  ],
+  "properties": {
+    "schema": "AXO_GEAR_METADATA_DRAFT_V2",
+    "status": "DRAFT",
+    "ruleset": "AXO_PROGRESSION_V2",
+    "family": "runebloom-overshirt",
+    "setId": null,
+    "supplyStatus": "UNDECIDED",
+    "ownership": "NONE",
+    "artSha256": "6217ff7373704951c8212f3f58e6a18a511270238ac5954f596fd878e0f4a434",
+    "wearableSha256": "bc3a69ce34496776d75490e42bb19ba49f8074b4f34e24519f44505bc42c9b20"
+  }
+}

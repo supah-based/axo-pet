@@ -1,0 +1,54 @@
+{
+  "name": "Whitehat Field Jacket · LVL 13",
+  "description": "Patched sleeves. Unpatched curiosity. Requires Pet level 13.",
+  "image": "/gear-bazaar/v1/whitehat-field-jacket.item.webp",
+  "attributes": [
+    {
+      "trait_type": "Slot",
+      "value": "body"
+    },
+    {
+      "trait_type": "Item Level",
+      "value": 13
+    },
+    {
+      "trait_type": "Minimum Pet Level",
+      "value": 13
+    },
+    {
+      "trait_type": "STR",
+      "value": 2
+    },
+    {
+      "trait_type": "DEX",
+      "value": 0
+    },
+    {
+      "trait_type": "CON",
+      "value": 3
+    },
+    {
+      "trait_type": "INT",
+      "value": 0
+    },
+    {
+      "trait_type": "WIS",
+      "value": 0
+    },
+    {
+      "trait_type": "CHA",
+      "value": 0
+    }
+  ],
+  "properties": {
+    "schema": "AXO_GEAR_METADATA_DRAFT_V2",
+    "status": "DRAFT",
+    "ruleset": "AXO_PROGRESSION_V2",
+    "family": "whitehat-field-jacket",
+    "setId": null,
+    "supplyStatus": "UNDECIDED",
+    "ownership": "NONE",
+    "artSha256": "355fb2ae26f4cbd1ba82c7b377832ec435233b5c0ebbd3f7178bf361d2d28f0a",
+    "wearableSha256": "5935119362cf02b4b6de3a27b62117bb22186ea55b0e180c2f743dc1c2136ce8"
+  }
+}

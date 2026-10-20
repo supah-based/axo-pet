@@ -78,6 +78,9 @@ export function fitPlan(catalog,lineage,selection,profile={},sceneId=null,appear
   const base=catalog.lineages.find(b=>b.id===lineage);if(!base) throw new Error('Unknown canonical Pet reference.');
   const shown=appearance?(base.styled||base):base;
   const selected=Object.entries(selection).filter(([,id])=>id).map(([slot,id])=>{const item=catalog.items.find(i=>i.id===id);if(!item||item.slot!==slot) throw new Error('Unknown or mismatched fitted item.');return item;});
+  const covered=selected.find(i=>i.slot==='body'&&i.occlusion==='SLEEVED_TOP_V1');
+  if(selected.some(i=>i.occlusion&&i.occlusion!=='SLEEVED_TOP_V1'))throw new Error('Unknown garment foreground policy.');
+  if(covered&&(!shown.head||!shown.hands))throw new Error('Covered top foreground unavailable.');
   const garment=(item,parts,src,depth='front')=>{if(!src)throw new Error('Required garment depth surface unavailable.');return{kind:'garment',slot:item.slot,id:item.id,src,depth,parts:parts.map(part=>{const targets=resolveVertices(part,catalog.rig,profile,item.id);assertMesh(part,targets);return{...part,targets};})};};
   const layers=[];
   if(sceneId){const scene=catalog.scenes?.find(s=>s.id===sceneId);if(!scene)throw new Error('Unknown portrait scene.');layers.push({kind:'scene',id:scene.id,src:scene.asset});}
@@ -85,9 +88,11 @@ export function fitPlan(catalog,lineage,selection,profile={},sceneId=null,appear
   layers.push({kind:'pet',src:selected.some(i=>i.slot==='footwear')?shown.closedFeet.asset:shown.asset,id:base.id});
   for(const slot of ['footwear','pants','body','face','head','tool','charm','companion','habitat','back']) {
     for(const item of selected.filter(i=>i.slot===slot))layers.push(garment(item,item.parts.filter(p=>p.depth!=='rear'),item.wearable.asset));
+    if(slot==='body'&&covered)layers.push({kind:'foreground',id:'covered-head',src:shown.head.asset});
     if(slot==='head'&&selected.some(i=>['head','face'].includes(i.slot))){if(!shown.gills)throw new Error('Headwear gill foreground unavailable.');layers.push({kind:'foreground',id:'gills',src:shown.gills.asset});}
   }
-  if(selected.some(i=>['body','pants'].includes(i.slot))) layers.push({kind:'foreground',id:'arm',src:shown.arm.asset});
+  if(covered)layers.push({kind:'foreground',id:'hands',src:shown.hands.asset});
+  else if(selected.some(i=>['body','pants'].includes(i.slot))) layers.push({kind:'foreground',id:'arm',src:shown.arm.asset});
   if(selected.some(i=>i.slot==='tool')) layers.push({kind:'foreground',id:'fingers',src:shown.fingers.asset});
   return layers;
 }

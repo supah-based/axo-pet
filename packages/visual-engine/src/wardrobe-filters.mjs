@@ -1,0 +1,2 @@
+export const GARMENT_FILTERS=Object.freeze([['all','All Gear'],['tops','Covered tops'],['sweater','Sweaters'],['hoodie','Hoodies'],['jacket','Jackets'],['shirt','Shirts & tees'],['vest','Vests']].map(Object.freeze));
+export function matchesWardrobeFilter(item,filter='all'){if(filter==='all')return true;if(filter==='tops')return item.slot==='body'&&item.coverage==='closed-torso';if(filter.startsWith('slot:'))return item.slot===filter.slice(5);return item.slot==='body'&&item.garmentType===filter;}
