@@ -87,12 +87,14 @@ export function fitPlan(catalog,lineage,selection,profile={},sceneId=null,appear
   for(const slot of ['habitat','back','head'])for(const item of selected.filter(i=>i.slot===slot&&i.parts.some(p=>p.depth==='rear')))layers.push(garment(item,item.parts.filter(p=>p.depth==='rear'),item.wearable.rear?.asset,'rear'));
   layers.push({kind:'pet',src:selected.some(i=>i.slot==='footwear')?shown.closedFeet.asset:shown.asset,id:base.id});
   for(const slot of ['footwear','pants','body','face','head','tool','charm','companion','habitat','back']) {
+    // Sleeves finish at the wrist. Restore the palm before the held object;
+    // only the existing upper fingers belong above its handle.
+    if(slot==='tool'&&covered)layers.push({kind:'foreground',id:'hands',src:shown.hands.asset});
     for(const item of selected.filter(i=>i.slot===slot))layers.push(garment(item,item.parts.filter(p=>p.depth!=='rear'),item.wearable.asset));
     if(slot==='body'&&covered)layers.push({kind:'foreground',id:'covered-head',src:shown.head.asset});
     if(slot==='head'&&selected.some(i=>['head','face'].includes(i.slot))){if(!shown.gills)throw new Error('Headwear gill foreground unavailable.');layers.push({kind:'foreground',id:'gills',src:shown.gills.asset});}
   }
-  if(covered)layers.push({kind:'foreground',id:'hands',src:shown.hands.asset});
-  else if(selected.some(i=>['body','pants'].includes(i.slot))) layers.push({kind:'foreground',id:'arm',src:shown.arm.asset});
+  if(!covered&&selected.some(i=>['body','pants'].includes(i.slot))) layers.push({kind:'foreground',id:'arm',src:shown.arm.asset});
   if(selected.some(i=>i.slot==='tool')) layers.push({kind:'foreground',id:'fingers',src:shown.fingers.asset});
   return layers;
 }
