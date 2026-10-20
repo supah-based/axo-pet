@@ -1,0 +1,59 @@
+{
+  "schema": "AXO_COVERED_TOPS_SOURCE_REVIEW_V1",
+  "date": "2026-10-20",
+  "implementationSha": "bfa7c9dd765da453ddc1aa45c8b579ebbcda72a3",
+  "branch": "codex/gear-style-studio",
+  "pullRequest": "https://github.com/supah-based/axo-pet/pull/6",
+  "ci": {
+    "status": "PASS",
+    "jobs": [
+      "repository",
+      "contracts",
+      "arena"
+    ],
+    "url": "https://github.com/supah-based/axo-pet/actions/runs/39472930374"
+  },
+  "checks": {
+    "command": "npm run check",
+    "status": "PASS",
+    "tests": 223,
+    "repository": 3,
+    "schemasAndHost": 54,
+    "visual": 46,
+    "contracts": 41,
+    "arena": 76,
+    "preview": 3
+  },
+  "collection": {
+    "families": 43,
+    "itemVariants": 473,
+    "newTopFamilies": 6,
+    "newTopVariants": 66,
+    "sets": 6,
+    "setTiers": 66,
+    "catalogSha256": "45876f1faa4cd538ca4de3a70d0551cce392256cd2d610d62e3e52242e51069b",
+    "coveredTopsSourceSha256": "c6689ffa921cc8a45806c5fef19ca19b6eef6d354e031f2ad600a1d4e5965684",
+    "rendererSha256": "4ae6be65c1ae2617c6665812916e3f1e8a6dea59ba0bac5f90c15e7418050c8b"
+  },
+  "browser": [
+    "corrected overshirt shoulder, raised wrist and hem on the selected Sapphire outfit",
+    "Studio jackets/shirts filters, try-on, X/Y/scale/rotation, Reset and lineage selection",
+    "separate full-item portraits",
+    "Bazaar six-top and two-jacket filters",
+    "level-20 items locked at Pet level 10 and unlocked at 17,950 XP",
+    "Gas Fee Guzzler crosses the palm with upper fingers above the handle"
+  ],
+  "foregroundPolicy": "SLEEVED_TOP_V1",
+  "releaseBundle": [
+    "renderer",
+    "expanded catalog",
+    "matching-base head/hands exports",
+    "wardrobe filter module"
+  ],
+  "progressionHandoff": "AXO-005",
+  "currentHandoff": "AXO-006",
+  "artAcceptance": "REVIEW_REQUIRED",
+  "production": "NOT_DEPLOYED",
+  "nftIssuance": "NONE",
+  "axoAcknowledgment": "NOT_ACKNOWLEDGED"
+}
