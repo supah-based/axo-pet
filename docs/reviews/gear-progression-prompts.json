@@ -1,0 +1,153 @@
+{
+  "method": "built-in image_gen",
+  "sourceStrategy": "Actual-pose wearable masters; only registered accessory pixels are retained. Complete object NFT art is independent.",
+  "items": [
+    {
+      "id": "diamond-hands-harness",
+      "slot": "body",
+      "design": "graphite ballistic fabric, chunky silver diamond clasps, teal crystal stitching and restrained gold straps; retain a fitted vest silhouette",
+      "prompt": "Use case: precise-object-edit. Image 1 is the exact edit target: a 1024x1536 dressed AXO wardrobe master. Image 2 is design/material reference ONLY for diamond-hands-harness. Restyle ONLY the vest as graphite ballistic fabric, chunky silver diamond clasps, teal crystal stitching and restrained gold straps; retain a fitted vest silhouette. Keep the exact existing garment camera, stance, perspective, location, size and silhouette including every neckline, armhole, waist, cuff and sole boundary. This is a surgical material/panel redesign on an already fitted pattern. Preserve all other clothes and every Pet pixel, face, skin, eyes, gills, raised hand, legs, tail and pose. No anatomy changes or repositioning. The material must remain detailed polished stylized 3D game art matching the master. No text, logos or extra props. No background or effects; true transparent canvas outside the character. Do not center the garment separately: retain its exact coordinates in the master. The resulting source is sampled only inside the fitted garment pattern.",
+      "refs": [
+        "degen-master.png",
+        "diamond-hands-harness.png"
+      ]
+    },
+    {
+      "id": "sleep-404-vest",
+      "slot": "body",
+      "design": "navy technical fabric, cyan circuit piping, compact integrated tech pockets, subtle tiny sleep-mode glyph hardware, clean late-night node-runner aesthetic",
+      "prompt": "Use case: precise-object-edit. Image 1 is the exact edit target: a 1024x1536 dressed AXO wardrobe master. Image 2 is design/material reference ONLY for sleep-404-vest. Restyle ONLY the vest as navy technical fabric, cyan circuit piping, compact integrated tech pockets, subtle tiny sleep-mode glyph hardware, clean late-night node-runner aesthetic. Keep the exact existing garment camera, stance, perspective, location, size and silhouette including every neckline, armhole, waist, cuff and sole boundary. This is a surgical material/panel redesign on an already fitted pattern. Preserve all other clothes and every Pet pixel, face, skin, eyes, gills, raised hand, legs, tail and pose. No anatomy changes or repositioning. The material must remain detailed polished stylized 3D game art matching the master. No text, logos or extra props. No background or effects; true transparent canvas outside the character. Do not center the garment separately: retain its exact coordinates in the master. The resulting source is sampled only inside the fitted garment pattern.",
+      "refs": [
+        "degen-master.png",
+        "sleep-404-vest.png"
+      ]
+    },
+    {
+      "id": "hexforge-vest",
+      "slot": "body",
+      "design": "aged brass details on deep plum leather, thin teal runic channels, etched geometric panels, painterly arcane industrial fantasy materials",
+      "prompt": "Use case: precise-object-edit. Image 1 is the exact edit target: a 1024x1536 dressed AXO wardrobe master. Image 2 is design/material reference ONLY for hexforge-vest. Restyle ONLY the vest as aged brass details on deep plum leather, thin teal runic channels, etched geometric panels, painterly arcane industrial fantasy materials. Keep the exact existing garment camera, stance, perspective, location, size and silhouette including every neckline, armhole, waist, cuff and sole boundary. This is a surgical material/panel redesign on an already fitted pattern. Preserve all other clothes and every Pet pixel, face, skin, eyes, gills, raised hand, legs, tail and pose. No anatomy changes or repositioning. The material must remain detailed polished stylized 3D game art matching the master. No text, logos or extra props. No background or effects; true transparent canvas outside the character. Do not center the garment separately: retain its exact coordinates in the master. The resulting source is sampled only inside the fitted garment pattern.",
+      "refs": [
+        "degen-master.png",
+        "hexforge-vest.png"
+      ]
+    },
+    {
+      "id": "diamond-cargo-shorts",
+      "slot": "pants",
+      "design": "graphite degen cargo SHORTS ending just above both knees, lime diamond stitching and small fitted cargo pockets; bare lower calves below the hems",
+      "prompt": "Use case: precise-object-edit. Image 1 is the exact edit target: a 1024x1536 dressed AXO wardrobe master. Image 2 is design/material reference ONLY for diamond-cargo-shorts. Restyle ONLY the trousers as graphite degen cargo SHORTS ending just above both knees, lime diamond stitching and small fitted cargo pockets; bare lower calves below the hems. Keep the exact existing garment camera, stance, perspective, location, size and silhouette above the new knee-length hems. This is a surgical material/panel redesign on an already fitted pattern. Preserve all other clothes and every Pet pixel, face, skin, eyes, gills, raised hand, legs, tail and pose. No anatomy changes or repositioning. The material must remain detailed polished stylized 3D game art matching the master. No text, logos or extra props. No background or effects; true transparent canvas outside the character. Do not center the garment separately: retain its exact coordinates in the master. The resulting source is sampled only inside the fitted garment pattern.",
+      "refs": [
+        "degen-master.png",
+        "diamond-cargo-shorts.png"
+      ]
+    },
+    {
+      "id": "night-node-joggers",
+      "slot": "pants",
+      "design": "midnight navy tapered technical joggers, cyan circuit seams, compact side pockets, same close ankle cuffs",
+      "prompt": "Use case: precise-object-edit. Image 1 is the exact edit target: a 1024x1536 dressed AXO wardrobe master. Image 2 is design/material reference ONLY for night-node-joggers. Restyle ONLY the trousers as midnight navy tapered technical joggers, cyan circuit seams, compact side pockets, same close ankle cuffs. Keep the exact existing garment camera, stance, perspective, location, size and silhouette including every neckline, armhole, waist, cuff and sole boundary. This is a surgical material/panel redesign on an already fitted pattern. Preserve all other clothes and every Pet pixel, face, skin, eyes, gills, raised hand, legs, tail and pose. No anatomy changes or repositioning. The material must remain detailed polished stylized 3D game art matching the master. No text, logos or extra props. No background or effects; true transparent canvas outside the character. Do not center the garment separately: retain its exact coordinates in the master. The resulting source is sampled only inside the fitted garment pattern.",
+      "refs": [
+        "degen-master.png",
+        "night-node-joggers.png"
+      ]
+    },
+    {
+      "id": "runesmith-trousers",
+      "slot": "pants",
+      "design": "deep violet tailored rune trousers, aged brass seam guards, tiny teal arcane embroidery, same ankle cuffs",
+      "prompt": "Use case: precise-object-edit. Image 1 is the exact edit target: a 1024x1536 dressed AXO wardrobe master. Image 2 is design/material reference ONLY for runesmith-trousers. Restyle ONLY the trousers as deep violet tailored rune trousers, aged brass seam guards, tiny teal arcane embroidery, same ankle cuffs. Keep the exact existing garment camera, stance, perspective, location, size and silhouette including every neckline, armhole, waist, cuff and sole boundary. This is a surgical material/panel redesign on an already fitted pattern. Preserve all other clothes and every Pet pixel, face, skin, eyes, gills, raised hand, legs, tail and pose. No anatomy changes or repositioning. The material must remain detailed polished stylized 3D game art matching the master. No text, logos or extra props. No background or effects; true transparent canvas outside the character. Do not center the garment separately: retain its exact coordinates in the master. The resulting source is sampled only inside the fitted garment pattern.",
+      "refs": [
+        "degen-master.png",
+        "runesmith-trousers.png"
+      ]
+    },
+    {
+      "id": "gas-boost-high-tops",
+      "slot": "footwear",
+      "design": "black/cyan futuristic high-top shoes with brass gas-meter dials and lime sole accents, same compact foot and ankle silhouette",
+      "prompt": "Use case: precise-object-edit. Image 1 is the exact edit target: a 1024x1536 dressed AXO wardrobe master. Image 2 is design/material reference ONLY for gas-boost-high-tops. Restyle ONLY the two shoes as black/cyan futuristic high-top shoes with brass gas-meter dials and lime sole accents, same compact foot and ankle silhouette. Keep the exact existing garment camera, stance, perspective, location, size and silhouette including every neckline, armhole, waist, cuff and sole boundary. This is a surgical material/panel redesign on an already fitted pattern. Preserve all other clothes and every Pet pixel, face, skin, eyes, gills, raised hand, legs, tail and pose. No anatomy changes or repositioning. The material must remain detailed polished stylized 3D game art matching the master. No text, logos or extra props. No background or effects; true transparent canvas outside the character. Do not center the garment separately: retain its exact coordinates in the master. The resulting source is sampled only inside the fitted garment pattern.",
+      "refs": [
+        "degen-master.png",
+        "gas-boost-high-tops.png"
+      ]
+    },
+    {
+      "id": "wen-moon-slippers",
+      "slot": "footwear",
+      "design": "plush purple slipper boots with small gold crescent-moon emblems, soft rounded toe, modest soles, no bunny ears, keep the same compact foot and ankle silhouette",
+      "prompt": "Use case: precise-object-edit. Image 1 is the exact edit target: a 1024x1536 dressed AXO wardrobe master. Image 2 is design/material reference ONLY for wen-moon-slippers. Restyle ONLY the two shoes as plush purple slipper boots with small gold crescent-moon emblems, soft rounded toe, modest soles, no bunny ears, keep the same compact foot and ankle silhouette. Keep the exact existing garment camera, stance, perspective, location, size and silhouette including every neckline, armhole, waist, cuff and sole boundary. This is a surgical material/panel redesign on an already fitted pattern. Preserve all other clothes and every Pet pixel, face, skin, eyes, gills, raised hand, legs, tail and pose. No anatomy changes or repositioning. The material must remain detailed polished stylized 3D game art matching the master. No text, logos or extra props. No background or effects; true transparent canvas outside the character. Do not center the garment separately: retain its exact coordinates in the master. The resulting source is sampled only inside the fitted garment pattern.",
+      "refs": [
+        "degen-master.png",
+        "wen-moon-slippers.png"
+      ]
+    },
+    {
+      "id": "hexstep-boots",
+      "slot": "footwear",
+      "design": "dark plum leather boots with aged brass toe guards, teal hexagonal accents and engraved rune seams, same compact foot and ankle silhouette",
+      "prompt": "Use case: precise-object-edit. Image 1 is the exact edit target: a 1024x1536 dressed AXO wardrobe master. Image 2 is design/material reference ONLY for hexstep-boots. Restyle ONLY the two shoes as dark plum leather boots with aged brass toe guards, teal hexagonal accents and engraved rune seams, same compact foot and ankle silhouette. Keep the exact existing garment camera, stance, perspective, location, size and silhouette including every neckline, armhole, waist, cuff and sole boundary. This is a surgical material/panel redesign on an already fitted pattern. Preserve all other clothes and every Pet pixel, face, skin, eyes, gills, raised hand, legs, tail and pose. No anatomy changes or repositioning. The material must remain detailed polished stylized 3D game art matching the master. No text, logos or extra props. No background or effects; true transparent canvas outside the character. Do not center the garment separately: retain its exact coordinates in the master. The resulting source is sampled only inside the fitted garment pattern.",
+      "refs": [
+        "degen-master.png",
+        "hexstep-boots.png"
+      ]
+    },
+    {
+      "id": "liquidation-crown",
+      "slot": "head",
+      "refs": [
+        "liquidity-crown-worn.png",
+        "liquidation-crown.png"
+      ],
+      "prompt": "Use case: precise-object-edit. Image 1 is the exact edit target, the AXO wearing a fitted gold/aqua crown. Image 2 is only design reference for Liquidation Crown. Change ONLY the crown materials and ornament design: black titanium and aged gold band, five red/green candlestick-chart crystal pillars with short wick details, a tiny gold liquidation bell on the front. Keep the EXACT outer silhouette, source coordinates, five point positions, front-band curve, camera yaw, badge position above the nose, and size of the crown from Image 1. No new geometry outside that contour. Preserve the complete Pet, all anatomy, eyes, gills, skin, pose and canvas pixel-for-pixel outside the crown. The hidden rear ring remains hidden, never draw an exposed oval hole. Polished stylized 3D game material. Full 1024x1536 transparent portrait. No text, scene or effects."
+    },
+    {
+      "id": "aetherpunk-circlet",
+      "slot": "head",
+      "refs": [
+        "signal-runner-headband-worn.png",
+        "aetherpunk-circlet.png"
+      ],
+      "prompt": "Use case: precise-object-edit. Image 1 is the exact edit target, an AXO wearing a snug fitted headband. Image 2 is design reference ONLY for Aetherpunk Circlet. Change ONLY the existing headband to an aged brass circlet with dark plum inlays, fine engraved filigree, small violet-blue diamond crystal in the same front badge position, thin teal energy channels. Retain EXACTLY the band's current outer silhouette, position, forehead curve, temple endpoints, camera perspective and size. It follows the head's turn toward image-right. No tall spikes and no floating rear ring. Preserve all Pet pixels outside the band: exact eyes, skin, gills, anatomy, pose, silhouette and 1024x1536 canvas. No repainting or resizing of the character. Actual transparent background, no scene, effects or text. Dense polished fantasy-tech 3D material."
+    },
+    {
+      "id": "exit-liquidity-trident",
+      "slot": "tool",
+      "refs": [
+        "validator-spark.png",
+        "exit-liquidity-trident.png"
+      ],
+      "prompt": "Use case: precise-object-edit. Image 1 is the exact upright handheld tool edit target at 1024x1536. Image 2 is design reference ONLY for Exit Liquidity Trident. Replace the top crystal instrument with a compact THREE-PRONG trident head in aged brass, teal liquidity-crystal tips and small violet runic inlays. Preserve Image 1's exact handle shape, grip rings, handle position, width, length, center axis and overall scale on the canvas. The object stands STRAIGHT UP for later registration to the hand. Keep the same near-front three-quarter camera and soft game collectible lighting. The three prongs fit inside the old head's outer bounds and remain fully visible. Full isolated complete object, real transparent background, no Pet or hand, no scene, shadow card, text or effects. Polished original arcane-degen fantasy tech; no franchise logos."
+    },
+    {
+      "id": "wen-moon-goggles",
+      "design": "chunky purple/black-chrome wraparound goggles, subtle gold crescent-moon corner badges and tiny rocket temple details, two LARGE CLEAR transparent lenses over the wide eyes",
+      "slot": "face",
+      "refs": [
+        "base-reference.png",
+        "wen-moon-goggles.png"
+      ],
+      "prompt": "Use case: identity-preserve. Image 1 is the exact 1024x1536 AXO Pet edit target. Image 2 is design/material reference only for wen-moon-goggles. Add chunky purple/black-chrome wraparound goggles, subtle gold crescent-moon corner badges and tiny rocket temple details, two LARGE CLEAR transparent lenses over the wide eyes, fitted snugly to the actual face and its shallow three-quarter camera facing slightly image-right. The image-left side is broader; the front center aligns to the snout rather than the skull midpoint. Keep exact eye centers, head size and head placement. Temples/straps wrap behind the head and disappear under the original gills. Lenses must remain visually clear with the existing eyes visible, not opaque painted eye replacements. Preserve every other Pet pixel, skin, gills, hand, body, pose and canvas; add only this accessory. No cap, clothes, tool, scene or effects. Modest compact scale following the face, no floating frame or huge side modules. Full reference Pet at unchanged coordinates. True transparent background, polished stylized 3D game materials, no text or logo."
+    },
+    {
+      "id": "packet-sniffer",
+      "design": "a thin black titanium and cyan cyber visor with one broad CLEAR transparent lens over the eyes, a tiny asymmetric packet sensor at the temple and restrained etched circuit marks",
+      "slot": "face",
+      "refs": [
+        "base-reference.png",
+        "packet-sniffer.png"
+      ],
+      "prompt": "Use case: identity-preserve. Image 1 is the exact 1024x1536 AXO Pet edit target. Image 2 is design/material reference only for packet-sniffer. Add a thin black titanium and cyan cyber visor with one broad CLEAR transparent lens over the eyes, a tiny asymmetric packet sensor at the temple and restrained etched circuit marks, fitted snugly to the actual face and its shallow three-quarter camera facing slightly image-right. The image-left side is broader; the front center aligns to the snout rather than the skull midpoint. Keep exact eye centers, head size and head placement. Temples/straps wrap behind the head and disappear under the original gills. Lenses must remain visually clear with the existing eyes visible, not opaque painted eye replacements. Preserve every other Pet pixel, skin, gills, hand, body, pose and canvas; add only this accessory. No cap, clothes, tool, scene or effects. Modest compact scale following the face, no floating frame or huge side modules. Full reference Pet at unchanged coordinates. True transparent background, polished stylized 3D game materials, no text or logo."
+    },
+    {
+      "id": "copium-respirator",
+      "design": "a compact dark graphite half-face respirator over ONLY the snout/mouth, two small teal filter canisters and restrained lime hardware. No lens or eye covering; both eyes remain fully clear",
+      "slot": "face",
+      "refs": [
+        "base-reference.png",
+        "copium-respirator.png"
+      ],
+      "prompt": "Use case: identity-preserve. Image 1 is the exact 1024x1536 AXO Pet edit target. Image 2 is design/material reference only for copium-respirator. Add a compact dark graphite half-face respirator over ONLY the snout/mouth, two small teal filter canisters and restrained lime hardware. No lens or eye covering; both eyes remain fully clear, fitted snugly to the actual face and its shallow three-quarter camera facing slightly image-right. The image-left side is broader; the front center aligns to the snout rather than the skull midpoint. Keep exact eye centers, head size and head placement. Temples/straps wrap behind the head and disappear under the original gills. Lenses must remain visually clear with the existing eyes visible, not opaque painted eye replacements. Preserve every other Pet pixel, skin, gills, hand, body, pose and canvas; add only this accessory. No cap, clothes, tool, scene or effects. Modest compact scale following the face, no floating frame or huge side modules. Full reference Pet at unchanged coordinates. True transparent background, polished stylized 3D game materials, no text or logo."
+    }
+  ]
+}

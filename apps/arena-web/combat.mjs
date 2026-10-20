@@ -1,15 +1,15 @@
 import {VERSION,LINEAGES,buildPet} from './catalog.mjs';
 const clamp=(v,min,max)=>Math.max(min,Math.min(max,v));
-export function newBattle(builds){return {version:VERSION,status:'playing',winner:null,round:1,log:[],fighters:builds.map(b=>{const build=buildPet(b);return {build,hp:build.maxHp,energy:6,charge:0,epicUsed:false,cooldowns:{},weak:0,buff:0,blocks:0,supports:0,hits:0,counters:0,streak:0,attacks:0,passiveUses:0,used:[],timeouts:0};})};}
+export function newBattle(builds,builder=buildPet){return {version:VERSION,status:'playing',winner:null,round:1,log:[],fighters:builds.map(b=>{const build=builder(b);return {build,hp:build.maxHp,energy:6,charge:0,epicUsed:false,cooldowns:{},weak:0,buff:0,blocks:0,supports:0,hits:0,counters:0,streak:0,attacks:0,passiveUses:0,used:[],timeouts:0};})};}
 export function epicCondition(f){switch(f.build.lineageId){case'emerald_sprout':return f.blocks>=2;case'sapphire_tide':return f.used.length>=3;case'amethyst_dream':return f.hits>=3;case'solar_peach':return f.streak>=2;case'rose_bloom':return f.supports>=2;case'midnight_mint':return f.counters>=2;default:return false;}}
 export function legalMoves(s,i){if(s.status!=='playing')return [];const f=s.fighters[i];return [...f.build.loadout,'recharge',...(f.build.epic?['epic']:[])].filter(k=>f.energy>=f.build.skills[k].cost&&!(f.cooldowns[k]>0)&&(k!=='epic'||f.charge>=100&&!f.epicUsed&&epicCondition(f)));}
 export function values(f,key){const m=f.build.skills[key],s=f.build.stats;const delta=(s[m.scale[0]]-10)*.65+(s[m.scale[1]]-10)*.35;
  return {...m,damage:m.power?Math.round(m.power+.35*(f.build.level-1)+.55*delta):0,shield:m.shield?Math.round(m.shield+.35*Math.max(0,s.CON-10)):0,heal:m.heal?Math.round(m.heal+.35*Math.max(0,s.WIS-10)):0};}
 export function timeoutWinner(s){const [a,b]=s.fighters;const delta=a.hp*b.build.maxHp-b.hp*a.build.maxHp;return delta===0?null:delta>0?0:1;}
 export function finishOnClock(s){const out=structuredClone(s);out.winner=timeoutWinner(out);out.status=out.winner===null?'draw':'won';out.reason='180_SECOND_LIMIT';return out;}
-export function resolve(s,choices){
+export function resolve(s,choices,{valueResolver=values}={}){
  if(!Array.isArray(choices)||choices.length!==2||choices.some((k,i)=>!legalMoves(s,i).includes(k)))throw Error('Illegal move');
- const out=structuredClone(s),f=out.fighters,m=f.map((v,i)=>values(v,choices[i]));
+ const out=structuredClone(s),f=out.fighters,m=f.map((v,i)=>valueResolver(v,choices[i]));
  const e=f.map(()=>({damage:0,blocked:0,healed:0,counter:0,recoil:0,storm:0}));
  const shields=m.map(v=>v.shield),nextBuff=[0,0],nextWeak=[0,0],remaining=[0,0];
  for(let i=0;i<2;i++){

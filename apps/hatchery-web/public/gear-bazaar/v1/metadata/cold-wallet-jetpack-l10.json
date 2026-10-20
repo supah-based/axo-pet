@@ -1,0 +1,62 @@
+{
+  "name": "Cold Wallet Jetpack · LVL 10",
+  "description": "Offline keys. Extremely online propulsion. Requires Pet level 10.",
+  "image": "/gear-bazaar/v1/cold-wallet-jetpack.item.webp",
+  "attributes": [
+    {
+      "trait_type": "Slot",
+      "value": "back"
+    },
+    {
+      "trait_type": "Set",
+      "value": "Whitehat Controller"
+    },
+    {
+      "trait_type": "Play style",
+      "value": "Controller"
+    },
+    {
+      "trait_type": "Item Level",
+      "value": 10
+    },
+    {
+      "trait_type": "Minimum Pet Level",
+      "value": 10
+    },
+    {
+      "trait_type": "STR",
+      "value": 0
+    },
+    {
+      "trait_type": "DEX",
+      "value": 0
+    },
+    {
+      "trait_type": "CON",
+      "value": 1
+    },
+    {
+      "trait_type": "INT",
+      "value": 0
+    },
+    {
+      "trait_type": "WIS",
+      "value": 0
+    },
+    {
+      "trait_type": "CHA",
+      "value": 1
+    }
+  ],
+  "properties": {
+    "schema": "AXO_GEAR_METADATA_DRAFT_V2",
+    "status": "DRAFT",
+    "ruleset": "AXO_PROGRESSION_V2",
+    "family": "cold-wallet-jetpack",
+    "setId": "whitehat-controller",
+    "supplyStatus": "UNDECIDED",
+    "ownership": "NONE",
+    "artSha256": "7e0cdad3aac05fac36a9dc067f50dd451e0f1d3090c03220374234ef917726f8",
+    "wearableSha256": "76a0e1f4cdc61db3fc61437c7d6c033db613b8b77e2f9e21aa380e8b87f98ca4"
+  }
+}

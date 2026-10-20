@@ -1,0 +1,62 @@
+{
+  "name": "Degen Shell Vest · LVL 11",
+  "description": "A compact utility vest, fitted panel by panel to the AXO torso. Requires Pet level 11.",
+  "image": "/gear-anatomy/v3/degen-shell-vest.item.webp",
+  "attributes": [
+    {
+      "trait_type": "Slot",
+      "value": "body"
+    },
+    {
+      "trait_type": "Set",
+      "value": "Signal Skirmisher"
+    },
+    {
+      "trait_type": "Play style",
+      "value": "Skirmisher"
+    },
+    {
+      "trait_type": "Item Level",
+      "value": 11
+    },
+    {
+      "trait_type": "Minimum Pet Level",
+      "value": 11
+    },
+    {
+      "trait_type": "STR",
+      "value": 0
+    },
+    {
+      "trait_type": "DEX",
+      "value": 2
+    },
+    {
+      "trait_type": "CON",
+      "value": 1
+    },
+    {
+      "trait_type": "INT",
+      "value": 0
+    },
+    {
+      "trait_type": "WIS",
+      "value": 0
+    },
+    {
+      "trait_type": "CHA",
+      "value": 0
+    }
+  ],
+  "properties": {
+    "schema": "AXO_GEAR_METADATA_DRAFT_V2",
+    "status": "DRAFT",
+    "ruleset": "AXO_PROGRESSION_V2",
+    "family": "degen-shell-vest",
+    "setId": "signal-skirmisher",
+    "supplyStatus": "UNDECIDED",
+    "ownership": "NONE",
+    "artSha256": "1cb71ef5dd8cfef38b84c7eb373b3c3de7ba67a2aeded745940c57bee980d2a0",
+    "wearableSha256": "e7417a3e082aa08d71bfed25682855ab44348d543277367d1e23a6db933394b7"
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "name": "Rug Pull Roll · LVL 19",
+  "description": "The only rug you should take with you. Requires Pet level 19.",
+  "image": "/gear-bazaar/v1/rug-pull-roll.item.webp",
+  "attributes": [
+    {
+      "trait_type": "Slot",
+      "value": "back"
+    },
+    {
+      "trait_type": "Set",
+      "value": "Moon Crew Support"
+    },
+    {
+      "trait_type": "Play style",
+      "value": "Support"
+    },
+    {
+      "trait_type": "Item Level",
+      "value": 19
+    },
+    {
+      "trait_type": "Minimum Pet Level",
+      "value": 19
+    },
+    {
+      "trait_type": "STR",
+      "value": 0
+    },
+    {
+      "trait_type": "DEX",
+      "value": 0
+    },
+    {
+      "trait_type": "CON",
+      "value": 5
+    },
+    {
+      "trait_type": "INT",
+      "value": 0
+    },
+    {
+      "trait_type": "WIS",
+      "value": 6
+    },
+    {
+      "trait_type": "CHA",
+      "value": 0
+    }
+  ],
+  "properties": {
+    "schema": "AXO_GEAR_METADATA_DRAFT_V2",
+    "status": "DRAFT",
+    "ruleset": "AXO_PROGRESSION_V2",
+    "family": "rug-pull-roll",
+    "setId": "moon-crew-support",
+    "supplyStatus": "UNDECIDED",
+    "ownership": "NONE",
+    "artSha256": "6b7758ad7f04266ab6723bdd13319b3d1452dffbe371390310c0c1d00dea4e3d",
+    "wearableSha256": "76a0e1f4cdc61db3fc61437c7d6c033db613b8b77e2f9e21aa380e8b87f98ca4"
+  }
+}

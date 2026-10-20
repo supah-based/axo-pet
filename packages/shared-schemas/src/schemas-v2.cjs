@@ -1,0 +1,5 @@
+'use strict';
+const legacy=require('./schemas.cjs'),{deepFreeze}=require('./protocol.cjs');
+const identity=structuredClone(legacy.petIdentity);identity.$id='urn:axo:pet:identity:v2';identity.properties.schemaVersion.const='AXO_PET_IDENTITY_V2';identity.properties.level.maximum=20;identity.properties.visualLevel={type:'integer',minimum:1,maximum:10};identity.properties.progressionVersion={const:'AXO_PROGRESSION_V2'};identity.required.push('visualLevel','progressionVersion');
+const gear=structuredClone(legacy.gearDefinition);gear.$id='urn:axo:pet:gear-definition:v2';gear.properties.schemaVersion.const='AXO_GEAR_DEFINITION_V2';gear.properties.slot.enum.push('pants','footwear');gear.properties.itemLevel={type:'integer',minimum:10,maximum:20};gear.properties.minimumPetLevel={type:'integer',minimum:10,maximum:20};gear.required.push('itemLevel','minimumPetLevel');for(const key of Object.keys(gear.properties.arenaStats.properties))gear.properties.arenaStats.properties[key].maximum=6;
+module.exports=deepFreeze({petIdentityV2:identity,gearDefinitionV2:gear});

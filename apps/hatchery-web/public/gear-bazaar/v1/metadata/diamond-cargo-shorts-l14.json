@@ -1,0 +1,62 @@
+{
+  "name": "Diamond Cargo Shorts · LVL 14",
+  "description": "Pockets for the bags you refuse to sell. Requires Pet level 14.",
+  "image": "/gear-bazaar/v1/diamond-cargo-shorts.item.webp",
+  "attributes": [
+    {
+      "trait_type": "Slot",
+      "value": "pants"
+    },
+    {
+      "trait_type": "Set",
+      "value": "Degen Brawler"
+    },
+    {
+      "trait_type": "Play style",
+      "value": "Brawler"
+    },
+    {
+      "trait_type": "Item Level",
+      "value": 14
+    },
+    {
+      "trait_type": "Minimum Pet Level",
+      "value": 14
+    },
+    {
+      "trait_type": "STR",
+      "value": 3
+    },
+    {
+      "trait_type": "DEX",
+      "value": 3
+    },
+    {
+      "trait_type": "CON",
+      "value": 0
+    },
+    {
+      "trait_type": "INT",
+      "value": 0
+    },
+    {
+      "trait_type": "WIS",
+      "value": 0
+    },
+    {
+      "trait_type": "CHA",
+      "value": 0
+    }
+  ],
+  "properties": {
+    "schema": "AXO_GEAR_METADATA_DRAFT_V2",
+    "status": "DRAFT",
+    "ruleset": "AXO_PROGRESSION_V2",
+    "family": "diamond-cargo-shorts",
+    "setId": "degen-brawler",
+    "supplyStatus": "UNDECIDED",
+    "ownership": "NONE",
+    "artSha256": "048bac6d601eb1d9bd70d445b0a0f1f816c9c0f0349c2951ee29cdc95509bb94",
+    "wearableSha256": "44eb43bcdb5000bd25d79aa8715a35d8ec5464b54e1c51af50b3a23949ac8c47"
+  }
+}

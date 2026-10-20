@@ -1,0 +1,282 @@
+{
+  "schema": "AXO_ANATOMY_RIG_V3",
+  "version": 3,
+  "poseId": "website-v5-adult-l10",
+  "canvas": [
+    1024,
+    1536
+  ],
+  "basePlacement": {
+    "x": 0,
+    "y": 256,
+    "width": 1024,
+    "height": 1024
+  },
+  "anchors": {
+    "crown": [
+      526,
+      127
+    ],
+    "eyeL": [
+      443,
+      334
+    ],
+    "eyeR": [
+      676,
+      317
+    ],
+    "neckL": [
+      462,
+      482
+    ],
+    "neckR": [
+      594,
+      476
+    ],
+    "shoulderL": [
+      414,
+      507
+    ],
+    "shoulderR": [
+      634,
+      486
+    ],
+    "armpitL": [
+      400,
+      592
+    ],
+    "armpitR": [
+      654,
+      565
+    ],
+    "waistL": [
+      387,
+      680
+    ],
+    "waistC": [
+      516,
+      697
+    ],
+    "waistR": [
+      657,
+      671
+    ],
+    "hipL": [
+      377,
+      749
+    ],
+    "hipR": [
+      679,
+      744
+    ],
+    "crotch": [
+      523,
+      795
+    ],
+    "kneeL": [
+      368,
+      823
+    ],
+    "kneeR": [
+      666,
+      822
+    ],
+    "ankleL": [
+      337,
+      889
+    ],
+    "ankleR": [
+      691,
+      892
+    ],
+    "toeLOuter": [
+      257,
+      925
+    ],
+    "toeLInner": [
+      429,
+      925
+    ],
+    "toeROuter": [
+      781,
+      928
+    ],
+    "toeRInner": [
+      616,
+      926
+    ],
+    "gripLow": [
+      850.85,
+      553.71
+    ],
+    "gripHigh": [
+      871.79,
+      479.55
+    ],
+    "fingerL": [
+      820,
+      467
+    ],
+    "fingerR": [
+      904,
+      465
+    ],
+    "spine": [
+      465,
+      566
+    ],
+    "charm": [
+      632,
+      705
+    ],
+    "floor": [
+      525,
+      951
+    ],
+    "sternum": [
+      520,
+      602
+    ],
+    "hemL": [
+      405,
+      694
+    ],
+    "hemR": [
+      661,
+      678
+    ],
+    "skullTop": [
+      526,
+      118
+    ],
+    "skullUpperL": [
+      389,
+      160
+    ],
+    "skullUpperR": [
+      652,
+      150
+    ],
+    "templeL": [
+      337,
+      286
+    ],
+    "templeR": [
+      734,
+      273
+    ],
+    "browL": [
+      412,
+      271
+    ],
+    "browC": [
+      559,
+      255
+    ],
+    "browR": [
+      690,
+      263
+    ],
+    "jawL": [
+      390,
+      433
+    ],
+    "jawR": [
+      705,
+      421
+    ],
+    "chin": [
+      550,
+      477
+    ],
+    "gillRootLT": [
+      337,
+      238
+    ],
+    "gillRootLM": [
+      310,
+      321
+    ],
+    "gillRootLB": [
+      332,
+      400
+    ],
+    "gillRootRT": [
+      724,
+      221
+    ],
+    "gillRootRM": [
+      743,
+      293
+    ],
+    "gillRootRB": [
+      735,
+      365
+    ],
+    "hoodNeckL": [
+      432,
+      486
+    ],
+    "hoodNeckR": [
+      632,
+      473
+    ],
+    "gripTopL": [
+      851.84,
+      476.22
+    ],
+    "gripTopR": [
+      892.38,
+      484.14
+    ],
+    "gripBottomR": [
+      871.44,
+      558.3
+    ],
+    "gripBottomL": [
+      830.26,
+      549.12
+    ],
+    "palmCenter": [
+      861,
+      516
+    ]
+  },
+  "surfaces": {
+    "body": "M420 507Q444 493 465 491L490 542Q528 565 563 535L591 480Q613 475 632 489L628 513Q614 533 621 553L650 579L661 678Q518 717 388 697L398 596Q411 551 420 507Z",
+    "pants": "M389 676Q514 701 658 666L690 751L736 881Q680 905 613 887L572 813Q552 800 526 795Q499 803 485 823L418 891Q356 900 303 873L358 777Z",
+    "footwear": "M326 849Q368 838 409 854L421 891Q442 914 435 944Q353 974 247 947Q237 926 260 912L302 892ZM621 850Q667 836 708 850L724 892Q766 897 795 928L790 950Q695 973 605 951Q592 927 613 902Z"
+  },
+  "notes": "Canonical square artwork is placed uniformly at y=256 in a 2:3 portrait. Anatomy coordinates remain in the original 1024-space. Each garment is authored on this mannequin, not a detached item rectangle.",
+  "head": {
+    "skull": "M526 118C425 109 353 166 327 248C304 325 339 410 402 448C474 490 591 491 675 450C743 415 759 340 738 256C717 172 634 120 526 118Z",
+    "notes": "Cap crown follows skull/temple curve; brim remains above the eyes. Crown uses a perspective band. Hood rear is below the head; front rim is separately occluded at gill roots and jaw. These are fitting patterns, not released NFT artwork.",
+    "gillForeground": [
+      "M335 211C289 210 249 169 239 109C234 70 219 55 211 81C194 76 184 88 189 113C209 198 265 250 331 261Z",
+      "M332 290C270 282 211 277 168 234L123 208L126 266C180 324 248 341 327 335Z",
+      "M345 375C276 383 214 393 163 350L133 354L140 403C200 448 286 446 349 419Z",
+      "M708 202C754 173 770 125 769 88L789 61L803 98C796 159 773 215 730 252Z",
+      "M735 275C775 266 810 239 827 208L850 198L849 245C824 288 791 309 742 317Z",
+      "M738 340C774 351 810 347 835 329L856 345L837 381C798 407 767 391 733 379Z"
+    ],
+    "patternImplementation": "Parametric headPattern() in packages/visual-engine/src/anatomy-fit.mjs; contours derive from skull, temple, jaw and neck anchors."
+  },
+  "hand": {
+    "socket": [
+      "gripTopL",
+      "gripTopR",
+      "gripBottomR",
+      "gripBottomL"
+    ],
+    "method": "Four-corner projective grip registration; 8x12 UV grid. Source camera must match the raised open palm. Fingers are original Pet pixels above the tool.",
+    "fingerForeground": [
+      "M807 442C795 448 793 463 797 477C800 486 812 492 825 489C837 487 842 478 839 466L837 455C831 439 816 434 807 442Z",
+      "M898 435C906 433 918 441 924 452C930 464 924 483 911 493C901 500 892 494 888 484C881 469 886 446 898 435Z",
+      "M899 483C913 478 930 490 929 506C928 521 914 537 898 537C887 537 880 526 880 516C880 503 886 490 899 483Z",
+      "M853 519C868 513 887 524 889 537C890 550 880 564 867 567C853 571 839 559 837 548C835 537 842 525 853 519Z"
+    ],
+    "angleFromPreviousDegrees": 18,
+    "note": "Grip leans toward the raised fingers. Original thumb/finger foreground stays fixed to the Pet; tune rotation per item around palmCenter.",
+    "thumbForeground": "Only the distal thumb and upper joint are in front of held tools. The rounded thenar/palm base remains on the Pet plane behind the handle."
+  }
+}

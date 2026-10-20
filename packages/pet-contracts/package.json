@@ -16,8 +16,8 @@
   "scripts": {
     "compile": "hardhat compile",
     "test": "hardhat test",
-    "test:contracts": "hardhat test test/deployment-config.test.js test/pet-gear-marketplace.test.js test/pet-gear.test.js test/soul-pet.test.js",
-    "lint:solidity": "solhint contracts/AxoSoulPet.sol contracts/AxoPetGear.sol contracts/AxoPetGearMarketplace.sol",
+    "test:contracts": "hardhat test test/deployment-config.test.js test/pet-gear-marketplace.test.js test/pet-gear.test.js test/soul-pet.test.js test/progression-v2.test.js",
+    "lint:solidity": "solhint contracts/AxoSoulPet.sol contracts/AxoPetGear.sol contracts/AxoPetGearMarketplace.sol contracts/AxoSoulPetV2.sol contracts/AxoPetGearV2.sol",
     "check": "npm run compile && npm run lint:solidity && npm test && npm audit --audit-level=high",
     "config:check": "node scripts/check-deployment-config.js",
     "deploy:plan": "npm run compile && node scripts/deployment-plan.js"

@@ -1,0 +1,62 @@
+{
+  "name": "Hexforge Vest · LVL 14",
+  "description": "A tiny workshop's worth of questionable power. Requires Pet level 14.",
+  "image": "/gear-bazaar/v1/hexforge-vest.item.webp",
+  "attributes": [
+    {
+      "trait_type": "Slot",
+      "value": "body"
+    },
+    {
+      "trait_type": "Set",
+      "value": "Hexforge Arcanist"
+    },
+    {
+      "trait_type": "Play style",
+      "value": "Arcanist"
+    },
+    {
+      "trait_type": "Item Level",
+      "value": 14
+    },
+    {
+      "trait_type": "Minimum Pet Level",
+      "value": 14
+    },
+    {
+      "trait_type": "STR",
+      "value": 0
+    },
+    {
+      "trait_type": "DEX",
+      "value": 0
+    },
+    {
+      "trait_type": "CON",
+      "value": 3
+    },
+    {
+      "trait_type": "INT",
+      "value": 3
+    },
+    {
+      "trait_type": "WIS",
+      "value": 0
+    },
+    {
+      "trait_type": "CHA",
+      "value": 0
+    }
+  ],
+  "properties": {
+    "schema": "AXO_GEAR_METADATA_DRAFT_V2",
+    "status": "DRAFT",
+    "ruleset": "AXO_PROGRESSION_V2",
+    "family": "hexforge-vest",
+    "setId": "hexforge-arcanist",
+    "supplyStatus": "UNDECIDED",
+    "ownership": "NONE",
+    "artSha256": "c39cd5dc43bf70be71ba0c0d9c255f27a37361ca3af981b5beba6fddfcc7509d",
+    "wearableSha256": "3d30e61c775c43f488e54c40cd2b90ddc7ce81f9e05a1fbf94128dbc42d0adba"
+  }
+}

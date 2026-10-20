@@ -1,0 +1,62 @@
+{
+  "name": "Wen Moon Goggles · LVL 17",
+  "description": "Moon in both lenses. Chart still sideways. Requires Pet level 17.",
+  "image": "/gear-bazaar/v1/wen-moon-goggles.item.webp",
+  "attributes": [
+    {
+      "trait_type": "Slot",
+      "value": "face"
+    },
+    {
+      "trait_type": "Set",
+      "value": "Moon Crew Support"
+    },
+    {
+      "trait_type": "Play style",
+      "value": "Support"
+    },
+    {
+      "trait_type": "Item Level",
+      "value": 17
+    },
+    {
+      "trait_type": "Minimum Pet Level",
+      "value": 17
+    },
+    {
+      "trait_type": "STR",
+      "value": 0
+    },
+    {
+      "trait_type": "DEX",
+      "value": 0
+    },
+    {
+      "trait_type": "CON",
+      "value": 0
+    },
+    {
+      "trait_type": "INT",
+      "value": 4
+    },
+    {
+      "trait_type": "WIS",
+      "value": 5
+    },
+    {
+      "trait_type": "CHA",
+      "value": 0
+    }
+  ],
+  "properties": {
+    "schema": "AXO_GEAR_METADATA_DRAFT_V2",
+    "status": "DRAFT",
+    "ruleset": "AXO_PROGRESSION_V2",
+    "family": "wen-moon-goggles",
+    "setId": "moon-crew-support",
+    "supplyStatus": "UNDECIDED",
+    "ownership": "NONE",
+    "artSha256": "f7d63939bcdc263d6db19721ab8aff6fd1f51979697e3da85d75b73811b31a91",
+    "wearableSha256": "b556a87917de33f442343c37024f80b1ce2c965a27f31a90812aece5337dd6bf"
+  }
+}

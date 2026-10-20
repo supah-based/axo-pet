@@ -1,0 +1,62 @@
+{
+  "name": "Exit Liquidity Trident · LVL 18",
+  "description": "Summons liquidity. Exit route sold separately. Requires Pet level 18.",
+  "image": "/gear-bazaar/v1/exit-liquidity-trident.item.webp",
+  "attributes": [
+    {
+      "trait_type": "Slot",
+      "value": "tool"
+    },
+    {
+      "trait_type": "Set",
+      "value": "Hexforge Arcanist"
+    },
+    {
+      "trait_type": "Play style",
+      "value": "Arcanist"
+    },
+    {
+      "trait_type": "Item Level",
+      "value": 18
+    },
+    {
+      "trait_type": "Minimum Pet Level",
+      "value": 18
+    },
+    {
+      "trait_type": "STR",
+      "value": 5
+    },
+    {
+      "trait_type": "DEX",
+      "value": 0
+    },
+    {
+      "trait_type": "CON",
+      "value": 0
+    },
+    {
+      "trait_type": "INT",
+      "value": 5
+    },
+    {
+      "trait_type": "WIS",
+      "value": 0
+    },
+    {
+      "trait_type": "CHA",
+      "value": 0
+    }
+  ],
+  "properties": {
+    "schema": "AXO_GEAR_METADATA_DRAFT_V2",
+    "status": "DRAFT",
+    "ruleset": "AXO_PROGRESSION_V2",
+    "family": "exit-liquidity-trident",
+    "setId": "hexforge-arcanist",
+    "supplyStatus": "UNDECIDED",
+    "ownership": "NONE",
+    "artSha256": "e801ec422170766d958fee30a174cfc8d329f4cb14ca4c119192b932c27f05b5",
+    "wearableSha256": "cbf73744bf8c1731d54c0ec5db009c1e2728d4e59c7ffa14ecab7248f843fb00"
+  }
+}

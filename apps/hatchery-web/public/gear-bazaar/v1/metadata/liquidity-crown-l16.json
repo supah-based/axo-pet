@@ -1,0 +1,62 @@
+{
+  "name": "Liquidity Crown · LVL 16",
+  "description": "A pose-first liquidity crown aligned to the AXO forehead, with the front badge above its nose. Requires Pet level 16.",
+  "image": "/gear-anatomy/v3/liquidity-crown.item.webp",
+  "attributes": [
+    {
+      "trait_type": "Slot",
+      "value": "head"
+    },
+    {
+      "trait_type": "Set",
+      "value": "Moon Crew Support"
+    },
+    {
+      "trait_type": "Play style",
+      "value": "Support"
+    },
+    {
+      "trait_type": "Item Level",
+      "value": 16
+    },
+    {
+      "trait_type": "Minimum Pet Level",
+      "value": 16
+    },
+    {
+      "trait_type": "STR",
+      "value": 0
+    },
+    {
+      "trait_type": "DEX",
+      "value": 0
+    },
+    {
+      "trait_type": "CON",
+      "value": 0
+    },
+    {
+      "trait_type": "INT",
+      "value": 0
+    },
+    {
+      "trait_type": "WIS",
+      "value": 4
+    },
+    {
+      "trait_type": "CHA",
+      "value": 4
+    }
+  ],
+  "properties": {
+    "schema": "AXO_GEAR_METADATA_DRAFT_V2",
+    "status": "DRAFT",
+    "ruleset": "AXO_PROGRESSION_V2",
+    "family": "liquidity-crown",
+    "setId": "moon-crew-support",
+    "supplyStatus": "UNDECIDED",
+    "ownership": "NONE",
+    "artSha256": "bd1ae35f434f577cf04b4724ec0e2fd228f7bc760b55d30b294b0928b59e7901",
+    "wearableSha256": "219a5b5d65f62da9f78c03f0f71209daae5b5a0acb03b0f8eb13772e0df26f01"
+  }
+}

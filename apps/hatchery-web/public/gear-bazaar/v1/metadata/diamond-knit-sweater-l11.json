@@ -1,0 +1,54 @@
+{
+  "name": "Diamond Knit Sweater · LVL 11",
+  "description": "Soft diamond cables. Still holding through sweater weather. Requires Pet level 11.",
+  "image": "/gear-bazaar/v1/diamond-knit-sweater.item.webp",
+  "attributes": [
+    {
+      "trait_type": "Slot",
+      "value": "body"
+    },
+    {
+      "trait_type": "Item Level",
+      "value": 11
+    },
+    {
+      "trait_type": "Minimum Pet Level",
+      "value": 11
+    },
+    {
+      "trait_type": "STR",
+      "value": 1
+    },
+    {
+      "trait_type": "DEX",
+      "value": 0
+    },
+    {
+      "trait_type": "CON",
+      "value": 2
+    },
+    {
+      "trait_type": "INT",
+      "value": 0
+    },
+    {
+      "trait_type": "WIS",
+      "value": 0
+    },
+    {
+      "trait_type": "CHA",
+      "value": 0
+    }
+  ],
+  "properties": {
+    "schema": "AXO_GEAR_METADATA_DRAFT_V2",
+    "status": "DRAFT",
+    "ruleset": "AXO_PROGRESSION_V2",
+    "family": "diamond-knit-sweater",
+    "setId": null,
+    "supplyStatus": "UNDECIDED",
+    "ownership": "NONE",
+    "artSha256": "91850bc7bb7f7f80c743f0d04c76686453731e9e5d6342eb51b53194317c6dd8",
+    "wearableSha256": "e78e1522836d980f81dff8ab0e06191cd323174479a21cef15e9623b22fe9b61"
+  }
+}

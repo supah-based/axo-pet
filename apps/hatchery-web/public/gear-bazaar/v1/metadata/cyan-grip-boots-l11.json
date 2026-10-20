@@ -1,0 +1,62 @@
+{
+  "name": "Cyan Grip Boots · LVL 11",
+  "description": "Independent left and right boots, mapped to ankles and toes. Requires Pet level 11.",
+  "image": "/gear-anatomy/v3/cyan-grip-boots.item.webp",
+  "attributes": [
+    {
+      "trait_type": "Slot",
+      "value": "footwear"
+    },
+    {
+      "trait_type": "Set",
+      "value": "Signal Skirmisher"
+    },
+    {
+      "trait_type": "Play style",
+      "value": "Skirmisher"
+    },
+    {
+      "trait_type": "Item Level",
+      "value": 11
+    },
+    {
+      "trait_type": "Minimum Pet Level",
+      "value": 11
+    },
+    {
+      "trait_type": "STR",
+      "value": 1
+    },
+    {
+      "trait_type": "DEX",
+      "value": 2
+    },
+    {
+      "trait_type": "CON",
+      "value": 0
+    },
+    {
+      "trait_type": "INT",
+      "value": 0
+    },
+    {
+      "trait_type": "WIS",
+      "value": 0
+    },
+    {
+      "trait_type": "CHA",
+      "value": 0
+    }
+  ],
+  "properties": {
+    "schema": "AXO_GEAR_METADATA_DRAFT_V2",
+    "status": "DRAFT",
+    "ruleset": "AXO_PROGRESSION_V2",
+    "family": "cyan-grip-boots",
+    "setId": "signal-skirmisher",
+    "supplyStatus": "UNDECIDED",
+    "ownership": "NONE",
+    "artSha256": "e1028493ba76aad50ffd9e6c56a8a74db59a2ae3926c097a8ae11ca4c1b1522a",
+    "wearableSha256": "d09b8015652bc4d25950cee7a95c07d85ae8f840efa11c089efa8b2c4e58dc00"
+  }
+}

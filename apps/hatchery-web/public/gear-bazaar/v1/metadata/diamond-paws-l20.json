@@ -1,0 +1,62 @@
+{
+  "name": "Diamond Paws · LVL 20",
+  "description": "A little sparkle for unwavering paws. Requires Pet level 20.",
+  "image": "/gear-bazaar/v1/diamond-paws.item.webp",
+  "attributes": [
+    {
+      "trait_type": "Slot",
+      "value": "charm"
+    },
+    {
+      "trait_type": "Set",
+      "value": "Moon Crew Support"
+    },
+    {
+      "trait_type": "Play style",
+      "value": "Support"
+    },
+    {
+      "trait_type": "Item Level",
+      "value": 20
+    },
+    {
+      "trait_type": "Minimum Pet Level",
+      "value": 20
+    },
+    {
+      "trait_type": "STR",
+      "value": 0
+    },
+    {
+      "trait_type": "DEX",
+      "value": 0
+    },
+    {
+      "trait_type": "CON",
+      "value": 0
+    },
+    {
+      "trait_type": "INT",
+      "value": 0
+    },
+    {
+      "trait_type": "WIS",
+      "value": 6
+    },
+    {
+      "trait_type": "CHA",
+      "value": 6
+    }
+  ],
+  "properties": {
+    "schema": "AXO_GEAR_METADATA_DRAFT_V2",
+    "status": "DRAFT",
+    "ruleset": "AXO_PROGRESSION_V2",
+    "family": "diamond-paws",
+    "setId": "moon-crew-support",
+    "supplyStatus": "UNDECIDED",
+    "ownership": "NONE",
+    "artSha256": "4fc33684b1af1568e5eda69e30ac9699b0c2cfa787a1b978c731c68be5433b6c",
+    "wearableSha256": "bf2c8f58a824da268b8f0ae166fe69eddd7f90558d8de3740f2700f4ddeb494b"
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "name": "Gas Fee Guzzler · LVL 11",
+  "description": "A tiny gas-meter siphon for monumental fees. Registered to the palm in perspective. Requires Pet level 11.",
+  "image": "/gear-anatomy/v3/gas-fee-guzzler.item.webp",
+  "attributes": [
+    {
+      "trait_type": "Slot",
+      "value": "tool"
+    },
+    {
+      "trait_type": "Set",
+      "value": "Whitehat Controller"
+    },
+    {
+      "trait_type": "Play style",
+      "value": "Controller"
+    },
+    {
+      "trait_type": "Item Level",
+      "value": 11
+    },
+    {
+      "trait_type": "Minimum Pet Level",
+      "value": 11
+    },
+    {
+      "trait_type": "STR",
+      "value": 0
+    },
+    {
+      "trait_type": "DEX",
+      "value": 0
+    },
+    {
+      "trait_type": "CON",
+      "value": 0
+    },
+    {
+      "trait_type": "INT",
+      "value": 1
+    },
+    {
+      "trait_type": "WIS",
+      "value": 0
+    },
+    {
+      "trait_type": "CHA",
+      "value": 2
+    }
+  ],
+  "properties": {
+    "schema": "AXO_GEAR_METADATA_DRAFT_V2",
+    "status": "DRAFT",
+    "ruleset": "AXO_PROGRESSION_V2",
+    "family": "gas-fee-guzzler",
+    "setId": "whitehat-controller",
+    "supplyStatus": "UNDECIDED",
+    "ownership": "NONE",
+    "artSha256": "6e5811bec25634ee0df801a873076e7087c1a183e7a9614742abed923a3f63a3",
+    "wearableSha256": "001eb46f8a384c1b5e379b23fca1c702d7e898873ac83b5d1ed066fd70228a0a"
+  }
+}

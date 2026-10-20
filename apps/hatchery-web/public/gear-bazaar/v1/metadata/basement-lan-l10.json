@@ -1,0 +1,54 @@
+{
+  "name": "Basement LAN · LVL 10",
+  "description": "RGB is a stat. We checked. Requires Pet level 10.",
+  "image": "/gear-bazaar/v1/basement-lan.item.webp",
+  "attributes": [
+    {
+      "trait_type": "Slot",
+      "value": "habitat"
+    },
+    {
+      "trait_type": "Item Level",
+      "value": 10
+    },
+    {
+      "trait_type": "Minimum Pet Level",
+      "value": 10
+    },
+    {
+      "trait_type": "STR",
+      "value": 0
+    },
+    {
+      "trait_type": "DEX",
+      "value": 0
+    },
+    {
+      "trait_type": "CON",
+      "value": 1
+    },
+    {
+      "trait_type": "INT",
+      "value": 0
+    },
+    {
+      "trait_type": "WIS",
+      "value": 1
+    },
+    {
+      "trait_type": "CHA",
+      "value": 0
+    }
+  ],
+  "properties": {
+    "schema": "AXO_GEAR_METADATA_DRAFT_V2",
+    "status": "DRAFT",
+    "ruleset": "AXO_PROGRESSION_V2",
+    "family": "basement-lan",
+    "setId": null,
+    "supplyStatus": "UNDECIDED",
+    "ownership": "NONE",
+    "artSha256": "9b4197e14b3865be2c227d79f2e1ffaece52ae679ce6c829ad4faf8443f126c8",
+    "wearableSha256": "76a0e1f4cdc61db3fc61437c7d6c033db613b8b77e2f9e21aa380e8b87f98ca4"
+  }
+}

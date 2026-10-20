@@ -1,0 +1,62 @@
+{
+  "name": "Gas Boost High Tops · LVL 20",
+  "description": "Fast feet. Unreasonable gas consumption. Requires Pet level 20.",
+  "image": "/gear-bazaar/v1/gas-boost-high-tops.item.webp",
+  "attributes": [
+    {
+      "trait_type": "Slot",
+      "value": "footwear"
+    },
+    {
+      "trait_type": "Set",
+      "value": "Night Node Guardian"
+    },
+    {
+      "trait_type": "Play style",
+      "value": "Guardian"
+    },
+    {
+      "trait_type": "Item Level",
+      "value": 20
+    },
+    {
+      "trait_type": "Minimum Pet Level",
+      "value": 20
+    },
+    {
+      "trait_type": "STR",
+      "value": 6
+    },
+    {
+      "trait_type": "DEX",
+      "value": 0
+    },
+    {
+      "trait_type": "CON",
+      "value": 6
+    },
+    {
+      "trait_type": "INT",
+      "value": 0
+    },
+    {
+      "trait_type": "WIS",
+      "value": 0
+    },
+    {
+      "trait_type": "CHA",
+      "value": 0
+    }
+  ],
+  "properties": {
+    "schema": "AXO_GEAR_METADATA_DRAFT_V2",
+    "status": "DRAFT",
+    "ruleset": "AXO_PROGRESSION_V2",
+    "family": "gas-boost-high-tops",
+    "setId": "night-node-guardian",
+    "supplyStatus": "UNDECIDED",
+    "ownership": "NONE",
+    "artSha256": "df9a4aa37205263c038d91391f1208d069d08b9fcbeedd087a59e88f4590e1a0",
+    "wearableSha256": "fb1feaac05d0a25afc2868fad1a08fafc627662a10f0c17eaf0dd2d616436229"
+  }
+}

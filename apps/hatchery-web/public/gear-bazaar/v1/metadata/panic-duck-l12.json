@@ -1,0 +1,62 @@
+{
+  "name": "Panic Duck · LVL 12",
+  "description": "Your emotional support circuit breaker. Requires Pet level 12.",
+  "image": "/gear-bazaar/v1/panic-duck.item.webp",
+  "attributes": [
+    {
+      "trait_type": "Slot",
+      "value": "companion"
+    },
+    {
+      "trait_type": "Set",
+      "value": "Moon Crew Support"
+    },
+    {
+      "trait_type": "Play style",
+      "value": "Support"
+    },
+    {
+      "trait_type": "Item Level",
+      "value": 12
+    },
+    {
+      "trait_type": "Minimum Pet Level",
+      "value": 12
+    },
+    {
+      "trait_type": "STR",
+      "value": 0
+    },
+    {
+      "trait_type": "DEX",
+      "value": 0
+    },
+    {
+      "trait_type": "CON",
+      "value": 0
+    },
+    {
+      "trait_type": "INT",
+      "value": 0
+    },
+    {
+      "trait_type": "WIS",
+      "value": 2
+    },
+    {
+      "trait_type": "CHA",
+      "value": 2
+    }
+  ],
+  "properties": {
+    "schema": "AXO_GEAR_METADATA_DRAFT_V2",
+    "status": "DRAFT",
+    "ruleset": "AXO_PROGRESSION_V2",
+    "family": "panic-duck",
+    "setId": "moon-crew-support",
+    "supplyStatus": "UNDECIDED",
+    "ownership": "NONE",
+    "artSha256": "ba5c7c5cb0f6f3479f70bb3cc028bc3040d059ef3a19d8e487ed45a267047cba",
+    "wearableSha256": "1621a47e1ba7d5e918f17649dcfac1226fab923069c50f7504a70d279ccf8292"
+  }
+}

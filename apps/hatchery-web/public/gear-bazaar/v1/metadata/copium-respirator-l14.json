@@ -1,0 +1,62 @@
+{
+  "name": "Copium Respirator · LVL 14",
+  "description": "Premium-grade hopium. Refill after every candle. Requires Pet level 14.",
+  "image": "/gear-bazaar/v1/copium-respirator.item.webp",
+  "attributes": [
+    {
+      "trait_type": "Slot",
+      "value": "face"
+    },
+    {
+      "trait_type": "Set",
+      "value": "Whitehat Controller"
+    },
+    {
+      "trait_type": "Play style",
+      "value": "Controller"
+    },
+    {
+      "trait_type": "Item Level",
+      "value": 14
+    },
+    {
+      "trait_type": "Minimum Pet Level",
+      "value": 14
+    },
+    {
+      "trait_type": "STR",
+      "value": 0
+    },
+    {
+      "trait_type": "DEX",
+      "value": 0
+    },
+    {
+      "trait_type": "CON",
+      "value": 0
+    },
+    {
+      "trait_type": "INT",
+      "value": 3
+    },
+    {
+      "trait_type": "WIS",
+      "value": 0
+    },
+    {
+      "trait_type": "CHA",
+      "value": 3
+    }
+  ],
+  "properties": {
+    "schema": "AXO_GEAR_METADATA_DRAFT_V2",
+    "status": "DRAFT",
+    "ruleset": "AXO_PROGRESSION_V2",
+    "family": "copium-respirator",
+    "setId": "whitehat-controller",
+    "supplyStatus": "UNDECIDED",
+    "ownership": "NONE",
+    "artSha256": "a1a4fb45ec133b1bc4606bfa006b2b586b177f655a596c4da6eb61b001cc25e4",
+    "wearableSha256": "d5d262d391d17e4ce460fae477ef94d4faeecb7a2f87e9f10a4ddbb5f89806e5"
+  }
+}

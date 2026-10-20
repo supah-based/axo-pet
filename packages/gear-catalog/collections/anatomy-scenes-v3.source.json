@@ -1,0 +1,9 @@
+{
+  "schema": "AXO_PORTRAIT_SCENE_SOURCE_V3",
+  "status": "CANDIDATE",
+  "scenes": [
+    { "id": "degen-den", "name": "Degen Den", "scale": 1.16, "sourceGround": [512, 1045] },
+    { "id": "tech-hatchery", "name": "Tech Hatchery", "scale": 1.1, "sourceGround": [512, 1105] },
+    { "id": "arcane-workshop", "name": "Arcane Workshop", "scale": 1.16, "sourceGround": [512, 1045] }
+  ]
+}

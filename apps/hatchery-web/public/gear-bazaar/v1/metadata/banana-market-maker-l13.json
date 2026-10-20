@@ -1,0 +1,62 @@
+{
+  "name": "Banana Market Maker · LVL 13",
+  "description": "A compact banana baton. Thick grip, angled palm socket and original fingers in front. Requires Pet level 13.",
+  "image": "/gear-anatomy/v3/banana-market-maker.item.webp",
+  "attributes": [
+    {
+      "trait_type": "Slot",
+      "value": "tool"
+    },
+    {
+      "trait_type": "Set",
+      "value": "Degen Brawler"
+    },
+    {
+      "trait_type": "Play style",
+      "value": "Brawler"
+    },
+    {
+      "trait_type": "Item Level",
+      "value": 13
+    },
+    {
+      "trait_type": "Minimum Pet Level",
+      "value": 13
+    },
+    {
+      "trait_type": "STR",
+      "value": 3
+    },
+    {
+      "trait_type": "DEX",
+      "value": 0
+    },
+    {
+      "trait_type": "CON",
+      "value": 0
+    },
+    {
+      "trait_type": "INT",
+      "value": 2
+    },
+    {
+      "trait_type": "WIS",
+      "value": 0
+    },
+    {
+      "trait_type": "CHA",
+      "value": 0
+    }
+  ],
+  "properties": {
+    "schema": "AXO_GEAR_METADATA_DRAFT_V2",
+    "status": "DRAFT",
+    "ruleset": "AXO_PROGRESSION_V2",
+    "family": "banana-market-maker",
+    "setId": "degen-brawler",
+    "supplyStatus": "UNDECIDED",
+    "ownership": "NONE",
+    "artSha256": "ecb0fcb61741df30628afcab2ca1e65acdcdf9e130b269d41ba2dc5313462447",
+    "wearableSha256": "df53ddda631303652786e4cb4163d2a84f16b46d91faa47c26512f6ea7513ce4"
+  }
+}

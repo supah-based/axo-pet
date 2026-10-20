@@ -10,17 +10,17 @@ const publicRoot = resolve(root, 'apps/hatchery-web/public');
 const pages = new Map([
   ['/', 'pet-home.html'], ['/my-axo', 'pet-dashboard.html'],
   ['/hatchery/game', 'hatchery-game.html'], ['/marketplace', 'pet-marketplace.html'],
-  ['/nft', 'nft.html'], ['/arena/', '../arena-web/index.html'],
+  ['/nft', 'nft.html'], ['/gear-studio', 'anatomy-studio.html'], ['/gear-concepts', 'gear-studio.html'], ['/arena/', '../arena-web/index.html'],
 ]);
 const publicFiles = new Set([
-  'pet-home', 'pet-dashboard', 'pet-marketplace', 'hatchery-game', 'nft',
+    'pet-home', 'pet-dashboard', 'pet-marketplace', 'hatchery-game', 'nft', 'gear-studio', 'anatomy-studio', 'gear-progression',
 ].flatMap(name => [`${name}.css`, `${name}.js`]));
 const inheritedStyles = new Set([
   '/axo-dark.css', '/styles.css', '/portal.css', '/pet-shell.css', '/nft-v5-runtime.css',
 ]);
 const types = { '.html': 'text/html; charset=utf-8', '.css': 'text/css; charset=utf-8',
   '.js': 'text/javascript; charset=utf-8', '.webp': 'image/webp', '.png': 'image/png',
-  '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg', '.woff2': 'font/woff2' };
+  '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg', '.woff2': 'font/woff2', '.mjs': 'text/javascript; charset=utf-8', '.json': 'application/json; charset=utf-8' };
 const previewBanner = `<aside aria-label="Local development preview" style="position:fixed;bottom:0;left:0;right:0;z-index:2147483647;display:flex;gap:16px;flex-wrap:wrap;align-items:center;padding:10px 16px;background:#10261e;color:#e5ffae;border-top:1px solid #a7d558;font:12px/1.5 system-ui"><strong>AXO LOCAL SOURCE</strong><span>Hatchery: UI only · Arena: synthetic test Pets</span><a style="color:inherit" href="/">Home</a><a style="color:inherit" href="/my-axo">My AXO</a><a style="color:inherit" href="/hatchery/game">Hatchery</a><a style="color:inherit" href="/nft">NFT</a><a style="color:inherit" href="/marketplace">Bazaar</a><a style="color:inherit" href="/arena/">Arena</a><a style="color:inherit" href="https://axo.pet" target="_blank" rel="noreferrer">Live ↗</a></aside>`;
 const walletStub = `const unavailable = async () => { throw new Error('Wallet connections are unavailable in the local source preview.'); };
 window.AxoWallet = Object.freeze({ ready: Promise.resolve(), getSession: () => ({ connected: false }), connect: unavailable, request: unavailable, sendTransaction: unavailable, ensureRobinhoodChain: unavailable });
@@ -87,6 +87,15 @@ export function createDevServer({ liveAssets = true, fetchAsset = fetch } = {}) 
       if (['/nav.js', '/pet-shell.js', '/analytics.js'].includes(path)) return send(req, res, 200, '// Host-only integration omitted from local preview.\n', types['.js']);
       if (path === `/${basename(path)}` && publicFiles.has(basename(path))) {
         return send(req, res, 200, await readFile(resolve(publicRoot, basename(path))), types[extname(path)]);
+      }
+      if (/^\/gear-style-studio\/(?:model\.mjs|v1\/(?:catalog\.json|[a-z0-9_.-]+\.webp))$/.test(path)) {
+        return send(req, res, 200, await readFile(resolve(publicRoot, '.' + path)), types[extname(path)]);
+      }
+        if (/^\/gear-anatomy\/(?:model\.mjs|v3\/(?:catalog\.json|[a-z0-9_.-]+\.webp))$/.test(path)) {
+          return send(req, res, 200, await readFile(resolve(publicRoot, '.' + path)), types[extname(path)]);
+        }
+      if (/^\/gear-bazaar\/(?:(?:progression|gear-sets)-v2\.mjs|wardrobe-filters\.mjs|v1\/(?:catalog\.json|[a-z0-9_.-]+\.webp|metadata\/[a-z0-9-]+\.json))$/.test(path)) {
+        return send(req, res, 200, await readFile(resolve(publicRoot, '.' + path)), types[extname(path)]);
       }
       if (liveAssets && isPublicAsset(path)) {
         if (!cache.has(path)) {

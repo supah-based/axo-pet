@@ -1,0 +1,54 @@
+{
+  "name": "Little Rugger · LVL 14",
+  "description": "Suspiciously soft. Surprisingly loyal. Requires Pet level 14.",
+  "image": "/gear-bazaar/v1/little-rugger.item.webp",
+  "attributes": [
+    {
+      "trait_type": "Slot",
+      "value": "companion"
+    },
+    {
+      "trait_type": "Item Level",
+      "value": 14
+    },
+    {
+      "trait_type": "Minimum Pet Level",
+      "value": 14
+    },
+    {
+      "trait_type": "STR",
+      "value": 0
+    },
+    {
+      "trait_type": "DEX",
+      "value": 3
+    },
+    {
+      "trait_type": "CON",
+      "value": 0
+    },
+    {
+      "trait_type": "INT",
+      "value": 0
+    },
+    {
+      "trait_type": "WIS",
+      "value": 0
+    },
+    {
+      "trait_type": "CHA",
+      "value": 3
+    }
+  ],
+  "properties": {
+    "schema": "AXO_GEAR_METADATA_DRAFT_V2",
+    "status": "DRAFT",
+    "ruleset": "AXO_PROGRESSION_V2",
+    "family": "little-rugger",
+    "setId": null,
+    "supplyStatus": "UNDECIDED",
+    "ownership": "NONE",
+    "artSha256": "33c3852fe7a653abb38566ca7f73b52dbc704ad03997d29f33aec99d5f1d4a96",
+    "wearableSha256": "d55be77b97cc15e5789bee60d1d36502103640d64bb94044eb807bf15d77a7d7"
+  }
+}

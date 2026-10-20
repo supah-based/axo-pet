@@ -1,0 +1,62 @@
+{
+  "name": "Aetherpunk Circlet · LVL 14",
+  "description": "Brass, blue fire, and a little forbidden research. Requires Pet level 14.",
+  "image": "/gear-bazaar/v1/aetherpunk-circlet.item.webp",
+  "attributes": [
+    {
+      "trait_type": "Slot",
+      "value": "head"
+    },
+    {
+      "trait_type": "Set",
+      "value": "Hexforge Arcanist"
+    },
+    {
+      "trait_type": "Play style",
+      "value": "Arcanist"
+    },
+    {
+      "trait_type": "Item Level",
+      "value": 14
+    },
+    {
+      "trait_type": "Minimum Pet Level",
+      "value": 14
+    },
+    {
+      "trait_type": "STR",
+      "value": 0
+    },
+    {
+      "trait_type": "DEX",
+      "value": 0
+    },
+    {
+      "trait_type": "CON",
+      "value": 0
+    },
+    {
+      "trait_type": "INT",
+      "value": 3
+    },
+    {
+      "trait_type": "WIS",
+      "value": 3
+    },
+    {
+      "trait_type": "CHA",
+      "value": 0
+    }
+  ],
+  "properties": {
+    "schema": "AXO_GEAR_METADATA_DRAFT_V2",
+    "status": "DRAFT",
+    "ruleset": "AXO_PROGRESSION_V2",
+    "family": "aetherpunk-circlet",
+    "setId": "hexforge-arcanist",
+    "supplyStatus": "UNDECIDED",
+    "ownership": "NONE",
+    "artSha256": "91f16a9e1fa6297740cb51e9822591b6c093ba9eea2f5639db76876fca16c1f0",
+    "wearableSha256": "db30035892ba595991e41096360b779497cb1fb787049de121ca0182ca056652"
+  }
+}

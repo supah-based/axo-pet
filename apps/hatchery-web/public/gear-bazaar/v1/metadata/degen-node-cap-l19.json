@@ -1,0 +1,62 @@
+{
+  "name": "Degen Node Cap · LVL 19",
+  "description": "A compact charcoal cap redrawn on the actual head camera, with a short right-facing visor. Requires Pet level 19.",
+  "image": "/gear-anatomy/v3/degen-node-cap.item.webp",
+  "attributes": [
+    {
+      "trait_type": "Slot",
+      "value": "head"
+    },
+    {
+      "trait_type": "Set",
+      "value": "Whitehat Controller"
+    },
+    {
+      "trait_type": "Play style",
+      "value": "Controller"
+    },
+    {
+      "trait_type": "Item Level",
+      "value": 19
+    },
+    {
+      "trait_type": "Minimum Pet Level",
+      "value": 19
+    },
+    {
+      "trait_type": "STR",
+      "value": 0
+    },
+    {
+      "trait_type": "DEX",
+      "value": 0
+    },
+    {
+      "trait_type": "CON",
+      "value": 0
+    },
+    {
+      "trait_type": "INT",
+      "value": 0
+    },
+    {
+      "trait_type": "WIS",
+      "value": 5
+    },
+    {
+      "trait_type": "CHA",
+      "value": 6
+    }
+  ],
+  "properties": {
+    "schema": "AXO_GEAR_METADATA_DRAFT_V2",
+    "status": "DRAFT",
+    "ruleset": "AXO_PROGRESSION_V2",
+    "family": "degen-node-cap",
+    "setId": "whitehat-controller",
+    "supplyStatus": "UNDECIDED",
+    "ownership": "NONE",
+    "artSha256": "d19c30650d6363f11d15ee7deb93a00523197f54769513e1383084d25587d58a",
+    "wearableSha256": "11b76516930d98bcbbce472d07d0c9e9c56ace3c6cf64bbe01c2956630ff7f64"
+  }
+}

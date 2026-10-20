@@ -1,0 +1,62 @@
+{
+  "name": "Packet Sniffer · LVL 14",
+  "description": "Sees the alpha before the group chat. Requires Pet level 14.",
+  "image": "/gear-bazaar/v1/packet-sniffer.item.webp",
+  "attributes": [
+    {
+      "trait_type": "Slot",
+      "value": "face"
+    },
+    {
+      "trait_type": "Set",
+      "value": "Night Node Guardian"
+    },
+    {
+      "trait_type": "Play style",
+      "value": "Guardian"
+    },
+    {
+      "trait_type": "Item Level",
+      "value": 14
+    },
+    {
+      "trait_type": "Minimum Pet Level",
+      "value": 14
+    },
+    {
+      "trait_type": "STR",
+      "value": 0
+    },
+    {
+      "trait_type": "DEX",
+      "value": 0
+    },
+    {
+      "trait_type": "CON",
+      "value": 3
+    },
+    {
+      "trait_type": "INT",
+      "value": 3
+    },
+    {
+      "trait_type": "WIS",
+      "value": 0
+    },
+    {
+      "trait_type": "CHA",
+      "value": 0
+    }
+  ],
+  "properties": {
+    "schema": "AXO_GEAR_METADATA_DRAFT_V2",
+    "status": "DRAFT",
+    "ruleset": "AXO_PROGRESSION_V2",
+    "family": "packet-sniffer",
+    "setId": "night-node-guardian",
+    "supplyStatus": "UNDECIDED",
+    "ownership": "NONE",
+    "artSha256": "f951ba1cf2680185f7f719b57f0f61b4cf338db669e2f6dd2ccaed0d70dda88f",
+    "wearableSha256": "d0c27218b539625ff4f1af272eb6e37b56b4382e177d22078acfe7859e92a707"
+  }
+}

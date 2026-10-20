@@ -1,0 +1,826 @@
+{
+  "schema": "AXO_GEAR_DESIGN_SOURCE_V1",
+  "status": "CANDIDATE",
+  "items": [
+    {
+      "id": "liquidation-crown",
+      "name": "Liquidation Crown",
+      "slot": "head",
+      "theme": "degen",
+      "color": "#ff766a",
+      "rect": [
+        410,
+        27,
+        268,
+        160
+      ],
+      "description": "King of the wick. Absolutely no risk management.",
+      "direction": "A playful jagged crown made of red and green candlestick-chart pillars, black titanium band, one tiny golden liquidation bell. Broad low crown, no helmet, no face."
+    },
+    {
+      "id": "validator-halo",
+      "name": "Validator Halo",
+      "slot": "head",
+      "theme": "tech",
+      "color": "#64e6da",
+      "rect": [
+        376,
+        17,
+        285,
+        109
+      ],
+      "description": "All nodes agree: impeccable taste.",
+      "direction": "A futuristic floating elliptical validator halo with small luminous cyan node cubes connected around brushed titanium ring. Three-quarter ellipse tilted to follow the reference head, no head or character."
+    },
+    {
+      "id": "aetherpunk-circlet",
+      "name": "Aetherpunk Circlet",
+      "slot": "head",
+      "theme": "aetherpunk",
+      "color": "#a5a0ff",
+      "rect": [
+        392,
+        131,
+        275,
+        150
+      ],
+      "description": "Brass, blue fire, and a little forbidden research.",
+      "direction": "Original arcane-industrial fantasy circlet: aged brass, asymmetrical violet-blue hexagonal crystal, elegant engraved filigree and tiny teal energy arcs. Broad open circlet, no helmet. Inspired by painterly prestige animation and steampunk fantasy, no existing character, logo or franchise symbol."
+    },
+    {
+      "id": "wen-moon-goggles",
+      "name": "Wen Moon Goggles",
+      "slot": "face",
+      "theme": "meme",
+      "color": "#e2b5ff",
+      "rect": [
+        216,
+        219,
+        597,
+        200
+      ],
+      "description": "Moon in both lenses. Chart still sideways.",
+      "direction": "Chunky iridescent purple wraparound goggles with crescent moon reflections in both clear lenses, black chrome frame and pink rockets on the temples. Fit large widely spaced axolotl eyes. No nose, face, skin or head. Open transparent lenses.",
+      "fit": {
+        "mirrorX": true,
+        "rotation": 5,
+        "keep": "<g fill=\"white\"><ellipse cx=\"440\" cy=\"333\" rx=\"124\" ry=\"83\"/><ellipse cx=\"675\" cy=\"317\" rx=\"91\" ry=\"74\"/><path d=\"M520 285H616V350H520Z\"/></g>"
+      }
+    },
+    {
+      "id": "packet-sniffer",
+      "name": "Packet Sniffer",
+      "slot": "face",
+      "theme": "tech",
+      "color": "#64e6da",
+      "rect": [
+        298,
+        217,
+        449,
+        184
+      ],
+      "description": "Sees the alpha before the group chat.",
+      "direction": "A sleek transparent cyan cyber visor with thin black titanium frame, tiny holographic packet marks, asymmetric side sensor. Broad visor for widely spaced axolotl eyes, lenses truly clear alpha, no face or skin.",
+      "fit": {
+        "erase": [
+          "M430 180H735V282H430Z",
+          "M364 246H438V282H364Z"
+        ]
+      }
+    },
+    {
+      "id": "copium-respirator",
+      "name": "Copium Respirator",
+      "slot": "face",
+      "theme": "degen",
+      "color": "#adf56e",
+      "rect": [
+        475,
+        361,
+        182,
+        100
+      ],
+      "description": "Premium-grade hopium. Refill after every candle.",
+      "direction": "Funny compact lime-green and black double-canister respirator, transparent central chamber with soft pale green vapor, tiny heart-shaped pressure gauge. Designed to cover only the little axolotl mouth below the eyes. No face, skin, neck or straps stretching beyond item."
+    },
+    {
+      "id": "diamond-hands-harness",
+      "name": "Diamond Hands Harness",
+      "slot": "body",
+      "theme": "degen",
+      "color": "#adf56e",
+      "rect": [
+        377,
+        470,
+        291,
+        255
+      ],
+      "description": "Conviction stitched into every strap.",
+      "direction": "A sleeveless black tactical chest harness with neon lime webbing and a cyan diamond clasp, shaped EXACTLY for the reference axolotl's short round torso and three-quarter pose. Open low V-neck, no upright rear collar, large open armholes, no sleeves, hem above upper thighs. Chest front turns toward viewer RIGHT, central clasp slightly right of image center. Item only; empty transparent neck and arm holes.",
+      "fit": {
+        "mirrorX": true,
+        "anchor": "neck",
+        "origin": [
+          0.5,
+          0.10196078431372549
+        ],
+        "size": [
+          291,
+          255
+        ],
+        "rear": [
+          "M430 477C480 501 550 500 599 475C574 510 568 540 551 568L530 603C504 611 469 610 448 595C429 570 415 546 418 520L430 477Z",
+          "M625 515C646 523 646 553 648 577L654 619Q617 635 579 610L576 582Q606 596 621 555Z"
+        ],
+        "rearReference": [
+          377,
+          470,
+          291,
+          255
+        ]
+      }
+    },
+    {
+      "id": "sleep-404-vest",
+      "name": "404 Sleep Vest",
+      "slot": "body",
+      "theme": "tech",
+      "color": "#64e6da",
+      "rect": [
+        377,
+        470,
+        291,
+        255
+      ],
+      "description": "Uptime: immaculate. Sleep schedule: missing.",
+      "direction": "A compact sleeveless cyber streetwear puffer vest, midnight purple nylon, cyan circuit seams, small pixel battery badge, silver zipper. Shaped exactly for short round axolotl torso, three-quarter pose facing viewer RIGHT, asymmetrical armholes, low open neckline, NO hood or upright collar, no sleeves, waist-length hem above upper thighs. No body, hands or skin; arm and neck holes truly transparent.",
+      "fit": {
+        "mirrorX": true,
+        "anchor": "neck",
+        "origin": [
+          0.5,
+          0.10196078431372549
+        ],
+        "size": [
+          291,
+          255
+        ],
+        "rear": [
+          "M465 496Q518 522 571 498L485 563L474 561Q480 528 465 512Z",
+          "M617 518C639 528 637 548 640 567L643 597Q621 614 601 603L587 582Q610 576 617 550Z"
+        ],
+        "rearReference": [
+          377,
+          470,
+          291,
+          255
+        ]
+      }
+    },
+    {
+      "id": "hexforge-vest",
+      "name": "Hexforge Vest",
+      "slot": "body",
+      "theme": "aetherpunk",
+      "color": "#a5a0ff",
+      "rect": [
+        377,
+        470,
+        291,
+        255
+      ],
+      "description": "A tiny workshop's worth of questionable power.",
+      "direction": "Original painterly arcane-industrial sleeveless waistcoat, distressed oxblood leather, ornate brass fittings, asymmetrical blue crystal power cell and teal seams. Shape follows short round axolotl torso, three-quarter facing viewer RIGHT, low open neck, big empty armholes, no tall collar, no sleeves, ends at waist above thighs. No existing franchise logos, no body or skin.",
+      "fit": {
+        "mirrorX": true,
+        "anchor": "neck",
+        "origin": [
+          0.5,
+          0.10196078431372549
+        ],
+        "size": [
+          291,
+          255
+        ],
+        "rear": [
+          "M462 497Q520 518 575 497L487 551L465 560Q482 531 462 497Z",
+          "M619 512C642 518 648 541 651 568L653 599Q628 618 590 594L587 579Q607 555 608 532Z"
+        ],
+        "rearReference": [
+          377,
+          470,
+          291,
+          255
+        ]
+      }
+    },
+    {
+      "id": "cold-wallet-jetpack",
+      "name": "Cold Wallet Jetpack",
+      "slot": "back",
+      "theme": "crypto",
+      "color": "#a7d5ff",
+      "rect": [
+        247,
+        420,
+        482,
+        376
+      ],
+      "description": "Offline keys. Extremely online propulsion.",
+      "direction": "Whimsical cold-storage jetpack with two chunky icy cyan rocket pods extending out to the sides, frosted black metal vault in center, tiny hardware-wallet clasp, crystalline blue exhaust. Designed for a small round axolotl back, wide silhouette visible around body. Three-quarter facing viewer RIGHT. No wearer."
+    },
+    {
+      "id": "rug-pull-roll",
+      "name": "Rug Pull Roll",
+      "slot": "back",
+      "theme": "meme",
+      "color": "#f2a878",
+      "rect": [
+        228,
+        505,
+        498,
+        240
+      ],
+      "description": "The only rug you should take with you.",
+      "direction": "A hilariously luxurious rolled Persian rug backpack, deep magenta and emerald geometric weave, oversized gold tassels at both ends, dark leather straps. Wide horizontal cylinder three-quarter view with a visible rolled spiral at the LEFT end, compact center mount. No character, body or written words."
+    },
+    {
+      "id": "aether-reactor",
+      "name": "Aether Reactor",
+      "slot": "back",
+      "theme": "aetherpunk",
+      "color": "#a5a0ff",
+      "rect": [
+        261,
+        399,
+        474,
+        400
+      ],
+      "description": "Probably stable. Definitely glowing.",
+      "direction": "Original arcane-industrial mechanical backpack with two curved brass fins sweeping out to sides, central glowing blue crystal reactor, violet vapor contained in glass tubes, hammered bronze and engraved filigree. Wide short silhouette for round axolotl back, three-quarter facing viewer RIGHT. No wearer, no franchise logos."
+    },
+    {
+      "id": "banana-market-maker",
+      "name": "Banana Market Maker",
+      "slot": "tool",
+      "theme": "meme",
+      "color": "#ffe48b",
+      "rect": [
+        768,
+        300,
+        139,
+        294
+      ],
+      "description": "One banana. Infinite financial advice.",
+      "direction": "A single curved golden banana used as a ridiculous royal trading scepter, dark chrome short grip at lower center, tiny diamond charm dangling from tip, black/yellow futuristic detailing. Vertical item, grip at 70 percent of item height, three-quarter angled slightly toward viewer LEFT. No hands or character.",
+      "fit": {
+        "mirrorX": true,
+        "anchor": "grip",
+        "size": [
+          174,
+          260
+        ],
+        "origin": [
+          0.7,
+          0.805
+        ],
+        "preserveAspect": true
+      }
+    },
+    {
+      "id": "gas-fee-guzzler",
+      "name": "Gas Fee Guzzler",
+      "slot": "tool",
+      "theme": "crypto",
+      "color": "#ff9f91",
+      "rect": [
+        754,
+        290,
+        165,
+        292
+      ],
+      "description": "Runs on the fees you meant to save.",
+      "direction": "A whimsical futuristic gas-pump nozzle raygun with a tiny transparent orange fuel canister, iridescent steel, hot coral lights, little exhaust pipe. Vertical handheld silhouette, clear narrow grip 70 percent down, barrel points upward-left. No hand, no character, no text.",
+      "fit": {
+        "mirrorX": true,
+        "anchor": "grip",
+        "size": [
+          225,
+          214
+        ],
+        "origin": [
+          0.665,
+          0.792
+        ],
+        "preserveAspect": true
+      }
+    },
+    {
+      "id": "exit-liquidity-trident",
+      "name": "Exit Liquidity Trident",
+      "slot": "tool",
+      "theme": "aetherpunk",
+      "color": "#a5a0ff",
+      "rect": [
+        722,
+        239,
+        175,
+        348
+      ],
+      "description": "Summons liquidity. Exit route sold separately.",
+      "direction": "An elegant original fantasy trident wand of dark brass, three jagged violet-blue crystal prongs, contained turquoise liquid core, engraved arcane metalwork. Short polearm for a tiny axolotl, narrow dark grip 75 percent down, points upward, three-quarter facing viewer LEFT. No hands or wearer.",
+      "fit": {
+        "mirrorX": true,
+        "anchor": "grip",
+        "size": [
+          202,
+          224
+        ],
+        "origin": [
+          0.79,
+          0.82
+        ],
+        "preserveAspect": true
+      }
+    },
+    {
+      "id": "bagholder-bag",
+      "name": "Bagholder Bag",
+      "slot": "charm",
+      "theme": "degen",
+      "color": "#adf56e",
+      "rect": [
+        583,
+        676,
+        101,
+        119
+      ],
+      "description": "Small bag. Generational conviction.",
+      "direction": "A tiny adorable emerald leather drawstring money bag charm, oversized gold clip, stitched declining red chart icon, one little diamond poking out, funny premium game loot collectible. Three-quarter view, no words, no character."
+    },
+    {
+      "id": "touch-grass-vial",
+      "name": "Touch Grass Vial",
+      "slot": "charm",
+      "theme": "meme",
+      "color": "#adf56e",
+      "rect": [
+        587,
+        676,
+        91,
+        119
+      ],
+      "description": "Portable proof of having been outside.",
+      "direction": "A miniature clear glass capsule keychain containing a lush tuft of real bright grass and tiny earth clod, brass screw-cap and carabiner, a single tiny daisy, whimsical premium collectible. Three-quarter view, no text, no hands."
+    },
+    {
+      "id": "diamond-paws",
+      "name": "Diamond Paws",
+      "slot": "charm",
+      "theme": "crypto",
+      "color": "#a7d5ff",
+      "rect": [
+        589,
+        682,
+        86,
+        101
+      ],
+      "description": "A little sparkle for unwavering paws.",
+      "direction": "A luxurious faceted icy blue diamond paw-shaped pendant, tiny platinum chain and dark metal belt clip, subtle cyan glow, physically rendered collectible jewelry. Three-quarter view, no hands, no body, no text."
+    },
+    {
+      "id": "panic-duck",
+      "name": "Panic Duck",
+      "slot": "companion",
+      "theme": "meme",
+      "color": "#ffe48b",
+      "rect": [
+        765,
+        736,
+        181,
+        181
+      ],
+      "description": "Your emotional support circuit breaker.",
+      "direction": "An adorable little yellow rubber duck robot companion with oversized red emergency beacon on head, black tiny mechanical flippers, worried wide eyes, tiny orange beak. Entire standalone creature three-quarter facing LEFT toward the pet, no floor, no shadow background, no text."
+    },
+    {
+      "id": "mev-moth",
+      "name": "MEV Moth",
+      "slot": "companion",
+      "theme": "tech",
+      "color": "#64e6da",
+      "rect": [
+        752,
+        668,
+        198,
+        202
+      ],
+      "description": "Attracted to light. And pending transactions.",
+      "direction": "A cute tiny robotic moth with luminous cyan circuit-pattern wings, dark chrome round body, two curious violet eyes, little gold coin clutched in miniature feet. Full creature hovering three-quarter facing LEFT toward a pet, no background, no text."
+    },
+    {
+      "id": "little-rugger",
+      "name": "Little Rugger",
+      "slot": "companion",
+      "theme": "meme",
+      "color": "#f2a878",
+      "rect": [
+        745,
+        788,
+        211,
+        119
+      ],
+      "description": "Suspiciously soft. Surprisingly loyal.",
+      "direction": "An adorable tiny living rolled Persian carpet caterpillar companion, burgundy and turquoise rug body, big innocent shiny eyes on little brass eye stalks, golden tassel feet, mischievous smile. Full creature three-quarter facing LEFT, no floor or background, no text."
+    },
+    {
+      "id": "moon-landing-pad",
+      "name": "Moon Landing Pad",
+      "slot": "habitat",
+      "theme": "crypto",
+      "color": "#a7d5ff",
+      "rect": [
+        159,
+        839,
+        731,
+        158
+      ],
+      "description": "Reserved parking for the next cycle.",
+      "direction": "A low wide oval lunar landing platform, pale moon rock rim, sleek dark central landing plate, tiny cyan runway lights and two small gold rocket fins on far left and right, whimsical premium game diorama base. Low three-quarter top-down perspective, ellipse width about four times height. No Pet or characters, no vertical scenery blocking a wearer, no text."
+    },
+    {
+      "id": "basement-lan",
+      "name": "Basement LAN",
+      "slot": "habitat",
+      "theme": "tech",
+      "color": "#64e6da",
+      "rect": [
+        159,
+        829,
+        731,
+        168
+      ],
+      "description": "RGB is a stat. We checked.",
+      "direction": "A low wide oval cyberpunk LAN gaming pedestal, black hexagonal tiles, glowing cyan and violet network cables around rim, miniature server stacks only at far left and far right edges, tiny energy drinks. Low three-quarter top-down perspective, ellipse width four times height, center empty to stand a pet. No characters, no words."
+    },
+    {
+      "id": "runebloom-garden",
+      "name": "Runebloom Garden",
+      "slot": "habitat",
+      "theme": "aetherpunk",
+      "color": "#a5a0ff",
+      "rect": [
+        159,
+        827,
+        731,
+        170
+      ],
+      "description": "A calm place to recharge unstable magic.",
+      "direction": "Original arcane-industrial fantasy low wide oval garden pedestal, ancient brass rim, teal moss and tiny violet luminous crystals at extreme left and right, weathered dark stone central standing area, delicate blue rune inlays. Low three-quarter top-down view ellipse width four times height. No characters, no tall objects in center, no franchise logos."
+    },
+    {
+      "id": "diamond-cargo-shorts",
+      "name": "Diamond Cargo Shorts",
+      "slot": "pants",
+      "theme": "degen",
+      "color": "#adf56e",
+      "rect": [
+        337,
+        657,
+        369,
+        184
+      ],
+      "description": "Pockets for the bags you refuse to sell.",
+      "direction": "A complete pair of short black tactical cargo shorts with neon lime stitching, chunky belt and small cyan diamond buckle, puffy side pockets. Tailored for the reference's short round hips and wide stance. Three-quarter perspective toward viewer LEFT; two short leg openings diverge left and right. Empty waist and leg openings, no legs or skin.",
+      "fit": {
+        "rowScale": [
+          {
+            "at": 0,
+            "scale": 1
+          },
+          {
+            "at": 0.42,
+            "scale": 1
+          },
+          {
+            "at": 1,
+            "scale": 1.4
+          }
+        ],
+        "anchor": "waist",
+        "origin": [
+          0.5,
+          0.14673913043478262
+        ],
+        "size": [
+          369,
+          184
+        ],
+        "rear": [
+          "M0 0H1024V676H696Q525 732 337 690H0Z"
+        ],
+        "rearReference": [
+          337,
+          657,
+          369,
+          184
+        ]
+      }
+    },
+    {
+      "id": "night-node-joggers",
+      "name": "Night Node Joggers",
+      "slot": "pants",
+      "theme": "tech",
+      "color": "#64e6da",
+      "rect": [
+        315,
+        659,
+        402,
+        249
+      ],
+      "description": "Comfort for a 24/7 network.",
+      "direction": "A complete pair of short chibi streetwear jogger trousers, dark midnight-purple technical nylon, cyan circuit piping, elastic cuffs and asymmetric utility pockets, compact round hips, very short legs in a wide stance. Three-quarter perspective toward viewer LEFT, left leg angles down-left and right leg angles down-right as in reference. Empty waistband and cuffs. No body, skin, shoes or mannequin.",
+      "fit": {
+        "rowScale": [
+          {
+            "at": 0,
+            "scale": 1
+          },
+          {
+            "at": 0.42,
+            "scale": 1
+          },
+          {
+            "at": 1,
+            "scale": 1.65
+          }
+        ],
+        "anchor": "waist",
+        "origin": [
+          0.5,
+          0.10040160642570281
+        ],
+        "size": [
+          402,
+          249
+        ],
+        "rear": [
+          "M0 0H1024V681H706Q520 725 320 697H0Z"
+        ],
+        "rearReference": [
+          315,
+          659,
+          402,
+          249
+        ]
+      }
+    },
+    {
+      "id": "runesmith-trousers",
+      "name": "Runesmith Trousers",
+      "slot": "pants",
+      "theme": "aetherpunk",
+      "color": "#a5a0ff",
+      "rect": [
+        317,
+        659,
+        398,
+        247
+      ],
+      "description": "Reinforced for unexpected magical incidents.",
+      "direction": "Original arcane-industrial fantasy short chibi trousers, distressed oxblood leather, aged brass belt and knee guards, teal seams and small blue crystal fasteners. Round compact hips with very short legs in a wide stance, three-quarter facing viewer LEFT matching reference pelvis. Empty waistband and cuffs. No body parts, no shoes, no franchise logos.",
+      "fit": {
+        "rowScale": [
+          {
+            "at": 0,
+            "scale": 1
+          },
+          {
+            "at": 0.42,
+            "scale": 1
+          },
+          {
+            "at": 1,
+            "scale": 1.65
+          }
+        ],
+        "anchor": "waist",
+        "origin": [
+          0.5,
+          0.10121457489878542
+        ],
+        "size": [
+          398,
+          247
+        ],
+        "rear": [
+          "M0 0H1024V679H706Q520 726 320 692H0Z",
+          "M244 864C280 855 349 869 405 893C357 895 285 882 244 871Z",
+          "M560 884C629 867 734 874 794 886C731 900 644 900 574 891Z"
+        ],
+        "rearReference": [
+          317,
+          659,
+          398,
+          247
+        ]
+      }
+    },
+    {
+      "id": "gas-boost-high-tops",
+      "name": "Gas Boost High Tops",
+      "slot": "footwear",
+      "theme": "crypto",
+      "color": "#ff9f91",
+      "rect": [
+        225,
+        799,
+        597,
+        165
+      ],
+      "fit": {
+        "pieces": [
+          {
+            "crop": [
+              0,
+              0,
+              0.5,
+              1
+            ],
+            "rect": [
+              225,
+              799,
+              208,
+              165
+            ]
+          },
+          {
+            "crop": [
+              0.5,
+              0,
+              0.5,
+              1
+            ],
+            "rect": [
+              596,
+              799,
+              226,
+              165
+            ]
+          }
+        ],
+        "ankleOpenings": [
+          [
+            374,
+            818,
+            24,
+            11
+          ],
+          [
+            658,
+            818,
+            25,
+            11
+          ]
+        ],
+        "erase": [
+          "M350 818a24 11 0 1 0 48 0a24 11 0 1 0 -48 0Z",
+          "M633 818a25 11 0 1 0 50 0a25 11 0 1 0 -50 0Z"
+        ]
+      },
+      "description": "Fast feet. Unreasonable gas consumption.",
+      "direction": "ONE PAIR of chunky high-top cyber sneakers, charcoal black and hot coral, tiny transparent orange fuel cells in heels and bright cyan soles, premium playful collectible. Show both complete shoes SIDE BY SIDE with a clear transparent vertical gap at the exact center of canvas: LEFT shoe wholly in left half, pointing outward LEFT, RIGHT shoe wholly in right half pointing outward RIGHT. Three-quarter top-front view matching reference feet. Short wide shoes for broad axolotl feet, empty ankle holes. No legs, no skin, no laces joining shoes."
+    },
+    {
+      "id": "wen-moon-slippers",
+      "name": "Wen Moon Slippers",
+      "slot": "footwear",
+      "theme": "meme",
+      "color": "#e2b5ff",
+      "rect": [
+        225,
+        821,
+        597,
+        143
+      ],
+      "fit": {
+        "pieces": [
+          {
+            "crop": [
+              0,
+              0,
+              0.5,
+              1
+            ],
+            "rect": [
+              225,
+              821,
+              208,
+              143
+            ]
+          },
+          {
+            "crop": [
+              0.5,
+              0,
+              0.5,
+              1
+            ],
+            "rect": [
+              596,
+              821,
+              226,
+              143
+            ]
+          }
+        ],
+        "ankleOpenings": [
+          [
+            359,
+            846,
+            33,
+            19
+          ],
+          [
+            681,
+            846,
+            33,
+            19
+          ]
+        ],
+        "erase": [
+          "M326 846a33 19 0 1 0 66 0a33 19 0 1 0 -66 0Z",
+          "M648 846a33 19 0 1 0 66 0a33 19 0 1 0 -66 0Z"
+        ]
+      },
+      "description": "Still waiting for launch. At least you're comfortable.",
+      "direction": "ONE PAIR of funny plush silver-purple moon slippers for broad axolotl feet, sleepy crescent moon faces at toes, tiny soft gold rocket fins on heels, fluffy purple lining and squishy soles. Both complete shoes SIDE BY SIDE with a clear transparent gap at exact canvas center: LEFT slipper wholly in left half pointing outward LEFT, RIGHT slipper wholly in right half pointing outward RIGHT. Three-quarter top-front view. Empty foot openings. No feet, legs or background."
+    },
+    {
+      "id": "hexstep-boots",
+      "name": "Hexstep Boots",
+      "slot": "footwear",
+      "theme": "aetherpunk",
+      "color": "#a5a0ff",
+      "rect": [
+        225,
+        799,
+        597,
+        165
+      ],
+      "fit": {
+        "pieces": [
+          {
+            "crop": [
+              0,
+              0,
+              0.5,
+              1
+            ],
+            "rect": [
+              225,
+              799,
+              208,
+              165
+            ]
+          },
+          {
+            "crop": [
+              0.5,
+              0,
+              0.5,
+              1
+            ],
+            "rect": [
+              596,
+              799,
+              226,
+              165
+            ]
+          }
+        ],
+        "ankleOpenings": [
+          [
+            366,
+            815,
+            25,
+            11
+          ],
+          [
+            683,
+            815,
+            27,
+            11
+          ]
+        ],
+        "erase": [
+          "M341 815a25 11 0 1 0 50 0a25 11 0 1 0 -50 0Z",
+          "M656 815a27 11 0 1 0 54 0a27 11 0 1 0 -54 0Z"
+        ]
+      },
+      "description": "Leave a little magic in every footprint.",
+      "direction": "ONE PAIR of original arcane-industrial short ankle boots, aged brass segmented toe armor, oxblood leather, violet-blue crystal heel cells, teal glowing sole seams, ornate understated rune filigree. Broad tiny feet with short ankles. Show both complete boots SIDE BY SIDE with a transparent vertical gap at exact center: LEFT boot wholly in left half pointing outward LEFT, RIGHT boot wholly in right half pointing outward RIGHT. Three-quarter top-front view matching reference foot pose. Empty ankle holes, no body parts, no franchise symbols."
+    }
+  ]
+}
