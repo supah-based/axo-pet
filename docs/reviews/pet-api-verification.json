@@ -1,7 +1,7 @@
 {
   "schemaVersion": "AXO_PET_API_SOURCE_VERIFICATION_V1",
   "baseSha": "221873fb7387b52da4a41a6bc2a3782fd69d4b0b",
-  "implementationSha": "PENDING",
+  "implementationSha": "38f523ad425840d1edf3cf18ba530e51cd89f5bc",
   "sourceHashes": {
     "apps/pet-api/src/pet-read.mjs": "a59b180d00f96123053c3f06c5b4d0a86580b878149c618b8c8eb2798f37a219",
     "apps/pet-api/src/read-http.mjs": "156e0b05c0708c79c2c5634ffd458c1cbc15fe82b2206fd3d227b87b6bac22a7",
@@ -43,7 +43,13 @@
     }
   },
   "exactSourceCi": {
-    "status": "PENDING"
+    "status": "PASS",
+    "jobs": [
+      "repository",
+      "contracts",
+      "arena"
+    ],
+    "url": "https://github.com/supah-based/axo-pet/actions/runs/39668190609"
   },
   "axoAcknowledgment": "NOT_ACKNOWLEDGED",
   "productionAdapter": "NOT_CONNECTED",
@@ -55,5 +61,6 @@
     "Schema consistency cannot establish actual RPC/session execution or asset bytes.",
     "AXO must bind existing host ports and return same-block/revision evidence.",
     "No production routing, state migration, write endpoint, V2 activation or active Arena migration."
-  ]
+  ],
+  "draftPr": "https://github.com/supah-based/axo-pet/pull/8"
 }
