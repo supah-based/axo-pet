@@ -1,7 +1,7 @@
 {
   "schemaVersion": "AXO_ARENA_BATTLE_REPORT_SOURCE_VERIFICATION_V1",
   "baseSha": "d970a088b60d6bc16838d93e26bcb033c240b30b",
-  "implementationSha": "PENDING_PUBLICATION",
+  "implementationSha": "a0b1c2b341b629d9cb8131f240724fa38807ee7a",
   "sourceHashes": {
     "apps/arena-web/battle-report.mjs": "7be39490502c5d815908e46d2106e1920a1136b7c5c49d9fa080c8e6cec578fe",
     "apps/arena-web/battle-report-view.mjs": "961f85f7de2f49603d3dff654ac54119578c6ec9fff751f6168e769619f8c248",
@@ -44,7 +44,13 @@
     ]
   },
   "exactSourceCi": {
-    "status": "PENDING"
+    "status": "PASS",
+    "jobs": [
+      "repository",
+      "contracts",
+      "arena"
+    ],
+    "url": "https://github.com/supah-based/axo-pet/actions/runs/39683912866"
   },
   "axoAcknowledgment": "NOT_ACKNOWLEDGED",
   "axo010HostBinding": "UNKNOWN",
@@ -61,5 +67,6 @@
     "tests": 6,
     "delayMs": 40,
     "scope": "Local diagnostic with real SHA-256 and delayed completion; UI tests await readiness."
-  }
+  },
+  "draftPr": "https://github.com/supah-based/axo-pet/pull/11"
 }
