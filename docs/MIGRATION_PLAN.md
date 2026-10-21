@@ -22,7 +22,7 @@ Extract `axo.pet` into an independently reviewable repository without changing l
 
 - Remove inherited paths into the AXO monolith.
 - Package browser/runtime dependencies normally.
-- Consume only a signed, verified Pet identity payload.
+- Consume the shared private `AXO_PET_READ_V1` projection through server-only verified-session/coherent-snapshot ports (AXO-010). JSON validation is not session or RPC verification; no browser identity import is accepted.
 - Keep battle state isolated from Hatchery XP and rewards.
 
 ## Phase 3 — Hatchery and Pet API adapters

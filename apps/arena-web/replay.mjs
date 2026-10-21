@@ -2,15 +2,16 @@
 import {VERSION,buildPet} from './catalog.mjs';
 import {newBattle,resolve,finishOnClock} from './combat.mjs';
 export const REPLAY_SCHEMA='AXO_ARENA_PORTABLE_REPLAY_1';
+export const GEAR_REPLAY_SCHEMA='AXO_ARENA_PORTABLE_REPLAY_2';
 export function canonical(v){if(Array.isArray(v))return '['+v.map(canonical).join(',')+']';if(v&&typeof v==='object')return '{'+Object.keys(v).sort().map(k=>JSON.stringify(k)+':'+canonical(v[k])).join(',')+'}';return JSON.stringify(v);}
 const equal=(a,b)=>canonical(a)===canonical(b);
 function keys(v,list){if(!v||typeof v!=='object'||Array.isArray(v)||!equal(Object.keys(v).sort(),list.sort()))throw Error('Invalid replay schema fields');}
 export function replayFrames(doc){
  keys(doc,['schema','ruleset','kind','startedAt','finishedAt','builds','exchanges','outcome','fingerprint']);
- if(doc.schema!==REPLAY_SCHEMA||doc.ruleset!==VERSION)throw Error('Unsupported replay schema or ruleset');
+ if(![REPLAY_SCHEMA,GEAR_REPLAY_SCHEMA].includes(doc.schema)||doc.ruleset!==VERSION)throw Error('Unsupported replay schema or ruleset');
  if(!['casual','practice','tournament'].includes(doc.kind)||!Number.isSafeInteger(doc.startedAt)||!Number.isSafeInteger(doc.finishedAt)||doc.startedAt<0||doc.finishedAt<doc.startedAt)throw Error('Invalid replay metadata');
  if(!Array.isArray(doc.builds)||doc.builds.length!==2||!Array.isArray(doc.exchanges)||doc.exchanges.length>14||! /^[a-f0-9]{64}$/.test(doc.fingerprint))throw Error('Invalid replay bounds');
- const builds=doc.builds.map(b=>{keys(b,['lineageId','xp','allocation','ranks','loadout']);const out=buildPet(b);if(!equal(b,{lineageId:out.lineageId,xp:out.xp,allocation:out.allocation,ranks:out.ranks,loadout:out.loadout}))throw Error('Noncanonical build');return out;});
+ const builds=doc.builds.map(b=>{const gear=doc.schema===GEAR_REPLAY_SCHEMA;keys(b,['lineageId','xp','allocation','ranks','loadout',...(gear?['gearStats']:[])]);const out=buildPet(b);if(!equal(b,{lineageId:out.lineageId,xp:out.xp,allocation:out.allocation,ranks:out.ranks,loadout:out.loadout,...(gear?{gearStats:out.gearStats}:{})}))throw Error('Noncanonical build');return out;});
  let state=newBattle(builds);const frames=[structuredClone(state)];
  for(const exchange of doc.exchanges){state=resolve(state,exchange.moves);if(!equal(state.log.at(-1),exchange))throw Error('Exchange does not match frozen rules');frames.push(structuredClone(state));}
  keys(doc.outcome,['status','winner','reason','hp']);const o=doc.outcome;

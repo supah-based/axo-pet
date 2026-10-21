@@ -3,7 +3,8 @@ import {LINEAGES,STATS,levelForXp} from './catalog.mjs';
 const GEAR_SLOTS=Object.freeze(['head','face','body','back','tool','charm','companion','habitat']);
 const VISUAL_SLOTS=new Set(['background','pet','hud_front',...GEAR_SLOTS]);
 const visualOption=id=>{const n=Number(id||0);return Number.isSafeInteger(n)&&n>0?(n>10?n%1000:n):null;};
-// Read-only projection. Session verification happens in the host app, never in browser input.
+// Legacy migration helper only. New host mounts must use arena-engine/src/verified-pet.mjs.
+// Session verification happens in the host app, never in browser input.
 export function hatcheryIdentity(snapshot,{address,secret,visual=null,gear=null,now=Date.now()}={}){
  if(!/^0x[0-9a-fA-F]{40}$/.test(address||'')||!secret||secret.length<32)throw Error('Verified wallet session required');
  const p=snapshot?.pet,owner=address.toLowerCase();

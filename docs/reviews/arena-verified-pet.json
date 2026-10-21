@@ -1,0 +1,67 @@
+{
+  "schemaVersion": "AXO_ARENA_PET_SOURCE_VERIFICATION_V1",
+  "baseSha": "55a5c10d46260ce0932bd4000abc88dda94651db",
+  "implementationSha": "ecbebd520c59c77c2efac139518956e630500a71",
+  "sourceHashes": {
+    "packages/arena-engine/src/verified-pet.mjs": "01f0d4ebe383e38b79ce1bafc341e6750cf2a768ebd78ea7173c4b29bca96af2",
+    "packages/arena-engine/src/mount.mjs": "efc692115e4fc64a16e8e48d9237f640f3b384b561379f57be54385056a41a1b",
+    "packages/arena-engine/src/pet-arena.js": "c17144eabd7659479e491af7b287132c738cd2bccb14f0b39cc4ee6c96bcb3fe",
+    "apps/arena-web/http.mjs": "7240dd35f92480acee0325a98b75bcfd68409f860a11216fc2dd45431a2373e6",
+    "apps/arena-web/app.mjs": "1e3ae15ab47634a1be70f4a12873566db9cc9baab6a13aaa0535be804aea20c0",
+    "apps/arena-web/verified-panel.mjs": "88ea7145d901abd49005b6f5d960448559b7e6197078ee2ee77b4e8977c8f7b7",
+    "apps/arena-web/verified-visuals.mjs": "792957896da90d3784bdacefd410350579778e15bd0b5f7f3d7c2fdb7478fa91",
+    "apps/arena-web/render.mjs": "e820401adec7e8d27be9c20a382e8748c6d1b939ba92abf9902986da1dd36795",
+    "apps/arena-web/replay.mjs": "ab860398c5ae1d6a662d27d495f7a40e4fd04de2961ee37b9929dbb1a5485154",
+    "apps/arena-web/replay-export.mjs": "eed0741376638e89cce544fc8f1f92dbfc6cfd46835c8a956c7807ef1f6fd366",
+    "packages/arena-engine/test/verified-pet.test.mjs": "1940e77078e058ba54de835f8e1daa52cd1091e2fc8381d38bde5335cc0c1b59",
+    "apps/arena-web/tests/verified-session.test.mjs": "c0744349b6b32287acdefda4648105d086a78c92503ca68732d546c6a02db85e"
+  },
+  "localCheck": {
+    "status": "PASS",
+    "command": "npm run check",
+    "totalTests": 289,
+    "groups": {
+      "repository": 3,
+      "schemasAndHost": 54,
+      "wardrobe": 15,
+      "petApi": 17,
+      "passport": 15,
+      "visual": 46,
+      "contracts": 41,
+      "arena": 92,
+      "sourcePreview": 6
+    }
+  },
+  "additionalRouteRegressions": {
+    "status": "PASS",
+    "tests": 8
+  },
+  "browserReview": {
+    "status": "PASS",
+    "syntheticOnly": true,
+    "checks": [
+      "Canonical V1 equipped fighter rendered after layer hash checks.",
+      "Exact 17950 fixture XP, current V1 level 10, 8 numeric V1 items and stat contributions.",
+      "Frozen-entry policy and separate cosmetic-only Wardrobe/Passport links.",
+      "390-pixel loadout controls, scrolling, close and readable identity/stat panels.",
+      "No browser console errors in reviewed pipeline.",
+      "Completed equipped guided-practice battle and reopened gear-aware replay, preserving 150/145 initial frozen HP.",
+      "Loadout panel reachable from both lobby and Pet build."
+    ]
+  },
+  "exactSourceCi": {
+    "status": "PASS",
+    "jobs": [
+      "repository",
+      "contracts",
+      "arena"
+    ],
+    "url": "https://github.com/supah-based/axo-pet/actions/runs/39676566395"
+  },
+  "axoAcknowledgment": "NOT_ACKNOWLEDGED",
+  "productionAdapter": "NOT_CONNECTED",
+  "productionStoreParity": "NOT_PERFORMED",
+  "realWalletVerification": "NOT_PERFORMED",
+  "liveDeployment": "NOT_PERFORMED",
+  "draftPr": "https://github.com/supah-based/axo-pet/pull/10"
+}
