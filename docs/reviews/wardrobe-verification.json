@@ -1,0 +1,57 @@
+{
+  "schema": "AXO_WARDROBE_SOURCE_REVIEW_V1",
+  "date": "2026-10-21",
+  "implementationSha": "ad60545fbc9e4631b85fed3da3ce326abd2137c3",
+  "branch": "codex/my-axo-wardrobe",
+  "pullRequest": "https://github.com/supah-based/axo-pet/pull/7",
+  "ci": {
+    "status": "PASS",
+    "jobs": [
+      "repository",
+      "contracts",
+      "arena"
+    ],
+    "url": "https://github.com/supah-based/axo-pet/actions/runs/39655072787"
+  },
+  "checks": {
+    "command": "npm run check",
+    "status": "PASS",
+    "tests": 239,
+    "repository": 3,
+    "schemasAndHost": 54,
+    "wardrobe": 15,
+    "visual": 46,
+    "contracts": 41,
+    "arena": 76,
+    "preview": 4
+  },
+  "runtime": {
+    "previewModelSha256": "ea8a00eff98c14453b853d653aa8b4925c7d6cab30d6cf310fffc67ca45cc584",
+    "entrySha256": "fe3076703ecc39cfdb2115232b69564107a82f3f3615401ce39938688bc7e3d6",
+    "viewSha256": "e8a56e0f2b1b93f19bf8d5d3ef62fa3186521c3ec4fe5c41549351b3fbd68d15",
+    "rendererSha256": "4ae6be65c1ae2617c6665812916e3f1e8a6dea59ba0bac5f90c15e7418050c8b",
+    "catalogSha256": "45876f1faa4cd538ca4de3a70d0551cce392256cd2d610d62e3e52242e51069b"
+  },
+  "browser": {
+    "data": "SYNTHETIC_ONLY",
+    "fixtureExactXp": 2675,
+    "fixtureV1Level": 10,
+    "fixtureV1EquippedCount": 8,
+    "checks": [
+      "tier-20 cosmetic try-on with unchanged V1 XP/level/equipment",
+      "style search and complete look",
+      "local save, clear, restore and persistence after reload",
+      "390x844 mobile saved-look and View look controls",
+      "2:3 Preview PNG dialog with opaque badge and cosmetic/no-ownership footer",
+      "normal Hatchery source view leaves identity unavailable, XP unknown, try-on/save/export disabled without verified host session"
+    ]
+  },
+  "hostAdapter": "NOT_CONNECTED",
+  "realWalletVerification": "NOT_PERFORMED",
+  "production": "NOT_DEPLOYED",
+  "previewTransactions": "NONE",
+  "previewStats": "NONE",
+  "v2Transactions": "LOCKED",
+  "nftIssuance": "NONE",
+  "axoAcknowledgment": "NOT_ACKNOWLEDGED"
+}
