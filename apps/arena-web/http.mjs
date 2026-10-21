@@ -58,6 +58,6 @@ export function createArenaRouter({service=new ArenaService({matchmaking:true}),
  return router;
 }
 export function arenaStatic(){const router=express.Router();router.get('/',(_req,res)=>res.sendFile('index.html',{root}));
- const files=['app.mjs','render.mjs','catalog.mjs','combat.mjs','replay.mjs','verified-visuals.mjs','verified-panel.mjs','styles.css'];for(const f of files)router.get('/'+f,(_req,res)=>res.sendFile(f,{root}));
+ const files=['app.mjs','render.mjs','catalog.mjs','combat.mjs','replay.mjs','verified-visuals.mjs','verified-panel.mjs','battle-report.mjs','battle-report-view.mjs','battle-report.css','styles.css'];for(const f of files)router.get('/'+f,(_req,res)=>res.sendFile(f,{root}));
  // No state, source masters, server modules, credentials or review artifacts are served.
  router.use('/assets',express.static(join(root,'assets/runtime'),{index:false,dotfiles:'deny',maxAge:3600000}));return router;}

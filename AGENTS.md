@@ -13,7 +13,9 @@ Read HANDOFF.md, README.md, CONTRIBUTING.md, SECURITY.md and docs/MIGRATION_PLAN
 
 ## Collaboration with AXO on OpenClaw
 
-- Current Arena work: docs/handoffs/AXO-010.md and docs/ARENA_VERIFIED_PET.md. Use the same shared verified Pet ports, preserve existing Arena secret/store/timer ownership and frozen entries. Previews remain cosmetic; missing gear evidence cannot become an empty loadout.
+- Current Arena report work: docs/handoffs/AXO-011.md and docs/ARENA_BATTLE_REPORTS.md. Derive reports only from validated completed participant replays; preserve frozen entry XP/gear, replay access, account/view fences and cosmetic-only Previews. No new report store or live state mutation.
+
+- Arena shared-reader work: docs/handoffs/AXO-010.md and docs/ARENA_VERIFIED_PET.md. Use the same shared verified Pet ports, preserve existing Arena secret/store/timer ownership and frozen entries. Previews remain cosmetic; missing gear evidence cannot become an empty loadout.
 
 - Passport work and host integration: docs/handoffs/AXO-009.md and docs/PET_PASSPORT.md. Preserve private Pet API authority; history is optional, record-backed and separate from catalog lore/current milestones. Passport only reads existing saved previews, and cannot grant equipment, awards or stats.
 
