@@ -79,3 +79,9 @@
 **Decision:** Mount a Wardrobe module in the existing Hatchery view and wallet flow. Require one coherent authoritative V1 Pet/equipment snapshot behind a private GET-only adapter. Keep numeric V1 equipment/canonical appearance separate from candidate try-ons. Save only cosmetic choices under a wallet/Pet-scoped local key and permanently label exported portraits Preview. Expire reads, fence account races and retain fresh same-wallet snapshots during background revalidation. V2 transaction/stat paths remain absent and locked.
 
 **Reason:** Users can style their own lineage immediately without turning preview metadata into ownership, equip authority or gameplay bonuses. A shared authenticated snapshot boundary can later support the standalone Pet API, Passport and Arena without introducing another XP ledger. Missing host adapters remain explicit; synthetic browser QA cannot establish live verification. See MY_AXO_WARDROBE.md and AXO-007.
+
+## ADR-015 — Standalone Pet reads with one coherent authenticated projection
+
+**Decision:** Move Wardrobe's authoritative read into a shared Pet reader and strict `AXO_PET_READ_V1` DTO. Serve it through a standalone loopback-only HTTP service with explicit existing-host ports and a Wardrobe compatibility endpoint. Keep liveness separate from bounded dependency readiness. Reject client identity claims, expire reads from their start time, propagate cancellation and retain explicit equipment failures. No Pet database, write preparation or consumer gameplay migration is introduced.
+
+**Reason:** Hatchery, Passport and Arena need the same identity, exact XP, equipment revision and canonical appearance. A shared reader prevents drift while retaining the preserved host as authority. Schemas cannot prove RPC/session execution; production binding and same-block evidence remain AXO's adapter responsibility. Shadow parity and release gates precede any live routing. See READ_ONLY_PET_API.md and AXO-008.

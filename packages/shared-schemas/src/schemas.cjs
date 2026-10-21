@@ -39,6 +39,16 @@ const gearReadFailure = object({
   schemaVersion: version('AXO_GEAR_READ_FAILURE_V1'), status: { enum: ['UNAVAILABLE', 'INCONSISTENT'] },
   reason: { enum: ['RPC_UNAVAILABLE', 'INDEXER_UNAVAILABLE', 'ASSET_MISSING', 'ASSET_HASH_MISMATCH', 'STALE_REVISION', 'UNKNOWN_OWNERSHIP', 'NOT_MINTED'] }, data: { type: 'null' },
 });
+const petRead = object({
+  schemaVersion: version('AXO_PET_READ_V1'), status: version('READY'),
+  observedAt: text('^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}\\.[0-9]{3}Z$', 24),
+  expiresAt: text('^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}\\.[0-9]{3}Z$', 24),
+  identity: { $ref: 'urn:axo:pet:identity:v1' },
+  equipment: { anyOf: [{ $ref: 'urn:axo:pet:gear-projection:v1' }, { $ref: 'urn:axo:pet:gear-read-failure:v1' }] },
+  authoritativeVisual: object({ visualRevision: version('5.1.1'), equipmentIncluded: { type: 'boolean' },
+    layers: { type: 'array', minItems: 1, maxItems: 11, items: visualLayer } }),
+});
 const draft = (name, shape) => ({ $schema: 'http://json-schema.org/draft-07/schema#', $id: `urn:axo:pet:${name}:v1`, ...shape });
 module.exports = deepFreeze({ petIdentity: draft('identity', petIdentity), gearDefinition: draft('gear-definition', gearDefinition),
-  gearProjection: draft('gear-projection', gearProjection), gearReadFailure: draft('gear-read-failure', gearReadFailure) });
+  gearProjection: draft('gear-projection', gearProjection), gearReadFailure: draft('gear-read-failure', gearReadFailure),
+  petRead: draft('read', petRead) });
