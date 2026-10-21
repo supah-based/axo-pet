@@ -56,6 +56,10 @@ npm run check
 
 The browser model copy must be byte-identical to `packages/pet-domain/src/wardrobe-preview.mjs`. Tests cover exact XP, V1 mapping and revision failures, account races, expiry, storage isolation, hostile/corrupt previews, read-only HTTP/cache behavior and synthetic route isolation. Browser review covers real controls and export rendering using synthetic data; it cannot establish production session or chain parity. AXO's integration and live verification are tracked in AXO-007.
 
+## Shared Pet API update
+
+The standalone read-only Pet API in AXO-008 now owns the common reader. The existing `createWardrobeHandler` and `AXO_WARDROBE_READ_V1` response stay compatible; their reads delegate to the same validated projection as GET `/api/pet/v1/me`. Responses now vary by Cookie and Authorization, and the 60-second expiry starts before host I/O. See [READ_ONLY_PET_API.md](READ_ONLY_PET_API.md) for direct host mounting or separate-process setup. Production ports and real-session parity remain pending.
+
 ## Subsequent priorities
 
 1. Extract a standalone read-only Pet API around the same authoritative snapshot port and reviewed projections, without creating a parallel ledger.

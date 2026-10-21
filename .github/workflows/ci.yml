@@ -22,6 +22,7 @@ jobs:
       - run: npm test
       - run: npm run test:schemas
       - run: npm run test:wardrobe
+      - run: npm run test:pet-api
       - run: npm run test:style
       - run: npm run test:dev
 

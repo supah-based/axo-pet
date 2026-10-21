@@ -96,11 +96,34 @@ function validateGearReadResult(value, context) {
   const checked = verified ? validateVerifiedGearProjection(value, context) : result(shape('gearReadFailure', value));
   return { ...checked, usable: verified && checked.valid };
 }
+function validatePetRead(value, { expectedOwnerAddress, visualCatalog, now = Date.now() } = {}) {
+  const errors = shape('petRead', value);
+  if (errors.length) return result(errors);
+  const observed = Date.parse(value.observedAt), expires = Date.parse(value.expiresAt);
+  if (!Number.isFinite(observed) || !Number.isFinite(expires) || !Number.isFinite(now)
+    || new Date(observed).toISOString() !== value.observedAt || new Date(expires).toISOString() !== value.expiresAt
+    || expires - observed !== 60000 || observed > now + 5000 || expires <= now) errors.push(error('READ_EXPIRED_OR_INVALID', '/expiresAt'));
+  for (const issue of validatePetIdentity(value.identity, { expectedOwnerAddress }).errors) errors.push(error(issue.code, `/identity${issue.path}`));
+  const equipment = validateGearReadResult(value.equipment, { identity: value.identity, visualCatalog });
+  for (const issue of equipment.errors) errors.push(error(issue.code, `/equipment${issue.path}`));
+  const base = visualCatalog?.schema === 'AXO_PET_WEBSITE_VISUAL_CATALOG_V5' && visualCatalog.catalogId === 'AXO_PET_WEBSITE_VISUALS_V5'
+    && visualCatalog.canonicalWebsiteVisual === true && visualCatalog.visualRevision === '5.1.1'
+    && Array.isArray(visualCatalog.bases) && visualCatalog.bases.find(entry => entry?.lineageKey === value.identity.lineageId && entry.level === value.identity.level);
+  if (!base) errors.push(error('VISUAL_CATALOG_INVALID', '/authoritativeVisual'));
+  const expected = equipment.usable ? value.equipment.visual.layers
+    : base ? [{ slot: 'pet', z: 5, optionId: null, url: base.url, sha256: base.runtimeSha256 }] : [];
+  const actual = value.authoritativeVisual.layers;
+  if (value.authoritativeVisual.equipmentIncluded !== equipment.usable || actual.length !== expected.length
+    || expected.some((layer, index) => ['slot', 'z', 'optionId', 'url', 'sha256'].some(key => actual[index]?.[key] !== layer[key]))) {
+    errors.push(error('READ_VISUAL_MISMATCH', '/authoritativeVisual'));
+  }
+  return result(errors);
+}
 class SchemaValidationError extends Error {
   constructor(errors) { super(`AXO schema validation failed: ${errors.map(issue => `${issue.code}:${issue.path}`).join(', ')}`); this.name = 'SchemaValidationError'; this.errors = errors; }
 }
 const assertWith = validate => (value, context) => { const checked = validate(value, context); if (!checked.valid) throw new SchemaValidationError(checked.errors); return value; };
 module.exports = { XP_THRESHOLDS: protocol.XP_THRESHOLDS, GEAR_SLOTS, ARENA_STATS, LINEAGES: protocol.LINEAGES, VISUAL_Z_ORDER,
-  MIN_EQUIP_LEVEL, levelForXp, schemas, validatePetIdentity, validateGearDefinition, validateVerifiedGearProjection, validateGearReadResult,
+  MIN_EQUIP_LEVEL, levelForXp, schemas, validatePetIdentity, validateGearDefinition, validateVerifiedGearProjection, validateGearReadResult, validatePetRead,
   assertPetIdentity: assertWith(validatePetIdentity), assertGearDefinition: assertWith(validateGearDefinition),
-  assertVerifiedGearProjection: assertWith(validateVerifiedGearProjection), SchemaValidationError };
+  assertVerifiedGearProjection: assertWith(validateVerifiedGearProjection), assertPetRead: assertWith(validatePetRead), SchemaValidationError };

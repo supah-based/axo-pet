@@ -1,6 +1,6 @@
 # AXO Pet build-agent handoff
 
-Current Codex work: [AXO-007 — My AXO Wardrobe inside Hatchery](docs/handoffs/AXO-007.md), on `codex/my-axo-wardrobe`. It consumes the source from [AXO-006 — Covered sweaters, jackets and shirts](docs/handoffs/AXO-006.md) and [AXO-005 — Level-20 growth, item tiers and five-piece Gear sets](docs/handoffs/AXO-005.md) as cosmetic previews, with V1 authoritative equipment separate and all V2 actions locked. The prior anatomy/headwear exchange remains in [AXO-004](docs/handoffs/AXO-004.md). Shared schemas and live host discovery remain in [AXO-002](docs/handoffs/AXO-002.md). The earlier setup exchange remains in [AXO-001](docs/handoffs/AXO-001.md).
+Current Codex work: [AXO-008 — Standalone read-only Pet API](docs/handoffs/AXO-008.md), on `codex/read-only-pet-api`. It shares one authoritative snapshot reader with [AXO-007 — My AXO Wardrobe inside Hatchery](docs/handoffs/AXO-007.md), preserving exact V1 XP/equipment and keeping previews cosmetic. Clothing remains in [AXO-006](docs/handoffs/AXO-006.md), candidate level-20 Gear/sets in [AXO-005](docs/handoffs/AXO-005.md), prior anatomy/headwear in [AXO-004](docs/handoffs/AXO-004.md), shared schemas/host discovery in [AXO-002](docs/handoffs/AXO-002.md), and setup in [AXO-001](docs/handoffs/AXO-001.md). All V2 actions remain locked.
 
 This document is the operating handoff for agents and engineers working in the private `axo-pet` repository. Read it before changing code, moving package boundaries, running deployment tooling, or importing data from the existing AXO application.
 

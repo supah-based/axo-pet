@@ -1,0 +1,59 @@
+{
+  "schemaVersion": "AXO_PET_API_SOURCE_VERIFICATION_V1",
+  "baseSha": "221873fb7387b52da4a41a6bc2a3782fd69d4b0b",
+  "implementationSha": "PENDING",
+  "sourceHashes": {
+    "apps/pet-api/src/pet-read.mjs": "a59b180d00f96123053c3f06c5b4d0a86580b878149c618b8c8eb2798f37a219",
+    "apps/pet-api/src/read-http.mjs": "156e0b05c0708c79c2c5634ffd458c1cbc15fe82b2206fd3d227b87b6bac22a7",
+    "apps/pet-api/src/server.mjs": "932e9cb7daab73255167648cf2576d90818e2f1489e65771f9bf720200310d92",
+    "apps/pet-api/src/start.mjs": "42cd708acd3e2ffa8f03213ff80172bf5c8e38f6839c92b0f7b3973f883af303",
+    "apps/pet-api/src/wardrobe-read.mjs": "6d1b8c613685ce3344a804feecfe62fda8937f3bf693a0a43d1a5938669e52c2",
+    "packages/shared-schemas/src/schemas.cjs": "e640da3fd71d4ca15a3c2093d79f372360c6c544e79bfb289a312836b33c8454",
+    "packages/shared-schemas/src/index.cjs": "8a76e41e559a5e501977c72d6d7e1624f6b02d50a86f6dde658e3637f5ca431f",
+    "packages/shared-schemas/src/index.mjs": "06c14d8ae297cfa12f31ea64fc466cdbf155c6011e0a45769c3185a3fa1f6483",
+    "tests/pet-api.test.mjs": "a575ca7101196d34d2bfa805175497d2b8622edb53e4f0b5c8efe3f1fec26436"
+  },
+  "localCheck": {
+    "status": "PASS",
+    "command": "npm run check",
+    "totalTests": 256,
+    "groups": {
+      "repository": 3,
+      "schemasAndHost": 54,
+      "wardrobe": 15,
+      "petApi": 17,
+      "visual": 46,
+      "contracts": 41,
+      "arena": 76,
+      "sourcePreview": 4
+    }
+  },
+  "runtimeSmoke": {
+    "status": "PASS",
+    "standaloneDefault": {
+      "health": 200,
+      "readiness": 503,
+      "pet": 503,
+      "wardrobe": 503
+    },
+    "operatorLocalModule": {
+      "loopbackOnly": true,
+      "unverifiedSession": 401,
+      "petDataSupplied": false
+    }
+  },
+  "exactSourceCi": {
+    "status": "PENDING"
+  },
+  "axoAcknowledgment": "NOT_ACKNOWLEDGED",
+  "productionAdapter": "NOT_CONNECTED",
+  "liveHostRevision": "UNKNOWN",
+  "realWalletVerification": "NOT_PERFORMED",
+  "productionParity": "NOT_PERFORMED",
+  "limits": [
+    "Tests use invented shared-schema fixtures only.",
+    "Schema consistency cannot establish actual RPC/session execution or asset bytes.",
+    "AXO must bind existing host ports and return same-block/revision evidence.",
+    "No production routing, state migration, write endpoint, V2 activation or active Arena migration."
+  ]
+}

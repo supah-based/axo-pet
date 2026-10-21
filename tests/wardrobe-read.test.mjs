@@ -46,7 +46,7 @@ test('read handler ignores client authority, is GET-only, private and unavailabl
   assert.equal((await fetch(url, { method: 'POST', body: JSON.stringify(input()) })).status, 405);
   assert.equal((await fetch(url + '?owner=' + owner, { headers: { Cookie: 'existing-session=verified' } })).status, 400);
   const response = await fetch(url, { headers: { Cookie: 'existing-session=verified' } });
-  assert.equal(response.status, 200); assert.equal(response.headers.get('cache-control'), 'private, no-store'); assert.equal(response.headers.get('vary'), 'Cookie'); assert.equal(response.headers.get('access-control-allow-origin'), null);
+  assert.equal(response.status, 200); assert.equal(response.headers.get('cache-control'), 'private, no-store'); assert.equal(response.headers.get('vary'), 'Cookie, Authorization'); assert.equal(response.headers.get('access-control-allow-origin'), null);
   assert.equal((await response.json()).identity.xp, 17950); assert.deepEqual(seen, [undefined, 'existing-session=verified']);
 });
 test('host read failures expose only a stable unavailable code, with no exception or player-state leak', async t => {
