@@ -1,7 +1,7 @@
 {
   "schemaVersion": "AXO_PASSPORT_SOURCE_VERIFICATION_V1",
   "baseSha": "71084e29456e5877e223d2fe754306a745d63788",
-  "implementationSha": "PENDING",
+  "implementationSha": "e7ea9b779572489ac5cabd28a0a96a8c64811de7",
   "sourceHashes": {
     "apps/hatchery-web/public/passport/view.mjs": "5971469032dbc51052388ad3e840807824910b88008ba5aaaed86182f03ba6db",
     "apps/hatchery-web/public/passport/passport.css": "c4a263f4346ca95adbc6c80fcb9043bceaaaa5cf7f24b7c845d75e184c75af51",
@@ -42,12 +42,19 @@
     ]
   },
   "exactSourceCi": {
-    "status": "PENDING"
+    "status": "PASS",
+    "jobs": [
+      "repository",
+      "contracts",
+      "arena"
+    ],
+    "url": "https://github.com/supah-based/axo-pet/actions/runs/39672867824"
   },
   "axoAcknowledgment": "NOT_ACKNOWLEDGED",
   "productionAdapter": "NOT_CONNECTED",
   "historyAdapter": "NOT_CONNECTED",
   "realWalletVerification": "NOT_PERFORMED",
   "productionParity": "NOT_PERFORMED",
-  "liveDeployment": "NOT_PERFORMED"
+  "liveDeployment": "NOT_PERFORMED",
+  "draftPr": "https://github.com/supah-based/axo-pet/pull/9"
 }
