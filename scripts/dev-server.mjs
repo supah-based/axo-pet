@@ -10,7 +10,7 @@ const publicRoot = resolve(root, 'apps/hatchery-web/public');
 const pages = new Map([
   ['/', 'pet-home.html'], ['/my-axo', 'pet-dashboard.html'],
   ['/hatchery/game', 'hatchery-game.html'], ['/marketplace', 'pet-marketplace.html'],
-  ['/nft', 'nft.html'], ['/gear-studio', 'anatomy-studio.html'], ['/gear-concepts', 'gear-studio.html'], ['/arena/', '../arena-web/index.html'],
+  ['/nft', 'nft.html'], ['/passport', 'passport.html'], ['/gear-studio', 'anatomy-studio.html'], ['/gear-concepts', 'gear-studio.html'], ['/arena/', '../arena-web/index.html'],
 ]);
 const publicFiles = new Set([
     'pet-home', 'pet-dashboard', 'pet-marketplace', 'hatchery-game', 'nft', 'gear-studio', 'anatomy-studio', 'gear-progression',
@@ -31,13 +31,14 @@ export function isPublicAsset(path) {
     && !path.split('/').some(segment => segment === '..' || segment.startsWith('.'));
 }
 
-export function createDevServer({ liveAssets = true, fetchAsset = fetch, wardrobeReview = false } = {}) {
+export function createDevServer({ liveAssets = true, fetchAsset = fetch, wardrobeReview = false, passportReview = false } = {}) {
   // An omitted file/store keeps all review identities, rooms and builds in memory.
   const service = new ArenaService({ mode: 'preview', matchmaking: true, privacyMode: 'strict' });
   const arena = previewApp({ service });
   const cache = new Map();
   let cachedBytes = 0;
   let reviewReader;
+  let passportReader;
   const send = (req, res, status, content, type = 'application/json; charset=utf-8') => {
     res.writeHead(status, { 'Content-Type': type });
     res.end(req.method === 'HEAD' ? undefined : content);
@@ -98,6 +99,27 @@ export function createDevServer({ liveAssets = true, fetchAsset = fetch, wardrob
         }
         return json(req, res, 200, { syntheticOnly: true, read: await reviewReader(req) });
       }
+      if (passportReview && path === '/passport/review') {
+        res.setHeader('Content-Security-Policy', res.getHeader('Content-Security-Policy').replace("frame-ancestors 'none'", "frame-ancestors 'self'"));
+        const html=(await readFile(resolve(publicRoot,'passport.html'),'utf8')).replace('src="/passport/entry.mjs"','src="/__dev/passport-review.mjs"')
+          .replace('<main id="passport"','<aside style="padding:12px 24px;background:#4c3620;color:#fff3db;font:13px system-ui">SYNTHETIC PASSPORT REVIEW · invented Pet, records and equipment · no live wallet or ledger access</aside><main id="passport"');
+        return send(req,res,200,html,types['.html']);
+      }
+      if (passportReview && path === '/passport/mobile-review') return send(req,res,200,await readFile(resolve(root,'tests/fixtures/passport-mobile.html')),types['.html']);
+      if (passportReview && path === '/__dev/passport-review.mjs') return send(req,res,200,await readFile(resolve(root,'tests/fixtures/passport-review.mjs')),types['.mjs']);
+      if (passportReview && path === '/__dev/passport-fixture') {
+        if (!passportReader) {
+          const {createPassportReader}=await import('../apps/pet-api/src/passport-read.mjs');
+          const fixture=JSON.parse(await readFile(resolve(root,'packages/shared-schemas/fixtures/synthetic-v1.json'),'utf8'));
+          const visualCatalog=JSON.parse(await readFile(resolve(root,'packages/gear-catalog/catalogs/website-visual-catalog-v5.json'),'utf8'));
+          const identity={...fixture.identities.level10Minted,name:'Miso · synthetic',xp:2675}, fixtureTime=Date.now();
+          passportReader=createPassportReader({authenticate:async()=>({verified:true,address:identity.ownerAddress}),readVerifiedPetSnapshot:async()=>({identity,equipment:fixture.projections.full}),visualCatalog,
+            readPetHistory:async()=>{const stamp=days=>new Date(fixtureTime-days*86400000).toISOString();return {schemaVersion:'AXO_PET_HISTORY_V1',status:'AVAILABLE',ownerAddress:identity.ownerAddress,petGenesisId:identity.genesisId,throughXp:identity.xp,coverage:'COMPLETE',hatchedAt:stamp(7),
+              xpEvents:[{id:'review-1',occurredAt:stamp(6),xpBefore:0,xpAfter:40,label:'First Hatchery chapter · synthetic'},{id:'review-2',occurredAt:stamp(3),xpBefore:40,xpAfter:1200,label:'Ten chapters of growth · synthetic'},{id:'review-3',occurredAt:stamp(1),xpBefore:1200,xpAfter:2675,label:'Quest journal rewards · synthetic'}],
+              achievements:[{id:'review-hatch',label:'Hello, little builder',description:'Invented review award for a first Hatchery chapter.',earnedAt:stamp(6)},{id:'review-ten',label:'Ten chapters',description:'Invented review award for reaching the current V1 milestone.',earnedAt:stamp(3)}]};}});
+        }
+        return json(req,res,200,{syntheticOnly:true,read:await passportReader(req)});
+      }
       if (pages.has(path)) {
         const target = path === '/arena/' ? resolve(root, 'apps/arena-web/index.html') : resolve(publicRoot, pages.get(path));
         const html = await readFile(target, 'utf8');
@@ -125,6 +147,7 @@ export function createDevServer({ liveAssets = true, fetchAsset = fetch, wardrob
       if (/^\/wardrobe\/(?:(?:entry|view|model|markup)\.mjs|wardrobe\.css)$/.test(path)) {
         return send(req, res, 200, await readFile(resolve(publicRoot, '.' + path)), types[extname(path)]);
       }
+      if (/^\/passport\/(?:(?:entry|view|model|markup|history)\.mjs|passport\.css|reference\.json)$/.test(path)) return send(req,res,200,await readFile(resolve(publicRoot,'.'+path)),types[extname(path)]);
       if (liveAssets && isPublicAsset(path)) {
         if (!cache.has(path)) {
           // Fixed-origin, GET-only asset reads. Never forward cookies, headers or query strings.

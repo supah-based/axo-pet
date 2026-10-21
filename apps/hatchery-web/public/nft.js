@@ -319,6 +319,8 @@
   async function loadHolder() {
     const connected = state.session.connected === true;
     $$('[data-wallet-connect]').forEach((button) => button.classList.toggle('connected', connected));
+    // The new Passport owns its private read; retain legacy collection/layer browsing.
+    if ($('[data-axo-passport]')) return;
     if (!connected) {
       $('[data-passport-gate]').hidden = false;
       $('[data-passport-live]').hidden = true;

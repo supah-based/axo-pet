@@ -19,6 +19,7 @@
   <link rel="stylesheet" href="/nft.css?v=20260902-nft-v511-platformless1">
   <link rel="stylesheet" href="/nft-v5-runtime.css?v=20260902-nft-v511-platformless1">
   <script type="module" src="/assets/wallet.js?v=20260831-nft2"></script>
+  <link rel="stylesheet" href="/passport/passport.css"><script type="module" src="/passport/entry.mjs"></script>
   <script src="/nft.js?v=20260902-nft-v511-platformless1" defer></script>
   <link rel="stylesheet" href="/axo-dark.css?v=20260831-bespoke-dark1">
 </head>
@@ -38,7 +39,7 @@
         <div class="eyebrow"><i></i> AXO PET NFT · ROBINHOOD CHAIN <b data-system-state>READING</b></div>
         <h1>One scout.<br><span>One wallet.</span><br>A life of growth.</h1>
         <p>Your AXO Pet is a non-transferable identity—not a flip. Its genesis and DNA stay fixed while verified Hatchery levels evolve its scene and appearance.</p>
-        <div class="hero-actions"><button class="pet-button primary" type="button" data-wallet-connect><span>VIEW MY NFT PASSPORT</span><b>→</b></button><a class="pet-button secondary" href="#collection"><span>EXPLORE LINEAGES</span><b>↓</b></a></div>
+        <div class="hero-actions"><a class="pet-button primary" href="/passport"><span>VIEW MY PET PASSPORT</span><b>→</b></a><a class="pet-button secondary" href="#collection"><span>EXPLORE LINEAGES</span><b>↓</b></a></div>
       </div>
       <div class="nft-hero-visual" aria-label="AXO Pet evolving artwork preview">
         <div class="nft-orbit orbit-one"></div><div class="nft-orbit orbit-two"></div>
@@ -55,27 +56,7 @@
       <article data-mint-state-card data-onchain-state-card><small>ONCHAIN METADATA</small><strong data-onchain-revision>V4.3</strong><span data-onchain-note>V5 URI MIGRATION GATED</span></article>
     </section>
 
-    <section class="nft-passport" data-passport-section aria-labelledby="nft-passport-title">
-      <header><div><span class="section-index">01 / MY NFT PASSPORT</span><h2 id="nft-passport-title">Your Pet.<br><em>Your receipts.</em></h2></div><p>Connect the wallet that hatched your AXO. This view reads your private Hatchery session and never asks for a token approval or transaction.</p></header>
-      <div class="passport-gate" data-passport-gate>
-        <img src="/hatchery-assets/hacker-v3/states/axo-pet-egg-v3.webp" width="280" height="280" alt="AXO Pet egg">
-        <div><span>WALLET-PRIVATE READ</span><h3>Open your NFT status.</h3><p>See the deterministic token identity, lineage, current growth state, layer plan, and exact mint blockers without exposing your wallet publicly.</p><button class="pet-button primary" type="button" data-wallet-connect><span>CONNECT WALLET</span><b>→</b></button></div>
-      </div>
-      <div class="passport-live" data-passport-live hidden>
-        <div class="passport-art"><div data-layer-stack></div><img data-passport-fallback src="/hatchery-nft-v5.1.1/pet_emerald_sprout_l01.webp" width="1024" height="1024" alt="Your AXO Pet NFT V5 preview"></div>
-        <article class="passport-data">
-          <header><div><span data-passport-lineage>AXO PET</span><h3 data-passport-name>YOUR SOULBOUND SCOUT</h3></div><b data-passport-status>READING</b></header>
-          <dl><div><dt>GROWTH</dt><dd data-passport-growth>—</dd></div><div><dt>TOKEN ID</dt><dd data-passport-token>—</dd></div><div><dt>DNA HASH</dt><dd data-passport-dna>—</dd></div><div><dt>VISUAL REVISION</dt><dd data-passport-revision>—</dd></div></dl>
-          <div class="passport-message" data-passport-message>Reading your preserved Hatchery identity…</div>
-          <section class="passport-traits" data-passport-traits hidden aria-labelledby="passport-traits-title">
-            <header><span>TRAIT READOUT</span><h4 id="passport-traits-title">Your NFT DNA</h4></header>
-            <div class="passport-trait-group"><b>IMMUTABLE DNA · V4.3</b><div data-passport-dna-traits></div></div>
-            <div class="passport-trait-group"><b>CURRENT SCENE + GROWTH</b><div data-passport-scene-traits></div></div>
-          </section>
-          <nav><a href="/hatchery?view=pet">CARE FOR MY PET →</a><a href="/hatchery?view=wardrobe">OPEN WARDROBE →</a></nav>
-        </article>
-      </div>
-    </section>
+    <section id="passport" data-passport-section><div data-axo-passport class="axo-passport"><p>Opening your Pet Passport…</p></div></section>
 
     <section class="nft-collection" id="collection">
       <header><div><span class="section-index">02 / SIX ORIGINS</span><h2>Genesis stays.<br><em>The story evolves.</em></h2></div><p>One deterministic lineage is chosen at hatch. Every lineage has ten growth levels; progression changes the canonical visual scene without changing identity.</p></header>

@@ -110,11 +110,12 @@ export class PreviewOutfits {
 }
 
 // A wallet change clears the previous read immediately; late responses never restore it.
-export function createWardrobeSession({ read, onState, now = Date.now, timer = setTimeout, cancelTimer = clearTimeout }) {
+export function createWardrobeSession({ read, onState, now = Date.now, timer = setTimeout, cancelTimer = clearTimeout,
+  validateRead = assertWardrobeRead, identityOf = value => value.identity, expiryOf = value => value.expiresAt }) {
   let generation = 0, current = null, abort = null, expiry = null, session = { connected: false };
   const clear = () => { abort?.abort(); cancelTimer(expiry); current = null; };
-  const fresh = () => current && sameWallet(current.identity.ownerAddress, session.address) && Date.parse(current.expiresAt) > now();
-  const expireAt = ticket => { expiry = timer(() => { if (ticket === generation) { current = null; onState({ status: 'EXPIRED', read: null }); } }, Date.parse(current.expiresAt) - now()); };
+  const fresh = () => current && sameWallet(identityOf(current).ownerAddress, session.address) && Date.parse(expiryOf(current)) > now();
+  const expireAt = ticket => { expiry = timer(() => { if (ticket === generation) { current = null; onState({ status: 'EXPIRED', read: null }); } }, Date.parse(expiryOf(current)) - now()); };
   async function change(next, { background = false } = {}) {
     const retained = background && next?.connected === true && sameWallet(next.address, session.address) && fresh() ? current : null;
     const ticket = ++generation; clear(); current = retained; session = { connected: next?.connected === true, address: next?.address };
@@ -125,7 +126,7 @@ export function createWardrobeSession({ read, onState, now = Date.now, timer = s
     try {
       const value = await read({ signal: abort.signal });
       if (ticket !== generation) return;
-      assertWardrobeRead(value, session.address, now()); current = structuredClone(value);
+      validateRead(value, session.address, now()); current = structuredClone(value);
       cancelTimer(expiry); expireAt(ticket);
       onState({ status: 'READY', read: current });
     } catch (error) { if (ticket === generation) { current = null; onState({ status: 'UNAVAILABLE', read: null, message: 'Your verified Pet read is unavailable. Retry to continue.' }); } }

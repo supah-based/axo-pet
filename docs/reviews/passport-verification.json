@@ -1,0 +1,60 @@
+{
+  "schemaVersion": "AXO_PASSPORT_SOURCE_VERIFICATION_V1",
+  "baseSha": "71084e29456e5877e223d2fe754306a745d63788",
+  "implementationSha": "e7ea9b779572489ac5cabd28a0a96a8c64811de7",
+  "sourceHashes": {
+    "apps/hatchery-web/public/passport/view.mjs": "5971469032dbc51052388ad3e840807824910b88008ba5aaaed86182f03ba6db",
+    "apps/hatchery-web/public/passport/passport.css": "c4a263f4346ca95adbc6c80fcb9043bceaaaa5cf7f24b7c845d75e184c75af51",
+    "apps/hatchery-web/public/passport/markup.mjs": "ad2b64b864432b22b2618f91b0d9f6fbcfb67eeffa125b31ad3e3165ba314179",
+    "apps/hatchery-web/public/passport/reference.json": "09051847e7a29e364ed3b66bd58cc573bd58514ac324b720c368ccaaa7682f00",
+    "apps/pet-api/src/passport-read.mjs": "12d27b34d853f503ca5b75d42c5c364c8ab0d8b1838d6db49f81299a948e03ec",
+    "packages/shared-schemas/src/passport-history.cjs": "3da6071b816d07aa1c1c9b5080edce5d77c7d3a07973bcb7c15f66ba3e456e89",
+    "packages/pet-domain/src/passport.mjs": "56dd58f4a67711e74555064166d6e134f7669669a283f40c80aea158df74c2f6",
+    "packages/pet-domain/src/wardrobe-preview.mjs": "302518576516a3f365f13c599121decd8be3391d029a716d9fa189206c026978",
+    "tests/passport.test.mjs": "776e1829a8d5dadcd6b79fcde912d4d05765f694123bc024010f75fe65d72b9b"
+  },
+  "localCheck": {
+    "status": "PASS",
+    "command": "npm run check",
+    "totalTests": 272,
+    "groups": {
+      "repository": 3,
+      "schemasAndHost": 54,
+      "wardrobe": 15,
+      "petApi": 17,
+      "passport": 15,
+      "visual": 46,
+      "contracts": 41,
+      "arena": 76,
+      "sourcePreview": 5
+    }
+  },
+  "browserReview": {
+    "status": "PASS",
+    "syntheticOnly": true,
+    "checks": [
+      "Exact 2675 fixture XP, V1 level 10 and canonical hash-checked equipment portrait.",
+      "Recorded XP timeline and dated achievements, separate current milestones.",
+      "Lineage chapter reference dialog, without changing current Pet.",
+      "Verified V1 numeric equipment separate from local saved Preview portrait.",
+      "390-pixel mobile tabs/journal/saved-look controls; no horizontal body overflow.",
+      "Ordinary source Passport remains disconnected with no invented identity/XP."
+    ]
+  },
+  "exactSourceCi": {
+    "status": "PASS",
+    "jobs": [
+      "repository",
+      "contracts",
+      "arena"
+    ],
+    "url": "https://github.com/supah-based/axo-pet/actions/runs/39672867824"
+  },
+  "axoAcknowledgment": "NOT_ACKNOWLEDGED",
+  "productionAdapter": "NOT_CONNECTED",
+  "historyAdapter": "NOT_CONNECTED",
+  "realWalletVerification": "NOT_PERFORMED",
+  "productionParity": "NOT_PERFORMED",
+  "liveDeployment": "NOT_PERFORMED",
+  "draftPr": "https://github.com/supah-based/axo-pet/pull/9"
+}
