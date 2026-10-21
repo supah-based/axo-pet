@@ -11,7 +11,7 @@
     "apps/arena-web/index.html": "2a86bcbc0dd343ba23aef749036f074907f59a7564bc38a28543d7e9160ef8e5",
     "apps/arena-web/package.json": "3999a41f6c7801810aab3a47d80f18bd75aace3fbde96d18e8f1031252436aff",
     "apps/arena-web/tests/battle-report.test.mjs": "7b9082e91a9cbde01f14aaff57f32f8b894016a56132fadf7415d891a12501c6",
-    "apps/arena-web/tests/battle-report-dom.test.mjs": "5ea49557897f74299af54ef54b737f03c512ad0fac337e341bc033186ac6c938",
+    "apps/arena-web/tests/battle-report-dom.test.mjs": "8ef88442688c4b5cca3a7134937a896f5801f5f13ab88eb577f858481d6ee417",
     "scripts/dev-server.mjs": "b6f4b6cdb94e0d4acc61b1b7b3832e409a81e16497ff134f16fd114169a90c97",
     "tests/fixtures/arena-pipeline-review.mjs": "3294e7ed1dfc18a7e9fe55f6a4fdf33e27792c5a561c3bb7f7ead919a2037df4",
     "tests/dev-server.test.mjs": "c533bc1bed78095aec3cd3a75f7915affbda00d7cb53fa6a9975d8cd6856a09d"
@@ -50,5 +50,16 @@
   "axo010HostBinding": "UNKNOWN",
   "realWalletVerification": "NOT_PERFORMED",
   "productionParity": "NOT_PERFORMED",
-  "liveDeployment": "NOT_PERFORMED"
+  "liveDeployment": "NOT_PERFORMED",
+  "arenaRerun": {
+    "status": "PASS",
+    "command": "npm run test:arena",
+    "tests": 116
+  },
+  "delayedHashVerification": {
+    "status": "PASS",
+    "tests": 6,
+    "delayMs": 40,
+    "scope": "Local diagnostic with real SHA-256 and delayed completion; UI tests await readiness."
+  }
 }
