@@ -31,12 +31,13 @@ export function isPublicAsset(path) {
     && !path.split('/').some(segment => segment === '..' || segment.startsWith('.'));
 }
 
-export function createDevServer({ liveAssets = true, fetchAsset = fetch } = {}) {
+export function createDevServer({ liveAssets = true, fetchAsset = fetch, wardrobeReview = false } = {}) {
   // An omitted file/store keeps all review identities, rooms and builds in memory.
   const service = new ArenaService({ mode: 'preview', matchmaking: true, privacyMode: 'strict' });
   const arena = previewApp({ service });
   const cache = new Map();
   let cachedBytes = 0;
+  let reviewReader;
   const send = (req, res, status, content, type = 'application/json; charset=utf-8') => {
     res.writeHead(status, { 'Content-Type': type });
     res.end(req.method === 'HEAD' ? undefined : content);
@@ -56,7 +57,7 @@ export function createDevServer({ liveAssets = true, fetchAsset = fetch } = {}) 
       const url = new URL(req.url, `http://${host}`);
       const path = decodeURIComponent(url.pathname);
       // Do not remap an absent extracted dashboard to a different product page.
-      if (path === '/hatchery' || path === '/hatchery/') {
+      if ((path === '/hatchery' || path === '/hatchery/') && url.searchParams.get('view') !== 'wardrobe') {
         return send(req, res, 200, `<!doctype html><title>Hatchery extraction boundary</title><main style="max-width:720px;margin:80px auto;font:18px/1.6 system-ui"><h1>Hatchery dashboard awaits extraction</h1><p>The full production dashboard is still owned by the existing AXO host. This checkout includes My AXO and the Hatchery game entrypoint.</p><a href="/my-axo">Preview My AXO</a> · <a href="/hatchery/game">Preview Hatchery game</a> · <a href="https://axo.pet/hatchery">Open live Hatchery</a></main>${previewBanner}`, types['.html']);
       }
       if (path === '/arena') { res.writeHead(302, { Location: '/arena/' }); return res.end(); }
@@ -73,6 +74,30 @@ export function createDevServer({ liveAssets = true, fetchAsset = fetch } = {}) 
         mode: 'LOCAL_SOURCE', hatcheryApi: 'UNAVAILABLE', arena: 'SYNTHETIC_MEMORY_ONLY',
         liveAssetFallback: liveAssets, liveOrigin: 'https://axo.pet',
       });
+      if (path === '/hatchery' || path === '/hatchery/') {
+        const html = await readFile(resolve(publicRoot, 'hatchery-wardrobe.html'), 'utf8');
+        return send(req, res, 200, html.replace('</body>', `${previewBanner}</body>`), types['.html']);
+      }
+      if (wardrobeReview && path === '/hatchery/wardrobe-review') {
+        // Only the synthetic document may appear in its same-origin mobile QA frame.
+        res.setHeader('Content-Security-Policy', res.getHeader('Content-Security-Policy').replace("frame-ancestors 'none'", "frame-ancestors 'self'"));
+        const html = (await readFile(resolve(publicRoot, 'hatchery-wardrobe.html'), 'utf8'))
+          .replace('src="/wardrobe/entry.mjs"', 'src="/__dev/wardrobe-review.mjs"')
+          .replace('<main class="hatchery-dashboard">', '<aside style="padding:12px 24px;background:#4c3620;color:#fff3db;font:14px system-ui">SYNTHETIC WARDROBE REVIEW · invented Pet/equipment · no live wallet, ledger or chain access</aside><main class="hatchery-dashboard">');
+        return send(req, res, 200, html, types['.html']);
+      }
+      if (wardrobeReview && path === '/__dev/wardrobe-review.mjs') return send(req, res, 200, await readFile(resolve(root, 'tests/fixtures/wardrobe-review.mjs')), types['.mjs']);
+      if (wardrobeReview && path === '/hatchery/wardrobe-mobile-review') return send(req, res, 200, await readFile(resolve(root, 'tests/fixtures/wardrobe-mobile.html')), types['.html']);
+      if (wardrobeReview && path === '/__dev/wardrobe-fixture') {
+        if (!reviewReader) {
+          const { createWardrobeReader } = await import('../apps/pet-api/src/wardrobe-read.mjs');
+          const fixture = JSON.parse(await readFile(resolve(root, 'packages/shared-schemas/fixtures/synthetic-v1.json'), 'utf8'));
+          const visualCatalog = JSON.parse(await readFile(resolve(root, 'packages/gear-catalog/catalogs/website-visual-catalog-v5.json'), 'utf8'));
+          const identity = { ...fixture.identities.level10Minted, name: 'Review AXO · synthetic', xp: 2675 };
+          reviewReader = createWardrobeReader({ authenticate: async () => ({ verified: true, address: identity.ownerAddress }), readVerifiedPetSnapshot: async () => ({ identity, equipment: fixture.projections.full }), visualCatalog });
+        }
+        return json(req, res, 200, { syntheticOnly: true, read: await reviewReader(req) });
+      }
       if (pages.has(path)) {
         const target = path === '/arena/' ? resolve(root, 'apps/arena-web/index.html') : resolve(publicRoot, pages.get(path));
         const html = await readFile(target, 'utf8');
@@ -95,6 +120,9 @@ export function createDevServer({ liveAssets = true, fetchAsset = fetch } = {}) 
           return send(req, res, 200, await readFile(resolve(publicRoot, '.' + path)), types[extname(path)]);
         }
       if (/^\/gear-bazaar\/(?:(?:progression|gear-sets)-v2\.mjs|wardrobe-filters\.mjs|v1\/(?:catalog\.json|[a-z0-9_.-]+\.webp|metadata\/[a-z0-9-]+\.json))$/.test(path)) {
+        return send(req, res, 200, await readFile(resolve(publicRoot, '.' + path)), types[extname(path)]);
+      }
+      if (/^\/wardrobe\/(?:(?:entry|view|model|markup)\.mjs|wardrobe\.css)$/.test(path)) {
         return send(req, res, 200, await readFile(resolve(publicRoot, '.' + path)), types[extname(path)]);
       }
       if (liveAssets && isPublicAsset(path)) {

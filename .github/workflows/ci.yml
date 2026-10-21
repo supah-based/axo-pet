@@ -21,6 +21,7 @@ jobs:
       - run: npm run verify
       - run: npm test
       - run: npm run test:schemas
+      - run: npm run test:wardrobe
       - run: npm run test:style
       - run: npm run test:dev
 
