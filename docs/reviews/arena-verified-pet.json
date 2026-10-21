@@ -1,7 +1,7 @@
 {
   "schemaVersion": "AXO_ARENA_PET_SOURCE_VERIFICATION_V1",
   "baseSha": "55a5c10d46260ce0932bd4000abc88dda94651db",
-  "implementationSha": "PENDING_PUBLICATION",
+  "implementationSha": "ecbebd520c59c77c2efac139518956e630500a71",
   "sourceHashes": {
     "packages/arena-engine/src/verified-pet.mjs": "01f0d4ebe383e38b79ce1bafc341e6750cf2a768ebd78ea7173c4b29bca96af2",
     "packages/arena-engine/src/mount.mjs": "efc692115e4fc64a16e8e48d9237f640f3b384b561379f57be54385056a41a1b",
@@ -44,15 +44,24 @@
       "Exact 17950 fixture XP, current V1 level 10, 8 numeric V1 items and stat contributions.",
       "Frozen-entry policy and separate cosmetic-only Wardrobe/Passport links.",
       "390-pixel loadout controls, scrolling, close and readable identity/stat panels.",
-      "No browser console errors in reviewed pipeline."
+      "No browser console errors in reviewed pipeline.",
+      "Completed equipped guided-practice battle and reopened gear-aware replay, preserving 150/145 initial frozen HP.",
+      "Loadout panel reachable from both lobby and Pet build."
     ]
   },
   "exactSourceCi": {
-    "status": "PENDING"
+    "status": "PASS",
+    "jobs": [
+      "repository",
+      "contracts",
+      "arena"
+    ],
+    "url": "https://github.com/supah-based/axo-pet/actions/runs/39676566395"
   },
   "axoAcknowledgment": "NOT_ACKNOWLEDGED",
   "productionAdapter": "NOT_CONNECTED",
   "productionStoreParity": "NOT_PERFORMED",
   "realWalletVerification": "NOT_PERFORMED",
-  "liveDeployment": "NOT_PERFORMED"
+  "liveDeployment": "NOT_PERFORMED",
+  "draftPr": "https://github.com/supah-based/axo-pet/pull/10"
 }
