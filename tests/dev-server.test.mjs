@@ -80,6 +80,19 @@ test('Arena accepts only same-origin synthetic identities and retains no disk st
   assert.equal((await fetch(otherOrigin + '/api/arena/me', { headers: { Cookie: cookie } })).status, 401);
 });
 
+test('opt-in Arena pipeline review uses shared Pet validation without enabling live APIs or transactions', async t => {
+  const ordinary = await fixture(t); assert.equal((await fetch(ordinary + '/api/arena/me')).status, 401);
+  const origin = await fixture(t, { arenaReview: true });
+  assert.match(await (await fetch(origin + '/arena/')).text(), /SYNTHETIC ARENA PIPELINE REVIEW/);
+  const config = await (await fetch(origin + '/api/arena/config')).json(); assert.equal(config.syntheticOnly, true);
+  const me = await (await fetch(origin + '/api/arena/me')).json();
+  assert.equal(me.pet.identitySource, 'AUTHENTICATED_PET_READ_V1'); assert.equal(me.pet.xp, 17950);
+  assert.equal(me.pet.gearLoadout.length, 8); assert.equal(me.verification.equipmentStatus, 'VERIFIED_ONCHAIN');
+  assert.equal((await fetch(origin + '/api/pet/v1/me')).status, 503);
+  assert.equal((await fetch(origin + '/api/arena/preview-session', { method: 'POST', headers: { Origin: origin, 'Content-Type': 'application/json' }, body: '{}' })).status, 404);
+  for (const path of ['/api/arena/build', '/api/arena/challenges']) assert.equal((await fetch(origin + path, { method: 'POST', headers: { Origin: origin, 'Content-Type': 'application/json' }, body: JSON.stringify({ previewOutfit: {}, gearStats: { STR: 999 } }) })).status, 400);
+});
+
 test('asset fallback reads only fixed-origin public media and never forwards local credentials', async t => {
   const calls = [];
   const origin = await fixture(t, { liveAssets: true, fetchAsset: async (url, options) => {

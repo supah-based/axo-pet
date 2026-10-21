@@ -4,6 +4,7 @@ import { resolve, extname, basename } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { previewApp } from '../apps/arena-web/server.mjs';
 import { ArenaService } from '../apps/arena-web/service.mjs';
+import { createArenaPipelineReview } from '../tests/fixtures/arena-pipeline-review.mjs';
 
 const root = resolve(import.meta.dirname, '..');
 const publicRoot = resolve(root, 'apps/hatchery-web/public');
@@ -31,10 +32,10 @@ export function isPublicAsset(path) {
     && !path.split('/').some(segment => segment === '..' || segment.startsWith('.'));
 }
 
-export function createDevServer({ liveAssets = true, fetchAsset = fetch, wardrobeReview = false, passportReview = false } = {}) {
+export function createDevServer({ liveAssets = true, fetchAsset = fetch, wardrobeReview = false, passportReview = false, arenaReview = false } = {}) {
   // An omitted file/store keeps all review identities, rooms and builds in memory.
   const service = new ArenaService({ mode: 'preview', matchmaking: true, privacyMode: 'strict' });
-  const arena = previewApp({ service });
+  const arena = arenaReview ? createArenaPipelineReview(service) : previewApp({ service });
   const cache = new Map();
   let cachedBytes = 0;
   let reviewReader;
@@ -122,7 +123,8 @@ export function createDevServer({ liveAssets = true, fetchAsset = fetch, wardrob
       }
       if (pages.has(path)) {
         const target = path === '/arena/' ? resolve(root, 'apps/arena-web/index.html') : resolve(publicRoot, pages.get(path));
-        const html = await readFile(target, 'utf8');
+        let html = await readFile(target, 'utf8');
+        if (arenaReview && path === '/arena/') html = html.replace('<header class="game-header">', '<aside style="padding:12px 20px;background:#493225;color:#ffe9bb;font:13px system-ui">SYNTHETIC ARENA PIPELINE REVIEW · invented Pet and V1 gear · no live wallet, ledger or chain access</aside><header class="game-header">');
         return send(req, res, 200, html.replace('</body>', `${previewBanner}</body>`), types['.html']);
       }
       if (path.startsWith('/api/arena/') || path.startsWith('/arena/')) return arena(req, res);
