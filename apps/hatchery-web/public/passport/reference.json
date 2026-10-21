@@ -1,0 +1,510 @@
+{
+  "schemaVersion": "AXO_PASSPORT_REFERENCE_V1",
+  "visualRevision": "5.1.1",
+  "lineages": [
+    {
+      "key": "emerald_sprout",
+      "label": "Emerald Protocol Builder",
+      "role": "protocol builder and smart-contract workshop engineer",
+      "accents": "Robinhood lime, emerald crystal light, cyan circuit traces",
+      "motifs": "verified bytecode, modular protocol geometry, crystal wrenches, test receipts",
+      "lore": "Emerald Sprouts believe every moonshot should begin with readable code and a test. They turn degen curiosity into protocols the crew can inspect, simulate, and improve.",
+      "accent": "#54F6A7",
+      "temperament": "constructive, curious, inventive"
+    },
+    {
+      "key": "sapphire_tide",
+      "label": "Sapphire Chain Courier",
+      "role": "onchain route courier and packet runner",
+      "accents": "sky blue, electric cyan, Robinhood lime highlights",
+      "motifs": "route arrows, packet stripes, destination nodes, gas-aware courier seams",
+      "lore": "Sapphire Tides carry signals across pools and chains without losing the receipt. Their speed comes from route discipline, gas awareness, and checking the destination twice.",
+      "accent": "#58C9FF",
+      "temperament": "precise, observant, fast"
+    },
+    {
+      "key": "amethyst_dream",
+      "label": "Amethyst Ghost Crew",
+      "role": "ghost-transaction analyst and wallet-trail investigator",
+      "accents": "void violet, old pink, magenta, cyan ghost light",
+      "motifs": "mempool echoes, spectral ledgers, wallet trails, broken-block constellations",
+      "lore": "Amethyst Dreams listen where the public timeline goes quiet: wallet trails, pending transactions, and half-formed narratives. They turn ghost signals into evidence without mistaking whispers for proof.",
+      "accent": "#C78CFF",
+      "temperament": "quiet, intuitive, analytical"
+    },
+    {
+      "key": "solar_peach",
+      "label": "Solar Momentum Racer",
+      "role": "candle runner and momentum field pilot",
+      "accents": "warm gold, coral, Robinhood lime, old-pink sparks",
+      "motifs": "speed chevrons, volume bars, green-candle trails, risk-band racing seams",
+      "lore": "Solar Peaches live for candles, volume, and clean momentum, but their racers know that speed without a stop is just exit liquidity wearing goggles.",
+      "accent": "#FFAD4D",
+      "temperament": "bold, cheerful, kinetic"
+    },
+    {
+      "key": "rose_bloom",
+      "label": "Rose Signal Riot",
+      "role": "community signal operator and meme-lab broadcaster",
+      "accents": "old pink, magenta, sky blue, Robinhood lime tags",
+      "motifs": "original sticker language, signal waves, halftone bursts, crew beacon patches",
+      "lore": "Rose Blooms turn memes, raids, and referrals into durable crew energy. Their signal travels through people, so attribution and anti-spam discipline matter as much as reach.",
+      "accent": "#FF708F",
+      "temperament": "social, playful, loyal"
+    },
+    {
+      "key": "midnight_mint",
+      "label": "Midnight White-Hat Unit",
+      "role": "white-hat security analyst and permission guardian",
+      "accents": "mint, cyan, white highlights, Robinhood lime checks",
+      "motifs": "security hexes, permission graphs, firewall seams, safe-passage shields",
+      "lore": "Midnight Mints guard the Hatchery from counterfeit contracts, poisoned approvals, and too-good-to-be-true links. White-hat curiosity is their favorite armor.",
+      "accent": "#64F3D3",
+      "temperament": "protective, clever, careful"
+    }
+  ],
+  "stages": [
+    {
+      "level": 1,
+      "key": "spawn_block",
+      "label": "Spawn Block",
+      "minimumXp": 0,
+      "pose": "tiny seated hatchling with a low stable silhouette, oversized head and curious paws",
+      "maturity": "very young baby proportions; simplest hoodie; gentle curiosity"
+    },
+    {
+      "level": 2,
+      "key": "paper_hands_hatchling",
+      "label": "Paper Hands Hatchling",
+      "minimumXp": 40,
+      "pose": "small toddler taking a cautious first step with both paws readable",
+      "maturity": "toddler proportions; slightly longer limbs; shy but determined"
+    },
+    {
+      "level": 3,
+      "key": "gas_fee_gremlin",
+      "label": "Gas Fee Gremlin",
+      "minimumXp": 100,
+      "pose": "mischievous child standing with one playful open-paw gesture",
+      "maturity": "young child proportions; energetic expression; first strong role seams"
+    },
+    {
+      "level": 4,
+      "key": "degen_scout",
+      "label": "Degen Scout",
+      "minimumXp": 180,
+      "pose": "alert low scouting stance, body turned three-quarter, face fully visible",
+      "maturity": "older child proportions; practical hoodie tailoring; sharper role read"
+    },
+    {
+      "level": 5,
+      "key": "diamond_gill",
+      "label": "Diamond Gill",
+      "minimumXp": 280,
+      "pose": "confident centered field stance with raised chin and readable paws",
+      "maturity": "early teen proportions; brighter gill rim; disciplined confidence"
+    },
+    {
+      "level": 6,
+      "key": "alpha_forager",
+      "label": "Alpha Forager",
+      "minimumXp": 400,
+      "pose": "athletic forward-ready stance with controlled motion in the tail",
+      "maturity": "teen proportions; fitted technical hoodie; mature role decals"
+    },
+    {
+      "level": 7,
+      "key": "liquidity_ranger",
+      "label": "Liquidity Ranger",
+      "minimumXp": 550,
+      "pose": "balanced specialist stance with one paw indicating a route and feet planted",
+      "maturity": "young specialist proportions; field-operator silhouette; calm focus"
+    },
+    {
+      "level": 8,
+      "key": "meme_mage",
+      "label": "Meme Mage",
+      "minimumXp": 730,
+      "pose": "expressive open-paw casting gesture without a baked effect or prop",
+      "maturity": "adolescent adept proportions; premium pop-art tailoring; playful mastery"
+    },
+    {
+      "level": 9,
+      "key": "chaos_crew_vanguard",
+      "label": "Chaos Crew Vanguard",
+      "minimumXp": 940,
+      "pose": "near-adult heroic field stance with one paw forward and clear negative space",
+      "maturity": "near-adult proportions; advanced role panels; composed leadership"
+    },
+    {
+      "level": 10,
+      "key": "awakened_hodl_hero",
+      "label": "Awakened HODL Hero",
+      "minimumXp": 1200,
+      "pose": "exact universal level-10 hero pose from the reference, including the extended empty gripping paw",
+      "maturity": "adult collectible hero proportions; fixed geometry; fully realized role styling"
+    }
+  ],
+  "bases": [
+    {
+      "lineageKey": "emerald_sprout",
+      "level": 1,
+      "url": "/hatchery-nft-v5.1.1/pet_emerald_sprout_l01.webp",
+      "sha256": "39d032b45a6f96acd222a95fff11e29ab41e7e98711c001154c68efa2091686a"
+    },
+    {
+      "lineageKey": "emerald_sprout",
+      "level": 2,
+      "url": "/hatchery-nft-v5.1.1/pet_emerald_sprout_l02.webp",
+      "sha256": "a26c755a3b40ab9f4a4b68add1c445d48b92a1485cfe81d4563d824fe9cf4995"
+    },
+    {
+      "lineageKey": "emerald_sprout",
+      "level": 3,
+      "url": "/hatchery-nft-v5.1.1/pet_emerald_sprout_l03.webp",
+      "sha256": "82544fdfc647c6240f3b048228a7856b5d32e19acb7ad2a0f55f7d60d6e4e9ad"
+    },
+    {
+      "lineageKey": "emerald_sprout",
+      "level": 4,
+      "url": "/hatchery-nft-v5.1.1/pet_emerald_sprout_l04.webp",
+      "sha256": "7f8ab7fb3f019e850ea91edc8d783272c2d7cc63e9e01b797505251e5bc25884"
+    },
+    {
+      "lineageKey": "emerald_sprout",
+      "level": 5,
+      "url": "/hatchery-nft-v5.1.1/pet_emerald_sprout_l05.webp",
+      "sha256": "addcecdc3f82a296c3e3e2b184f8989a1b74303d7299a77ce9b4b09369939a07"
+    },
+    {
+      "lineageKey": "emerald_sprout",
+      "level": 6,
+      "url": "/hatchery-nft-v5.1.1/pet_emerald_sprout_l06.webp",
+      "sha256": "930d5dae2bf388d7087a587a8c814193ec013695a52e7127acfc708d736c08ce"
+    },
+    {
+      "lineageKey": "emerald_sprout",
+      "level": 7,
+      "url": "/hatchery-nft-v5.1.1/pet_emerald_sprout_l07.webp",
+      "sha256": "e492d50c7ff2b7f57fcd6b19a87fee552344b4058a80d2e81e8061b0356212e0"
+    },
+    {
+      "lineageKey": "emerald_sprout",
+      "level": 8,
+      "url": "/hatchery-nft-v5.1.1/pet_emerald_sprout_l08.webp",
+      "sha256": "6c8a53ba16db9b538cf2994234dcc73fb5bbe91b38acdf8d0a7e4925bbd90ac2"
+    },
+    {
+      "lineageKey": "emerald_sprout",
+      "level": 9,
+      "url": "/hatchery-nft-v5.1.1/pet_emerald_sprout_l09.webp",
+      "sha256": "7bde670fd70a8af47e29103ffa6e28415e412f78f7da4e6ef7860903b16dd913"
+    },
+    {
+      "lineageKey": "emerald_sprout",
+      "level": 10,
+      "url": "/hatchery-nft-v5/pet_emerald_sprout_l10.webp",
+      "sha256": "c083791ce00443556e6364d0beba03f20823e1ea392036982ae2674c98990e48"
+    },
+    {
+      "lineageKey": "sapphire_tide",
+      "level": 1,
+      "url": "/hatchery-nft-v5.1.1/pet_sapphire_tide_l01.webp",
+      "sha256": "237b957a0a89020251975b0a8d555c070185a44a4209705c752e7edd0d9f7a32"
+    },
+    {
+      "lineageKey": "sapphire_tide",
+      "level": 2,
+      "url": "/hatchery-nft-v5.1.1/pet_sapphire_tide_l02.webp",
+      "sha256": "a6ece8c770dae3b951e4197d11edf300f04925eb9d552d198287f8dd6c1191ec"
+    },
+    {
+      "lineageKey": "sapphire_tide",
+      "level": 3,
+      "url": "/hatchery-nft-v5.1.1/pet_sapphire_tide_l03.webp",
+      "sha256": "112aeb9a86d3c0a1f0c7ee3717898f9f9915143e4fc4639d0d3040edb3fa819c"
+    },
+    {
+      "lineageKey": "sapphire_tide",
+      "level": 4,
+      "url": "/hatchery-nft-v5.1.1/pet_sapphire_tide_l04.webp",
+      "sha256": "e245d2bb43ceb7ed1428acb67822b3e6ae094bf618af16e2c6aa3f0e6c0f3096"
+    },
+    {
+      "lineageKey": "sapphire_tide",
+      "level": 5,
+      "url": "/hatchery-nft-v5.1.1/pet_sapphire_tide_l05.webp",
+      "sha256": "1719838cc808c95383a6e178a5a5a4350b20338c2463099e42250abd3b869920"
+    },
+    {
+      "lineageKey": "sapphire_tide",
+      "level": 6,
+      "url": "/hatchery-nft-v5.1.1/pet_sapphire_tide_l06.webp",
+      "sha256": "1db50d196b2571ab5eb97a192d459d19c37339c50c60c85add103be12f9aea08"
+    },
+    {
+      "lineageKey": "sapphire_tide",
+      "level": 7,
+      "url": "/hatchery-nft-v5.1.1/pet_sapphire_tide_l07.webp",
+      "sha256": "e418684ee8e2f71abb0e5c58cfc4974f820188b0cb259a371e746ecd729a085d"
+    },
+    {
+      "lineageKey": "sapphire_tide",
+      "level": 8,
+      "url": "/hatchery-nft-v5.1.1/pet_sapphire_tide_l08.webp",
+      "sha256": "781bc430cc71c1c1744489bb95115940b636d5b2a5a97f8b1313a76bf2f96d50"
+    },
+    {
+      "lineageKey": "sapphire_tide",
+      "level": 9,
+      "url": "/hatchery-nft-v5.1.1/pet_sapphire_tide_l09.webp",
+      "sha256": "012b8c7d6e6a81dc3362b9287700f59992c11a700c0c04fe5071bc33bce50774"
+    },
+    {
+      "lineageKey": "sapphire_tide",
+      "level": 10,
+      "url": "/hatchery-nft-v5/pet_sapphire_tide_l10.webp",
+      "sha256": "346cc10cd4a85de49e73621a9f4a1e0a97b0b37921089685e57d339be2f7e43e"
+    },
+    {
+      "lineageKey": "amethyst_dream",
+      "level": 1,
+      "url": "/hatchery-nft-v5.1.1/pet_amethyst_dream_l01.webp",
+      "sha256": "7ac5d0ae9d3f7a374c9e4ff95c89ea71de74f34537838e1348f7f7c7f36cfaf3"
+    },
+    {
+      "lineageKey": "amethyst_dream",
+      "level": 2,
+      "url": "/hatchery-nft-v5.1.1/pet_amethyst_dream_l02.webp",
+      "sha256": "ee150f21d392acc759ce43e1174324c4937bd0ad4625ff742eb15e5cdcd5272a"
+    },
+    {
+      "lineageKey": "amethyst_dream",
+      "level": 3,
+      "url": "/hatchery-nft-v5.1.1/pet_amethyst_dream_l03.webp",
+      "sha256": "0509390e49e9161beb4b12ed7098fb96bbc50a7547450d71992ddc7b2e16d973"
+    },
+    {
+      "lineageKey": "amethyst_dream",
+      "level": 4,
+      "url": "/hatchery-nft-v5.1.1/pet_amethyst_dream_l04.webp",
+      "sha256": "30f245771cfeb2798cf74c7c716f4398ba27447d1aa5757bdb49ac76c726412c"
+    },
+    {
+      "lineageKey": "amethyst_dream",
+      "level": 5,
+      "url": "/hatchery-nft-v5.1.1/pet_amethyst_dream_l05.webp",
+      "sha256": "46f3ce21e6af45c70e46d9f418540f1bcfb86468634fcb002b2476ad98092c8d"
+    },
+    {
+      "lineageKey": "amethyst_dream",
+      "level": 6,
+      "url": "/hatchery-nft-v5.1.1/pet_amethyst_dream_l06.webp",
+      "sha256": "919d3b0fda7023362ffaaded1316c36a685cf592e9343c7dc697f694b65414b9"
+    },
+    {
+      "lineageKey": "amethyst_dream",
+      "level": 7,
+      "url": "/hatchery-nft-v5.1.1/pet_amethyst_dream_l07.webp",
+      "sha256": "a97f9a7219d4b8c60b2aeae5474bdcaa7f52dfc3bc6ea0ef8d3dfe35257e2927"
+    },
+    {
+      "lineageKey": "amethyst_dream",
+      "level": 8,
+      "url": "/hatchery-nft-v5.1.1/pet_amethyst_dream_l08.webp",
+      "sha256": "21408770a9592a9b09a2aa9ea3ab08d5bae2e1778fe9fceae519e52b0b987d10"
+    },
+    {
+      "lineageKey": "amethyst_dream",
+      "level": 9,
+      "url": "/hatchery-nft-v5.1.1/pet_amethyst_dream_l09.webp",
+      "sha256": "35c9f65287519f167be69a8bdcc248505068ad5db08e24ae6f440809515ed26c"
+    },
+    {
+      "lineageKey": "amethyst_dream",
+      "level": 10,
+      "url": "/hatchery-nft-v5/pet_amethyst_dream_l10.webp",
+      "sha256": "d1a0dc337ba44628066c51c1425886ed036b695dc010ae0a5c97ca0058cc6da2"
+    },
+    {
+      "lineageKey": "solar_peach",
+      "level": 1,
+      "url": "/hatchery-nft-v5.1.1/pet_solar_peach_l01.webp",
+      "sha256": "4eb856e1e03f65128e9ae03c5da163e10d033cae8169f7bc7ef5bbd24fd3508e"
+    },
+    {
+      "lineageKey": "solar_peach",
+      "level": 2,
+      "url": "/hatchery-nft-v5.1.1/pet_solar_peach_l02.webp",
+      "sha256": "e2c56944cec2750c34089dd758b5445d557e52e7cde047e31376ce292d4a44de"
+    },
+    {
+      "lineageKey": "solar_peach",
+      "level": 3,
+      "url": "/hatchery-nft-v5.1.1/pet_solar_peach_l03.webp",
+      "sha256": "f6037008d37cede28a52f22a42d7c9aeb6722d2a7ddb7ef0be5308e0d9563d9f"
+    },
+    {
+      "lineageKey": "solar_peach",
+      "level": 4,
+      "url": "/hatchery-nft-v5.1.1/pet_solar_peach_l04.webp",
+      "sha256": "13c783e515921770d63292172a662419cdc0a2221c5323eb7dec0ca81354d176"
+    },
+    {
+      "lineageKey": "solar_peach",
+      "level": 5,
+      "url": "/hatchery-nft-v5.1.1/pet_solar_peach_l05.webp",
+      "sha256": "3c308f6ec0baa73ec30f6ae2c0eff2d2acfb7f987ce951daf5f39caeb43bcf91"
+    },
+    {
+      "lineageKey": "solar_peach",
+      "level": 6,
+      "url": "/hatchery-nft-v5.1.1/pet_solar_peach_l06.webp",
+      "sha256": "03f7ba066b90e87f452c36ac93a984a66fbded84f29afb0b6c30263b9debfc6a"
+    },
+    {
+      "lineageKey": "solar_peach",
+      "level": 7,
+      "url": "/hatchery-nft-v5.1.1/pet_solar_peach_l07.webp",
+      "sha256": "8a8657a1aa0d862a6cd10bc30c12f0f126e5eafe6897b362f972662a667dee38"
+    },
+    {
+      "lineageKey": "solar_peach",
+      "level": 8,
+      "url": "/hatchery-nft-v5.1.1/pet_solar_peach_l08.webp",
+      "sha256": "9041617a63a8eca12a3518d76d01bbb8b8878fd0f23e2897d0d7e38a4d9dc522"
+    },
+    {
+      "lineageKey": "solar_peach",
+      "level": 9,
+      "url": "/hatchery-nft-v5.1.1/pet_solar_peach_l09.webp",
+      "sha256": "061ae50fea7cc7eea7b8102b09a42b211e0cb3a81ce357adb96b3d07505fe537"
+    },
+    {
+      "lineageKey": "solar_peach",
+      "level": 10,
+      "url": "/hatchery-nft-v5/pet_solar_peach_l10.webp",
+      "sha256": "4cf0ff76669518b5e853232ca18a5e9f3da6e9193c471e35161639fdb4e9e062"
+    },
+    {
+      "lineageKey": "rose_bloom",
+      "level": 1,
+      "url": "/hatchery-nft-v5.1.1/pet_rose_bloom_l01.webp",
+      "sha256": "0ae3a45c97018d0c9566ab3c1e29cba733af92acd243c59052c8102c060d5455"
+    },
+    {
+      "lineageKey": "rose_bloom",
+      "level": 2,
+      "url": "/hatchery-nft-v5.1.1/pet_rose_bloom_l02.webp",
+      "sha256": "7962c25068a104daa5aba77d002f177c43054fb75aa00194bde03384b9012b4f"
+    },
+    {
+      "lineageKey": "rose_bloom",
+      "level": 3,
+      "url": "/hatchery-nft-v5.1.1/pet_rose_bloom_l03.webp",
+      "sha256": "d734875b9773c9bc668c2b2edc3b41b544a0b8309028527b895afcac95852e14"
+    },
+    {
+      "lineageKey": "rose_bloom",
+      "level": 4,
+      "url": "/hatchery-nft-v5.1.1/pet_rose_bloom_l04.webp",
+      "sha256": "cba81cfde3e544a5136de930937b20f357e896bcfc334e30fd18de3adfd814a7"
+    },
+    {
+      "lineageKey": "rose_bloom",
+      "level": 5,
+      "url": "/hatchery-nft-v5.1.1/pet_rose_bloom_l05.webp",
+      "sha256": "7fcb98bab84281dece60e5ebe2928f57299427110afad8981e41fcc63f83c565"
+    },
+    {
+      "lineageKey": "rose_bloom",
+      "level": 6,
+      "url": "/hatchery-nft-v5.1.1/pet_rose_bloom_l06.webp",
+      "sha256": "422a96c9696b7f22fc5101abfb88c815ce60f062cd840ea839da967b1d69abd5"
+    },
+    {
+      "lineageKey": "rose_bloom",
+      "level": 7,
+      "url": "/hatchery-nft-v5.1.1/pet_rose_bloom_l07.webp",
+      "sha256": "553f23c5480c17db47f25beb96dd59d914018a0988598246cee2a686fc05d2bb"
+    },
+    {
+      "lineageKey": "rose_bloom",
+      "level": 8,
+      "url": "/hatchery-nft-v5.1.1/pet_rose_bloom_l08.webp",
+      "sha256": "d3883b37c55eb67239b64d36cfc960792e641e2e4334885ae6096843733b00f8"
+    },
+    {
+      "lineageKey": "rose_bloom",
+      "level": 9,
+      "url": "/hatchery-nft-v5.1.1/pet_rose_bloom_l09.webp",
+      "sha256": "b60c28c0594352b86cf9e4ff6adc8a313a329cd641e53b212dea8394f685be3f"
+    },
+    {
+      "lineageKey": "rose_bloom",
+      "level": 10,
+      "url": "/hatchery-nft-v5/pet_rose_bloom_l10.webp",
+      "sha256": "6dfcef5ea13885f75254126adfa2845acf9bc8e1800f31092493aa10b86a020a"
+    },
+    {
+      "lineageKey": "midnight_mint",
+      "level": 1,
+      "url": "/hatchery-nft-v5.1.1/pet_midnight_mint_l01.webp",
+      "sha256": "1c9e83f2f557dbea49d2d1f99f811b02e02976de8c465ec8796b0ef2b86a6b26"
+    },
+    {
+      "lineageKey": "midnight_mint",
+      "level": 2,
+      "url": "/hatchery-nft-v5.1.1/pet_midnight_mint_l02.webp",
+      "sha256": "9a3ae7c969cf17c2ac695aa0b8caa591675ed58735e9d1d2b1602d9150fbe96d"
+    },
+    {
+      "lineageKey": "midnight_mint",
+      "level": 3,
+      "url": "/hatchery-nft-v5.1.1/pet_midnight_mint_l03.webp",
+      "sha256": "ff275432669f9697a57dd8fd12e96444e3362dca64bec89f7bc51e333ecd4d3d"
+    },
+    {
+      "lineageKey": "midnight_mint",
+      "level": 4,
+      "url": "/hatchery-nft-v5.1.1/pet_midnight_mint_l04.webp",
+      "sha256": "e5f40d7d56708b582032cb01dabd83e01dcb1228235d7d06ddba50ae88585305"
+    },
+    {
+      "lineageKey": "midnight_mint",
+      "level": 5,
+      "url": "/hatchery-nft-v5.1.1/pet_midnight_mint_l05.webp",
+      "sha256": "411462019fab6f8b6c8dd455220bdf77d1d616aa890c15d94e2d499cd0dedd51"
+    },
+    {
+      "lineageKey": "midnight_mint",
+      "level": 6,
+      "url": "/hatchery-nft-v5.1.1/pet_midnight_mint_l06.webp",
+      "sha256": "38f7cce04046f0d38f8bfaabf7529d06917f455c930f84022681dd28c935efd2"
+    },
+    {
+      "lineageKey": "midnight_mint",
+      "level": 7,
+      "url": "/hatchery-nft-v5.1.1/pet_midnight_mint_l07.webp",
+      "sha256": "ba45b78686c4b09735701dd51abcd0e388e5f2d7e92ef12f8ffa10f93a184c25"
+    },
+    {
+      "lineageKey": "midnight_mint",
+      "level": 8,
+      "url": "/hatchery-nft-v5.1.1/pet_midnight_mint_l08.webp",
+      "sha256": "34316ca80f21e4caa306e2649cd9e2383f5a75ad7f401ec57e841eb79f89dd1c"
+    },
+    {
+      "lineageKey": "midnight_mint",
+      "level": 9,
+      "url": "/hatchery-nft-v5.1.1/pet_midnight_mint_l09.webp",
+      "sha256": "3839a81fabfc701ac396cab1da483d72fce804c2d877ae0ea33bf9c9620295a5"
+    },
+    {
+      "lineageKey": "midnight_mint",
+      "level": 10,
+      "url": "/hatchery-nft-v5/pet_midnight_mint_l10.webp",
+      "sha256": "6e2e4b6fae39dbf2497bd49f5e32d935a4bc3330c9ed9b5dfb0eb93386a6c803"
+    }
+  ]
+}

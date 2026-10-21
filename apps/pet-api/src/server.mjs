@@ -2,12 +2,14 @@ import { createServer } from 'node:http';
 import { createPetReader, boundedRead } from './pet-read.mjs';
 import { createReadHandler, readHeaders, sendJson } from './read-http.mjs';
 import { wardrobeFromPetRead } from './wardrobe-read.mjs';
+import { passportReaderFromPetReader } from './passport-read.mjs';
 
 export function createPetApiHandler(options = {}) {
   const bound = options.authenticate !== undefined || options.readVerifiedPetSnapshot !== undefined || options.visualCatalog !== undefined;
   const read = bound ? createPetReader(options) : null;
   const unavailable = async () => { throw Error('Host adapter unavailable'); };
   const petHandler = createReadHandler(read || unavailable);
+  const passportHandler = createReadHandler(read ? passportReaderFromPetReader(read, options, options.now) : unavailable);
   const wardrobeHandler = createReadHandler(read ? async (request, context) => wardrobeFromPetRead(await read(request, context)) : unavailable,
     { unavailableCode: 'WARDROBE_READ_UNAVAILABLE' });
   return async (req, res) => {
@@ -15,6 +17,7 @@ export function createPetApiHandler(options = {}) {
     let url;
     try { url = new URL(req.url, 'http://host.invalid'); } catch { return sendJson(res, 400, { code: 'INVALID_REQUEST' }); }
     if (url.pathname === '/api/pet/v1/me') return petHandler(req, res);
+    if (url.pathname === '/api/pet/v1/passport') return passportHandler(req, res);
     if (url.pathname === '/api/hatchery/wardrobe') return wardrobeHandler(req, res);
     if (!['/healthz', '/readyz'].includes(url.pathname)) return sendJson(res, 404, { code: 'NOT_FOUND' });
     if (req.method !== 'GET') { res.setHeader('Allow', 'GET'); return sendJson(res, 405, { code: 'READ_ONLY' }); }

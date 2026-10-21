@@ -66,6 +66,8 @@ For separate-process deployment, route only the two documented API paths through
 
 ## Next consumers
 
+The Passport milestone adds GET `/api/pet/v1/passport` through the same reader, with an optional existing-record history port. Include that third path in host routing/proxy configuration; the original two endpoints retain their versions and behavior. See [PET_PASSPORT.md](PET_PASSPORT.md) and AXO-009 for exact history validation, UI assets and compatibility checks.
+
 The Wardrobe is the first compatibility consumer. The next milestone is the Passport redesign, reading this same envelope for identity, XP and equipped appearance; lineage history, XP receipts and achievements require separate existing-ledger read ports with their own evidence. Arena integration follows afterward and must consume verified equipment only. Missing equipment must remain unavailable, and cosmetic previews cannot become combat stats or set bonuses. Neither consumer migration is enabled by this API milestone.
 
 ```sh

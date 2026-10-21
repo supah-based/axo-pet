@@ -55,6 +55,17 @@ test('opt-in loopback Wardrobe review is explicitly synthetic and does not enabl
   assert.equal((await fetch(origin + '/api/hatchery/wardrobe', { method: 'POST' })).status, 405);
 });
 
+test('Passport source and optional synthetic review remain separate from private APIs and fixtures', async t => {
+  const origin=await fixture(t);assert.match(await (await fetch(origin+'/passport')).text(),/data-axo-passport/);
+  assert.match(await (await fetch(origin+'/nft')).text(),/data-axo-passport/);
+  for(const path of ['/passport/entry.mjs','/passport/view.mjs','/passport/markup.mjs','/passport/model.mjs','/passport/history.mjs','/passport/passport.css','/passport/reference.json'])assert.equal((await fetch(origin+path)).status,200,path);
+  for(const path of ['/passport/review','/passport/mobile-review','/__dev/passport-review.mjs','/__dev/passport-fixture','/passport/private.json'])assert.equal((await fetch(origin+path)).status,404,path);
+  const review=await fixture(t,{passportReview:true});assert.match(await (await fetch(review+'/passport/review')).text(),/SYNTHETIC PASSPORT REVIEW/);
+  const data=await (await fetch(review+'/__dev/passport-fixture')).json();assert.equal(data.syntheticOnly,true);assert.equal(data.read.pet.identity.xp,2675);assert.equal(data.read.history.status,'AVAILABLE');
+  assert.equal((await fetch(review+'/api/pet/v1/passport')).status,503);assert.equal((await fetch(review+'/api/pet/v1/passport',{method:'POST'})).status,405);
+  assert.match(await (await fetch(review+'/passport/mobile-review')).text(),/width="390" height="844"/);
+});
+
 test('Arena accepts only same-origin synthetic identities and retains no disk store', async t => {
   const origin = await fixture(t);
   const options = { method: 'POST', headers: { 'Content-Type': 'application/json', Origin: origin }, body: JSON.stringify({ name: 'Review Pet', lineageId: 'emerald_sprout', level: 10 }) };

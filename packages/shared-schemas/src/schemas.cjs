@@ -49,6 +49,16 @@ const petRead = object({
     layers: { type: 'array', minItems: 1, maxItems: 11, items: visualLayer } }),
 });
 const draft = (name, shape) => ({ $schema: 'http://json-schema.org/draft-07/schema#', $id: `urn:axo:pet:${name}:v1`, ...shape });
+const timestamp = text('^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}\\.[0-9]{3}Z$',24);
+const history = object({ schemaVersion:version('AXO_PET_HISTORY_V1'),status:version('AVAILABLE'),ownerAddress:address,
+  petGenesisId:text('^AXO-[A-F0-9]{10}$',14),throughXp:integer(),coverage:{enum:['COMPLETE','RECENT']},
+  hatchedAt:{anyOf:[timestamp,{type:'null'}]},
+  xpEvents:{type:'array',maxItems:100,items:object({id:text('\\S',80),occurredAt:timestamp,xpBefore:integer(),xpAfter:integer(),label:text('\\S',100)})},
+  achievements:{type:'array',maxItems:50,items:object({id:text('\\S',80),label:text('\\S',80),description:text('\\S',240),earnedAt:timestamp})} });
+const historyFailure=object({schemaVersion:version('AXO_PET_HISTORY_FAILURE_V1'),status:{enum:['UNAVAILABLE','INCONSISTENT']},
+  reason:{enum:['HOST_NOT_CONNECTED','HISTORY_UNAVAILABLE','SNAPSHOT_MISMATCH']},data:{type:'null'}});
+const passportRead = object({ schemaVersion: version('AXO_PET_PASSPORT_V1'), status: version('READY'),
+  pet: { $ref: 'urn:axo:pet:read:v1' }, history: { anyOf:[{$ref:'urn:axo:pet:history:v1'},{$ref:'urn:axo:pet:history-failure:v1'}] } });
 module.exports = deepFreeze({ petIdentity: draft('identity', petIdentity), gearDefinition: draft('gear-definition', gearDefinition),
   gearProjection: draft('gear-projection', gearProjection), gearReadFailure: draft('gear-read-failure', gearReadFailure),
-  petRead: draft('read', petRead) });
+  petRead: draft('read', petRead), history:draft('history',history),historyFailure:draft('history-failure',historyFailure),passportRead: draft('passport', passportRead) });

@@ -2,6 +2,7 @@
 const Ajv = require('ajv');
 const protocol = require('./protocol.cjs');
 const schemas = require('./schemas.cjs');
+const { validatePetHistory } = require('./passport-history.cjs');
 const { ARENA_STATS, GEAR_SLOTS, VISUAL_Z_ORDER, MIN_EQUIP_LEVEL, levelForXp } = protocol;
 const ajv = new Ajv({ strict: true, allErrors: true, ownProperties: true, coerceTypes: false, useDefaults: false, removeAdditional: false });
 const compiled = Object.fromEntries(Object.entries(schemas).map(([key, schema]) => [key, ajv.compile(schema)]));
@@ -122,8 +123,15 @@ function validatePetRead(value, { expectedOwnerAddress, visualCatalog, now = Dat
 class SchemaValidationError extends Error {
   constructor(errors) { super(`AXO schema validation failed: ${errors.map(issue => `${issue.code}:${issue.path}`).join(', ')}`); this.name = 'SchemaValidationError'; this.errors = errors; }
 }
+function validatePassportRead(value, context = {}) {
+  const errors = shape('passportRead', value);
+  if (errors.length) return result(errors);
+  return result([...validatePetRead(value.pet, context).errors,
+    ...validatePetHistory(value.history, { identity: value.pet.identity, now: context.now }).errors]);
+}
 const assertWith = validate => (value, context) => { const checked = validate(value, context); if (!checked.valid) throw new SchemaValidationError(checked.errors); return value; };
 module.exports = { XP_THRESHOLDS: protocol.XP_THRESHOLDS, GEAR_SLOTS, ARENA_STATS, LINEAGES: protocol.LINEAGES, VISUAL_Z_ORDER,
   MIN_EQUIP_LEVEL, levelForXp, schemas, validatePetIdentity, validateGearDefinition, validateVerifiedGearProjection, validateGearReadResult, validatePetRead,
   assertPetIdentity: assertWith(validatePetIdentity), assertGearDefinition: assertWith(validateGearDefinition),
-  assertVerifiedGearProjection: assertWith(validateVerifiedGearProjection), assertPetRead: assertWith(validatePetRead), SchemaValidationError };
+  assertVerifiedGearProjection: assertWith(validateVerifiedGearProjection), assertPetRead: assertWith(validatePetRead),
+  validatePetHistory, validatePassportRead, assertPassportRead: assertWith(validatePassportRead), SchemaValidationError };

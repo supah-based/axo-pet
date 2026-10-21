@@ -41,6 +41,8 @@ docs/               Architecture decisions and migration runbooks
 
 ## Development
 
+**Pet Passport** now has a focused `/passport` page and an upgraded private section on `/nft`, with exact V1 XP, canonical appearance, lineage chapters, optional recorded XP/achievement history, and separate equipped/saved-Preview wardrobes. It consumes the shared Pet API; absent history stays unavailable and no dates/awards are invented. See [the Passport guide](docs/PET_PASSPORT.md) and [AXO-009](docs/handoffs/AXO-009.md). The normal local page has no fabricated session; labelled synthetic UI review remains opt-in.
+
 Use the existing [live Hatchery and quests](https://axo.pet/hatchery?view=quests) to inspect the actual product.
 `npm run inspect:live` checks the existing public overview and marketplace APIs without a wallet or database connection.
 Wallet-private quest progress and host/database diagnostics require the existing AXO interfaces requested in [AXO-002](docs/handoffs/AXO-002.md).
