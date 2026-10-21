@@ -171,7 +171,7 @@ export async function mountPassport(root,{sessionBridge=bridge,read=readPassport
       for(const base of catalog.lineages){for(const record of [base,base.closedFeet,base.arm,base.fingers,base.gills,base.head,base.hands,base.styled,base.styled.closedFeet,base.styled.arm,base.styled.fingers,base.styled.gills,base.styled.head,base.styled.hands])register(record);}
       for(const item of catalog.items){register(item.wearable);register(item.wearable.rear);for(const part of item.parts)if(item.source.asset===part.texture)register(item.source);}for(const scene of catalog.scenes)register(scene);
     }catch{catalog=null;}
-    await sessionBridge.ready().catch(()=>{});unsubscribe=sessionBridge.subscribe(()=>controller.change(sessionBridge.getSession()));await controller.change(sessionBridge.getSession());
+    await sessionBridge.ready().catch(()=>{});unsubscribe=sessionBridge.subscribe(()=>controller.change(sessionBridge.getSession()));$('[data-connect]').disabled=false;await controller.change(sessionBridge.getSession());
   }catch{notice('The Passport reference catalog is unavailable. Your Pet record has not been changed.');$('[data-connect]').disabled=true;}
   return {refresh:()=>controller.change(sessionBridge.getSession()),dispose(){disposed=true;clearPrivate();controller.dispose();unsubscribe();clearInterval(refreshTimer);document.removeEventListener('visibilitychange',refresh);window.removeEventListener('storage',storageChanged);}};
 }
