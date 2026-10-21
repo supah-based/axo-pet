@@ -41,6 +41,8 @@ docs/               Architecture decisions and migration runbooks
 
 ## Development
 
+**Arena battle reports** explain completed fights through exact frozen entry stats, resolved damage/blocking/healing/energy and an exchange timeline linking to the existing replay. Completed Match history entries open the private report directly. The report checks deterministic replay consistency and fingerprint; it introduces no combat, XP, ownership or persistence change. See [the report guide](docs/ARENA_BATTLE_REPORTS.md) and [AXO-011](docs/handoffs/AXO-011.md).
+
 **Arena shared Pet integration** now reads the same verified identity, exact XP, numeric V1 equipment and canonical layers as Wardrobe and Passport. A private loadout panel distinguishes real equipped bonuses from cosmetic Previews; battle entries freeze their stats and gear-aware replays preserve them. The host mount requires existing verified ports and Arena service/store, with no new Pet ledger or V2 activation. See [the Arena guide](docs/ARENA_VERIFIED_PET.md) and [AXO-010](docs/handoffs/AXO-010.md). Live host parity remains pending.
 
 **Pet Passport** now has a focused `/passport` page and an upgraded private section on `/nft`, with exact V1 XP, canonical appearance, lineage chapters, optional recorded XP/achievement history, and separate equipped/saved-Preview wardrobes. It consumes the shared Pet API; absent history stays unavailable and no dates/awards are invented. See [the Passport guide](docs/PET_PASSPORT.md) and [AXO-009](docs/handoffs/AXO-009.md). The normal local page has no fabricated session; labelled synthetic UI review remains opt-in.

@@ -35,7 +35,7 @@ export function isPublicAsset(path) {
 export function createDevServer({ liveAssets = true, fetchAsset = fetch, wardrobeReview = false, passportReview = false, arenaReview = false } = {}) {
   // An omitted file/store keeps all review identities, rooms and builds in memory.
   const service = new ArenaService({ mode: 'preview', matchmaking: true, privacyMode: 'strict' });
-  const arena = arenaReview ? createArenaPipelineReview(service) : previewApp({ service });
+  const arena = arenaReview ? createArenaPipelineReview(service, { seedReport: arenaReview === 'reports' }) : previewApp({ service });
   const cache = new Map();
   let cachedBytes = 0;
   let reviewReader;

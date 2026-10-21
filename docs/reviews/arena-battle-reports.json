@@ -1,0 +1,54 @@
+{
+  "schemaVersion": "AXO_ARENA_BATTLE_REPORT_SOURCE_VERIFICATION_V1",
+  "baseSha": "d970a088b60d6bc16838d93e26bcb033c240b30b",
+  "implementationSha": "PENDING_PUBLICATION",
+  "sourceHashes": {
+    "apps/arena-web/battle-report.mjs": "7be39490502c5d815908e46d2106e1920a1136b7c5c49d9fa080c8e6cec578fe",
+    "apps/arena-web/battle-report-view.mjs": "961f85f7de2f49603d3dff654ac54119578c6ec9fff751f6168e769619f8c248",
+    "apps/arena-web/battle-report.css": "433ade743ab0063779ab23ee81eb8e393b0fdfbd52d647cb96f0e4d14c0fb7b5",
+    "apps/arena-web/app.mjs": "d0b5ab0b0f45a19d3748e753f703e2a5b97ef0d940a4fe468ba08a8dd164f359",
+    "apps/arena-web/http.mjs": "f8590b7a6400ce1513a6466e891616cf9c5b6e26329595664381464b54a5daab",
+    "apps/arena-web/index.html": "2a86bcbc0dd343ba23aef749036f074907f59a7564bc38a28543d7e9160ef8e5",
+    "apps/arena-web/package.json": "3999a41f6c7801810aab3a47d80f18bd75aace3fbde96d18e8f1031252436aff",
+    "apps/arena-web/tests/battle-report.test.mjs": "7b9082e91a9cbde01f14aaff57f32f8b894016a56132fadf7415d891a12501c6",
+    "apps/arena-web/tests/battle-report-dom.test.mjs": "5ea49557897f74299af54ef54b737f03c512ad0fac337e341bc033186ac6c938",
+    "scripts/dev-server.mjs": "b6f4b6cdb94e0d4acc61b1b7b3832e409a81e16497ff134f16fd114169a90c97",
+    "tests/fixtures/arena-pipeline-review.mjs": "3294e7ed1dfc18a7e9fe55f6a4fdf33e27792c5a561c3bb7f7ead919a2037df4",
+    "tests/dev-server.test.mjs": "c533bc1bed78095aec3cd3a75f7915affbda00d7cb53fa6a9975d8cd6856a09d"
+  },
+  "localCheck": {
+    "status": "PASS",
+    "command": "npm run check",
+    "totalTests": 314,
+    "groups": {
+      "repository": 3,
+      "schemasAndHost": 54,
+      "wardrobe": 15,
+      "petApi": 17,
+      "passport": 15,
+      "visual": 46,
+      "contracts": 41,
+      "arena": 116,
+      "sourcePreview": 7
+    }
+  },
+  "browserReview": {
+    "status": "PASS",
+    "syntheticOnly": true,
+    "checks": [
+      "Completed private history opens a six-exchange report with exact 17950 entry XP and V1 gear contributions.",
+      "Resolved damage, blocking, healing and energy agree with the deterministic fixture replay.",
+      "390-pixel report actions and frozen attribute table remain usable.",
+      "Exchange 3 jumps to frame 3 with matching HP/energy; report return uses the same checked replay.",
+      "No browser console errors in reviewed report flow."
+    ]
+  },
+  "exactSourceCi": {
+    "status": "PENDING"
+  },
+  "axoAcknowledgment": "NOT_ACKNOWLEDGED",
+  "axo010HostBinding": "UNKNOWN",
+  "realWalletVerification": "NOT_PERFORMED",
+  "productionParity": "NOT_PERFORMED",
+  "liveDeployment": "NOT_PERFORMED"
+}

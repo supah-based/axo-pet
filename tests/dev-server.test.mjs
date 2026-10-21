@@ -93,6 +93,18 @@ test('opt-in Arena pipeline review uses shared Pet validation without enabling l
   for (const path of ['/api/arena/build', '/api/arena/challenges']) assert.equal((await fetch(origin + path, { method: 'POST', headers: { Origin: origin, 'Content-Type': 'application/json' }, body: JSON.stringify({ previewOutfit: {}, gearStats: { STR: 999 } }) })).status, 400);
 });
 
+test('completed battle-report review is opt-in, synthetic, memory-only and replay-consistent', async t => {
+  const origin = await fixture(t, { arenaReview: 'reports' });
+  const me = await (await fetch(origin + '/api/arena/me')).json(); assert.equal(me.rooms.length, 1); assert.equal(me.rooms[0].status, 'won');
+  const doc = await (await fetch(origin + '/api/arena/challenges/' + me.rooms[0].id + '/replay')).json();
+  const { analyzeBattleReplay } = await import('../apps/arena-web/battle-report.mjs');
+  const { report } = await analyzeBattleReplay(doc); assert.equal(report.exchangeCount, 6); assert.equal(report.fighters[0].xp, 17950);
+  assert.ok(report.fighters[0].totals.blocked > 0); assert.ok(report.fighters[0].totals.healed > 0);
+  for (const path of ['/arena/battle-report.mjs', '/arena/battle-report-view.mjs', '/arena/battle-report.css']) assert.equal((await fetch(origin + path)).status, 200, path);
+  for (const path of ['/api/pet/v1/me', '/api/hatchery/wardrobe']) assert.equal((await fetch(origin + path)).status, 503);
+  const unseeded = await fixture(t, { arenaReview: true }); assert.equal((await (await fetch(unseeded + '/api/arena/me')).json()).rooms.length, 0);
+});
+
 test('asset fallback reads only fixed-origin public media and never forwards local credentials', async t => {
   const calls = [];
   const origin = await fixture(t, { liveAssets: true, fetchAsset: async (url, options) => {
