@@ -45,6 +45,8 @@ Use the existing [live Hatchery and quests](https://axo.pet/hatchery?view=quests
 `npm run inspect:live` checks the existing public overview and marketplace APIs without a wallet or database connection.
 Wallet-private quest progress and host/database diagnostics require the existing AXO interfaces requested in [AXO-002](docs/handoffs/AXO-002.md).
 
+**My AXO Wardrobe** now mounts inside `/hatchery?view=wardrobe`, with separate authoritative V1 equipment and cosmetic try-ons, clothing filters, complete looks, local saved previews and visibly marked portrait exports. Its GET-only read adapter requires the existing verified session and preserved Pet snapshot; the ordinary local preview cannot manufacture these. All V2 transactions and bonuses remain locked. See [the Wardrobe guide](docs/MY_AXO_WARDROBE.md) and [AXO-007](docs/handoffs/AXO-007.md) for host integration and explicit synthetic review.
+
 The `/gear-studio` and Bazaar source previews now contain 43 fitted families, 473 fixed item-level variants (10–20) and six five-piece sets with role-specific Arena bonuses. Six covered tops add a sweater, hoodie, two jackets, overshirt and tee, with clothing filters and sleeve-aware foreground masks. Candidate Pet progression extends the preserved XP curve to level 20. Full Gear portraits and worn surfaces remain separate, using the calibrated adult pose, six complete lineage paintings and three scenes. Additive V2 schemas/contracts and opt-in Arena calculations implement the proposed level and ten-slot rules; V1 and the live host remain unchanged. See [the covered tops guide](docs/COVERED_TOPS_V1.md), [the progression and set guide](docs/GEAR_PROGRESSION_V2.md), [the art method](docs/ANATOMY_ATELIER.md), and [AXO-006](docs/handoffs/AXO-006.md) alongside [AXO-005](docs/handoffs/AXO-005.md). The rejected 30-design fit remains archived at `/gear-concepts`; operator art/balance acceptance and AXO host integration are pending.
 
 Use Node **22.23.1** (`.node-version`) and npm **10.9.8**, matching CI.
@@ -57,7 +59,7 @@ npm run dev
 Open **http://127.0.0.1:4320** for the editable source preview. Refresh after edits.
 Home, My AXO, NFT, Bazaar and the Hatchery game entrypoint use repository source.
 Arena is playable with clearly labeled synthetic Pets and memory-only state, reset on restart.
-The full `/hatchery` dashboard and authenticated Pet API still require extraction from the existing host.
+Other full `/hatchery` dashboard views and authenticated Pet API ports still require extraction or binding from the existing host. The Wardrobe module can be installed in the existing dashboard without replacing it.
 Wallet connections are disabled locally. Missing public images and shared styles are read from
 `https://axo.pet` through a fixed-origin asset allowlist; no API or production write is proxied.
 Set `AXO_PREVIEW_LIVE_ASSETS=0` for offline use, with missing host images/styles left unavailable.
