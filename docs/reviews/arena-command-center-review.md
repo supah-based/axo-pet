@@ -1,0 +1,27 @@
+# Arena AXO-012 multi-domain review
+
+Date: 2026-10-22. Review scope: source diff from AXO-011 plus synthetic desktop/mobile browser checks. No real player data, wallet, production store or chain writes.
+
+| Pass | Findings acted on | Verification |
+| --- | --- | --- |
+| Product/interface | Rebuilt lobby around Pet, exact XP, equipped gear and entry modes; exposed saved moves and between-fight styling. Kept busy-entry locks and existing actions. | Existing route tests; new exact-XP/escaping/lock tests; synthetic desktop review. |
+| Art/fitting | Reused shared fitted surfaces and depth masks; added all 43 families, outfits, six roles/sets and three scenes. Removed a procedural floor that overlapped painted platforms; aligned actor and scene ground registration. | Every family × six lineages; full five-piece Arcanist outfit in browser; painted scene screenshot. This is not operator acceptance of every pixel/combination. |
+| Animation | Initial idle elapsed Infinity caused repeated rendering errors. Fixed it; added twelve distinct continuous anticipation/release/recovery profiles and effect families. Pause previously snapped to idle; it now freezes the exact sample. | All moves × eleven tiers; boundary continuity; pause/visibility DOM checks; browser idle/epic/pause review with clean final-tab console. |
+| Progression/balance | Kept proposed item tiers, minimum levels and set bonuses outside combat. Current V1 level stays 10 with exact 17,950 XP. No extra battle XP or new live balance. | 473 candidate variants; 66 set-tier cases; private build/state unchanged in UI tests. Balance playtesting is still required before V2 activation. |
+| Privacy/authority | Share links retained arbitrary current query parameters; now strip them and old fragments. Empty looks previously reverted to the default outfit; explicit empty links fix this. Public lab skips private boot/polling. | Query stripping, empty round-trip, no API writes, private-state snapshot comparison, existing wallet/room race tests. |
+| Performance/lifecycle | Cached device budgets/gradient instead of allocating per frame. Cancel hidden RAF, bound decoded layer cache, abort disposal and fence late composites. Fixed manual reduced motion bypassing travel/impact paths. | Actual renderer frame/pixel tests, visibility/disposal checks, corrupt catalog/dimensions failures. No real-device frame-time or memory measurement claimed. |
+| Accessibility/mobile | Added labelled settings, focus indicators, 44-pixel gear controls, responsive lab/navigation and reduced effects. Replay seek restores slider focus; automatic playback avoids heading focus and scroll resets. | 390-pixel navigation/control browser review; focus tests; OS/manual reduced checks. Formal screen-reader/contrast/keyboard acceptance remains open. |
+| Replay | Speed changes used to stop autoplay. They now re-arm at the chosen rate; seek/speed use frozen replay data without combat writes. | Completed-replay DOM regression and existing report/route/replay suites. |
+
+## Next milestones toward AAA quality
+
+AAA is a production quality bar, not a completed state established by these UI passes. Remaining improvements are concrete:
+
+1. **Authored equipped combat animation.** Build and accept a pose/occlusion specification for idle, anticipation, attack, defence, hit, recovery, victory and defeat. Produce matched Pet/garment/hand layers or a reviewed deformable rig for each supported lineage/slot. Current fixed-pose costumes must not be stretched into anatomy-breaking motion. Exit: art review across gear combinations and interruption/transition tests before replacing the working fixed-pose path.
+2. **Training and competitive balance.** Add reviewed training scenarios and a move matchup explorer using the actual deterministic engine, then collect consented, sanitized playtest evidence. Candidate item/set balance must be accepted alongside numeric onchain mappings before activating any power. Exit: defined matchup/balance targets and reproducible reports, not cosmetic tier numbers.
+3. **Measured device performance.** Profile low-end Android, iOS and desktop on real hardware: p50/p95 frame time, decode latency, memory plateau, hidden/resume and a long tournament/replay session. Exit: accepted targets with measured traces and bounded resource use. Current caps do not prove sustained FPS.
+4. **Live reliability and multiplayer.** AXO must confirm exact host source, same-wallet identity/XP/gear parity, frozen entries, timeout/reconnect, store durability and supported concurrent load. Exit: shadow/canary evidence, recovery/rollback and post-release readback under existing release gates.
+5. **Audio and accessibility production pass.** Author licensed, lineage-specific effects/mix with volume controls and a full reduced-effects mode. Run real assistive-technology, focus, text contrast, touch/landscape and language/long-name checks. Exit: documented acceptance on target platforms.
+6. **Content and retention.** Design arena environments, onboarding/training depth, achievements/history based on recorded events, and seasonal competitive structure without fabricated rewards, ownership or XP. Exit: approved rules and instrumentation/record authority before shipping rewards.
+
+None of these require inventing a second Pet ledger or unlocking unverified Gear transactions. AXO-012 is source-ready only after exact-commit CI; live acceptance and operator art/balance sign-off remain separate.
