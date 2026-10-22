@@ -2,7 +2,7 @@
   "schemaVersion": "AXO_ARENA_COMBAT_FEEL_SOUND_SOURCE_VERIFICATION_V1",
   "date": "2026-10-23",
   "baseSha": "816a3a9906612d3090f9846b133115aeae3639a7",
-  "implementationSha": "PENDING_SOURCE_COMMIT",
+  "implementationSha": "a289cca96e05099e4ce5673a01a08febada7de09",
   "branch": "codex/arena-combat-feel-sound",
   "sourceHashes": {
     "apps/arena-web/app.mjs": "9ef5c5118ec1b57968f42f55ce6f3854f8767105e97167b0c2d26a6de80c57f1",
@@ -92,8 +92,15 @@
     ]
   },
   "exactSourceCi": {
-    "status": "PENDING"
+    "status": "PASS",
+    "url": "https://github.com/supah-based/axo-pet/actions/runs/39868901788",
+    "jobs": [
+      "repository",
+      "contracts",
+      "arena"
+    ]
   },
   "axoAcknowledgment": "NOT_ACKNOWLEDGED",
-  "liveIntegration": "UNKNOWN"
+  "liveIntegration": "UNKNOWN",
+  "draftPr": "https://github.com/supah-based/axo-pet/pull/18"
 }
