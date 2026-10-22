@@ -1,8 +1,8 @@
 {
   "schemaVersion": "AXO_ARENA_IMAGEGEN_ART_SOURCE_VERIFICATION_V1",
   "baseSha": "7004bfefc3e85cb7b52dae8228abb3baf977893c",
-  "implementationSha": "PENDING",
-  "draftPr": "PENDING",
+  "implementationSha": "e577c6d87a20de3eadf2ff9d755e66e3253abc21",
+  "draftPr": "https://github.com/supah-based/axo-pet/pull/17",
   "sourceHashes": {
     "apps/arena-web/command-center.mjs": "b5eba3a8bc96f51320e87d40359d62de3cb7b8eca33fb7d7ed3dea7607f7a142",
     "apps/arena-web/interface-kit.mjs": "96959feb84fb6c68538d60663913e017e9c59ad0e117adee1da2c6bd7b5cf74b",
@@ -74,13 +74,13 @@
     ]
   },
   "exactSourceCi": {
-    "status": "PENDING",
+    "status": "PASS",
     "jobs": [
       "repository",
       "contracts",
       "arena"
     ],
-    "url": "PENDING"
+    "url": "https://github.com/supah-based/axo-pet/actions/runs/39861301576"
   },
   "axoAcknowledgment": "NOT_ACKNOWLEDGED",
   "priorIntegration": "UNKNOWN",
