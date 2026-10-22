@@ -3,6 +3,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {defaultBuild} from '../catalog.mjs';
 import {DEFAULT_PRESENTATION, updatePresentation} from '../presentation.mjs';
+import {audioFixture} from './audio-fixture.mjs';
 let sequence=0;
 async function mock(){const old=new Map(),ops=[],images=[],callbacks=new Map(),listeners=new Map(),preference={matches:false};let id=0;
  const document={hidden:false,addEventListener:(k,f)=>listeners.set(k,f),removeEventListener:k=>listeners.delete(k)};
@@ -38,12 +39,18 @@ test('P3: RAF chain is single and cancellation removes pending work; fixed image
  const textBefore=m.ops.length;r.stop();assert.equal(m.callbacks.size,0);assert.equal(m.listeners.size,0);r.draw(900000);assert.equal(m.ops.length,textBefore);
 }finally{r.stop();m.restore();}});
 
-test('P5: sound cue burst cannot exceed eight active voices; toggle off and renderer stop terminate voices',async()=>{const m=await mock(),old=Object.getOwnPropertyDescriptor(globalThis,'AudioContext'),tones=[];let created=0;
- class AudioContext{currentTime=0;destination={};constructor(){created++;}resume(){return Promise.resolve();}createOscillator(){const tone={frequency:{setValueAtTime(){},exponentialRampToValueAtTime(){}},connect:g=>g,start(){},stop(at){tone.stopped=at===undefined?'immediate':at;},disconnect(){tone.disconnected=true;}};tones.push(tone);return tone;}createGain(){return {gain:{setValueAtTime(){},exponentialRampToValueAtTime(){}},connect(){return this;},disconnect(){}};}}
- Object.defineProperty(globalThis,'AudioContext',{value:AudioContext,writable:true,configurable:true});const r=new m.ArenaRenderer(m.canvas);try{
- m.playSound('epic');assert.equal(created,0);assert.equal(m.toggleSound(),true);for(let i=0;i<100;i++)m.playSound(i%2?'epic':'attack');assert.equal(tones.length,8);
- assert.equal(m.toggleSound(),false);assert(tones.every(t=>t.stopped==='immediate'&&t.disconnected));m.toggleSound();m.playSound('epic');assert.equal(tones.length,12);r.stop();assert(tones.every(t=>t.stopped==='immediate'&&t.disconnected));m.toggleSound();
- }finally{r.stop();if(old)Object.defineProperty(globalThis,'AudioContext',old);else delete globalThis.AudioContext;m.restore();}
+test('P5: renderer stop terminates the new bounded PCM sound voices and ambience',async()=>{const m=await mock(),audio=audioFixture(),r=new m.ArenaRenderer(m.canvas,{audio:audio.director});try{
+ assert.equal(audio.director.play('epic'),false);assert.equal(audio.created,0);await audio.director.enable();audio.director.setScene(true);for(let i=0;i<100;i++)audio.director.play(i%2?'epic':'attack');assert.equal(audio.director.status().voices,8);
+ r.stop();assert.equal(audio.director.status().voices,0);assert.ok(audio.sources.every(source=>source.stopped&&source.disconnected));
+ }finally{r.stop();await audio.director.destroy();m.restore();}
+});
+
+test('resolved renderer receipts schedule audio once; reconnect history, hidden updates and replay seeks stay silent',async()=>{const m=await mock(),audio=audioFixture(),r=new m.ArenaRenderer(m.canvas,{audio:audio.director});try{
+ await audio.director.enable();r.set(state(4));assert.equal(audio.director.status().voices,0);const fresh=freeze(state(5)),before=JSON.stringify(fresh);assert.equal(r.set(fresh),true);assert.ok(audio.director.status().voices>0);const effectsCount=()=>audio.sources.filter(source=>!source.loop).length,count=effectsCount();r.set(fresh);assert.equal(effectsCount(),count);assert.equal(JSON.stringify(fresh),before);
+ r.resync();assert.equal(audio.director.status().voices,0);r.set(state(6));assert.equal(effectsCount(),count);r.set(state(7));assert.ok(effectsCount()>count);
+ m.document.hidden=true;m.listeners.get('visibilitychange')();assert.equal(audio.director.status().voices,0);const hiddenCount=audio.sources.length;r.set(state(8));assert.equal(audio.sources.length,hiddenCount);m.document.hidden=false;m.listeners.get('visibilitychange')();r.set(state(9));assert.equal(audio.director.status().voices,0);
+ r.set({...state(2),presentationContext:'replay',replaySelection:2});assert.equal(audio.director.status().voices,0);
+ }finally{r.stop();await audio.director.destroy();m.restore();}
 });
 
 test('P6: extreme resize/DPR scenarios keep canvas area and internal width bounded',async()=>{const m=await mock(),r=new m.ArenaRenderer(m.canvas);try{

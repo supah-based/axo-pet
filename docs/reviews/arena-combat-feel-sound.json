@@ -1,0 +1,106 @@
+{
+  "schemaVersion": "AXO_ARENA_COMBAT_FEEL_SOUND_SOURCE_VERIFICATION_V1",
+  "date": "2026-10-23",
+  "baseSha": "816a3a9906612d3090f9846b133115aeae3639a7",
+  "implementationSha": "a289cca96e05099e4ce5673a01a08febada7de09",
+  "branch": "codex/arena-combat-feel-sound",
+  "sourceHashes": {
+    "apps/arena-web/app.mjs": "9ef5c5118ec1b57968f42f55ce6f3854f8767105e97167b0c2d26a6de80c57f1",
+    "apps/arena-web/render.mjs": "055955a610f973004b89a114aab7eede7aac0d31afe3c47d4672dc2ede80b93b",
+    "apps/arena-web/http.mjs": "38d698d5227ce2c3ea284cbec1896f496412c583f3082231cc12d562bf0f795a",
+    "apps/arena-web/index.html": "2037522fd2f8adf5f562ff7ebab9bdd415d97a96eda0f47815c8d4d0b1ba2606",
+    "apps/arena-web/combat-beats.mjs": "584c52fd37f13a6d2f19f579db4a735f683a66f139dcfacec53a85ff4d38bbf6",
+    "apps/arena-web/combat-audio.mjs": "92bf4baf4359de5f8ccecec718154f80257492d1aa32c0345115c260567cdad9",
+    "apps/arena-web/combat-audio-bank.mjs": "49683f17f55335ba5e300ab970c1da9d060248c69bcb31b07a56cf0cfa4c12ad",
+    "apps/arena-web/combat-feel.css": "49ed6b8c295b678dc2859f1cc920614da8fc23c6e0093f07faf3b82776c3c2f6",
+    "apps/arena-web/assets/runtime/audio-v1/manifest.json": "299dbb3f58f87f8922a2eb7d787601848068c5fd8f88a178025050ce3b8917cc",
+    "scripts/build-arena-audio.mjs": "5151b1c132ba4592ec7d7eb9ac3cab42e5d9b0dbea1e98d9251bf5610662e857"
+  },
+  "unchangedFittedBoundary": {
+    "apps/arena-web/equipped-rig.mjs": "efc97328730b0c529da1b813aeaec1153946fbf072e2168b9d9b9f5af530c3a8",
+    "apps/arena-web/equipped-puppet.mjs": "97b402a1aee135f161b0a274aee0e8270fdaa0e067e731e56675821ca84c5925",
+    "apps/arena-web/fitted-preview.mjs": "af983af90f874d142e005567e8aa035594929351cf145ee9fe503851d092a0f5",
+    "apps/hatchery-web/public/gear-anatomy/model.mjs": "4ae6be65c1ae2617c6665812916e3f1e8a6dea59ba0bac5f90c15e7418050c8b",
+    "apps/hatchery-web/public/gear-bazaar/v1/catalog.json": "45876f1faa4cd538ca4de3a70d0551cce392256cd2d610d62e3e52242e51069b"
+  },
+  "audio": {
+    "clips": 13,
+    "totalBytes": 729988,
+    "provenance": "Original offline synthesized PCM; no external samples.",
+    "deterministicRegeneration": "PASS",
+    "bank": "apps/arena-web/assets/runtime/audio-v1/manifest.json",
+    "maxEffectVoices": 8,
+    "maxAmbienceLoops": 1
+  },
+  "localCheck": {
+    "status": "PASS",
+    "command": "npm run check",
+    "totalTests": 400,
+    "groups": {
+      "repository": 3,
+      "schemasAndHost": 54,
+      "wardrobe": 15,
+      "petApi": 17,
+      "passport": 15,
+      "visual": 46,
+      "contracts": 41,
+      "arena": 200,
+      "sourcePreview": 9
+    }
+  },
+  "browserReview": {
+    "status": "PASS_WITH_LIMITATIONS",
+    "syntheticOnly": true,
+    "checks": [
+      "All thirteen checked clips decode; Sound ready reports in real browser.",
+      "Test mix, master slider65→55→65 and mono off→on→off respond without game writes.",
+      "Dressed practice reviewed through eight-exchange knockout, original Preview labels and rig retained.",
+      "Reload starts Sound off; re-enable produces ready status without replaying old history.",
+      "Desktop and390x844 settings/control review; no recorded warning/error logs."
+    ],
+    "screenshots": [
+      {
+        "path": "docs/reviews/arena-combat-sound-settings.png",
+        "width": 65536,
+        "height": 4292542531
+      },
+      {
+        "path": "docs/reviews/arena-combat-sound-mobile.png",
+        "width": 65536,
+        "height": 4292542531
+      },
+      {
+        "path": "docs/reviews/arena-combat-sound-fight.png",
+        "width": 65536,
+        "height": 4292542531
+      },
+      {
+        "path": "docs/reviews/arena-combat-sound-contact.png",
+        "width": 65536,
+        "height": 4292542531
+      },
+      {
+        "path": "docs/reviews/arena-combat-sound-result.png",
+        "width": 65536,
+        "height": 4292542531
+      }
+    ],
+    "limits": [
+      "Not physical speaker/headphone listening or device output-latency calibration.",
+      "Not a real-wallet/live-host parity check, performance benchmark or blanket outfit acceptance.",
+      "Replay seeking remains silent; forfeit outcomes do not manufacture an exchange sound."
+    ]
+  },
+  "exactSourceCi": {
+    "status": "PASS",
+    "url": "https://github.com/supah-based/axo-pet/actions/runs/39868901788",
+    "jobs": [
+      "repository",
+      "contracts",
+      "arena"
+    ]
+  },
+  "axoAcknowledgment": "NOT_ACKNOWLEDGED",
+  "liveIntegration": "UNKNOWN",
+  "draftPr": "https://github.com/supah-based/axo-pet/pull/18"
+}

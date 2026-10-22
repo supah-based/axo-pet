@@ -10,6 +10,13 @@ async function fixture(t, options = {}) {
   return `http://127.0.0.1:${server.address().port}`;
 }
 
+test('combat sound modules and the complete pinned PCM bank are publicly readable without exposing the generator',async t=>{
+ const origin=await fixture(t);for(const file of ['combat-beats.mjs','combat-audio.mjs','combat-audio-bank.mjs','combat-feel.css'])assert.equal((await fetch(origin+'/arena/'+file)).status,200,file);
+ const {AUDIO_BANK}=await import('../apps/arena-web/combat-audio-bank.mjs'),{createHash}=await import('node:crypto');
+ for(const entry of Object.values(AUDIO_BANK)){const response=await fetch(origin+entry.url);assert.equal(response.status,200);assert.match(response.headers.get('content-type'),/audio\/(?:x-)?wav/);const data=new Uint8Array(await response.arrayBuffer());assert.equal(data.length,entry.bytes);assert.equal(createHash('sha256').update(data).digest('hex'),entry.sha256);}
+ assert.equal((await fetch(origin+'/arena/scripts/build-arena-audio.mjs')).status,404);
+});
+
 test('source pages load while private source, state and host APIs stay unavailable', async t => {
   const origin = await fixture(t);
   for (const path of ['/', '/my-axo', '/hatchery/game', '/nft', '/marketplace', '/gear-studio', '/gear-concepts', '/arena/']) {

@@ -1,0 +1,112 @@
+{
+  "version": 1,
+  "sampleRate": 22050,
+  "channels": 1,
+  "provenance": "Original AXO procedural compositions, rendered offline from scripts/build-arena-audio.mjs. No third-party recordings or samples.",
+  "clips": {
+    "lock": {
+      "url": "/arena/assets/audio-v1/lock.wav",
+      "bytes": 7100,
+      "sha256": "53d3f37076b65eac132598bbe52ee4a4ad0d7c6592036224dcd8e4b5cd48e3c8",
+      "duration": 0.16,
+      "peak": 0.6213,
+      "rms": 0.291
+    },
+    "deny": {
+      "url": "/arena/assets/audio-v1/deny.wav",
+      "bytes": 10628,
+      "sha256": "9b1a9ae16bc3966d5c0ece0d099aee22b3d754c8fe04b438aef6008f7a3cd67e",
+      "duration": 0.24,
+      "peak": 0.5127,
+      "rms": 0.1189
+    },
+    "ready": {
+      "url": "/arena/assets/audio-v1/ready.wav",
+      "bytes": 21212,
+      "sha256": "95c848caab6912723910f7f8b2441d0f1bc2d1e80b333a695cac1cb3f9dc3272",
+      "duration": 0.48,
+      "peak": 0.5732,
+      "rms": 0.2069
+    },
+    "attack": {
+      "url": "/arena/assets/audio-v1/attack.wav",
+      "bytes": 13274,
+      "sha256": "aa25f59e919d99d747bfb43fe735b739011469f9c93edb0a38d90dc5b4cf6a35",
+      "duration": 0.3,
+      "peak": 0.5998,
+      "rms": 0.1112
+    },
+    "guard": {
+      "url": "/arena/assets/audio-v1/guard.wav",
+      "bytes": 21212,
+      "sha256": "82c0de0b3f7c024a125d8676878c5c9fbed7d098078cc08322766c104be7f776",
+      "duration": 0.48,
+      "peak": 0.6576,
+      "rms": 0.1189
+    },
+    "hit": {
+      "url": "/arena/assets/audio-v1/hit.wav",
+      "bytes": 11510,
+      "sha256": "f040153c8435fffe2e68149ef469d0bfc45d47fff3ff8060c200e648aba07657",
+      "duration": 0.26,
+      "peak": 0.8286,
+      "rms": 0.1701
+    },
+    "heal": {
+      "url": "/arena/assets/audio-v1/heal.wav",
+      "bytes": 31796,
+      "sha256": "7ac9efb71de7d9499d6e4ea22f0097504a70f6dd35f56e0b42d91b17acd50054",
+      "duration": 0.72,
+      "peak": 0.5101,
+      "rms": 0.1404
+    },
+    "charge": {
+      "url": "/arena/assets/audio-v1/charge.wav",
+      "bytes": 30914,
+      "sha256": "35dd84bb9fbe8512bf6e3b8d57522747260c9e454ceccfaceecd549b139ec68c",
+      "duration": 0.7,
+      "peak": 0.4609,
+      "rms": 0.1385
+    },
+    "epic": {
+      "url": "/arena/assets/audio-v1/epic.wav",
+      "bytes": 48554,
+      "sha256": "4726887226929400876a3b59225ba5b54529e65b5616be41f43b5238ca7c9d39",
+      "duration": 1.1,
+      "peak": 0.8331,
+      "rms": 0.1141
+    },
+    "victory": {
+      "url": "/arena/assets/audio-v1/victory.wav",
+      "bytes": 72810,
+      "sha256": "50d6588981a0907795a236e9f06124cff8ce58f332ef72f2714aae7efeb8a8a5",
+      "duration": 1.65,
+      "peak": 0.4962,
+      "rms": 0.1061
+    },
+    "defeat": {
+      "url": "/arena/assets/audio-v1/defeat.wav",
+      "bytes": 59580,
+      "sha256": "64c06b9bf71c31a0c2d8a369ae2199d662af204ab0057baf4759badf9e0b7a50",
+      "duration": 1.35,
+      "peak": 0.3507,
+      "rms": 0.0851
+    },
+    "draw": {
+      "url": "/arena/assets/audio-v1/draw.wav",
+      "bytes": 48554,
+      "sha256": "4588e673138be8d5be39a3f347ec384102e089f940a94e5ee7a9ab54ddc4d394",
+      "duration": 1.1,
+      "peak": 0.3794,
+      "rms": 0.0935
+    },
+    "underground": {
+      "url": "/arena/assets/audio-v1/underground.wav",
+      "bytes": 352844,
+      "sha256": "83ec2cb26eaed143237b6708ab2651c200e0855ff66c3917e814b9a830eba8c5",
+      "duration": 8,
+      "peak": 0.2578,
+      "rms": 0.084
+    }
+  }
+}
