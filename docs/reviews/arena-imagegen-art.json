@@ -1,0 +1,91 @@
+{
+  "schemaVersion": "AXO_ARENA_IMAGEGEN_ART_SOURCE_VERIFICATION_V1",
+  "baseSha": "7004bfefc3e85cb7b52dae8228abb3baf977893c",
+  "implementationSha": "PENDING",
+  "draftPr": "PENDING",
+  "sourceHashes": {
+    "apps/arena-web/command-center.mjs": "b5eba3a8bc96f51320e87d40359d62de3cb7b8eca33fb7d7ed3dea7607f7a142",
+    "apps/arena-web/interface-kit.mjs": "96959feb84fb6c68538d60663913e017e9c59ad0e117adee1da2c6bd7b5cf74b",
+    "apps/arena-web/index.html": "9681a40ec45a2be5f2a3392749b5f19134504f42445c4dbd851828da37389c7b",
+    "apps/arena-web/degen.css": "1164785dd54a38f929c094bbdb1a09ef0e17618d913da3cb0e6d977e399fad65",
+    "tests/dev-server.test.mjs": "d9a7a8ae153d37d05c003263ec723912279de7f194d2a8d579eff4b916fca348",
+    "apps/arena-web/assets/runtime/degen-v2/manifest.json": "7eb49c608dbc97b54f6678c764489779c2125e52dc5c85f2b6f3c2de340a3759",
+    "docs/art/arena-imagegen-prompts.json": "c9e6637ebd0b1d5ad1a220b0f462bb23c4f82e5f39e16770ececfac5ff0d8ac5",
+    "apps/arena-web/assets/runtime/degen-v2/axo-tag.webp": "f7ced654c1766e7db26fbce5fd9ba9d1485de9f19abefe0f200ab821c5b664d5",
+    "apps/arena-web/assets/runtime/degen-v2/axo-tag-small.webp": "1f206d6cdc2ef67e4da3e8944da2e8f06c1d831b313a9fc282d7c466fd083759",
+    "apps/arena-web/assets/runtime/degen-v2/axo-mascot.webp": "d1f4a13b9c38bc8d0abbfb712b6e0a04b3324238843f7a265b735627cba338f7",
+    "apps/arena-web/assets/runtime/degen-v2/no-rug.webp": "91e908f17e47792dc64aac9a00e5383e0420bff054122ba1e760fd59dc1c50c0",
+    "apps/arena-web/assets/runtime/degen-v2/stay-weird.webp": "c30083d9866d93060beb3bc65f7a041faee3123dcadfc97f322b7b26749cc10c",
+    "apps/arena-web/assets/runtime/degen-v2/diamond.webp": "99191cc74c9320edc398d5aadbcc3103824c5e3f9350cb80b87acd53e9d33375"
+  },
+  "sharedCatalogSha256": "45876f1faa4cd538ca4de3a70d0551cce392256cd2d610d62e3e52242e51069b",
+  "sharedAnatomyModelSha256": "4ae6be65c1ae2617c6665812916e3f1e8a6dea59ba0bac5f90c15e7418050c8b",
+  "runtimeArtManifestSha256": "95515f4dd2cb5fffa43c613cc9cbfe32a1653dada52cae345e32b49beabb05a6",
+  "imagegen": {
+    "tool": "built-in image_gen",
+    "selectedPaintings": 5,
+    "runtimeDerivatives": 6,
+    "totalBytes": 347610,
+    "manifest": "apps/arena-web/assets/runtime/degen-v2/manifest.json",
+    "finalPrompts": "docs/art/arena-imagegen-prompts.json",
+    "postProcessing": "Resize and WebP encoding with original alpha; no SVG tracing or repainting.",
+    "localPngMasters": "work/arena-imagegen/source/",
+    "publicPngMasters": false
+  },
+  "localCheck": {
+    "status": "PASS",
+    "command": "npm run check",
+    "totalTests": 383,
+    "groups": {
+      "repository": 3,
+      "schemasAndHost": 54,
+      "wardrobe": 15,
+      "petApi": 17,
+      "passport": 15,
+      "visual": 46,
+      "contracts": 41,
+      "arena": 184,
+      "sourcePreview": 8
+    }
+  },
+  "browserReview": {
+    "status": "PASS_WITH_LIMITATIONS",
+    "syntheticOnly": true,
+    "checks": [
+      "1280x720 lobby: generated header wordmark, painted AXO tag, No Rug Zone and mascot images decode and composite with real transparent alpha.",
+      "All six published WebPs complete with positive natural dimensions; zero svg.arena-decal nodes.",
+      "Generated Stay Weird and diamond visible in wardrobe card; decorative images remain noninteractive.",
+      "Keyboard Tab previously shifted the card inside overflow:hidden; overflow:clip fixes it, card scrollTop remains0 and eyebrow stays20.67px inside.",
+      "1440x1000 Drip Lab uses generated diamond and retains saved fitted sweater/tool, pose disclosure, filters and Preview markers.",
+      "390x844: painted header/tag/mascot fit separately from exact17950 XP/V1 level10/eight equipped items; no horizontal overflow.",
+      "320px header fits: navigation bottom173 remains above header bottom180.67, document width and scroll width both320.",
+      "No recorded browser warnings/errors in reviewed flow."
+    ],
+    "screenshots": [
+      "docs/reviews/arena-imagegen-lobby.png",
+      "docs/reviews/arena-imagegen-stickers.png",
+      "docs/reviews/arena-imagegen-wardrobe.png",
+      "docs/reviews/arena-imagegen-mobile.png"
+    ],
+    "limits": [
+      "Synthetic memory-only identity and UI, not real-wallet or production parity.",
+      "Specific art/layout states, not blanket operator acceptance or physical-device performance.",
+      "Basic functional control symbols are separate; decorative SVG artwork has been replaced."
+    ]
+  },
+  "exactSourceCi": {
+    "status": "PENDING",
+    "jobs": [
+      "repository",
+      "contracts",
+      "arena"
+    ],
+    "url": "PENDING"
+  },
+  "axoAcknowledgment": "NOT_ACKNOWLEDGED",
+  "priorIntegration": "UNKNOWN",
+  "liveDeployment": "NOT_PERFORMED",
+  "realWalletVerification": "NOT_PERFORMED",
+  "productionParity": "NOT_PERFORMED",
+  "guide": "docs/ARENA_IMAGEGEN_ART.md"
+}

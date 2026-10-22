@@ -41,6 +41,8 @@ docs/               Architecture decisions and migration runbooks
 
 ## Development
 
+**Imagegen Arena artwork** replaces decorative vector tags and paper-sticker stand-ins with five built-in imagegen paintings: AXO wordmark, axolotl mascot, No Rug Zone, Stay Weird and diamond. Six transparent WebPs total about 340 KiB and retain their exact byte/hash/dimension manifest. Fitted Pet/gear/masks, verified XP/V1 stats and cosmetic-only rules are unchanged. See [saved assets and final prompts](docs/ARENA_IMAGEGEN_ART.md) and [AXO-017](docs/handoffs/AXO-017.md).
+
 **Degen Arena interface** adds charcoal/lime/violet street posters, hand-drawn AXO graffiti, sticker decals, clearer fight hierarchy and a compact Drip Lab with optional motion controls. Phone headers, focus and touch targets remain usable; fitted art/masks, verified XP/V1 gear and cosmetic-only authority are preserved. See [the design guide](docs/ARENA_DEGEN_DESIGN.md), [review](docs/reviews/arena-degen-design-review.md) and [AXO-016](docs/handoffs/AXO-016.md).
 
 **Fitted Arena gear correction** replaces outdated active costume overlays across lobby, Pet build, combat, replay and pose inspection with the newer fitted clothing and shared finger masks. Style Lab saves/restores browser-local cosmetic looks through “Use in Arena · Preview.” All actors remain visibly Preview; verified numeric V1 equipment, exact XP and frozen combat stay separate. Checked failures never restore old costumes. See [the guide](docs/ARENA_FITTED_PREVIEWS.md), [review](docs/reviews/arena-fitted-gear-review.md) and [AXO-015](docs/handoffs/AXO-015.md), which supersedes the older active-art choices below.
