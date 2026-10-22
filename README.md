@@ -41,6 +41,10 @@ docs/               Architecture decisions and migration runbooks
 
 ## Development
 
+**Combat feel and sound** adds resolved contact accents, ground shadows and thirteen original offline-rendered PCM effects/ambience with master/effects/ambience sliders, mono and gesture-only enablement. Receipt/reconnect/hidden-tab fences prevent old or private choices from becoming cues. The fitted rig, tool/palm/finger masks, V1 identity/XP/equipment and cosmetic-only rules are preserved. See [the guide](docs/ARENA_COMBAT_FEEL_SOUND.md) and [AXO-018](docs/handoffs/AXO-018.md).
+
+**Arena quality roadmap** reviews the current build against primary game-development, accessibility and web-performance guidance. The [review and upgrade checklist](docs/ARENA_QUALITY_CHECKLIST.md) records gaps, owners, acceptance criteria and a proposed sequence starting with a complete combat/audio reference fight. This is planning documentation; runtime upgrades and live acceptance are not claimed.
+
 **Imagegen Arena artwork** replaces decorative vector tags and paper-sticker stand-ins with five built-in imagegen paintings: AXO wordmark, axolotl mascot, No Rug Zone, Stay Weird and diamond. Six transparent WebPs total about 340 KiB and retain their exact byte/hash/dimension manifest. Fitted Pet/gear/masks, verified XP/V1 stats and cosmetic-only rules are unchanged. See [saved assets and final prompts](docs/ARENA_IMAGEGEN_ART.md) and [AXO-017](docs/handoffs/AXO-017.md).
 
 **Degen Arena interface** adds charcoal/lime/violet street posters, hand-drawn AXO graffiti, sticker decals, clearer fight hierarchy and a compact Drip Lab with optional motion controls. Phone headers, focus and touch targets remain usable; fitted art/masks, verified XP/V1 gear and cosmetic-only authority are preserved. See [the design guide](docs/ARENA_DEGEN_DESIGN.md), [review](docs/reviews/arena-degen-design-review.md) and [AXO-016](docs/handoffs/AXO-016.md).

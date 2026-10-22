@@ -1,0 +1,12 @@
+/* Combat cues remain in canvas; this sheet styles only the audio controls. */
+.arena-audio-settings{margin:8px 0 0;padding:18px;border:1px solid #66604b;border-radius:8px;display:grid;gap:14px;background:#17151d}
+.arena-audio-settings legend{padding:0 8px;color:#d6ff55;font-weight:800}
+.arena-audio-settings label{display:flex;justify-content:space-between;align-items:center;gap:16px;font-size:14px}
+.arena-audio-settings label>span{display:flex;align-items:center;gap:10px;min-width:48%}
+.arena-audio-settings input[type=range]{min-height:44px;width:100%;accent-color:#d6ff55;cursor:pointer}
+.arena-audio-settings input[type=checkbox]{width:24px;height:24px;margin:10px;accent-color:#d6ff55}
+.arena-audio-settings output{min-width:4ch;text-align:right;font-variant-numeric:tabular-nums;color:#efffc1}
+.arena-audio-settings p{margin:0;color:#d0cbd9;line-height:1.5;font-size:13px}
+.arena-audio-settings button{min-height:44px}
+.arena-audio-settings :focus-visible{outline:2px solid #d6ff55;outline-offset:4px}
+@media(max-width:520px){.arena-audio-settings{padding:12px}.arena-audio-settings label:not(:has([type=checkbox])){align-items:stretch;flex-direction:column;gap:4px}.arena-audio-settings label>span{width:100%}}
