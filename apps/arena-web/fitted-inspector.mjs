@@ -1,0 +1,12 @@
+import {createFittedPreviewCache} from './fitted-preview.mjs';
+import {EQUIPPED_POSES,RIG_SPACE} from './equipped-rig.mjs';
+export function fittedInspectorMarkup(){return '<section class="equipped-inspector" aria-label="Fitted cosmetic style pose study"><p>New fitted clothing and hand masks · cosmetic Preview only. Your verified V1 equipment, ownership, XP and combat bonuses remain separate and unchanged.</p><p data-equipped-status role="status">Checking fitted Preview art…</p><div data-equipped-grid class="equipped-pose-grid"></div></section>';}
+export function mountFittedInspector(root,pet,{makeCache=createFittedPreviewCache,makeCanvas=()=>document.createElement('canvas')}={}){
+ let disposed=false;const cache=makeCache(),entry=cache.get(pet,{reference:pet.identitySource!=='AUTHENTICATED_PET_READ_V1'}),status=text=>{if(!disposed&&root.isConnected)root.querySelector('[data-equipped-status]').textContent=text;};
+ const ready=(async()=>{await cache.settled();if(disposed||!root.isConnected)return;if(entry.status!=='ready'){status(entry.status==='unsupported'?'A reviewed LVL 10 base is required for fitted Preview poses.':'Fitted Preview art could not be checked. Old gear is not substituted.');return;}
+  const names=entry.actor?.available?['attack','block','hit','victory']:['rest'],canvases=[];
+  for(const name of names){const frame=entry.frame(EQUIPPED_POSES[name]);if(!frame)throw Error('Missing fitted Preview');const canvas=makeCanvas();canvas.width=320;canvas.height=480;canvas.setAttribute?.('aria-label',name+' · new fitted cosmetic Preview');const c=canvas.getContext('2d'),unit=320/1024*.88,padding=frame.padded?RIG_SPACE.padding:0;c.fillStyle='#102331';c.fillRect(0,0,320,480);c.drawImage(frame.image,160+(-512-padding)*unit,377+(-1207-padding)*unit,(1024+padding*2)*unit,(1536+padding*2)*unit);c.fillStyle='#08121ce8';c.fillRect(0,438,320,42);c.fillStyle='#e4edda';c.font='bold 12px system-ui';c.textAlign='center';c.fillText((names.length===1?'STATIC':name.toUpperCase())+' / PREVIEW',160,464);canvases.push(canvas);}
+  if(disposed||!root.isConnected)return;root.querySelector('[data-equipped-grid]').replaceChildren(...canvases);status(names.length===1?'Checked fitted still · joint animation unavailable on this device.':'New fitted gear · registered hand masks · cosmetic poses only.');
+ })().catch(()=>status('Fitted Preview unavailable. Old gear is not substituted.')).finally(()=>cache.destroy());
+ return{ready,destroy(){disposed=true;cache.destroy();root.querySelector('[data-equipped-grid]')?.replaceChildren();}};
+}

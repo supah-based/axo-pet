@@ -4,6 +4,7 @@ import { readFileSync } from 'node:fs';
 import { createRequire } from 'node:module';
 import { styleLabMarkup, mountStyleLab } from '../style-lab.mjs';
 import { atelierManifest, atelierMediaUrl } from '../style-lab-model.mjs';
+import {saveArenaLook} from '../arena-look-store.mjs';
 import {fixture as gpuFixture} from './equipped-gpu-fixture.mjs';
 const { parseHTML } = createRequire(import.meta.url)('linkedom');
 const publicRoot = new URL('../../hatchery-web/public/', import.meta.url);
@@ -74,6 +75,19 @@ test('mobile wardrobe navigation only scrolls and focuses; preview numbers start
  assert.equal(h.root.querySelector('.sl-proposal').tagName,'DETAILS');assert.equal(h.root.querySelector('.sl-proposal').hasAttribute('open'),false);
  h.root.querySelector('[data-lab-jump="gear"]').click();h.root.querySelector('[data-lab-jump="preview"]').click();
  assert.deepEqual(scrolls.map(s=>s.selector),['.sl-controls','[data-lab-canvas]']);assert.ok(scrolls.every(s=>s.options.block==='start'));assert.ok(focus.every(s=>s.options.preventScroll===true));assert.equal(h.requests.length,posts);
+});
+
+test('Use in Arena saves only a cosmetic reference and never writes combat or ownership state',async t=>{
+ const h=await fixture(t,{params:'lineage=amethyst_dream&body=runebloom-overshirt&tool=banana-market-maker'});await h.ready;const before=h.root.querySelector('[data-lab-stats]').textContent,requests=h.requests.length;
+ assert.equal(h.root.querySelector('[data-lab-use-arena]').disabled,false);h.root.querySelector('[data-lab-use-arena]').click();assert.match(h.root.querySelector('[data-lab-notice]').textContent,/cosmetic Arena look/);assert.match(h.root.querySelector('[data-lab-notice]').textContent,/stats are unchanged/);assert.equal(h.requests.length,requests);assert.equal(h.root.querySelector('[data-lab-stats]').textContent,before);
+});
+
+test('returning to Style Lab restores the saved Arena look without dropping the hand tool',async t=>{
+ saveArenaLook(catalog,'emerald_sprout',{body:'diamond-knit-sweater',tool:'validator-spark'});
+ const h=await fixture(t);await h.ready;
+ assert.match(h.root.querySelector('[data-lab-equipped]').textContent,/Diamond Knit Sweater/);
+ assert.match(h.root.querySelector('[data-lab-equipped]').textContent,/Validator Spark/);
+ assert.equal(h.requests.some(r=>r.url.startsWith('/api/')),false);
 });
 
 test('corrupted catalog and mismatched asset dimensions fail closed without export',async t=>{
