@@ -25,7 +25,7 @@ test('R1c: an older GET cannot erase a newer acknowledged move in the same match
 }finally{await h.close();}});
 
 test('R1d: slow concede response cannot revive the abandoned match',async()=>{const h=await harness();try{
- await h.navigate(h.A);const slow=h.hold('/challenges/'+h.A+'/concede','POST');await h.click('[data-action="concede"]');assert(slow.used);
+ await h.navigate(h.A);const slow=h.hold('/challenges/'+h.A+'/concede','POST');await h.click('[data-action="concede"]');await h.click('[data-action="confirm-concede"]');assert(slow.used);
  await h.navigate(h.B);assert.equal(h.last().state.id,h.B);slow.release();await flush();
  assert.equal(h.last().state.id,h.B,'Concede response restored the old result over the newly selected match');
 }finally{await h.close();}});

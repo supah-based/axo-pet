@@ -7,7 +7,7 @@
   "scripts": {
     "start": "node server.mjs",
     "test": "node --test tests/*.test.mjs",
-    "test:standalone": "node --test tests/animation-polish.test.mjs tests/arcade-presentation.test.mjs tests/combat-clarity.test.mjs tests/energy-economy.test.mjs tests/game-renderer.test.mjs tests/impact-revision.test.mjs tests/repair-renderer-regressions.test.mjs tests/travel-choreography.test.mjs tests/verified-session.test.mjs tests/battle-report.test.mjs tests/battle-report-dom.test.mjs tests/repair-route-regressions.test.mjs tests/presentation-upgrade.test.mjs tests/style-lab-dom.test.mjs tests/command-center-dom.test.mjs tests/equipped-poses.test.mjs tests/equipped-puppet.test.mjs tests/equipped-renderer.test.mjs tests/equipped-inspector.test.mjs",
+    "test:standalone": "node --test tests/animation-polish.test.mjs tests/arcade-presentation.test.mjs tests/combat-clarity.test.mjs tests/energy-economy.test.mjs tests/game-renderer.test.mjs tests/impact-revision.test.mjs tests/repair-renderer-regressions.test.mjs tests/travel-choreography.test.mjs tests/verified-session.test.mjs tests/battle-report.test.mjs tests/battle-report-dom.test.mjs tests/repair-route-regressions.test.mjs tests/presentation-upgrade.test.mjs tests/style-lab-dom.test.mjs tests/command-center-dom.test.mjs tests/equipped-poses.test.mjs tests/equipped-puppet.test.mjs tests/equipped-renderer.test.mjs tests/equipped-inspector.test.mjs tests/art-direction-dom.test.mjs",
     "test:browser": "node browser-smoke.mjs",
     "test:balance": "node balance.mjs",
     "assets": "node build-assets.mjs",

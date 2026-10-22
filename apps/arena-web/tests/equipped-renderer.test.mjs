@@ -32,3 +32,9 @@ test('corrupt canonical bytes never reach pose textures or the equipped draw pat
 test('a missing verified portrait displays an explicit art status instead of substituting unrelated costume sprites',async t=>{
  const h=await renderer(t,{corrupt:true});h.r.hero=h.pet;h.r.draw(0);assert.ok(h.calls.some(c=>c[0]==='fillText'&&String(c[1]).includes('Checking equipped art')));await wait(30);h.r.lastPaint=-Infinity;h.r.draw(100);assert.ok(h.calls.some(c=>c[0]==='fillText'&&String(c[1]).includes('Equipped art unavailable')));assert.equal(h.calls.filter(c=>c[0]==='drawImage').length,0);assert.equal(h.r.equippedActors.size,0);
 });
+
+test('terminal camera framing keeps both equipped fighters inside the stage without changing frozen identity or stats',async t=>{
+ const h=await renderer(t),state={status:'won',battle:{winner:0},players:[{pet:h.pet,build:{level:10}},{pet:{...h.pet,lineageId:'solar_peach'},build:{level:10}}]},before=JSON.stringify(state);
+ for(const winner of [0,1])for(const reduced of [false,true])for(const height of [180,600]){state.battle.winner=winner;const frozen=JSON.stringify(state);h.r.prepareFighters(state,null,3000,3000,height,reduced);for(let i=0;i<2;i++){const edge=Math.min(400,height*1.08)*(.55+Math.abs(Math.sin(h.r.motion[i].rotation))*.95),anchor=h.r.anchors[i];assert.ok(anchor.x>=edge&&anchor.x<=1000-edge);assert.ok(Math.abs(h.r.motion[i].rotation)<=.16);}assert.equal(JSON.stringify(state),frozen);}
+ state.battle.winner=0;assert.equal(JSON.stringify(state),before);
+});
