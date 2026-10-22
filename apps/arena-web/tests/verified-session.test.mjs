@@ -30,6 +30,7 @@ test('shared Pet loadout panel is reachable in lobby and workshop and carries no
   assert.match(h.document.querySelector('#game-panel').textContent, /17,950 exact XP/);
   assert.match(h.document.querySelector('#game-panel').textContent, /COSMETIC ONLY/);
   assert.equal(h.document.querySelector('#game-panel [data-action="mint"]'), null);
+  await h.click('[data-action="equipped-poses"]');assert.ok(h.document.querySelector('.equipped-inspector'));assert.equal(h.document.querySelector('#game-panel [data-action="save-build"]'),null);
   await h.click('[data-action="close-panel"]'); await h.click('[data-tab="build"]');
   await h.click('[data-action="verified-pet"]'); assert.match(h.document.querySelector('#game-panel').textContent, /Frozen when you enter/);
 });

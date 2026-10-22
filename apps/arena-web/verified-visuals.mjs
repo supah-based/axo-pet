@@ -6,7 +6,7 @@ export function createVerifiedImageCache({ fetchImage = (...args) => fetch(...ar
     const key = layer.url + ':' + layer.sha256;
     if (!entries.has(key)) {
       if (entries.size >= limit) entries.delete(entries.keys().next().value);
-      const entry = { image: null, ready: null }; entries.set(key, entry);
+      const entry = { image: null, ready: null, status:'pending' }; entries.set(key, entry);
       entry.ready = (async () => {
         const response = await fetchImage(layer.url, { credentials: 'omit', redirect: 'error', cache: 'no-cache', signal: AbortSignal.timeout(10000) });
         if (!response.ok || Number(response.headers.get('content-length')) > 8 * 1024 * 1024) throw Error('Unavailable canonical layer');
@@ -16,12 +16,12 @@ export function createVerifiedImageCache({ fetchImage = (...args) => fetch(...ar
         if (hash !== layer.sha256) throw Error('Canonical layer hash mismatch');
         const decoded = await decode(bytes);
         if (decoded.naturalWidth !== 1024 || decoded.naturalHeight !== 1024) throw Error('Invalid canonical layer dimensions');
-        entry.image = decoded;
-      })().catch(() => {}); // Remain a cached failure; never claim fallback art is verified gear.
+        entry.image = decoded;entry.status='ready';
+      })().catch(() => {entry.status='failed';}); // Cached failure; never claim fallback art is verified gear.
     }
     return entries.get(key).image;
   }
-  return { image, settled: () => Promise.all([...entries.values()].map(entry => entry.ready)) };
+  return { image, state:layer=>entries.get(layer?.url+':'+layer?.sha256)?.status||'unloaded', settled: () => Promise.all([...entries.values()].map(entry => entry.ready)) };
 }
 async function decodeImage(bytes) {
   const url = URL.createObjectURL(new Blob([bytes], { type: 'image/webp' }));

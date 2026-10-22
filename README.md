@@ -41,6 +41,8 @@ docs/               Architecture decisions and migration runbooks
 
 ## Development
 
+**Equipped combat poses** now articulate the reviewed adult Pet's head, arms and stance for attack, block, hit and victory while keeping tools, palms and finger masks on one rigid grip transform. Verified V1 equipment has a private pose comparison; candidate styles have a separate cosmetic pose study/board. The source artwork, equipment/XP/combat authority and V2 locks are preserved. This is bounded 2D skinning of existing paintings, with checked static fallback, rather than newly painted multi-angle animation. See [the pose guide](docs/ARENA_EQUIPPED_POSES.md) and [AXO-013](docs/handoffs/AXO-013.md).
+
 **Arena Command Center and Style Lab** add a Pet-focused lobby, all 43 fitted candidate gear families, six five-piece sets, preview tiers 10–20, scenes, twelve fixed-pose motion previews and stamped portrait/look sharing. Graphics/accessibility and replay seek/speed controls improve presentation while exact V1 XP, numeric equipment and combat remain authoritative. No candidate stat/ownership or V2 transaction is enabled. See [the presentation guide](docs/ARENA_COMMAND_CENTER.md), [multi-domain review/next milestones](docs/reviews/arena-command-center-review.md) and [AXO-012](docs/handoffs/AXO-012.md).
 
 **Arena battle reports** explain completed fights through exact frozen entry stats, resolved damage/blocking/healing/energy and an exchange timeline linking to the existing replay. Completed Match history entries open the private report directly. The report checks deterministic replay consistency and fingerprint; it introduces no combat, XP, ownership or persistence change. See [the report guide](docs/ARENA_BATTLE_REPORTS.md) and [AXO-011](docs/handoffs/AXO-011.md).

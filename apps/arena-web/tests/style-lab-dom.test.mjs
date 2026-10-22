@@ -4,17 +4,20 @@ import { readFileSync } from 'node:fs';
 import { createRequire } from 'node:module';
 import { styleLabMarkup, mountStyleLab } from '../style-lab.mjs';
 import { atelierManifest, atelierMediaUrl } from '../style-lab-model.mjs';
+import {fixture as gpuFixture} from './equipped-gpu-fixture.mjs';
 const { parseHTML } = createRequire(import.meta.url)('linkedom');
 const publicRoot = new URL('../../hatchery-web/public/', import.meta.url);
 const catalogBytes = readFileSync(new URL('gear-bazaar/v1/catalog.json', publicRoot)), catalog = JSON.parse(catalogBytes);
 const manifest = atelierManifest(catalog), runtime = new Map([...manifest].map(([path, entry]) => [atelierMediaUrl(path), {path, ...entry}]));
 
-async function fixture(t, {params = '', corrupt = false, dimensions = false, hold = false} = {}) {
+async function fixture(t, {params = '', corrupt = false, dimensions = false, hold = false, gpu = false} = {}) {
   const {window} = parseHTML('<html><body>'+styleLabMarkup()+'</body></html>'), document=window.document, frames=new Map(), requests=[], revoked=[], transforms=[];
   let serial=0, timestamp=0, nextDimensions, release;
   const gate = new Promise(resolve => { release=resolve; });
-  const context = new Proxy({createRadialGradient:()=>({addColorStop(){}}),translate:(...args)=>transforms.push(args)}, {get:(o,k)=>o[k]??(()=>{})});
-  window.HTMLCanvasElement.prototype.getContext=()=>context;
+  const graphics=gpu?gpuFixture():null,text=[],exports=[];
+  const context = new Proxy({createRadialGradient:()=>({addColorStop(){}}),translate:(...args)=>transforms.push(args),fillText:value=>text.push(value)}, {get:(o,k)=>o[k]??(()=>{})});
+  window.HTMLCanvasElement.prototype.getContext=type=>type==='webgl'?(graphics?graphics.makeCanvas().getContext('webgl'):null):context;
+  window.HTMLCanvasElement.prototype.toBlob=function(){exports.push(text.at(-1));};
   const blobs=new Map(), clipboard=[], old=new Map();
   Object.defineProperty(document,'hidden',{configurable:true,writable:true,value:false});
   const fetcher=async(url,options)=>{
@@ -31,10 +34,10 @@ async function fixture(t, {params = '', corrupt = false, dimensions = false, hol
   t.after(async()=>{controller.destroy();release();await controller.ready;URL.createObjectURL=create;URL.revokeObjectURL=revoke;for(const[key,value]of old){if(value)Object.defineProperty(globalThis,key,value);else delete globalThis[key];}});
   const ready=controller.ready;
   function frame(delta=40){timestamp+=delta;const callbacks=[...frames.values()];frames.clear();for(const fn of callbacks)fn(timestamp);}
-  function change(selector,value,type='change'){const element=root.querySelector(selector);if(element.tagName==='SELECT'){for(const option of element.querySelectorAll('option'))option.selected=option.value===value;}else element.value=value;element.dispatchEvent(new window.Event(type,{bubbles:true}));}
+  function change(selector,value,type='change'){const element=root.querySelector(selector);element.value=value;element.dispatchEvent(new window.Event(type,{bubbles:true}));}
   // Linkedom deliberately exposes a read-only select value; browser selection semantics.
   for(const select of root.querySelectorAll('select'))Object.defineProperty(select,'value',{configurable:true,get(){return this.querySelector('option[selected]')?.value??this.querySelector('option')?.value;},set(value){for(const option of this.querySelectorAll('option'))option.toggleAttribute('selected',option.value===value);}});
-  return {root,document,requests,clipboard,controller,ready,frame,change,transforms,frames,revoked,release};
+  return {root,document,requests,clipboard,controller,ready,frame,change,transforms,frames,revoked,release,graphics,text,exports};
 }
 
 test('fitted lab verifies bytes, presents all families and shares only a cosmetic reference look',async t=>{
@@ -77,4 +80,18 @@ test('untrusted catalog is rejected before any fitted media request',async t=>{
 test('closing an in-flight lab aborts ownership of pending work and cannot repopulate its view',async t=>{
   const h=await fixture(t,{hold:true});h.controller.destroy();assert.equal(h.requests[0].options.signal.aborted,true);h.release();await h.ready;
   assert.equal(h.root.querySelectorAll('[data-lab-family]').length,0);assert.equal(h.frames.size,0);
+});
+
+test('pose studies, comparison board and immediate portrait export stay cosmetic and use the selected pose',async t=>{
+  const h=await fixture(t,{gpu:true,params:'tool=banana-market-maker&body=runebloom-overshirt'});await h.ready;h.frame();
+  assert.equal(h.root.querySelector('[data-lab-pose]').disabled,false);const before=h.root.querySelector('[data-lab-stats]').textContent,requests=h.requests.length;
+  h.change('[data-lab-pose]','attack');h.root.querySelector('[data-lab-export]').click();assert.match(h.exports.at(-1),/ATTACK/,'Export must paint the new pose before reading canvas');
+  h.root.querySelector('[data-lab-compare]').click();assert.equal(h.root.querySelector('[data-lab-board]').hidden,false);assert.equal(h.root.querySelectorAll('[data-lab-board] canvas').length,4);
+  for(const name of ['ATTACK','BLOCK','HIT','VICTORY'])assert.ok(h.text.includes(name+' / PREVIEW'));
+  assert.equal(h.root.querySelector('[data-lab-stats]').textContent,before);assert.equal(h.requests.length,requests);assert.equal(h.requests.some(r=>r.url.startsWith('/api/')),false);
+  h.controller.destroy();assert.equal(h.graphics.textures.size,0);
+});
+
+test('unsupported graphics clearly preserves a fitted still and disables unavailable joint-pose controls',async t=>{
+  const h=await fixture(t);await h.ready;h.frame();assert.match(h.root.querySelector('[data-lab-pose-status]').textContent,/Fitted still pose/);assert.equal(h.root.querySelector('[data-lab-pose]').disabled,true);assert.equal(h.root.querySelector('[data-lab-compare]').disabled,true);assert.equal(h.root.querySelector('[data-lab-export]').disabled,false);
 });

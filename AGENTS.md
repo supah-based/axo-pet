@@ -13,6 +13,8 @@ Read HANDOFF.md, README.md, CONTRIBUTING.md, SECURITY.md and docs/MIGRATION_PLAN
 
 ## Collaboration with AXO on OpenClaw
 
+- Current equipped animation work: docs/handoffs/AXO-013.md and docs/ARENA_EQUIPPED_POSES.md. Keep the reviewed adult/base hashes, shared timing, bounded mesh envelope, rigid grip/finger binding and V1/candidate separation. Missing checked art must not become unrelated costume imagery. Preserve combat/server authority and release the actor resources on view/account changes.
+
 - Current Arena presentation work: docs/handoffs/AXO-012.md and docs/ARENA_COMMAND_CENTER.md. Keep the public fitted Style Lab cosmetic-only, pin catalog/runtime media, preserve V1 identity/XP/gear and existing combat/replay authority. Publish the exact shared anatomy model/catalog/media with the client/static-router changes; no new host state or V2 activation.
 
 - Current Arena report work: docs/handoffs/AXO-011.md and docs/ARENA_BATTLE_REPORTS.md. Derive reports only from validated completed participant replays; preserve frozen entry XP/gear, replay access, account/view fences and cosmetic-only Previews. No new report store or live state mutation.
