@@ -1,0 +1,85 @@
+{
+  "schemaVersion": "AXO_ARENA_DEGEN_DESIGN_SOURCE_VERIFICATION_V1",
+  "baseSha": "19f30ea780f0bb06e267a7f65d806fc2c9e9ffeb",
+  "implementationSha": "PENDING",
+  "draftPr": "PENDING",
+  "sourceHashes": {
+    "apps/arena-web/app.mjs": "a6ee41294036580a24511c7e05f0523b3342285c427eafbc537e1b9be0bc90f5",
+    "apps/arena-web/command-center.mjs": "cd902e787a1b3e83450466aae57d1599cdbac128f23f0cc22bc4d812628e62da",
+    "apps/arena-web/degen.css": "7ef301d09f1594760abb5e587498dd6794b457dcebb400252eb577d32cd4aae8",
+    "apps/arena-web/http.mjs": "9e4f4d934d3c277556f85ce58bb55e400e976c77e070b5ab7216374229dceb9f",
+    "apps/arena-web/index.html": "646424d3a1cbcf4211fe9250a6ab924d0a1d25381e3dd55b32396554336a1c9e",
+    "apps/arena-web/interface-kit.mjs": "74834dd19173a228662c8a538cf80d612ea480b0fc7c1445ddc37f3896bb747a",
+    "apps/arena-web/style-lab.mjs": "e35ebd9963aef9f70b95a940616b1202fdd910e7587cea963d45dcd2af05992d",
+    "tests/dev-server.test.mjs": "8908f6d9b7d958479586a5e19f862784879b8785cf7ac5a389c542fa47f51550"
+  },
+  "sharedCatalogSha256": "45876f1faa4cd538ca4de3a70d0551cce392256cd2d610d62e3e52242e51069b",
+  "sharedAnatomyModelSha256": "4ae6be65c1ae2617c6665812916e3f1e8a6dea59ba0bac5f90c15e7418050c8b",
+  "runtimeArtManifestSha256": "95515f4dd2cb5fffa43c613cc9cbfe32a1653dada52cae345e32b49beabb05a6",
+  "localCheck": {
+    "status": "PASS",
+    "command": "npm run check",
+    "totalTests": 383,
+    "groups": {
+      "repository": 3,
+      "schemasAndHost": 54,
+      "wardrobe": 15,
+      "petApi": 17,
+      "passport": 15,
+      "visual": 46,
+      "contracts": 41,
+      "arena": 184,
+      "sourcePreview": 8
+    }
+  },
+  "stylesheetParse": {
+    "status": "PASS",
+    "rules": 228
+  },
+  "browserReview": {
+    "status": "PASS_WITH_LIMITATIONS",
+    "syntheticOnly": true,
+    "checks": [
+      "1280x720 lobby: charcoal/lime/violet street-poster layout, fixed AXO graffiti and sticker decals behind fitted Pet.",
+      "Exact synthetic 17950 XP/V1 level10/eight numeric V1 items retained; saved sweater and tool remain cosmetic.",
+      "1440x1000 Drip Lab: compact header/lineage-tier panel, optional motion disclosure; opening it and choosing Attack works.",
+      "Actual synthetic Diamond Hands block receipt accepted; health/energy/meters/action rail remain usable with fitted actors.",
+      "Concession confirmation and terminal return succeed; mobile defeat badge matches canonical winner.",
+      "390x844 results: six controls are 44px high; both fitted actors retain masks and Preview labels.",
+      "844x390 result: independent result scrolling and visible return control; no horizontal overflow.",
+      "320px header overlap found and corrected through intrinsic height and a compact brand; nav bottom173 is above header bottom180.67/main top201.33.",
+      "320px and390px document scroll width equals client width; mobile navigation targets are at least44px.",
+      "No recorded browser warnings/errors in reviewed flow."
+    ],
+    "screenshots": [
+      "docs/reviews/arena-degen-lobby.png",
+      "docs/reviews/arena-degen-mobile.png",
+      "docs/reviews/arena-degen-wardrobe.png",
+      "docs/reviews/arena-degen-combat-mobile.png",
+      "docs/reviews/arena-degen-result-mobile.png",
+      "docs/reviews/arena-degen-result-landscape.png"
+    ],
+    "limits": [
+      "Invented memory-only identities/fights; not real-wallet or production parity.",
+      "Selected views/combinations; system font availability and metrics vary by platform.",
+      "No measured physical-device FPS/memory, formal screen-reader certification or blanket visual approval."
+    ]
+  },
+  "exactSourceCi": {
+    "status": "PENDING",
+    "jobs": [
+      "repository",
+      "contracts",
+      "arena"
+    ],
+    "url": "PENDING"
+  },
+  "axoAcknowledgment": "NOT_ACKNOWLEDGED",
+  "priorIntegration": "UNKNOWN",
+  "realWalletVerification": "NOT_PERFORMED",
+  "productionParity": "NOT_PERFORMED",
+  "liveDeployment": "NOT_PERFORMED",
+  "newRasterArt": "NOT_GENERATED",
+  "externalFontService": "NONE",
+  "review": "docs/reviews/arena-degen-design-review.md"
+}
