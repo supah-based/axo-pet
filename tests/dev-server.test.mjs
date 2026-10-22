@@ -105,6 +105,18 @@ test('completed battle-report review is opt-in, synthetic, memory-only and repla
   const unseeded = await fixture(t, { arenaReview: true }); assert.equal((await (await fetch(unseeded + '/api/arena/me')).json()).rooms.length, 0);
 });
 
+test('Arena atelier exposes only pinned fitted runtime assets and keeps internal source private', async t => {
+  const origin=await fixture(t), {createHash}=await import('node:crypto');
+  const {ATELIER_CATALOG_SHA256,atelierManifest,atelierMediaUrl}=await import('../apps/arena-web/style-lab-model.mjs');
+  const response=await fetch(origin+'/arena/atelier/catalog.json'), bytes=new Uint8Array(await response.arrayBuffer());
+  assert.equal(createHash('sha256').update(bytes).digest('hex'),ATELIER_CATALOG_SHA256);
+  const catalog=JSON.parse(new TextDecoder().decode(bytes)), layer=atelierManifest(catalog).values().next().value;
+  const image=await fetch(origin+atelierMediaUrl(layer.url));assert.equal(image.status,200);assert.equal(createHash('sha256').update(new Uint8Array(await image.arrayBuffer())).digest('hex'),layer.sha256);
+  for(const path of ['/arena/atelier/model.mjs','/arena/command-center.mjs','/arena/presentation.mjs','/arena/style-lab.mjs','/arena/style-lab-model.mjs','/arena/command-center.css'])assert.equal((await fetch(origin+path)).status,200,path);
+  for(const path of ['/arena/atelier/private.json','/arena/atelier/media/anatomy/anatomy-rig-v3.json','/arena/atelier/media/bazaar/catalog.json','/arena/atelier/media/anatomy/../../server.mjs','/arena/atelier/media/bazaar/not-listed.webp','/arena/atelier/media/anatomy/degen-shell-vest.cloth-master.webp'])assert.equal((await fetch(origin+path)).status,404,path);
+  assert.equal((await fetch(origin+'/api/arena/me')).status,401);
+});
+
 test('asset fallback reads only fixed-origin public media and never forwards local credentials', async t => {
   const calls = [];
   const origin = await fixture(t, { liveAssets: true, fetchAsset: async (url, options) => {

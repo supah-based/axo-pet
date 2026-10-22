@@ -13,6 +13,8 @@ Read HANDOFF.md, README.md, CONTRIBUTING.md, SECURITY.md and docs/MIGRATION_PLAN
 
 ## Collaboration with AXO on OpenClaw
 
+- Current Arena presentation work: docs/handoffs/AXO-012.md and docs/ARENA_COMMAND_CENTER.md. Keep the public fitted Style Lab cosmetic-only, pin catalog/runtime media, preserve V1 identity/XP/gear and existing combat/replay authority. Publish the exact shared anatomy model/catalog/media with the client/static-router changes; no new host state or V2 activation.
+
 - Current Arena report work: docs/handoffs/AXO-011.md and docs/ARENA_BATTLE_REPORTS.md. Derive reports only from validated completed participant replays; preserve frozen entry XP/gear, replay access, account/view fences and cosmetic-only Previews. No new report store or live state mutation.
 
 - Arena shared-reader work: docs/handoffs/AXO-010.md and docs/ARENA_VERIFIED_PET.md. Use the same shared verified Pet ports, preserve existing Arena secret/store/timer ownership and frozen entries. Previews remain cosmetic; missing gear evidence cannot become an empty loadout.

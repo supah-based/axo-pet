@@ -2,6 +2,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {defaultBuild} from '../catalog.mjs';
+import {DEFAULT_PRESENTATION, updatePresentation} from '../presentation.mjs';
 let sequence=0;
 async function mock(){const old=new Map(),ops=[],images=[],callbacks=new Map(),listeners=new Map(),preference={matches:false};let id=0;
  const document={hidden:false,addEventListener:(k,f)=>listeners.set(k,f),removeEventListener:k=>listeners.delete(k)};
@@ -49,3 +50,13 @@ test('P6: extreme resize/DPR scenarios keep canvas area and internal width bound
  r.set(state(0));let t=0;for(const[w,h]of [[390,780],[844,327],[4000,4000],[7680,2160],[200,4000]]){m.canvas.clientWidth=w;m.canvas.clientHeight=h;r.lastPaint=-Infinity;r.draw(t+=50);assert(m.canvas.width*m.canvas.height<=1800000);assert(m.canvas.width<=1440);assert(m.canvas.width<=w*2);assert(m.canvas.width>=1&&m.canvas.height>=1);}
  }finally{r.stop();m.restore();}
 });
+
+test('presentation settings bound actual renderer cadence/pixels and suppress every motion/effect path',async()=>{const m=await mock(),r=new m.ArenaRenderer(m.canvas);try{
+ updatePresentation({quality:'low',motion:'reduced',readouts:false,contrast:false});r.set(state(0));r.set(state(1));
+ const frame=time=>{const[id,fn]=m.callbacks.entries().next().value;m.callbacks.delete(id);fn(time);};
+ r.lastPaint=-Infinity;frame(r.revealAt+800);const count=m.ops.length;frame(r.revealAt+810);assert.equal(m.ops.length,count,'Low quality must throttle an early frame');
+ assert.equal(r.displayBudget.fps,30);assert(m.canvas.width*m.canvas.height<=900000);assert.equal(r.displayBudget.reduced,true);
+ assert(r.motion.every(motion=>motion.x===0&&motion.y===0));
+ m.ops.length=0;r.arcadeHit(0,r.state.players[0],r.state.battle.log.at(-1),800,320);r.effects(0,r.state.players[0],r.state.battle.log.at(-1),800,320);assert.equal(m.ops.length,0,'Manual reduced motion must suppress travel and impact effects');
+ m.document.hidden=true;m.listeners.get('visibilitychange')();assert.equal(m.callbacks.size,0);m.document.hidden=false;m.listeners.get('visibilitychange')();assert.equal(m.callbacks.size,1);
+}finally{updatePresentation(DEFAULT_PRESENTATION);r.stop();m.restore();}});

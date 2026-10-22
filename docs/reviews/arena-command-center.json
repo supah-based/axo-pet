@@ -1,0 +1,85 @@
+{
+  "schemaVersion": "AXO_ARENA_COMMAND_CENTER_SOURCE_VERIFICATION_V1",
+  "baseSha": "7be606be5c1ec58507de2e12128416771923670a",
+  "implementationSha": "f4ae7bdc2b79cdbbba4c7b25771adf153733e22c",
+  "draftPr": "https://github.com/supah-based/axo-pet/pull/12",
+  "sourceHashes": {
+    "apps/arena-web/app.mjs": "a5d20ea8dca2a43f7fc8ade72f2b09a354a0333753c4857c4bd711c551b6dc18",
+    "apps/arena-web/http.mjs": "e12f6c981576796fce460d452734a277e0ed84859081a7ffcbb5665b6d575bc6",
+    "apps/arena-web/index.html": "c5a5e4c9de688896bf91e07f7891b5f99cd5adc5dd83e86c888211ffe6c3e163",
+    "apps/arena-web/package.json": "c1799cd3bc7fad76658446d14a10d85a21c05f954e77c304d3245777bcef0a29",
+    "apps/arena-web/render.mjs": "3319572b9f5eb15eff949f216422b90884e0333c23c50b83a683e740a42b5b03",
+    "apps/arena-web/command-center.mjs": "eec159dccba2c308b44ee578455868b4fec01e5921147f3ce3ddb2e54e4cbcd0",
+    "apps/arena-web/command-center.css": "ed83f8aa3a877be6d308d123e31c921e6375a7d16bbe3dcf5e59a24e0beb70c3",
+    "apps/arena-web/presentation.mjs": "1a7a8ac99748b0ae55e60d3c08a9a5fcee7005d45efdfd17e705c20d6bedbf26",
+    "apps/arena-web/style-lab.mjs": "fb2ce9075650d25ce83e3d69a28f302e0afd30bd075a142dc82404e0fa13cd38",
+    "apps/arena-web/style-lab-model.mjs": "fbefc68b0c7590f0d9ffc1d7ea4006fb97eccd48cf61e63315c166683c1712e8",
+    "apps/arena-web/atelier/model.mjs": "2e80eda8a569685f96c6e85e78eb5e838493040170c067d10c35516b0d4f838f",
+    "apps/arena-web/tests/presentation-upgrade.test.mjs": "2b1d6c08f64451da42bd7a8c9d26c84a6192940a54f1ed5b035223ab927472da",
+    "apps/arena-web/tests/style-lab-dom.test.mjs": "151ef175a8541ad3194c2cc3b5ca27fab5519863589b102411f50253646f074c",
+    "apps/arena-web/tests/command-center-dom.test.mjs": "1277cb3a559aa70e47569ba83b6ef1913c3225007e1be24b56fb02bca294d578",
+    "apps/arena-web/tests/repair-dom-harness.mjs": "5c7fd87718975b146ccbf0b2c1b5f1a39c96a872ffbb17a3e3e0dcf4a00d2c79",
+    "apps/arena-web/tests/repair-renderer-regressions.test.mjs": "42261218b5b3964146448c8f5f105b4393961c3f7ca0276150574a641877a717",
+    "tests/dev-server.test.mjs": "cce577607ad6fd6df0a5039cfdd51259deedf1671f1ec145c68ab9718237919c"
+  },
+  "sharedCatalogSha256": "45876f1faa4cd538ca4de3a70d0551cce392256cd2d610d62e3e52242e51069b",
+  "sharedAnatomyModelSha256": "4ae6be65c1ae2617c6665812916e3f1e8a6dea59ba0bac5f90c15e7418050c8b",
+  "localCheck": {
+    "status": "PASS",
+    "command": "npm run check",
+    "totalTests": 337,
+    "groups": {
+      "repository": 3,
+      "schemasAndHost": 54,
+      "wardrobe": 15,
+      "petApi": 17,
+      "passport": 15,
+      "visual": 46,
+      "contracts": 41,
+      "arena": 138,
+      "sourcePreview": 8
+    },
+    "supplemental": "4 Command Center DOM tests pass, including match-menu focus/disclosure and terminal transition. Full Arena rerun: 138 tests."
+  },
+  "browserReview": {
+    "status": "PASS",
+    "syntheticOnly": true,
+    "checks": [
+      "Verified synthetic lobby shows exact 17950 XP, V1 level 10, 8 V1 items and canonical appearance.",
+      "Fitted five-piece Arcanist look uses same-pose head/hand masks with calibrated scene ground; no procedural floor overlap.",
+      "Reference lineage, set and scene selection, tier 20 and epic/pause controls reviewed.",
+      "390-pixel header/nav and Style Lab animation/export controls remain usable.",
+      "Presentation settings dialog opens/closes and returns to lobby.",
+      "Final fresh-tab console: no errors.",
+      "Fresh guided fight leaves equipped actors unobstructed; lesson/spectator drawer opens explicitly and mobile result/replay controls fit at 390px."
+    ],
+    "screenshots": [
+      "docs/reviews/arena-command-center.png",
+      "docs/reviews/arena-style-lab.png",
+      "docs/reviews/arena-battle-tools.png",
+      "docs/reviews/arena-replay-mobile.png"
+    ]
+  },
+  "exactSourceCi": {
+    "status": "PASS",
+    "jobs": [
+      "repository",
+      "contracts",
+      "arena"
+    ],
+    "url": "https://github.com/supah-based/axo-pet/actions/runs/39732718785"
+  },
+  "axoAcknowledgment": "NOT_ACKNOWLEDGED",
+  "axo010011Integration": "UNKNOWN",
+  "realWalletVerification": "NOT_PERFORMED",
+  "productionParity": "NOT_PERFORMED",
+  "liveDeployment": "NOT_PERFORMED",
+  "measuredDeviceFps": "NOT_PERFORMED",
+  "authoredEquippedSkeletalAnimation": "NOT_IMPLEMENTED",
+  "remainingMilestones": "docs/reviews/arena-command-center-review.md",
+  "arenaRerun": {
+    "status": "PASS",
+    "tests": 138,
+    "command": "npm run test:arena"
+  }
+}
