@@ -1,8 +1,8 @@
 {
   "schemaVersion": "AXO_ARENA_COMMAND_CENTER_SOURCE_VERIFICATION_V1",
   "baseSha": "7be606be5c1ec58507de2e12128416771923670a",
-  "implementationSha": "PENDING",
-  "draftPr": "PENDING",
+  "implementationSha": "f4ae7bdc2b79cdbbba4c7b25771adf153733e22c",
+  "draftPr": "https://github.com/supah-based/axo-pet/pull/12",
   "sourceHashes": {
     "apps/arena-web/app.mjs": "a5d20ea8dca2a43f7fc8ade72f2b09a354a0333753c4857c4bd711c551b6dc18",
     "apps/arena-web/http.mjs": "e12f6c981576796fce460d452734a277e0ed84859081a7ffcbb5665b6d575bc6",
@@ -61,7 +61,13 @@
     ]
   },
   "exactSourceCi": {
-    "status": "PENDING"
+    "status": "PASS",
+    "jobs": [
+      "repository",
+      "contracts",
+      "arena"
+    ],
+    "url": "https://github.com/supah-based/axo-pet/actions/runs/39732718785"
   },
   "axoAcknowledgment": "NOT_ACKNOWLEDGED",
   "axo010011Integration": "UNKNOWN",
@@ -70,5 +76,10 @@
   "liveDeployment": "NOT_PERFORMED",
   "measuredDeviceFps": "NOT_PERFORMED",
   "authoredEquippedSkeletalAnimation": "NOT_IMPLEMENTED",
-  "remainingMilestones": "docs/reviews/arena-command-center-review.md"
+  "remainingMilestones": "docs/reviews/arena-command-center-review.md",
+  "arenaRerun": {
+    "status": "PASS",
+    "tests": 138,
+    "command": "npm run test:arena"
+  }
 }
