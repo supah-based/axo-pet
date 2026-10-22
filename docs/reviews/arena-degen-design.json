@@ -1,8 +1,8 @@
 {
   "schemaVersion": "AXO_ARENA_DEGEN_DESIGN_SOURCE_VERIFICATION_V1",
   "baseSha": "19f30ea780f0bb06e267a7f65d806fc2c9e9ffeb",
-  "implementationSha": "PENDING",
-  "draftPr": "PENDING",
+  "implementationSha": "6374c0c57a8936c62e17dfc668f15844e1cfc64d",
+  "draftPr": "https://github.com/supah-based/axo-pet/pull/16",
   "sourceHashes": {
     "apps/arena-web/app.mjs": "a6ee41294036580a24511c7e05f0523b3342285c427eafbc537e1b9be0bc90f5",
     "apps/arena-web/command-center.mjs": "cd902e787a1b3e83450466aae57d1599cdbac128f23f0cc22bc4d812628e62da",
@@ -66,13 +66,13 @@
     ]
   },
   "exactSourceCi": {
-    "status": "PENDING",
+    "status": "PASS",
     "jobs": [
       "repository",
       "contracts",
       "arena"
     ],
-    "url": "PENDING"
+    "url": "https://github.com/supah-based/axo-pet/actions/runs/39856944982"
   },
   "axoAcknowledgment": "NOT_ACKNOWLEDGED",
   "priorIntegration": "UNKNOWN",
