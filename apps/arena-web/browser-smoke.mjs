@@ -1,11 +1,16 @@
-// UI 1.5 selector maintenance only. Do not run while browser navigation is policy-blocked.
+// Optional legacy smoke tool. Use the repository's permitted browser tooling.
+// Portable launch repaired in AXO-019; a fresh full CLI run remains required.
 import { chromium } from 'playwright-core';
-import {writeFileSync} from 'node:fs';
+import {writeFileSync,mkdirSync,existsSync} from 'node:fs';
 import assert from 'node:assert/strict';
 const origin=process.env.ARENA_TEST_ORIGIN||'http://127.0.0.1:4318';
-const browser=await chromium.launch({executablePath:'/snap/chromium/current/usr/lib/chromium-browser/chrome',headless:true,args:['--no-sandbox','--disable-dev-shm-usage']});
+const executablePath=process.env.ARENA_BROWSER_EXECUTABLE||chromium.executablePath();
+if(!existsSync(executablePath))throw Error('Set ARENA_BROWSER_EXECUTABLE to the installed Chrome/Chromium executable, or install the matching Playwright browser.');
+mkdirSync(new URL('./review/',import.meta.url),{recursive:true});
+process.chdir(import.meta.dirname);
+const browser=await chromium.launch({executablePath,headless:true});
 const errors=[],checks=[];
-async function player(name,lineage,mobile=false){const context=await browser.newContext({viewport:mobile?{width:390,height:844}:{width:1440,height:1080},reducedMotion:'reduce'}),page=await context.newPage();page.on('pageerror',e=>errors.push(e.message));page.on('dialog',d=>d.type()==='confirm'&&d.message().startsWith('Concede this battle?')?d.accept():d.dismiss());await page.goto(origin+'/arena/');await page.locator('#preview-form').waitFor();await page.locator('[name="name"]').fill(name);await page.locator('[name="lineageId"]').selectOption(lineage);await page.getByRole('button',{name:'Enter Arena',exact:true}).click();await page.locator('[data-action="challenge"]').waitFor();return {page,context};}
+async function player(name,lineage,mobile=false){const context=await browser.newContext({viewport:mobile?{width:390,height:844}:{width:1440,height:1080},reducedMotion:'reduce'}),page=await context.newPage();page.on('pageerror',e=>errors.push(e.message));page.on('dialog',d=>{errors.push('Unexpected native dialog: '+d.type());return d.dismiss();});await page.goto(origin+'/arena/');await page.locator('#preview-form').waitFor();await page.locator('[name="name"]').fill(name);await page.locator('[name="lineageId"]').selectOption(lineage);await page.getByRole('button',{name:'Enter Arena',exact:true}).click();await page.locator('[data-action="challenge"]').waitFor();return {page,context};}
 async function api(page,path,body){return page.evaluate(async({path,body})=>{const r=await fetch('/api/arena'+path,{credentials:'same-origin',...(body===undefined?{}:{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)})});return {status:r.status,body:await r.json()};},{path,body});}
 try{
  const a=await player('Builder QA','emerald_sprout'),b=await player('Signal QA','rose_bloom',true);

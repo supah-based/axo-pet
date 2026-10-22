@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "tool": "built-in image_gen",
+  "prompts": "docs/art/arena-environments-prompts.json",
+  "derivation": "Resize and WebP encoding; unchanged painted composition. Background only, no Pet/gear imagery.",
+  "entries": {
+    "rooftop": {
+      "url": "/arena/assets/environments-v1/rooftop.webp",
+      "width": 1536,
+      "height": 864,
+      "bytes": 256598,
+      "sha256": "916210012d50948a178797479367a701ec67a15ca1c55f3af04d209ec9236c84",
+      "sourceSha256": "8d9749a54ae088d67826260c7c5224cf71e56acf8d0e83c501ad56df60e6d2b0"
+    },
+    "runeforge": {
+      "url": "/arena/assets/environments-v1/runeforge.webp",
+      "width": 1536,
+      "height": 864,
+      "bytes": 160618,
+      "sha256": "f3ab362083f8e5a2945d6528aa1ebd73c2baef47610dab04003e6d25536709af",
+      "sourceSha256": "a9fb087c52d9fde9b4dfb8b6c4041e9ad2469bad9076576b172f446a5ec290cb"
+    }
+  }
+}

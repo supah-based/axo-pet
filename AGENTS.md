@@ -13,6 +13,8 @@ Read HANDOFF.md, README.md, CONTRIBUTING.md, SECURITY.md and docs/MIGRATION_PLAN
 
 ## Collaboration with AXO on OpenClaw
 
+- Current quality pass: docs/handoffs/AXO-019.md and docs/ARENA_QUALITY_PASS.md. Training Dojo copies the verified V1 build into explicit local simulation only; never POST match/XP/gear changes. Preserve readonly resolved receipts/replay moments, frozen values, remapped typing/dialog guards, bounded local-only diagnostics, optional comfort and fitted rig/grip/masks. Publish the complete client/static/environment unit. All 44 checklist dispositions distinguish source evidence from live/device/player acceptance; no V2 activation or rewards are authorized.
+
 - Current combat feel/sound: docs/handoffs/AXO-018.md and docs/ARENA_COMBAT_FEEL_SOUND.md. Preserve shared receipt contact timing, gesture-only checked PCM playback, mute/volume/mono controls, bounded sources and hidden/reconnect/view cancellation. Publish the complete audio-v1 bank and generated metadata with client/static routes. Keep fitted geometry/rigid grip/masks, verified V1 authority and cosmetic-only Previews unchanged; audio never reads private pending choices. Physical listening/live parity remain separate acceptance.
 
 - Current Arena artwork: docs/handoffs/AXO-017.md and docs/ARENA_IMAGEGEN_ART.md. Use the generated transparent WebPs and pinned art manifest for branding/graffiti/stickers, preserving alpha and intrinsic ratios. Do not restore the old decorative SVGs. Publish the versioned art directory with client/CSS/index; keep all decoration outside the fitted rig and retain Preview/authority boundaries. The wardrobe card clips decoration without becoming a hidden keyboard-scroll container.

@@ -1,0 +1,14 @@
+{
+  "tool": "built-in image_gen",
+  "date": "2026-10-23",
+  "prompts": [
+    {
+      "id": "rooftop",
+      "prompt": "Use case: stylized-concept. Asset type: painted raster background for AXO Pet Arena, original degen axolotl battle game. Create a polished wide 16:9 arena environment, no characters, no interface. Scene: underground crypto rooftop dojo at night, charcoal concrete, restrained acid-lime and violet signage glow, hand-painted axolotl and diamond graffiti shapes on distant side walls, a moody futuristic city beyond. Composition: level front camera, distant architecture mostly in upper 35%, the lower 65% is a broad empty dark asphalt fighting floor with subtle perspective texture, continuous open floor, no raised central platform, no fixed fighter pads, no foreground objects. This floor must support two small characters placed later at variable heights, including a narrow phone crop. Center stays uncluttered and low contrast, all rich detail at the edges. Painterly 3D fantasy game background, charming rebellious degen culture, cohesive cinematic lighting, muted atmospheric depth. No readable text, logos, people, pets, weapons, gear, HUD, watermark, artificial borders or panels."
+    },
+    {
+      "id": "runeforge",
+      "prompt": "Use case: stylized-concept. Asset type: painted raster battle background for AXO Pet Arena, original degen axolotl game. Wide 16:9 composition. Scene: arcane-tech runeforge dojo in a disused stone subway workshop, violet crystal machinery along the distant left and right walls, restrained mint/lime energy conduits, hand-painted playful axolotl graffiti motif on one side wall. No characters or interface. Level front camera; most architecture is in the upper 35%, the lower 65% is a wide continuous flat dark stone floor with very subtle receding texture and diffuse pool lighting. Empty fighting space for two characters composited later at variable heights, including center-cropped phone view. No central pedestal, fixed pads, foreground machinery or obstacles; no objects covering the future fighters. Painterly premium 3D fantasy game art, restrained luminosity, rich crafted material detail at the edges and a quiet low-contrast center. Original AXO world; no borrowed franchise characters or logos. No readable text, pets, people, gear, weapons, HUD, watermark or borders."
+    }
+  ]
+}

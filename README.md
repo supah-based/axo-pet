@@ -10,6 +10,8 @@ Private monorepo for the `axo.pet` product surface:
 
 ## Current status
 
+Arena's latest source upgrade is [AXO-019](docs/handoffs/AXO-019.md): local Training Dojo, clearer receipts/replay, phone entry, configurable controls/comfort, diagnostics and two painted environments. See [the guide](docs/ARENA_QUALITY_PASS.md) and [44-point review/disposition](docs/ARENA_QUALITY_CHECKLIST.md). Preview outfits stay cosmetic and V2 stays locked. Host, physical-device and player acceptance are pending separately.
+
 This repository is an **extraction workspace**, not a production deployment. The initial import contains the tested Pet contracts, active Arena source/runtime assets, canonical V4.3/V5.1.1 catalog manifests, selected Hatchery web entrypoints, and migration inputs from the existing AXO application.
 
 No contract is deployed from this repository. No NFT is minted. No gear is issued. No live database, player state, credential, wallet mapping, receipt, or production authorization is stored here.
