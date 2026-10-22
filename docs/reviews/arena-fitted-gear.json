@@ -1,0 +1,89 @@
+{
+  "schemaVersion": "AXO_ARENA_FITTED_GEAR_SOURCE_VERIFICATION_V1",
+  "baseSha": "09d887d2f9f5f902059fb55774fce996a8b21bd0",
+  "implementationSha": "d6bf29f7df8fae7f8e55557efe18ad863ed8234d",
+  "draftPr": "https://github.com/supah-based/axo-pet/pull/15",
+  "sourceHashes": {
+    "apps/arena-web/app.mjs": "cec1a3b40d236614e27fe2faeffa990fb23f670be77d8e8b490368f96544f9f2",
+    "apps/arena-web/render.mjs": "9a984d7806b37cb838183ce0419450a496847f2175ef63f9b8a80da58b7f6333",
+    "apps/arena-web/arena-look-store.mjs": "f8c85a63a7385e8c7d4779a3a08be83a1aaf7cdab689eb7c06645ba73ce3dfcf",
+    "apps/arena-web/fitted-preview.mjs": "af983af90f874d142e005567e8aa035594929351cf145ee9fe503851d092a0f5",
+    "apps/arena-web/fitted-inspector.mjs": "102c92fdbcd0809e4ed6d5ff18b79dbc916ca48c237b570317c2bc18ce7a3690",
+    "apps/arena-web/style-lab.mjs": "65405900b60051b09f0febf051ee831ca8dd8529c4212868f5e7108e3740e258",
+    "apps/arena-web/verified-panel.mjs": "52ae2dfa033e7fcfa68071a40d12b6d8d1d77a9563a86ac37a277b6a5a2b309c",
+    "apps/arena-web/command-center.mjs": "646dd9e5751853779be569d23a78e48b9bcf15fa6828dc78b3ad3a1986f2bb60",
+    "apps/arena-web/art-direction.css": "1ca33f677e91a11d10da90329aec0c5e3a12efef33247b3e71971ea4653e0fd3",
+    "apps/arena-web/http.mjs": "d5387cd8ebfa57ec30ffdc15cb0f97f1954e9fbf023fea35fd12c856c99c9f66",
+    "apps/arena-web/index.html": "95e6628e5b880a64774c2ec935dfd92814cb9d56e9828646bb20ae445885d47c",
+    "apps/arena-web/package.json": "126022ac214a383dd3be3b045d58fb52e65700f7a1f262d4305485cc70c1d391",
+    "apps/arena-web/tests/fitted-preview.test.mjs": "50c0f2513f258f364026f7c14db8a35575a56ed4f5e309cb547600c0921f11dc",
+    "apps/arena-web/tests/fitted-inspector.test.mjs": "b776bbf21faa31fe38ab9655fc3f597433f93630e76487b6b63746e886fb81e4",
+    "apps/arena-web/tests/equipped-renderer.test.mjs": "e724cb73d2ee4f101c66dd297b7a5b934940178496690f9bcca1b072fe75b48f",
+    "apps/arena-web/tests/style-lab-dom.test.mjs": "eab9bea6db270f91b10dd6aa8406167b1871703130a6f9c935585df6309789f3",
+    "apps/arena-web/tests/repair-dom-harness.mjs": "1a8e370d5a6c14480671a3495d0c3c6ccd58b78693e2599a43c55ce0aaba2a50",
+    "tests/dev-server.test.mjs": "0445aafe2c8a591e578a3e732e275a831585c735c0248f6a7f2b1d3731c39f0f"
+  },
+  "sharedCatalogSha256": "45876f1faa4cd538ca4de3a70d0551cce392256cd2d610d62e3e52242e51069b",
+  "sharedAnatomyModelSha256": "4ae6be65c1ae2617c6665812916e3f1e8a6dea59ba0bac5f90c15e7418050c8b",
+  "runtimeArtManifestSha256": "95515f4dd2cb5fffa43c613cc9cbfe32a1653dada52cae345e32b49beabb05a6",
+  "localCheck": {
+    "status": "PASS",
+    "command": "npm run check",
+    "totalTests": 383,
+    "groups": {
+      "repository": 3,
+      "schemasAndHost": 54,
+      "wardrobe": 15,
+      "petApi": 17,
+      "passport": 15,
+      "visual": 46,
+      "contracts": 41,
+      "arena": 184,
+      "sourcePreview": 8
+    }
+  },
+  "browserReview": {
+    "status": "PASS_WITH_LIMITATIONS",
+    "syntheticOnly": true,
+    "checks": [
+      "1280x720 default Emerald covered field jacket/headband/pants/footwear/tool in lobby.",
+      "Style Lab saves sweater/tool; same checked fitted look appears in lobby, four-pose gallery and actual practice with newer rival style.",
+      "Separate verified panel retains exact 17950 XP/V1 level 10/eight numeric V1 items and unchanged bonuses.",
+      "Actual attack receipt, concession and terminal return work with fitted fighter art.",
+      "Saved cosmetic look survives lobby reload; returning to Style Lab restores it including hand tool.",
+      "390x844 apply button visible above portrait and actual activation returns nearby saved status.",
+      "390px lobby caption below fitted footwear; document width and scroll width both390.",
+      "No recorded console warnings/errors in reviewed flow."
+    ],
+    "screenshots": [
+      "docs/reviews/arena-fitted-lobby.png",
+      "docs/reviews/arena-fitted-saved-look.png",
+      "docs/reviews/arena-fitted-poses.png",
+      "docs/reviews/arena-fitted-combat.png",
+      "docs/reviews/arena-fitted-mobile.png",
+      "docs/reviews/arena-fitted-apply-mobile.png"
+    ],
+    "limits": [
+      "Invented memory-only Pet/fights; no live wallet/ledger/chain access.",
+      "Selected combinations and 2D joint envelope, not blanket art/device acceptance.",
+      "Automated static/GPU failure coverage is separate from measured physical-device performance."
+    ]
+  },
+  "exactSourceCi": {
+    "status": "PASS",
+    "jobs": [
+      "repository",
+      "contracts",
+      "arena"
+    ],
+    "url": "https://github.com/supah-based/axo-pet/actions/runs/39853747454"
+  },
+  "axoAcknowledgment": "NOT_ACKNOWLEDGED",
+  "priorIntegration": "UNKNOWN",
+  "realWalletVerification": "NOT_PERFORMED",
+  "productionParity": "NOT_PERFORMED",
+  "liveDeployment": "NOT_PERFORMED",
+  "measuredDeviceFps": "NOT_PERFORMED",
+  "newRasterArt": "NOT_GENERATED",
+  "review": "docs/reviews/arena-fitted-gear-review.md"
+}

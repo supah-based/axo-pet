@@ -78,6 +78,9 @@
 /* Review correction: give identity and equipped art separate space on phones. */
 .game-ui.arcade-ui .fighter-callsign{top:3px}
 .game-ui.arcade-ui .guide-warning{font-family:inherit}
+.sl-arena-apply{display:grid;gap:7px;margin-bottom:12px}.sl-arena-apply small{color:#c1d0c6;font:11px/1.5 system-ui}.game-ui #main .sl-arena-apply button{width:100%;background:#d6eaa0;color:#233c28;border-color:#e0efb5;min-height:44px}
+/* Keep the cosmetic label below the phone portrait, clear of fitted footwear. */
+@media(max-width:700px){.cc-fighter-stage{height:315px}.cc-fighter-stage canvas{height:calc(100% - 30px)}.cc-stage-caption{left:0;right:0;bottom:0;text-align:center;border-left:0;border-top:1px solid #66806b55;padding:6px}.cc-stage-caption span{display:none}}
 .game-ui.arcade-ui.impact-ui .winner-decal[data-outcome=defeat]{background:#e5b9ae;color:#402b2b}.game-ui.arcade-ui.impact-ui .winner-decal[data-outcome=draw]{background:#bbd9d7;color:#233e40}
 /* A completed fight needs results and replay actions, not an inactive action rail. */
 .game-ui.arcade-ui .combat-screen[data-command-state=complete]{--dock-height:0px}
