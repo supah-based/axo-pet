@@ -32,7 +32,7 @@ export async function harness({reduced=false,preview=false,matchmaking=false,str
  if(matchmaking){const NativeDate=globalThis.Date;globals.Date=class extends NativeDate{static now(){return now;}};globals.performance={now:()=>now};}
  for(const[k,v]of Object.entries(globals)){old.set(k,Object.getOwnPropertyDescriptor(globalThis,k));Object.defineProperty(globalThis,k,{value:v,writable:true,configurable:true});}
  window.confirm=()=>true;
- const rendererModule=await import(new URL(process.env.REVIEW_BASELINE==='1'?'render.mjs?ui=1.6':'render.mjs?ui=1.9&rev=3&motion=1&command=1',target));
+ const rendererModule=await import(new URL(process.env.REVIEW_BASELINE==='1'?'render.mjs?ui=1.6':'render.mjs?ui=1.9&rev=3&motion=1&command=1&equipped=1',target));
  const originalSet=rendererModule.ArenaRenderer.prototype.set;
  rendererModule.ArenaRenderer.prototype.set=function(s){const fresh=originalSet.call(this,s);renderers.push({instance:this,state:structuredClone(s),fresh});return fresh;};
  const reject=e=>errors.push(e);process.on('unhandledRejection',reject);

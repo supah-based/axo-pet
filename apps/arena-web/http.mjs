@@ -60,7 +60,7 @@ export function createArenaRouter({service=new ArenaService({matchmaking:true}),
  return router;
 }
 export function arenaStatic(){const router=express.Router();router.get('/',(_req,res)=>res.sendFile('index.html',{root}));
- const files=['app.mjs','render.mjs','catalog.mjs','combat.mjs','replay.mjs','verified-visuals.mjs','verified-panel.mjs','battle-report.mjs','battle-report-view.mjs','battle-report.css','presentation.mjs','command-center.mjs','command-center.css','style-lab.mjs','style-lab-model.mjs','styles.css'];for(const f of files)router.get('/'+f,(_req,res)=>res.sendFile(f,{root}));
+ const files=['app.mjs','render.mjs','catalog.mjs','combat.mjs','replay.mjs','verified-visuals.mjs','verified-panel.mjs','battle-report.mjs','battle-report-view.mjs','battle-report.css','presentation.mjs','command-center.mjs','command-center.css','style-lab.mjs','style-lab-model.mjs','equipped-rig.mjs','equipped-puppet.mjs','equipped-canonical.mjs','animation-cues.mjs','equipped-inspector.mjs','styles.css'];for(const f of files)router.get('/'+f,(_req,res)=>res.sendFile(f,{root}));
  const wardrobeRoot=join(root,'../hatchery-web/public'),wardrobePath=join(wardrobeRoot,'gear-bazaar/v1/catalog.json'),wardrobe=JSON.parse(readFileSync(wardrobePath,'utf8'));
  router.get('/atelier/catalog.json',(_req,res)=>res.sendFile(wardrobePath));
  router.get('/atelier/model.mjs',(_req,res)=>res.sendFile(join(wardrobeRoot,'gear-anatomy/model.mjs')));

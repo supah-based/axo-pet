@@ -1,0 +1,89 @@
+{
+  "schemaVersion": "AXO_ARENA_EQUIPPED_POSES_SOURCE_VERIFICATION_V1",
+  "baseSha": "abdfdf7c5fe7e77a8793143b6a6aeffcb0af06cf",
+  "implementationSha": "PENDING",
+  "draftPr": "PENDING",
+  "sourceHashes": {
+    "apps/arena-web/app.mjs": "3f794f75d96690e5db9e8f96d97ff15c1747b3ed79c8393bb1d11a99edfdc6b3",
+    "apps/arena-web/command-center.css": "ca589effaa56dcbe0336c0814f3cb145c9acd4926d992cbe81d04e47ad42508d",
+    "apps/arena-web/http.mjs": "b249d7e9deee67fbf6353eb70172da85024d2708fed2293cd39366e94d746b4f",
+    "apps/arena-web/index.html": "c6a721fc28d6444740551888f32207731669cf0f67baab21e10ff8aa31a3d9a8",
+    "apps/arena-web/package.json": "4f26f7ceb139d18f96f1016052f0e7df020696eb8e85e004ccd3d5d3b4571897",
+    "apps/arena-web/render.mjs": "5fb4242ee1f42d52e8a217459f181343972f3440e615cc2fd002198b768e13b9",
+    "apps/arena-web/style-lab.mjs": "117d72b8e1aa01024c6f7061209371de116e41ea0f995fb4964bcdc339346c11",
+    "apps/arena-web/tests/repair-dom-harness.mjs": "2a3f09308ffb747ee19b7481300da37c365626f49c23619e9635fbd3152dc56d",
+    "apps/arena-web/tests/style-lab-dom.test.mjs": "4db04b62c2be2961cbf98b96562fb3383a40f408aa25e05dab88392d3bd3e8b8",
+    "apps/arena-web/tests/verified-session.test.mjs": "38bcc22d45edac9a6237924119ac8b3b139b4d7c8684526295594d364d277274",
+    "apps/arena-web/verified-panel.mjs": "e0ff3cc28ae8eb158b505a1e1379cfb432580b5985c92d3fb8e5c30db49f10f1",
+    "apps/arena-web/verified-visuals.mjs": "17106bab1c2f93944dbbbfb514b7ad3aa0ab94a4b6ac2f62c72a5650198add24",
+    "tests/dev-server.test.mjs": "a94c5aa370cef984313c7b42d13430dae9db1c70957d0a798e5a1961b4b3e045",
+    "apps/arena-web/animation-cues.mjs": "6f616e085cf3576839db0a65d9c7aa74909d418df93f0d0b344bdcb8c95230dd",
+    "apps/arena-web/equipped-canonical.mjs": "87e1bdcca48b1ceea41a4e904183619c325c1a62211212ea702b0eb650ede7e3",
+    "apps/arena-web/equipped-inspector.mjs": "7456fd2e3a23f9629ab7ec1db132d4ed6983d9ab0c06e4e40128e18317490057",
+    "apps/arena-web/equipped-puppet.mjs": "97b402a1aee135f161b0a274aee0e8270fdaa0e067e731e56675821ca84c5925",
+    "apps/arena-web/equipped-rig.mjs": "efc97328730b0c529da1b813aeaec1153946fbf072e2168b9d9b9f5af530c3a8",
+    "apps/arena-web/tests/equipped-gpu-fixture.mjs": "52c5ec0bb7b716b0707b3a4687e5da21eff8193446d0aa1ec778461b0d04a7e7",
+    "apps/arena-web/tests/equipped-inspector.test.mjs": "d580a7ebab87a1b8032884a32dd71b41717c1f0f4b9962bca11cbddfe0ed4a5b",
+    "apps/arena-web/tests/equipped-poses.test.mjs": "058c2e107d750aff2354cb0121cc0d5cb86194e394d11ae8c3276b1e74700f28",
+    "apps/arena-web/tests/equipped-puppet.test.mjs": "23ff2258cdccd161deb49e00f440cfef3aec7f0566a1574d676ce82483f73699",
+    "apps/arena-web/tests/equipped-renderer.test.mjs": "6561cb3d83ec22d503ce5eeea19489891891a88a61e881727782f3d80272a04b"
+  },
+  "sharedCatalogSha256": "45876f1faa4cd538ca4de3a70d0551cce392256cd2d610d62e3e52242e51069b",
+  "sharedAnatomyModelSha256": "4ae6be65c1ae2617c6665812916e3f1e8a6dea59ba0bac5f90c15e7418050c8b",
+  "localCheck": {
+    "status": "PASS",
+    "command": "npm run check",
+    "totalTests": 360,
+    "groups": {
+      "repository": 3,
+      "schemasAndHost": 54,
+      "wardrobe": 15,
+      "petApi": 17,
+      "passport": 15,
+      "visual": 46,
+      "contracts": 41,
+      "arena": 161,
+      "sourcePreview": 8
+    }
+  },
+  "browserReview": {
+    "status": "PASS_WITH_LIMITATIONS",
+    "syntheticOnly": true,
+    "checks": [
+      "Sapphire crown/overshirt/pants/shoes/trident candidate outfit: attack, victory, pose blend and four-pose comparison inspected in real GPU browser.",
+      "Verified synthetic adult with exact 17950 XP, V1 level 10 and eight V1 items: canonical private four-pose gallery checked.",
+      "390x844: private gallery uses two columns inside viewport; Style Lab pose selector and 65% blend respond; page scroll width equals viewport width.",
+      "Synthetic practice accepted Market Order and Diamond Hands receipts with canonical equipped fighter visible and clean console before concession dialog.",
+      "Preview and verified galleries remain explicitly separate; portraits are stamped Preview."
+    ],
+    "screenshots": [
+      "docs/reviews/equipped-pose-preview.png",
+      "docs/reviews/equipped-v1-poses.png",
+      "docs/reviews/equipped-poses-mobile.png",
+      "docs/reviews/equipped-practice.png"
+    ],
+    "limits": [
+      "No real wallet, production ledger or chain access.",
+      "Native concession confirmation stalled browser automation; concession/reload not verified in that tab. Existing confirmation behavior is unchanged.",
+      "No measured target-device FPS, memory or operator approval of every equipment combination."
+    ]
+  },
+  "exactSourceCi": {
+    "status": "PENDING",
+    "jobs": [
+      "repository",
+      "contracts",
+      "arena"
+    ],
+    "url": "PENDING"
+  },
+  "axoAcknowledgment": "NOT_ACKNOWLEDGED",
+  "axo010011012Integration": "UNKNOWN",
+  "realWalletVerification": "NOT_PERFORMED",
+  "productionParity": "NOT_PERFORMED",
+  "liveDeployment": "NOT_PERFORMED",
+  "measuredDeviceFps": "NOT_PERFORMED",
+  "newPaintedMultiAngleFrames": "NOT_GENERATED",
+  "renderingScope": "Bounded 2D skinning of existing reviewed surfaces; not a new multi-angle or 3D artwork set.",
+  "review": "docs/reviews/arena-equipped-poses-review.md"
+}

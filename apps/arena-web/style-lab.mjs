@@ -2,14 +2,17 @@ import { LINEAGES, catalog as moveCatalog } from './catalog.mjs';
 import { fitPlan } from './atelier/model.mjs';
 import { ATELIER_CATALOG_SHA256, LAB_MOVES, atelierManifest, atelierMediaUrl, labSelection, proposedLoadout, fittedActorMotion } from './style-lab-model.mjs';
 import { activePresentation, presentationBudget } from './presentation.mjs';
+import {sampleEquippedPose,RIG_SPACE,POSE_NAMES} from './equipped-rig.mjs';
+import {createEquippedPuppet} from './equipped-puppet.mjs';
 const esc = v => String(v ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 export function styleLabMarkup() {
-  return `<section class="style-lab" aria-labelledby="style-lab-title"><header class="sl-header"><div><span class="eyebrow">AXO ARENA / STYLE LAB</span><h1 id="style-lab-title" tabindex="-1">Your look. In motion.</h1><p>Fitted gear, six lineages and preview tiers 10–20.</p></div><span class="sl-preview-badge">COSMETIC PREVIEW</span></header><div class="sl-policy">Reference characters and candidate gear only. No ownership, equip, XP, minting or combat bonuses are granted. Active battle clocks continue while you style.</div><div class="sl-layout"><aside class="sl-preview"><div class="sl-stage"><canvas width="600" height="900" data-lab-canvas aria-label="Animated fitted gear cosmetic preview"></canvas><span class="sl-watermark">PREVIEW / NOT EQUIPPED</span><span data-lab-loading role="status">Loading fitted wardrobe…</span></div><div class="sl-animation"><label>Motion<select data-lab-move>${LAB_MOVES.map(key => `<option value="${key}">${key === 'idle' ? 'Idle / breathing' : esc(moveCatalog('emerald_sprout')[key].name)}</option>`).join('')}</select></label><button data-lab-play>Play motion ↗</button><button data-lab-pause aria-pressed="false">Pause</button></div><div class="sl-pose-note">Clothes, grip and finger masks stay registered to one fixed pose. Motion moves the fitted actor together.</div><div class="sl-export"><button data-lab-export disabled>Export Preview PNG</button><button data-lab-share disabled>Copy look link</button></div><div data-lab-stats></div></aside><div class="sl-controls"><div class="sl-identity"><label>Reference lineage<select data-lab-lineage>${Object.entries(LINEAGES).map(([id, l]) => `<option value="${id}">${esc(l.name)}</option>`).join('')}</select></label><label>Preview tier <output data-lab-tier-copy>10</output><input data-lab-tier type="range" min="10" max="20" value="10" step="1"></label></div><label class="sl-scene">Preview setting<select data-lab-scene><option value="none">Protocol deck</option></select></label><div class="sl-outfits"><label>Complete outfit<select data-lab-outfit><option value="">Custom mix</option></select></label><button data-lab-clear>Clear gear</button></div><div class="sl-equipped" data-lab-equipped></div><div class="sl-filters"><label>Find a style<input type="search" data-lab-search placeholder="Sweater, crown, banana…" maxlength="80"></label><label>Slot<select data-lab-slot><option value="all">All slots</option></select></label><label>Theme<select data-lab-theme><option value="all">All themes</option></select></label></div><p data-lab-count class="sl-count" aria-live="polite"></p><div class="sl-pieces" data-lab-pieces></div></div></div><p class="sl-notice" data-lab-notice role="status" aria-live="polite"></p></section>`;
+  return `<section class="style-lab" aria-labelledby="style-lab-title"><header class="sl-header"><div><span class="eyebrow">AXO ARENA / STYLE LAB</span><h1 id="style-lab-title" tabindex="-1">Your look. In motion.</h1><p>Fitted gear, six lineages and preview tiers 10–20.</p></div><span class="sl-preview-badge">COSMETIC PREVIEW</span></header><div class="sl-policy">Reference characters and candidate gear only. No ownership, equip, XP, minting or combat bonuses are granted. Active battle clocks continue while you style.</div><div class="sl-layout"><aside class="sl-preview"><div class="sl-stage"><canvas width="600" height="900" data-lab-canvas aria-label="Animated fitted gear cosmetic preview"></canvas><span class="sl-watermark">PREVIEW / NOT EQUIPPED</span><span data-lab-loading role="status">Loading fitted wardrobe…</span></div><div class="sl-animation"><label>Motion<select data-lab-move>${LAB_MOVES.map(key => `<option value="${key}">${key === 'idle' ? 'Idle / breathing' : esc(moveCatalog('emerald_sprout')[key].name)}</option>`).join('')}</select></label><button data-lab-play>Play motion ↗</button><button data-lab-pause aria-pressed="false">Pause</button></div><div class="sl-pose-controls"><label>Pose study<select data-lab-pose><option value="motion">Follow motion clip</option>${POSE_NAMES.map(pose=>`<option value="${pose}">${pose[0].toUpperCase()+pose.slice(1)}</option>`).join('')}</select></label><label>Pose blend <output data-lab-pose-copy>100%</output><input data-lab-pose-mix type="range" min="0" max="100" step="1" value="100"></label></div><div class="sl-pose-note" data-lab-pose-status role="status">Loading registered equipment animation…</div><div class="sl-export"><button data-lab-export disabled>Export Preview PNG</button><button data-lab-share disabled>Copy look link</button></div><div data-lab-stats></div></aside><div class="sl-controls"><div class="sl-identity"><label>Reference lineage<select data-lab-lineage>${Object.entries(LINEAGES).map(([id, l]) => `<option value="${id}">${esc(l.name)}</option>`).join('')}</select></label><label>Preview tier <output data-lab-tier-copy>10</output><input data-lab-tier type="range" min="10" max="20" value="10" step="1"></label></div><label class="sl-scene">Preview setting<select data-lab-scene><option value="none">Protocol deck</option></select></label><div class="sl-outfits"><label>Complete outfit<select data-lab-outfit><option value="">Custom mix</option></select></label><button data-lab-clear>Clear gear</button></div><div class="sl-equipped" data-lab-equipped></div><button data-lab-compare aria-expanded="false" aria-controls="pose-comparison" disabled>Compare attack / block / hit / victory</button><section id="pose-comparison" data-lab-board class="sl-pose-board" aria-label="Equipped combat pose comparison" hidden></section><div class="sl-filters"><label>Find a style<input type="search" data-lab-search placeholder="Sweater, crown, banana…" maxlength="80"></label><label>Slot<select data-lab-slot><option value="all">All slots</option></select></label><label>Theme<select data-lab-theme><option value="all">All themes</option></select></label></div><p data-lab-count class="sl-count" aria-live="polite"></p><div class="sl-pieces" data-lab-pieces></div></div></div><p class="sl-notice" data-lab-notice role="status" aria-live="polite"></p></section>`;
 }
 
 export function mountStyleLab(root, { initialLineage = 'emerald_sprout', params = new URLSearchParams(), fetcher = fetch } = {}) {
   const $ = selector => root.querySelector(selector), canvas = $('[data-lab-canvas]'), ctx = canvas.getContext('2d'), abort = new AbortController();
-  let disposed = false, generation = 0, catalog, manifest, composite, background, scene = 'none', lineage = Object.hasOwn(LINEAGES, initialLineage) ? initialLineage : 'emerald_sprout', tier = 10, selection = {}, move = 'idle', actionAt = -Infinity, paused = false, lastFrame = -Infinity, raf, elapsedTime = 0, lastTime = 0;
+  let disposed = false, generation = 0, catalog, manifest, composite, puppet, background, scene = 'none', lineage = Object.hasOwn(LINEAGES, initialLineage) ? initialLineage : 'emerald_sprout', tier = 10, selection = {}, move = 'idle', study = 'motion', poseMix = 1, actionAt = -Infinity, paused = false, lastFrame = -Infinity, raf, elapsedTime = 0, lastTime = 0;
+  const poseSample={};let animationStatus='',boardOpen=false;
   const media = matchMedia('(prefers-reduced-motion: reduce)');
   let preferences, reduced, budget;
   const gradient = ctx.createRadialGradient(300, 390, 20, 300, 430, 500); gradient.addColorStop(0, '#25484d'); gradient.addColorStop(1, '#07141d');
@@ -32,13 +35,16 @@ export function mountStyleLab(root, { initialLineage = 'emerald_sprout', params 
     } finally { URL.revokeObjectURL(url); urls.delete(url); }
   }
   async function paint() {
-    const token = ++generation; composite = null; $('[data-lab-loading]').hidden = false; $('[data-lab-loading]').textContent = 'Fitting layers…'; $('[data-lab-export]').disabled = true;
+    const token = ++generation; composite = null; $('[data-lab-board]').hidden=true;$('[data-lab-pose]').disabled=true;$('[data-lab-pose-mix]').disabled=true;$('[data-lab-compare]').disabled=true; $('[data-lab-loading]').hidden = false; $('[data-lab-loading]').textContent = 'Fitting layers…'; $('[data-lab-export]').disabled = true;
     try {
       const plan = fitPlan(catalog, lineage, selection, {}, null, true), next = document.createElement('canvas'); next.width = 512; next.height = 768;
       const stage = catalog.scenes.find(entry => entry.id === scene), nextBackground = stage ? await image(stage.asset) : null;
-      for (const layer of plan) { const img = await image(layer.src); if (disposed || token !== generation) return; next.getContext('2d').drawImage(img, 0, 0); }
-      if (disposed || token !== generation) return; composite = next; background = nextBackground; $('[data-lab-loading]').hidden = true; $('[data-lab-export]').disabled = false; $('[data-lab-share]').disabled = false; lastFrame = -Infinity;
-    } catch (error) { if (!disposed && token === generation) { $('[data-lab-loading]').textContent = 'Preview unavailable'; notice(error.name === 'AbortError' ? 'Preview loading cancelled.' : 'A fitted layer could not be checked. Retry by choosing an outfit.'); } }
+      const surfaces=[];for (const layer of plan) { const img = await image(layer.src); if (disposed || token !== generation) return; next.getContext('2d').drawImage(img, 0, 0);surfaces.push({...layer,image:img}); }
+      if (disposed || token !== generation) return;
+      const nextPuppet=createEquippedPuppet(surfaces);puppet?.destroy();puppet=nextPuppet;animationStatus='';
+      composite = next; background = nextBackground; $('[data-lab-loading]').hidden = true; $('[data-lab-export]').disabled = false; $('[data-lab-share]').disabled = false; lastFrame = -Infinity;
+      $('[data-lab-compare]').disabled=!puppet.available;if(boardOpen)poseBoard();
+    } catch (error) { if (!disposed && token === generation) {boardOpen=false;$('[data-lab-compare]').setAttribute('aria-expanded','false'); $('[data-lab-loading]').textContent = 'Preview unavailable'; notice(error.name === 'AbortError' ? 'Preview loading cancelled.' : 'A fitted layer could not be checked. Retry by choosing an outfit.'); } }
   }
   function stats() {
     const p = proposedLoadout(catalog, selection, tier), active = p.sets.filter(s => s.count > 0);
@@ -52,15 +58,27 @@ export function mountStyleLab(root, { initialLineage = 'emerald_sprout', params 
     $('[data-lab-pieces]').innerHTML = items.map(item => `<article class="sl-piece" data-selected="${selection[item.slot] === item.id}"><button data-lab-family="${item.id}" aria-pressed="${selection[item.slot] === item.id}" aria-label="Try ${esc(item.name)}"><img src="${atelierMediaUrl(item.thumbnail.asset)}" width="240" height="360" loading="lazy" alt="${esc(item.name)}, full unworn candidate artwork"><span>${esc(item.garmentType || item.slot)} / ${esc(item.theme)}</span><strong>${esc(item.name)}</strong><small>Preview tier ${tier} · ${selection[item.slot] === item.id ? 'Selected ✓' : 'Try on +'}</small></button><button data-lab-art="${item.id}" class="sl-art-button">Inspect full artwork ↗</button></article>`).join('');
   }
   function changed() { selection = labSelection(catalog, selection); equipped(); stats(); pieces(); void paint(); }
+  function poseBoard(){
+    const board=$('[data-lab-board]');board.hidden=!boardOpen;if(!boardOpen)return;
+    board.innerHTML='<p>Same outfit · four articulated still poses · Preview only.</p><div class="sl-pose-board-grid"></div>';
+    const grid=board.querySelector('.sl-pose-board-grid');
+    for(const name of ['attack','block','hit','victory']){const figure=document.createElement('figure'),view=document.createElement('canvas');view.width=320;view.height=480;view.setAttribute('aria-label',name+' equipped cosmetic pose');const c=view.getContext('2d');c.fillStyle='#101e2d';c.fillRect(0,0,320,480);if(background)c.drawImage(background,0,0,320,480);
+      const frame=puppet?.render(sampleEquippedPose({study:name}));if(!frame){board.innerHTML='<p>Pose comparison unavailable. The fitted still portrait is preserved.</p>';return;}
+      const unit=320/1024*.88;c.drawImage(frame,160+(-512-RIG_SPACE.padding)*unit,377+(-1207-RIG_SPACE.padding)*unit,(1024+RIG_SPACE.padding*2)*unit,(1536+RIG_SPACE.padding*2)*unit);
+      c.fillStyle='#07141df0';c.fillRect(0,438,320,42);c.fillStyle='#e9eddd';c.font='bold 12px system-ui';c.textAlign='center';c.fillText(name.toUpperCase()+' / PREVIEW',160,464);figure.append(view);grid.append(figure);
+    }
+  }
   function moveLabels() { const moves = moveCatalog(lineage); $('[data-lab-move]').querySelectorAll('option').forEach(option => { if (option.value !== 'idle') option.textContent = moves[option.value].name; }); }
   function onChange(event) {
     if (!catalog || disposed) return;
-    if (event.type === 'input' && !event.target.matches('[data-lab-search],[data-lab-tier]')) return;
-    if (event.type === 'change' && event.target.matches('[data-lab-search],[data-lab-tier]')) return;
+    if (event.type === 'input' && !event.target.matches('[data-lab-search],[data-lab-tier],[data-lab-pose-mix]')) return;
+    if (event.type === 'change' && event.target.matches('[data-lab-search],[data-lab-tier],[data-lab-pose-mix]')) return;
     if (event.target.matches('[data-lab-lineage]')) { lineage = event.target.value; moveLabels(); changed(); }
     if (event.target.matches('[data-lab-scene]')) { scene = event.target.value; void paint(); }
     if (event.target.matches('[data-lab-tier]')) { tier = Number(event.target.value); $('[data-lab-tier-copy]').textContent = tier; stats(); pieces(); }
-    if (event.target.matches('[data-lab-move]')) { move = event.target.value; actionAt = elapsedTime; lastFrame = -Infinity; }
+    if (event.target.matches('[data-lab-move]')) { move = event.target.value; study='motion';$('[data-lab-pose]').value=study; actionAt = elapsedTime; lastFrame = -Infinity; }
+    if (event.target.matches('[data-lab-pose]')&&(event.target.value==='motion'||POSE_NAMES.includes(event.target.value))) { study=event.target.value;lastFrame=-Infinity; }
+    if (event.target.matches('[data-lab-pose-mix]')) { const value=Number(event.target.value);if(Number.isInteger(value)&&value>=0&&value<=100){poseMix=value/100;$('[data-lab-pose-copy]').textContent=value+'%';lastFrame=-Infinity;} }
     if (event.target.matches('[data-lab-outfit]')) { const outfit = catalog.presets.find(p => p.id === event.target.value); if (outfit) { selection = { ...outfit.selection }; changed(); } }
     if (event.target.matches('[data-lab-search],[data-lab-slot],[data-lab-theme]')) pieces();
   }
@@ -74,23 +92,37 @@ export function mountStyleLab(root, { initialLineage = 'emerald_sprout', params 
     if (button.dataset.labFamily) { const item = catalog.items.find(item => item.id === button.dataset.labFamily); if (item) { selection[item.slot] = item.id; $('[data-lab-outfit]').value = ''; changed(); } }
     if (button.dataset.labRemove) { delete selection[button.dataset.labRemove]; $('[data-lab-outfit]').value = ''; changed(); }
     if (button.hasAttribute('data-lab-clear')) { selection = {}; $('[data-lab-outfit]').value = ''; changed(); }
-    if (button.hasAttribute('data-lab-play')) { actionAt = elapsedTime; paused = false; $('[data-lab-pause]').textContent = 'Pause'; $('[data-lab-pause]').setAttribute('aria-pressed', 'false'); }
+    if (button.hasAttribute('data-lab-play')) { actionAt = elapsedTime;study='motion';$('[data-lab-pose]').value=study; paused = false; $('[data-lab-pause]').textContent = 'Pause'; $('[data-lab-pause]').setAttribute('aria-pressed', 'false'); }
     if (button.hasAttribute('data-lab-pause')) { paused = !paused; button.setAttribute('aria-pressed', String(paused)); button.textContent = paused ? 'Resume' : 'Pause'; lastFrame = -Infinity; }
+    if(button.hasAttribute('data-lab-compare')){boardOpen=!boardOpen;button.setAttribute('aria-expanded',String(boardOpen));poseBoard();}
     if (button.dataset.labArt) art(button.dataset.labArt); if (button.hasAttribute('data-lab-art-close')) button.closest('dialog').close();
     if (button.hasAttribute('data-lab-share')) {
       const fragment = new URLSearchParams({ 'style-lab': '1', lineage, tier: String(tier), scene, empty: Object.keys(selection).length ? '0' : '1', ...selection }), url = new URL(location.href); url.search = ''; url.username = ''; url.password = ''; url.hash = fragment.toString();
       try { await navigator.clipboard.writeText(url.href); notice('Cosmetic look link copied. No wallet, Pet ID or XP is included.'); } catch { notice('Clipboard unavailable. Your preview is still here.'); }
     }
-    if (button.hasAttribute('data-lab-export') && composite) canvas.toBlob(blob => { if (!blob || disposed) return; const url = URL.createObjectURL(blob), link = document.createElement('a'); urls.add(url); link.href = url; link.download = `axo-arena-preview-${lineage}-t${tier}.png`; link.click(); setTimeout(() => { URL.revokeObjectURL(url); urls.delete(url); }, 1000); notice('Exported portrait is visibly marked Preview.'); });
+    if (button.hasAttribute('data-lab-export') && composite) {renderPortrait();const filename=`axo-arena-preview-${lineage}-t${tier}-${study}.png`;canvas.toBlob(blob => { if (!blob || disposed) return; const url = URL.createObjectURL(blob), link = document.createElement('a'); urls.add(url); link.href = url; link.download = filename; link.click(); setTimeout(() => { URL.revokeObjectURL(url); urls.delete(url); }, 1000); notice('Exported portrait is visibly marked Preview.'); });}
   }
   function draw(time) {
     if (disposed || !root.isConnected || document.hidden) return; raf = requestAnimationFrame(draw);
-    if (preferences !== activePresentation() || reduced !== media.matches) { preferences = activePresentation(); reduced = media.matches; budget = presentationBudget(preferences, { reducedMotion: reduced, memory: navigator.deviceMemory || 8, saveData: navigator.connection?.saveData === true }); }
+    refreshBudget();
     if (time - lastFrame < 1000 / budget.fps) return; const delta = lastTime ? Math.min(50, time - lastTime) : 0; lastTime = time; if (!paused) elapsedTime += delta; lastFrame = time;
+    renderPortrait();
+  }
+  function refreshBudget(){if(preferences!==activePresentation()||reduced!==media.matches){preferences=activePresentation();reduced=media.matches;budget=presentationBudget(preferences,{reducedMotion:reduced,memory:navigator.deviceMemory||8,saveData:navigator.connection?.saveData===true});}}
+  function renderPortrait(){
+    refreshBudget();
     const m = fittedActorMotion(elapsedTime, Number.isFinite(actionAt) ? elapsedTime - actionAt : -1, { move, reduced: budget.reduced, tier }), color = LINEAGES[lineage].color;
     ctx.clearRect(0, 0, 600, 900); ctx.fillStyle = gradient; ctx.fillRect(0, 0, 600, 900); if (background) ctx.drawImage(background, 0, 0, 600, 900);
     if (!background) { ctx.save(); ctx.translate(300, 710); ctx.scale(1, .22); ctx.beginPath(); ctx.arc(0, 0, 190, 0, Math.PI * 2); ctx.fillStyle = '#08151b'; ctx.fill(); ctx.strokeStyle = color; ctx.globalAlpha = .55; ctx.lineWidth = 3; ctx.stroke(); ctx.restore(); }
-    if (composite) { ctx.save(); ctx.translate(300 + m.x, 710 + m.y); ctx.rotate(m.rotation); ctx.globalAlpha = 1; ctx.drawImage(composite, -300, -710, 600, 900); ctx.restore(); }
+    if (composite) {
+      const articulated=puppet?.render(sampleEquippedPose({time:elapsedTime,elapsed:move==='idle'?-1:Number.isFinite(actionAt)?elapsedTime-actionAt:-1,key:move==='idle'?'market_order':move,reduced:budget.reduced,study,mix:poseMix},poseSample));
+      const status=articulated?'Articulated equipment · shared grip and foreground masks.':'Fitted still pose · animation unavailable on this device.';
+      if(status!==animationStatus){animationStatus=status;$('[data-lab-pose-status]').textContent=status;$('[data-lab-pose]').disabled=!articulated;$('[data-lab-pose-mix]').disabled=!articulated;$('[data-lab-compare]').disabled=!articulated;if(!articulated){boardOpen=false;$('[data-lab-board]').hidden=true;$('[data-lab-compare]').setAttribute('aria-expanded','false');}}
+      ctx.save();ctx.translate(300+m.x,707+m.y);ctx.rotate(m.rotation);ctx.globalAlpha=1;
+      const zoom=.88,unit=600/1024*zoom;
+      if(articulated)ctx.drawImage(articulated,(-512-RIG_SPACE.padding)*unit,(-1207-RIG_SPACE.padding)*unit,(1024+RIG_SPACE.padding*2)*unit,(1536+RIG_SPACE.padding*2)*unit);
+      else ctx.drawImage(composite,-512*unit,-1207*unit,1024*unit,1536*unit);ctx.restore();
+    }
     if (m.trail > .01 && !budget.reduced) {
       ctx.save(); ctx.strokeStyle = color; ctx.fillStyle = color; ctx.globalAlpha = m.trail * .65; ctx.lineWidth = 3;
       if (['shield','counter'].includes(m.effect)) { ctx.beginPath(); ctx.ellipse(400, 470, 105, 150, -.12, -1.5, 1.5); ctx.stroke(); ctx.globalAlpha *= .2; ctx.fill(); }
@@ -98,7 +130,7 @@ export function mountStyleLab(root, { initialLineage = 'emerald_sprout', params 
       else { ctx.beginPath(); ctx.moveTo(405, 410); ctx.bezierCurveTo(510, 380 - m.impact * 80, 580, 470, 590, 370); ctx.stroke(); if (m.effect === 'epic') { ctx.globalAlpha *= .5; ctx.lineWidth = 6; ctx.beginPath(); ctx.arc(300, 460, 160 + m.impact * 30, 0, Math.PI * 2); ctx.stroke(); } }
       ctx.restore();
     }
-    ctx.fillStyle = '#07141de8'; ctx.fillRect(0, 823, 600, 77); ctx.fillStyle = '#d9eaff'; ctx.font = '700 15px system-ui'; ctx.textAlign = 'center'; ctx.fillText('PREVIEW / COSMETIC ONLY', 300, 850); ctx.font = '12px system-ui'; ctx.fillStyle = '#91afc2'; ctx.fillText(`REFERENCE ${LINEAGES[lineage].short.toUpperCase()} · TIER ${tier}`, 300, 875);
+    ctx.fillStyle = '#07141de8'; ctx.fillRect(0, 823, 600, 77); ctx.fillStyle = '#d9eaff'; ctx.font = '700 15px system-ui'; ctx.textAlign = 'center'; ctx.fillText('PREVIEW / COSMETIC ONLY', 300, 850); ctx.font = '12px system-ui'; ctx.fillStyle = '#91afc2'; ctx.fillText(`REFERENCE ${LINEAGES[lineage].short.toUpperCase()} · TIER ${tier} · ${study==='motion'?(move==='idle'?'Idle':moveCatalog(lineage)[move].name):study.toUpperCase()}`, 300, 875);
   }
   function visibility() { cancelAnimationFrame(raf); lastTime = 0; lastFrame = -Infinity; if (!document.hidden && !disposed) raf = requestAnimationFrame(draw); }
   document.addEventListener('visibilitychange', visibility);
@@ -118,5 +150,5 @@ export function mountStyleLab(root, { initialLineage = 'emerald_sprout', params 
     $('[data-lab-scene]').value = scene;
     $('[data-lab-lineage]').value = lineage; moveLabels(); $('[data-lab-tier]').value = tier; $('[data-lab-tier-copy]').textContent = tier; equipped(); stats(); pieces(); await paint();
   })().catch(() => { if (!disposed) { $('[data-lab-loading]').textContent = 'Wardrobe unavailable'; notice('The pinned wardrobe could not be loaded. Combat and verified equipment are unchanged.'); } });
-  return { ready, destroy() { disposed = true; generation++; abort.abort(); cancelAnimationFrame(raf); document.removeEventListener('visibilitychange', visibility); root.removeEventListener('change', onChange); root.removeEventListener('input', onChange); root.removeEventListener('click', onClick); root.querySelector('dialog')?.remove(); cache.clear(); composite = null; background = null; for (const url of urls) URL.revokeObjectURL(url); urls.clear(); } };
+  return { ready, destroy() { disposed = true; generation++; abort.abort(); cancelAnimationFrame(raf); document.removeEventListener('visibilitychange', visibility); root.removeEventListener('change', onChange); root.removeEventListener('input', onChange); root.removeEventListener('click', onClick); root.querySelector('dialog')?.remove(); cache.clear(); puppet?.destroy();puppet=null;composite = null; background = null; for (const url of urls) URL.revokeObjectURL(url); urls.clear(); } };
 }
