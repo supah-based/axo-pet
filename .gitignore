@@ -29,3 +29,5 @@ state/
 .DS_Store
 *.log
 .tmp/
+# Local simulator/browser output; reviewed sanitized evidence belongs in docs/reviews.
+apps/arena-web/review/

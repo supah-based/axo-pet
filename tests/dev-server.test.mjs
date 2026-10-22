@@ -10,6 +10,14 @@ async function fixture(t, options = {}) {
   return `http://127.0.0.1:${server.address().port}`;
 }
 
+test('quality modules and painted environments are pinned, served and isolated from private review artifacts',async t=>{
+ const origin=await fixture(t),{readFile}=await import('node:fs/promises'),{createHash}=await import('node:crypto'),sharp=(await import('sharp')).default;
+ for(const file of ['tactics-model.mjs','tactics-lab.mjs','controls.mjs','frame-probe.mjs','quality-pass.css'])assert.equal((await fetch(origin+'/arena/'+file)).status,200,file);
+ const manifest=JSON.parse(await readFile(new URL('../apps/arena-web/assets/runtime/environments-v1/manifest.json',import.meta.url),'utf8'));
+ for(const entry of Object.values(manifest.entries)){const response=await fetch(origin+entry.url);assert.equal(response.status,200);assert.match(response.headers.get('content-type'),/image\/webp/);const bytes=Buffer.from(await response.arrayBuffer());assert.equal(bytes.length,entry.bytes);assert.equal(createHash('sha256').update(bytes).digest('hex'),entry.sha256);const meta=await sharp(bytes).metadata();assert.equal(meta.width,1536);assert.equal(meta.height,864);}
+ assert.equal((await fetch(origin+'/arena/review/balance-2026102301.json')).status,404);
+});
+
 test('combat sound modules and the complete pinned PCM bank are publicly readable without exposing the generator',async t=>{
  const origin=await fixture(t);for(const file of ['combat-beats.mjs','combat-audio.mjs','combat-audio-bank.mjs','combat-feel.css'])assert.equal((await fetch(origin+'/arena/'+file)).status,200,file);
  const {AUDIO_BANK}=await import('../apps/arena-web/combat-audio-bank.mjs'),{createHash}=await import('node:crypto');

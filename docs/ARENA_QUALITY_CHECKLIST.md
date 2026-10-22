@@ -2,6 +2,8 @@
 
 Research date: 2026-10-23. Reviewed source: `816a3a9906612d3090f9846b133115aeae3639a7`, fetched and equal to `origin/codex/arena-imagegen-art` when this review began. This is a proposed production-quality backlog. Unchecked items require implementation or fresh acceptance evidence; this document does not report them as completed upgrades.
 
+**Current pass, 2026-10-23:** [AXO-019](handoffs/AXO-019.md) and the [multi-domain review](reviews/arena-quality-review.md) supersede the original unchanged-source baseline below. Every one of the 44 points now has a disposition in the table at the end. Training, replay learning, phone entry, comfort/keys, diagnostics, two painted environments and reproducible balance audits are implemented. Open acceptance boxes continue to mean the whole original acceptance has not been demonstrated; a source upgrade is not an AXO acknowledgment, human study, device result or live release.
+
 The next milestone is one polished journey: verified Pet → choose build/look → enter practice or a challenge → understand every exchange → result → replay or rematch. Give that journey consistent art, sound, responsiveness and recovery before expanding the content schedule. This recommendation applies established development principles to AXO; it is not an industry certification or a promise that a checklist alone makes a game AAA.
 
 ## Research and how it applies
@@ -169,6 +171,59 @@ A small complete fight is the proposed next implementation boundary. This plan d
 
 For each accepted item record: checklist ID, exact source commit, reviewer, date, environment/device/browser, synthetic or live scope, evidence location, pass/fail and remaining defects. Keep player identifiers, private recordings, production receipts and raw telemetry out of Git; link only sanitized artifacts approved for the repository.
 
-Initial review: research plus source/document/saved-image inspection on 2026-10-23. No new physical-device, real-wallet, accessibility-user or production performance test was performed for this checklist. Runtime code and game assets are unchanged.
+Original baseline review: research plus source/document/saved-image inspection on 2026-10-23. No physical-device, real-wallet, accessibility-user or production performance test was performed for that baseline. Runtime code and game assets were unchanged at that point; AXO-018/019 subsequently changed source/assets as documented above.
 
 Documentation verification: 44 unique checklist IDs, all local checklist links resolve, and `git diff --check` passes. The required `npm run check` baseline passes all 383 tests, including 41 contract and 184 Arena tests, using the pinned Node/npm tooling with loopback test connectivity. These checks establish the unchanged source baseline; they do not close the quality-acceptance tasks above.
+
+## AXO-019 disposition of all 44 points
+
+Each row refers to the exact implementation pinned in AXO-019, reviewed by Codex on 2026-10-23. **SOURCE** means implementation plus scoped source evidence; **PARTIAL** includes work shipped with broader acceptance open; **EXTERNAL** needs host/device/player evidence; **DESIGN** is a documented dependency/proposal rather than a shipping backend. Evidence and acceptance owners are explicit. See the linked review for screenshots, test scope and limitations.
+
+| ID | Status | Evidence / upgrade in this pass | Remaining action and owner |
+| --- | --- | --- | --- |
+| A1 | EXTERNAL | Pinned source/PR/CI and AXO-019 packet. | AXO acknowledges commit, returns host asset/source readback. |
+| A2 | PARTIAL | Existing verified projection/frozen-entry tests retained; Dojo copies exact V1 build. | AXO compares same authenticated Pet in all three live views. |
+| A3 | PARTIAL | Existing race/ack/hidden-choice tests retained; readonly receipt panels add no submission. | AXO runs delayed/rejected/reconnect host cases. |
+| A4 | EXTERNAL | No store, timer or API ownership change. | AXO supplies restart/session/account/concurrency/rollback evidence. |
+| B1 | SOURCE | 12-move reference, category/condition/cost explanations and shared pose/cue/audio mapping in guide/current modules. | Art/players accept move recognition on named devices. |
+| B2 | PARTIAL | Existing all-profile/both-seat choreography regression tests; exact engine-based Dojo review. | QA captures full simultaneous-epic motion clips and human readability. |
+| B3 | PARTIAL | Existing restrained contact/recoil/hold; added optional camera impulse, default off, motion fences intact. | Players compare comfort/feel; no live deadline changes. |
+| B4 | SOURCE | Pinned Last exchange, exact Dojo energy/damage/block/heal, replay/report consistency tests and browser seek. | AXO live receipts; QA human comprehension. |
+| C1 | SOURCE | AXO-018 original 13-cue PCM/provenance/hash/signal checks retained. | AXO reads back bank; sound reviewer accepts timbre. |
+| C2 | SOURCE | Gesture/mute/master/effects/ambience/mono controls retained; local prefs independent. | QA phone/headphone mix acceptance. |
+| C3 | SOURCE | Bounded voice/lifecycle/receipt/replay/hidden cancellation tests retained. | QA target-browser suspended/output device cases. |
+| C4 | EXTERNAL | Visual equivalents and listening packet documented; no physical hearing claim. | Sound reviewer/players listen on phone/headphones and muted. |
+| D1 | PARTIAL | All-family/six-base mesh/depth and existing equipped pose tests pass; fitted Style Lab reviewed. | Art reviewer accepts full sets/mixes in both directions and motion. |
+| D2 | PARTIAL | Same rigid palm/tool/foreground binding and positive-surface tests; no changed registrations. | Art reviewer checks every tool at contact/recovery. |
+| D3 | PARTIAL | Existing bounded idle/attack/block/hit/win/loss acting preserved through new scenes/Dojo. | Art reviewer approves motion matrix; new turns require new compatible art. |
+| D4 | PARTIAL | Existing unavailable/unsupported/GPU/2:3 Preview/reconstruction checks retained. | QA rendered corrupt/GPU-restoration/export cases on target devices. |
+| E1 | PARTIAL | New compact Practice/Resume; browser 320/390 first viewport and active locks in DOM tests. | Players/QA test physical bars, touch, soft keyboard. |
+| E2 | PARTIAL | New calm background; corrected 320 px terminal log overlap; no actor/gear transform change. | QA landscape/heavy simultaneous-effect hierarchy. |
+| E3 | PARTIAL | Named controls, remapped hints, retained focus/scroll and command fences; existing error/ack tests. | QA full interactive state matrix with touch/keyboard/slow network. |
+| E4 | SOURCE | Truthful recorded moments, report/replay highlights, result log dialog; missed-turn loss reviewed. | AXO live finish/rematch parity and players' outcome comprehension. |
+| F1 | SOURCE | Small original AXO art bible in ARENA_QUALITY_PASS.md. | Art owner maintains/approves future additions. |
+| F2 | PARTIAL | Quiet-floor prompts, default dimming and phone/desktop compositing; rig-independent art. | Art/QA grayscale, vision simulation and bright/dark outfit acceptance. |
+| F3 | SOURCE | Two imagegen environments, saved prompts, WebP hash/size/dimension/MIME tests, 417,216 bytes. | AXO asset readback; art/device acceptance. |
+| F4 | PARTIAL | Existing server-fenced versus countdown and terminal poses retained; no extra blocking ceremony. | Art/players evaluate timing; host refresh/late-join readback. |
+| G1 | PARTIAL | Six configurable shortcuts, conflict swap, typing/dialog guards; phone controls and empty-state paths. | QA completes full keyboard-only/touch-only target-device journey. |
+| G2 | PARTIAL | Plain type option, dimming/contrast rules, named selects; reviewed narrow layouts. | QA measures all-state contrast, zoom, long/localized copy. |
+| G3 | PARTIAL | Existing semantic status/readouts, concise announcements and mute equivalents retained. | Screen-reader/vision users assess actual assistive output. |
+| G4 | SOURCE | No-clock local drills, step breakdown, manual/OS motion fences, calm setting and default-off impulse. | Players validate learning/comfort; live clocks continue. |
+| H1 | EXTERNAL | Device acceptance packet; local browser is identified as synthetic/emulated. | Operator nominates hardware; QA records thermal/GPU/browser traces. |
+| H2 | PARTIAL | Local bounded p50/p95/p99/JS probe, short measured sample and high-refresh cadence fix/test. | QA sustained five-minute High/Low traces/missed-frame and latency goals. |
+| H3 | PARTIAL | New optimized assets pinned; existing failed/loading fitted art handling and fixed public routing retained. | AXO/QA cold cache, 10 Mbps/100 ms RTT, offline/partial host delivery. |
+| H4 | PARTIAL | Existing actor/audio teardown/cache bounds; new frame history capped at 360. | QA 30-minute mixed-session memory/context-loss/hidden-resume trace. |
+| I1 | SOURCE | CLI directory/cwd/seed repair, mirrored paired seats; 10,800 fights, three seeds, hashes and 90 cells/seed. | Designers inspect Solar/outlier matchups with human play; no automatic nerf. |
+| I2 | PARTIAL | Repeatable actual-engine attack/shield/counter/heal/epic drills and move reference. | Players explain counterplay after practice; revise from observed errors. |
+| I3 | PARTIAL | Offline 396-case six-role/tier/lineage audit; mixed-stat isolation and under-level rejection report. | Designers playtest rounding/sustain/power; AXO verifies contracts/mappings before any activation. |
+| I4 | DESIGN | Population-first competition proposal; current level-bound casual rules retained. | Product/AXO supply participation, authoritative rating/season/recovery rules. |
+| J1 | PARTIAL | Recorded single-battle moments without awards; persistent mastery event requirements documented. | AXO/design approve authoritative history/achievement design before persistence. |
+| J2 | SOURCE | Four replay bookmarks, record-backed guard/heal/epic/one-HP moments, frozen/current-look disclosure. | Players evaluate learning usefulness and future comparisons. |
+| J3 | PARTIAL | Empty board now offers practice/Dojo; consent/revoke/moderation/private replay/Preview sharing tests retained. | AXO/QA host abuse/load/long-name and revocation acceptance. |
+| J4 | DESIGN | Original scenes plus small-drop art/fit/byte/localization/player-demand checklist in guide. | Content owner schedules only after demand and asset/device acceptance. |
+| K1 | PARTIAL | Portable browser executable/output/native-dialog source repair; current independent DOM tests and in-app journey review. | QA executes/modernizes full CLI selectors/two-session/rematch flow; CLI was not run here. |
+| K2 | PARTIAL | Multi-view synthetic screenshots, source suite, simulation JSON and this complete disposition matrix. | QA/AXO fill physical/live/network/long-session variants and clips. |
+| K3 | EXTERNAL | Specific consenting novice/experienced phone/desktop study tasks and questions documented. | Operator recruits players; no invented sessions/results. |
+| K4 | PARTIAL | Re-review fixed dropdown/label and terminal overlap issues; local metrics collect no telemetry. | Players/QA return sanitized observed defects, iterate with fresh participants. |
+
+No source row closes an external requirement by implication. AXO-019 contains the next concrete owner actions; none of these review artifacts authorize V2 activation, rewards, a live rollout or a claim of AAA/device/accessibility certification.

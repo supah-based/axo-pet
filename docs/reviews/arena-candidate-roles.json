@@ -1,0 +1,1855 @@
+{
+  "scope": "OFFLINE CANDIDATE ONLY. Synthetic five-piece items, identical per-slot stat pairs for role comparison; mixed reference keeps item stats but disables completion. Not issued NFTs, approved balance, ownership evidence or live V2 activation.",
+  "cases": 396,
+  "minimumLevelRejections": 396,
+  "levels": [
+    10,
+    20
+  ],
+  "lineages": 6,
+  "sets": 6,
+  "sourceHashes": {
+    "packages/shared-schemas/src/gear-sets-v2.mjs": "b258e6ef09dff63c5f5c7b6c649942831a931111feac22d5b8406b1db66d0bd5",
+    "packages/shared-schemas/src/progression-v2.mjs": "01a433fb69e6f54eea6cd833c5f4ca7ea45ad3c75dc83d04e2d3e69719b41bb6",
+    "packages/arena-engine/src/progression-v2.mjs": "eb76699b15eaf1748d758ac8c05d102ea51f3f37ac0d0b344781a1a1a593466d"
+  },
+  "representativeLineage": "solar_peach",
+  "rows": [
+    {
+      "set": "degen-brawler",
+      "role": "Brawler",
+      "level": 10,
+      "combatBonus": {
+        "attackFlat": 1,
+        "damagePercent": 1,
+        "defenseFlat": 0,
+        "healingPercent": 0,
+        "shieldBreakPercent": 0
+      },
+      "moves": {
+        "market_order": {
+          "damage": {
+            "complete": 25,
+            "mixed": 23,
+            "delta": 2
+          },
+          "shield": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          },
+          "heal": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          },
+          "purge": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          }
+        },
+        "diamond_hands": {
+          "damage": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          },
+          "shield": {
+            "complete": 23,
+            "mixed": 23,
+            "delta": 0
+          },
+          "heal": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          },
+          "purge": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          }
+        },
+        "touch_grass": {
+          "damage": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          },
+          "shield": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          },
+          "heal": {
+            "complete": 23,
+            "mixed": 23,
+            "delta": 0
+          },
+          "purge": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          }
+        },
+        "rug_pull": {
+          "damage": {
+            "complete": 24,
+            "mixed": 22,
+            "delta": 2
+          },
+          "shield": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          },
+          "heal": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          },
+          "purge": {
+            "complete": 10,
+            "mixed": 10,
+            "delta": 0
+          }
+        }
+      }
+    },
+    {
+      "set": "degen-brawler",
+      "role": "Brawler",
+      "level": 15,
+      "combatBonus": {
+        "attackFlat": 3,
+        "damagePercent": 3,
+        "defenseFlat": 0,
+        "healingPercent": 0,
+        "shieldBreakPercent": 0
+      },
+      "moves": {
+        "market_order": {
+          "damage": {
+            "complete": 34,
+            "mixed": 28,
+            "delta": 6
+          },
+          "shield": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          },
+          "heal": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          },
+          "purge": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          }
+        },
+        "diamond_hands": {
+          "damage": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          },
+          "shield": {
+            "complete": 24,
+            "mixed": 24,
+            "delta": 0
+          },
+          "heal": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          },
+          "purge": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          }
+        },
+        "touch_grass": {
+          "damage": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          },
+          "shield": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          },
+          "heal": {
+            "complete": 24,
+            "mixed": 24,
+            "delta": 0
+          },
+          "purge": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          }
+        },
+        "rug_pull": {
+          "damage": {
+            "complete": 33,
+            "mixed": 27,
+            "delta": 6
+          },
+          "shield": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          },
+          "heal": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          },
+          "purge": {
+            "complete": 10,
+            "mixed": 10,
+            "delta": 0
+          }
+        }
+      }
+    },
+    {
+      "set": "degen-brawler",
+      "role": "Brawler",
+      "level": 20,
+      "combatBonus": {
+        "attackFlat": 6,
+        "damagePercent": 6,
+        "defenseFlat": 0,
+        "healingPercent": 0,
+        "shieldBreakPercent": 0
+      },
+      "moves": {
+        "market_order": {
+          "damage": {
+            "complete": 43,
+            "mixed": 32,
+            "delta": 11
+          },
+          "shield": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          },
+          "heal": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          },
+          "purge": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          }
+        },
+        "diamond_hands": {
+          "damage": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          },
+          "shield": {
+            "complete": 26,
+            "mixed": 26,
+            "delta": 0
+          },
+          "heal": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          },
+          "purge": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          }
+        },
+        "touch_grass": {
+          "damage": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          },
+          "shield": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          },
+          "heal": {
+            "complete": 25,
+            "mixed": 25,
+            "delta": 0
+          },
+          "purge": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          }
+        },
+        "rug_pull": {
+          "damage": {
+            "complete": 42,
+            "mixed": 31,
+            "delta": 11
+          },
+          "shield": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          },
+          "heal": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          },
+          "purge": {
+            "complete": 10,
+            "mixed": 10,
+            "delta": 0
+          }
+        }
+      }
+    },
+    {
+      "set": "night-node-guardian",
+      "role": "Guardian",
+      "level": 10,
+      "combatBonus": {
+        "attackFlat": 0,
+        "damagePercent": 0,
+        "defenseFlat": 2,
+        "healingPercent": 0,
+        "shieldBreakPercent": 0
+      },
+      "moves": {
+        "market_order": {
+          "damage": {
+            "complete": 23,
+            "mixed": 23,
+            "delta": 0
+          },
+          "shield": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          },
+          "heal": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          },
+          "purge": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          }
+        },
+        "diamond_hands": {
+          "damage": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          },
+          "shield": {
+            "complete": 25,
+            "mixed": 23,
+            "delta": 2
+          },
+          "heal": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          },
+          "purge": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          }
+        },
+        "touch_grass": {
+          "damage": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          },
+          "shield": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          },
+          "heal": {
+            "complete": 23,
+            "mixed": 23,
+            "delta": 0
+          },
+          "purge": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          }
+        },
+        "rug_pull": {
+          "damage": {
+            "complete": 22,
+            "mixed": 22,
+            "delta": 0
+          },
+          "shield": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          },
+          "heal": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          },
+          "purge": {
+            "complete": 10,
+            "mixed": 10,
+            "delta": 0
+          }
+        }
+      }
+    },
+    {
+      "set": "night-node-guardian",
+      "role": "Guardian",
+      "level": 15,
+      "combatBonus": {
+        "attackFlat": 0,
+        "damagePercent": 0,
+        "defenseFlat": 6,
+        "healingPercent": 0,
+        "shieldBreakPercent": 0
+      },
+      "moves": {
+        "market_order": {
+          "damage": {
+            "complete": 28,
+            "mixed": 28,
+            "delta": 0
+          },
+          "shield": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          },
+          "heal": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          },
+          "purge": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          }
+        },
+        "diamond_hands": {
+          "damage": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          },
+          "shield": {
+            "complete": 32,
+            "mixed": 24,
+            "delta": 8
+          },
+          "heal": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          },
+          "purge": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          }
+        },
+        "touch_grass": {
+          "damage": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          },
+          "shield": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          },
+          "heal": {
+            "complete": 24,
+            "mixed": 24,
+            "delta": 0
+          },
+          "purge": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          }
+        },
+        "rug_pull": {
+          "damage": {
+            "complete": 27,
+            "mixed": 27,
+            "delta": 0
+          },
+          "shield": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          },
+          "heal": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          },
+          "purge": {
+            "complete": 10,
+            "mixed": 10,
+            "delta": 0
+          }
+        }
+      }
+    },
+    {
+      "set": "night-node-guardian",
+      "role": "Guardian",
+      "level": 20,
+      "combatBonus": {
+        "attackFlat": 0,
+        "damagePercent": 0,
+        "defenseFlat": 12,
+        "healingPercent": 0,
+        "shieldBreakPercent": 0
+      },
+      "moves": {
+        "market_order": {
+          "damage": {
+            "complete": 32,
+            "mixed": 32,
+            "delta": 0
+          },
+          "shield": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          },
+          "heal": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          },
+          "purge": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          }
+        },
+        "diamond_hands": {
+          "damage": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          },
+          "shield": {
+            "complete": 41,
+            "mixed": 26,
+            "delta": 15
+          },
+          "heal": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          },
+          "purge": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          }
+        },
+        "touch_grass": {
+          "damage": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          },
+          "shield": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          },
+          "heal": {
+            "complete": 25,
+            "mixed": 25,
+            "delta": 0
+          },
+          "purge": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          }
+        },
+        "rug_pull": {
+          "damage": {
+            "complete": 31,
+            "mixed": 31,
+            "delta": 0
+          },
+          "shield": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          },
+          "heal": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          },
+          "purge": {
+            "complete": 10,
+            "mixed": 10,
+            "delta": 0
+          }
+        }
+      }
+    },
+    {
+      "set": "signal-skirmisher",
+      "role": "Skirmisher",
+      "level": 10,
+      "combatBonus": {
+        "attackFlat": 2,
+        "damagePercent": 0,
+        "defenseFlat": 0,
+        "healingPercent": 0,
+        "shieldBreakPercent": 1
+      },
+      "moves": {
+        "market_order": {
+          "damage": {
+            "complete": 26,
+            "mixed": 23,
+            "delta": 3
+          },
+          "shield": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          },
+          "heal": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          },
+          "purge": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          }
+        },
+        "diamond_hands": {
+          "damage": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          },
+          "shield": {
+            "complete": 23,
+            "mixed": 23,
+            "delta": 0
+          },
+          "heal": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          },
+          "purge": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          }
+        },
+        "touch_grass": {
+          "damage": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          },
+          "shield": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          },
+          "heal": {
+            "complete": 23,
+            "mixed": 23,
+            "delta": 0
+          },
+          "purge": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          }
+        },
+        "rug_pull": {
+          "damage": {
+            "complete": 25,
+            "mixed": 22,
+            "delta": 3
+          },
+          "shield": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          },
+          "heal": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          },
+          "purge": {
+            "complete": 10,
+            "mixed": 10,
+            "delta": 0
+          }
+        }
+      }
+    },
+    {
+      "set": "signal-skirmisher",
+      "role": "Skirmisher",
+      "level": 15,
+      "combatBonus": {
+        "attackFlat": 6,
+        "damagePercent": 0,
+        "defenseFlat": 0,
+        "healingPercent": 0,
+        "shieldBreakPercent": 3
+      },
+      "moves": {
+        "market_order": {
+          "damage": {
+            "complete": 35,
+            "mixed": 28,
+            "delta": 7
+          },
+          "shield": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          },
+          "heal": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          },
+          "purge": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          }
+        },
+        "diamond_hands": {
+          "damage": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          },
+          "shield": {
+            "complete": 24,
+            "mixed": 24,
+            "delta": 0
+          },
+          "heal": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          },
+          "purge": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          }
+        },
+        "touch_grass": {
+          "damage": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          },
+          "shield": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          },
+          "heal": {
+            "complete": 24,
+            "mixed": 24,
+            "delta": 0
+          },
+          "purge": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          }
+        },
+        "rug_pull": {
+          "damage": {
+            "complete": 34,
+            "mixed": 27,
+            "delta": 7
+          },
+          "shield": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          },
+          "heal": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          },
+          "purge": {
+            "complete": 10,
+            "mixed": 10,
+            "delta": 0
+          }
+        }
+      }
+    },
+    {
+      "set": "signal-skirmisher",
+      "role": "Skirmisher",
+      "level": 20,
+      "combatBonus": {
+        "attackFlat": 12,
+        "damagePercent": 0,
+        "defenseFlat": 0,
+        "healingPercent": 0,
+        "shieldBreakPercent": 6
+      },
+      "moves": {
+        "market_order": {
+          "damage": {
+            "complete": 46,
+            "mixed": 32,
+            "delta": 14
+          },
+          "shield": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          },
+          "heal": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          },
+          "purge": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          }
+        },
+        "diamond_hands": {
+          "damage": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          },
+          "shield": {
+            "complete": 26,
+            "mixed": 26,
+            "delta": 0
+          },
+          "heal": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          },
+          "purge": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          }
+        },
+        "touch_grass": {
+          "damage": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          },
+          "shield": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          },
+          "heal": {
+            "complete": 25,
+            "mixed": 25,
+            "delta": 0
+          },
+          "purge": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          }
+        },
+        "rug_pull": {
+          "damage": {
+            "complete": 45,
+            "mixed": 31,
+            "delta": 14
+          },
+          "shield": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          },
+          "heal": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          },
+          "purge": {
+            "complete": 11,
+            "mixed": 10,
+            "delta": 1
+          }
+        }
+      }
+    },
+    {
+      "set": "hexforge-arcanist",
+      "role": "Arcanist",
+      "level": 10,
+      "combatBonus": {
+        "attackFlat": 0,
+        "damagePercent": 2,
+        "defenseFlat": 0,
+        "healingPercent": 0,
+        "shieldBreakPercent": 1
+      },
+      "moves": {
+        "market_order": {
+          "damage": {
+            "complete": 23,
+            "mixed": 23,
+            "delta": 0
+          },
+          "shield": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          },
+          "heal": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          },
+          "purge": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          }
+        },
+        "diamond_hands": {
+          "damage": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          },
+          "shield": {
+            "complete": 23,
+            "mixed": 23,
+            "delta": 0
+          },
+          "heal": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          },
+          "purge": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          }
+        },
+        "touch_grass": {
+          "damage": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          },
+          "shield": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          },
+          "heal": {
+            "complete": 23,
+            "mixed": 23,
+            "delta": 0
+          },
+          "purge": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          }
+        },
+        "rug_pull": {
+          "damage": {
+            "complete": 22,
+            "mixed": 22,
+            "delta": 0
+          },
+          "shield": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          },
+          "heal": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          },
+          "purge": {
+            "complete": 10,
+            "mixed": 10,
+            "delta": 0
+          }
+        }
+      }
+    },
+    {
+      "set": "hexforge-arcanist",
+      "role": "Arcanist",
+      "level": 15,
+      "combatBonus": {
+        "attackFlat": 0,
+        "damagePercent": 6,
+        "defenseFlat": 0,
+        "healingPercent": 0,
+        "shieldBreakPercent": 3
+      },
+      "moves": {
+        "market_order": {
+          "damage": {
+            "complete": 30,
+            "mixed": 28,
+            "delta": 2
+          },
+          "shield": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          },
+          "heal": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          },
+          "purge": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          }
+        },
+        "diamond_hands": {
+          "damage": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          },
+          "shield": {
+            "complete": 24,
+            "mixed": 24,
+            "delta": 0
+          },
+          "heal": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          },
+          "purge": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          }
+        },
+        "touch_grass": {
+          "damage": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          },
+          "shield": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          },
+          "heal": {
+            "complete": 24,
+            "mixed": 24,
+            "delta": 0
+          },
+          "purge": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          }
+        },
+        "rug_pull": {
+          "damage": {
+            "complete": 29,
+            "mixed": 27,
+            "delta": 2
+          },
+          "shield": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          },
+          "heal": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          },
+          "purge": {
+            "complete": 10,
+            "mixed": 10,
+            "delta": 0
+          }
+        }
+      }
+    },
+    {
+      "set": "hexforge-arcanist",
+      "role": "Arcanist",
+      "level": 20,
+      "combatBonus": {
+        "attackFlat": 0,
+        "damagePercent": 12,
+        "defenseFlat": 0,
+        "healingPercent": 0,
+        "shieldBreakPercent": 6
+      },
+      "moves": {
+        "market_order": {
+          "damage": {
+            "complete": 36,
+            "mixed": 32,
+            "delta": 4
+          },
+          "shield": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          },
+          "heal": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          },
+          "purge": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          }
+        },
+        "diamond_hands": {
+          "damage": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          },
+          "shield": {
+            "complete": 26,
+            "mixed": 26,
+            "delta": 0
+          },
+          "heal": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          },
+          "purge": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          }
+        },
+        "touch_grass": {
+          "damage": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          },
+          "shield": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          },
+          "heal": {
+            "complete": 25,
+            "mixed": 25,
+            "delta": 0
+          },
+          "purge": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          }
+        },
+        "rug_pull": {
+          "damage": {
+            "complete": 35,
+            "mixed": 31,
+            "delta": 4
+          },
+          "shield": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          },
+          "heal": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          },
+          "purge": {
+            "complete": 11,
+            "mixed": 10,
+            "delta": 1
+          }
+        }
+      }
+    },
+    {
+      "set": "moon-crew-support",
+      "role": "Support",
+      "level": 10,
+      "combatBonus": {
+        "attackFlat": 0,
+        "damagePercent": 0,
+        "defenseFlat": 1,
+        "healingPercent": 2,
+        "shieldBreakPercent": 0
+      },
+      "moves": {
+        "market_order": {
+          "damage": {
+            "complete": 23,
+            "mixed": 23,
+            "delta": 0
+          },
+          "shield": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          },
+          "heal": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          },
+          "purge": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          }
+        },
+        "diamond_hands": {
+          "damage": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          },
+          "shield": {
+            "complete": 24,
+            "mixed": 23,
+            "delta": 1
+          },
+          "heal": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          },
+          "purge": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          }
+        },
+        "touch_grass": {
+          "damage": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          },
+          "shield": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          },
+          "heal": {
+            "complete": 24,
+            "mixed": 23,
+            "delta": 1
+          },
+          "purge": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          }
+        },
+        "rug_pull": {
+          "damage": {
+            "complete": 22,
+            "mixed": 22,
+            "delta": 0
+          },
+          "shield": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          },
+          "heal": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          },
+          "purge": {
+            "complete": 10,
+            "mixed": 10,
+            "delta": 0
+          }
+        }
+      }
+    },
+    {
+      "set": "moon-crew-support",
+      "role": "Support",
+      "level": 15,
+      "combatBonus": {
+        "attackFlat": 0,
+        "damagePercent": 0,
+        "defenseFlat": 3,
+        "healingPercent": 6,
+        "shieldBreakPercent": 0
+      },
+      "moves": {
+        "market_order": {
+          "damage": {
+            "complete": 28,
+            "mixed": 28,
+            "delta": 0
+          },
+          "shield": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          },
+          "heal": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          },
+          "purge": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          }
+        },
+        "diamond_hands": {
+          "damage": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          },
+          "shield": {
+            "complete": 27,
+            "mixed": 24,
+            "delta": 3
+          },
+          "heal": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          },
+          "purge": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          }
+        },
+        "touch_grass": {
+          "damage": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          },
+          "shield": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          },
+          "heal": {
+            "complete": 28,
+            "mixed": 24,
+            "delta": 4
+          },
+          "purge": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          }
+        },
+        "rug_pull": {
+          "damage": {
+            "complete": 27,
+            "mixed": 27,
+            "delta": 0
+          },
+          "shield": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          },
+          "heal": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          },
+          "purge": {
+            "complete": 10,
+            "mixed": 10,
+            "delta": 0
+          }
+        }
+      }
+    },
+    {
+      "set": "moon-crew-support",
+      "role": "Support",
+      "level": 20,
+      "combatBonus": {
+        "attackFlat": 0,
+        "damagePercent": 0,
+        "defenseFlat": 6,
+        "healingPercent": 12,
+        "shieldBreakPercent": 0
+      },
+      "moves": {
+        "market_order": {
+          "damage": {
+            "complete": 32,
+            "mixed": 32,
+            "delta": 0
+          },
+          "shield": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          },
+          "heal": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          },
+          "purge": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          }
+        },
+        "diamond_hands": {
+          "damage": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          },
+          "shield": {
+            "complete": 32,
+            "mixed": 26,
+            "delta": 6
+          },
+          "heal": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          },
+          "purge": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          }
+        },
+        "touch_grass": {
+          "damage": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          },
+          "shield": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          },
+          "heal": {
+            "complete": 31,
+            "mixed": 25,
+            "delta": 6
+          },
+          "purge": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          }
+        },
+        "rug_pull": {
+          "damage": {
+            "complete": 31,
+            "mixed": 31,
+            "delta": 0
+          },
+          "shield": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          },
+          "heal": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          },
+          "purge": {
+            "complete": 10,
+            "mixed": 10,
+            "delta": 0
+          }
+        }
+      }
+    },
+    {
+      "set": "whitehat-controller",
+      "role": "Controller",
+      "level": 10,
+      "combatBonus": {
+        "attackFlat": 1,
+        "damagePercent": 0,
+        "defenseFlat": 1,
+        "healingPercent": 0,
+        "shieldBreakPercent": 2
+      },
+      "moves": {
+        "market_order": {
+          "damage": {
+            "complete": 24,
+            "mixed": 23,
+            "delta": 1
+          },
+          "shield": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          },
+          "heal": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          },
+          "purge": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          }
+        },
+        "diamond_hands": {
+          "damage": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          },
+          "shield": {
+            "complete": 24,
+            "mixed": 23,
+            "delta": 1
+          },
+          "heal": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          },
+          "purge": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          }
+        },
+        "touch_grass": {
+          "damage": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          },
+          "shield": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          },
+          "heal": {
+            "complete": 23,
+            "mixed": 23,
+            "delta": 0
+          },
+          "purge": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          }
+        },
+        "rug_pull": {
+          "damage": {
+            "complete": 23,
+            "mixed": 22,
+            "delta": 1
+          },
+          "shield": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          },
+          "heal": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          },
+          "purge": {
+            "complete": 10,
+            "mixed": 10,
+            "delta": 0
+          }
+        }
+      }
+    },
+    {
+      "set": "whitehat-controller",
+      "role": "Controller",
+      "level": 15,
+      "combatBonus": {
+        "attackFlat": 3,
+        "damagePercent": 0,
+        "defenseFlat": 3,
+        "healingPercent": 0,
+        "shieldBreakPercent": 6
+      },
+      "moves": {
+        "market_order": {
+          "damage": {
+            "complete": 31,
+            "mixed": 28,
+            "delta": 3
+          },
+          "shield": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          },
+          "heal": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          },
+          "purge": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          }
+        },
+        "diamond_hands": {
+          "damage": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          },
+          "shield": {
+            "complete": 27,
+            "mixed": 24,
+            "delta": 3
+          },
+          "heal": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          },
+          "purge": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          }
+        },
+        "touch_grass": {
+          "damage": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          },
+          "shield": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          },
+          "heal": {
+            "complete": 24,
+            "mixed": 24,
+            "delta": 0
+          },
+          "purge": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          }
+        },
+        "rug_pull": {
+          "damage": {
+            "complete": 30,
+            "mixed": 27,
+            "delta": 3
+          },
+          "shield": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          },
+          "heal": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          },
+          "purge": {
+            "complete": 11,
+            "mixed": 10,
+            "delta": 1
+          }
+        }
+      }
+    },
+    {
+      "set": "whitehat-controller",
+      "role": "Controller",
+      "level": 20,
+      "combatBonus": {
+        "attackFlat": 6,
+        "damagePercent": 0,
+        "defenseFlat": 6,
+        "healingPercent": 0,
+        "shieldBreakPercent": 12
+      },
+      "moves": {
+        "market_order": {
+          "damage": {
+            "complete": 38,
+            "mixed": 32,
+            "delta": 6
+          },
+          "shield": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          },
+          "heal": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          },
+          "purge": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          }
+        },
+        "diamond_hands": {
+          "damage": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          },
+          "shield": {
+            "complete": 32,
+            "mixed": 26,
+            "delta": 6
+          },
+          "heal": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          },
+          "purge": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          }
+        },
+        "touch_grass": {
+          "damage": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          },
+          "shield": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          },
+          "heal": {
+            "complete": 25,
+            "mixed": 25,
+            "delta": 0
+          },
+          "purge": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          }
+        },
+        "rug_pull": {
+          "damage": {
+            "complete": 37,
+            "mixed": 31,
+            "delta": 6
+          },
+          "shield": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          },
+          "heal": {
+            "complete": 0,
+            "mixed": 0,
+            "delta": 0
+          },
+          "purge": {
+            "complete": 11,
+            "mixed": 10,
+            "delta": 1
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,2318 @@
+{
+  "date": "2026-10-23",
+  "scope": "Offline synthetic V1 heuristic bots; no production identities, match records, ownership or player telemetry. These samples do not prove human balance.",
+  "totalGames": 10800,
+  "command": "SEED=<seed> PAIR_GAMES=40 node apps/arena-web/balance.mjs",
+  "runs": [
+    {
+      "seed": 2026102301,
+      "games": 3600,
+      "seatBalanced": true,
+      "pairedBuilds": true,
+      "meanExchanges": 9.024166666666666,
+      "drawRate": 0.010833333333333334,
+      "epicsUsed": 2000,
+      "lineages": [
+        {
+          "id": "emerald_sprout",
+          "games": 1200,
+          "scoreRate": 0.4320833333333333
+        },
+        {
+          "id": "sapphire_tide",
+          "games": 1200,
+          "scoreRate": 0.5158333333333334
+        },
+        {
+          "id": "amethyst_dream",
+          "games": 1200,
+          "scoreRate": 0.5175
+        },
+        {
+          "id": "solar_peach",
+          "games": 1200,
+          "scoreRate": 0.56125
+        },
+        {
+          "id": "rose_bloom",
+          "games": 1200,
+          "scoreRate": 0.43875
+        },
+        {
+          "id": "midnight_mint",
+          "games": 1200,
+          "scoreRate": 0.5345833333333333
+        }
+      ],
+      "matchups": [
+        {
+          "level": 1,
+          "a": "emerald_sprout",
+          "b": "sapphire_tide",
+          "games": 40,
+          "aScore": 0.575,
+          "draws": 0
+        },
+        {
+          "level": 1,
+          "a": "emerald_sprout",
+          "b": "amethyst_dream",
+          "games": 40,
+          "aScore": 0.4,
+          "draws": 0
+        },
+        {
+          "level": 1,
+          "a": "emerald_sprout",
+          "b": "solar_peach",
+          "games": 40,
+          "aScore": 0.2375,
+          "draws": 1
+        },
+        {
+          "level": 1,
+          "a": "emerald_sprout",
+          "b": "rose_bloom",
+          "games": 40,
+          "aScore": 0.4625,
+          "draws": 1
+        },
+        {
+          "level": 1,
+          "a": "emerald_sprout",
+          "b": "midnight_mint",
+          "games": 40,
+          "aScore": 0.45,
+          "draws": 0
+        },
+        {
+          "level": 1,
+          "a": "sapphire_tide",
+          "b": "amethyst_dream",
+          "games": 40,
+          "aScore": 0.4875,
+          "draws": 3
+        },
+        {
+          "level": 1,
+          "a": "sapphire_tide",
+          "b": "solar_peach",
+          "games": 40,
+          "aScore": 0.375,
+          "draws": 0
+        },
+        {
+          "level": 1,
+          "a": "sapphire_tide",
+          "b": "rose_bloom",
+          "games": 40,
+          "aScore": 0.4625,
+          "draws": 1
+        },
+        {
+          "level": 1,
+          "a": "sapphire_tide",
+          "b": "midnight_mint",
+          "games": 40,
+          "aScore": 0.425,
+          "draws": 0
+        },
+        {
+          "level": 1,
+          "a": "amethyst_dream",
+          "b": "solar_peach",
+          "games": 40,
+          "aScore": 0.3875,
+          "draws": 1
+        },
+        {
+          "level": 1,
+          "a": "amethyst_dream",
+          "b": "rose_bloom",
+          "games": 40,
+          "aScore": 0.5375,
+          "draws": 1
+        },
+        {
+          "level": 1,
+          "a": "amethyst_dream",
+          "b": "midnight_mint",
+          "games": 40,
+          "aScore": 0.525,
+          "draws": 4
+        },
+        {
+          "level": 1,
+          "a": "solar_peach",
+          "b": "rose_bloom",
+          "games": 40,
+          "aScore": 0.6375,
+          "draws": 3
+        },
+        {
+          "level": 1,
+          "a": "solar_peach",
+          "b": "midnight_mint",
+          "games": 40,
+          "aScore": 0.625,
+          "draws": 0
+        },
+        {
+          "level": 1,
+          "a": "rose_bloom",
+          "b": "midnight_mint",
+          "games": 40,
+          "aScore": 0.55,
+          "draws": 2
+        },
+        {
+          "level": 2,
+          "a": "emerald_sprout",
+          "b": "sapphire_tide",
+          "games": 40,
+          "aScore": 0.55,
+          "draws": 0
+        },
+        {
+          "level": 2,
+          "a": "emerald_sprout",
+          "b": "amethyst_dream",
+          "games": 40,
+          "aScore": 0.5375,
+          "draws": 1
+        },
+        {
+          "level": 2,
+          "a": "emerald_sprout",
+          "b": "solar_peach",
+          "games": 40,
+          "aScore": 0.425,
+          "draws": 0
+        },
+        {
+          "level": 2,
+          "a": "emerald_sprout",
+          "b": "rose_bloom",
+          "games": 40,
+          "aScore": 0.6,
+          "draws": 0
+        },
+        {
+          "level": 2,
+          "a": "emerald_sprout",
+          "b": "midnight_mint",
+          "games": 40,
+          "aScore": 0.55,
+          "draws": 0
+        },
+        {
+          "level": 2,
+          "a": "sapphire_tide",
+          "b": "amethyst_dream",
+          "games": 40,
+          "aScore": 0.55,
+          "draws": 0
+        },
+        {
+          "level": 2,
+          "a": "sapphire_tide",
+          "b": "solar_peach",
+          "games": 40,
+          "aScore": 0.4,
+          "draws": 0
+        },
+        {
+          "level": 2,
+          "a": "sapphire_tide",
+          "b": "rose_bloom",
+          "games": 40,
+          "aScore": 0.425,
+          "draws": 2
+        },
+        {
+          "level": 2,
+          "a": "sapphire_tide",
+          "b": "midnight_mint",
+          "games": 40,
+          "aScore": 0.45,
+          "draws": 0
+        },
+        {
+          "level": 2,
+          "a": "amethyst_dream",
+          "b": "solar_peach",
+          "games": 40,
+          "aScore": 0.45,
+          "draws": 0
+        },
+        {
+          "level": 2,
+          "a": "amethyst_dream",
+          "b": "rose_bloom",
+          "games": 40,
+          "aScore": 0.575,
+          "draws": 0
+        },
+        {
+          "level": 2,
+          "a": "amethyst_dream",
+          "b": "midnight_mint",
+          "games": 40,
+          "aScore": 0.4375,
+          "draws": 1
+        },
+        {
+          "level": 2,
+          "a": "solar_peach",
+          "b": "rose_bloom",
+          "games": 40,
+          "aScore": 0.55,
+          "draws": 2
+        },
+        {
+          "level": 2,
+          "a": "solar_peach",
+          "b": "midnight_mint",
+          "games": 40,
+          "aScore": 0.625,
+          "draws": 0
+        },
+        {
+          "level": 2,
+          "a": "rose_bloom",
+          "b": "midnight_mint",
+          "games": 40,
+          "aScore": 0.6,
+          "draws": 0
+        },
+        {
+          "level": 4,
+          "a": "emerald_sprout",
+          "b": "sapphire_tide",
+          "games": 40,
+          "aScore": 0.35,
+          "draws": 0
+        },
+        {
+          "level": 4,
+          "a": "emerald_sprout",
+          "b": "amethyst_dream",
+          "games": 40,
+          "aScore": 0.525,
+          "draws": 0
+        },
+        {
+          "level": 4,
+          "a": "emerald_sprout",
+          "b": "solar_peach",
+          "games": 40,
+          "aScore": 0.475,
+          "draws": 0
+        },
+        {
+          "level": 4,
+          "a": "emerald_sprout",
+          "b": "rose_bloom",
+          "games": 40,
+          "aScore": 0.4,
+          "draws": 2
+        },
+        {
+          "level": 4,
+          "a": "emerald_sprout",
+          "b": "midnight_mint",
+          "games": 40,
+          "aScore": 0.3625,
+          "draws": 1
+        },
+        {
+          "level": 4,
+          "a": "sapphire_tide",
+          "b": "amethyst_dream",
+          "games": 40,
+          "aScore": 0.45,
+          "draws": 2
+        },
+        {
+          "level": 4,
+          "a": "sapphire_tide",
+          "b": "solar_peach",
+          "games": 40,
+          "aScore": 0.4,
+          "draws": 0
+        },
+        {
+          "level": 4,
+          "a": "sapphire_tide",
+          "b": "rose_bloom",
+          "games": 40,
+          "aScore": 0.575,
+          "draws": 0
+        },
+        {
+          "level": 4,
+          "a": "sapphire_tide",
+          "b": "midnight_mint",
+          "games": 40,
+          "aScore": 0.575,
+          "draws": 2
+        },
+        {
+          "level": 4,
+          "a": "amethyst_dream",
+          "b": "solar_peach",
+          "games": 40,
+          "aScore": 0.45,
+          "draws": 0
+        },
+        {
+          "level": 4,
+          "a": "amethyst_dream",
+          "b": "rose_bloom",
+          "games": 40,
+          "aScore": 0.425,
+          "draws": 2
+        },
+        {
+          "level": 4,
+          "a": "amethyst_dream",
+          "b": "midnight_mint",
+          "games": 40,
+          "aScore": 0.5,
+          "draws": 0
+        },
+        {
+          "level": 4,
+          "a": "solar_peach",
+          "b": "rose_bloom",
+          "games": 40,
+          "aScore": 0.5,
+          "draws": 0
+        },
+        {
+          "level": 4,
+          "a": "solar_peach",
+          "b": "midnight_mint",
+          "games": 40,
+          "aScore": 0.575,
+          "draws": 0
+        },
+        {
+          "level": 4,
+          "a": "rose_bloom",
+          "b": "midnight_mint",
+          "games": 40,
+          "aScore": 0.4625,
+          "draws": 1
+        },
+        {
+          "level": 6,
+          "a": "emerald_sprout",
+          "b": "sapphire_tide",
+          "games": 40,
+          "aScore": 0.2375,
+          "draws": 1
+        },
+        {
+          "level": 6,
+          "a": "emerald_sprout",
+          "b": "amethyst_dream",
+          "games": 40,
+          "aScore": 0.3,
+          "draws": 0
+        },
+        {
+          "level": 6,
+          "a": "emerald_sprout",
+          "b": "solar_peach",
+          "games": 40,
+          "aScore": 0.325,
+          "draws": 0
+        },
+        {
+          "level": 6,
+          "a": "emerald_sprout",
+          "b": "rose_bloom",
+          "games": 40,
+          "aScore": 0.6,
+          "draws": 0
+        },
+        {
+          "level": 6,
+          "a": "emerald_sprout",
+          "b": "midnight_mint",
+          "games": 40,
+          "aScore": 0.425,
+          "draws": 0
+        },
+        {
+          "level": 6,
+          "a": "sapphire_tide",
+          "b": "amethyst_dream",
+          "games": 40,
+          "aScore": 0.525,
+          "draws": 0
+        },
+        {
+          "level": 6,
+          "a": "sapphire_tide",
+          "b": "solar_peach",
+          "games": 40,
+          "aScore": 0.65,
+          "draws": 0
+        },
+        {
+          "level": 6,
+          "a": "sapphire_tide",
+          "b": "rose_bloom",
+          "games": 40,
+          "aScore": 0.675,
+          "draws": 0
+        },
+        {
+          "level": 6,
+          "a": "sapphire_tide",
+          "b": "midnight_mint",
+          "games": 40,
+          "aScore": 0.4875,
+          "draws": 1
+        },
+        {
+          "level": 6,
+          "a": "amethyst_dream",
+          "b": "solar_peach",
+          "games": 40,
+          "aScore": 0.4125,
+          "draws": 1
+        },
+        {
+          "level": 6,
+          "a": "amethyst_dream",
+          "b": "rose_bloom",
+          "games": 40,
+          "aScore": 0.575,
+          "draws": 0
+        },
+        {
+          "level": 6,
+          "a": "amethyst_dream",
+          "b": "midnight_mint",
+          "games": 40,
+          "aScore": 0.525,
+          "draws": 2
+        },
+        {
+          "level": 6,
+          "a": "solar_peach",
+          "b": "rose_bloom",
+          "games": 40,
+          "aScore": 0.55,
+          "draws": 0
+        },
+        {
+          "level": 6,
+          "a": "solar_peach",
+          "b": "midnight_mint",
+          "games": 40,
+          "aScore": 0.425,
+          "draws": 0
+        },
+        {
+          "level": 6,
+          "a": "rose_bloom",
+          "b": "midnight_mint",
+          "games": 40,
+          "aScore": 0.275,
+          "draws": 0
+        },
+        {
+          "level": 8,
+          "a": "emerald_sprout",
+          "b": "sapphire_tide",
+          "games": 40,
+          "aScore": 0.4,
+          "draws": 0
+        },
+        {
+          "level": 8,
+          "a": "emerald_sprout",
+          "b": "amethyst_dream",
+          "games": 40,
+          "aScore": 0.475,
+          "draws": 0
+        },
+        {
+          "level": 8,
+          "a": "emerald_sprout",
+          "b": "solar_peach",
+          "games": 40,
+          "aScore": 0.45,
+          "draws": 0
+        },
+        {
+          "level": 8,
+          "a": "emerald_sprout",
+          "b": "rose_bloom",
+          "games": 40,
+          "aScore": 0.525,
+          "draws": 0
+        },
+        {
+          "level": 8,
+          "a": "emerald_sprout",
+          "b": "midnight_mint",
+          "games": 40,
+          "aScore": 0.3,
+          "draws": 0
+        },
+        {
+          "level": 8,
+          "a": "sapphire_tide",
+          "b": "amethyst_dream",
+          "games": 40,
+          "aScore": 0.475,
+          "draws": 0
+        },
+        {
+          "level": 8,
+          "a": "sapphire_tide",
+          "b": "solar_peach",
+          "games": 40,
+          "aScore": 0.425,
+          "draws": 0
+        },
+        {
+          "level": 8,
+          "a": "sapphire_tide",
+          "b": "rose_bloom",
+          "games": 40,
+          "aScore": 0.55,
+          "draws": 0
+        },
+        {
+          "level": 8,
+          "a": "sapphire_tide",
+          "b": "midnight_mint",
+          "games": 40,
+          "aScore": 0.525,
+          "draws": 0
+        },
+        {
+          "level": 8,
+          "a": "amethyst_dream",
+          "b": "solar_peach",
+          "games": 40,
+          "aScore": 0.6,
+          "draws": 0
+        },
+        {
+          "level": 8,
+          "a": "amethyst_dream",
+          "b": "rose_bloom",
+          "games": 40,
+          "aScore": 0.6,
+          "draws": 0
+        },
+        {
+          "level": 8,
+          "a": "amethyst_dream",
+          "b": "midnight_mint",
+          "games": 40,
+          "aScore": 0.5,
+          "draws": 0
+        },
+        {
+          "level": 8,
+          "a": "solar_peach",
+          "b": "rose_bloom",
+          "games": 40,
+          "aScore": 0.6,
+          "draws": 0
+        },
+        {
+          "level": 8,
+          "a": "solar_peach",
+          "b": "midnight_mint",
+          "games": 40,
+          "aScore": 0.45,
+          "draws": 0
+        },
+        {
+          "level": 8,
+          "a": "rose_bloom",
+          "b": "midnight_mint",
+          "games": 40,
+          "aScore": 0.2,
+          "draws": 0
+        },
+        {
+          "level": 10,
+          "a": "emerald_sprout",
+          "b": "sapphire_tide",
+          "games": 40,
+          "aScore": 0.375,
+          "draws": 0
+        },
+        {
+          "level": 10,
+          "a": "emerald_sprout",
+          "b": "amethyst_dream",
+          "games": 40,
+          "aScore": 0.375,
+          "draws": 0
+        },
+        {
+          "level": 10,
+          "a": "emerald_sprout",
+          "b": "solar_peach",
+          "games": 40,
+          "aScore": 0.5,
+          "draws": 0
+        },
+        {
+          "level": 10,
+          "a": "emerald_sprout",
+          "b": "rose_bloom",
+          "games": 40,
+          "aScore": 0.45,
+          "draws": 0
+        },
+        {
+          "level": 10,
+          "a": "emerald_sprout",
+          "b": "midnight_mint",
+          "games": 40,
+          "aScore": 0.325,
+          "draws": 0
+        },
+        {
+          "level": 10,
+          "a": "sapphire_tide",
+          "b": "amethyst_dream",
+          "games": 40,
+          "aScore": 0.575,
+          "draws": 0
+        },
+        {
+          "level": 10,
+          "a": "sapphire_tide",
+          "b": "solar_peach",
+          "games": 40,
+          "aScore": 0.375,
+          "draws": 0
+        },
+        {
+          "level": 10,
+          "a": "sapphire_tide",
+          "b": "rose_bloom",
+          "games": 40,
+          "aScore": 0.6,
+          "draws": 0
+        },
+        {
+          "level": 10,
+          "a": "sapphire_tide",
+          "b": "midnight_mint",
+          "games": 40,
+          "aScore": 0.525,
+          "draws": 0
+        },
+        {
+          "level": 10,
+          "a": "amethyst_dream",
+          "b": "solar_peach",
+          "games": 40,
+          "aScore": 0.55,
+          "draws": 0
+        },
+        {
+          "level": 10,
+          "a": "amethyst_dream",
+          "b": "rose_bloom",
+          "games": 40,
+          "aScore": 0.65,
+          "draws": 0
+        },
+        {
+          "level": 10,
+          "a": "amethyst_dream",
+          "b": "midnight_mint",
+          "games": 40,
+          "aScore": 0.5,
+          "draws": 0
+        },
+        {
+          "level": 10,
+          "a": "solar_peach",
+          "b": "rose_bloom",
+          "games": 40,
+          "aScore": 0.7,
+          "draws": 0
+        },
+        {
+          "level": 10,
+          "a": "solar_peach",
+          "b": "midnight_mint",
+          "games": 40,
+          "aScore": 0.4875,
+          "draws": 1
+        },
+        {
+          "level": 10,
+          "a": "rose_bloom",
+          "b": "midnight_mint",
+          "games": 40,
+          "aScore": 0.3,
+          "draws": 0
+        }
+      ],
+      "sourceHashes": {
+        "catalog.mjs": "aeac4f9c733fdf863eaafc28ea8a01a13dc9737caa0a78275491508bc4d29bda",
+        "combat.mjs": "a249a6c2a347bea3b932885625609d91f15f57b0433f819f64896c9e00b38916",
+        "balance.mjs": "d58b6b51477034cb0e9e60680defc1a367cc9de9d1dbd93ddf9432b1de3e3965"
+      },
+      "scope": "Heuristic bots, mirrored seats with paired legal builds and styles; not optimal play or proof of human balance. No wagers.",
+      "failedMatchupGates": 11
+    },
+    {
+      "seed": 2026102302,
+      "games": 3600,
+      "seatBalanced": true,
+      "pairedBuilds": true,
+      "meanExchanges": 9.01388888888889,
+      "drawRate": 0.0125,
+      "epicsUsed": 1926,
+      "lineages": [
+        {
+          "id": "emerald_sprout",
+          "games": 1200,
+          "scoreRate": 0.4725
+        },
+        {
+          "id": "sapphire_tide",
+          "games": 1200,
+          "scoreRate": 0.47208333333333335
+        },
+        {
+          "id": "amethyst_dream",
+          "games": 1200,
+          "scoreRate": 0.5029166666666667
+        },
+        {
+          "id": "solar_peach",
+          "games": 1200,
+          "scoreRate": 0.5579166666666666
+        },
+        {
+          "id": "rose_bloom",
+          "games": 1200,
+          "scoreRate": 0.47208333333333335
+        },
+        {
+          "id": "midnight_mint",
+          "games": 1200,
+          "scoreRate": 0.5225
+        }
+      ],
+      "matchups": [
+        {
+          "level": 1,
+          "a": "emerald_sprout",
+          "b": "sapphire_tide",
+          "games": 40,
+          "aScore": 0.5375,
+          "draws": 1
+        },
+        {
+          "level": 1,
+          "a": "emerald_sprout",
+          "b": "amethyst_dream",
+          "games": 40,
+          "aScore": 0.3875,
+          "draws": 1
+        },
+        {
+          "level": 1,
+          "a": "emerald_sprout",
+          "b": "solar_peach",
+          "games": 40,
+          "aScore": 0.3625,
+          "draws": 3
+        },
+        {
+          "level": 1,
+          "a": "emerald_sprout",
+          "b": "rose_bloom",
+          "games": 40,
+          "aScore": 0.3625,
+          "draws": 3
+        },
+        {
+          "level": 1,
+          "a": "emerald_sprout",
+          "b": "midnight_mint",
+          "games": 40,
+          "aScore": 0.5,
+          "draws": 2
+        },
+        {
+          "level": 1,
+          "a": "sapphire_tide",
+          "b": "amethyst_dream",
+          "games": 40,
+          "aScore": 0.4625,
+          "draws": 3
+        },
+        {
+          "level": 1,
+          "a": "sapphire_tide",
+          "b": "solar_peach",
+          "games": 40,
+          "aScore": 0.3,
+          "draws": 0
+        },
+        {
+          "level": 1,
+          "a": "sapphire_tide",
+          "b": "rose_bloom",
+          "games": 40,
+          "aScore": 0.6,
+          "draws": 0
+        },
+        {
+          "level": 1,
+          "a": "sapphire_tide",
+          "b": "midnight_mint",
+          "games": 40,
+          "aScore": 0.4375,
+          "draws": 1
+        },
+        {
+          "level": 1,
+          "a": "amethyst_dream",
+          "b": "solar_peach",
+          "games": 40,
+          "aScore": 0.525,
+          "draws": 4
+        },
+        {
+          "level": 1,
+          "a": "amethyst_dream",
+          "b": "rose_bloom",
+          "games": 40,
+          "aScore": 0.375,
+          "draws": 0
+        },
+        {
+          "level": 1,
+          "a": "amethyst_dream",
+          "b": "midnight_mint",
+          "games": 40,
+          "aScore": 0.5125,
+          "draws": 1
+        },
+        {
+          "level": 1,
+          "a": "solar_peach",
+          "b": "rose_bloom",
+          "games": 40,
+          "aScore": 0.5,
+          "draws": 0
+        },
+        {
+          "level": 1,
+          "a": "solar_peach",
+          "b": "midnight_mint",
+          "games": 40,
+          "aScore": 0.65,
+          "draws": 0
+        },
+        {
+          "level": 1,
+          "a": "rose_bloom",
+          "b": "midnight_mint",
+          "games": 40,
+          "aScore": 0.6,
+          "draws": 0
+        },
+        {
+          "level": 2,
+          "a": "emerald_sprout",
+          "b": "sapphire_tide",
+          "games": 40,
+          "aScore": 0.55,
+          "draws": 0
+        },
+        {
+          "level": 2,
+          "a": "emerald_sprout",
+          "b": "amethyst_dream",
+          "games": 40,
+          "aScore": 0.55,
+          "draws": 0
+        },
+        {
+          "level": 2,
+          "a": "emerald_sprout",
+          "b": "solar_peach",
+          "games": 40,
+          "aScore": 0.475,
+          "draws": 0
+        },
+        {
+          "level": 2,
+          "a": "emerald_sprout",
+          "b": "rose_bloom",
+          "games": 40,
+          "aScore": 0.575,
+          "draws": 0
+        },
+        {
+          "level": 2,
+          "a": "emerald_sprout",
+          "b": "midnight_mint",
+          "games": 40,
+          "aScore": 0.6,
+          "draws": 0
+        },
+        {
+          "level": 2,
+          "a": "sapphire_tide",
+          "b": "amethyst_dream",
+          "games": 40,
+          "aScore": 0.6,
+          "draws": 0
+        },
+        {
+          "level": 2,
+          "a": "sapphire_tide",
+          "b": "solar_peach",
+          "games": 40,
+          "aScore": 0.4,
+          "draws": 0
+        },
+        {
+          "level": 2,
+          "a": "sapphire_tide",
+          "b": "rose_bloom",
+          "games": 40,
+          "aScore": 0.3125,
+          "draws": 3
+        },
+        {
+          "level": 2,
+          "a": "sapphire_tide",
+          "b": "midnight_mint",
+          "games": 40,
+          "aScore": 0.4625,
+          "draws": 1
+        },
+        {
+          "level": 2,
+          "a": "amethyst_dream",
+          "b": "solar_peach",
+          "games": 40,
+          "aScore": 0.35,
+          "draws": 0
+        },
+        {
+          "level": 2,
+          "a": "amethyst_dream",
+          "b": "rose_bloom",
+          "games": 40,
+          "aScore": 0.25,
+          "draws": 0
+        },
+        {
+          "level": 2,
+          "a": "amethyst_dream",
+          "b": "midnight_mint",
+          "games": 40,
+          "aScore": 0.4,
+          "draws": 0
+        },
+        {
+          "level": 2,
+          "a": "solar_peach",
+          "b": "rose_bloom",
+          "games": 40,
+          "aScore": 0.6875,
+          "draws": 3
+        },
+        {
+          "level": 2,
+          "a": "solar_peach",
+          "b": "midnight_mint",
+          "games": 40,
+          "aScore": 0.6375,
+          "draws": 1
+        },
+        {
+          "level": 2,
+          "a": "rose_bloom",
+          "b": "midnight_mint",
+          "games": 40,
+          "aScore": 0.5,
+          "draws": 0
+        },
+        {
+          "level": 4,
+          "a": "emerald_sprout",
+          "b": "sapphire_tide",
+          "games": 40,
+          "aScore": 0.55,
+          "draws": 0
+        },
+        {
+          "level": 4,
+          "a": "emerald_sprout",
+          "b": "amethyst_dream",
+          "games": 40,
+          "aScore": 0.4,
+          "draws": 0
+        },
+        {
+          "level": 4,
+          "a": "emerald_sprout",
+          "b": "solar_peach",
+          "games": 40,
+          "aScore": 0.375,
+          "draws": 0
+        },
+        {
+          "level": 4,
+          "a": "emerald_sprout",
+          "b": "rose_bloom",
+          "games": 40,
+          "aScore": 0.425,
+          "draws": 0
+        },
+        {
+          "level": 4,
+          "a": "emerald_sprout",
+          "b": "midnight_mint",
+          "games": 40,
+          "aScore": 0.45,
+          "draws": 0
+        },
+        {
+          "level": 4,
+          "a": "sapphire_tide",
+          "b": "amethyst_dream",
+          "games": 40,
+          "aScore": 0.45,
+          "draws": 0
+        },
+        {
+          "level": 4,
+          "a": "sapphire_tide",
+          "b": "solar_peach",
+          "games": 40,
+          "aScore": 0.55,
+          "draws": 0
+        },
+        {
+          "level": 4,
+          "a": "sapphire_tide",
+          "b": "rose_bloom",
+          "games": 40,
+          "aScore": 0.425,
+          "draws": 2
+        },
+        {
+          "level": 4,
+          "a": "sapphire_tide",
+          "b": "midnight_mint",
+          "games": 40,
+          "aScore": 0.55,
+          "draws": 0
+        },
+        {
+          "level": 4,
+          "a": "amethyst_dream",
+          "b": "solar_peach",
+          "games": 40,
+          "aScore": 0.425,
+          "draws": 0
+        },
+        {
+          "level": 4,
+          "a": "amethyst_dream",
+          "b": "rose_bloom",
+          "games": 40,
+          "aScore": 0.5,
+          "draws": 0
+        },
+        {
+          "level": 4,
+          "a": "amethyst_dream",
+          "b": "midnight_mint",
+          "games": 40,
+          "aScore": 0.3625,
+          "draws": 1
+        },
+        {
+          "level": 4,
+          "a": "solar_peach",
+          "b": "rose_bloom",
+          "games": 40,
+          "aScore": 0.475,
+          "draws": 0
+        },
+        {
+          "level": 4,
+          "a": "solar_peach",
+          "b": "midnight_mint",
+          "games": 40,
+          "aScore": 0.575,
+          "draws": 0
+        },
+        {
+          "level": 4,
+          "a": "rose_bloom",
+          "b": "midnight_mint",
+          "games": 40,
+          "aScore": 0.4875,
+          "draws": 1
+        },
+        {
+          "level": 6,
+          "a": "emerald_sprout",
+          "b": "sapphire_tide",
+          "games": 40,
+          "aScore": 0.4,
+          "draws": 0
+        },
+        {
+          "level": 6,
+          "a": "emerald_sprout",
+          "b": "amethyst_dream",
+          "games": 40,
+          "aScore": 0.325,
+          "draws": 0
+        },
+        {
+          "level": 6,
+          "a": "emerald_sprout",
+          "b": "solar_peach",
+          "games": 40,
+          "aScore": 0.45,
+          "draws": 0
+        },
+        {
+          "level": 6,
+          "a": "emerald_sprout",
+          "b": "rose_bloom",
+          "games": 40,
+          "aScore": 0.6125,
+          "draws": 1
+        },
+        {
+          "level": 6,
+          "a": "emerald_sprout",
+          "b": "midnight_mint",
+          "games": 40,
+          "aScore": 0.5125,
+          "draws": 1
+        },
+        {
+          "level": 6,
+          "a": "sapphire_tide",
+          "b": "amethyst_dream",
+          "games": 40,
+          "aScore": 0.45,
+          "draws": 0
+        },
+        {
+          "level": 6,
+          "a": "sapphire_tide",
+          "b": "solar_peach",
+          "games": 40,
+          "aScore": 0.475,
+          "draws": 0
+        },
+        {
+          "level": 6,
+          "a": "sapphire_tide",
+          "b": "rose_bloom",
+          "games": 40,
+          "aScore": 0.6125,
+          "draws": 1
+        },
+        {
+          "level": 6,
+          "a": "sapphire_tide",
+          "b": "midnight_mint",
+          "games": 40,
+          "aScore": 0.6375,
+          "draws": 1
+        },
+        {
+          "level": 6,
+          "a": "amethyst_dream",
+          "b": "solar_peach",
+          "games": 40,
+          "aScore": 0.525,
+          "draws": 0
+        },
+        {
+          "level": 6,
+          "a": "amethyst_dream",
+          "b": "rose_bloom",
+          "games": 40,
+          "aScore": 0.575,
+          "draws": 0
+        },
+        {
+          "level": 6,
+          "a": "amethyst_dream",
+          "b": "midnight_mint",
+          "games": 40,
+          "aScore": 0.4625,
+          "draws": 1
+        },
+        {
+          "level": 6,
+          "a": "solar_peach",
+          "b": "rose_bloom",
+          "games": 40,
+          "aScore": 0.55,
+          "draws": 0
+        },
+        {
+          "level": 6,
+          "a": "solar_peach",
+          "b": "midnight_mint",
+          "games": 40,
+          "aScore": 0.425,
+          "draws": 0
+        },
+        {
+          "level": 6,
+          "a": "rose_bloom",
+          "b": "midnight_mint",
+          "games": 40,
+          "aScore": 0.4375,
+          "draws": 1
+        },
+        {
+          "level": 8,
+          "a": "emerald_sprout",
+          "b": "sapphire_tide",
+          "games": 40,
+          "aScore": 0.5,
+          "draws": 0
+        },
+        {
+          "level": 8,
+          "a": "emerald_sprout",
+          "b": "amethyst_dream",
+          "games": 40,
+          "aScore": 0.45,
+          "draws": 0
+        },
+        {
+          "level": 8,
+          "a": "emerald_sprout",
+          "b": "solar_peach",
+          "games": 40,
+          "aScore": 0.475,
+          "draws": 0
+        },
+        {
+          "level": 8,
+          "a": "emerald_sprout",
+          "b": "rose_bloom",
+          "games": 40,
+          "aScore": 0.6,
+          "draws": 0
+        },
+        {
+          "level": 8,
+          "a": "emerald_sprout",
+          "b": "midnight_mint",
+          "games": 40,
+          "aScore": 0.425,
+          "draws": 0
+        },
+        {
+          "level": 8,
+          "a": "sapphire_tide",
+          "b": "amethyst_dream",
+          "games": 40,
+          "aScore": 0.4,
+          "draws": 0
+        },
+        {
+          "level": 8,
+          "a": "sapphire_tide",
+          "b": "solar_peach",
+          "games": 40,
+          "aScore": 0.3625,
+          "draws": 1
+        },
+        {
+          "level": 8,
+          "a": "sapphire_tide",
+          "b": "rose_bloom",
+          "games": 40,
+          "aScore": 0.55,
+          "draws": 0
+        },
+        {
+          "level": 8,
+          "a": "sapphire_tide",
+          "b": "midnight_mint",
+          "games": 40,
+          "aScore": 0.4,
+          "draws": 0
+        },
+        {
+          "level": 8,
+          "a": "amethyst_dream",
+          "b": "solar_peach",
+          "games": 40,
+          "aScore": 0.5375,
+          "draws": 1
+        },
+        {
+          "level": 8,
+          "a": "amethyst_dream",
+          "b": "rose_bloom",
+          "games": 40,
+          "aScore": 0.7,
+          "draws": 0
+        },
+        {
+          "level": 8,
+          "a": "amethyst_dream",
+          "b": "midnight_mint",
+          "games": 40,
+          "aScore": 0.4,
+          "draws": 0
+        },
+        {
+          "level": 8,
+          "a": "solar_peach",
+          "b": "rose_bloom",
+          "games": 40,
+          "aScore": 0.55,
+          "draws": 0
+        },
+        {
+          "level": 8,
+          "a": "solar_peach",
+          "b": "midnight_mint",
+          "games": 40,
+          "aScore": 0.5,
+          "draws": 2
+        },
+        {
+          "level": 8,
+          "a": "rose_bloom",
+          "b": "midnight_mint",
+          "games": 40,
+          "aScore": 0.275,
+          "draws": 0
+        },
+        {
+          "level": 10,
+          "a": "emerald_sprout",
+          "b": "sapphire_tide",
+          "games": 40,
+          "aScore": 0.45,
+          "draws": 0
+        },
+        {
+          "level": 10,
+          "a": "emerald_sprout",
+          "b": "amethyst_dream",
+          "games": 40,
+          "aScore": 0.525,
+          "draws": 0
+        },
+        {
+          "level": 10,
+          "a": "emerald_sprout",
+          "b": "solar_peach",
+          "games": 40,
+          "aScore": 0.5,
+          "draws": 0
+        },
+        {
+          "level": 10,
+          "a": "emerald_sprout",
+          "b": "rose_bloom",
+          "games": 40,
+          "aScore": 0.525,
+          "draws": 0
+        },
+        {
+          "level": 10,
+          "a": "emerald_sprout",
+          "b": "midnight_mint",
+          "games": 40,
+          "aScore": 0.325,
+          "draws": 0
+        },
+        {
+          "level": 10,
+          "a": "sapphire_tide",
+          "b": "amethyst_dream",
+          "games": 40,
+          "aScore": 0.375,
+          "draws": 0
+        },
+        {
+          "level": 10,
+          "a": "sapphire_tide",
+          "b": "solar_peach",
+          "games": 40,
+          "aScore": 0.425,
+          "draws": 2
+        },
+        {
+          "level": 10,
+          "a": "sapphire_tide",
+          "b": "rose_bloom",
+          "games": 40,
+          "aScore": 0.5875,
+          "draws": 1
+        },
+        {
+          "level": 10,
+          "a": "sapphire_tide",
+          "b": "midnight_mint",
+          "games": 40,
+          "aScore": 0.325,
+          "draws": 0
+        },
+        {
+          "level": 10,
+          "a": "amethyst_dream",
+          "b": "solar_peach",
+          "games": 40,
+          "aScore": 0.425,
+          "draws": 0
+        },
+        {
+          "level": 10,
+          "a": "amethyst_dream",
+          "b": "rose_bloom",
+          "games": 40,
+          "aScore": 0.5375,
+          "draws": 1
+        },
+        {
+          "level": 10,
+          "a": "amethyst_dream",
+          "b": "midnight_mint",
+          "games": 40,
+          "aScore": 0.6,
+          "draws": 0
+        },
+        {
+          "level": 10,
+          "a": "solar_peach",
+          "b": "rose_bloom",
+          "games": 40,
+          "aScore": 0.625,
+          "draws": 0
+        },
+        {
+          "level": 10,
+          "a": "solar_peach",
+          "b": "midnight_mint",
+          "games": 40,
+          "aScore": 0.5,
+          "draws": 0
+        },
+        {
+          "level": 10,
+          "a": "rose_bloom",
+          "b": "midnight_mint",
+          "games": 40,
+          "aScore": 0.375,
+          "draws": 0
+        }
+      ],
+      "sourceHashes": {
+        "catalog.mjs": "aeac4f9c733fdf863eaafc28ea8a01a13dc9737caa0a78275491508bc4d29bda",
+        "combat.mjs": "a249a6c2a347bea3b932885625609d91f15f57b0433f819f64896c9e00b38916",
+        "balance.mjs": "d58b6b51477034cb0e9e60680defc1a367cc9de9d1dbd93ddf9432b1de3e3965"
+      },
+      "scope": "Heuristic bots, mirrored seats with paired legal builds and styles; not optimal play or proof of human balance. No wagers.",
+      "failedMatchupGates": 9
+    },
+    {
+      "seed": 2026102303,
+      "games": 3600,
+      "seatBalanced": true,
+      "pairedBuilds": true,
+      "meanExchanges": 8.970555555555556,
+      "drawRate": 0.011666666666666667,
+      "epicsUsed": 1986,
+      "lineages": [
+        {
+          "id": "emerald_sprout",
+          "games": 1200,
+          "scoreRate": 0.47708333333333336
+        },
+        {
+          "id": "sapphire_tide",
+          "games": 1200,
+          "scoreRate": 0.47333333333333333
+        },
+        {
+          "id": "amethyst_dream",
+          "games": 1200,
+          "scoreRate": 0.53125
+        },
+        {
+          "id": "solar_peach",
+          "games": 1200,
+          "scoreRate": 0.5366666666666666
+        },
+        {
+          "id": "rose_bloom",
+          "games": 1200,
+          "scoreRate": 0.4658333333333333
+        },
+        {
+          "id": "midnight_mint",
+          "games": 1200,
+          "scoreRate": 0.5158333333333334
+        }
+      ],
+      "matchups": [
+        {
+          "level": 1,
+          "a": "emerald_sprout",
+          "b": "sapphire_tide",
+          "games": 40,
+          "aScore": 0.45,
+          "draws": 4
+        },
+        {
+          "level": 1,
+          "a": "emerald_sprout",
+          "b": "amethyst_dream",
+          "games": 40,
+          "aScore": 0.625,
+          "draws": 2
+        },
+        {
+          "level": 1,
+          "a": "emerald_sprout",
+          "b": "solar_peach",
+          "games": 40,
+          "aScore": 0.4375,
+          "draws": 1
+        },
+        {
+          "level": 1,
+          "a": "emerald_sprout",
+          "b": "rose_bloom",
+          "games": 40,
+          "aScore": 0.425,
+          "draws": 2
+        },
+        {
+          "level": 1,
+          "a": "emerald_sprout",
+          "b": "midnight_mint",
+          "games": 40,
+          "aScore": 0.45,
+          "draws": 4
+        },
+        {
+          "level": 1,
+          "a": "sapphire_tide",
+          "b": "amethyst_dream",
+          "games": 40,
+          "aScore": 0.5,
+          "draws": 4
+        },
+        {
+          "level": 1,
+          "a": "sapphire_tide",
+          "b": "solar_peach",
+          "games": 40,
+          "aScore": 0.4,
+          "draws": 0
+        },
+        {
+          "level": 1,
+          "a": "sapphire_tide",
+          "b": "rose_bloom",
+          "games": 40,
+          "aScore": 0.4,
+          "draws": 0
+        },
+        {
+          "level": 1,
+          "a": "sapphire_tide",
+          "b": "midnight_mint",
+          "games": 40,
+          "aScore": 0.3875,
+          "draws": 1
+        },
+        {
+          "level": 1,
+          "a": "amethyst_dream",
+          "b": "solar_peach",
+          "games": 40,
+          "aScore": 0.4,
+          "draws": 0
+        },
+        {
+          "level": 1,
+          "a": "amethyst_dream",
+          "b": "rose_bloom",
+          "games": 40,
+          "aScore": 0.5375,
+          "draws": 1
+        },
+        {
+          "level": 1,
+          "a": "amethyst_dream",
+          "b": "midnight_mint",
+          "games": 40,
+          "aScore": 0.575,
+          "draws": 2
+        },
+        {
+          "level": 1,
+          "a": "solar_peach",
+          "b": "rose_bloom",
+          "games": 40,
+          "aScore": 0.6,
+          "draws": 2
+        },
+        {
+          "level": 1,
+          "a": "solar_peach",
+          "b": "midnight_mint",
+          "games": 40,
+          "aScore": 0.6,
+          "draws": 0
+        },
+        {
+          "level": 1,
+          "a": "rose_bloom",
+          "b": "midnight_mint",
+          "games": 40,
+          "aScore": 0.575,
+          "draws": 2
+        },
+        {
+          "level": 2,
+          "a": "emerald_sprout",
+          "b": "sapphire_tide",
+          "games": 40,
+          "aScore": 0.475,
+          "draws": 0
+        },
+        {
+          "level": 2,
+          "a": "emerald_sprout",
+          "b": "amethyst_dream",
+          "games": 40,
+          "aScore": 0.675,
+          "draws": 0
+        },
+        {
+          "level": 2,
+          "a": "emerald_sprout",
+          "b": "solar_peach",
+          "games": 40,
+          "aScore": 0.475,
+          "draws": 0
+        },
+        {
+          "level": 2,
+          "a": "emerald_sprout",
+          "b": "rose_bloom",
+          "games": 40,
+          "aScore": 0.45,
+          "draws": 0
+        },
+        {
+          "level": 2,
+          "a": "emerald_sprout",
+          "b": "midnight_mint",
+          "games": 40,
+          "aScore": 0.525,
+          "draws": 0
+        },
+        {
+          "level": 2,
+          "a": "sapphire_tide",
+          "b": "amethyst_dream",
+          "games": 40,
+          "aScore": 0.375,
+          "draws": 0
+        },
+        {
+          "level": 2,
+          "a": "sapphire_tide",
+          "b": "solar_peach",
+          "games": 40,
+          "aScore": 0.3,
+          "draws": 0
+        },
+        {
+          "level": 2,
+          "a": "sapphire_tide",
+          "b": "rose_bloom",
+          "games": 40,
+          "aScore": 0.45,
+          "draws": 0
+        },
+        {
+          "level": 2,
+          "a": "sapphire_tide",
+          "b": "midnight_mint",
+          "games": 40,
+          "aScore": 0.475,
+          "draws": 2
+        },
+        {
+          "level": 2,
+          "a": "amethyst_dream",
+          "b": "solar_peach",
+          "games": 40,
+          "aScore": 0.5,
+          "draws": 0
+        },
+        {
+          "level": 2,
+          "a": "amethyst_dream",
+          "b": "rose_bloom",
+          "games": 40,
+          "aScore": 0.575,
+          "draws": 0
+        },
+        {
+          "level": 2,
+          "a": "amethyst_dream",
+          "b": "midnight_mint",
+          "games": 40,
+          "aScore": 0.525,
+          "draws": 0
+        },
+        {
+          "level": 2,
+          "a": "solar_peach",
+          "b": "rose_bloom",
+          "games": 40,
+          "aScore": 0.625,
+          "draws": 0
+        },
+        {
+          "level": 2,
+          "a": "solar_peach",
+          "b": "midnight_mint",
+          "games": 40,
+          "aScore": 0.45,
+          "draws": 2
+        },
+        {
+          "level": 2,
+          "a": "rose_bloom",
+          "b": "midnight_mint",
+          "games": 40,
+          "aScore": 0.55,
+          "draws": 0
+        },
+        {
+          "level": 4,
+          "a": "emerald_sprout",
+          "b": "sapphire_tide",
+          "games": 40,
+          "aScore": 0.45,
+          "draws": 0
+        },
+        {
+          "level": 4,
+          "a": "emerald_sprout",
+          "b": "amethyst_dream",
+          "games": 40,
+          "aScore": 0.425,
+          "draws": 0
+        },
+        {
+          "level": 4,
+          "a": "emerald_sprout",
+          "b": "solar_peach",
+          "games": 40,
+          "aScore": 0.45,
+          "draws": 0
+        },
+        {
+          "level": 4,
+          "a": "emerald_sprout",
+          "b": "rose_bloom",
+          "games": 40,
+          "aScore": 0.5125,
+          "draws": 1
+        },
+        {
+          "level": 4,
+          "a": "emerald_sprout",
+          "b": "midnight_mint",
+          "games": 40,
+          "aScore": 0.6,
+          "draws": 0
+        },
+        {
+          "level": 4,
+          "a": "sapphire_tide",
+          "b": "amethyst_dream",
+          "games": 40,
+          "aScore": 0.55,
+          "draws": 0
+        },
+        {
+          "level": 4,
+          "a": "sapphire_tide",
+          "b": "solar_peach",
+          "games": 40,
+          "aScore": 0.4375,
+          "draws": 1
+        },
+        {
+          "level": 4,
+          "a": "sapphire_tide",
+          "b": "rose_bloom",
+          "games": 40,
+          "aScore": 0.525,
+          "draws": 0
+        },
+        {
+          "level": 4,
+          "a": "sapphire_tide",
+          "b": "midnight_mint",
+          "games": 40,
+          "aScore": 0.475,
+          "draws": 0
+        },
+        {
+          "level": 4,
+          "a": "amethyst_dream",
+          "b": "solar_peach",
+          "games": 40,
+          "aScore": 0.5,
+          "draws": 0
+        },
+        {
+          "level": 4,
+          "a": "amethyst_dream",
+          "b": "rose_bloom",
+          "games": 40,
+          "aScore": 0.4,
+          "draws": 0
+        },
+        {
+          "level": 4,
+          "a": "amethyst_dream",
+          "b": "midnight_mint",
+          "games": 40,
+          "aScore": 0.525,
+          "draws": 0
+        },
+        {
+          "level": 4,
+          "a": "solar_peach",
+          "b": "rose_bloom",
+          "games": 40,
+          "aScore": 0.6,
+          "draws": 0
+        },
+        {
+          "level": 4,
+          "a": "solar_peach",
+          "b": "midnight_mint",
+          "games": 40,
+          "aScore": 0.5125,
+          "draws": 1
+        },
+        {
+          "level": 4,
+          "a": "rose_bloom",
+          "b": "midnight_mint",
+          "games": 40,
+          "aScore": 0.625,
+          "draws": 0
+        },
+        {
+          "level": 6,
+          "a": "emerald_sprout",
+          "b": "sapphire_tide",
+          "games": 40,
+          "aScore": 0.375,
+          "draws": 0
+        },
+        {
+          "level": 6,
+          "a": "emerald_sprout",
+          "b": "amethyst_dream",
+          "games": 40,
+          "aScore": 0.3,
+          "draws": 0
+        },
+        {
+          "level": 6,
+          "a": "emerald_sprout",
+          "b": "solar_peach",
+          "games": 40,
+          "aScore": 0.4,
+          "draws": 0
+        },
+        {
+          "level": 6,
+          "a": "emerald_sprout",
+          "b": "rose_bloom",
+          "games": 40,
+          "aScore": 0.475,
+          "draws": 2
+        },
+        {
+          "level": 6,
+          "a": "emerald_sprout",
+          "b": "midnight_mint",
+          "games": 40,
+          "aScore": 0.5,
+          "draws": 0
+        },
+        {
+          "level": 6,
+          "a": "sapphire_tide",
+          "b": "amethyst_dream",
+          "games": 40,
+          "aScore": 0.425,
+          "draws": 0
+        },
+        {
+          "level": 6,
+          "a": "sapphire_tide",
+          "b": "solar_peach",
+          "games": 40,
+          "aScore": 0.4625,
+          "draws": 1
+        },
+        {
+          "level": 6,
+          "a": "sapphire_tide",
+          "b": "rose_bloom",
+          "games": 40,
+          "aScore": 0.6,
+          "draws": 0
+        },
+        {
+          "level": 6,
+          "a": "sapphire_tide",
+          "b": "midnight_mint",
+          "games": 40,
+          "aScore": 0.4,
+          "draws": 0
+        },
+        {
+          "level": 6,
+          "a": "amethyst_dream",
+          "b": "solar_peach",
+          "games": 40,
+          "aScore": 0.575,
+          "draws": 0
+        },
+        {
+          "level": 6,
+          "a": "amethyst_dream",
+          "b": "rose_bloom",
+          "games": 40,
+          "aScore": 0.7,
+          "draws": 0
+        },
+        {
+          "level": 6,
+          "a": "amethyst_dream",
+          "b": "midnight_mint",
+          "games": 40,
+          "aScore": 0.4,
+          "draws": 0
+        },
+        {
+          "level": 6,
+          "a": "solar_peach",
+          "b": "rose_bloom",
+          "games": 40,
+          "aScore": 0.575,
+          "draws": 0
+        },
+        {
+          "level": 6,
+          "a": "solar_peach",
+          "b": "midnight_mint",
+          "games": 40,
+          "aScore": 0.5,
+          "draws": 0
+        },
+        {
+          "level": 6,
+          "a": "rose_bloom",
+          "b": "midnight_mint",
+          "games": 40,
+          "aScore": 0.275,
+          "draws": 0
+        },
+        {
+          "level": 8,
+          "a": "emerald_sprout",
+          "b": "sapphire_tide",
+          "games": 40,
+          "aScore": 0.5,
+          "draws": 0
+        },
+        {
+          "level": 8,
+          "a": "emerald_sprout",
+          "b": "amethyst_dream",
+          "games": 40,
+          "aScore": 0.45,
+          "draws": 0
+        },
+        {
+          "level": 8,
+          "a": "emerald_sprout",
+          "b": "solar_peach",
+          "games": 40,
+          "aScore": 0.5,
+          "draws": 0
+        },
+        {
+          "level": 8,
+          "a": "emerald_sprout",
+          "b": "rose_bloom",
+          "games": 40,
+          "aScore": 0.65,
+          "draws": 0
+        },
+        {
+          "level": 8,
+          "a": "emerald_sprout",
+          "b": "midnight_mint",
+          "games": 40,
+          "aScore": 0.5,
+          "draws": 0
+        },
+        {
+          "level": 8,
+          "a": "sapphire_tide",
+          "b": "amethyst_dream",
+          "games": 40,
+          "aScore": 0.45,
+          "draws": 0
+        },
+        {
+          "level": 8,
+          "a": "sapphire_tide",
+          "b": "solar_peach",
+          "games": 40,
+          "aScore": 0.45,
+          "draws": 0
+        },
+        {
+          "level": 8,
+          "a": "sapphire_tide",
+          "b": "rose_bloom",
+          "games": 40,
+          "aScore": 0.4875,
+          "draws": 1
+        },
+        {
+          "level": 8,
+          "a": "sapphire_tide",
+          "b": "midnight_mint",
+          "games": 40,
+          "aScore": 0.475,
+          "draws": 0
+        },
+        {
+          "level": 8,
+          "a": "amethyst_dream",
+          "b": "solar_peach",
+          "games": 40,
+          "aScore": 0.575,
+          "draws": 0
+        },
+        {
+          "level": 8,
+          "a": "amethyst_dream",
+          "b": "rose_bloom",
+          "games": 40,
+          "aScore": 0.575,
+          "draws": 0
+        },
+        {
+          "level": 8,
+          "a": "amethyst_dream",
+          "b": "midnight_mint",
+          "games": 40,
+          "aScore": 0.6,
+          "draws": 0
+        },
+        {
+          "level": 8,
+          "a": "solar_peach",
+          "b": "rose_bloom",
+          "games": 40,
+          "aScore": 0.4875,
+          "draws": 1
+        },
+        {
+          "level": 8,
+          "a": "solar_peach",
+          "b": "midnight_mint",
+          "games": 40,
+          "aScore": 0.475,
+          "draws": 0
+        },
+        {
+          "level": 8,
+          "a": "rose_bloom",
+          "b": "midnight_mint",
+          "games": 40,
+          "aScore": 0.475,
+          "draws": 0
+        },
+        {
+          "level": 10,
+          "a": "emerald_sprout",
+          "b": "sapphire_tide",
+          "games": 40,
+          "aScore": 0.4625,
+          "draws": 1
+        },
+        {
+          "level": 10,
+          "a": "emerald_sprout",
+          "b": "amethyst_dream",
+          "games": 40,
+          "aScore": 0.4,
+          "draws": 0
+        },
+        {
+          "level": 10,
+          "a": "emerald_sprout",
+          "b": "solar_peach",
+          "games": 40,
+          "aScore": 0.5,
+          "draws": 0
+        },
+        {
+          "level": 10,
+          "a": "emerald_sprout",
+          "b": "rose_bloom",
+          "games": 40,
+          "aScore": 0.5,
+          "draws": 0
+        },
+        {
+          "level": 10,
+          "a": "emerald_sprout",
+          "b": "midnight_mint",
+          "games": 40,
+          "aScore": 0.375,
+          "draws": 0
+        },
+        {
+          "level": 10,
+          "a": "sapphire_tide",
+          "b": "amethyst_dream",
+          "games": 40,
+          "aScore": 0.4,
+          "draws": 0
+        },
+        {
+          "level": 10,
+          "a": "sapphire_tide",
+          "b": "solar_peach",
+          "games": 40,
+          "aScore": 0.5,
+          "draws": 0
+        },
+        {
+          "level": 10,
+          "a": "sapphire_tide",
+          "b": "rose_bloom",
+          "games": 40,
+          "aScore": 0.625,
+          "draws": 0
+        },
+        {
+          "level": 10,
+          "a": "sapphire_tide",
+          "b": "midnight_mint",
+          "games": 40,
+          "aScore": 0.3625,
+          "draws": 1
+        },
+        {
+          "level": 10,
+          "a": "amethyst_dream",
+          "b": "solar_peach",
+          "games": 40,
+          "aScore": 0.525,
+          "draws": 0
+        },
+        {
+          "level": 10,
+          "a": "amethyst_dream",
+          "b": "rose_bloom",
+          "games": 40,
+          "aScore": 0.625,
+          "draws": 0
+        },
+        {
+          "level": 10,
+          "a": "amethyst_dream",
+          "b": "midnight_mint",
+          "games": 40,
+          "aScore": 0.4,
+          "draws": 2
+        },
+        {
+          "level": 10,
+          "a": "solar_peach",
+          "b": "rose_bloom",
+          "games": 40,
+          "aScore": 0.6,
+          "draws": 0
+        },
+        {
+          "level": 10,
+          "a": "solar_peach",
+          "b": "midnight_mint",
+          "games": 40,
+          "aScore": 0.4625,
+          "draws": 1
+        },
+        {
+          "level": 10,
+          "a": "rose_bloom",
+          "b": "midnight_mint",
+          "games": 40,
+          "aScore": 0.475,
+          "draws": 0
+        }
+      ],
+      "sourceHashes": {
+        "catalog.mjs": "aeac4f9c733fdf863eaafc28ea8a01a13dc9737caa0a78275491508bc4d29bda",
+        "combat.mjs": "a249a6c2a347bea3b932885625609d91f15f57b0433f819f64896c9e00b38916",
+        "balance.mjs": "d58b6b51477034cb0e9e60680defc1a367cc9de9d1dbd93ddf9432b1de3e3965"
+      },
+      "scope": "Heuristic bots, mirrored seats with paired legal builds and styles; not optimal play or proof of human balance. No wagers.",
+      "failedMatchupGates": 5
+    }
+  ]
+}
