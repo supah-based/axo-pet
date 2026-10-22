@@ -23,9 +23,6 @@
 .game-ui.arcade-ui .game-footer{background:#141216;border-color:#3f3946;color:#aaa1b5;font-size:9px}
 .game-ui.arcade-ui :is(button,a,summary,select,input):focus-visible{outline:3px solid var(--street-acid);outline-offset:4px}
 .arena-decal{display:block;width:100%;height:auto;overflow:visible;pointer-events:none}
-.street-sticker{display:inline-block;font-family:var(--street-display);font-weight:400;font-style:italic;line-height:.92;letter-spacing:.01em;color:#18141c;background:var(--street-paper);box-shadow:4px 5px 0 #0008;pointer-events:none}
-.sticker-paper{font-size:26px;padding:13px 19px 12px;transform:rotate(-7deg);border:3px solid #18141c;outline:2px solid var(--street-paper)}
-.sticker-mini{font-size:15px;padding:8px 12px;transform:rotate(5deg)}
 
 /* One focal Pet poster and one clear primary action. */
 .command-center{max-width:1500px;padding:26px 34px 38px}
@@ -42,8 +39,6 @@
 .cc-fighter::after{inset:10px;border:1px dashed #8e799a33;border-radius:0;z-index:0}
 .cc-street-wall{position:absolute;inset:0;pointer-events:none;overflow:hidden;z-index:0}
 .cc-street-wall>.decal-tag{position:absolute;right:-8px;top:12px;width:55%;color:var(--street-violet);opacity:.38;transform:rotate(-12deg);filter:drop-shadow(7px 7px 0 #08070a)}
-.wall-scribble{position:absolute;left:30px;bottom:68px;font:italic 700 20px 'Segoe Print','Comic Sans MS',cursive;color:#cfc1dd;transform:rotate(-7deg);opacity:.55}
-.cc-street-wall>.decal-orbit{position:absolute;right:14px;bottom:74px;width:110px;transform:rotate(12deg);color:var(--street-acid);opacity:.36}
 .cc-fighter-copy{padding:29px 28px;max-width:48%}
 .cc-fighter-copy .eyebrow{color:#d2c5df;font:700 8px/1.7 system-ui;letter-spacing:.1em;max-width:220px}
 .cc-fighter-copy h1{font-family:var(--street-display);font-weight:400;font-style:italic;font-size:clamp(30px,3.5vw,49px);line-height:1.05;letter-spacing:-.015em;color:var(--street-paper);margin:13px 0 18px;text-shadow:3px 3px 0 #100c15}
@@ -157,3 +152,22 @@
 @media(max-width:360px){.cc-status{position:static;width:fit-content;margin-top:15px;font-size:8px}}
 @media(max-width:520px){.game-ui.arcade-ui:not(.in-battle) .game-header{min-height:104px}}
 @media(max-width:360px){.game-ui.arcade-ui .game-header .brand>span:last-child{display:none}}
+
+/* AXO-017: real imagegen paint, transparent alpha and intrinsic image ratios. */
+.game-ui.arcade-ui .game-header .brand .mark{width:68px;height:34px;display:block;transform:none;font-size:0;letter-spacing:0;text-shadow:none}
+.game-ui.arcade-ui .game-header .brand .mark img{display:block;width:68px;height:34px;object-fit:contain}
+img.arena-decal{height:auto;object-fit:contain;pointer-events:none;user-select:none}
+.cc-street-wall>.decal-tag{width:60%;right:-5px;top:30px;opacity:.44;filter:none;transform:rotate(-8deg)}
+.cc-sticker-stack{gap:12px;margin-top:24px}.cc-sticker-stack>.decal-no-rug{width:146px;transform:rotate(-6deg);filter:drop-shadow(3px 4px 0 #0006)}
+.cc-sticker-stack>.decal-axo{width:90px;transform:rotate(8deg);filter:drop-shadow(3px 4px 0 #0006)}
+.cc-discover>.decal-stay-weird{position:absolute;right:10px;top:12px;width:112px;transform:rotate(6deg);z-index:0}
+.cc-discover{display:flex;flex-direction:column;overflow:clip}.cc-discover>.eyebrow{display:block;flex:none}
+.cc-discover-icon{opacity:.23}.cc-discover-icon img.arena-decal{width:165px;height:165px;object-fit:contain}
+.sl-header-tag img.arena-decal{width:56px;height:56px;object-fit:contain}
+@media(max-width:1050px) and (min-width:701px){.cc-sticker-stack>.decal-axo{display:none}.cc-sticker-stack>.decal-no-rug{width:132px}}
+@media(max-width:700px){
+ .cc-street-wall>.decal-tag{width:100%;right:-35px;top:145px;opacity:.35}
+ .cc-sticker-stack{right:9px;top:16px;opacity:1}.cc-sticker-stack>.decal-no-rug{display:none}.cc-sticker-stack>.decal-axo{width:53px}
+ .cc-discover>.decal-stay-weird{width:112px;right:13px;top:14px}.cc-discover h2{margin-top:70px}
+}
+@media(max-width:360px){.cc-sticker-stack{display:none}}

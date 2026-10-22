@@ -1,0 +1,86 @@
+{
+  "version": "AXO_ARENA_IMAGEGEN_ART_V1",
+  "generator": "built-in image_gen",
+  "derivation": "Resize and WebP encoding only; generated alpha preserved. No SVG tracing or repainting.",
+  "totalBytes": 347610,
+  "assets": [
+    {
+      "id": "axo-tag",
+      "path": "/arena/assets/degen-v2/axo-tag.webp",
+      "width": 1024,
+      "height": 512,
+      "bytes": 183410,
+      "sha256": "f7ced654c1766e7db26fbce5fd9ba9d1485de9f19abefe0f200ab821c5b664d5",
+      "alpha": true,
+      "sourceSha256": "124a157f645f707f1eac8df48ace368d52cae870ac20d7fe31e274f7a6a71bc6",
+      "sourceWidth": 1774,
+      "sourceHeight": 887,
+      "prompt": "tag"
+    },
+    {
+      "id": "axo-tag-small",
+      "path": "/arena/assets/degen-v2/axo-tag-small.webp",
+      "width": 256,
+      "height": 128,
+      "bytes": 17818,
+      "sha256": "1f206d6cdc2ef67e4da3e8944da2e8f06c1d831b313a9fc282d7c466fd083759",
+      "alpha": true,
+      "sourceSha256": "124a157f645f707f1eac8df48ace368d52cae870ac20d7fe31e274f7a6a71bc6",
+      "sourceWidth": 1774,
+      "sourceHeight": 887,
+      "prompt": "tag"
+    },
+    {
+      "id": "axo-mascot",
+      "path": "/arena/assets/degen-v2/axo-mascot.webp",
+      "width": 256,
+      "height": 256,
+      "bytes": 33478,
+      "sha256": "d1f4a13b9c38bc8d0abbfb712b6e0a04b3324238843f7a265b735627cba338f7",
+      "alpha": true,
+      "sourceSha256": "4b5259e5ad397900d6b9aa69657174ac1f9e08da69a705babdc7069ca4003ff7",
+      "sourceWidth": 1254,
+      "sourceHeight": 1254,
+      "prompt": "mascot"
+    },
+    {
+      "id": "no-rug",
+      "path": "/arena/assets/degen-v2/no-rug.webp",
+      "width": 384,
+      "height": 256,
+      "bytes": 34720,
+      "sha256": "91e908f17e47792dc64aac9a00e5383e0420bff054122ba1e760fd59dc1c50c0",
+      "alpha": true,
+      "sourceSha256": "df8aac4c517d812d32a5b5c7a58cae96b91ea2bf3c759354afb9164a26e7e1a8",
+      "sourceWidth": 1536,
+      "sourceHeight": 1024,
+      "prompt": "no-rug"
+    },
+    {
+      "id": "stay-weird",
+      "path": "/arena/assets/degen-v2/stay-weird.webp",
+      "width": 384,
+      "height": 256,
+      "bytes": 52350,
+      "sha256": "c30083d9866d93060beb3bc65f7a041faee3123dcadfc97f322b7b26749cc10c",
+      "alpha": true,
+      "sourceSha256": "57aa164d7fef2cfe556e138d03ef1926fb67ee191094897f965ee1b70ebdd0cb",
+      "sourceWidth": 1536,
+      "sourceHeight": 1024,
+      "prompt": "stay-weird"
+    },
+    {
+      "id": "diamond",
+      "path": "/arena/assets/degen-v2/diamond.webp",
+      "width": 256,
+      "height": 256,
+      "bytes": 25834,
+      "sha256": "99191cc74c9320edc398d5aadbcc3103824c5e3f9350cb80b87acd53e9d33375",
+      "alpha": true,
+      "sourceSha256": "4c309119463b457b038463f91e80b31e408885dc0a7070bb0fe4e5bedfeb9de8",
+      "sourceWidth": 1254,
+      "sourceHeight": 1254,
+      "prompt": "diamond"
+    }
+  ]
+}

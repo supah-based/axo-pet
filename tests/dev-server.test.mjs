@@ -113,8 +113,14 @@ test('Arena atelier exposes only pinned fitted runtime assets and keeps internal
   const catalog=JSON.parse(new TextDecoder().decode(bytes)), layer=atelierManifest(catalog).values().next().value;
   const image=await fetch(origin+atelierMediaUrl(layer.url));assert.equal(image.status,200);assert.equal(createHash('sha256').update(new Uint8Array(await image.arrayBuffer())).digest('hex'),layer.sha256);
   for(const path of ['/arena/atelier/model.mjs','/arena/command-center.mjs','/arena/presentation.mjs','/arena/style-lab.mjs','/arena/style-lab-model.mjs','/arena/command-center.css','/arena/equipped-rig.mjs','/arena/equipped-puppet.mjs','/arena/equipped-canonical.mjs','/arena/animation-cues.mjs','/arena/fitted-preview.mjs','/arena/arena-look-store.mjs','/arena/fitted-inspector.mjs','/arena/interface-kit.mjs','/arena/art-direction.css','/arena/degen.css'])assert.equal((await fetch(origin+path)).status,200,path);
+  const {readFile}=await import('node:fs/promises'),{default:sharp}=await import('sharp');
+  const art=JSON.parse(await readFile(new URL('../apps/arena-web/assets/runtime/degen-v2/manifest.json',import.meta.url),'utf8'));
+  assert.ok(art.assets.length>0);assert.ok(art.totalBytes<=1024*1024);let artBytes=0;
+  for(const asset of art.assets){const response=await fetch(origin+asset.path);assert.equal(response.status,200,asset.path);assert.match(response.headers.get('content-type'),/image\/webp/);const bytes=new Uint8Array(await response.arrayBuffer());assert.equal(bytes.length,asset.bytes);artBytes+=bytes.length;assert.equal(createHash('sha256').update(bytes).digest('hex'),asset.sha256);const meta=await sharp(bytes).metadata();assert.equal(meta.width,asset.width);assert.equal(meta.height,asset.height);assert.equal(meta.hasAlpha,true);}
+  assert.equal(artBytes,art.totalBytes);
   for(const path of ['/arena/equipped-inspector.mjs','/arena/atelier/private.json','/arena/atelier/media/anatomy/anatomy-rig-v3.json','/arena/atelier/media/bazaar/catalog.json','/arena/atelier/media/anatomy/../../server.mjs','/arena/atelier/media/bazaar/not-listed.webp','/arena/atelier/media/anatomy/degen-shell-vest.cloth-master.webp'])assert.equal((await fetch(origin+path)).status,404,path);
   assert.equal((await fetch(origin+'/api/arena/me')).status,401);
+  assert.equal((await fetch(origin+'/arena/assets/degen-v2/axo-mascot.png')).status,404,'PNG generation masters are not published');
 });
 
 test('asset fallback reads only fixed-origin public media and never forwards local credentials', async t => {

@@ -1,13 +1,14 @@
 export function arenaIcon(kind){const paths={practice:'M12 3v3m0 12v3M3 12h3m12 0h3M7 7l3 3m4 4 3 3M7 17l3-3m4-4 3-3M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8',wardrobe:'M8 3l4 3 4-3 6 5-4 4-2-2v11H8V10l-2 2-4-4z',people:'M8 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8M2 21v-3a6 6 0 0 1 12 0v3m3-17a4 4 0 0 1 0 8m1 3a5 5 0 0 1 4 5v1',sword:'M5 3l14 14M3 5l4-2 14 14-4 4L3 7zm11 13 4-4M3 21l4-4',shield:'M12 2l8 4v6c0 5-8 10-8 10S4 17 4 12V6zM8 12l3 3 5-6',surge:'M13 2L4 14h7l-1 8 10-13h-7z',heal:'M9 3h6v6h6v6h-6v6H9v-6H3V9h6z',epic:'M12 2l3 7 7 3-7 3-3 7-3-7-7-3 7-3zM3 3l2 2m14 14 2 2',target:'M12 2v4m0 12v4M2 12h4m12 0h4M5 5l3 3m8 8 3 3M5 19l3-3m8-8 3-3',crown:'M3 6l4 4 5-7 5 7 4-4-2 13H5zM6 22h12',book:'M4 3h14l2 2v16H4zM8 7h7M8 11h7M8 15h5',arrow:'M4 18L19 3M9 3h10v10',down:'M4 4l15 15M9 19h10V9',reset:'M4 8a9 9 0 1 1-1 7M4 2v6h6',gear:'M12 3v4m0 10v4M3 12h4m10 0h4M6 6l3 3m6 6 3 3M6 18l3-3m6-6 3-3M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8'};return `<svg class="game-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="${paths[kind]||paths.sword}"/></svg>`;}
-// Fixed, decorative vector marks. Never interpolate Pet/account fields into SVG.
+// Generated raster artwork only. Small functional control symbols stay separate above.
+const PAINTED_DECALS=Object.freeze({
+ tag:{file:'axo-tag.webp',width:1024,height:512},
+ axo:{file:'axo-mascot.webp',width:256,height:256},
+ 'no-rug':{file:'no-rug.webp',width:384,height:256},
+ 'stay-weird':{file:'stay-weird.webp',width:384,height:256},
+ diamond:{file:'diamond.webp',width:256,height:256},
+ star:{file:'diamond.webp',width:256,height:256}
+});
 export function arenaDecal(kind){
- const marks={
-  tag:'<path d="M38 158 100 27l31 124M61 111l76-12M157 47l90 97m-5-116-84 134M300 31c-77 0-87 142-19 131 71-12 89-151 19-131Z" fill="none" stroke="currentColor" stroke-width="24" stroke-linecap="square" stroke-linejoin="round"/><path d="m27 181 307-25M104 164v32m33-24v37m159-36v24" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round"/><path d="m13 43 18 3m307 62 12 7M51 18l3-10" stroke="currentColor" stroke-width="5"/>',
-  axo:'<path d="M90 79c-53-44-60 24-44 50-35 31-22 69 28 55 26 22 64 23 89-1 51 9 58-29 28-53 24-50-18-78-51-52-16-8-34-8-50 1Z" fill="currentColor" stroke="#141217" stroke-width="6"/><path d="m52 92-28-18 13 30-26 2 24 17m155-31 27-21-13 34 28 1-26 20" fill="none" stroke="currentColor" stroke-width="9" stroke-linecap="round"/><ellipse cx="84" cy="132" rx="8" ry="12" fill="#141217"/><ellipse cx="154" cy="132" rx="8" ry="12" fill="#141217"/><path d="M107 158q15 15 29-2m-70-36-13-4m120 5 13-4" fill="none" stroke="#141217" stroke-width="6" stroke-linecap="round"/>',
-  star:'<path d="m120 14 17 73 75-34-47 65 63 48-78-8-9 74-32-68-67 44 38-71-65-36 75-1Z" fill="currentColor"/><path d="m92 87 47 58m-48-1 50-58" fill="none" stroke="#141217" stroke-width="8" stroke-linecap="round"/>',
-  diamond:'<path d="m16 75 48-53h112l48 53-104 137Z" fill="currentColor" stroke="#141217" stroke-width="8" stroke-linejoin="round"/><path d="m16 75 208 1M64 22l23 53 33 137 37-137 19-53M87 75l33-53 37 53" fill="none" stroke="#141217" stroke-width="6"/>',
-  orbit:'<path d="M210 49C102-35-19 71 39 176c55 89 208 29 174-83M23 53l-8 56 53-16M32 223l185-8" fill="none" stroke="currentColor" stroke-width="8" stroke-linecap="round"/>'
- };
- const mark=Object.hasOwn(marks,kind)?kind:'star',view=mark==='tag'?'0 0 360 220':'0 0 240 240';
- return `<svg class="arena-decal decal-${mark}" viewBox="${view}" aria-hidden="true" focusable="false">${marks[mark]}</svg>`;
+ const key=Object.hasOwn(PAINTED_DECALS,kind)?kind:'diamond',art=PAINTED_DECALS[key];
+ return '<img class="arena-decal decal-'+key+'" src="/arena/assets/degen-v2/'+art.file+'" width="'+art.width+'" height="'+art.height+'" alt="" aria-hidden="true" decoding="async" draggable="false">';
 }

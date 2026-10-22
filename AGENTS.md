@@ -13,7 +13,9 @@ Read HANDOFF.md, README.md, CONTRIBUTING.md, SECURITY.md and docs/MIGRATION_PLAN
 
 ## Collaboration with AXO on OpenClaw
 
-- Current Arena interface: docs/handoffs/AXO-016.md and docs/ARENA_DEGEN_DESIGN.md. Publish the new degen stylesheet last with its client/router/index and fixed vector decal helper. Keep decorative marks noninteractive and outside rig transforms; preserve fitted-only visuals, Preview labels, all authority/transaction locks, focus, contrast/reduced motion and result/countdown fences. Test narrow headers as well as page overflow.
+- Current Arena artwork: docs/handoffs/AXO-017.md and docs/ARENA_IMAGEGEN_ART.md. Use the generated transparent WebPs and pinned art manifest for branding/graffiti/stickers, preserving alpha and intrinsic ratios. Do not restore the old decorative SVGs. Publish the versioned art directory with client/CSS/index; keep all decoration outside the fitted rig and retain Preview/authority boundaries. The wardrobe card clips decoration without becoming a hidden keyboard-scroll container.
+
+- Prior Arena interface: docs/handoffs/AXO-016.md and docs/ARENA_DEGEN_DESIGN.md. Publish the new degen stylesheet last with its client/router/index and fixed vector decal helper. Keep decorative marks noninteractive and outside rig transforms; preserve fitted-only visuals, Preview labels, all authority/transaction locks, focus, contrast/reduced motion and result/countdown fences. Test narrow headers as well as page overflow.
 
 - Current active Arena visuals: docs/handoffs/AXO-015.md and docs/ARENA_FITTED_PREVIEWS.md supersede AXO-012–014’s active V1 costume path. All active actors/pose inspection use the newer fitted-only cosmetic pipeline with registered masks, adult-base eligibility and explicit Preview/current replay reconstruction labels. Never restore old costume fallbacks or remap numeric V1 ownership/stats to style IDs. Preserve verified equipment/XP/combat and dispose bounded actors on view/account changes.
 
