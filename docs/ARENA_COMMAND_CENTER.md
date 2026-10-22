@@ -11,6 +11,7 @@ AXO-012 adds a new Arena lobby, an isolated cosmetic animation lab and presentat
 - Full-item artwork inspection is separate from the worn composition. Exported 2:3 PNGs include a burned-in Preview label. Cosmetic look links include only lineage, tier, scene and known family choices; they discard existing query strings, credentials and fragments. Empty looks round-trip explicitly.
 - Replay exchange seeking and 0.5×/1×/1.5×/2× playback use the same checked completed replay. Speed changes preserve playback; automatic advancement preserves scroll and does not move focus to the heading.
 - Local presentation settings support Auto/Low/High graphics, reduced motion, receipt readouts and higher text contrast. They contain no identity, XP or equipment fields. OS reduced motion always takes precedence. Existing sound remains optional and off by default.
+- Guided lessons and existing spectator-consent/link controls live in a collapsed Match tools drawer in the fight's top bar. They no longer permanently obscure the fighters. Opening it explicitly warns that the server clock continues; disclosure and keyboard focus survive receipt refreshes. Consent/capability authority is unchanged.
 
 ## Authority and privacy
 

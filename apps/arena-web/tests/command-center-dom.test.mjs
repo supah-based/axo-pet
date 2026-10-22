@@ -20,6 +20,15 @@ test('presentation settings alter browser presentation only and preserve focus a
   await h.click('[data-action="close-panel"]');assert.equal(h.document.activeElement,button);assert.equal(JSON.stringify(h.service.db),before);assert.equal(h.requests.filter(r=>r.body!==undefined).length,posts);
 });
 
+test('guided lesson and spectator controls stay in a collapsed match menu with disclosure/focus preserved across receipts',async t=>{
+  const h=await harness({strict:true});t.after(()=>h.close());h.service.cancel(h.a,h.A,{});await h.click('[data-tab="arena"]');await h.click('[data-action="guided-practice"]');
+  const tools=h.document.querySelector('.battle-tools');assert.ok(tools);assert.equal(tools.hasAttribute('open'),false);assert.match(tools.querySelector('summary').textContent,/Lesson 1\/5/);
+  assert.ok(tools.querySelector('[data-action="spectator-consent"]'));assert.equal(h.document.querySelector('.combat-screen > .spectator-access'),null);assert.equal(h.document.querySelector('.combat-screen > .practice-guide'),null);
+  tools.setAttribute('open','');tools.querySelector('summary').focus();const room=h.last().state;h.service.choose(h.a,room.id,{round:1,move:'market_order'});await h.poll();
+  assert.equal(h.document.querySelector('.battle-tools').hasAttribute('open'),true);assert.equal(h.document.activeElement.tagName,'SUMMARY');assert.deepEqual(h.errors,[]);
+  h.service.cancel(h.a,room.id,{});await h.poll();assert.equal(h.document.querySelector('.battle-tools').hasAttribute('open'),false,'Result transition closes the auxiliary menu');
+});
+
 test('replay exchange seeking and speed controls preserve frozen entry values without combat writes',async t=>{
   const h=await harness();t.after(()=>h.close());h.service.choose(h.a,h.A,{round:1,move:'market_order'});h.service.choose(h.b,h.A,{round:1,move:'diamond_hands'});h.service.cancel(h.a,h.A,{});await h.navigate(h.A);
   const before=JSON.stringify(h.service.db),posts=h.requests.filter(r=>r.body!==undefined).length;await h.click('[data-action="replay"]');

@@ -12,6 +12,7 @@ Date: 2026-10-22. Review scope: source diff from AXO-011 plus synthetic desktop/
 | Performance/lifecycle | Cached device budgets/gradient instead of allocating per frame. Cancel hidden RAF, bound decoded layer cache, abort disposal and fence late composites. Fixed manual reduced motion bypassing travel/impact paths. | Actual renderer frame/pixel tests, visibility/disposal checks, corrupt catalog/dimensions failures. No real-device frame-time or memory measurement claimed. |
 | Accessibility/mobile | Added labelled settings, focus indicators, 44-pixel gear controls, responsive lab/navigation and reduced effects. Replay seek restores slider focus; automatic playback avoids heading focus and scroll resets. | 390-pixel navigation/control browser review; focus tests; OS/manual reduced checks. Formal screen-reader/contrast/keyboard acceptance remains open. |
 | Replay | Speed changes used to stop autoplay. They now re-arm at the chosen rate; seek/speed use frozen replay data without combat writes. | Completed-replay DOM regression and existing report/route/replay suites. |
+| In-fight review | A later real browser practice entry exposed an inherited spectator panel spanning both fighters and covering the lesson. Moved both into a collapsed top-bar Match tools drawer with a running-clock warning; retain consent/link actions and disclosure/focus during receipt refreshes. | Fresh guided entry and open/close browser review; actual equipped combat screenshot; strict-session DOM regression. |
 
 ## Next milestones toward AAA quality
 
