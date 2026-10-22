@@ -68,6 +68,14 @@ test('clear look survives link round-trip, filters work and candidate selection 
   assert.equal(h.requests.some(r=>r.url.startsWith('/api/')),false);
 });
 
+test('mobile wardrobe navigation only scrolls and focuses; preview numbers start collapsed',async t=>{
+ const h=await fixture(t);await h.ready;const posts=h.requests.length,scrolls=[],focus=[];
+ for(const selector of ['[data-lab-canvas]','.sl-controls']){const target=h.root.querySelector(selector);target.scrollIntoView=options=>scrolls.push({selector,options});target.focus=options=>focus.push({selector,options});}
+ assert.equal(h.root.querySelector('.sl-proposal').tagName,'DETAILS');assert.equal(h.root.querySelector('.sl-proposal').hasAttribute('open'),false);
+ h.root.querySelector('[data-lab-jump="gear"]').click();h.root.querySelector('[data-lab-jump="preview"]').click();
+ assert.deepEqual(scrolls.map(s=>s.selector),['.sl-controls','[data-lab-canvas]']);assert.ok(scrolls.every(s=>s.options.block==='start'));assert.ok(focus.every(s=>s.options.preventScroll===true));assert.equal(h.requests.length,posts);
+});
+
 test('corrupted catalog and mismatched asset dimensions fail closed without export',async t=>{
   const h=await fixture(t,{dimensions:true});await h.ready;
   assert.equal(h.root.querySelector('[data-lab-export]').disabled,true);assert.match(h.root.querySelector('[data-lab-notice]').textContent,/could not be checked/);

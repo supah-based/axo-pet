@@ -1,0 +1,89 @@
+{
+  "schemaVersion": "AXO_ARENA_ART_DIRECTION_SOURCE_VERIFICATION_V1",
+  "baseSha": "128649cbc0f22589087004b696930f9ace589706",
+  "implementationSha": "19ceaab84e63acc48b627b2e93144b8ea178c33e",
+  "draftPr": "https://github.com/supah-based/axo-pet/pull/14",
+  "sourceHashes": {
+    "apps/arena-web/app.mjs": "fce5cc385c845f157d84962c888cffac413776349632acc50a4133983e04f038",
+    "apps/arena-web/command-center.mjs": "594b1d5cb3999c8678bf23cbd78ec70612d735bcb5c505cc27b7e1fa6211a048",
+    "apps/arena-web/http.mjs": "38d6295a6d05e1834880ea14e28901d012f0f404162b855bacfe82dfd8dd7039",
+    "apps/arena-web/index.html": "d27546acf52a0eff7651b23e0f9c39e57ce5fe42ca14a03e64fbd729d2804d05",
+    "apps/arena-web/package.json": "bf9824902b2f0027eca0a6ec01e8ac9031c55a314052b11c3ec022689347793d",
+    "apps/arena-web/render.mjs": "4dbfbb6bb22170f5bf13c6fec2e44ec94d4800424ded05e0f4e6ace417248728",
+    "apps/arena-web/style-lab.mjs": "232c85a39dde4908b71bd64910f7f03940209ff0ac502d4c6a05a650bf41d964",
+    "apps/arena-web/tests/equipped-renderer.test.mjs": "e64269753f8997aca73ce08e9cacb11b0b63cc9f3b63c93092a468b9ec2981a8",
+    "apps/arena-web/tests/impact-revision.test.mjs": "6ad6776f266e769df8bc135514c7d7fd04641e6ca5f21f6867db761d34db5748",
+    "apps/arena-web/tests/repair-route-regressions.test.mjs": "dce8854ed9f766202cc679412502c3681b90ecd0be734509c1b3a999122e686b",
+    "apps/arena-web/tests/style-lab-dom.test.mjs": "a83ad0a5ba06c9ce463af95640690f1c7f77a8101c057dd9763583b3054e4efa",
+    "scripts/dev-server.mjs": "9dee27ff3d4ede829f26fe800013ad2f8017c4772065d5c29d038118e86efa7f",
+    "tests/dev-server.test.mjs": "6773fa128494f7a80a54dcc43808458a51f6df0e25c570b81d626f4c949b9c65",
+    "apps/arena-web/art-direction.css": "ad73eed643e04b948f07fccc467e3abda9f28e5653822e2da2d64515d87d0f4f",
+    "apps/arena-web/interface-kit.mjs": "09170b39e67d3b863493805e928816264e6bd6932c85d154e942c0eb8953f6b8",
+    "apps/arena-web/tests/art-direction-dom.test.mjs": "962381afe30208816077189223f37b69491723ed220fb2ac78c72517d5135fc8"
+  },
+  "sharedCatalogSha256": "45876f1faa4cd538ca4de3a70d0551cce392256cd2d610d62e3e52242e51069b",
+  "sharedAnatomyModelSha256": "4ae6be65c1ae2617c6665812916e3f1e8a6dea59ba0bac5f90c15e7418050c8b",
+  "runtimeArtManifestSha256": "95515f4dd2cb5fffa43c613cc9cbfe32a1653dada52cae345e32b49beabb05a6",
+  "localCheck": {
+    "status": "PASS",
+    "command": "npm run check",
+    "totalTests": 367,
+    "groups": {
+      "repository": 3,
+      "schemasAndHost": 54,
+      "wardrobe": 15,
+      "petApi": 17,
+      "passport": 15,
+      "visual": 46,
+      "contracts": 41,
+      "arena": 168,
+      "sourcePreview": 8
+    }
+  },
+  "browserReview": {
+    "status": "PASS_WITH_LIMITATIONS",
+    "syntheticOnly": true,
+    "checks": [
+      "1280x720 lobby: atmospheric stage, shared icons and exact 17950 XP/V1 level 10/eight equipped items.",
+      "390x844 lobby: identity has a separate region above actual equipped artwork; no horizontal page overflow.",
+      "390x844 Style Lab: five-piece Arcanist outfit, View outfit/Browse gear jumps and collapsed design numbers; Preview markers remain.",
+      "Synthetic practice accepts a block receipt; updated HUD and six-command rail retain exact numeric meters.",
+      "In-game concession panel opens and explicit confirmation completes the synthetic fight without a native modal stall.",
+      "Terminal mobile: participant DEFEAT matches server winner, both actors remain in frame, inactive command dock hidden, six result actions are 44 pixels high.",
+      "Result hit testing returns the header lobby button rather than the transparent veil; actual Back to lobby navigation succeeds.",
+      "844x390 result has independent scroll, primary actions visible, no horizontal overflow.",
+      "Browser console has no recorded warnings/errors during reviewed flow."
+    ],
+    "screenshots": [
+      "docs/reviews/arena-art-lobby.png",
+      "docs/reviews/arena-art-lobby-mobile.png",
+      "docs/reviews/arena-art-wardrobe-mobile.png",
+      "docs/reviews/arena-art-confirmation.png",
+      "docs/reviews/arena-art-result-mobile.png",
+      "docs/reviews/arena-art-result-landscape.png"
+    ],
+    "limits": [
+      "Invented memory-only Pet and fights, not real-wallet or production parity.",
+      "Specific reviewed states, not acceptance of all devices, names, equipment or combinations.",
+      "No measured FPS, memory, production latency or external playtest/audio acceptance."
+    ]
+  },
+  "exactSourceCi": {
+    "status": "PASS",
+    "jobs": [
+      "repository",
+      "contracts",
+      "arena"
+    ],
+    "url": "https://github.com/supah-based/axo-pet/actions/runs/39846086428"
+  },
+  "axoAcknowledgment": "NOT_ACKNOWLEDGED",
+  "axo010Through013Integration": "UNKNOWN",
+  "realWalletVerification": "NOT_PERFORMED",
+  "productionParity": "NOT_PERFORMED",
+  "liveDeployment": "NOT_PERFORMED",
+  "measuredDeviceFps": "NOT_PERFORMED",
+  "newRasterArt": "NOT_GENERATED",
+  "aaaCertification": "NOT_CLAIMED",
+  "review": "docs/reviews/arena-art-direction-review.md"
+}
