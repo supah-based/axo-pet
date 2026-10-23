@@ -10,6 +10,11 @@ async function fixture(t, options = {}) {
   return `http://127.0.0.1:${server.address().port}`;
 }
 
+test('sparring serves only presentation metadata and stylesheet, keeping policy and service off public routes',async t=>{
+ const origin=await fixture(t);for(const file of ['sparring-meta.mjs','sparring.css'])assert.equal((await fetch(origin+'/arena/'+file)).status,200);
+ for(const file of ['sparring-policy.mjs','service.mjs'])assert.equal((await fetch(origin+'/arena/'+file)).status,404);
+});
+
 test('tactical status modules and raster effects are served with pinned alpha media and no PNG masters',async t=>{
  const origin=await fixture(t),{readFile}=await import('node:fs/promises'),{createHash}=await import('node:crypto'),sharp=(await import('sharp')).default;
  for(const name of ['combat-status.mjs','tactics-art-bank.mjs'])assert.equal((await fetch(origin+'/arena/'+name)).status,200);
