@@ -1,0 +1,6 @@
+/* Shared navigation addition; no Arena permissions or wallet/session behavior. */
+.pet-nav nav>a.axo-arena-link,.pet-ecosystem-links>a.axo-arena-link,.aw-shell nav>a.axo-arena-link,body>header nav>a.axo-arena-link{color:#d6ff4d;white-space:nowrap}
+.pet-nav nav>a.axo-arena-link:focus-visible,.pet-ecosystem-links>a.axo-arena-link:focus-visible{outline:2px solid #d6ff4d;outline-offset:5px}
+.aw-shell,.aw-shell nav,body>header nav{min-width:0}
+@media(max-width:860px){.pet-nav nav,.pet-ecosystem-links{max-height:calc(100dvh - var(--nav,76px));overflow-y:auto;overscroll-behavior:contain}}
+@media(max-width:600px){.aw-shell{flex-wrap:wrap}.aw-shell nav{width:100%}body>header:not(.pet-nav):not(.pet-ecosystem-nav){flex-wrap:wrap;height:auto;min-height:72px;padding-block:16px;row-gap:14px}body>header:not(.pet-nav):not(.pet-ecosystem-nav) nav{flex-wrap:wrap;gap:12px 16px}}

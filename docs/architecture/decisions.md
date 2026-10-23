@@ -1,5 +1,11 @@
 # Architecture decisions
 
+## ADR-029 — Pet site navigation and existing Arena entry
+
+**Decision:** Add a same-origin `/arena/` anchor to owned static headers and extract only the small public Pet ecosystem shell needed by Hatchery. Preserve hostname/view behavior, canonical metadata and wallet-control markup; render the same header in the labeled local preview without enabling host APIs. Serve the exact local shell through the development allowlist, keep inherited shell CSS fallback, and publish cache-versioned HTML/header/CSS together. Do not import the unrelated global AXO Vision navigation or its account/treasury behavior.
+
+**Reason:** A reachable Arena entry page was absent from the website menu. Navigation should make it discoverable while the existing Arena session/Pet gate retains authority. Host templates outside this extraction still require AXO integration and readback; a GitHub push is not a deployment. See AXO-024.
+
 ## ADR-028 — Versioned local defense and energy candidate
 
 **Decision:** Put real numeric defense/energy changes behind an explicit Training Dojo ruleset, defaulting to current V1. Canonically validate the copied build, preserve exact XP/gear bounds/mastery, reuse historical simultaneous HP/status/terminal behavior, and replace only candidate energy accounting with an explicit receipt. Give successful blocks a bounded conditional refund and Reversal a meaningful capped return. Both known-reply comparisons and local steps dispatch the same version. Temporary local kits never save a build. Keep the match service, bot policy, historical replay verification and contracts outside this candidate; reject unsupported versions and server ruleset inputs.
