@@ -11,7 +11,7 @@ import {styleLabMarkup,mountStyleLab} from './style-lab.mjs';
 import {activePresentation,updatePresentation} from './presentation.mjs';
 import {combatAudio} from './combat-audio.mjs';
 import {activeControls,updateControls,rebindControl,controlAction,DEFAULT_BINDINGS,ARENA_SCENES} from './controls.mjs';
-import {tacticsMarkup,mountTacticsLab} from './tactics-lab.mjs';
+import {tacticsMarkup,mountTacticsLab} from './tactics-lab.mjs?defense=1';
 import {replayBookmarks,resolvedRecap} from './tactics-model.mjs';
 import {fittedInspectorMarkup as equippedInspectorMarkup,mountFittedInspector as mountEquippedInspector} from './fitted-inspector.mjs';
 import {ArenaRenderer} from './render.mjs?ui=1.9&rev=3&motion=1&command=1&equipped=1&fitted=1&sound=1&quality=1&meme=1&status=1';

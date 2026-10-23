@@ -1,0 +1,248 @@
+{
+  "scope": "3456 games / 1728 mirrored pairs. All six lineage matchups, levels 1/6/10 plus level-10 equal capped V1 gear (32 total), six role pairings, deterministic tie seed 17. Same builds and finite one-exchange policies under each ruleset. Policies enumerate legal replies, never private commitments. Mirrors are correlated; ranks, asymmetric gear and human play require additional acceptance. Exact local XP remains V1; no level-20 combat authority or Preview stats.",
+  "games": 3456,
+  "mirrors": 1728,
+  "rules": {
+    "baseRecovery": 1,
+    "guardRecovery": 1,
+    "minimumBlock": 8,
+    "reversalCost": 2,
+    "reversalShield": 17,
+    "reversalCounter": 16,
+    "rechargeExtra": 3
+  },
+  "totals": {
+    "v1": {
+      "games": 1728,
+      "exchanges": 11828,
+      "draws": 396,
+      "liquidation": 230,
+      "limit": 0,
+      "moves": {
+        "rug_pull": 2694,
+        "market_order": 10772,
+        "reversal": 282,
+        "diamond_hands": 614,
+        "pepe_breakout": 2310,
+        "exit_liquidity": 1546,
+        "epic": 1918,
+        "touch_grass": 1682,
+        "lineage_a": 1402,
+        "lineage_b": 436
+      },
+      "starvedTurns": 1240,
+      "turns": 23656,
+      "returned": 2886,
+      "meanExchanges": 6.84,
+      "liquidationPercent": 13.3,
+      "limitPercent": 0,
+      "starvedTurnPercent": 5.2,
+      "defensePercent": 12.7
+    },
+    "candidate": {
+      "games": 1728,
+      "exchanges": 13006,
+      "draws": 294,
+      "liquidation": 370,
+      "limit": 0,
+      "moves": {
+        "rug_pull": 2264,
+        "market_order": 12874,
+        "reversal": 2178,
+        "diamond_hands": 704,
+        "pepe_breakout": 1412,
+        "exit_liquidity": 1688,
+        "touch_grass": 1692,
+        "lineage_a": 946,
+        "epic": 1874,
+        "lineage_b": 376,
+        "recharge": 4
+      },
+      "starvedTurns": 5028,
+      "turns": 26012,
+      "returned": 23368,
+      "meanExchanges": 7.53,
+      "liquidationPercent": 21.4,
+      "limitPercent": 0,
+      "starvedTurnPercent": 19.3,
+      "defensePercent": 19
+    }
+  },
+  "byMatchup": {
+    "v1:pressure/pressure": {
+      "games": 288,
+      "firstWins": 92,
+      "draws": 104,
+      "exchanges": 1534,
+      "firstWinPercent": 31.9,
+      "meanExchanges": 5.33
+    },
+    "v1:guard/pressure": {
+      "games": 288,
+      "firstWins": 68,
+      "draws": 56,
+      "exchanges": 1730,
+      "firstWinPercent": 23.6,
+      "meanExchanges": 6.01
+    },
+    "v1:support/pressure": {
+      "games": 288,
+      "firstWins": 76,
+      "draws": 64,
+      "exchanges": 1994,
+      "firstWinPercent": 26.4,
+      "meanExchanges": 6.92
+    },
+    "v1:adaptive/pressure": {
+      "games": 288,
+      "firstWins": 118,
+      "draws": 54,
+      "exchanges": 1662,
+      "firstWinPercent": 41,
+      "meanExchanges": 5.77
+    },
+    "v1:guard/adaptive": {
+      "games": 288,
+      "firstWins": 30,
+      "draws": 58,
+      "exchanges": 2182,
+      "firstWinPercent": 10.4,
+      "meanExchanges": 7.58
+    },
+    "v1:support/adaptive": {
+      "games": 288,
+      "firstWins": 90,
+      "draws": 60,
+      "exchanges": 2726,
+      "firstWinPercent": 31.3,
+      "meanExchanges": 9.47
+    },
+    "candidate:pressure/pressure": {
+      "games": 288,
+      "firstWins": 92,
+      "draws": 104,
+      "exchanges": 1574,
+      "firstWinPercent": 31.9,
+      "meanExchanges": 5.47
+    },
+    "candidate:guard/pressure": {
+      "games": 288,
+      "firstWins": 104,
+      "draws": 26,
+      "exchanges": 1920,
+      "firstWinPercent": 36.1,
+      "meanExchanges": 6.67
+    },
+    "candidate:support/pressure": {
+      "games": 288,
+      "firstWins": 112,
+      "draws": 12,
+      "exchanges": 2100,
+      "firstWinPercent": 38.9,
+      "meanExchanges": 7.29
+    },
+    "candidate:adaptive/pressure": {
+      "games": 288,
+      "firstWins": 142,
+      "draws": 22,
+      "exchanges": 1840,
+      "firstWinPercent": 49.3,
+      "meanExchanges": 6.39
+    },
+    "candidate:guard/adaptive": {
+      "games": 288,
+      "firstWins": 146,
+      "draws": 68,
+      "exchanges": 2528,
+      "firstWinPercent": 50.7,
+      "meanExchanges": 8.78
+    },
+    "candidate:support/adaptive": {
+      "games": 288,
+      "firstWins": 76,
+      "draws": 62,
+      "exchanges": 3044,
+      "firstWinPercent": 26.4,
+      "meanExchanges": 10.57
+    }
+  },
+  "byLineage": {
+    "v1:emerald_sprout": {
+      "entries": 576,
+      "wins": 122,
+      "draws": 156,
+      "winPercent": 21.2
+    },
+    "v1:sapphire_tide": {
+      "entries": 576,
+      "wins": 202,
+      "draws": 154,
+      "winPercent": 35.1
+    },
+    "v1:amethyst_dream": {
+      "entries": 576,
+      "wins": 208,
+      "draws": 148,
+      "winPercent": 36.1
+    },
+    "v1:solar_peach": {
+      "entries": 576,
+      "wins": 432,
+      "draws": 40,
+      "winPercent": 75
+    },
+    "v1:rose_bloom": {
+      "entries": 576,
+      "wins": 104,
+      "draws": 154,
+      "winPercent": 18.1
+    },
+    "v1:midnight_mint": {
+      "entries": 576,
+      "wins": 264,
+      "draws": 140,
+      "winPercent": 45.8
+    },
+    "candidate:emerald_sprout": {
+      "entries": 576,
+      "wins": 186,
+      "draws": 108,
+      "winPercent": 32.3
+    },
+    "candidate:sapphire_tide": {
+      "entries": 576,
+      "wins": 264,
+      "draws": 124,
+      "winPercent": 45.8
+    },
+    "candidate:amethyst_dream": {
+      "entries": 576,
+      "wins": 230,
+      "draws": 112,
+      "winPercent": 39.9
+    },
+    "candidate:solar_peach": {
+      "entries": 576,
+      "wins": 308,
+      "draws": 42,
+      "winPercent": 53.5
+    },
+    "candidate:rose_bloom": {
+      "entries": 576,
+      "wins": 152,
+      "draws": 98,
+      "winPercent": 26.4
+    },
+    "candidate:midnight_mint": {
+      "entries": 576,
+      "wins": 294,
+      "draws": 104,
+      "winPercent": 51
+    }
+  },
+  "sourceHashes": {
+    "apps/arena-web/catalog.mjs": "aeac4f9c733fdf863eaafc28ea8a01a13dc9737caa0a78275491508bc4d29bda",
+    "apps/arena-web/combat.mjs": "a249a6c2a347bea3b932885625609d91f15f57b0433f819f64896c9e00b38916",
+    "apps/arena-web/defense-energy.mjs": "f2f02b22b1d4844aee4597120c622d7a609fe57851c0b736546eca5cb54b6162"
+  }
+}
