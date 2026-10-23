@@ -229,3 +229,5 @@ Each row refers to the exact implementation pinned in AXO-019, reviewed by Codex
 | K4 | PARTIAL | Re-review fixed dropdown/label and terminal overlap issues; local metrics collect no telemetry. | Players/QA return sanitized observed defects, iterate with fresh participants. |
 
 No source row closes an external requirement by implication. AXO-019 contains the next concrete owner actions; none of these review artifacts authorize V2 activation, rewards, a live rollout or a claim of AAA/device/accessibility certification.
+
+AXO-021 follow-up: [status/counterplay review](reviews/arena-status-review.md) addresses modifier duration, visible epic gates, counter semantics/timing/occlusion, late-game learning and disclosure focus. It adds a focused 57,600-pair audit and two original raster assets. These extend source evidence for combat clarity, counterplay learning, phone UI and culture; the external acceptance column above remains open.

@@ -1,0 +1,15 @@
+// Finite local audit, never a predictor of hidden choices or a balance approval.
+import assert from'node:assert/strict';import{readFile,writeFile}from'node:fs/promises';import{createHash}from'node:crypto';
+import{LINEAGES,XP,defaultBuild}from'../apps/arena-web/catalog.mjs';import{epicCondition}from'../apps/arena-web/combat.mjs';import{createDrill,PLAYBOOKS,drillLegal,stepDrill}from'../apps/arena-web/tactics-model.mjs';import{combatStatus}from'../apps/arena-web/combat-status.mjs';import{memeFxSample}from'../apps/arena-web/meme-fx.mjs';import{contactCue}from'../apps/arena-web/combat-beats.mjs';
+let states=0,pairs=0,counters=0,lateHeals=0,modifierWindows=0;const moves={};
+for(const level of [6,10])for(const own of Object.keys(LINEAGES))for(const rival of Object.keys(LINEAGES))for(const ownBook of Object.keys(PLAYBOOKS))for(const book of Object.keys(PLAYBOOKS))for(const preset of ['status','liquidation']){
+ const build=createDrill(defaultBuild(own,XP[level-1]),own,'opening',ownBook).fighters[1].build,s=createDrill(build,rival,preset,book),before=JSON.stringify(s);states++;
+ for(const a of drillLegal(s,0))for(const b of drillLegal(s,1)){
+  const out=stepDrill(s,[a,b]),last=out.log.at(-1);pairs++;moves[a]=(moves[a]||0)+1;
+  for(const side of [0,1]){const f=out.fighters[side],view=combatStatus(f,out.round);assert.equal(view.epic.conditionMet,epicCondition(f));assert.equal(view.effects.length,Number(f.buff>0)+Number(f.weak>0));assert(f.hp>=0&&f.hp<=f.build.maxHp);assert(f.energy>=0&&f.energy<=10);if(s.fighters[side].buff||s.fighters[side].weak)modifierWindows++;
+   const at=contactCue(last,side),counter=last.effects[1-side].counter,fx=memeFxSample(last,side,at,'counter');assert.equal(fx.active,last.moves[side]==='reversal'&&counter>0&&last.effects[side].blocked>0);if(fx.active){counters++;assert.equal(fx.target,side);assert(!memeFxSample(last,side,at,'guard').active);}if(preset==='liquidation'){assert.equal(last.effects[side].storm,6);if(last.effects[side].healed>0)lateHeals++;}
+  }
+ }assert.equal(JSON.stringify(s),before);
+}
+const files=['apps/arena-web/catalog.mjs','apps/arena-web/combat.mjs','apps/arena-web/combat-status.mjs','apps/arena-web/tactics-model.mjs','apps/arena-web/meme-fx.mjs'];const sourceHashes=Object.fromEntries(await Promise.all(files.map(async path=>[path,createHash('sha256').update(await readFile(new URL('../'+path,import.meta.url))).digest('hex')])));
+const report={scope:'Local synthetic reference builds at V1 levels 6/10; all six lineages on each seat, all four playbooks on each seat, one-exchange modifier and exchange-10 Liquidation drills. Every legal pair; both seats checked for snapshot/status/condition/counter cue agreement and immutable input. No optimal strategy, human balance, live performance or NFT/V2 authority claim.',states,pairs,counters,lateHeals,modifierWindows,moves,sourceHashes};await writeFile(new URL('../docs/reviews/arena-status-audit.json',import.meta.url),JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify({states,pairs,counters,lateHeals,modifierWindows,moves}));
