@@ -1,0 +1,28 @@
+{
+  "scope": "Local synthetic reference builds at V1 levels 6/10; all six lineages on each seat, all four playbooks on each seat, one-exchange modifier and exchange-10 Liquidation drills. Every legal pair; both seats checked for snapshot/status/condition/counter cue agreement and immutable input. No optimal strategy, human balance, live performance or NFT/V2 authority claim.",
+  "states": 2304,
+  "pairs": 57600,
+  "counters": 2448,
+  "lateHeals": 7200,
+  "modifierWindows": 57600,
+  "moves": {
+    "market_order": 10080,
+    "diamond_hands": 8640,
+    "pepe_breakout": 5760,
+    "touch_grass": 5760,
+    "recharge": 11520,
+    "rug_pull": 2880,
+    "exit_liquidity": 2880,
+    "reversal": 2880,
+    "wen": 2880,
+    "lineage_a": 2880,
+    "lineage_b": 1440
+  },
+  "sourceHashes": {
+    "apps/arena-web/catalog.mjs": "aeac4f9c733fdf863eaafc28ea8a01a13dc9737caa0a78275491508bc4d29bda",
+    "apps/arena-web/combat.mjs": "a249a6c2a347bea3b932885625609d91f15f57b0433f819f64896c9e00b38916",
+    "apps/arena-web/combat-status.mjs": "555368bf4b75eaa04b58479067cbd36b18a34d435766160ee72db8a7d6b5cc4a",
+    "apps/arena-web/tactics-model.mjs": "6962fab9c3737de9164a43004e14d788d5a9d2724b5393c3136243da8ad25bf0",
+    "apps/arena-web/meme-fx.mjs": "565dff365ded9b68c86a94e870cac5ab67168b258ea67272fbf0b04bace62c19"
+  }
+}

@@ -1,6 +1,6 @@
 import {buildPet,defaultBuild,LINEAGES} from './catalog.mjs';
 import {newBattle,resolve,legalMoves,values} from './combat.mjs';
-export const DRILLS=Object.freeze({opening:'Opening exchange',recovery:'Recover under pressure',clutch:'Simultaneous finish',epic:'Epic readiness demo'});
+export const DRILLS=Object.freeze({opening:'Opening exchange',recovery:'Recover under pressure',clutch:'Simultaneous finish',epic:'Epic readiness demo',liquidation:'Liquidation · exchange 10',status:'One-exchange boost & weakness'});
 export const PLAYBOOKS=Object.freeze({balanced:'Balanced · default',pressure:'Pressure · break & pierce',guard:'Diamond vault · guard & counter',support:'Copium crew · heal & recover'});
 const PLAYBOOK_MOVES=Object.freeze({pressure:['market_order','rug_pull','exit_liquidity','pepe_breakout'],guard:['diamond_hands','reversal','wen','market_order'],support:['touch_grass','lineage_b','diamond_hands','lineage_a']});
 export const MOVE_LESSONS=Object.freeze({
@@ -22,9 +22,12 @@ export function createDrill(build,lineage=build.lineageId,preset='opening',playb
  const own=buildPet(build);let dummy=defaultBuild(lineage,own.xp);
  if(playbook!=='balanced'){const keys=[...new Set([...PLAYBOOK_MOVES[playbook],...dummy.loadout,...Object.keys(dummy.skills)])].filter(k=>!['epic','recharge'].includes(k)&&dummy.skills[k].level<=dummy.level).slice(0,4);dummy=buildPet({...dummy,loadout:keys});}
  const battle=newBattle([own,dummy]);
+ if(preset==='liquidation')battle.round=10;
  for(const f of battle.fighters){
   if(preset==='recovery'){f.hp=Math.ceil(f.build.maxHp*.45);f.energy=3;}
   if(preset==='clutch')f.hp=30;
+  if(preset==='liquidation'){f.hp=Math.ceil(f.build.maxHp*.65);f.energy=6;}
+  if(preset==='status'){f.buff=3;f.weak=.1;f.energy=10;}
   if(preset==='epic'){f.charge=100;f.energy=10;f.blocks=2;f.supports=2;f.hits=3;f.counters=2;f.streak=2;f.used=f.build.loadout.slice(0,3);}
  }
  return battle;

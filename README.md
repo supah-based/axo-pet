@@ -10,6 +10,8 @@ Private monorepo for the `axo.pet` product surface:
 
 ## Current status
 
+Latest Arena source: [AXO-021](docs/handoffs/AXO-021.md) adds visible own combat status, accurate one-exchange modifier wording, local modifier/Liquidation drills and original raster return-counter/Liquidated art. [Guide and focused audit](docs/ARENA_STATUS_COUNTERPLAY.md): 57,600 legal pairs checked, with V1 combat and cosmetic-only Preview boundaries preserved. Live/physical/player acceptance remains separate.
+
 Latest Arena source: [AXO-020](docs/handoffs/AXO-020.md) adds local counterplay playbooks/comparisons, training-only contact inspection and original generated degen effects/decals. [The audit](docs/ARENA_MEME_COMBAT.md) covers 176,004 legal move pairs without changing V1 balance, XP or equipment. Fitted masks stay registered, previews stay cosmetic and V2 stays locked. Live/authenticated acceptance is separate.
 
 Prior Arena source [AXO-019](docs/handoffs/AXO-019.md) establishes local Training Dojo, clearer receipts/replay, phone entry, configurable controls/comfort, diagnostics and two painted environments. See [the guide](docs/ARENA_QUALITY_PASS.md) and [44-point review/disposition](docs/ARENA_QUALITY_CHECKLIST.md). Preview outfits stay cosmetic and V2 stays locked. Host, physical-device and player acceptance are pending separately.
