@@ -1,0 +1,12 @@
+// Finite offline one-exchange audit. Never a live prediction, solver or rebalance authority.
+import assert from'node:assert/strict';import{readFile,writeFile}from'node:fs/promises';import{createHash}from'node:crypto';
+import{LINEAGES,XP,defaultBuild}from'../apps/arena-web/catalog.mjs';import{createDrill,PLAYBOOKS,drillLegal,stepDrill,counterplayRows}from'../apps/arena-web/tactics-model.mjs';
+let states=0,pairs=0;const moveCounts={},examples=[];
+for(const level of [1,4,6,10])for(const own of Object.keys(LINEAGES))for(const rival of Object.keys(LINEAGES))for(const ownBook of Object.keys(PLAYBOOKS))for(const book of Object.keys(PLAYBOOKS))for(const preset of ['opening','recovery','epic']){
+ const ownInput=createDrill(defaultBuild(own,XP[level-1]),own,'opening',ownBook).fighters[1].build,state=createDrill(ownInput,rival,preset,book),snapshot=JSON.stringify(state);states++;
+ for(const move of drillLegal(state,0)){const rows=counterplayRows(state,move);assert.equal(rows.length,drillLegal(state,1).length);for(const row of rows){const after=stepDrill(state,[move,row.reply]);for(const f of after.fighters){assert(Number.isInteger(f.hp)&&f.hp>=0&&f.hp<=f.build.maxHp);assert(Number.isInteger(f.energy)&&f.energy>=0&&f.energy<=10);assert(f.charge>=0&&f.charge<=100);}assert.equal(row.own.hpAfter,after.fighters[0].hp);moveCounts[move]=(moveCounts[move]||0)+1;pairs++;}
+  if(level===10&&own===rival&&ownBook==='balanced'&&book==='guard'&&preset==='opening'&&['market_order','pepe_breakout'].includes(move))examples.push({lineage:own,move,replies:rows.map(r=>({reply:r.reply,dealt:r.own.damageDealt,taken:r.own.damageReceived,blocked:r.own.blocked,heal:r.own.healed,hpAfter:r.own.hpAfter,energyAfter:r.own.energyAfter}))});
+ }assert.equal(JSON.stringify(state),snapshot);
+}
+const paths=['apps/arena-web/catalog.mjs','apps/arena-web/combat.mjs','apps/arena-web/tactics-model.mjs'];const sourceHashes=Object.fromEntries(await Promise.all(paths.map(async p=>[p,createHash('sha256').update(await readFile(new URL('../'+p,import.meta.url))).digest('hex')])));
+const report={scope:'Synthetic legal reference builds, four playbooks on each seat, levels1/4/6/10, opening/recovery/epic-ready states. One exchange only; no hidden live state, optimal-strategy claim, human-balance acceptance, NFT ownership or V2 activation.',states,pairs,moveCounts,sourceHashes,examples};await writeFile(new URL('../docs/reviews/arena-counterplay-audit.json',import.meta.url),JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify({states,pairs,moveCounts}));

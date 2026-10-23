@@ -1,0 +1,22 @@
+{
+  "tool": "built-in image_gen",
+  "date": "2026-10-23",
+  "prompts": [
+    {
+      "id": "gas-chaos",
+      "prompt": "Use case: stylized-concept. Asset type: original raster game artwork for AXO Pet Arena, cute axolotl crypto-degen street-art game. Actual transparent background with clean alpha, isolated artwork centered with generous transparent margins, no opaque background, no checkerboard, no scene, no frame, no UI, no characters wearing gear, no watermarks. Style: polished hand-painted comic graffiti, rich charcoal ink outlines, tactile spray paint, acid-lime and violet glow, a few warm gold accents. Readable strong silhouette at small game sizes; limited debris and no large hazy cloud. Original art only, no existing brand or coin logos. Create a fun die-cut graffiti decal: a tiny cheeky axolotl-shaped gas pump with a banana sticker and a short coiled cable, next to chunky carefully legible lettering in two lines. Exact text: 'LOW GAS' then 'HIGH CHAOS'. Aspect ratio 3:2. This is a decorative lobby sticker, not an attack or reward badge."
+    },
+    {
+      "id": "diamond-guard",
+      "prompt": "Use case: stylized-concept. Asset type: original raster game artwork for AXO Pet Arena, cute axolotl crypto-degen street-art game. Actual transparent background with clean alpha, isolated artwork centered with generous transparent margins, no opaque background, no checkerboard, no scene, no frame, no UI, no characters wearing gear, no watermarks. Style: polished hand-painted comic graffiti, rich charcoal ink outlines, tactile spray paint, acid-lime and violet glow, a few warm gold accents. Readable strong silhouette at small game sizes; limited debris and no large hazy cloud. Original art only, no existing brand or coin logos. Create a single magical shield impact VFX cutout: a faceted translucent violet diamond barrier, three small lime glints along its upper rim and one small defender-facing contact flare. Front view, broad roughly circular silhouette, an open mostly transparent center so the Pet silhouette remains visible. No lettering, no paws or hands. It must read as absorbing a hit, not as an explosion or a collectible. Square composition."
+    },
+    {
+      "id": "candle-burst",
+      "prompt": "Use case: stylized-concept. Asset type: original raster game artwork for AXO Pet Arena, cute axolotl crypto-degen street-art game. Actual transparent background with clean alpha, isolated artwork centered with generous transparent margins, no opaque background, no checkerboard, no scene, no frame, no UI, no characters wearing gear, no watermarks. Style: polished hand-painted comic graffiti, rich charcoal ink outlines, tactile spray paint, acid-lime and violet glow, a few warm gold accents. Readable strong silhouette at small game sizes; limited debris and no large hazy cloud. Original art only, no existing brand or coin logos. Create a single energetic attack impact VFX cutout: an upward lime candlestick with a gold wick exploding into a compact angular violet-and-lime comic burst, tiny fragments resembling market ticks. Directional left-to-right flow with the main sharp impact on the right. No text, no numbers, no actual chart background. Strong opaque core with restrained translucent glow. Square composition."
+    },
+    {
+      "id": "copium-bloom",
+      "prompt": "Use case: stylized-concept. Asset type: original raster game artwork for AXO Pet Arena, cute axolotl crypto-degen street-art game. Actual transparent background with clean alpha, isolated artwork centered with generous transparent margins, no opaque background, no checkerboard, no scene, no frame, no UI, no characters wearing gear, no watermarks. Style: polished hand-painted comic graffiti, rich charcoal ink outlines, tactile spray paint, acid-lime and violet glow, a few warm gold accents. Readable strong silhouette at small game sizes; limited debris and no large hazy cloud. Original art only, no existing brand or coin logos. Create a single healing/support VFX cutout: a compact curl of mint-green copium vapor unfurling into three fresh grass blades and violet sparkles, two small soft heart-like glints. Rounded upward motion, mostly transparent open center, warm friendly degen humor, readable as recovery rather than poison or damage. No bottles, no hands, no lettering. Square composition."
+    }
+  ]
+}
