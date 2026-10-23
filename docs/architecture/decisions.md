@@ -1,5 +1,11 @@
 # Architecture decisions
 
+## ADR-028 — Versioned local defense and energy candidate
+
+**Decision:** Put real numeric defense/energy changes behind an explicit Training Dojo ruleset, defaulting to current V1. Canonically validate the copied build, preserve exact XP/gear bounds/mastery, reuse historical simultaneous HP/status/terminal behavior, and replace only candidate energy accounting with an explicit receipt. Give successful blocks a bounded conditional refund and Reversal a meaningful capped return. Both known-reply comparisons and local steps dispatch the same version. Temporary local kits never save a build. Keep the match service, bot policy, historical replay verification and contracts outside this candidate; reject unsupported versions and server ruleset inputs.
+
+**Reason:** Free-attack recovery and modest counter payoff underused defense in finite reference tests. A mirrored numerical comparison and playable prototype make the proposal reviewable without rewriting historical rules or granting Preview power. Human strategy, longer-horizon recovery, asymmetric gear and lineage acceptance are still needed before an official versioned room/replay design. Cosmetic tiers and all V2 Gear gates remain independent. See ARENA_DEFENSE_ENERGY.md and AXO-023.
+
 ## ADR-001 — Dedicated private monorepo
 
 **Decision:** Maintain Hatchery, Pet NFT, Gear, visuals and Arena in one private `axo-pet` monorepo.

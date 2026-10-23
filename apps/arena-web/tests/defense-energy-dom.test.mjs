@@ -1,0 +1,8 @@
+import test from'node:test';import assert from'node:assert/strict';import{harness}from'./repair-dom-harness.mjs';
+const select=(h,s,value)=>{const n=h.document.querySelector(s);assert(n,s);Object.defineProperty(n,'value',{configurable:true,value});n.dispatchEvent(new h.window.Event('change',{bubbles:true}));};
+test('candidate selection and local counter kit change actual simulation/reference values without authority writes',async t=>{
+ const h=await harness();t.after(()=>h.close());const before=JSON.stringify(h.service.db),posts=h.requests.filter(r=>r.body!==undefined).length;await h.click('[data-action="training"]');
+ assert(!h.document.querySelector('.defense-brief'));select(h,'[data-drill-ruleset]','defense');select(h,'[data-drill-kit]','guard');assert.match(h.document.querySelector('.defense-brief').textContent,/Candidate.*V1 fights/s);assert.match(h.document.querySelector('.drill-watermark').textContent,/DEFENSE LAB/);
+ select(h,'[data-drill-side="0"]','reversal');select(h,'[data-drill-side="1"]','market_order');await h.click('[data-drill-step]');assert.equal(h.last().state.battle.version,'axo-arena-defense-lab-1');assert(h.document.querySelector('.defense-energy-receipt'));assert.equal(h.last().state.battle.log[0].energy[0].spent,2);assert(h.document.querySelectorAll('[data-defense-metric]').length>=3);
+ select(h,'[data-drill-ruleset]','v1');assert.equal(h.last().state.battle.version,'axo-pet-arena-1.2-review');assert.equal(h.last().state.battle.log.length,0);assert(!h.document.querySelector('.defense-brief'));assert.equal(JSON.stringify(h.service.db),before);assert.equal(h.requests.filter(r=>r.body!==undefined).length,posts);assert.deepEqual(h.errors,[]);
+});

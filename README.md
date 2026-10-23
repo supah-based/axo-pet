@@ -10,6 +10,8 @@ Private monorepo for the `axo.pet` product surface:
 
 ## Current status
 
+Latest defense/energy source: [AXO-023](docs/handoffs/AXO-023.md) adds an explicit **local Defense Lab candidate** to Training Dojo: stronger conditional counters, block energy recovery, temporary guard kit and detailed energy receipts. [Rules and 3,456-game comparison](docs/ARENA_DEFENSE_ENERGY.md). Official V1 rules/replays remain intact; Preview styles stay cosmetic and V2 Gear stays locked. Player acceptance is required before an official ruleset.
+
 Latest Arena source: [AXO-022](docs/handoffs/AXO-022.md) adds three opt-in sparring rivals with actual-engine choices and resolved-history adaptation. [Research and audit](docs/ARENA_ADAPTIVE_SPARRING.md): 3,456 games / 1,728 mirrored pairs, with 455 required tests passing. Existing/guided practice, verified V1 combat/replays, fitted masks, cosmetic Previews and V2 locks remain intact. Live/player acceptance is separate.
 
 Prior Arena source: [AXO-021](docs/handoffs/AXO-021.md) adds visible own combat status, accurate one-exchange modifier wording, local modifier/Liquidation drills and original raster return-counter/Liquidated art. [Guide and focused audit](docs/ARENA_STATUS_COUNTERPLAY.md): 57,600 legal pairs checked, with V1 combat and cosmetic-only Preview boundaries preserved. Live/physical/player acceptance remains separate.

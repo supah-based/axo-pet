@@ -10,6 +10,11 @@ async function fixture(t, options = {}) {
   return `http://127.0.0.1:${server.address().port}`;
 }
 
+test('Defense Lab public modules load but cannot opt a server fight into candidate rules',async t=>{
+ const origin=await fixture(t,{arenaReview:'reports'});for(const file of ['defense-energy.mjs','defense-energy.css'])assert.equal((await fetch(origin+'/arena/'+file)).status,200);
+ const response=await fetch(origin+'/api/arena/challenges',{method:'POST',headers:{'Content-Type':'application/json',Origin:origin},body:JSON.stringify({practice:true,ruleset:'axo-arena-defense-lab-1'})});assert.equal(response.status,400);assert.match(await response.text(),/Only practice/);
+});
+
 test('sparring serves only presentation metadata and stylesheet, keeping policy and service off public routes',async t=>{
  const origin=await fixture(t);for(const file of ['sparring-meta.mjs','sparring.css'])assert.equal((await fetch(origin+'/arena/'+file)).status,200);
  for(const file of ['sparring-policy.mjs','service.mjs'])assert.equal((await fetch(origin+'/arena/'+file)).status,404);
