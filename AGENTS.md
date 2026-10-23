@@ -13,6 +13,8 @@ Read HANDOFF.md, README.md, CONTRIBUTING.md, SECURITY.md and docs/MIGRATION_PLAN
 
 ## Collaboration with AXO on OpenClaw
 
+- Current counterplay/culture pass: docs/handoffs/AXO-020.md and docs/ARENA_MEME_COMBAT.md. Dummy playbooks and response comparisons use local known reference builds only; never read pending rival choices or write match/XP/gear state. Contact-frame holds apply exclusively to Training Dojo. Painted FX are optional fixed hash-bound public media behind unchanged actors/tool/finger masks, with bounded cache/streaming, reduce/disable controls and shared contact cues. Publish the full meme-v1 client/static unit; preserve V1 rules and every V2 lock.
+
 - Current quality pass: docs/handoffs/AXO-019.md and docs/ARENA_QUALITY_PASS.md. Training Dojo copies the verified V1 build into explicit local simulation only; never POST match/XP/gear changes. Preserve readonly resolved receipts/replay moments, frozen values, remapped typing/dialog guards, bounded local-only diagnostics, optional comfort and fitted rig/grip/masks. Publish the complete client/static/environment unit. All 44 checklist dispositions distinguish source evidence from live/device/player acceptance; no V2 activation or rewards are authorized.
 
 - Current combat feel/sound: docs/handoffs/AXO-018.md and docs/ARENA_COMBAT_FEEL_SOUND.md. Preserve shared receipt contact timing, gesture-only checked PCM playback, mute/volume/mono controls, bounded sources and hidden/reconnect/view cancellation. Publish the complete audio-v1 bank and generated metadata with client/static routes. Keep fitted geometry/rigid grip/masks, verified V1 authority and cosmetic-only Previews unchanged; audio never reads private pending choices. Physical listening/live parity remain separate acceptance.

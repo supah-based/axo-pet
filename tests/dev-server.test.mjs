@@ -10,6 +10,13 @@ async function fixture(t, options = {}) {
   return `http://127.0.0.1:${server.address().port}`;
 }
 
+test('painted meme/effect assets retain alpha, exact hashes and bounded public delivery',async t=>{
+ const origin=await fixture(t),{readFile}=await import('node:fs/promises'),{createHash}=await import('node:crypto'),sharp=(await import('sharp')).default;
+ for(const name of ['meme-art-bank.mjs','meme-fx.mjs','meme-combat.css'])assert.equal((await fetch(origin+'/arena/'+name)).status,200);
+ const manifest=JSON.parse(await readFile(new URL('../apps/arena-web/assets/runtime/meme-v1/manifest.json',import.meta.url),'utf8'));let total=0;
+ for(const entry of Object.values(manifest.entries)){const r=await fetch(origin+entry.url);assert.equal(r.status,200);assert.match(r.headers.get('content-type'),/image\/webp/);const bytes=Buffer.from(await r.arrayBuffer());assert.equal(bytes.length,entry.bytes);assert.equal(createHash('sha256').update(bytes).digest('hex'),entry.sha256);const meta=await sharp(bytes).metadata(),stats=await sharp(bytes).stats();assert.equal(meta.width,entry.width);assert.equal(meta.height,entry.height);assert(meta.hasAlpha);assert.equal(stats.channels[3].min,0);assert.equal(stats.channels[3].max,255);total+=bytes.length;}assert(total<450000);assert.equal((await fetch(origin+'/arena/assets/meme-v1/candle-burst.png')).status,404);
+});
+
 test('quality modules and painted environments are pinned, served and isolated from private review artifacts',async t=>{
  const origin=await fixture(t),{readFile}=await import('node:fs/promises'),{createHash}=await import('node:crypto'),sharp=(await import('sharp')).default;
  for(const file of ['tactics-model.mjs','tactics-lab.mjs','controls.mjs','frame-probe.mjs','quality-pass.css'])assert.equal((await fetch(origin+'/arena/'+file)).status,200,file);

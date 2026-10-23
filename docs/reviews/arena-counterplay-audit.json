@@ -1,0 +1,638 @@
+{
+  "scope": "Synthetic legal reference builds, four playbooks on each seat, levels1/4/6/10, opening/recovery/epic-ready states. One exchange only; no hidden live state, optimal-strategy claim, human-balance acceptance, NFT ownership or V2 activation.",
+  "states": 6912,
+  "pairs": 176004,
+  "moveCounts": {
+    "market_order": 32472,
+    "diamond_hands": 28188,
+    "rug_pull": 15156,
+    "reversal": 15156,
+    "recharge": 34704,
+    "pepe_breakout": 10656,
+    "touch_grass": 13032,
+    "exit_liquidity": 6516,
+    "wen": 6516,
+    "epic": 6912,
+    "lineage_a": 4464,
+    "lineage_b": 2232
+  },
+  "sourceHashes": {
+    "apps/arena-web/catalog.mjs": "aeac4f9c733fdf863eaafc28ea8a01a13dc9737caa0a78275491508bc4d29bda",
+    "apps/arena-web/combat.mjs": "a249a6c2a347bea3b932885625609d91f15f57b0433f819f64896c9e00b38916",
+    "apps/arena-web/tactics-model.mjs": "9a419416e77fb140dc6f85cc237766f44706021453b54ce5c7ee964feeeb9158"
+  },
+  "examples": [
+    {
+      "lineage": "emerald_sprout",
+      "move": "market_order",
+      "replies": [
+        {
+          "reply": "diamond_hands",
+          "dealt": 1,
+          "taken": 0,
+          "blocked": 0,
+          "heal": 0,
+          "hpAfter": 145,
+          "energyAfter": 8
+        },
+        {
+          "reply": "reversal",
+          "dealt": 10,
+          "taken": 12,
+          "blocked": 0,
+          "heal": 0,
+          "hpAfter": 133,
+          "energyAfter": 8
+        },
+        {
+          "reply": "wen",
+          "dealt": 13,
+          "taken": 0,
+          "blocked": 0,
+          "heal": 0,
+          "hpAfter": 145,
+          "energyAfter": 8
+        },
+        {
+          "reply": "market_order",
+          "dealt": 24,
+          "taken": 24,
+          "blocked": 0,
+          "heal": 0,
+          "hpAfter": 121,
+          "energyAfter": 8
+        },
+        {
+          "reply": "recharge",
+          "dealt": 24,
+          "taken": 0,
+          "blocked": 0,
+          "heal": 0,
+          "hpAfter": 145,
+          "energyAfter": 8
+        }
+      ]
+    },
+    {
+      "lineage": "emerald_sprout",
+      "move": "pepe_breakout",
+      "replies": [
+        {
+          "reply": "diamond_hands",
+          "dealt": 13,
+          "taken": 0,
+          "blocked": 0,
+          "heal": 0,
+          "hpAfter": 139,
+          "energyAfter": 4
+        },
+        {
+          "reply": "reversal",
+          "dealt": 22,
+          "taken": 12,
+          "blocked": 0,
+          "heal": 0,
+          "hpAfter": 127,
+          "energyAfter": 4
+        },
+        {
+          "reply": "wen",
+          "dealt": 25,
+          "taken": 0,
+          "blocked": 0,
+          "heal": 0,
+          "hpAfter": 139,
+          "energyAfter": 4
+        },
+        {
+          "reply": "market_order",
+          "dealt": 36,
+          "taken": 24,
+          "blocked": 0,
+          "heal": 0,
+          "hpAfter": 115,
+          "energyAfter": 4
+        },
+        {
+          "reply": "recharge",
+          "dealt": 36,
+          "taken": 0,
+          "blocked": 0,
+          "heal": 0,
+          "hpAfter": 139,
+          "energyAfter": 4
+        }
+      ]
+    },
+    {
+      "lineage": "sapphire_tide",
+      "move": "market_order",
+      "replies": [
+        {
+          "reply": "diamond_hands",
+          "dealt": 1,
+          "taken": 0,
+          "blocked": 0,
+          "heal": 0,
+          "hpAfter": 145,
+          "energyAfter": 8
+        },
+        {
+          "reply": "reversal",
+          "dealt": 10,
+          "taken": 12,
+          "blocked": 0,
+          "heal": 0,
+          "hpAfter": 133,
+          "energyAfter": 8
+        },
+        {
+          "reply": "wen",
+          "dealt": 13,
+          "taken": 0,
+          "blocked": 0,
+          "heal": 0,
+          "hpAfter": 145,
+          "energyAfter": 8
+        },
+        {
+          "reply": "market_order",
+          "dealt": 24,
+          "taken": 24,
+          "blocked": 0,
+          "heal": 0,
+          "hpAfter": 121,
+          "energyAfter": 8
+        },
+        {
+          "reply": "recharge",
+          "dealt": 24,
+          "taken": 0,
+          "blocked": 0,
+          "heal": 0,
+          "hpAfter": 145,
+          "energyAfter": 8
+        }
+      ]
+    },
+    {
+      "lineage": "sapphire_tide",
+      "move": "pepe_breakout",
+      "replies": [
+        {
+          "reply": "diamond_hands",
+          "dealt": 13,
+          "taken": 0,
+          "blocked": 0,
+          "heal": 0,
+          "hpAfter": 139,
+          "energyAfter": 4
+        },
+        {
+          "reply": "reversal",
+          "dealt": 22,
+          "taken": 12,
+          "blocked": 0,
+          "heal": 0,
+          "hpAfter": 127,
+          "energyAfter": 4
+        },
+        {
+          "reply": "wen",
+          "dealt": 25,
+          "taken": 0,
+          "blocked": 0,
+          "heal": 0,
+          "hpAfter": 139,
+          "energyAfter": 4
+        },
+        {
+          "reply": "market_order",
+          "dealt": 36,
+          "taken": 24,
+          "blocked": 0,
+          "heal": 0,
+          "hpAfter": 115,
+          "energyAfter": 4
+        },
+        {
+          "reply": "recharge",
+          "dealt": 36,
+          "taken": 0,
+          "blocked": 0,
+          "heal": 0,
+          "hpAfter": 139,
+          "energyAfter": 4
+        }
+      ]
+    },
+    {
+      "lineage": "amethyst_dream",
+      "move": "market_order",
+      "replies": [
+        {
+          "reply": "diamond_hands",
+          "dealt": 3,
+          "taken": 0,
+          "blocked": 0,
+          "heal": 0,
+          "hpAfter": 145,
+          "energyAfter": 8
+        },
+        {
+          "reply": "reversal",
+          "dealt": 12,
+          "taken": 12,
+          "blocked": 0,
+          "heal": 0,
+          "hpAfter": 133,
+          "energyAfter": 8
+        },
+        {
+          "reply": "wen",
+          "dealt": 15,
+          "taken": 0,
+          "blocked": 0,
+          "heal": 0,
+          "hpAfter": 145,
+          "energyAfter": 8
+        },
+        {
+          "reply": "market_order",
+          "dealt": 24,
+          "taken": 24,
+          "blocked": 0,
+          "heal": 0,
+          "hpAfter": 121,
+          "energyAfter": 8
+        },
+        {
+          "reply": "recharge",
+          "dealt": 26,
+          "taken": 0,
+          "blocked": 0,
+          "heal": 0,
+          "hpAfter": 145,
+          "energyAfter": 8
+        }
+      ]
+    },
+    {
+      "lineage": "amethyst_dream",
+      "move": "pepe_breakout",
+      "replies": [
+        {
+          "reply": "diamond_hands",
+          "dealt": 15,
+          "taken": 0,
+          "blocked": 0,
+          "heal": 0,
+          "hpAfter": 139,
+          "energyAfter": 4
+        },
+        {
+          "reply": "reversal",
+          "dealt": 24,
+          "taken": 12,
+          "blocked": 0,
+          "heal": 0,
+          "hpAfter": 127,
+          "energyAfter": 4
+        },
+        {
+          "reply": "wen",
+          "dealt": 27,
+          "taken": 0,
+          "blocked": 0,
+          "heal": 0,
+          "hpAfter": 139,
+          "energyAfter": 4
+        },
+        {
+          "reply": "market_order",
+          "dealt": 36,
+          "taken": 24,
+          "blocked": 0,
+          "heal": 0,
+          "hpAfter": 115,
+          "energyAfter": 4
+        },
+        {
+          "reply": "recharge",
+          "dealt": 38,
+          "taken": 0,
+          "blocked": 0,
+          "heal": 0,
+          "hpAfter": 139,
+          "energyAfter": 4
+        }
+      ]
+    },
+    {
+      "lineage": "solar_peach",
+      "move": "market_order",
+      "replies": [
+        {
+          "reply": "diamond_hands",
+          "dealt": 1,
+          "taken": 0,
+          "blocked": 0,
+          "heal": 0,
+          "hpAfter": 145,
+          "energyAfter": 8
+        },
+        {
+          "reply": "reversal",
+          "dealt": 10,
+          "taken": 12,
+          "blocked": 0,
+          "heal": 0,
+          "hpAfter": 133,
+          "energyAfter": 8
+        },
+        {
+          "reply": "wen",
+          "dealt": 13,
+          "taken": 0,
+          "blocked": 0,
+          "heal": 0,
+          "hpAfter": 145,
+          "energyAfter": 8
+        },
+        {
+          "reply": "market_order",
+          "dealt": 24,
+          "taken": 24,
+          "blocked": 0,
+          "heal": 0,
+          "hpAfter": 121,
+          "energyAfter": 8
+        },
+        {
+          "reply": "recharge",
+          "dealt": 24,
+          "taken": 0,
+          "blocked": 0,
+          "heal": 0,
+          "hpAfter": 145,
+          "energyAfter": 8
+        }
+      ]
+    },
+    {
+      "lineage": "solar_peach",
+      "move": "pepe_breakout",
+      "replies": [
+        {
+          "reply": "diamond_hands",
+          "dealt": 13,
+          "taken": 0,
+          "blocked": 0,
+          "heal": 0,
+          "hpAfter": 139,
+          "energyAfter": 4
+        },
+        {
+          "reply": "reversal",
+          "dealt": 22,
+          "taken": 12,
+          "blocked": 0,
+          "heal": 0,
+          "hpAfter": 127,
+          "energyAfter": 4
+        },
+        {
+          "reply": "wen",
+          "dealt": 25,
+          "taken": 0,
+          "blocked": 0,
+          "heal": 0,
+          "hpAfter": 139,
+          "energyAfter": 4
+        },
+        {
+          "reply": "market_order",
+          "dealt": 36,
+          "taken": 24,
+          "blocked": 0,
+          "heal": 0,
+          "hpAfter": 115,
+          "energyAfter": 4
+        },
+        {
+          "reply": "recharge",
+          "dealt": 36,
+          "taken": 0,
+          "blocked": 0,
+          "heal": 0,
+          "hpAfter": 139,
+          "energyAfter": 4
+        }
+      ]
+    },
+    {
+      "lineage": "rose_bloom",
+      "move": "market_order",
+      "replies": [
+        {
+          "reply": "diamond_hands",
+          "dealt": 1,
+          "taken": 0,
+          "blocked": 0,
+          "heal": 0,
+          "hpAfter": 145,
+          "energyAfter": 8
+        },
+        {
+          "reply": "reversal",
+          "dealt": 10,
+          "taken": 12,
+          "blocked": 0,
+          "heal": 0,
+          "hpAfter": 133,
+          "energyAfter": 8
+        },
+        {
+          "reply": "wen",
+          "dealt": 13,
+          "taken": 0,
+          "blocked": 0,
+          "heal": 0,
+          "hpAfter": 145,
+          "energyAfter": 8
+        },
+        {
+          "reply": "market_order",
+          "dealt": 24,
+          "taken": 24,
+          "blocked": 0,
+          "heal": 0,
+          "hpAfter": 121,
+          "energyAfter": 8
+        },
+        {
+          "reply": "recharge",
+          "dealt": 24,
+          "taken": 0,
+          "blocked": 0,
+          "heal": 0,
+          "hpAfter": 145,
+          "energyAfter": 8
+        }
+      ]
+    },
+    {
+      "lineage": "rose_bloom",
+      "move": "pepe_breakout",
+      "replies": [
+        {
+          "reply": "diamond_hands",
+          "dealt": 13,
+          "taken": 0,
+          "blocked": 0,
+          "heal": 0,
+          "hpAfter": 139,
+          "energyAfter": 4
+        },
+        {
+          "reply": "reversal",
+          "dealt": 22,
+          "taken": 12,
+          "blocked": 0,
+          "heal": 0,
+          "hpAfter": 127,
+          "energyAfter": 4
+        },
+        {
+          "reply": "wen",
+          "dealt": 25,
+          "taken": 0,
+          "blocked": 0,
+          "heal": 0,
+          "hpAfter": 139,
+          "energyAfter": 4
+        },
+        {
+          "reply": "market_order",
+          "dealt": 36,
+          "taken": 24,
+          "blocked": 0,
+          "heal": 0,
+          "hpAfter": 115,
+          "energyAfter": 4
+        },
+        {
+          "reply": "recharge",
+          "dealt": 36,
+          "taken": 0,
+          "blocked": 0,
+          "heal": 0,
+          "hpAfter": 139,
+          "energyAfter": 4
+        }
+      ]
+    },
+    {
+      "lineage": "midnight_mint",
+      "move": "market_order",
+      "replies": [
+        {
+          "reply": "diamond_hands",
+          "dealt": 3,
+          "taken": 0,
+          "blocked": 0,
+          "heal": 0,
+          "hpAfter": 145,
+          "energyAfter": 8
+        },
+        {
+          "reply": "reversal",
+          "dealt": 12,
+          "taken": 12,
+          "blocked": 0,
+          "heal": 0,
+          "hpAfter": 133,
+          "energyAfter": 8
+        },
+        {
+          "reply": "wen",
+          "dealt": 15,
+          "taken": 0,
+          "blocked": 0,
+          "heal": 0,
+          "hpAfter": 145,
+          "energyAfter": 8
+        },
+        {
+          "reply": "market_order",
+          "dealt": 24,
+          "taken": 24,
+          "blocked": 0,
+          "heal": 0,
+          "hpAfter": 121,
+          "energyAfter": 8
+        },
+        {
+          "reply": "recharge",
+          "dealt": 24,
+          "taken": 0,
+          "blocked": 0,
+          "heal": 0,
+          "hpAfter": 145,
+          "energyAfter": 8
+        }
+      ]
+    },
+    {
+      "lineage": "midnight_mint",
+      "move": "pepe_breakout",
+      "replies": [
+        {
+          "reply": "diamond_hands",
+          "dealt": 15,
+          "taken": 0,
+          "blocked": 0,
+          "heal": 0,
+          "hpAfter": 139,
+          "energyAfter": 4
+        },
+        {
+          "reply": "reversal",
+          "dealt": 24,
+          "taken": 12,
+          "blocked": 0,
+          "heal": 0,
+          "hpAfter": 127,
+          "energyAfter": 4
+        },
+        {
+          "reply": "wen",
+          "dealt": 27,
+          "taken": 0,
+          "blocked": 0,
+          "heal": 0,
+          "hpAfter": 139,
+          "energyAfter": 4
+        },
+        {
+          "reply": "market_order",
+          "dealt": 36,
+          "taken": 24,
+          "blocked": 0,
+          "heal": 0,
+          "hpAfter": 115,
+          "energyAfter": 4
+        },
+        {
+          "reply": "recharge",
+          "dealt": 36,
+          "taken": 0,
+          "blocked": 0,
+          "heal": 0,
+          "hpAfter": 139,
+          "energyAfter": 4
+        }
+      ]
+    }
+  ]
+}

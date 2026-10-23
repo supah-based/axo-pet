@@ -1,6 +1,8 @@
 import {buildPet,defaultBuild,LINEAGES} from './catalog.mjs';
 import {newBattle,resolve,legalMoves,values} from './combat.mjs';
 export const DRILLS=Object.freeze({opening:'Opening exchange',recovery:'Recover under pressure',clutch:'Simultaneous finish',epic:'Epic readiness demo'});
+export const PLAYBOOKS=Object.freeze({balanced:'Balanced · default',pressure:'Pressure · break & pierce',guard:'Diamond vault · guard & counter',support:'Copium crew · heal & recover'});
+const PLAYBOOK_MOVES=Object.freeze({pressure:['market_order','rug_pull','exit_liquidity','pepe_breakout'],guard:['diamond_hands','reversal','wen','market_order'],support:['touch_grass','lineage_b','diamond_hands','lineage_a']});
 export const MOVE_LESSONS=Object.freeze({
  market_order:['Attack','A free attack keeps pressure on without spending energy. A shield can absorb it.'],
  diamond_hands:['Block','A free shield protects against an attack. Unused shielding does not carry over.'],
@@ -15,9 +17,11 @@ export const MOVE_LESSONS=Object.freeze({
  epic:['Epic','Requires a learned epic, full charge and your lineage condition. Once per battle.'],
  recharge:['Recharge','No attack or shield. Recovers energy, including the normal exchange recovery, up to ten.'],
 });
-export function createDrill(build,lineage=build.lineageId,preset='opening'){
- if(!Object.hasOwn(LINEAGES,lineage)||!Object.hasOwn(DRILLS,preset))throw Error('Unknown drill');
- const own=buildPet(build),dummy=defaultBuild(lineage,own.xp),battle=newBattle([own,dummy]);
+export function createDrill(build,lineage=build.lineageId,preset='opening',playbook='balanced'){
+ if(!Object.hasOwn(LINEAGES,lineage)||!Object.hasOwn(DRILLS,preset)||!Object.hasOwn(PLAYBOOKS,playbook))throw Error('Unknown drill');
+ const own=buildPet(build);let dummy=defaultBuild(lineage,own.xp);
+ if(playbook!=='balanced'){const keys=[...new Set([...PLAYBOOK_MOVES[playbook],...dummy.loadout,...Object.keys(dummy.skills)])].filter(k=>!['epic','recharge'].includes(k)&&dummy.skills[k].level<=dummy.level).slice(0,4);dummy=buildPet({...dummy,loadout:keys});}
+ const battle=newBattle([own,dummy]);
  for(const f of battle.fighters){
   if(preset==='recovery'){f.hp=Math.ceil(f.build.maxHp*.45);f.energy=3;}
   if(preset==='clutch')f.hp=30;
@@ -35,6 +39,10 @@ export function exchangeInsight(before,after){
  })};
 }
 export function drillLegal(battle,side){return legalMoves(battle,side);}
+export function counterplayRows(battle,move){
+ if(!legalMoves(battle,0).includes(move))return [];
+ return legalMoves(battle,1).map(reply=>{const after=resolve(battle,[move,reply]),row=exchangeInsight(battle,after);return{reply,name:battle.fighters[1].build.skills[reply].name,own:row.fighters[0],rival:row.fighters[1],status:after.status,winner:after.winner,reason:after.reason||null};});
+}
 export function replayBookmarks(report){
  const rows=report?.exchanges||[],bookmarks=[];
  for(const[field,label]of [['damageDealt','Biggest exchange'],['blocked','Best block'],['healed','Best recovery']]){

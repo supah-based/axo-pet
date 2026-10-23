@@ -45,7 +45,9 @@ test('active fitted lobby and combat draw only the new preview, never legacy war
  for(const name of ['wardrobe','sprite','clip','rigLayer'])h.r[name]=()=>assert.fail('Retired costume path: '+name);
  const before=JSON.stringify(h.pet);h.r.hero=h.pet;h.r.draw(0);assert.ok(h.calls.some(call=>call[0]==='drawImage'&&call[1]===artwork));assert.equal(h.requests.length,0);
  h.r.hero=null;h.r.set({id:'synthetic-fitted-display',status:'playing',players:[{pet:h.pet,build:{level:10}},{pet:{lineageId:'solar_peach',level:10},build:{level:10}}],battle:{log:[]}});h.r.lastPaint=-Infinity;h.r.draw(100);
- assert.ok(h.calls.filter(call=>call[0]==='drawImage'&&call[1]===artwork).length>=3);assert.ok(h.calls.some(call=>call[0]==='fillText'&&call[1]==='PREVIEW · COSMETIC ONLY'));assert.equal(JSON.stringify(h.pet),before);assert.equal(h.requests.length,0);h.r.stop();assert.ok(destroyed>0);
+ assert.ok(h.calls.filter(call=>call[0]==='drawImage'&&call[1]===artwork).length>=3);assert.ok(h.calls.some(call=>call[0]==='fillText'&&call[1]==='PREVIEW · COSMETIC ONLY'));assert.equal(JSON.stringify(h.pet),before);
+ // Only the three new immutable public FX may load; no legacy Pet/gear art request.
+ assert.deepEqual(h.requests.map(r=>r.url).sort(),['diamond-guard','candle-burst','copium-bloom'].map(id=>'/arena/assets/meme-v1/'+id+'.webp').sort());assert(h.requests.every(r=>r.options.credentials==='omit'&&r.options.body===undefined));h.r.stop();assert.ok(destroyed>0);
 });
 
 test('failed new previews stay explicit instead of falling back to old clothes',async t=>{
