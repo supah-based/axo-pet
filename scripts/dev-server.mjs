@@ -16,6 +16,7 @@ const pages = new Map([
 const publicFiles = new Set([
     'pet-home', 'pet-dashboard', 'pet-marketplace', 'hatchery-game', 'nft', 'gear-studio', 'anatomy-studio', 'gear-progression',
 ].flatMap(name => [`${name}.css`, `${name}.js`]));
+publicFiles.add('pet-shell.js');
 const inheritedStyles = new Set([
   '/axo-dark.css', '/styles.css', '/portal.css', '/pet-shell.css', '/nft-v5-runtime.css',
 ]);
@@ -133,7 +134,8 @@ export function createDevServer({ liveAssets = true, fetchAsset = fetch, wardrob
         code: 'HOST_ADAPTER_UNAVAILABLE',
       });
       if (path === '/assets/wallet.js') return send(req, res, 200, walletStub, types['.js']);
-      if (['/nav.js', '/pet-shell.js', '/analytics.js'].includes(path)) return send(req, res, 200, '// Host-only integration omitted from local preview.\n', types['.js']);
+      if (['/nav.js', '/analytics.js'].includes(path)) return send(req, res, 200, '// Host-only integration omitted from local preview.\n', types['.js']);
+      if (path === '/arena-navigation.css') return send(req, res, 200, await readFile(resolve(publicRoot, 'arena-navigation.css')), types['.css']);
       if (path === `/${basename(path)}` && publicFiles.has(basename(path))) {
         return send(req, res, 200, await readFile(resolve(publicRoot, basename(path))), types[extname(path)]);
       }
