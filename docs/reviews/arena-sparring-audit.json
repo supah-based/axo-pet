@@ -1,0 +1,109 @@
+{
+  "scope": "Finite zero-owned-gear reference builds at levels 6/10, all six lineages on both seats, three opt-in sparring profiles, two scripted rival strategies, seeds 17/2026. Each style uses the same build for legacy versus new policy, isolating decision policy. Every game mirrored. No hidden choices, optimal-policy claim, human difficulty/balance acceptance or live performance claim.",
+  "games": 3456,
+  "mirrors": 1728,
+  "totals": {
+    "pressure:legacy": {
+      "games": 576,
+      "wins": 512,
+      "draws": 0,
+      "exchanges": 3188,
+      "epics": 384,
+      "moves": {
+        "pepe_breakout": 1172,
+        "exit_liquidity": 960,
+        "market_order": 672,
+        "epic": 384
+      },
+      "losses": 64,
+      "winPercent": 88.9,
+      "meanExchanges": 5.53
+    },
+    "pressure:adaptive": {
+      "games": 576,
+      "wins": 466,
+      "draws": 6,
+      "exchanges": 3188,
+      "epics": 384,
+      "moves": {
+        "pepe_breakout": 1064,
+        "exit_liquidity": 624,
+        "rug_pull": 360,
+        "market_order": 756,
+        "epic": 384
+      },
+      "losses": 104,
+      "winPercent": 80.9,
+      "meanExchanges": 5.53
+    },
+    "guardian:legacy": {
+      "games": 576,
+      "wins": 360,
+      "draws": 0,
+      "exchanges": 3684,
+      "epics": 288,
+      "moves": {
+        "market_order": 3396,
+        "epic": 288
+      },
+      "losses": 216,
+      "winPercent": 62.5,
+      "meanExchanges": 6.4
+    },
+    "guardian:adaptive": {
+      "games": 576,
+      "wins": 326,
+      "draws": 0,
+      "exchanges": 3996,
+      "epics": 352,
+      "moves": {
+        "market_order": 3180,
+        "reversal": 166,
+        "diamond_hands": 290,
+        "epic": 352,
+        "wen": 8
+      },
+      "losses": 250,
+      "winPercent": 56.6,
+      "meanExchanges": 6.94
+    },
+    "adaptive:legacy": {
+      "games": 576,
+      "wins": 400,
+      "draws": 8,
+      "exchanges": 3520,
+      "epics": 360,
+      "moves": {
+        "lineage_a": 1344,
+        "market_order": 1816,
+        "epic": 360
+      },
+      "losses": 168,
+      "winPercent": 69.4,
+      "meanExchanges": 6.11
+    },
+    "adaptive:adaptive": {
+      "games": 576,
+      "wins": 438,
+      "draws": 6,
+      "exchanges": 3976,
+      "epics": 450,
+      "moves": {
+        "lineage_a": 1124,
+        "touch_grass": 666,
+        "market_order": 1724,
+        "epic": 450,
+        "reversal": 12
+      },
+      "losses": 132,
+      "winPercent": 76,
+      "meanExchanges": 6.9
+    }
+  },
+  "sourceHashes": {
+    "apps/arena-web/catalog.mjs": "aeac4f9c733fdf863eaafc28ea8a01a13dc9737caa0a78275491508bc4d29bda",
+    "apps/arena-web/combat.mjs": "a249a6c2a347bea3b932885625609d91f15f57b0433f819f64896c9e00b38916",
+    "apps/arena-web/sparring-policy.mjs": "4159883167f5a16493d9778247689dee0b1029420e19dff9b43a6aa6bc2784c4",
+    "apps/arena-web/sparring-meta.mjs": "142ecb790190bcc2d6b8b488e23b55246f3094974172846fe7bb8a3e43c7be2b"
+  }
+}
