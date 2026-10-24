@@ -10,6 +10,11 @@ async function fixture(t, options = {}) {
   return `http://127.0.0.1:${server.address().port}`;
 }
 
+test('Bazaar fitted promotion serves only the public lookbook and leaves source/private routes unavailable',async t=>{
+ const origin=await fixture(t);for(const name of ['model.mjs','v2/manifest.json','v2/emerald_sprout.webp','v2/items/cyan-grip-boots.webp'])assert.equal((await fetch(origin+'/bazaar-lookbook/'+name)).status,200);assert.equal((await fetch(origin+'/bazaar-fitted.css')).status,200);
+ for(const name of ['source.json','v2/source.json','v2/unknown.webp','v2/items/unknown.webp','../packages/gear-catalog/collections/bazaar-lookbook-v2.source.json'])assert.equal((await fetch(origin+'/bazaar-lookbook/'+name)).status,404);
+});
+
 test('Defense Lab public modules load but cannot opt a server fight into candidate rules',async t=>{
  const origin=await fixture(t,{arenaReview:'reports'});for(const file of ['defense-energy.mjs','defense-energy.css'])assert.equal((await fetch(origin+'/arena/'+file)).status,200);
  const response=await fetch(origin+'/api/arena/challenges',{method:'POST',headers:{'Content-Type':'application/json',Origin:origin},body:JSON.stringify({practice:true,ruleset:'axo-arena-defense-lab-1'})});assert.equal(response.status,400);assert.match(await response.text(),/Only practice/);

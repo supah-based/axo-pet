@@ -1,0 +1,536 @@
+{
+  "schema": "AXO_BAZAAR_LOOKBOOK_V2",
+  "authority": "COSMETIC_PREVIEW_ONLY",
+  "sourceSha256": "683e461d4247ed5d61ca3676d5eb4fa6cafc9ae8a4982b6fcdbe02a33a49c495",
+  "catalogSha256": "45876f1faa4cd538ca4de3a70d0551cce392256cd2d610d62e3e52242e51069b",
+  "modelSha256": "4ae6be65c1ae2617c6665812916e3f1e8a6dea59ba0bac5f90c15e7418050c8b",
+  "rigSha256": "d5ee536ed233271c552fbe6900fb90ff1e3716cd104f0b48408dcb94c9b63fb4",
+  "entries": [
+    {
+      "lineage": "emerald_sprout",
+      "name": "Protocol Field Runner",
+      "sceneId": "tech-hatchery",
+      "selection": {
+        "head": "signal-runner-headband",
+        "body": "whitehat-field-jacket",
+        "pants": "night-node-joggers",
+        "footwear": "gas-boost-high-tops",
+        "tool": "validator-spark"
+      },
+      "asset": "/bazaar-lookbook/v2/emerald_sprout.webp",
+      "sha256": "47b3b6ce838b1aed2f88a92ae9b05e44d95572545d58c938fdde04a25cb2d83e",
+      "width": 1024,
+      "height": 1536,
+      "bytes": 483634,
+      "inputHashes": {
+        "/gear-anatomy/v3/emerald_sprout-lineage-closed-feet.webp": "e0396be4505395c82d1dd27312d9cefaf584fc641c94c6acd87297e958982c11",
+        "/gear-anatomy/v3/emerald_sprout-lineage-fingers.webp": "75daa53421a24c9d31a4b69fd38e45e972e1c90ccd688d5fc82b25e67e1bdeb6",
+        "/gear-anatomy/v3/emerald_sprout-lineage-gills.webp": "02453ed62b5f430a16032edd37c8fe198fd3cf567c9e3d758949ae759d364db4",
+        "/gear-anatomy/v3/signal-runner-headband.wearable.webp": "3537ab851086abbe1981cef8440fa34abb0119603b03a0efcadf205fc96c5e2e",
+        "/gear-anatomy/v3/tech-hatchery.scene.webp": "32afcb9553529196a6bfbfcfba3c7a748db792ba7a23324a7ebb7bd489f6e5d6",
+        "/gear-anatomy/v3/validator-spark.wearable.webp": "785fe27892db5fd0506b47518194d6b5abe043f188e674131116474bac10cbf4",
+        "/gear-bazaar/v1/emerald_sprout-lineage-top-hands.webp": "59feeb38620d29aab6579b12df1d7b88fd5897b5436abfd69618f7077b8f4127",
+        "/gear-bazaar/v1/emerald_sprout-lineage-top-head.webp": "455f2c392e09dbbc40824866514814de7bdbdaaf44b607820d1f243d3ae859bb",
+        "/gear-bazaar/v1/gas-boost-high-tops.wearable.webp": "fb1feaac05d0a25afc2868fad1a08fafc627662a10f0c17eaf0dd2d616436229",
+        "/gear-bazaar/v1/night-node-joggers.wearable.webp": "99cb7adf0ef05857676a92af3d13208a3c0acf47609fa2d5586e1a92a8c385a2",
+        "/gear-bazaar/v1/whitehat-field-jacket.wearable.webp": "5935119362cf02b4b6de3a27b62117bb22186ea55b0e180c2f743dc1c2136ce8"
+      }
+    },
+    {
+      "lineage": "sapphire_tide",
+      "name": "Diamond Knit Courier",
+      "sceneId": "arcane-workshop",
+      "selection": {
+        "head": "liquidity-crown",
+        "body": "diamond-knit-sweater",
+        "pants": "node-tailored-joggers",
+        "footwear": "cyan-grip-boots",
+        "tool": "exit-liquidity-trident"
+      },
+      "asset": "/bazaar-lookbook/v2/sapphire_tide.webp",
+      "sha256": "993b5c3b06afc21c708031501ff503029fdadd5bcf2749f0497bee1733fb3241",
+      "width": 1024,
+      "height": 1536,
+      "bytes": 562050,
+      "inputHashes": {
+        "/gear-anatomy/v3/arcane-workshop.scene.webp": "327822a9436de3fbc01c02fb3da93d242ebcc4cf4ff353d8fa004165b9374525",
+        "/gear-anatomy/v3/cyan-grip-boots.wearable.webp": "d09b8015652bc4d25950cee7a95c07d85ae8f840efa11c089efa8b2c4e58dc00",
+        "/gear-anatomy/v3/liquidity-crown.wearable.webp": "219a5b5d65f62da9f78c03f0f71209daae5b5a0acb03b0f8eb13772e0df26f01",
+        "/gear-anatomy/v3/node-tailored-joggers.wearable.webp": "1c678136ba84f1cb40a88c7e5f89ff9a54ecb95bf6cdba448a2205952dc0fb1c",
+        "/gear-anatomy/v3/sapphire_tide-lineage-closed-feet.webp": "c68c2c509939f3cbd13c7d93f00d009b550377d07f6fe036947bea916a87809f",
+        "/gear-anatomy/v3/sapphire_tide-lineage-fingers.webp": "4bc8a47d355ef62da2024ceafdd900c17b0b782a571bf8827c74876664086d59",
+        "/gear-anatomy/v3/sapphire_tide-lineage-gills.webp": "eb84ad27d206f0045fd2f20471cb27afd0b03a86cec102020f56fac7849b7123",
+        "/gear-bazaar/v1/diamond-knit-sweater.wearable.webp": "e78e1522836d980f81dff8ab0e06191cd323174479a21cef15e9623b22fe9b61",
+        "/gear-bazaar/v1/exit-liquidity-trident.wearable.webp": "cbf73744bf8c1731d54c0ec5db009c1e2728d4e59c7ffa14ecab7248f843fb00",
+        "/gear-bazaar/v1/sapphire_tide-lineage-top-hands.webp": "cd1742eb0d990d722c0bb680268a5a0ae7ea2c452217f2c89fc3d21beee0cb60",
+        "/gear-bazaar/v1/sapphire_tide-lineage-top-head.webp": "00f58fafe0587bb5fa58bb527997e91875eac671f4d6dbfeb85de0282a8c6402"
+      }
+    },
+    {
+      "lineage": "amethyst_dream",
+      "name": "Copium After Hours",
+      "sceneId": "degen-den",
+      "selection": {
+        "head": "aetherpunk-circlet",
+        "body": "copium-club-hoodie",
+        "pants": "night-node-joggers",
+        "footwear": "hexstep-boots",
+        "tool": "banana-market-maker"
+      },
+      "asset": "/bazaar-lookbook/v2/amethyst_dream.webp",
+      "sha256": "1acb460a2b725aae50fa4c3cba6a3087e80b3592b29e07a61a81c542b682da09",
+      "width": 1024,
+      "height": 1536,
+      "bytes": 425580,
+      "inputHashes": {
+        "/gear-anatomy/v3/amethyst_dream-lineage-closed-feet.webp": "cfcccfb0cc088e2660782b0107d98fa2455d516ce1850a1a9856dcdf736c420d",
+        "/gear-anatomy/v3/amethyst_dream-lineage-fingers.webp": "7318c55d02764b40db28d734f3b106d931d88ed700df0e916af5daefc5585648",
+        "/gear-anatomy/v3/amethyst_dream-lineage-gills.webp": "015246832ad69ed9c1066e068da972ba1df2de67046f21a0e953d7753f53ef27",
+        "/gear-anatomy/v3/banana-market-maker.wearable.webp": "df53ddda631303652786e4cb4163d2a84f16b46d91faa47c26512f6ea7513ce4",
+        "/gear-anatomy/v3/degen-den.scene.webp": "92260e12296433db529a1a4822d93289039adba3e2e3e7db56a1542e9e53d541",
+        "/gear-bazaar/v1/aetherpunk-circlet.wearable.webp": "db30035892ba595991e41096360b779497cb1fb787049de121ca0182ca056652",
+        "/gear-bazaar/v1/amethyst_dream-lineage-top-hands.webp": "5c8755e21c643178a6e78bf2aac4b46f631989132ea78aecfb5db8d549f101b3",
+        "/gear-bazaar/v1/amethyst_dream-lineage-top-head.webp": "1e220eb2118084904635cddcf3b1fea2fda93d7be7fa00e9a586e07f95fdd885",
+        "/gear-bazaar/v1/copium-club-hoodie.wearable.webp": "e7d99ab0e29fd3cc7b9aa50940dc58b9837defe62fbc048fd783bf857fcf7f6f",
+        "/gear-bazaar/v1/hexstep-boots.wearable.webp": "3570eafe216af29dd2cf15b7cab07751f8af3f393b1dc56a7eaa3c1d3e2d7e1b",
+        "/gear-bazaar/v1/night-node-joggers.wearable.webp": "99cb7adf0ef05857676a92af3d13208a3c0acf47609fa2d5586e1a92a8c385a2"
+      }
+    },
+    {
+      "lineage": "solar_peach",
+      "name": "Candle Chaser Bomber",
+      "sceneId": "degen-den",
+      "selection": {
+        "head": "liquidation-crown",
+        "body": "night-node-bomber",
+        "pants": "node-tailored-joggers",
+        "footwear": "gas-boost-high-tops",
+        "tool": "gas-fee-guzzler"
+      },
+      "asset": "/bazaar-lookbook/v2/solar_peach.webp",
+      "sha256": "533e28060666902a80db6646491f59137eb480d1193398e4b343f7a654d5976a",
+      "width": 1024,
+      "height": 1536,
+      "bytes": 418238,
+      "inputHashes": {
+        "/gear-anatomy/v3/degen-den.scene.webp": "92260e12296433db529a1a4822d93289039adba3e2e3e7db56a1542e9e53d541",
+        "/gear-anatomy/v3/gas-fee-guzzler.wearable.webp": "001eb46f8a384c1b5e379b23fca1c702d7e898873ac83b5d1ed066fd70228a0a",
+        "/gear-anatomy/v3/node-tailored-joggers.wearable.webp": "1c678136ba84f1cb40a88c7e5f89ff9a54ecb95bf6cdba448a2205952dc0fb1c",
+        "/gear-anatomy/v3/solar_peach-lineage-closed-feet.webp": "917c3145a03680b0162856930997de5f78a2c539242e5dcc7254d8cbaf0f83d3",
+        "/gear-anatomy/v3/solar_peach-lineage-fingers.webp": "7ab03f1ddb8af0f52c1dea8fc2bb425d505af4bdf9cef9621695ee8eb5403ed3",
+        "/gear-anatomy/v3/solar_peach-lineage-gills.webp": "163334952f74767a8bdd093145e951fe2800aaa8b5f2e3011c3aa346c4aa6a04",
+        "/gear-bazaar/v1/gas-boost-high-tops.wearable.webp": "fb1feaac05d0a25afc2868fad1a08fafc627662a10f0c17eaf0dd2d616436229",
+        "/gear-bazaar/v1/liquidation-crown.wearable.webp": "48187168139a5a009e3e4c2bf9129839906fd7780edaa0a6033b28b15708cade",
+        "/gear-bazaar/v1/night-node-bomber.wearable.webp": "48e7f103370adeaaf20b145b6e0da3bae0c616487a9e9275eff6c7be18befce3",
+        "/gear-bazaar/v1/solar_peach-lineage-top-hands.webp": "bae0a8cee4d4d4a857857653edbae732d649f782112b70aa4d767ab95acab81d",
+        "/gear-bazaar/v1/solar_peach-lineage-top-head.webp": "8bed91a0e7d4484ffa342cc02fc79124bbce70af865f757c67070d8dda19bdbd"
+      }
+    },
+    {
+      "lineage": "rose_bloom",
+      "name": "Runebloom Signal",
+      "sceneId": "arcane-workshop",
+      "selection": {
+        "head": "liquidity-crown",
+        "body": "runebloom-overshirt",
+        "pants": "runesmith-trousers",
+        "footwear": "hexstep-boots",
+        "tool": "exit-liquidity-trident"
+      },
+      "asset": "/bazaar-lookbook/v2/rose_bloom.webp",
+      "sha256": "ad4b84188d75cf182d3b462fd2a597ed3c9995fc8ae82d7e95dbe9d3713dd584",
+      "width": 1024,
+      "height": 1536,
+      "bytes": 565236,
+      "inputHashes": {
+        "/gear-anatomy/v3/arcane-workshop.scene.webp": "327822a9436de3fbc01c02fb3da93d242ebcc4cf4ff353d8fa004165b9374525",
+        "/gear-anatomy/v3/liquidity-crown.wearable.webp": "219a5b5d65f62da9f78c03f0f71209daae5b5a0acb03b0f8eb13772e0df26f01",
+        "/gear-anatomy/v3/rose_bloom-lineage-closed-feet.webp": "3b5d76bfd1e25ffc881c0e14e9fbdea752a099fe8247c7eae84bfbedb2ccf1cf",
+        "/gear-anatomy/v3/rose_bloom-lineage-fingers.webp": "b7421996ece35e4031dcc55657cfb1a6753ee17cd9079fffbc1ada7400275635",
+        "/gear-anatomy/v3/rose_bloom-lineage-gills.webp": "74683a5d03df5edd5c8d3b8adfe5c5324c346ad195485d678eaff2de75dac327",
+        "/gear-bazaar/v1/exit-liquidity-trident.wearable.webp": "cbf73744bf8c1731d54c0ec5db009c1e2728d4e59c7ffa14ecab7248f843fb00",
+        "/gear-bazaar/v1/hexstep-boots.wearable.webp": "3570eafe216af29dd2cf15b7cab07751f8af3f393b1dc56a7eaa3c1d3e2d7e1b",
+        "/gear-bazaar/v1/rose_bloom-lineage-top-hands.webp": "d68c34a2a340139290a47fe81d6e795449fb430b389611567428d386086a74d3",
+        "/gear-bazaar/v1/rose_bloom-lineage-top-head.webp": "38150bfe9665e4223c3d54f3fca0cc91adadd12ea9a2e8e2fcc881ae9bb4686e",
+        "/gear-bazaar/v1/runebloom-overshirt.wearable.webp": "bc3a69ce34496776d75490e42bb19ba49f8074b4f34e24519f44505bc42c9b20",
+        "/gear-bazaar/v1/runesmith-trousers.wearable.webp": "2d1b549186bb9f5e1f8a5fe528dc8b21a51badd625068e42ac491c908f403544"
+      }
+    },
+    {
+      "lineage": "midnight_mint",
+      "name": "Night Shift Whitehat",
+      "sceneId": "tech-hatchery",
+      "selection": {
+        "head": "signal-runner-headband",
+        "body": "wen-moon-tee",
+        "pants": "node-tailored-joggers",
+        "footwear": "cyan-grip-boots",
+        "tool": "validator-spark"
+      },
+      "asset": "/bazaar-lookbook/v2/midnight_mint.webp",
+      "sha256": "3ab2f0db276a76d1621069b06cadc04009ba791bdfa291f7df7c1ee2722631e5",
+      "width": 1024,
+      "height": 1536,
+      "bytes": 477186,
+      "inputHashes": {
+        "/gear-anatomy/v3/cyan-grip-boots.wearable.webp": "d09b8015652bc4d25950cee7a95c07d85ae8f840efa11c089efa8b2c4e58dc00",
+        "/gear-anatomy/v3/midnight_mint-lineage-closed-feet.webp": "64427f54348e89891f7df32461b004674a352e0fbf72250e5c7d194129d1fce8",
+        "/gear-anatomy/v3/midnight_mint-lineage-fingers.webp": "e708f4f933a340b4e090b120fc38df20a8e02828ae471746d5777f287b323d5c",
+        "/gear-anatomy/v3/midnight_mint-lineage-gills.webp": "154539e7bc6f7592e08cb90b6599c61ebf7e9c74f12c80f2a1f2a5c9686f0720",
+        "/gear-anatomy/v3/node-tailored-joggers.wearable.webp": "1c678136ba84f1cb40a88c7e5f89ff9a54ecb95bf6cdba448a2205952dc0fb1c",
+        "/gear-anatomy/v3/signal-runner-headband.wearable.webp": "3537ab851086abbe1981cef8440fa34abb0119603b03a0efcadf205fc96c5e2e",
+        "/gear-anatomy/v3/tech-hatchery.scene.webp": "32afcb9553529196a6bfbfcfba3c7a748db792ba7a23324a7ebb7bd489f6e5d6",
+        "/gear-anatomy/v3/validator-spark.wearable.webp": "785fe27892db5fd0506b47518194d6b5abe043f188e674131116474bac10cbf4",
+        "/gear-bazaar/v1/midnight_mint-lineage-top-hands.webp": "dfa26b376de77761c2715283aee619cdcd87d15fce59412a948d3016dfcb2539",
+        "/gear-bazaar/v1/midnight_mint-lineage-top-head.webp": "c720fe77ee86cb1deadc026a1e867ff3b6b35646089ccf58aab2b4ce493ae677",
+        "/gear-bazaar/v1/wen-moon-tee.wearable.webp": "12f3c2c454db8c932206fee7601f4213c16e8169802a0ec52145d1744a10ce35"
+      }
+    }
+  ],
+  "itemPortraits": {
+    "degen-shell-vest": {
+      "asset": "/bazaar-lookbook/v2/items/degen-shell-vest.webp",
+      "sha256": "72d00d1b2bf388deffc1b91d685634b4b12826d984760b9d8201044958fdd885",
+      "width": 300,
+      "height": 450,
+      "source": "/gear-anatomy/v3/degen-shell-vest.item.webp",
+      "sourceSha256": "1cb71ef5dd8cfef38b84c7eb373b3c3de7ba67a2aeded745940c57bee980d2a0"
+    },
+    "node-tailored-joggers": {
+      "asset": "/bazaar-lookbook/v2/items/node-tailored-joggers.webp",
+      "sha256": "d037e4903ec9e05062ae01abbcae645e8bccf99594afd66002600fa78fc5da73",
+      "width": 300,
+      "height": 450,
+      "source": "/gear-anatomy/v3/node-tailored-joggers.item.webp",
+      "sourceSha256": "19ea53c8ed5014453e66433e8cfc4ba21910bbc06effda0e685450274ccdf0ca"
+    },
+    "cyan-grip-boots": {
+      "asset": "/bazaar-lookbook/v2/items/cyan-grip-boots.webp",
+      "sha256": "3aea34d292fe66c43fbcc1a49d703f4c2c7c8d7469fc721be1c146c694c647d5",
+      "width": 300,
+      "height": 450,
+      "source": "/gear-anatomy/v3/cyan-grip-boots.item.webp",
+      "sourceSha256": "e1028493ba76aad50ffd9e6c56a8a74db59a2ae3926c097a8ae11ca4c1b1522a"
+    },
+    "liquidity-crown": {
+      "asset": "/bazaar-lookbook/v2/items/liquidity-crown.webp",
+      "sha256": "9524784ab4c77394de5b4a718c746c6f29bd4199e48029c7e4c9e5e0b8bc6cdf",
+      "width": 300,
+      "height": 450,
+      "source": "/gear-anatomy/v3/liquidity-crown.item.webp",
+      "sourceSha256": "bd1ae35f434f577cf04b4724ec0e2fd228f7bc760b55d30b294b0928b59e7901"
+    },
+    "signal-runner-headband": {
+      "asset": "/bazaar-lookbook/v2/items/signal-runner-headband.webp",
+      "sha256": "56cee11eb4137322e0f911d015eaba8dbd779ffec1f2201127d12b57f7bce944",
+      "width": 300,
+      "height": 450,
+      "source": "/gear-anatomy/v3/signal-runner-headband.item.webp",
+      "sourceSha256": "2c3fb802cacf9c37099d64808d9674908863a7a39e195fc1b3ef109441900c20"
+    },
+    "degen-node-cap": {
+      "asset": "/bazaar-lookbook/v2/items/degen-node-cap.webp",
+      "sha256": "34303116b7b1e63526516c2eb5b70972c309d6ac922767fa79ddd645ab565e03",
+      "width": 300,
+      "height": 450,
+      "source": "/gear-anatomy/v3/degen-node-cap.item.webp",
+      "sourceSha256": "d19c30650d6363f11d15ee7deb93a00523197f54769513e1383084d25587d58a"
+    },
+    "banana-market-maker": {
+      "asset": "/bazaar-lookbook/v2/items/banana-market-maker.webp",
+      "sha256": "05964ef222057e1ea44506a15c6828f88a02f24a364ee8966deaeaf1eb702119",
+      "width": 300,
+      "height": 450,
+      "source": "/gear-anatomy/v3/banana-market-maker.item.webp",
+      "sourceSha256": "ecb0fcb61741df30628afcab2ca1e65acdcdf9e130b269d41ba2dc5313462447"
+    },
+    "gas-fee-guzzler": {
+      "asset": "/bazaar-lookbook/v2/items/gas-fee-guzzler.webp",
+      "sha256": "634dc62bf7246c7e83dfa22024859767cebb83094c9374b4307aab40ede790a1",
+      "width": 300,
+      "height": 450,
+      "source": "/gear-anatomy/v3/gas-fee-guzzler.item.webp",
+      "sourceSha256": "6e5811bec25634ee0df801a873076e7087c1a183e7a9614742abed923a3f63a3"
+    },
+    "validator-spark": {
+      "asset": "/bazaar-lookbook/v2/items/validator-spark.webp",
+      "sha256": "68f76532ed397945ea59a3a7e0d07a936f9cba2f5449ab4652b34e0d93769679",
+      "width": 300,
+      "height": 450,
+      "source": "/gear-anatomy/v3/validator-spark.item.webp",
+      "sourceSha256": "a6615b230931bf94a35744762ceda0d2607b74b5539259f9a475da2afbd608b2"
+    },
+    "liquidation-crown": {
+      "asset": "/bazaar-lookbook/v2/items/liquidation-crown.webp",
+      "sha256": "8072ddb7b4b8b0fc2095cd7cb4161dc38d971f061ee2abf44e48702111b27809",
+      "width": 300,
+      "height": 450,
+      "source": "/gear-bazaar/v1/liquidation-crown.item.webp",
+      "sourceSha256": "6172530881fb4f87d166b0551eb343e7968914ad4a7d250deb49378b7b34c1e0"
+    },
+    "validator-halo": {
+      "asset": "/bazaar-lookbook/v2/items/validator-halo.webp",
+      "sha256": "47cb5de7d290068c6690e248886ef3b752374271d6098672cea6bd6e794f1020",
+      "width": 300,
+      "height": 450,
+      "source": "/gear-bazaar/v1/validator-halo.item.webp",
+      "sourceSha256": "61cffa1d2796876bf4c70dcd919482e5c0cd8a292a302cce3c62145ed83b19b5"
+    },
+    "aetherpunk-circlet": {
+      "asset": "/bazaar-lookbook/v2/items/aetherpunk-circlet.webp",
+      "sha256": "603c23324e22d39e8ea5dc505718996ff6e515db1080ba3a6b8b361b85013f49",
+      "width": 300,
+      "height": 450,
+      "source": "/gear-bazaar/v1/aetherpunk-circlet.item.webp",
+      "sourceSha256": "91f16a9e1fa6297740cb51e9822591b6c093ba9eea2f5639db76876fca16c1f0"
+    },
+    "wen-moon-goggles": {
+      "asset": "/bazaar-lookbook/v2/items/wen-moon-goggles.webp",
+      "sha256": "e65ee2dc158bfc509334691fd64ce514230e5b25652adee38188433e934d11c4",
+      "width": 300,
+      "height": 450,
+      "source": "/gear-bazaar/v1/wen-moon-goggles.item.webp",
+      "sourceSha256": "f7d63939bcdc263d6db19721ab8aff6fd1f51979697e3da85d75b73811b31a91"
+    },
+    "packet-sniffer": {
+      "asset": "/bazaar-lookbook/v2/items/packet-sniffer.webp",
+      "sha256": "6ab8a734e50a76ef0a721bf9123b50c7721de9906aa1a0d48962102e1ca8c3c6",
+      "width": 300,
+      "height": 450,
+      "source": "/gear-bazaar/v1/packet-sniffer.item.webp",
+      "sourceSha256": "f951ba1cf2680185f7f719b57f0f61b4cf338db669e2f6dd2ccaed0d70dda88f"
+    },
+    "copium-respirator": {
+      "asset": "/bazaar-lookbook/v2/items/copium-respirator.webp",
+      "sha256": "bb6ce65bc2746b28678340025cf6fcef2d7166b7bed9b93d29893ee44d2f9f99",
+      "width": 300,
+      "height": 450,
+      "source": "/gear-bazaar/v1/copium-respirator.item.webp",
+      "sourceSha256": "a1a4fb45ec133b1bc4606bfa006b2b586b177f655a596c4da6eb61b001cc25e4"
+    },
+    "diamond-hands-harness": {
+      "asset": "/bazaar-lookbook/v2/items/diamond-hands-harness.webp",
+      "sha256": "176ccc61de551f485612a5eec0aa60711c912c919283ffc7db848fbf538f5bac",
+      "width": 300,
+      "height": 450,
+      "source": "/gear-bazaar/v1/diamond-hands-harness.item.webp",
+      "sourceSha256": "57fbbb084d48a06554ccdb5a8db1666010adac9a79a29111bea3a68378c12c2e"
+    },
+    "sleep-404-vest": {
+      "asset": "/bazaar-lookbook/v2/items/sleep-404-vest.webp",
+      "sha256": "62f5a00df05f1d7dbd7be34053aaf7fbe9f2b6e1e8c2a99dcc374b60dbe2a8fc",
+      "width": 300,
+      "height": 450,
+      "source": "/gear-bazaar/v1/sleep-404-vest.item.webp",
+      "sourceSha256": "9d766a6d715324f5e95f14a32324b1084dea90090431a3bb5c0c37c7a6d61c26"
+    },
+    "hexforge-vest": {
+      "asset": "/bazaar-lookbook/v2/items/hexforge-vest.webp",
+      "sha256": "60406301fe4bf1cdcf6a0167b547ffba8f31290c923f22d8abf8e558b91d96fd",
+      "width": 300,
+      "height": 450,
+      "source": "/gear-bazaar/v1/hexforge-vest.item.webp",
+      "sourceSha256": "c39cd5dc43bf70be71ba0c0d9c255f27a37361ca3af981b5beba6fddfcc7509d"
+    },
+    "cold-wallet-jetpack": {
+      "asset": "/bazaar-lookbook/v2/items/cold-wallet-jetpack.webp",
+      "sha256": "8ecaa916739f18653a173bc8891378db0f284a6855712723cbe794e38f2c7e2b",
+      "width": 300,
+      "height": 450,
+      "source": "/gear-bazaar/v1/cold-wallet-jetpack.item.webp",
+      "sourceSha256": "7e0cdad3aac05fac36a9dc067f50dd451e0f1d3090c03220374234ef917726f8"
+    },
+    "rug-pull-roll": {
+      "asset": "/bazaar-lookbook/v2/items/rug-pull-roll.webp",
+      "sha256": "a64ff7c18f81c1325245f87d9624196a4be07411a33984409575e2936c13f0d8",
+      "width": 300,
+      "height": 450,
+      "source": "/gear-bazaar/v1/rug-pull-roll.item.webp",
+      "sourceSha256": "6b7758ad7f04266ab6723bdd13319b3d1452dffbe371390310c0c1d00dea4e3d"
+    },
+    "aether-reactor": {
+      "asset": "/bazaar-lookbook/v2/items/aether-reactor.webp",
+      "sha256": "ace0e9fc52c95df62329c67165019d2c935a5c72d7869043d44791908927a4e1",
+      "width": 300,
+      "height": 450,
+      "source": "/gear-bazaar/v1/aether-reactor.item.webp",
+      "sourceSha256": "a289249bb517402977bb65d125c507fa6a3629a4995ef9ce37341e8a70e7a050"
+    },
+    "exit-liquidity-trident": {
+      "asset": "/bazaar-lookbook/v2/items/exit-liquidity-trident.webp",
+      "sha256": "0e5d35d5cbc8fb0a2e05b0c106dde280c3710c856f9b6bbee376aa1f5dfd54e8",
+      "width": 300,
+      "height": 450,
+      "source": "/gear-bazaar/v1/exit-liquidity-trident.item.webp",
+      "sourceSha256": "e801ec422170766d958fee30a174cfc8d329f4cb14ca4c119192b932c27f05b5"
+    },
+    "bagholder-bag": {
+      "asset": "/bazaar-lookbook/v2/items/bagholder-bag.webp",
+      "sha256": "326cc8ea7ee5f5d920d5ef3392303607b60db4323792d907f5bdf74994ae00f2",
+      "width": 300,
+      "height": 450,
+      "source": "/gear-bazaar/v1/bagholder-bag.item.webp",
+      "sourceSha256": "382329b70e7b22e298c4eb9fef24e06ae8e66940e9530d003f6da8713a8d3d24"
+    },
+    "touch-grass-vial": {
+      "asset": "/bazaar-lookbook/v2/items/touch-grass-vial.webp",
+      "sha256": "990afe2a326d2ea6396329e7d650807bfb6626fab11523b1fb5703d96cf16b19",
+      "width": 300,
+      "height": 450,
+      "source": "/gear-bazaar/v1/touch-grass-vial.item.webp",
+      "sourceSha256": "c9d6d8bfb641a96d89f0a6b3c39ac65a687f884549ba9468ebccf7143eaff616"
+    },
+    "diamond-paws": {
+      "asset": "/bazaar-lookbook/v2/items/diamond-paws.webp",
+      "sha256": "7b5de220e03aa088fa85720f95d83fea200f3144d52fd914ee4bf727902b214c",
+      "width": 300,
+      "height": 450,
+      "source": "/gear-bazaar/v1/diamond-paws.item.webp",
+      "sourceSha256": "4fc33684b1af1568e5eda69e30ac9699b0c2cfa787a1b978c731c68be5433b6c"
+    },
+    "panic-duck": {
+      "asset": "/bazaar-lookbook/v2/items/panic-duck.webp",
+      "sha256": "e0609125e9164085d26b7ea337bba23b933836b704c3c191d6033512900e00a0",
+      "width": 300,
+      "height": 450,
+      "source": "/gear-bazaar/v1/panic-duck.item.webp",
+      "sourceSha256": "ba5c7c5cb0f6f3479f70bb3cc028bc3040d059ef3a19d8e487ed45a267047cba"
+    },
+    "mev-moth": {
+      "asset": "/bazaar-lookbook/v2/items/mev-moth.webp",
+      "sha256": "ca6161176add0ba641079c17af3ce95c112493b7fb072c7cafb08b266dc27219",
+      "width": 300,
+      "height": 450,
+      "source": "/gear-bazaar/v1/mev-moth.item.webp",
+      "sourceSha256": "606698142cb7e2aa2317b8cf6546ec2e949727d01071179b252cac4dafe5ff6b"
+    },
+    "little-rugger": {
+      "asset": "/bazaar-lookbook/v2/items/little-rugger.webp",
+      "sha256": "6904021bab296e57e93416ebead0afb4950cc65b6281e1229cab279ee032288d",
+      "width": 300,
+      "height": 450,
+      "source": "/gear-bazaar/v1/little-rugger.item.webp",
+      "sourceSha256": "33c3852fe7a653abb38566ca7f73b52dbc704ad03997d29f33aec99d5f1d4a96"
+    },
+    "moon-landing-pad": {
+      "asset": "/bazaar-lookbook/v2/items/moon-landing-pad.webp",
+      "sha256": "c47acb80c87153d8b8f83b7cc08681ab96e4e5b31f55da07bc07aabcbc95b1dc",
+      "width": 300,
+      "height": 450,
+      "source": "/gear-bazaar/v1/moon-landing-pad.item.webp",
+      "sourceSha256": "299bf276d4f61720a8a5e5feb77e83d3add0cb07db0ae5756f9162c9ae51f843"
+    },
+    "basement-lan": {
+      "asset": "/bazaar-lookbook/v2/items/basement-lan.webp",
+      "sha256": "8caf68ab04cfb1bd40716a7e1958de9312dfc0b16f951b915863485d371b6ec6",
+      "width": 300,
+      "height": 450,
+      "source": "/gear-bazaar/v1/basement-lan.item.webp",
+      "sourceSha256": "9b4197e14b3865be2c227d79f2e1ffaece52ae679ce6c829ad4faf8443f126c8"
+    },
+    "runebloom-garden": {
+      "asset": "/bazaar-lookbook/v2/items/runebloom-garden.webp",
+      "sha256": "66c33f075ced9b2865b3336e311f4bf579a23c829b2f47282b0c06a6fb0410ec",
+      "width": 300,
+      "height": 450,
+      "source": "/gear-bazaar/v1/runebloom-garden.item.webp",
+      "sourceSha256": "c270b9834d9d3a18ffa0ba889c743ae3b497b9c697a1867b8f2ef17376110777"
+    },
+    "diamond-cargo-shorts": {
+      "asset": "/bazaar-lookbook/v2/items/diamond-cargo-shorts.webp",
+      "sha256": "0fd7f7e3d2e24d8efba8e074f9009be2ee1cb24edcf4af50ad87675e37b81947",
+      "width": 300,
+      "height": 450,
+      "source": "/gear-bazaar/v1/diamond-cargo-shorts.item.webp",
+      "sourceSha256": "048bac6d601eb1d9bd70d445b0a0f1f816c9c0f0349c2951ee29cdc95509bb94"
+    },
+    "night-node-joggers": {
+      "asset": "/bazaar-lookbook/v2/items/night-node-joggers.webp",
+      "sha256": "db7700fee05e29f90867d546b549ede7227e8da5780a7a45cb0a48b30d2f8d9f",
+      "width": 300,
+      "height": 450,
+      "source": "/gear-bazaar/v1/night-node-joggers.item.webp",
+      "sourceSha256": "829a0fafd60975bf5610ec4c7cd6bbcb7b2a766c6f21453faff166bfa7555485"
+    },
+    "runesmith-trousers": {
+      "asset": "/bazaar-lookbook/v2/items/runesmith-trousers.webp",
+      "sha256": "4180430b0759478994c49054cd8620fa290abe6ece0aeba8c72500305a30f227",
+      "width": 300,
+      "height": 450,
+      "source": "/gear-bazaar/v1/runesmith-trousers.item.webp",
+      "sourceSha256": "893d05f8c3383970b6b37aeaa56ed068850d9a9bd7b049602846c39ce5b204e4"
+    },
+    "gas-boost-high-tops": {
+      "asset": "/bazaar-lookbook/v2/items/gas-boost-high-tops.webp",
+      "sha256": "b9ac91e79247607094c7ae0b9ed0c95799f856541ee9e36e0f5e742777ed5bfe",
+      "width": 300,
+      "height": 450,
+      "source": "/gear-bazaar/v1/gas-boost-high-tops.item.webp",
+      "sourceSha256": "df9a4aa37205263c038d91391f1208d069d08b9fcbeedd087a59e88f4590e1a0"
+    },
+    "wen-moon-slippers": {
+      "asset": "/bazaar-lookbook/v2/items/wen-moon-slippers.webp",
+      "sha256": "52a6ba84d1786188d6daa48b7982a37dc4160ad62db318d20f45c1190d32df5a",
+      "width": 300,
+      "height": 450,
+      "source": "/gear-bazaar/v1/wen-moon-slippers.item.webp",
+      "sourceSha256": "e7d625d89d3fe890a98c1164604d57bada29d70b4b64eb839c8be442c609704a"
+    },
+    "hexstep-boots": {
+      "asset": "/bazaar-lookbook/v2/items/hexstep-boots.webp",
+      "sha256": "e0cc888117536ab555572cc0798d496e175ee701b98cfc43aa68e3b1d3e5f11b",
+      "width": 300,
+      "height": 450,
+      "source": "/gear-bazaar/v1/hexstep-boots.item.webp",
+      "sourceSha256": "ede57b1d2efca5f302a77603922a0b38e8932ae294eb38ad07163e4e0575466c"
+    },
+    "diamond-knit-sweater": {
+      "asset": "/bazaar-lookbook/v2/items/diamond-knit-sweater.webp",
+      "sha256": "f6c0521422f20a70e05ebb88253bb8732e829ee1db7babcb765dae7013c7601b",
+      "width": 300,
+      "height": 450,
+      "source": "/gear-bazaar/v1/diamond-knit-sweater.item.webp",
+      "sourceSha256": "91850bc7bb7f7f80c743f0d04c76686453731e9e5d6342eb51b53194317c6dd8"
+    },
+    "copium-club-hoodie": {
+      "asset": "/bazaar-lookbook/v2/items/copium-club-hoodie.webp",
+      "sha256": "8b9e51052e10be7bd2a85ae847defd66f87aef894cc7ff5f0b6a76ae7e23faf3",
+      "width": 300,
+      "height": 450,
+      "source": "/gear-bazaar/v1/copium-club-hoodie.item.webp",
+      "sourceSha256": "f65475290744550b9e24170b45ad0cc77a27111d51e40cde20d07eb0fac1fa40"
+    },
+    "night-node-bomber": {
+      "asset": "/bazaar-lookbook/v2/items/night-node-bomber.webp",
+      "sha256": "865f6f92ef3821ec7320540f0e89da5735fdb845a59eb797b0d026d412120d31",
+      "width": 300,
+      "height": 450,
+      "source": "/gear-bazaar/v1/night-node-bomber.item.webp",
+      "sourceSha256": "c5bb31f3fae7512e7142934fb02a4c0934cf38450d7389f9a6e67dc00f03af86"
+    },
+    "whitehat-field-jacket": {
+      "asset": "/bazaar-lookbook/v2/items/whitehat-field-jacket.webp",
+      "sha256": "49ce187ee14bd48e784bd412f359706d4ea63eda8ca743cd5df0210e1cea5610",
+      "width": 300,
+      "height": 450,
+      "source": "/gear-bazaar/v1/whitehat-field-jacket.item.webp",
+      "sourceSha256": "355fb2ae26f4cbd1ba82c7b377832ec435233b5c0ebbd3f7178bf361d2d28f0a"
+    },
+    "runebloom-overshirt": {
+      "asset": "/bazaar-lookbook/v2/items/runebloom-overshirt.webp",
+      "sha256": "a5279311a1fa53436eb68a48b3b49a6cb5a462a80b729d1468f31d3ca97d12b6",
+      "width": 300,
+      "height": 450,
+      "source": "/gear-bazaar/v1/runebloom-overshirt.item.webp",
+      "sourceSha256": "6217ff7373704951c8212f3f58e6a18a511270238ac5954f596fd878e0f4a434"
+    },
+    "wen-moon-tee": {
+      "asset": "/bazaar-lookbook/v2/items/wen-moon-tee.webp",
+      "sha256": "36b194b366506f53a49acf64a795ca83770b481f8e84971e0a88ef8089784448",
+      "width": 300,
+      "height": 450,
+      "source": "/gear-bazaar/v1/wen-moon-tee.item.webp",
+      "sourceSha256": "c5e525176a5813b97003b936997f90b71f1410e362b59e01567741b5875296c4"
+    }
+  }
+}

@@ -135,10 +135,13 @@ export function createDevServer({ liveAssets = true, fetchAsset = fetch, wardrob
       });
       if (path === '/assets/wallet.js') return send(req, res, 200, walletStub, types['.js']);
       if (['/nav.js', '/analytics.js'].includes(path)) return send(req, res, 200, '// Host-only integration omitted from local preview.\n', types['.js']);
+      if (path === '/bazaar-fitted.css') return send(req,res,200,await readFile(resolve(publicRoot,'bazaar-fitted.css')),types['.css']);
       if (path === '/arena-navigation.css') return send(req, res, 200, await readFile(resolve(publicRoot, 'arena-navigation.css')), types['.css']);
       if (path === `/${basename(path)}` && publicFiles.has(basename(path))) {
         return send(req, res, 200, await readFile(resolve(publicRoot, basename(path))), types[extname(path)]);
       }
+      if (/^\/bazaar-lookbook\/v2\/items\/[a-z][a-z0-9-]+\.webp$/.test(path)){try{return send(req,res,200,await readFile(resolve(publicRoot,'.'+path)),types['.webp']);}catch(e){if(e.code==='ENOENT')return json(req,res,404,{error:'Unknown item portrait'});throw e;}}
+      if (/^\/bazaar-lookbook\/(?:model\.mjs|v2\/(?:manifest\.json|(?:emerald_sprout|sapphire_tide|amethyst_dream|solar_peach|rose_bloom|midnight_mint)\.webp))$/.test(path)) return send(req,res,200,await readFile(resolve(publicRoot,'.'+path)),types[extname(path)]);
       if (/^\/gear-style-studio\/(?:model\.mjs|v1\/(?:catalog\.json|[a-z0-9_.-]+\.webp))$/.test(path)) {
         return send(req, res, 200, await readFile(resolve(publicRoot, '.' + path)), types[extname(path)]);
       }

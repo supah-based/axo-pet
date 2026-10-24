@@ -63,15 +63,10 @@
   }
 
   function renderGearArt(host, item) {
-    const imageUrl = String(item?.imageUrl || '');
-    if (!/^\/hatchery-nft-v5\/layer_[a-z0-9_]+\.webp$/.test(imageUrl)) return;
-    const image = document.createElement('img');
-    image.src = imageUrl;
-    image.alt = `${item.visualName || item.label || 'AXO Pet gear'} cosmetic preview`;
-    image.loading = 'lazy';
-    image.decoding = 'async';
-    host.dataset.image = 'true';
-    host.append(image);
+    // Numeric V1 identity is not a mapping to candidate clothing. Retire the old
+    // character/layer thumbnails and keep the existing slot-code placeholder.
+    host.dataset.image = 'false';
+    host.setAttribute('aria-label', (item?.visualName || item?.label || 'V1 Gear') + ' · legacy artwork retired; verified item details below');
   }
 
   function shortAddress(address) {

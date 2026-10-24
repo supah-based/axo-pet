@@ -1,0 +1,12 @@
+{
+  "schema": "AXO_BAZAAR_LOOKBOOK_SOURCE_V2",
+  "authority": "COSMETIC_PREVIEW_ONLY",
+  "entries": [
+    {"lineage":"emerald_sprout","name":"Protocol Field Runner","sceneId":"tech-hatchery","selection":{"head":"signal-runner-headband","body":"whitehat-field-jacket","pants":"night-node-joggers","footwear":"gas-boost-high-tops","tool":"validator-spark"}},
+    {"lineage":"sapphire_tide","name":"Diamond Knit Courier","sceneId":"arcane-workshop","selection":{"head":"liquidity-crown","body":"diamond-knit-sweater","pants":"node-tailored-joggers","footwear":"cyan-grip-boots","tool":"exit-liquidity-trident"}},
+    {"lineage":"amethyst_dream","name":"Copium After Hours","sceneId":"degen-den","selection":{"head":"aetherpunk-circlet","body":"copium-club-hoodie","pants":"night-node-joggers","footwear":"hexstep-boots","tool":"banana-market-maker"}},
+    {"lineage":"solar_peach","name":"Candle Chaser Bomber","sceneId":"degen-den","selection":{"head":"liquidation-crown","body":"night-node-bomber","pants":"node-tailored-joggers","footwear":"gas-boost-high-tops","tool":"gas-fee-guzzler"}},
+    {"lineage":"rose_bloom","name":"Runebloom Signal","sceneId":"arcane-workshop","selection":{"head":"liquidity-crown","body":"runebloom-overshirt","pants":"runesmith-trousers","footwear":"hexstep-boots","tool":"exit-liquidity-trident"}},
+    {"lineage":"midnight_mint","name":"Night Shift Whitehat","sceneId":"tech-hatchery","selection":{"head":"signal-runner-headband","body":"wen-moon-tee","pants":"node-tailored-joggers","footwear":"cyan-grip-boots","tool":"validator-spark"}}
+  ]
+}
