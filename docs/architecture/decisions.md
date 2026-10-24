@@ -1,5 +1,11 @@
 # Architecture decisions
 
+## ADR-030 — Derived Bazaar promotion independent of historical gear catalogs
+
+**Decision:** Generate a separate versioned, source/media-hashed lookbook from the shared fit plan and current fitted Arena outfit defaults. Serve new portrait URLs, use the exact pictured selection for outfit links, and show actual individual members on candidate set cards. Normalize individual promotional thumbnails without changing token metadata. Retire legacy V1 image rendering to a neutral placeholder while preserving verified item identity/details. Collection builds must regenerate the new promotion; old catalogs/assets remain compatibility archives.
+
+**Reason:** Static old outfit files and legacy layer thumbnails continued appearing beside the newer fitting system. A separate presentation artifact prevents accidental ownership/style remapping and avoids relabeling mixed new clothing as a completed old set. This changes no authority, combat, contracts, XP or V2 activation. See AXO-025.
+
 ## ADR-029 — Pet site navigation and existing Arena entry
 
 **Decision:** Add a same-origin `/arena/` anchor to owned static headers and extract only the small public Pet ecosystem shell needed by Hatchery. Preserve hostname/view behavior, canonical metadata and wallet-control markup; render the same header in the labeled local preview without enabling host APIs. Serve the exact local shell through the development allowlist, keep inherited shell CSS fallback, and publish cache-versioned HTML/header/CSS together. Do not import the unrelated global AXO Vision navigation or its account/treasury behavior.

@@ -10,6 +10,8 @@ Private monorepo for the `axo.pet` product surface:
 
 ## Current status
 
+Latest Bazaar artwork: [AXO-025](docs/handoffs/AXO-025.md) replaces old dressed-Pet promotion with six current fitted clothing portraits and matching try-on links. Candidate sets show actual item art; legacy V1 thumbnails are retired without changing equipment/ownership. Cosmetic Previews and V2 locks remain intact. Live publication requires AXO integration.
+
 Latest site navigation: [AXO-024](docs/handoffs/AXO-024.md) adds **AXO ARENA** (`/arena/`) to desktop/mobile headers across the site and shared Hatchery shell. Arena keeps its existing verified-Pet entry gate. Source publication and live host integration are separate.
 
 Latest defense/energy source: [AXO-023](docs/handoffs/AXO-023.md) adds an explicit **local Defense Lab candidate** to Training Dojo: stronger conditional counters, block energy recovery, temporary guard kit and detailed energy receipts. [Rules and 3,456-game comparison](docs/ARENA_DEFENSE_ENERGY.md). Official V1 rules/replays remain intact; Preview styles stay cosmetic and V2 Gear stays locked. Player acceptance is required before an official ruleset.
